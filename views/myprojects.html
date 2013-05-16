@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="ext/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/myprojects.css">
+  </head>
+  <body data-endpoint="{{ makeEndpoint }}">
+    <header>
+      <span class="title-text"><span id="username"></span>'s recent projects</span>
+      <!-- TODO <div class="ui-select">Most recent<a class="icon-caret-down"></a></div> -->
+      <div data-filter="thimble" class="filter-btn ui-toggle off">thimble</div>
+      <div data-filter="popcorn" class="filter-btn ui-toggle off">popcorn</div>
+    </header>
+    <div id="main">
+      <div class="projects-container">
+        <a id="left-btn" class="icon-arrow-left"></a>
+        <ul id="projects">
+          <li class="project" style="display:none;">
+            <a class="project-edit" href="">
+              <span class="project-title"></span>
+              <span class="project-updated"></span>
+              <a class="project-link" target="_blank" href="">view</a>
+              <a class="project-link" target="_blank" href="">edit</a>
+            </a>
+          </li>
+        </ul>
+        <a id="right-btn" class="icon-arrow-right"></a>
+      </div>
+    </div>
+      <script src="{{ makeEndpoint }}/js/make-api.js"></script>
+      <script src="ext/js/require.js" data-main="js/myprojects"></script>
+  </body>
+</html>

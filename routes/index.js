@@ -12,6 +12,12 @@ module.exports = function( makeEndpoint, personaSSO, loginAPI ){
         res.render( "sso/include.js", {
           HOSTNAME: hostname
         });
+      }
+    },
+    myprojects: function() {
+      return function( req, res ) {
+        console.log( req.session );
+        res.render( "myprojects.html", { app: "thimble", makeEndpoint: makeEndpoint } );
       };
     }
   };

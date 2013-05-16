@@ -47,7 +47,10 @@ app.get( "/learn", routes.page( "learn" ) );
 app.get( "/teach", routes.page( "teach" ) );
 app.get( "/party", routes.page( "party" ) );
 
+
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
+app.get( "/myprojects", routes.myprojects() );
+
 
 /**
  * WEBMAKER SSO

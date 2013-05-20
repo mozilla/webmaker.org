@@ -33,16 +33,16 @@ require(['jquery', 'moment', 'uri'],
 
 
   function getParameterByName( name ) {
-      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      name = name.replace(/[\[]/, "[").replace(/[\]]/, "]");
       var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
           results = regex.exec(location.search);
-      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      return !results && results !== 0 ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
   function createProject( data ) {
     var el = projectTemplate.cloneNode( true );
     el.style.display = "";
-    el.classList.add( data.type + "-project" );
+    $( el ).addClass( data.type + "-project" );
     el.querySelector( ".project-title" ).innerHTML = data.title;
     el.querySelector( ".project-updated" ).innerHTML = "Updated " + data.updated;
     el.querySelector( ".project-edit" ).href = data.edit;
@@ -97,13 +97,13 @@ require(['jquery', 'moment', 'uri'],
     }
 
     if ( val === "on" ) {
-      document.querySelector( dataFilter ).classList.add( "on" );
-      document.querySelector( dataFilter ).classList.remove( "off" );
+      $( dataFilter ).addClass( "ui-toggle-on" );
+      $( dataFilter ).removeClass( "ui-toggle-off" );
       filters[ filter ] = true;
     }
     else if ( val == "off" ) {
-      document.querySelector( dataFilter ).classList.add( "off" );
-      document.querySelector( dataFilter ).classList.remove( "on" );
+      $( dataFilter ).addClass( "ui-toggle-off" );
+      $( dataFilter ).removeClass( "ui-toggle-on" );
       filters[ filter ] = false;
     }
 
@@ -121,7 +121,7 @@ require(['jquery', 'moment', 'uri'],
   }
 
 
-  make = Make({ apiURL: document.body.getAttribute( "data-endpoint" ) });
+  make = new Make({ apiURL: document.body.getAttribute( "data-endpoint" ) });
   email = getParameterByName( "email" ) || "";
   appContext = getParameterByName( "app" ) || false;
   projectTemplate.parentNode.removeChild( projectTemplate );
@@ -136,15 +136,15 @@ require(['jquery', 'moment', 'uri'],
 
   getMakes();
 
-  for ( var i = 0; i < filterBtns.length; i++ ) {
-    filterBtns[ i ].addEventListener( "click", function( e ) {
+  Array.prototype.map.call( filterBtns, function( result ) {
+    result.addEventListener( "click", function( e ) {
       var filterParam = this.getAttribute( "data-filter" );
       filters[ filterParam ] = !filters[ filterParam ];
-      this.classList.toggle( "off" );
-      this.classList.toggle( "on" );
+      $( this ).toggleClass( "ui-toggle-off" );
+      $( this ).toggleClass( "ui-toggle-on" );
       getMakes();
     }, false );
-  }
+  });
 
   leftBtn.addEventListener( "click", function( e ) {
     if ( slideIndex === 0 ) {

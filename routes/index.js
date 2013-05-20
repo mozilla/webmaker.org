@@ -12,7 +12,7 @@ module.exports = function( makeEndpoint, personaSSO, loginAPI ){
         res.render( "sso/include.js", {
           HOSTNAME: hostname
         });
-      }
+      };
     },
     myprojects: function() {
       return function( req, res ) {

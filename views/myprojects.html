@@ -8,14 +8,14 @@
   </head>
   <body data-endpoint="{{ makeEndpoint }}">
     <header>
-      <span class="title-text"><span id="username"></span>'s recent projects</span>
+      <h1 class="title-text"><span id="username"></span>'s recent projects</h1>
       <!-- TODO <div class="ui-select">Most recent<a class="icon-caret-down"></a></div> -->
       <div data-filter="thimble" class="filter-btn ui-toggle off">thimble</div>
       <div data-filter="popcorn" class="filter-btn ui-toggle off">popcorn</div>
     </header>
     <div id="main">
       <div class="projects-container">
-        <a id="left-btn" class="icon-arrow-left"></a>
+        <a id="left-btn" class="icon-arrow-left"><i class="hidden-btn-text">new makes</i></a>
         <ul id="projects">
           <li class="project" style="display:none;">
             <a class="project-edit" href="">
@@ -26,7 +26,7 @@
             </a>
           </li>
         </ul>
-        <a id="right-btn" class="icon-arrow-right"></a>
+        <a id="right-btn" class="icon-arrow-right"><i class="hidden-btn-text">older makes</i></a>
       </div>
     </div>
       <script src="{{ makeEndpoint }}/js/make-api.js"></script>

@@ -50,8 +50,6 @@ require(['jquery', 'moment', 'uri'],
     projectList.appendChild( el );
   }
 
-  console.log( URI.parse( window.location ) );
-
   function getMakes() {
     make.email( email )
     .limit( 30 )
@@ -59,11 +57,11 @@ require(['jquery', 'moment', 'uri'],
     .then( function ( err, results ) {
       var type,
           url;
-      if ( results && results.hits ) {
+      if ( results ) {
         projectList.innerHTML = "";
         slideIndex = 0;
-        for ( var i = 0; i < results.hits.length; i++ ) {
-          type = results.hits[ i ].contentType;
+        for ( var i = 0; i < results.length; i++ ) {
+          type = results[ i ].contentType;
           if ( !type ) {
             continue;
           }
@@ -72,15 +70,15 @@ require(['jquery', 'moment', 'uri'],
             continue;
           }
           type = type[ 1 ];
-          url = results.hits[ i ].url;
+          url = results[ i ].url;
           if ( filters[ type ] ) {
             createProject({
-              title: results.hits[ i ].title || url,
+              title: results[ i ].title || url,
               edit: url + "/edit",
               type: type,
               view: url,
-              thumbnail: results.hits[ i ].thumbnail || "",
-              updated: moment( results.hits[ i ].updatedAt ).fromNow()
+              thumbnail: results[ i ].thumbnail || "",
+              updated: moment( results[ i ].updatedAt ).fromNow()
             });
           }
         }

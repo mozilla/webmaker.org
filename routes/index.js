@@ -16,7 +16,6 @@ module.exports = function( makeEndpoint, personaSSO, loginAPI ){
     },
     myprojects: function() {
       return function( req, res ) {
-        console.log( req.session );
         res.render( "myprojects.html", { app: "thimble", makeEndpoint: makeEndpoint } );
       };
     }

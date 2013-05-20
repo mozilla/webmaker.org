@@ -57,6 +57,9 @@ require(['jquery', 'moment', 'uri'],
     .then( function ( err, results ) {
       var type,
           url;
+      if ( err ) {
+        return err;
+      }
       if ( results ) {
         projectList.innerHTML = "";
         slideIndex = 0;
@@ -87,19 +90,20 @@ require(['jquery', 'moment', 'uri'],
   }
 
   function updateFilter( filter, val ) {
+    var dataFilter = "[data-filter=" + filter +  "]";
     if ( !val ) {
       // Toggle what exists
       val = filters[ filter ] ? "off" : "on";
     }
 
     if ( val === "on" ) {
-      document.querySelector( "[data-filter=" + filter +  "]" ).classList.add( "on" );
-      document.querySelector( "[data-filter=" + filter +  "]" ).classList.remove( "off" );
+      document.querySelector( dataFilter ).classList.add( "on" );
+      document.querySelector( dataFilter ).classList.remove( "off" );
       filters[ filter ] = true;
     }
     else if ( val == "off" ) {
-      document.querySelector( "[data-filter=" + filter +  "]" ).classList.add( "off" );
-      document.querySelector( "[data-filter=" + filter +  "]" ).classList.remove( "on" );
+      document.querySelector( dataFilter ).classList.add( "off" );
+      document.querySelector( dataFilter ).classList.remove( "on" );
       filters[ filter ] = false;
     }
 
@@ -118,13 +122,11 @@ require(['jquery', 'moment', 'uri'],
 
 
   make = Make({ apiURL: document.body.getAttribute( "data-endpoint" ) });
-  email = getParameterByName( "email" );
-  appContext = getParameterByName( "app" ) || "";
+  email = getParameterByName( "email" ) || "";
+  appContext = getParameterByName( "app" ) || false;
   projectTemplate.parentNode.removeChild( projectTemplate );
 
-  if ( email ) {
-    username.innerHTML = email;
-  }
+  username.innerHTML = email;
   if ( appContext ) {
     updateFilter( appContext, "on" );
   } else {
@@ -149,7 +151,6 @@ require(['jquery', 'moment', 'uri'],
       return;
     }
     slideIndex -= 1;
-    console.log( slideIndex );
     slide();
   }, false );
 

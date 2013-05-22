@@ -16,12 +16,13 @@ require(['jquery', 'moment', 'uri'],
   'use strict';
 
   var make,
-      username = document.getElementById( "username" ),
-      projectList = document.getElementById( "projects" ),
-      projectTemplate = document.querySelector( ".project" ),
-      filterBtns = document.querySelectorAll( ".filter-btn" ),
-      rightBtn = document.getElementById( "right-btn" ),
-      leftBtn = document.getElementById( "left-btn" ),
+      $username = $( "#username" ),
+      $projectList = $( "#projects" ),
+      $projectTemplate = $( "#myprojects .project" ),
+      $filterBtns = $( "#myprojects .filter-btn" ),
+      $rightBtn = $( "#right-btn" ),
+      $leftBtn = $( "#left-btn" ),
+      queryKeys,
       email,
       appContext,
       slideIndex = 0,
@@ -31,23 +32,15 @@ require(['jquery', 'moment', 'uri'],
         thimble: false
       };
 
-
-  function getParameterByName( name ) {
-      name = name.replace(/[\[]/, "[").replace(/[\]]/, "]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-          results = regex.exec(location.search);
-      return !results && results !== 0 ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-
   function createProject( data ) {
-    var el = projectTemplate.cloneNode( true );
-    el.style.display = "";
-    $( el ).addClass( data.type + "-project" );
-    el.querySelector( ".project-title" ).innerHTML = data.title;
-    el.querySelector( ".project-updated" ).innerHTML = "Updated " + data.updated;
-    el.querySelector( ".project-edit" ).href = data.edit;
+    var $el = $projectTemplate.clone( true );
+    $el.css( "display", "" );
+    $el.addClass( data.type + "-project" );
+    $el.find( ".project-title" ).html( data.title );
+    $el.find( ".project-updated" ).html( "Updated " + data.updated );
+    $el.find( ".project-edit" ).attr( "href", data.edit );
 
-    projectList.appendChild( el );
+    $projectList.append( $el );
   }
 
   function getMakes() {
@@ -61,7 +54,7 @@ require(['jquery', 'moment', 'uri'],
         return err;
       }
       if ( results ) {
-        projectList.innerHTML = "";
+        $projectList.empty();
         slideIndex = 0;
         for ( var i = 0; i < results.length; i++ ) {
           type = results[ i ].contentType;
@@ -120,13 +113,15 @@ require(['jquery', 'moment', 'uri'],
     }
   }
 
-
   make = new Make({ apiURL: document.body.getAttribute( "data-endpoint" ) });
-  email = getParameterByName( "email" ) || "";
-  appContext = getParameterByName( "app" ) || false;
-  projectTemplate.parentNode.removeChild( projectTemplate );
+  queryKeys = URI.parse( window.location.href.replace( /@/g, "%3D" ) ).queryKey;
+  email = queryKeys.email.replace( /\%3D/g, "@" ) || "";
+  appContext = queryKeys.app || false;
 
-  username.innerHTML = email;
+  $projectTemplate.remove();
+
+  $username.text( email );
+
   if ( appContext ) {
     updateFilter( appContext, "on" );
   } else {
@@ -136,27 +131,26 @@ require(['jquery', 'moment', 'uri'],
 
   getMakes();
 
-  Array.prototype.map.call( filterBtns, function( result ) {
-    result.addEventListener( "click", function( e ) {
-      var filterParam = this.getAttribute( "data-filter" );
-      filters[ filterParam ] = !filters[ filterParam ];
-      $( this ).toggleClass( "ui-toggle-off" );
-      $( this ).toggleClass( "ui-toggle-on" );
-      getMakes();
-    }, false );
+  $filterBtns.click( function( e ) {
+    var $this = $( this ),
+        filterParam = $this.attr( "data-filter" );
+    filters[ filterParam ] = !filters[ filterParam ];
+    $this.toggleClass( "ui-toggle-off" );
+    $this.toggleClass( "ui-toggle-on" );
+    getMakes();
   });
 
-  leftBtn.addEventListener( "click", function( e ) {
+  $leftBtn.click( function( e ) {
     if ( slideIndex === 0 ) {
       return;
     }
     slideIndex -= 1;
     slide();
-  }, false );
+  });
 
-  rightBtn.addEventListener( "click", function( e ) {
+  $rightBtn.click( function( e ) {
     slideIndex += 1;
     slide();
-  }, false );
+  });
 
 });

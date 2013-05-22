@@ -24,7 +24,10 @@ app.use( express.compress() );
 app.use( express.static( path.join( __dirname, "public" )));
 app.use( express.bodyParser() );
 app.use( express.cookieParser() );
-app.use( express.cookieSession({secret: env.get('SESSION_SECRET')}) );
+app.use( express.cookieSession({
+  key: "webmaker.sid",
+  secret: env.get('SESSION_SECRET')
+}));
 app.use( app.router );
 
 var optimize = NODE_ENV !== "development",

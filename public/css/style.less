@@ -186,7 +186,7 @@ h3 {
   border-bottom: @make-border-size solid #27AAE1;
 }
 
-.kit {
+.guide {
   border-bottom: @make-border-size solid pink;
 }
 
@@ -251,6 +251,108 @@ p {
   width: 500px;
 }
 
+#banner-teach {
+  height: 420px;
+  position: absolute;
+  right: 0;
+  top: 440px;
+  width: 500px;
+
+  p {
+    background-color: #FFF;
+    color: #27AAE1;
+    font-size: 20px;
+    height: 60px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+  }
+}
+
+#teach {
+  .make {
+    background-color: #FFF;
+    height: 420px;
+
+    .preview-img {
+      clear: both;
+      float: left;
+      height: 129px;
+      overflow: hidden;
+      padding: 5px 5px 0 5px;
+    }
+
+    .title, p {
+      clear: both;
+      float: left;
+      overflow: hidden;
+      padding: 5px;
+    }
+
+    .level-info {
+      height: 25px;
+    }
+
+    .skills-info {
+      height: 50px;
+    }
+
+    .info {
+      background-image: url('../img/bkgFooter.jpg');
+      color: #838383;
+      margin-bottom: 3px;
+      width: 230px;
+
+      b, span {
+        display: inline-block;
+        float: left;
+      }
+
+      span {
+        width: 150px;
+      }
+
+      b {
+        width: 80px;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      height: 70px;
+      line-height: 24px;
+      margin: 15px 5px;
+    }
+
+    .author-info {
+      color: #838383;
+      font-size: 14px;
+    }
+
+    .info {
+      margin: 3px 0;
+    }
+
+    .actions {
+      bottom: 5px;
+      position: absolute;
+      right: 5px;
+
+      a {
+        background-color: #73B5E5;
+        color: #FFF;
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin-left: 3px;
+        padding: 2px 0;
+        text-align: center;
+        width: 80px;
+      }
+    }
+  }
+}
+
 @media (max-width: 640px) {
   #content {
     width: 640px;
@@ -260,6 +362,16 @@ p {
     height: 200px;
     top: 50px;
     width: 600px;
+  }
+
+  #banner-teach {
+    height: 490px;
+    right: auto;
+    width: 600px;
+
+    img {
+      width: 100%;
+    }
   }
 
   .make {

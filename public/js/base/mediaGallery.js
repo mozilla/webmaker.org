@@ -11,6 +11,7 @@ define(['jquery'],
       $mainGallery = $('.main-gallery'),
       mainGallery = $mainGallery[0],
       $makeTemplate = $body.find( 'div.make' ),
+      $makeTeachTemplate = $body.find( 'div.make-teach' ),
       $makeBackTemplate = $body.find( 'div.make-back' ),
       $eventBackTemplate = $body.find( 'div.event-back' ),
       isMobile = false,
@@ -38,6 +39,20 @@ define(['jquery'],
     $authorSpan.text( data.author );
     $descSpan.text( data.description );
     $el.append( $backTemplate );
+  }
+
+  function createMakeTeach( data, $el ) {
+    var $teachTemplate = $makeTeachTemplate.clone( true ),
+        $titleSpan = $('.title', $teachTemplate),
+        $levelSpan = $('.level', $teachTemplate),
+        $skillsSpan = $('.skills', $teachTemplate),
+        $authorSpan = $('.author', $teachTemplate);
+
+    $titleSpan.text( data.description );
+    $levelSpan.text( data.level );
+    $skillsSpan.text( data.skills );
+    $authorSpan.text( data.author );
+    $el.append( $teachTemplate );
   }
 
   function createEventBack( data, $el ) {
@@ -84,43 +99,38 @@ define(['jquery'],
     }
 
     // create front Element & populate
-    var $frontEl = $('<div class="front"><img src="' + data.thumbnail + '" alt="' + data.title + '"></div>');
+    var $frontEl = $('<div class="front"><div class="preview-img"><img src="' + data.thumbnail +
+      '" alt="' + data.title + '"></div></div>');
 
     // create back element & populate
     var $backEl = $('<div class="back"></div>');
+    var tags = data.tags;
 
-    switch ( data.tags.makeType ) {
-      case 'popcorn':
-        $frontEl.addClass( 'popcorn' );
-        break;
-
-      case 'thimble':
-        $frontEl.addClass( 'thimble' );
-        break;
-
-      case 'challenge':
-        $frontEl.addClass( 'challenge' );
-        break;
-
-      case 'event':
-        $frontEl.addClass( 'event' );
-        break;
-
-      case 'kit':
-        $frontEl.addClass( 'kit' );
-        break;
-
-      case 'demo':
-        $frontEl.addClass( 'make-demo' );
-        break;
-
-      default:
-        $frontEl.addClass( 'default' );
-        break;
+    if ( tags.popcorn ) {
+      $frontEl.addClass( 'popcorn' );
+    } else if ( tags.challenge ) {
+      $frontEl.addClass( 'challenge' );
+    } else if ( tags.event ) {
+      $frontEl.addClass( 'event' );
+    } else if ( tags.guide ) {
+      $frontEl.addClass( 'guide' );
+    } else if ( tags['make-demo'] ) {
+      $frontEl.addClass( 'make-demo' );
+    } else {
+      $frontEl.addClass( 'default' );
     }
 
     $makeContainer.addClass(randSize);
-    createMakeBack( data, $backEl );
+
+    switch( $body[0].id ) {
+      case 'index':
+        createMakeBack( data, $backEl );
+        break;
+
+      case 'teach':
+        createMakeTeach( data, $frontEl );
+        break;
+    }
 
     // add front & back elements to flip container
     var $flip = $('<div class="flipContainer"></div>');
@@ -137,9 +147,11 @@ define(['jquery'],
   }
 
   // set up mouse over handlers
-  $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
-    $('.flipContainer', this).toggleClass( 'flip' );
-  });
+  if ($body[0].id === 'index') {
+    $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
+      $('.flipContainer', this).toggleClass( 'flip' );
+    });
+  }
 
   var self = {
     init: function ( wm ) {
@@ -162,8 +174,16 @@ define(['jquery'],
           break;
 
         case 'teach':
-          // TODO: teach page search
-          wm.doSearch( ['featured', 'teach'], limit, searchCallback );
+          var $stickyBanner = $('<div id="banner-teach">' +
+            '<img src="../img/webmaker-community.jpg" alt="Webmaker Community">' +
+            "<p>Join us! We're a global community of technies, educators and friendly humans on " +
+            'a mission.</p></div>');
+          $mainGallery.append( $stickyBanner );
+          limit = 6;
+
+          wm.doSearch( ['featured', 'guide'], limit, searchCallback );
+          packery.stamp( $stickyBanner[0] );
+          packery.layout();
           break;
       }
     }

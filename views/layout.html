@@ -73,13 +73,41 @@
           <li><a {% if page == 'learn' %}class="on"{% endif %} id="nav-learn" href="/learn">Learn</a></li>
           <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/teach">Teach</a></li>
           <li><a {% if page == 'party' %}class="on"{% endif %} id="nav-party" href="/party">Events</a></li>
-          <li><a {% if page == 'search' %}class="on"{% endif %} class="icon-search" id="nav-search" href="/search"></a></li>
+          <li><a class="search-trigger icon-search{% if page == 'search' %} on{% endif %}" id="nav-search" href="javascript:;"></a></li>
         </ul>
       </nav>
     </div>
   </header>
+  <div id="search">
+    <div class="search-wrapper">
+      <div class="search-bar">
+        <label for="search-keyword">Search</label>
+        <form method="post">
+          <input type="text" name="keyword" id="search-keyword">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="filter-bar">
+        <label for="search-filter">Filter results</label>
+        <form method="post">
+          <select name="filter" id="search-filter">
+            <option value="recent">Recent</option>
+            <option value="featured">Featured</option>
+            <option value="popcorn">Popcorn Makes</option>
+            <option value="thimble:project">Thimble Makes</option>
+            <option value="event">Made at an Event</option>
+          </select>
+          <button type="submit">Filter</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>
   <footer class="footer">
+    <div id="footer-actions">
+      <button class="search-trigger">Search</button>
+      <button class="load-more">Load more</button>
+    </div>
     <section class="make-footer">
       <div class="make-wrapper">
         <div class="make-footer-item">

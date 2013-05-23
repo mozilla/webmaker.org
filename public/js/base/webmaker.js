@@ -28,14 +28,14 @@ define(['jquery'],
 
   var self = {
     init: function( options ) {
-      makeURL = options.makeURL;
-      page = options.page;
-      make = Make({ apiURL: makeURL });
+      makeURL = options.makeURL,
+      page = options.page,
+      make = Make({ apiURL: makeURL })
     },
-
-    doSearch: function( tags, limit, each ) {
+    doSearch: function( options, limit, each ) {
+      console.log( options );
       make
-      .find({ tags: tags })
+      .find( options )
       .limit( limit )
       .sortByField( 'createdAt', 'desc' )
       .then( function( error, results ) {
@@ -47,6 +47,7 @@ define(['jquery'],
             each( result );
           }
         }
+
       });
     }
   };

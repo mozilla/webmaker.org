@@ -1,14 +1,10 @@
-define(['jquery', 'base/webmaker', 'base/mediaGallery', 'base/ui'],
-  function ($, webmaker, mediaGallery, UI) {
+define(['jquery','base/mediaGallery', 'base/ui'],
+  function ($, MediaGallery, UI) {
   'use strict';
 
   var $body = $('body'),
-      $search = $('#search');
-
-  webmaker.init({
-    page: $body[0].id,
-    makeURL: $body.data('endpoint')
-  });
+      $search = $('#search'),
+      media = new MediaGallery();
 
   $('.search-trigger').click( function( e ) {
     $search.toggleClass('on');
@@ -22,8 +18,20 @@ define(['jquery', 'base/webmaker', 'base/mediaGallery', 'base/ui'],
     });
   });
 
-  mediaGallery.init(webmaker);
+  media.init();
 
-  UI.select( '#search-filter' );
+  UI.select( '#search-filter', function( val ) {
+    switch ( val ) {
+      case "popcorn":
+        media.search( { tags: [ "featured" ], contentType: "application/x-thimble" } );
+        break;
+    };
+  });
+
+  $search.on( 'submit', 'form', function( e ) {
+    e.preventDefault();
+    var search = $( e.target ).find( "[name=keyword]" ).val();
+    media.search( { tags: [ search ] } );
+  });
 
 });

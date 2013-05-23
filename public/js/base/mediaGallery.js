@@ -1,5 +1,5 @@
-define(['jquery'],
-  function ($) {
+define(['jquery', './webmaker'],
+  function ($, webmaker) {
   'use strict';
 
   var countLarge = 2,
@@ -73,7 +73,7 @@ define(['jquery'],
   }
 
   function searchCallback( data ) {
-    var $makeContainer = $makeTemplate.clone( true ),
+    var $makeContainer = $makeTemplate.clone( true ).addClass('rf'),
         makeContainer = $makeContainer[0],
         randSize = 'large';
 
@@ -94,6 +94,10 @@ define(['jquery'],
           break;
 
         case 'teach':
+          randSize = 'medium';
+          break;
+
+        case 'search-results':
           randSize = 'medium';
           break;
       }
@@ -131,6 +135,10 @@ define(['jquery'],
       case 'teach':
         createMakeTeach( data, $frontEl );
         break;
+
+      case 'search-results':
+        createMakeTeach( data, $backEl );
+        break;
     }
 
     // add front & back elements to flip container
@@ -148,47 +156,60 @@ define(['jquery'],
   }
 
   // set up mouse over handlers
-  if ($body[0].id === 'index') {
+  if ($body[0].id === 'index' || $body[0].id === 'search-results') {
     $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
       $('.flipContainer', this).toggleClass( 'flip' );
     });
   }
 
-  var self = {
-    init: function ( wm ) {
-      var limit = LIMIT_DESKTOP;
+  webmaker.init({
+    page: $body[0].id,
+    makeURL: $body.data('endpoint')
+  });
 
-      // Detect whether we are in mobile dimensions or not.
-      if (isMobile) {
-        limit = LIMIT_MOBILE;
-      }
+  var MediaGallery = function() {
+    this.limit = LIMIT_DESKTOP;
+    this.wm = webmaker;
 
-      // Handles all packery-related content loading.
-      switch ($body[0].id) {
-        case 'index':
-          var $stickyBanner = $('<div class="make internal" id="banner-join">Join the Webmaker Revolution!</div>');
-          $mainGallery.append( $stickyBanner );
-
-          wm.doSearch( ['featured'], limit, searchCallback );
-          packery.stamp( $stickyBanner[0] );
-          packery.layout();
-          break;
-
-        case 'teach':
-          var $stickyBanner = $('<div id="banner-teach">' +
-            '<img src="../img/webmaker-community.jpg" alt="Webmaker Community">' +
-            "<p>Join us! We're a global community of technies, educators and friendly humans on " +
-            'a mission.</p></div>');
-          $mainGallery.append( $stickyBanner );
-          limit = 6;
-
-          wm.doSearch( ['featured', 'guide'], limit, searchCallback );
-          packery.stamp( $stickyBanner[0] );
-          packery.layout();
-          break;
-      }
+    // Detect whether we are in mobile dimensions or not.
+    if (isMobile) {
+      this.limit = LIMIT_MOBILE;
     }
   };
 
-  return self;
+  MediaGallery.prototype.init = function() {
+    // Handles all packery-related content loading.
+    switch ($body[0].id) {
+      case 'index':
+        var $stickyBanner = $('<div class="make rf internal" id="banner-join">Join the Webmaker Revolution!</div>');
+        $mainGallery.append( $stickyBanner );
+        console.log( this.wm );
+        this.wm.doSearch( { tags: ['featured'] }, this.limit, searchCallback );
+        packery.stamp( $stickyBanner[0] );
+        packery.layout();
+        break;
+
+      case 'teach':
+        var $stickyBanner = $('<div id="banner-teach">' +
+          '<img src="../img/webmaker-community.jpg" alt="Webmaker Community">' +
+          "<p>Join us! We're a global community of technies, educators and friendly humans on " +
+          'a mission.</p></div>');
+        $mainGallery.append( $stickyBanner );
+        this.limit = 6;
+
+        this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, searchCallback );
+        packery.stamp( $stickyBanner[0] );
+        packery.layout();
+        break;
+    }
+  };
+
+  MediaGallery.prototype.search = function( options ) {
+    $('.rf').remove();
+    $body.attr('id', 'search-results');
+    this.wm.doSearch( options, this.limit, searchCallback );
+    packery.layout();
+  };
+
+  return MediaGallery;
 });

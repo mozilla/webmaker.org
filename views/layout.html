@@ -82,31 +82,34 @@
     <div class="search-wrapper">
       <div class="search-bar">
         <label for="search-keyword">Search</label>
-        <form method="post">
-          <input type="text" name="keyword" id="search-keyword">
-          <button type="submit">Search</button>
-        </form>
+        <div class="ui-append ui-input">
+          <input type="text" name="keyword" id="search-keyword" placeholder="What do you want to search for?">
+          <a class="icon icon-search"></a>
+        </div>
       </div>
       <div class="filter-bar">
         <label for="search-filter">Filter results</label>
-        <form method="post">
-          <select name="filter" id="search-filter">
-            <option value="recent">Recent</option>
-            <option value="featured">Featured</option>
-            <option value="popcorn">Popcorn Makes</option>
-            <option value="thimble:project">Thimble Makes</option>
-            <option value="event">Made at an Event</option>
-          </select>
-          <button type="submit">Filter</button>
-        </form>
+          <div id="search-filter" class="ui-append ui-select">
+            <span class="ui-selected ui-medium"></span>
+            <a class="icon icon-chevron-down"></a>
+            <div class="ui-select-menu">
+              <ul>
+                <li data-value="recent" data-selected>Recent</li>
+                <li data-value="featured">Featured</li>
+                <li data-value="popcorn">Popcorn Makes</li>
+                <li data-value="thimble:project">Thimble Makes</li>
+                <li data-value="event">Made at an Event</li>
+              </ul>
+            </div>
+          </div>
       </div>
     </div>
   </div>
   <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>
   <footer class="footer">
     <div id="footer-actions">
-      <button class="search-trigger">Search</button>
-      <button class="load-more">Load more</button>
+      <button id="bottom-search-btn">Search</button>
+      <button class="load-more">Load more <span class="icon-chevron-right"></span></button>
     </div>
     <section class="make-footer">
       <div class="make-wrapper">

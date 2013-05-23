@@ -1,0 +1,107 @@
+@blue: #20ABDC;
+@red: #C82626;
+@grey: #555;
+@lightgrey: #F4F5F5;
+
+@uiFontSize: 13px;
+@uiHeight: 30px;
+
+/*********************************************************
+* Base
+*/
+[class*=" ui-"],
+[class*=" ui-"] input {
+  color: @grey;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: @uiFontSize;
+}
+
+/*********************************************************
+* Sizes
+*/
+.ui-small {
+  width: 100px;
+}
+.ui-medium {
+  width: 200px;
+}
+.ui-large {
+  width: 300px;
+}
+
+/*********************************************************
+* Appended icons
+*/
+.ui-append {
+  display: inline-block;
+  vertical-align: center;
+  position: relative;
+  line-height: @uiHeight;
+  height: @uiHeight;
+  padding: 0 0 0 1em;
+  background: #FFF;
+  &:hover {
+    box-shadow: 0 2px 4px -2px rgba( 0, 0, 0, 0.2 );
+  }
+}
+
+.ui-append > .icon {
+  padding: 0 10px;
+  margin-left: 12px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: @uiHeight;
+  color: #FFF;
+  background-color: @blue;
+  &:hover {
+    color: #FFF;
+    background-color: darken( @blue, 5% );
+    text-decoration: none;
+  }
+}
+
+.ui-input > input {
+  border: 0;
+  width: 200px;
+  &:focus {
+    outline: none;
+    color: @blue;
+  }
+}
+
+/*********************************************************
+* Selects
+*/
+.ui-select {
+  position: relative;
+  cursor: pointer;
+}
+
+.ui-selected {
+  display: inline-block;
+}
+
+.ui-select-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  text-align: left;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-top: 1px solid @lightgrey;
+    > li {
+      color: lighten( @grey, 30% );
+      padding: 0 1em;
+      background: #FFF;
+      border-bottom: 1px solid darken( @lightgrey, 5% );
+      &:hover,
+      &.ui-on {
+        color: @grey;
+        background: @lightgrey;
+      }
+    }
+  }
+}

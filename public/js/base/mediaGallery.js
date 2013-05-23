@@ -17,7 +17,8 @@ define(['jquery'],
       isMobile = false,
       packery = new Packery(mainGallery, {
         itemSelector: 'div.make',
-        gutter: '.gutter-sizer'
+        gutter: '.gutter-sizer',
+        transitionDuration: 0.1
       });
 
   // Detect whether we are in mobile dimensions or not.

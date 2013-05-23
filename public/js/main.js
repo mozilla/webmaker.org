@@ -1,21 +1,29 @@
-define(['jquery', 'base/webmaker', 'base/mediaGallery'],
-  function ($, webmaker, mediaGallery) {
+define(['jquery', 'base/webmaker', 'base/mediaGallery', 'base/ui'],
+  function ($, webmaker, mediaGallery, UI) {
   'use strict';
 
-  var $body = $('body');
+  var $body = $('body'),
+      $search = $('#search');
 
   webmaker.init({
     page: $body[0].id,
     makeURL: $body.data('endpoint')
   });
 
-  $body.on('click', '.search-trigger', function (ev) {
-    $('html').animate({
+  $('.search-trigger').click( function( e ) {
+    $search.toggleClass('on');
+  });
+
+  $('#bottom-search-btn').click( function( e ) {
+    $('html, body').animate({
       scrollTop: 0
     }, 300, function() {
-      $('#search').addClass('on');
+      $search.addClass('on');
     });
   });
 
   mediaGallery.init(webmaker);
+
+  UI.select( '#search-filter' );
+
 });

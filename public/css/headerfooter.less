@@ -201,13 +201,28 @@ header {
 }
 
 #search {
-  height: 68px;
-  margin: 0 auto 20px auto;
+  height: 0;
+  margin: 0 auto;
   width: 1020px;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: height 0.1s ease;
+  transition: height 0.1s ease;
+
+  &.on {
+    height: 68px;
+    .search-wrapper {
+      overflow: visible;
+    }
+  }
 
   .search-wrapper {
-    float: left;
+    position: absolute;
+    top: 0;
+    height: 100%;
     width: 100%;
+    overflow: hidden;
+    padding-top: 15px;
   }
 
   label, .search-bar, .filter-bar {
@@ -249,17 +264,25 @@ footer {
 #footer-actions {
   position: absolute;
   right: 55px;
-  top: -33px;
+  bottom: 100%;
   width: 350px;
 
   button {
-    color: #fff;
+    cursor: pointer;
+    background: #C82626;
+    color: #FFF;
+    border: none;
     display: inline-block;
     font-size: 16px;
-    margin-left: 13px;
-    padding: 5px 0;
+    height: 45px;
+    line-height: 45px;
+    font-weight: 200;
+    margin-right: 8px;
     text-align: center;
     width: 150px;
+    &:hover {
+      background: lighten( #C82626, 10% );
+    }
   }
 }
 

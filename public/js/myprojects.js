@@ -70,7 +70,7 @@ require(['jquery', 'moment', 'uri'],
           if ( filters[ type ] ) {
             createProject({
               title: results[ i ].title || url,
-              edit: url + "/edit",
+              edit: results[ i ].remixUrl || url,
               type: type,
               view: url,
               thumbnail: results[ i ].thumbnail || "",

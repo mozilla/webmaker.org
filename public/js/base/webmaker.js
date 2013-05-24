@@ -33,11 +33,17 @@ define(['jquery'],
       make = Make({ apiURL: makeURL })
     },
     doSearch: function( options, limit, each ) {
-      console.log( options );
+      var sortBy = 'createdAt';
+      var options = options || {};
+
+      if (options && options.title) {
+        sortBy = 'title';
+      }
+
       make
       .find( options )
       .limit( limit )
-      .sortByField( 'createdAt', 'desc' )
+      .sortByField( sortBy, 'desc' )
       .then( function( error, results ) {
         var result;
         for ( var i = 0; i < results.length; i++ ) {

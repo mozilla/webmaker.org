@@ -14,12 +14,7 @@ define(['jquery', './webmaker'],
       $makeTeachTemplate = $body.find( 'div.make-teach' ),
       $makeBackTemplate = $body.find( 'div.make-back' ),
       $eventBackTemplate = $body.find( 'div.event-back' ),
-      isMobile = false,
-      packery = new Packery(mainGallery, {
-        itemSelector: 'div.make',
-        gutter: '.gutter-sizer',
-        transitionDuration: 0.1
-      });
+      isMobile = false;
 
   // Detect whether we are in mobile dimensions or not.
   if ($body.find( '.mobile' ).css( 'display' ) === 'none') {
@@ -72,7 +67,14 @@ define(['jquery', './webmaker'],
     $el.append( $backTemplate );
   }
 
-  function searchCallback( data ) {
+  // set up mouse over handlers
+  if ($body[0].id === 'index' || $body[0].id === 'search-results') {
+    $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
+      $('.flipContainer', this).toggleClass( 'flip' );
+    });
+  }
+
+  function searchCallback( data, self ) {
     var $makeContainer = $makeTemplate.clone( true ).addClass('rf'),
         makeContainer = $makeContainer[0],
         randSize = 'large';
@@ -137,7 +139,7 @@ define(['jquery', './webmaker'],
         break;
 
       case 'search-results':
-        createMakeTeach( data, $backEl );
+        createMakeBack( data, $backEl );
         break;
     }
 
@@ -152,24 +154,22 @@ define(['jquery', './webmaker'],
 
     // add to gallery & packery
     $mainGallery.append( $makeContainer );
-    packery.appended( makeContainer );
+    self.packery.appended( makeContainer );
   }
-
-  // set up mouse over handlers
-  if ($body[0].id === 'index' || $body[0].id === 'search-results') {
-    $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
-      $('.flipContainer', this).toggleClass( 'flip' );
-    });
-  }
-
-  webmaker.init({
-    page: $body[0].id,
-    makeURL: $body.data('endpoint')
-  });
 
   var MediaGallery = function() {
+    webmaker.init({
+      page: $body[0].id,
+      makeURL: $body.data('endpoint')
+    });
+
     this.limit = LIMIT_DESKTOP;
     this.wm = webmaker;
+    this.packery = new Packery(mainGallery, {
+      itemSelector: 'div.make',
+      gutter: '.gutter-sizer',
+      transitionDuration: 0.1
+    });
 
     // Detect whether we are in mobile dimensions or not.
     if (isMobile) {
@@ -178,15 +178,18 @@ define(['jquery', './webmaker'],
   };
 
   MediaGallery.prototype.init = function() {
+    var self = this;
+
     // Handles all packery-related content loading.
     switch ($body[0].id) {
       case 'index':
         var $stickyBanner = $('<div class="make rf internal" id="banner-join">Join the Webmaker Revolution!</div>');
         $mainGallery.append( $stickyBanner );
-        console.log( this.wm );
-        this.wm.doSearch( { tags: ['featured'] }, this.limit, searchCallback );
-        packery.stamp( $stickyBanner[0] );
-        packery.layout();
+        this.wm.doSearch( { tags: ['featured'] }, this.limit, function( data ) {
+          searchCallback( data, self )
+        });
+        this.packery.stamp( $stickyBanner[0] );
+        this.packery.layout();
         break;
 
       case 'teach':
@@ -197,18 +200,32 @@ define(['jquery', './webmaker'],
         $mainGallery.append( $stickyBanner );
         this.limit = 6;
 
-        this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, searchCallback );
-        packery.stamp( $stickyBanner[0] );
-        packery.layout();
+        this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, function( data ) {
+          searchCallback( data, self )
+        });
+        this.packery.stamp( $stickyBanner[0] );
+        this.packery.layout();
         break;
     }
   };
 
   MediaGallery.prototype.search = function( options ) {
+    var self = this;
     $('.rf').remove();
+
+    // Every time we redraw all the elements, we need to recreate Packery or else
+    // it draws the layout based on the previous setup.
+    this.packery = new Packery(mainGallery, {
+      itemSelector: 'div.make',
+      gutter: '.gutter-sizer',
+      transitionDuration: 0.1
+    });
     $body.attr('id', 'search-results');
-    this.wm.doSearch( options, this.limit, searchCallback );
-    packery.layout();
+    this.limit = 16;
+    this.wm.doSearch( options, this.limit, function( data ) {
+      searchCallback( data, self )
+    });
+    this.packery.layout();
   };
 
   return MediaGallery;

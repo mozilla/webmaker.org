@@ -11,7 +11,7 @@
     <meta name="persona-email" content="{{ email }}">
     {% endblock %}
   </head>
-  <body id={{ page }} data-endpoint="{{ makeEndpoint }}">
+  <body id="{{ page }}" data-endpoint="{{ makeEndpoint }}">
 
   <div id="webmaker-nav">
     <nav class="webmaker-nav-container">
@@ -84,7 +84,7 @@
         <form>
           <label for="search-keyword">Search</label>
           <div class="ui-append ui-input">
-            <input type="text" name="keyword" id="search-keyword" placeholder="What do you want to search for?">
+            <input type="text" name="keyword" id="search-keyword" placeholder="What do you want to search for?" required>
             <button type="submit" class="icon icon-search"></button>
           </div>
         </form>
@@ -96,11 +96,12 @@
             <a class="icon icon-chevron-down"></a>
             <div class="ui-select-menu">
               <ul>
+                <li data-value="featured">Recommended</li>
                 <li data-value="recent" data-selected>Recent</li>
-                <li data-value="featured">Featured</li>
-                <li data-value="popcorn">Popcorn Makes</li>
-                <li data-value="thimble:project">Thimble Makes</li>
-                <li data-value="event">Made at an Event</li>
+                <li data-value="guide:popcorn">Popcorn</li>
+                <li data-value="guide:thimble">Thimble</li>
+                <li data-value="guide:event">Made at an Event</li>
+                <li data-value="title">Title</li>
               </ul>
             </div>
           </div>

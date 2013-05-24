@@ -85,7 +85,7 @@ a {
 
   .border-radius;
   .border-box;
-  .box-shadow(0, 1px, 10px, #555);
+  .box-shadow(0, 0, 4px, #555);
   .perspective(800px);
 
   a {
@@ -137,10 +137,22 @@ a {
 .front {
   left: 0;
   right: 0;
+  position: relative;
+  height: 100%;
 
   img {
     .border-radius;
     width: 100%;
+  }
+
+  .share-icon {
+    width: 25px;
+    height: 25px;
+    z-index: 3;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+
   }
 }
 
@@ -199,10 +211,6 @@ h3 {
   border-bottom: @make-border-size solid #63D9E5;
 }
 
-.internal {
-  border-bottom: @make-border-size solid #FF0B00;
-}
-
 .default {
   border-bottom: @make-border-size solid #FFF;
 }
@@ -235,21 +243,108 @@ p {
   }
 }
 
-#banner-join {
-  background-color: #111;
-  color: #FE4B44;
-  font-size: 30px;
-  font-weight: 100;
-  padding: 20px 10px;
+.make-back-small {
+  padding: 0;
   position: absolute;
-  text-align: center;
+  top: 0;
+  left: 0;
+  background-image: url('../img/bkgFooter.jpg');
+  .see-more{
+    float: left;
+    position: relative;
+    top: 7px;
+    left: 10px;
+    font-size: 15px;
+    color: #77797c;
+  }
+
+  .make-small-arrow {
+    background: url('../img/right-arrow.png');
+    width: 9px;
+    height: 18px;
+    position: relative;
+    bottom: 18px;
+    right: 10px;
+    float: right;
+  }
 }
 
 #banner-join {
-  height: 203px;
+  background-color: #b7251b;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 100;
+  position: absolute;
+  text-align: center;
+  height: 135px;
   left: 0;
   top: 155px;
   width: 500px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  h1, h2 {
+    font-family: 'Open Sans Light', "Helvetica Neue", sans-serif;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 1px
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .sign-up-div {
+    width: 500px;
+    text-align: left;
+
+    .sign-up-span {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 14px;
+      margin-left: 70px;
+    }
+
+    .form-div {
+      margin-left: 5px;
+      padding-top: 10px;
+      display: inline-block;
+      height: 30px;
+      .border-box;
+
+      input {
+	height: 30px;
+	width: 150px;
+	font-size: 13px;
+	padding-left: 5px;
+	border: 2px solid white;
+	float: left;
+	.border-box;
+      }
+
+      button {
+	height: 30px;
+	font-family: 'Open Sans Light', "Helvetica Neue", sans-serif;
+	width: 88px;
+	font-weight: 200;
+	border: 2px solid white;
+	float: left;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	background: #27aae1;
+	color: white;
+	font-size: 16px;
+      }
+    }
+  }
+
 }
 
 #banner-teach {

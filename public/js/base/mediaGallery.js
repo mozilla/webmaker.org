@@ -37,6 +37,16 @@ define(['jquery', './webmaker'],
     $el.append( $backTemplate );
   }
 
+  function createSmallMakeBack( data, $el ) {
+    var $backTemplate = $('<div>').addClass('make-back-small');
+    var $see = $('<div>').addClass('see-more').text('See make details');
+    var $arrow = $('<div>').addClass('make-small-arrow');
+    $backTemplate.append( $see );
+    $backTemplate.append( $arrow );
+
+    $el.append( $backTemplate );
+  }
+
   function createMakeTeach( data, $el ) {
     var $teachTemplate = $makeTeachTemplate.clone( true ),
         $titleSpan = $('.title', $teachTemplate),
@@ -107,12 +117,15 @@ define(['jquery', './webmaker'],
 
     // create front Element & populate
     var $frontEl = $('<div class="front"><div class="preview-img"><img src="' + data.thumbnail +
-      '" alt="' + data.title + '"></div></div>');
+      '" alt="' + data.title + '"><img class="share-icon" alt="Share" src="../img/share-icon.png" /></div></div>');
 
     // create back element & populate
     var $backEl = $('<div class="back"></div>');
     var tags = data.tags;
 
+    /*
+     * Not going to make it for June 15th/MVP
+     * so I'm commenting this out. - DK
     if ( tags.popcorn ) {
       $frontEl.addClass( 'popcorn' );
     } else if ( tags.challenge ) {
@@ -126,12 +139,13 @@ define(['jquery', './webmaker'],
     } else {
       $frontEl.addClass( 'default' );
     }
-
+    */
     $makeContainer.addClass(randSize);
 
     switch( $body[0].id ) {
       case 'index':
-        createMakeBack( data, $backEl );
+	if(randSize === 'small') createSmallMakeBack( data, $backEl );
+	else createMakeBack( data, $backEl );
         break;
 
       case 'teach':
@@ -183,8 +197,29 @@ define(['jquery', './webmaker'],
     // Handles all packery-related content loading.
     switch ($body[0].id) {
       case 'index':
-        var $stickyBanner = $('<div class="make rf internal" id="banner-join">Join the Webmaker Revolution!</div>');
+        var $stickyBanner = $('<div class="make internal" id="banner-join">');
+        var $h1 = $('<h1>Make history. Or, um, cat videos.</h1>');
+        var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
+        var $signup_div = $('<div class="sign-up-div">');
+        var $url_span = $('<span class="sign-up-span">Webmaker.org/</span>');
+        var $form_div = $('<div class="form-div class="ui-input">');
+        var $signup_form = $('<form action="get" class="ui-input">');
+        var $name_input = $('<input name="yourname" id="yourname" required>').prop('placeholder', 'yournamehere');
+        var $button = $('<button>').html('Sign up <i class="icon-chevron-right"></i>');
+
+        $signup_form.append($name_input);
+        $signup_form.append($button);
+        $form_div.append($signup_form);
+
+        $signup_div.append($url_span);
+        $signup_div.append($form_div);
+
+        $stickyBanner.append($h1);
+        $stickyBanner.append($h2);
+        $stickyBanner.append($signup_div);
+
         $mainGallery.append( $stickyBanner );
+
         this.wm.doSearch( { tags: ['featured'] }, this.limit, function( data ) {
           searchCallback( data, self )
         });

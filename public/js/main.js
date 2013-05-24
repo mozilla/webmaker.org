@@ -15,7 +15,7 @@ define(['jquery','base/mediaGallery', 'base/ui'],
     $('html, body').animate({
       scrollTop: 0
     }, 300, function() {
-      $search.addClass('on')
+      $search.addClass('on');
       $('#search-keyword').focus();
     });
   });
@@ -37,7 +37,7 @@ define(['jquery','base/mediaGallery', 'base/ui'],
         tags.push(val);
         media.search( { tags: tags, contentType: 'application/x-thimble' } );
         break;
-    };
+    }
   });
 
   $search.on( 'submit', 'form', function( e ) {

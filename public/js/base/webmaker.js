@@ -28,16 +28,22 @@ define(['jquery'],
 
   var self = {
     init: function( options ) {
-      makeURL = options.makeURL;
-      page = options.page;
-      make = Make({ apiURL: makeURL });
+      makeURL = options.makeURL,
+      page = options.page,
+      make = Make({ apiURL: makeURL })
     },
+    doSearch: function( options, limit, each ) {
+      var sortBy = 'createdAt';
+      var options = options || {};
 
-    doSearch: function( tags, limit, each ) {
+      if (options && options.title) {
+        sortBy = 'title';
+      }
+
       make
-      .find({ tags: tags })
+      .find( options )
       .limit( limit )
-      .sortByField( 'createdAt', 'desc' )
+      .sortByField( sortBy, 'desc' )
       .then( function( error, results ) {
         var result;
         for ( var i = 0; i < results.length; i++ ) {
@@ -47,6 +53,7 @@ define(['jquery'],
             each( result );
           }
         }
+
       });
     }
   };

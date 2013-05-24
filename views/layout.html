@@ -11,7 +11,7 @@
     <meta name="persona-email" content="{{ email }}">
     {% endblock %}
   </head>
-  <body id={{ page }} data-endpoint="{{ makeEndpoint }}">
+  <body id="{{ page }}" data-endpoint="{{ makeEndpoint }}">
 
   <div id="webmaker-nav">
     <nav class="webmaker-nav-container">
@@ -49,7 +49,7 @@
         <a class="persona-link" href="#">Sign out</a>
       </div>
     </div>
-    <img src="img/logo.png" alt="Mozilla Webmaker">
+    <img id="logo" src="img/logo.png" alt="Mozilla Webmaker">
     <div class="tabzilla">
       <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
     </div>
@@ -81,11 +81,13 @@
   <div id="search">
     <div class="search-wrapper">
       <div class="search-bar">
-        <label for="search-keyword">Search</label>
-        <div class="ui-append ui-input">
-          <input type="text" name="keyword" id="search-keyword" placeholder="What do you want to search for?">
-          <a class="icon icon-search"></a>
-        </div>
+        <form>
+          <label for="search-keyword">Search</label>
+          <div class="ui-append ui-input">
+            <input type="text" name="keyword" id="search-keyword" placeholder="What do you want to search for?" required>
+            <button type="submit" class="icon icon-search"></button>
+          </div>
+        </form>
       </div>
       <div class="filter-bar">
         <label for="search-filter">Filter results</label>
@@ -94,11 +96,12 @@
             <a class="icon icon-chevron-down"></a>
             <div class="ui-select-menu">
               <ul>
+                <li data-value="featured">Recommended</li>
                 <li data-value="recent" data-selected>Recent</li>
-                <li data-value="featured">Featured</li>
-                <li data-value="popcorn">Popcorn Makes</li>
-                <li data-value="thimble:project">Thimble Makes</li>
-                <li data-value="event">Made at an Event</li>
+                <li data-value="guide:popcorn">Popcorn</li>
+                <li data-value="guide:thimble">Thimble</li>
+                <li data-value="guide:event">Made at an Event</li>
+                <li data-value="title">Title</li>
               </ul>
             </div>
           </div>

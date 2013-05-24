@@ -303,7 +303,7 @@ footer {
   header {
     height: 290px;
     padding: 0 10px;
-    margin-bottom: auto;
+    margin-bottom: 20px;
     position: relative;
 
     .persona-mobile {
@@ -366,21 +366,34 @@ footer {
   #search {
     width: 600px;
 
-    .search-bar, .filter-bar {
-      float: left;
+    &.on {
+      height: 98px;
 
-      label {
-        padding: 10px 10px 0;
-      }
-
-      form {
-        padding: 0 10px;
-      }
-
-      label, form {
+      .search-wrapper {
         display: block;
-        margin: 0;
-        text-align: left;
+      }
+    }
+
+    .search-wrapper {
+      display: none;
+      height: 280px;
+
+      .search-bar, .filter-bar {
+        float: left;
+
+        label {
+          padding: 10px 10px 0;
+        }
+
+        form {
+          padding: 0 10px;
+        }
+
+        label, form {
+          display: block;
+          margin: 0;
+          text-align: left;
+        }
       }
     }
   }
@@ -407,8 +420,8 @@ footer {
       }
     }
   }
-  .partners {
 
+  .partners {
     .partner-list {
       text-align: left;
 

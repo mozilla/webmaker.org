@@ -1,14 +1,11 @@
-define(['jquery', 'base/webmaker', 'base/mediaGallery', 'base/ui'],
-  function ($, webmaker, mediaGallery, UI) {
+define(['jquery','base/mediaGallery', 'base/ui'],
+  function ($, MediaGallery, UI) {
   'use strict';
 
   var $body = $('body'),
-      $search = $('#search');
-
-  webmaker.init({
-    page: $body[0].id,
-    makeURL: $body.data('endpoint')
-  });
+      $search = $('#search'),
+      search,
+      media = new MediaGallery();
 
   $('.search-trigger').click( function( e ) {
     $search.toggleClass('on');
@@ -18,12 +15,35 @@ define(['jquery', 'base/webmaker', 'base/mediaGallery', 'base/ui'],
     $('html, body').animate({
       scrollTop: 0
     }, 300, function() {
-      $search.addClass('on');
+      $search.addClass('on')
+      $('#search-keyword').focus();
     });
   });
 
-  mediaGallery.init(webmaker);
+  media.init();
 
-  UI.select( '#search-filter' );
+  UI.select( '#search-filter', function( val ) {
+    var tags = [];
+    search = $search.find( '[name=keyword]' ).val();
+    tags.push(search);
+
+    switch ( val ) {
+      case 'recent':
+      case 'title':
+        media.search( { tags: tags });
+        break;
+
+      default:
+        tags.push(val);
+        media.search( { tags: tags, contentType: 'application/x-thimble' } );
+        break;
+    };
+  });
+
+  $search.on( 'submit', 'form', function( e ) {
+    e.preventDefault();
+    search = $( e.target ).find( '[name=keyword]' ).val();
+    media.search( { tags: [ search ] } );
+  });
 
 });

@@ -1,5 +1,5 @@
-define(['jquery'],
-  function ($) {
+define(['jquery', './webmaker'],
+  function ($, webmaker) {
   'use strict';
 
   var countLarge = 2,
@@ -14,12 +14,7 @@ define(['jquery'],
       $makeTeachTemplate = $body.find( 'div.make-teach' ),
       $makeBackTemplate = $body.find( 'div.make-back' ),
       $eventBackTemplate = $body.find( 'div.event-back' ),
-      isMobile = false,
-      packery = new Packery(mainGallery, {
-        itemSelector: 'div.make',
-        gutter: '.gutter-sizer',
-        transitionDuration: 0.1
-      });
+      isMobile = false;
 
   // Detect whether we are in mobile dimensions or not.
   if ($body.find( '.mobile' ).css( 'display' ) === 'none') {
@@ -72,8 +67,15 @@ define(['jquery'],
     $el.append( $backTemplate );
   }
 
-  function searchCallback( data ) {
-    var $makeContainer = $makeTemplate.clone( true ),
+  // set up mouse over handlers
+  if ($body[0].id === 'index' || $body[0].id === 'search-results') {
+    $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
+      $('.flipContainer', this).toggleClass( 'flip' );
+    });
+  }
+
+  function searchCallback( data, self ) {
+    var $makeContainer = $makeTemplate.clone( true ).addClass('rf'),
         makeContainer = $makeContainer[0],
         randSize = 'large';
 
@@ -94,6 +96,10 @@ define(['jquery'],
           break;
 
         case 'teach':
+          randSize = 'medium';
+          break;
+
+        case 'search-results':
           randSize = 'medium';
           break;
       }
@@ -131,6 +137,10 @@ define(['jquery'],
       case 'teach':
         createMakeTeach( data, $frontEl );
         break;
+
+      case 'search-results':
+        createMakeBack( data, $backEl );
+        break;
     }
 
     // add front & back elements to flip container
@@ -144,51 +154,79 @@ define(['jquery'],
 
     // add to gallery & packery
     $mainGallery.append( $makeContainer );
-    packery.appended( makeContainer );
+    self.packery.appended( makeContainer );
   }
 
-  // set up mouse over handlers
-  if ($body[0].id === 'index') {
-    $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
-      $('.flipContainer', this).toggleClass( 'flip' );
+  var MediaGallery = function() {
+    webmaker.init({
+      page: $body[0].id,
+      makeURL: $body.data('endpoint')
     });
-  }
 
-  var self = {
-    init: function ( wm ) {
-      var limit = LIMIT_DESKTOP;
+    this.limit = LIMIT_DESKTOP;
+    this.wm = webmaker;
+    this.packery = new Packery(mainGallery, {
+      itemSelector: 'div.make',
+      gutter: '.gutter-sizer',
+      transitionDuration: 0.1
+    });
 
-      // Detect whether we are in mobile dimensions or not.
-      if (isMobile) {
-        limit = LIMIT_MOBILE;
-      }
-
-      // Handles all packery-related content loading.
-      switch ($body[0].id) {
-        case 'index':
-          var $stickyBanner = $('<div class="make internal" id="banner-join">Join the Webmaker Revolution!</div>');
-          $mainGallery.append( $stickyBanner );
-
-          wm.doSearch( ['featured'], limit, searchCallback );
-          packery.stamp( $stickyBanner[0] );
-          packery.layout();
-          break;
-
-        case 'teach':
-          var $stickyBanner = $('<div id="banner-teach">' +
-            '<img src="../img/webmaker-community.jpg" alt="Webmaker Community">' +
-            "<p>Join us! We're a global community of technies, educators and friendly humans on " +
-            'a mission.</p></div>');
-          $mainGallery.append( $stickyBanner );
-          limit = 6;
-
-          wm.doSearch( ['featured', 'guide'], limit, searchCallback );
-          packery.stamp( $stickyBanner[0] );
-          packery.layout();
-          break;
-      }
+    // Detect whether we are in mobile dimensions or not.
+    if (isMobile) {
+      this.limit = LIMIT_MOBILE;
     }
   };
 
-  return self;
+  MediaGallery.prototype.init = function() {
+    var self = this;
+
+    // Handles all packery-related content loading.
+    switch ($body[0].id) {
+      case 'index':
+        var $stickyBanner = $('<div class="make rf internal" id="banner-join">Join the Webmaker Revolution!</div>');
+        $mainGallery.append( $stickyBanner );
+        this.wm.doSearch( { tags: ['featured'] }, this.limit, function( data ) {
+          searchCallback( data, self )
+        });
+        this.packery.stamp( $stickyBanner[0] );
+        this.packery.layout();
+        break;
+
+      case 'teach':
+        var $stickyBanner = $('<div id="banner-teach">' +
+          '<img src="../img/webmaker-community.jpg" alt="Webmaker Community">' +
+          "<p>Join us! We're a global community of technies, educators and friendly humans on " +
+          'a mission.</p></div>');
+        $mainGallery.append( $stickyBanner );
+        this.limit = 6;
+
+        this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, function( data ) {
+          searchCallback( data, self )
+        });
+        this.packery.stamp( $stickyBanner[0] );
+        this.packery.layout();
+        break;
+    }
+  };
+
+  MediaGallery.prototype.search = function( options ) {
+    var self = this;
+    $('.rf').remove();
+
+    // Every time we redraw all the elements, we need to recreate Packery or else
+    // it draws the layout based on the previous setup.
+    this.packery = new Packery(mainGallery, {
+      itemSelector: 'div.make',
+      gutter: '.gutter-sizer',
+      transitionDuration: 0.1
+    });
+    $body.attr('id', 'search-results');
+    this.limit = 16;
+    this.wm.doSearch( options, this.limit, function( data ) {
+      searchCallback( data, self )
+    });
+    this.packery.layout();
+  };
+
+  return MediaGallery;
 });

@@ -47,7 +47,7 @@ header {
         padding-top: 12px;
         #sign-up {
           padding: 3px 10px;
-          color: white;
+          color: #FFF;
           background: #27aae1;
         }
       }
@@ -117,7 +117,8 @@ header {
  */
 .make-footer {
   margin-top: 20px;
-  height: 110px;
+  position: relative;
+  height: 125px;
   background-image: linear-gradient(top, rgb(34,147,195) 1%, rgb(56,175,226) 51%);
   background-image: -o-linear-gradient(top, rgb(34,147,195) 1%, rgb(56,175,226) 51%);
   background-image: -moz-linear-gradient(top, rgb(34,147,195) 1%, rgb(56,175,226) 51%);
@@ -133,18 +134,26 @@ header {
   );
   .make-wrapper {
     margin: 0 auto;
+    height: 125px;
     width: 1020px;
     .make-footer-item {
       margin-top: 13px;
-      width: 230px;
+      margin-right: 10px;
+      width: 245px;
       float: left;
       color: #eaf4fa;
 
+      a {
+        color: #FFF;
+      }
+
       .make-footer-item-img {
+        position: relative;
+        top: 10px;
         float: left;
-        border: 2px solid white;
+        border: 2px solid #FFF;
         border-radius: 50em;
-        margin-right: 5px;
+        margin-right: 7px;
       }
 
       .make-footer-item-text {
@@ -156,7 +165,7 @@ header {
         .make-footer-item-desc {
           display: block;
           font-size: 13px;
-          line-height: 16px;
+          line-height: 20px;
           margin-top: 4px;
 
           a {
@@ -170,25 +179,164 @@ header {
 }
 
 .partners {
-  padding-top: 40px;
+  padding: 40px 0;
   background: url("../img/bkgFooter.jpg") repeat scroll 50% 0 #f9f9f9;
   text-align: center;
-  padding-bottom: 40px;
+
+  hr {
+    color: #96989c;
+    opacity: 0.7;
+    width: 50%;
+    border-width: 1px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
 
   .partners-header {
-    font-size: 22px;
+    font-size: 20px;
     font-family: "Open Sans Light";
     margin: 0;
+    color: #96989c;
   }
 
-  .partner-list {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  .refresh-sponsors {
+    cursor: pointer;
+  }
 
-    .sponsor-item {
-      margin-left: 40px;
+
+  .sponsors {
+    list-style: none;
+    font-size: 14px;
+    margin: 15px 0 0;
+
+    li {
+      display: inline-block;
+      font-size: 14px;
+      margin-right: 20px;
+
+      a {
+        text-decoration: underline;
+      }
     }
   }
+  .social {
+    list-style: none;
+    position: relative;
+
+    #email-li {
+      top: 8px;
+      position: relative;
+
+      #email-updates {
+        float: left;
+        border: 0;
+        height: 30px;
+        width: 205px;
+        padding: 5px;
+        font-size: 14px;
+        border: 1px solid #FFF;
+        .border-box;
+      }
+
+      #email-submit {
+        color: #FFF;
+        cursor: pointer;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        width: 30px;
+        margin: 0;
+        padding: 0;
+        background: #27aae1;
+        border: 1px solid #FFF;
+        .border-box;
+      }
+
+      .privacy-box,
+      .privacy-box-active {
+        z-index: 2;
+        margin-top: 10px;
+        padding: 0 10px;
+        position: absolute;
+        width: 280px;
+        height: 60px;
+        top: 30px;
+        color: #7b7b7b;
+        background: #FFF;
+        .border-radius;
+        .box-shadow(1px, 1px, 9px, grey);
+        .border-box;
+
+      }
+
+      .checkbox {
+        float: left;
+        margin-top: 10px;
+        &:after {
+          font-size: 30px;
+        }
+      }
+
+      .privacy-desc {
+        font-size: 13px;
+        margin-top: 10px;
+        float: right;
+        width: 225px;
+        height: 35px;
+      }
+
+      .privacy-box {
+        display: none;
+      }
+
+      .privacy-box-active {
+        display: block;
+      }
+
+    }
+    img {
+      position: relative;
+      top: 3px;
+    }
+
+    li {
+      color: #21a4dc;
+      display: inline-block;
+      font-size: 14px;
+      margin-right: 20px;
+      position: relative;
+
+      i {
+        font-size: 22px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .links {
+    list-style: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      font-size: 14px;
+
+      a {
+        color: #55575c;
+      }
+
+      &:not(:last-child):after {
+        content: '|';
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #96989c;
+        opacity: 0.7;
+      }
+    }
+  }
+
 
   .small-partners-header {
     font-size: 20px;
@@ -402,6 +550,7 @@ footer {
     height: 220px;
     width: 640px;
 
+
     .make-wrapper {
       width: 600px;
       padding-top: 10px;
@@ -413,10 +562,10 @@ footer {
         width: 280px;
         margin-right: 15px;
         margin-bottom: 10px;
+      }
 
-        &:nth-child(3n) {
-          clear: left;
-        }
+      &:nth-child(3n) {
+        clear: left;
       }
     }
   }
@@ -431,4 +580,34 @@ footer {
       }
     }
   }
+}
+
+.c-leftarrow {
+  width: 35px;
+  height: 60px;
+  background: #FFF;
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 50% / 2;
+  font-size: 55px;
+  line-height: 60px;
+  text-align: center;
+  padding-right: 7px;
+  .border-box;
+}
+
+.c-rightarrow {
+  width: 35px;
+  height: 60px;
+  background: #FFF;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 50% / 2;
+  font-size: 55px;
+  line-height: 60px;
+  text-align: center;
+  padding-left: 7px;
+  .border-box;
 }

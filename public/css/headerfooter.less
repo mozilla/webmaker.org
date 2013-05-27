@@ -134,6 +134,11 @@ header {
     color-stop(0.51, rgb(56,175,226))
   );
 
+  .carousel-wrapper {
+    margin: 0 auto;
+    width: 1020px;
+  }
+
   .make-wrapper {
     margin: 0 auto;
     height: 125px;
@@ -351,41 +356,12 @@ header {
 }
 
 #search {
-  height: 0;
-  margin: 0 auto;
-  width: 1020px;
-  position: relative;
-  z-index: 1;
-  -webkit-transition: height 0.1s ease;
-  transition: height 0.1s ease;
+  position: absolute;
+  right: 20px;
+  z-index: 3;
 
-  &.on {
-    height: 68px;
-    .search-wrapper {
-      overflow: visible;
-    }
-  }
-
-  .search-wrapper {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 15px;
-  }
-
-  label, .search-bar, .filter-bar {
+  label, .filter-bar {
     display: block;
-  }
-
-  .search-bar {
-    float: left;
-    text-align: right;
-
-    label {
-      text-align: right;
-    }
   }
 
   .filter-bar {
@@ -396,8 +372,7 @@ header {
     }
   }
 
-  .search-bar, .filter-bar {
-    width: 50%;
+  .filter-bar {
 
     label, form {
       display: inline-block;
@@ -514,21 +489,15 @@ footer {
   }
 
   #search {
+    height: 98px;
+    position: absolute;
+    right: 10px;
     width: 600px;
 
-    &.on {
-      height: 98px;
-
-      .search-wrapper {
-        display: block;
-      }
-    }
-
     .search-wrapper {
-      display: none;
       height: 280px;
 
-      .search-bar, .filter-bar {
+      .filter-bar {
         float: left;
 
         label {
@@ -549,19 +518,19 @@ footer {
   }
 
   .make-footer {
-    height: 220px;
     width: 640px;
 
+    .carousel-wrapper {
+      width: 530px;
+    }
 
     .make-wrapper {
       width: 600px;
-      padding-top: 10px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
       height: 100%;
 
       .make-footer-item {
-        width: 280px;
+        width: 240px;
         margin-right: 15px;
         margin-bottom: 10px;
       }
@@ -581,6 +550,10 @@ footer {
         margin-bottom: 10px;
       }
     }
+  }
+
+  #footer-actions {
+    right: 0;
   }
 }
 

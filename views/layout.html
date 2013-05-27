@@ -80,15 +80,6 @@
   </header>
   <div id="search">
     <div class="search-wrapper">
-      <div class="search-bar">
-        <form>
-          <label for="search-keyword">Search</label>
-          <div class="ui-append ui-input">
-            <input type="text" name="keyword" id="search-keyword" placeholder="What do you want to search for?" required>
-            <button type="submit" class="icon icon-search"></button>
-          </div>
-        </form>
-      </div>
       <div class="filter-bar">
         <label for="search-filter">Filter results</label>
           <div id="search-filter" class="ui-append ui-select">
@@ -111,14 +102,15 @@
   <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>
   <footer class="footer">
     <div id="footer-actions">
-      <button id="bottom-search-btn">Back to top</button>
+      <button id="bottom-search-btn">Back to top <span class="icon-angle-up"></span></button>
       <button class="load-more">Load more <span class="icon-chevron-right"></span></button>
     </div>
     <section class="make-footer">
       <div class="c-leftarrow cta-arrow hide">
 	      <i class="icon-angle-left"></i>
       </div>
-      <div class="make-wrapper">
+      <div class="carousel-wrapper">
+        <div class="make-wrapper"></div>
       </div>
       <div class="c-rightarrow cta-arrow hide">
 	      <i class="icon-angle-right"></i>

@@ -4,12 +4,7 @@ define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/med
   $(document).ready(function() {
     var $body = $('body'),
     $search = $('#search'),
-    search,
     media = new MediaGallery();
-
-    $('.search-trigger').click( function( e ) {
-      $search.toggleClass('on');
-    });
 
     $('#bottom-search-btn').click( function( e ) {
       $('html, body').animate({
@@ -23,31 +18,16 @@ define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/med
     media.init();
 
     UI.select( '#search-filter', function( val ) {
-      var tags = [];
-      search = $search.find( '[name=keyword]' ).val();
-      tags.push(search);
-
       switch ( val ) {
         case 'recent':
-          case 'title':
-          media.search( { tags: tags });
-        break;
+        case 'title':
+          media.search( { title: true } );
+          break;
 
         default:
-          tags.push(val);
-        media.search( { tags: tags, contentType: 'application/x-thimble' } );
-        break;
+          media.search( { tags: [val], contentType: 'application/x-thimble' } );
+          break;
       }
-    });
-
-    $search.on( 'submit', 'form', function( e ) {
-      e.preventDefault();
-      search = $( e.target ).find( '[name=keyword]' ).val();
-      media.search( { tags: [ search ] } );
-    });
-
-    carousel.init({
-      page: $body[0].id
     });
 
     carousel.attachToCTA();

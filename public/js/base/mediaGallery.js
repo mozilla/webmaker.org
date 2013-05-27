@@ -16,11 +16,6 @@ define(['jquery', './webmaker'],
       $eventBackTemplate = $body.find( 'div.event-back' ),
       isMobile = false;
 
-  // Detect whether we are in mobile dimensions or not.
-  if ($body.find( '.mobile' ).css( 'display' ) === 'none') {
-    isMobile = true;
-  }
-
   function createMakeBack( data, $el ) {
     var $backTemplate = $makeBackTemplate.clone( true ),
         $placeSpan = $('.place', $backTemplate),
@@ -97,11 +92,9 @@ define(['jquery', './webmaker'],
           if (countLarge > 0) {
             randSize = 'large';
             countLarge --;
-          } else if (countMedium > 0) {
+          } else {
             randSize = 'medium';
             countMedium --;
-          } else {
-            randSize = 'small';
           }
           break;
 

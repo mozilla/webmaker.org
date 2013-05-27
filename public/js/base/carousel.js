@@ -1,9 +1,15 @@
-define(['jquery', 'jquery-carousel'], function($, $carousel) {
+define(['jquery'], function($) {
   'use strict';
   // variables & setup
-  var $arrows = $('.cta-arrow');
-  var page;
+  var $arrows = $('.cta-arrow'),
+      $body = $('body'),
+      isMobile = false,
+      page,
+      DEFAULT_FOOTER_ITEM_WIDTH = 245;
 
+  if ($body.find( '.mobile' ).css( 'display' ) === 'none') {
+    isMobile = true;
+  }
 
   // grab CTA data
   var cta = [{
@@ -37,41 +43,40 @@ define(['jquery', 'jquery-carousel'], function($, $carousel) {
     "url": "http://google.com"
   }];
 
-
-  function init(page) {
-    this.page = page.page;
-  }
-
   function attachToCTA() {
     var frag = document.createDocumentFragment();
-    switch(this.page) {
-      case 'index':
-	if(cta.length > 4) {
-	  $arrows.show();
-	}
 
-	for(var i = 0; i < cta.length; ++i) {
-	  var item = createCTA({
-	    "title": cta[i].title,
-	    "desc": cta[i].desc,
-	    "image": cta[i].image,
-	    "url": cta[i].url
-	  });
+    if(cta.length > 4 && !isMobile) {
+      $arrows.show();
+    }
 
-	  $('.make-wrapper').append(item);
-	}
-	var carouOptions = {
-	  height: 125,
-	  items: 4,
-	  circular: false,
-	  infinite: false,
-	  scroll: { fx: 'directscroll', items: 1 },
-	  auto: { play: false },
-	  prev: { button: $('.c-leftarrow') },
-	  next: { button: $('.c-rightarrow') }
-	}
-	$('.make-wrapper').carouFredSel(carouOptions);
-      break;
+    for(var i = 0; i < cta.length; ++i) {
+      var item = createCTA({
+        "title": cta[i].title,
+        "desc": cta[i].desc,
+        "image": cta[i].image,
+        "url": cta[i].url
+      });
+
+      $('.make-wrapper').append(item);
+    }
+
+    var carouOptions = {
+      height: 125,
+      items: {
+        visible: 4,
+        width: DEFAULT_FOOTER_ITEM_WIDTH
+      },
+      circular: false,
+      infinite: false,
+      scroll: { fx: 'directscroll', items: 1 },
+      auto: { play: false },
+      prev: { button: $('.c-leftarrow') },
+      next: { button: $('.c-rightarrow') }
+    };
+
+    if (!isMobile) {
+      $('.make-wrapper').carouFredSel(carouOptions);
     }
   }
 
@@ -111,19 +116,25 @@ define(['jquery', 'jquery-carousel'], function($, $carousel) {
     var $partners = $('.sponsors');
 
     var carouOptions = {
-      items: 3,
+      items: {
+        visible: 3,
+        width: DEFAULT_FOOTER_ITEM_WIDTH
+      },
       align: 'center',
-      width: '100%',
-      scroll: { fx: 'fade', items: 3 },
-      next: { button: $('.refresh-sponsors') }
+      scroll: { fx: 'fade' },
+      next: { button: $('.refresh-sponsors') },
+      responsive: true
+    };
+
+    if (!isMobile) {
+      $partners.carouFredSel(carouOptions);
     }
-    $partners.carouFredSel(carouOptions);
   }
 
   var self = {
-    init: init,
     attachToCTA: attachToCTA,
     attachToPartners: attachToPartners
-  }
+  };
+
   return self;
 });

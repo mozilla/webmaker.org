@@ -137,8 +137,8 @@ define(['jquery', './webmaker'],
 
     switch( $body[0].id ) {
       case 'index':
-	if(randSize === 'small') createSmallMakeBack( data, $backEl );
-	else createMakeBack( data, $backEl );
+        if(randSize === 'small') createSmallMakeBack( data, $backEl );
+        else createMakeBack( data, $backEl );
         break;
 
       case 'teach':
@@ -175,7 +175,11 @@ define(['jquery', './webmaker'],
     this.packery = new Packery(mainGallery, {
       itemSelector: 'div.make',
       gutter: '.gutter-sizer',
-      transitionDuration: 0.1
+      transitionDuration: '0.2s'
+    });
+
+    this.packery.on( 'layoutComplete', function() {
+      $mainGallery.removeClass('packery-hide');
     });
 
     // Detect whether we are in mobile dimensions or not.
@@ -190,6 +194,12 @@ define(['jquery', './webmaker'],
     // Handles all packery-related content loading.
     switch ($body[0].id) {
       case 'template':
+        break;
+      case 'search':
+        $('.make').click( function() {
+          $( this ).toggleClass('expand');
+          self.packery.layout();
+        });
         break;
       case 'index':
         var $stickyBanner = $('<div class="make internal" id="banner-join">');

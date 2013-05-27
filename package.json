@@ -16,7 +16,8 @@
     "habitat": "0.4.1",
     "less-middleware": "0.1.9",
     "nunjucks": "0.1.8a",
-    "webmaker-loginapi": "0.1.1"
+    "webmaker-loginapi": "0.1.1",
+    "makeapi": "~0.1.9"
   },
   "devDependencies": {
     "grunt": "0.4.1",

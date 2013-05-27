@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block title %}Learn{% endblock %}
+{% block midbar %}
+<div {% if query %} class="search-poster focus" data-query="{{query}}" {% else %} class="search-poster" {% endif %}>
+  <div class="wrapper">
+    <h1 class="main-title">What are you looking for?</h1>
+    <div class="giant-search-container">
+      <form action="" method="get">
+        <input id="search-field" type="text" name="q" class="giant-search">
+        <button type="submit" class="search-btn"><span class="icon-search"></span></button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block body %}
+<div class="wrapper">
+  <h3 class="search-title">Search/ {{query}}</h3>
+  <div class="main-gallery packery-hide">
+    <div class="gutter-sizer"></div>
+    {% for make in makes %}
+    <div class="make {{makeSize}}" style="background-image:url({{make.thumbnail}});">
+      <div class="make-info">{{make.title}} by @{{make.author}}</div>
+      <a href="{{make.url}}" class="ui-btn make-fork-btn"><span class="icon icon-code-fork"></span></a>
+    </div>
+    {% endfor %}
+  </div>
+  {% if makes.length == 0%}
+    No makes :(
+  {% endif %}
+  <div class="ui-row pagination">
+    <ol class="pagination-list">
+      <!--
+      Needs range implemented in nunjucks
+      <li class="selected"></li>
+      <li></li>
+      -->
+      {% if pagination > 1 %}
+      <li class="previous-page"><span class="icon-arrow-left"></span> Newer</li>
+      {% endif %}
+      <li class="next-page">Older <span class="icon-arrow-right"></span></li>
+    </ol>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+{% endblock %}

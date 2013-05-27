@@ -3,21 +3,23 @@
 /*********************************************************
  * HEADER
  */
+
 header {
   height: 85px;
   padding: 10px 20px;
   background: #FFF;
-  margin-bottom: 16px;
+  display: block;
   .border-box;
   .box-shadow(0, 1px, 10px, #a9a9a9);
-
 
   .persona-mobile {
     display: none;
   }
 
   .tabzilla {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .rightHeader {
@@ -25,9 +27,9 @@ header {
     float: right;
 
     .persona {
-      position: relative;
-      top: -10px;
-      padding-right: 19px;
+      position: absolute;
+      top: -20px;
+      right: 150px;
       font-size: 14px;
       text-align: right;
 
@@ -71,8 +73,6 @@ header {
 
 .nav-list {
   list-style: none;
-  position: relative;
-  bottom: 30px;
   font-size: 23px;
 
   li {
@@ -355,17 +355,19 @@ header {
   }
 }
 
-#search {
-  position: absolute;
-  right: 20px;
+#midbar {
+  position: relative;
   z-index: 3;
 
   label, .filter-bar {
     display: block;
   }
 
+
   .filter-bar {
-    float: left;
+    position: absolute;
+    right: 20px;
+    padding-top: 16px;
 
     label {
       margin-left: 20px;
@@ -417,7 +419,7 @@ footer {
 @media only screen and (max-width: 640px) {
   body {
     overflow-x: hidden;
-    width: 640px;
+    width: 100%;
   }
 
   .content {
@@ -488,7 +490,7 @@ footer {
     }
   }
 
-  #search {
+  #index #midbar {
     height: 98px;
     position: absolute;
     right: 10px;
@@ -518,19 +520,18 @@ footer {
   }
 
   .make-footer {
+    height: 220px;
     width: 640px;
-
-    .carousel-wrapper {
-      width: 530px;
-    }
 
     .make-wrapper {
       width: 600px;
-      margin: 0 auto;
+      padding-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
       height: 100%;
 
       .make-footer-item {
-        width: 240px;
+        width: 280px;
         margin-right: 15px;
         margin-bottom: 10px;
       }
@@ -552,9 +553,6 @@ footer {
     }
   }
 
-  #footer-actions {
-    right: 0;
-  }
 }
 
 .c-leftarrow {

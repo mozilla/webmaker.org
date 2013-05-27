@@ -3,7 +3,7 @@
 */
 
 @blue: #20ABDC;
-@red: #C82626;
+@red: #FF0035;
 @green: #3FB58E;
 @grey: #555;
 @lightgrey: #F4F5F5;
@@ -78,6 +78,14 @@
 /*********************************************************
 * Spacing helpers
 */
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  .width(8);
+}
+@media (max-width: 640px) {
+  .wrapper { width: 100%; }
+}
 .ui-space-top {
   margin-top: @gutter * @unit;
 }
@@ -99,7 +107,7 @@
   display: block;
   width: 100%;
   min-height: 560px;
-  background: @grey;
+  background: @green;
   position: relative;
 }
 
@@ -146,6 +154,22 @@
 }
 
 /*********************************************************
+* Buttons
+*/
+.ui-btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  color: #555;
+  border: 1px solid @lightgrey;
+  background: #FFF;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/*********************************************************
 * Appended icons
 */
 .ui-append {
@@ -189,6 +213,7 @@
 /*********************************************************
 * Selects
 */
+
 .ui-select {
   position: relative;
   cursor: pointer;

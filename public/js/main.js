@@ -1,18 +1,44 @@
-define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/privacy', 'base/ui'],
-  function ($, $carousel, carousel, webmaker, MediaGallery, privacy, UI) {
+define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/privacy', 'base/ui', 'uri' ],
+  function ( $, $carousel, carousel, webmaker, MediaGallery, privacy, UI, URI ) {
   'use strict';
   $(document).ready(function() {
     var $body = $('body'),
-    $search = $('#search'),
-    media = new MediaGallery();
+        media = new MediaGallery();
 
-    $('#bottom-search-btn').click( function( e ) {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 300, function() {
-        $search.addClass('on');
-        $('#search-keyword').focus();
-      });
+    // Search
+    var query = $( ".search-poster" ).attr( "data-query" ),
+        queryKeys = URI.parse( window.location.href ).queryKey,
+        $searchPoster = $( ".search-poster" ),
+        $searchField = $( "#search-field" ),
+        $forkBtns = $( ".make-fork-btn" ),
+        $nextBtn = $( ".next-page" ),
+        $prevBtn = $( ".previous-page" )
+
+    function onKeyDown() {
+      $( "html, body" ).animate({ scrollTop: 0 }, 200 );
+      $searchPoster.addClass( "focus" );
+      $searchField.off( "keydown", onKeyDown );
+    }
+
+    if ( query ) {
+      $( "#search-field" ).val( query );
+      onKeyDown();
+    } else {
+      $searchField.on( "keydown", onKeyDown );
+    }
+
+    $forkBtns.click( function( e ) {
+      e.stopPropagation();
+    });
+
+    $nextBtn.click( function( e ) {
+      queryKeys.page = queryKeys.page ? parseInt( queryKeys.page ) + 1 : 2;
+      window.location.search = $.param( queryKeys );
+    });
+
+    $nextBtn.click( function( e ) {
+      queryKeys.page = queryKeys.page > 1 ? parseInt( queryKeys.page ) - 1 : 1;
+      window.location.search = $.param( queryKeys );
     });
 
     media.init();

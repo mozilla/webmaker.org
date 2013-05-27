@@ -6,8 +6,8 @@
     {% block head %}
     <link rel="stylesheet" href="ext/css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css" />
+    <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css">
     <meta name="persona-email" content="{{ email }}">
     {% endblock %}
   </head>
@@ -73,33 +73,16 @@
           <li><a {% if page == 'learn' %}class="on"{% endif %} id="nav-learn" href="/learn">Learn</a></li>
           <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/teach">Teach</a></li>
           <li><a {% if page == 'party' %}class="on"{% endif %} id="nav-party" href="/party">Events</a></li>
-          <li><a class="search-trigger icon-search{% if page == 'search' %} on{% endif %}" id="nav-search" href="javascript:;"></a></li>
+          <li><a class="search-trigger icon-search{% if page == 'search' %} on{% endif %}" id="nav-search" href="/search"></a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div id="search">
-    <div class="search-wrapper">
-      <div class="filter-bar">
-        <label for="search-filter">Filter results</label>
-          <div id="search-filter" class="ui-append ui-select">
-            <span class="ui-selected ui-medium"></span>
-            <a class="icon icon-chevron-down"></a>
-            <div class="ui-select-menu">
-              <ul>
-                <li data-value="featured">Recommended</li>
-                <li data-value="recent" data-selected>Recent</li>
-                <li data-value="guide:popcorn">Popcorn</li>
-                <li data-value="guide:thimble">Thimble</li>
-                <li data-value="guide:event">Made at an Event</li>
-                <li data-value="title">Title</li>
-              </ul>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
+
+  <div id="midbar">{% block midbar %}{% endblock%}</div>
+
   <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>
+
   <footer class="footer">
     <div id="footer-actions">
       <button id="bottom-search-btn">Back to top <span class="icon-angle-up"></span></button>

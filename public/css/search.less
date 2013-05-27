@@ -1,0 +1,213 @@
+/*********************************************************
+* Search
+*/
+
+#search {
+  #content {
+    margin-top: 0;
+    padding: 0;
+  }
+  .search-poster {
+    background: @green;
+    position: relative;
+    font-size: 3em;
+    color: #FFF;
+    padding: 3em 0 2em 0;
+    text-align: center;
+    transition-duration: 0.2s;
+    transition-property: color, background, padding, font-size;
+    &.focus {
+      color: #555;
+      background: #E0EBEE;
+      padding: 2em 0 1em 0;
+      font-size: 1.5em;
+      margin-bottom: 0;
+      .main-title {
+        display: none;
+      }
+      .search-btn {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        font-size: 1em;
+        background: @green;
+        border: 1px solid darken( @green, 5% );
+        color: #FFF;
+        padding: 0;
+        .border-box;
+        &:hover {
+          background: lighten( @green, 5% );
+        }
+      }
+      .giant-search {
+        display: inline-block;
+        height: 60px;
+        border: 1px solid darken( #E0EBEE, 5% );
+        background: #FFF;
+        padding-left: 1em;
+        .border-box;
+        .width( 3 );
+        &:focus {
+          border: 1px solid darken( #E0EBEE, 15% );
+          &+.search-btn {
+            background: lighten( @green, 5% );
+          }
+        }
+      }
+    }
+  }
+  .main-title {
+    margin: 0;
+    color: inherit;
+    font-family: "Open Sans Light";
+    font-weight: normal;
+    padding-bottom: @gutter * @unit;
+    font-size: 1.5em;
+  }
+  .search-btn {
+    font-size: 1em;
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  .giant-search-container {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .giant-search {
+    font-family: "Open Sans Light";
+    font-size: 1em;
+    display: inline-block;
+    background: none;
+    border: none;
+    color: darken( @green, 30% );
+    border-bottom: 1px dashed;
+    box-shadow: none;
+    .width( 6 );
+    &:focus {
+      transition: background-color 0.3s ease;
+      outline: none;
+      background: lighten( @green, 5% );
+    }
+  }
+  .search-title {
+    padding: 1em 0;
+  }
+  .search-filters {
+    display: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .main-gallery {
+    transition: opacity 0.5s ease-out;
+  }
+  .packery-hide {
+    opacity: 0; // Fade in on Packery's 'layoutComplete'
+  }
+  .pagination {
+    margin-top: @gutter * 2 * @unit;
+  }
+  .pagination-list {
+    padding: 0;
+    > li {
+      cursor: pointer;
+      padding: 0.6em;
+      color: @green;
+      text-align: center;
+      display: inline-block;
+      margin: 0;
+      list-style: none;
+      border: 1px solid;
+      &.previous-page,
+      &.next-page {
+        padding: 0.6em 0.9em;
+      }
+      &.selected,
+      &:hover {
+        background: @green;
+        color: #FFF;
+        border-color: darken( @green, 5% );
+      }
+    }
+  }
+
+  /*********************************************************
+  * MAKES
+  */
+  .make {
+    position: relative;
+    border-radius: 0;
+    background-color: #FFF;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.3 );
+    .width( 2 );
+    .height( 2 );
+    &.expand {
+      .width( 4 );
+      .height( 4 );
+    }
+    &.big {
+      .width( 4 );
+      .height( 3 );
+    }
+  }
+  /*********************************************************
+  * Make elements
+  */
+  .make-fork-btn {
+    @_size: 60px;
+    position: absolute;
+    bottom: -(@_size + 5);
+    top: auto;
+    left: 5px;
+    width: @_size;
+    height: @_size;
+    font-size: 35px;
+    border-radius: 3px;
+    color: #FFF;
+    background: @green;
+    border: 1px solid #FFF;
+    transition: bottom 0.1s;
+    box-shadow: none;
+    &:hover {
+      background: lighten( @green, 20% );
+      box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.6 );
+    }
+  }
+  .make-info {
+    line-height: 1.2;
+    background: fade( #FFF, 96% );
+    color: @grey;
+    padding: 1em;
+    opacity: 1;
+    transition: opacity 0.1s;
+  }
+
+  /*********************************************************
+  * Hover
+  */
+  .make:hover {
+    box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.6 );
+    .make-fork-btn {
+      bottom: 5px;
+    }
+    .make-info {
+      opacity: 1;
+    }
+  }
+
+  /*********************************************************
+  * Mobile
+  */
+  @media (max-width: 640px) {
+    .make {
+      width: 100%;
+      .height( 3 );
+    }
+  }
+
+}
+

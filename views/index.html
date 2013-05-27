@@ -3,6 +3,25 @@
 {% include 'macros.html' %}
 
 {% block title %}Home{% endblock %}
+{% block midbar %}
+<div class="filter-bar">
+  <label for="search-filter">Filter results</label>
+  <div id="search-filter" class="ui-append ui-select">
+    <span class="ui-selected ui-medium"></span>
+    <a class="icon icon-chevron-down"></a>
+    <div class="ui-select-menu">
+      <ul>
+        <li data-value="featured">Recommended</li>
+        <li data-value="recent" data-selected>Recent</li>
+        <li data-value="guide:popcorn">Popcorn</li>
+        <li data-value="guide:thimble">Thimble</li>
+        <li data-value="guide:event">Made at an Event</li>
+        <li data-value="title">Title</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
 {% block body %}
   {{ gallery() }}
 {% endblock %}

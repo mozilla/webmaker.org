@@ -4,7 +4,8 @@ var express = require( "express" ),
     path = require( "path" ),
     persona = require( "express-persona" ),
     route = require( "./routes" ),
-    lessMiddleWare = require( "less-middleware" );
+    lessMiddleWare = require( "less-middleware" ),
+    makeAPI = require( "makeapi" );
 
 habitat.load();
 
@@ -12,7 +13,11 @@ var app = express(),
     env = new habitat(),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' ))),
     loginAPI = require( "webmaker-loginapi" )( env.get( "LOGINAPI" ) ),
-    routes = route( env.get( "MAKE_ENDPOINT" ), env.get( "AUDIENCE" ), env.get( "LOGIN" ) ),
+    make = makeAPI.makeAPI({
+      apiURL: env.get( "MAKE_ENDPOINT" ),
+      auth: env.get( "MAKE_AUTH" )
+    }),
+    routes = route( make, env.get( "MAKE_ENDPOINT" ), env.get( "AUDIENCE" ), env.get( "LOGIN" ) ),
     NODE_ENV = env.get( "NODE_ENV" ),
     WWW_ROOT = path.resolve( __dirname, "public" );
 
@@ -49,6 +54,7 @@ app.get( "/", routes.page( "index" ) );
 app.get( "/learn", routes.page( "learn" ) );
 app.get( "/teach", routes.page( "teach" ) );
 app.get( "/party", routes.page( "party" ) );
+app.get( "/search", routes.search() );
 
 app.get( "/template", routes.page( "template" ) );
 

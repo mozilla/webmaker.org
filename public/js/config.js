@@ -9,6 +9,10 @@ requirejs.config({
   shim: {
     'jquery': {
       exports: 'jQuery'
+    },
+    'jquery-carousel': {
+      deps: ['jquery'],
+      exports: 'jQuery.fn.carouFredSel'
     }
   }
 });

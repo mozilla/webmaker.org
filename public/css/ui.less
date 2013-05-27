@@ -1,5 +1,10 @@
+/*********************************************************
+* UI
+*/
+
 @blue: #20ABDC;
 @red: #C82626;
+@green: #3FB58E;
 @grey: #555;
 @lightgrey: #F4F5F5;
 
@@ -14,6 +19,117 @@
   color: @grey;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: @uiFontSize;
+}
+
+
+/*********************************************************
+* Grid
+*/
+
+@unit: 1px;
+@column: 110;
+@gutter: 20;
+@row: 100;
+
+.width( @cols:1 ) {
+  width: ( @cols * ( @column + @gutter ) - @gutter ) * @unit;
+}
+.padleft( @cols:1 ) {
+  padding-left: ( @cols * ( @column + @gutter ) - @gutter ) * @unit;
+}
+.padright( @cols:1 ) {
+  padding-right: ( @cols * ( @column + @gutter ) - @gutter ) * @unit;
+}
+
+.height( @rows:1 ) {
+  height: ( @rows * ( @row + @gutter ) - @gutter ) * @unit;
+}
+
+.ui-row {
+  margin-bottom: @gutter * @unit;
+  .clearfix;
+  display: block;
+}
+.ui-row [class*="g-"] {
+  float: left;
+  margin-right: @gutter * @unit;
+}
+.ui-row [class*="g-"]:last-of-type {
+  margin-right: 0;
+}
+
+.g-1 { .width( 1 ); }
+.g-2 { .width( 2 ); }
+.g-3 { .width( 3 ); }
+.g-4 { .width( 4 ); }
+.g-5 { .width( 5 ); }
+.g-6 { .width( 6 ); }
+.g-7 { .width( 7 ); }
+.g-8 { .width( 8 ); }
+
+@media (max-width: 640px) {
+  [class*="g-"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: @gutter * @unit;
+  }
+}
+
+/*********************************************************
+* Spacing helpers
+*/
+.ui-space-top {
+  margin-top: @gutter * @unit;
+}
+.ui-space-top-more {
+  margin-top: @gutter * 2 * @unit;
+}
+.ui-space-bottom {
+  margin-top: @gutter * @unit;
+}
+.ui-space-bottom-more {
+  margin-top: @gutter * 2 * @unit;
+}
+
+/*********************************************************
+* Images and cool stuff
+*/
+
+.ui-poster {
+  display: block;
+  width: 100%;
+  min-height: 560px;
+  background: @grey;
+  position: relative;
+}
+
+.ui-img {
+  width: 100%;
+  box-shadow: 0 35px 20px -40px rgba( 0, 0, 0, 0.9 );
+}
+
+.ui-circle-frame {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: @grey;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.ui-box {
+  background: @lightgrey;
+  border: 1px solid darken( @lightgrey, 10% );
+  padding: @gutter * @unit;
+  .ui-circle-frame {
+    float: left;
+    margin-right: @gutter * @unit;
+  }
+  cite {
+    &:before {
+      content: "\2014\2002";
+    }
+  }
 }
 
 /*********************************************************

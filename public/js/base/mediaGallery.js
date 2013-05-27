@@ -196,6 +196,8 @@ define(['jquery', './webmaker'],
 
     // Handles all packery-related content loading.
     switch ($body[0].id) {
+      case 'template':
+        break;
       case 'index':
         var $stickyBanner = $('<div class="make internal" id="banner-join">');
         var $h1 = $('<h1>Make history. Or, um, cat videos.</h1>');

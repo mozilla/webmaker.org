@@ -1,7 +1,8 @@
 @import "mixins";
 @import "webfonts";
 @import "headerfooter";
-@import "ui.less";
+@import "ui";
+@import "template";
 
 /*********************************************************
  * BODY
@@ -18,19 +19,6 @@ body {
 a {
   color: #27aae1;
   text-decoration: none;
-}
-
-.clearfix {
-  display: inline-block;
-
-  &:after {
-    content: '.';
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-  }
 }
 
 .fl {

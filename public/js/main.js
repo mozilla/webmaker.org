@@ -21,7 +21,7 @@ define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/med
     }
 
     if ( query ) {
-      $( "#search-field" ).val( query );
+      $searchField.val( query );
       onKeyDown();
     } else {
       $searchField.on( "keydown", onKeyDown );

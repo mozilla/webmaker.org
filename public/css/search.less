@@ -43,6 +43,7 @@
         display: inline-block;
         height: 60px;
         border: 1px solid darken( #E0EBEE, 5% );
+        color: @grey;
         background: #FFF;
         padding-left: 1em;
         .border-box;
@@ -81,7 +82,7 @@
     display: inline-block;
     background: none;
     border: none;
-    color: darken( @green, 30% );
+    color: darken( @green, 15% );
     border-bottom: 1px dashed;
     box-shadow: none;
     .width( 6 );
@@ -98,6 +99,12 @@
     display: none;
     position: relative;
     z-index: 1;
+  }
+  .search-query-word {
+    color: @green;
+  }
+  .no-makes {
+    font-style: italic;
   }
 
   .main-gallery {

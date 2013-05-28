@@ -20,7 +20,7 @@
     <div class="gutter-sizer"></div>
     {% for make in makes %}
     <div class="make {{makeSize}}" style="background-image:url({{make.thumbnail}});">
-      <div class="make-info">{{make.title}} by @{{make.author}}</div>
+      <div class="make-info">{{make.title}} by @{{make.username}}</div>
       <a href="{{make.url}}" class="ui-btn make-fork-btn"><span class="icon icon-code-fork"></span></a>
     </div>
     {% endfor %}

@@ -181,6 +181,8 @@ define(['jquery', './webmaker'],
       $mainGallery.removeClass('packery-hide');
     });
 
+    this.packery.layout();
+
     // Detect whether we are in mobile dimensions or not.
     if (isMobile) {
       this.limit = LIMIT_MOBILE;

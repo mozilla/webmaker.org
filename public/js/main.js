@@ -36,7 +36,7 @@ define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/med
       window.location.search = $.param( queryKeys );
     });
 
-    $nextBtn.click( function( e ) {
+    $prevBtn.click( function( e ) {
       queryKeys.page = queryKeys.page > 1 ? parseInt( queryKeys.page, 10 ) - 1 : 1;
       window.location.search = $.param( queryKeys );
     });

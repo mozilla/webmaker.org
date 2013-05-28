@@ -137,8 +137,7 @@ define(['jquery', './webmaker'],
 
     switch( $body[0].id ) {
       case 'index':
-        if(randSize === 'small') createSmallMakeBack( data, $backEl );
-        else createMakeBack( data, $backEl );
+        createMakeBack( data, $backEl );
         break;
 
       case 'teach':

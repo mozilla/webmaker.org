@@ -11,7 +11,8 @@ module.exports = function( grunt ) {
           strictPropertyOrder: false
         },
         src: [
-          "public/css/*.less"
+          "public/css/style.less",
+          "public/css/myprojects.less"
         ]
       }
     },

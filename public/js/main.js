@@ -12,7 +12,7 @@ define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/med
         $searchField = $( "#search-field" ),
         $forkBtns = $( ".make-fork-btn" ),
         $nextBtn = $( ".next-page" ),
-        $prevBtn = $( ".previous-page" )
+        $prevBtn = $( ".previous-page" );
 
     function onKeyDown() {
       $( "html, body" ).animate({ scrollTop: 0 }, 200 );
@@ -32,12 +32,12 @@ define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/med
     });
 
     $nextBtn.click( function( e ) {
-      queryKeys.page = queryKeys.page ? parseInt( queryKeys.page ) + 1 : 2;
+      queryKeys.page = queryKeys.page ? parseInt( queryKeys.page, 10 ) + 1 : 2;
       window.location.search = $.param( queryKeys );
     });
 
     $nextBtn.click( function( e ) {
-      queryKeys.page = queryKeys.page > 1 ? parseInt( queryKeys.page ) - 1 : 1;
+      queryKeys.page = queryKeys.page > 1 ? parseInt( queryKeys.page, 10 ) - 1 : 1;
       window.location.search = $.param( queryKeys );
     });
 

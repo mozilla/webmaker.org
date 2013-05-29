@@ -1,92 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{% block title %}{% endblock %} - Mozilla Webmaker</title>
-    {% block head %}
-    <link rel="stylesheet" href="ext/css/font-awesome.css">
-    <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="persona-email" content="{{ email }}">
-    {% endblock %}
-  </head>
-  <body id="{{ page }}" data-endpoint="{{ makeEndpoint }}">
-  <div class="webmaker-outer-wrapper">
-
-    <header id="webmaker-nav">
-      <nav class="webmaker-nav-container">
-        <div class="user-nav-container">
-          <a id="logo" href="/"><img src="img/logo.png" alt="Mozilla Webmaker"></a>
-          <ul class="webmaker-nav user-info">
-            <li class="user">
-              Hi <span id="identity" class="user-name-container"></span>
-            </li>
-            <li class="makes"><button>My makes</button></li>
-            <li>
-              <button id="webmaker-login">Sign in <span>Sign up</span></button>
-              <button id="webmaker-logout">Sign out</button>
-            </li>
-          </ul>
-          <ul class="nav-list">
-            <li><a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/">Make!</a></li>
-            <!-- <li><a {% if page == 'learn' %}class="on"{% endif %} id="nav-learn" href="/learn">Learn</a></li> -->
-            <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/teach">Teach</a></li>
-            <li><a {% if page == 'party' %}class="on"{% endif %} id="nav-party" href="/party">Events</a></li>
-            <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/search"><span class="icon-search"></span></a></li>
-          </ul>
-        </div>
-        <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
-      </nav>
-      <div class="my-projects-container">
-        <iframe src="/myprojects?app=webmaker&email={{ email }}"></iframe>
-      </div>
-    </header>
-
-    <div id="midbar">{% block midbar %}{% endblock %}</div>
-
-    <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>
-
-    <footer class="footer">
-      <div id="footer-actions">
-        <button id="bottom-search-btn">Back to top <span class="icon-angle-up"></span></button>
-        <button class="load-more">Load more <span class="icon-chevron-right"></span></button>
-      </div>
-      <section class="make-footer">
-        <div class="c-leftarrow cta-arrow hide">
-  	      <i class="icon-angle-left"></i>
-        </div>
-        <div class="carousel-wrapper">
-          <div class="make-wrapper"></div>
-        </div>
-        <div class="c-rightarrow cta-arrow hide">
-  	      <i class="icon-angle-right"></i>
-        </div>
-      </section>
-      <section class="partners">
-        <span class="partners-header">
-          With support from our gracious partners and Mozillians like you!
-          <img class="refresh-sponsors" src="img/icon-refresh.png" alt="Refresh Sponsors" />
-        </span>
-        <ul class="sponsors">
-          <li><a href="#">Chicago Instructional Technology Foundation</a></li>
-          <li><a href="#">City of Chicago</a></li>
-          <li><a href="#">Corporation for Public Broadcasting</a></li>
-          <li><a href="#">City of Bye</a></li>
-          <li><a href="#">City of Nye</a></li>
-          <li><a href="#">City of Pie</a></li>
-          <li><a href="#">City of Thai</a></li>
-          <li><a href="#">City of Lie</a></li>
-          <li><a href="#">City of Rye</a></li>
-          <li><a href="#">City of Lye</a></li>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %} - Mozilla Webmaker</title>
+  {% block head %}
+  <link rel="stylesheet" href="ext/css/font-awesome.css">
+  <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="persona-email" content="{{ email }}">
+  {% endblock %}
+</head>
+<body id="{{ page }}" data-endpoint="{{ makeEndpoint }}">
+<div class="webmaker-outer-wrapper">
+  <header id="webmaker-nav">
+    <nav class="webmaker-nav-container">
+      <div class="user-nav-container">
+        <a id="logo" href="/"><img src="img/logo.png" alt="Mozilla Webmaker"></a>
+        <ul class="webmaker-nav user-info">
+          <li class="user">
+            Hi <span id="identity" class="user-name-container"></span>
+          </li>
+          <li class="makes"><button>My makes</button></li>
+          <li>
+            <button id="webmaker-login">Sign in <span>Sign up</span></button>
+            <button id="webmaker-logout">Sign out</button>
+          </li>
         </ul>
-        <hr />
-        <ul class="social">
-          <li><i class="footer-social icon-twitter"></i> @mozilla</li>
-          <li><i class="footer-social icon-twitter"></i> @webmaker</li>
-          <li><i class="footer-social icon-facebook-sign"></i> facebook</li>
-          <li><img src="img/icon-tumblr.png" alt="" /> tumblr</li>
-          <li id="email-li">
+        <ul class="nav-list">
+          <li>
+            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/">Make!</a>
+            <div class="makenav-hover">
+              <div id="template" class="makenav-hover-item">
+                <img src="../img/icon-make-template.png" alt="From Template" />
+                <span>From template</span>
+              </div>
+              <a href="#" class="makenav-hover-item">
+                <img src="../img/icon-make-popcorn.png" alt="Popcorn Maker" />
+                <span>Popcorn Maker</span>
+              </a>
+              <a href="#" class="makenav-hover-item">
+                <img src="../img/icon-make-thimble.png" alt="Thimble" />
+                <span>Thimble</span>
+              </a>
+              <a href="#" class="makenav-hover-item">
+                <img src="../img/icon-make-xray.png" alt="X-Ray Goggles" />
+                <span>X-Ray Goggles</span>
+              </a>
+              <div class="help">
+                <img src="../img/icon-info.png" alt="Info" /><span>Not sure what to make? <a href="#">Let us help.</a></span>
+              </div>
+            </div>
+          </li>
+          <!-- <li><a {% if page == 'learn' %}class="on"{% endif %} id="nav-learn" href="/learn">Learn</a></li> -->
+          <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/teach">Teach</a></li>
+          <li><a {% if page == 'party' %}class="on"{% endif %} id="nav-party" href="/party">Events</a></li>
+          <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/search"><span class="icon-search"></span></a></li>
+        </ul>
+      </div>
+      <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+    </nav>
+    <div class="my-projects-container">
+      <iframe src="/myprojects?app=webmaker&email={{ email }}"></iframe>
+    </div>
+  </header>
+
+  <div id="midbar">{% block midbar %}{% endblock %}</div>
+
+  <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>
+
+  <footer class="footer">
+    <div id="footer-actions">
+      <button id="bottom-search-btn">Back to top <span class="icon-angle-up"></span></button>
+      <button class="load-more">Load more <span class="icon-chevron-right"></span></button>
+    </div>
+    <section class="make-footer">
+      <div class="c-leftarrow cta-arrow hide">
+        <i class="icon-angle-left"></i>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="make-wrapper"></div>
+      </div>
+      <div class="c-rightarrow cta-arrow hide">
+        <i class="icon-angle-right"></i>
+      </div>
+    </section>
+    <section class="partners">
+	<span class="partners-header">
+	  With support from our gracious partners and Mozillians like you!
+	  <img class="refresh-sponsors" src="img/icon-refresh.png" alt="Refresh Sponsors" />
+	</span>
+      <ul class="sponsors">
+        <li><a href="#">Chicago Instructional Technology Foundation</a></li>
+        <li><a href="#">City of Chicago</a></li>
+        <li><a href="#">Corporation for Public Broadcasting</a></li>
+        <li><a href="#">City of Bye</a></li>
+        <li><a href="#">City of Nye</a></li>
+        <li><a href="#">City of Pie</a></li>
+        <li><a href="#">City of Thai</a></li>
+        <li><a href="#">City of Lie</a></li>
+        <li><a href="#">City of Rye</a></li>
+        <li><a href="#">City of Lye</a></li>
+      </ul>
+      <hr />
+      <ul class="social">
+        <li><i class="footer-social icon-twitter"></i> @mozilla</li>
+        <li><i class="footer-social icon-twitter"></i> @webmaker</li>
+        <li><i class="footer-social icon-facebook-sign"></i> facebook</li>
+        <li><img src="img/icon-tumblr.png" alt="" /> tumblr</li>
+        <li id="email-li">
           <div class="newsletter">
             <form id="privacy-form" action="post">
               <input type="email" id="email-updates" name="email-updates" placeholder="Sign up for email updates" required />
@@ -104,26 +126,26 @@
               </div>
             </form>
           </div>
-          </li>
-        </ul>
-        <ul class="links">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Get involved</a></li>
-          <li><a href="#">Donate</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Legal</a></li>
-        </ul>
-      </section>
-    </footer>
-    <div class="mobile"></div>
-  </div><!-- webmaker-outer-wrapper -->
-  <script src="/sso/include.js"></script>
-  <script src="{{ loginAPI }}/js/sso-ux.js"></script>
-  <script src="{{ makeEndpoint }}/js/make-api.js"></script>
-  <script src="ext/js/packery.js"></script>
-  <script src="ext/js/require.js" data-main="js/main"></script>
-  {% block scripts %}{% endblock %}
-  </body>
+        </li>
+      </ul>
+      <ul class="links">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Get involved</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Legal</a></li>
+      </ul>
+    </section>
+  </footer>
+  <div class="mobile"></div>
+</div><!-- webmaker-outer-wrapper -->
+<script src="/sso/include.js"></script>
+<script src="{{ loginAPI }}/js/sso-ux.js"></script>
+<script src="{{ makeEndpoint }}/js/make-api.js"></script>
+<script src="ext/js/packery.js"></script>
+<script src="ext/js/require.js" data-main="js/main"></script>
+{% block scripts %}{% endblock %}
+</body>
 </html>

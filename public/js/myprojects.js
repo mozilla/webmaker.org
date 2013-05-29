@@ -44,7 +44,7 @@ require(['jquery', 'moment', 'uri'],
   }
 
   function getMakes() {
-    make.email( email )
+    make.user( email )
     .limit( 30 )
     .sortByField( "updatedAt", "desc" )
     .then( function ( err, results ) {

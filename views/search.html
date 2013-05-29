@@ -5,7 +5,18 @@
   <div class="wrapper">
     <div class="giant-search-container">
       <h1 class="main-title">What are you looking for?</h1>
-      <form action="" method="get">
+      <form class="search-wrapper" action="" method="get">
+        <div id="search-type" class="search-filter">
+          <input type="hidden" name="type" value="{{ searchType }}">
+          <span data-selected><span class="icon-{{ searchType }}"></span></span>
+          <span class="icon-caret-down"></span>
+          <div class="filter-list ui-select-menu">
+            <ul>
+              <li data-value="tags"><span class="icon-tags"></span> Tags</li>
+              <li data-value="user"><span class="icon-user"></span> Users</li>
+            </ul>
+          </div>
+        </div>
         <input id="search-field" type="text" name="q" class="giant-search" autocomplete="off">
         <button type="submit" class="search-btn"><span class="icon-search"></span></button>
       </form>
@@ -15,12 +26,12 @@
 {% endblock %}
 {% block body %}
 <div class="wrapper">
-  <h3 class="search-title">Search/ <span class="search-query-word">{{query}}</span></h3>
+  <h3 class="search-title">Search {{searchType}} / <span class="search-query-word">{{query}}</span></h3>
   <div class="main-gallery packery-hide">
     <div class="gutter-sizer"></div>
     {% for make in makes %}
     <div class="make {{makeSize}}" style="background-image:url({{make.thumbnail}});">
-      <div class="make-info">{{make.title}} by @{{make.username}}</div>
+      <div class="make-info">{{make.title}} by <a class="user-link" data-username="{{make.username}}">@{{make.username}}</a></div>
       <a href="{{make.url}}" class="ui-btn make-fork-btn"><span class="icon icon-code-fork"></span></a>
     </div>
     {% endfor %}

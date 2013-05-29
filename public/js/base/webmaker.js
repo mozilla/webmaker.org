@@ -1,5 +1,5 @@
-define(['jquery'],
-  function ($) {
+define(['jquery', 'uri'],
+  function ($, URI ) {
   'use strict';
 
   var makeURL,
@@ -28,9 +28,9 @@ define(['jquery'],
 
   var self = {
     init: function( options ) {
-      makeURL = options.makeURL,
-      page = options.page,
-      make = Make({ apiURL: makeURL })
+      makeURL = options.makeURL;
+      page = options.page;
+      make = Make({ apiURL: makeURL });
     },
     doSearch: function( options, limit, each ) {
       var sortBy = 'createdAt',

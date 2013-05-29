@@ -22,14 +22,32 @@
       padding: 2em 0 1em 0;
       font-size: 1.5em;
       margin-bottom: 0;
+      .search-wrapper {
+        display: block;
+        height: 60px;
+      }
       .main-title {
         display: none;
       }
+      .search-filter,
       .search-btn {
-        display: inline-block;
-        height: 60px;
+        height: 100%;
         width: 60px;
         font-size: 1em;
+        line-height: 60px;
+      }
+      .search-filter {
+        &:hover {
+          border-radius: 10px 10px 0 0;
+          color: @grey;
+          background: #FFF;
+          border: 1px solid darken( #E0EBEE, 5% );
+          .filter-list {
+            display: block;
+          }
+        }
+      }
+      .search-btn {
         background: @green;
         border: 1px solid darken( @green, 5% );
         color: #FFF;
@@ -41,7 +59,7 @@
       }
       .giant-search {
         display: inline-block;
-        height: 60px;
+        height: 100%;
         border: 1px solid darken( #E0EBEE, 5% );
         color: @grey;
         background: #FFF;
@@ -65,12 +83,52 @@
     padding-bottom: @gutter * @unit;
     font-size: 1.5em;
   }
+  .giant-search,
+  .search-btn,
+  .search-filter {
+    display: inline-block;
+    .border-box;
+    vertical-align: middle;
+  }
+  .giant-search-btn,
+  .search-filter {
+    text-align: center;
+  }
   .search-btn {
     font-size: 1em;
     border: none;
     background: none;
     color: inherit;
     cursor: pointer;
+  }
+  .search-filter {
+    position: relative;
+    color: inherit;
+    padding: 0 0 0 0.2em;
+    text-decoration: none;
+    border: none;
+    background: none;
+    .icon-caret-down {
+      font-size: 0.5em;
+    }
+    .filter-list {
+      margin-left: -1px;
+      display: none;
+      width: 12em;
+      border: 1px solid darken( #E0EBEE, 5% );
+      border-top: none;
+      ul > li {
+        padding: 0 1em;
+        line-height: 4;
+        span {
+          font-size: 1.5em;
+          margin-right: 0.5em;
+        }
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
   }
   .giant-search-container {
     display: inline-block;
@@ -85,7 +143,7 @@
     color: darken( @green, 15% );
     border-bottom: 1px dashed;
     box-shadow: none;
-    .width( 6 );
+    .width( 5 );
     &:focus {
       transition: background-color 0.3s ease;
       outline: none;

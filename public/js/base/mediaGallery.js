@@ -1,5 +1,5 @@
-define(['jquery', './webmaker'],
-  function ($, webmaker) {
+define(['jquery'],
+  function ($) {
   'use strict';
 
   var countLarge = 2,
@@ -163,11 +163,7 @@ define(['jquery', './webmaker'],
     self.packery.appended( makeContainer );
   }
 
-  var MediaGallery = function() {
-    webmaker.init({
-      page: $body[0].id,
-      makeURL: $body.data('endpoint')
-    });
+  var MediaGallery = function(webmaker) {
 
     this.limit = LIMIT_DESKTOP;
     this.wm = webmaker;

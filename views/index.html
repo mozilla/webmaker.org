@@ -6,10 +6,10 @@
 {% block midbar %}
 {{ galleryHeader("Start making with Webmaker.", "This headline should introduce what Webmaker is all about,
       should fit two lines (about 25 words) and can have a <a href='#'>link</a> or <a href='#'>two</a>.",
-      [ { 'title': 'Recent', 'value': 'recent', 'default': true },
-       { 'title': 'Popcorn', 'value': 'guide:popcorn' },
-       { 'title': 'Thimble', 'value': 'guide:popcorn' },
-       { 'title': 'Title', 'value': 'title' }]) }}
+      [ { 'title': 'Featured', 'value': 'featured', 'default': true },
+       { 'title': 'User', 'value': 'user' },
+       { 'title': 'Popcorn', 'value': 'popcorn' },
+       { 'title': 'Thimble', 'value': 'thimble' } ]) }}
 {% endblock %}
 {% block body %}
 {{ gallery() }}

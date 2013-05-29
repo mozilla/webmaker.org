@@ -16,8 +16,14 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
   function ( $, carousel, webmaker, MediaGallery, privacy, UI, URI ) {
   'use strict';
   $(document).ready(function() {
-    var $body = $('body'),
-        media = new MediaGallery();
+    var $body = $('body');
+
+    webmaker.init({
+      page: $body[0].id,
+      makeURL: $body.data('endpoint')
+    });
+
+    var media = new MediaGallery(webmaker);
 
     // Search
     var query = $( ".search-poster" ).attr( "data-query" ),
@@ -59,13 +65,20 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
     UI.select( '#search-filter', function( val ) {
       switch ( val ) {
-        case 'recent':
-        case 'title':
-          media.search( { title: true } );
+        case 'featured':
+          media.search( { tags: [ 'featured' ] } );
           break;
 
-        default:
-          media.search( { tags: [val], contentType: 'application/x-thimble' } );
+        case 'popcorn':
+          media.search( { tags: [ 'featured' ], contentType: 'application/x-popcorn' } );
+          break;
+
+        case 'thimble':
+          media.search( { tags: [ 'featured' ], contentType: 'application/x-thimble' } );
+          break;
+
+        case 'user':
+          media.search( { tags: [ 'featured' ],  sortByField: { "user" : "asc" } } );
           break;
       }
     });

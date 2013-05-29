@@ -203,7 +203,7 @@ define(['jquery', './webmaker'],
         });
         break;
       case 'index':
-        var $stickyBanner = $('<div class="make internal" id="banner-join">');
+        var $stickyBanner = $('<div class="make internal rf" id="banner-join">');
         var $h1 = $('<h1>Make history. Or, um, cat videos.</h1>');
         var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
         var $signup_div = $('<div class="sign-up-div">');
@@ -234,7 +234,7 @@ define(['jquery', './webmaker'],
         break;
 
       case 'teach':
-        var $stickyBanner = $('<div id="banner-teach">' +
+        var $stickyBanner = $('<div id="banner-teach" class="rf">' +
           '<img src="../img/webmaker-community.jpg" alt="Webmaker Community">' +
           "<p>Join us! We're a global community of technies, educators and friendly humans on " +
           'a mission.</p></div>');

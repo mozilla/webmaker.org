@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery', 'jquery.carousel'], function($) {
   'use strict';
   // variables & setup
   var $arrows = $('.cta-arrow'),

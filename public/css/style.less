@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+.webmaker-outer-wrapper {
+  overflow: hidden; // This is so the box-shadow on the header doesn't look bad with Tabzilla
+}
+
 .fl {
   float: left;
 }
@@ -34,6 +38,7 @@ a {
   display: none;
 }
 
+
 /*********************************************************
  * MAIN
  */
@@ -42,6 +47,10 @@ a {
   margin-bottom: 40px;
   position: relative;
   width: 100%;
+
+  #index & {
+    padding: @gutter * @unit;
+  }
 
   > .clone-item {
     display: none;
@@ -116,10 +125,6 @@ a {
 @make-border-size: 5px;
 @make_height: 150px;
 @make_width: 640px;
-
-.main-gallery {
-  margin: 0 10px;
-}
 
 .main-gallery:after {
   content: ' ';

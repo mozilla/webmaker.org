@@ -4,89 +4,53 @@
  * HEADER
  */
 
-header {
-  height: 85px;
-  padding: 10px 20px;
-  background: #FFF;
-  display: block;
-  .border-box;
-  .box-shadow(0, 1px, 10px, #a9a9a9);
-
-  .persona-mobile {
-    display: none;
-  }
-
-  .tabzilla {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .rightHeader {
-    position: relative;
-    float: right;
-
-    .persona {
-      position: absolute;
-      top: -20px;
-      right: 150px;
-      font-size: 14px;
-      text-align: right;
-
-      a {
-        padding: 0 10px;
-
-        &:last-child {
-          padding-left: 10px;
-          padding-right: 0;
-        }
-      }
-
-
-      .loggedOut {
-        position: relative;
-        left: 10px;
-        padding-top: 12px;
-        #sign-up {
-          padding: 3px 10px;
-          color: #FFF;
-          background: #27aae1;
-        }
-      }
-    }
-  }
-}
-
-// used by mobile-persona
-.persona-icon {
+.webmaker-nav-container {
+  border-top: 1px solid @lightgrey;
   position: relative;
-  top: 7px;
-  margin-right: 2px;
-  border: 1px solid #b5b5b5;
-  border-radius: 50em;
+  height: 85px;
+  background: #FFF;
+  box-shadow: 0 0 3px rgba( 0, 0, 0, 0.2 );
 }
 
-.user {
-  margin: 0;
-  font-weight: bold;
+#tabzilla {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+#logo {
+  margin-top: 10px;
+}
+
+// Contains SSO and main navigation
+.user-nav-container {
+  position: relative;
+  height: 100%;
+  margin-right: 150px;
 }
 
 .nav-list {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  margin: 0;
   list-style: none;
-  font-size: 23px;
+
+  padding: 10px;
+  font-size: 1.5em;
 
   li {
     display: inline-block;
     position: relative;
-
-    #nav-search {
-      font-size: 18px;
+    padding: 0 1em;
+    &:last-of-type {
+      padding-right: 0;
     }
 
     a {
       display: block;
-      padding: 0 0.7em;
-      color: #55575c;
+      color: @grey;
       text-decoration: none;
       font-weight: normal;
       &:hover {
@@ -100,6 +64,22 @@ header {
   }
 }
 
+/*********************************************************
+* Persona/SSO Overrides
+*/
+.persona-icon {
+  position: relative;
+  top: 7px;
+  margin-right: 2px;
+  border: 1px solid #b5b5b5;
+  border-radius: 50em;
+}
+
+.user {
+  margin: 0;
+  font-weight: bold;
+}
+
 .arrow {
   width: 0;
   display: inline-block;
@@ -111,6 +91,7 @@ header {
   top: 6px;
   left: 4px;
 }
+
 
 /*********************************************************
  * FOOTER

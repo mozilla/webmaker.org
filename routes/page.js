@@ -5,7 +5,8 @@ module.exports = function( view, makeURL, personaSSO, loginAPI ) {
       makeEndpoint: makeURL,
       personaSSO: personaSSO,
       loginAPI: loginAPI,
-      email: req.session.email || ''
+      email: req.session.email || '',
+      webmakerID: req.session.webmakerid || ''
     } );
   };
 };

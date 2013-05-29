@@ -46,6 +46,19 @@ define(['jquery', 'jquery-carousel', 'base/carousel', 'base/webmaker', 'base/med
     UI.select( '#search-filter', function( val ) {
       switch ( val ) {
         case 'recent':
+          break;
+
+        // case 'recommended':
+        //   break;
+
+        case 'guide:popcorn':
+          media.search( { contentType: 'application/x-popcorn' } );
+          break;
+
+        case 'guide:thimble':
+          media.search( { contentType: 'application/x-thimble' } );
+          break;
+
         case 'title':
           media.search( { title: true } );
           break;

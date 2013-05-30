@@ -158,8 +158,15 @@
     position: relative;
     z-index: 1;
   }
-  .search-query-word {
+  .search-query-word-user,
+  .search-query-word-tags {
     color: @green;
+  }
+  .search-query-word-tags:before {
+    content: "#"
+  }
+  .search-query-word-user:before {
+    content: "@"
   }
   .no-makes {
     font-style: italic;

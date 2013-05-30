@@ -56,6 +56,9 @@ app.get( "/teach", routes.page( "teach" ) );
 app.get( "/party", routes.page( "party" ) );
 app.get( "/search", routes.search() );
 
+app.get( "/t/:tag", routes.tag );
+app.get( "/u/:user", routes.user );
+
 app.get( "/template", routes.page( "template" ) );
 
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );

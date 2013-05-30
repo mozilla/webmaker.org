@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <title>{% block title %}{% endblock %} - Mozilla Webmaker</title>
   {% block head %}
-  <link rel="stylesheet" href="ext/css/font-awesome.css">
+  <link rel="stylesheet" href="/ext/css/font-awesome.css">
   <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <meta name="persona-email" content="{{ email }}">
   {% endblock %}
 </head>
@@ -16,7 +16,7 @@
   <header id="webmaker-nav">
     <nav class="webmaker-nav-container">
       <div class="user-nav-container">
-        <a id="logo" href="/"><img src="img/logo.png" alt="Mozilla Webmaker"></a>
+        <a id="logo" href="/"><img src="/img/logo.png" alt="Mozilla Webmaker"></a>
         <ul class="webmaker-nav user-info">
           <li class="user">
             Hi <span id="identity" class="user-name-container"></span>
@@ -32,23 +32,23 @@
             <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/">Make!</a>
             <div class="makenav-hover">
               <div id="template" class="makenav-hover-item">
-                <img src="../img/icon-make-template.png" alt="From Template" />
+                <img src="/img/icon-make-template.png" alt="From Template" />
                 <span>From template</span>
               </div>
               <a href="#" class="makenav-hover-item">
-                <img src="../img/icon-make-popcorn.png" alt="Popcorn Maker" />
+                <img src="/img/icon-make-popcorn.png" alt="Popcorn Maker" />
                 <span>Popcorn Maker</span>
               </a>
               <a href="#" class="makenav-hover-item">
-                <img src="../img/icon-make-thimble.png" alt="Thimble" />
+                <img src="/img/icon-make-thimble.png" alt="Thimble" />
                 <span>Thimble</span>
               </a>
               <a href="#" class="makenav-hover-item">
-                <img src="../img/icon-make-xray.png" alt="X-Ray Goggles" />
+                <img src="/img/icon-make-xray.png" alt="X-Ray Goggles" />
                 <span>X-Ray Goggles</span>
               </a>
               <div class="help">
-                <img src="../img/icon-info.png" alt="Info" /><span>Not sure what to make? <a href="#">Let us help.</a></span>
+                <img src="/img/icon-info.png" alt="Info" /><span>Not sure what to make? <a href="#">Let us help.</a></span>
               </div>
             </div>
           </li>
@@ -88,7 +88,7 @@
     <section class="partners">
 	<span class="partners-header">
 	  With support from our gracious partners and Mozillians like you!
-	  <img class="refresh-sponsors" src="img/icon-refresh.png" alt="Refresh Sponsors" />
+	  <img class="refresh-sponsors" src="/img/icon-refresh.png" alt="Refresh Sponsors" />
 	</span>
       <ul class="sponsors">
         <li><a href="#">Chicago Instructional Technology Foundation</a></li>
@@ -107,7 +107,7 @@
         <li><i class="footer-social icon-twitter"></i> @mozilla</li>
         <li><i class="footer-social icon-twitter"></i> @webmaker</li>
         <li><i class="footer-social icon-facebook-sign"></i> facebook</li>
-        <li><img src="img/icon-tumblr.png" alt="" /> tumblr</li>
+        <li><img src="/img/icon-tumblr.png" alt="" /> tumblr</li>
         <li id="email-li">
           <div class="newsletter">
             <form id="privacy-form" action="post">
@@ -144,8 +144,8 @@
 <script src="/sso/include.js"></script>
 <script src="{{ loginAPI }}/js/sso-ux.js"></script>
 <script src="{{ makeEndpoint }}/js/make-api.js"></script>
-<script src="ext/js/packery.js"></script>
-<script src="ext/js/require.js" data-main="js/main"></script>
+<script src="/ext/js/packery.js"></script>
+<script src="/ext/js/require.js" data-main="/js/main"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

@@ -26,7 +26,7 @@
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
-  <h3 class="search-title">Search {{searchType}} / <span class="search-query-word">{{query}}</span></h3>
+  <h3 class="search-title">Search {{searchType}} / <span class="search-query-word-{{searchType}}">{{query}}</span></h3>
   <div class="main-gallery packery-hide">
     <div class="gutter-sizer"></div>
     {% for make in makes %}

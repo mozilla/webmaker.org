@@ -93,7 +93,7 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
       switch ( val ) {
         case 'recommended':
           media.search( {
-            tags: [ 'featured', 'recommended' ],
+            tags: [ 'recommended' ],
             sortByField: { 'createdAt' : 'desc' }
           } );
           break;

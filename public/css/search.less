@@ -112,9 +112,9 @@
       font-size: 0.5em;
     }
     .filter-list {
-      margin-left: -1px;
+      text-align: left;
       display: none;
-      width: 12em;
+      width: 10em;
       border: 1px solid darken( #E0EBEE, 5% );
       border-top: none;
       ul > li {
@@ -237,6 +237,9 @@
     border: 1px solid #FFF;
     transition: bottom 0.1s;
     box-shadow: none;
+    > span {
+      line-height: @_size;
+    }
     &:hover {
       background: lighten( @green, 20% );
       box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.6 );

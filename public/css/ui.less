@@ -7,6 +7,7 @@
 @green: #3FB58E;
 @grey: #555;
 @lightgrey: #F4F5F5;
+@midgrey: #DDD;
 
 @uiFontSize: 13px;
 @uiHeight: 30px;
@@ -35,12 +36,11 @@
   width: ( @cols * ( @column + @gutter ) - @gutter ) * @unit;
 }
 .padleft( @cols:1 ) {
-  padding-left: ( @cols * ( @column + @gutter ) - @gutter ) * @unit;
+  padding-left: ( @cols * ( @column + @gutter ) - @gutter ) + @gutter * @unit;
 }
 .padright( @cols:1 ) {
-  padding-right: ( @cols * ( @column + @gutter ) - @gutter ) * @unit;
+  padding-right: ( @cols * ( @column + @gutter ) - @gutter ) + @gutter * @unit;
 }
-
 .height( @rows:1 ) {
   height: ( @rows * ( @row + @gutter ) - @gutter ) * @unit;
 }
@@ -76,27 +76,94 @@
 }
 
 /*********************************************************
-* Spacing helpers
+* Wrappers, main secitons
 */
-.wrapper {
+
+.ui-wrapper {
+  display: block;
   position: relative;
-  margin: 0 auto;
+  margin: @gutter * 2 * @unit auto 0 auto;
+  padding: 0;
+  .border-box;
   .width(8);
 }
+
+.ui-section {
+  padding-top: @gutter * @unit;
+  padding-bottom: @gutter * 5 * @unit;
+  .padleft(1);
+  .padright(1);
+}
+
 @media (max-width: 640px) {
-  .wrapper { width: 100%; }
+  .ui-wrapper {
+    width: 100%;
+  }
+  .ui-section {
+     padding: @gutter * @unit;
+  }
 }
-.ui-space-top {
-  margin-top: @gutter * @unit;
+
+
+/*********************************************************
+* Type
+*/
+
+.ui-body {
+  font-size: 14px;
+  color: @grey;
+  line-height: 1.8;
+  background: #FFF;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 35px 20px -40px rgba( 0, 0, 0, 0.9 );
 }
-.ui-space-top-more {
-  margin-top: @gutter * 2 * @unit;
+
+.ui-body {
+  h1, h2, h3 {
+    margin: 0 0 (@gutter / 2 * @unit) 0;
+  }
+  h1, h2 {
+    font-weight: 200;
+    color: @green;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-weight: normal;
+  }
+  .subtitle {
+    font-weight: 200;
+    font-size: 1.2em;
+  }
+
+  .ui-ul {
+    padding: 0;
+    li {
+      list-style: none;
+      padding-left: 2em;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 0;
+        content: "\00b7"
+      }
+    }
+  }
 }
-.ui-space-bottom {
-  margin-top: @gutter * @unit;
-}
-.ui-space-bottom-more {
-  margin-top: @gutter * 2 * @unit;
+@media (max-width: 640px) {
+  .ui-wrapper {
+    width: 100%;
+    box-shadow: none;
+  }
+  .ui-section {
+     padding: @gutter * @unit;
+  }
 }
 
 /*********************************************************
@@ -184,7 +251,8 @@
   padding: 0 0 0 1em;
   background: #FFF;
   &:hover {
-    box-shadow: 0 2px 4px -2px rgba( 0, 0, 0, 0.2 );
+    border-color: @blue;
+    box-shadow: 0 2px 4px -2px rgba( 0, 0, 0, 0.1 );
   }
 }
 
@@ -194,7 +262,10 @@
   margin: 0 0 0 12px;
   display: inline-block;
   vertical-align: top;
-  line-height: @uiHeight;
+  position: relative;
+  top: -1px;
+  right: -1px;
+  line-height: @uiHeight + 2;
   color: #FFF;
   background-color: @blue;
   &:hover {
@@ -220,6 +291,8 @@
 .ui-select {
   position: relative;
   cursor: pointer;
+  text-align: left;
+  border: 1px solid @midgrey;
 }
 
 .ui-selected {
@@ -227,23 +300,29 @@
 }
 
 .ui-select-menu {
+  display: none;
   position: absolute;
-  left: 0;
+  left: -1px;
+  border: 1px solid @midgrey;
+  &:hover {
+    border-color: @blue;
+  }
   top: 100%;
   width: 100%;
-  text-align: left;
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    border-top: 1px solid @lightgrey;
     > li {
       color: lighten( @grey, 30% );
       padding: 0 1em;
       background: #FFF;
-      border-bottom: 1px solid darken( @lightgrey, 5% );
+      border-bottom: 1px solid @midgrey;
+      &:last-child {
+        border-bottom: none;
+      }
       &:hover,
-      &.ui-on {
+      &[data-selected] {
         color: @grey;
         background: @lightgrey;
       }

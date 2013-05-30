@@ -1,6 +1,6 @@
 {% macro galleryHeader(header, desc, options) %}
 <div class="gallery-header">
-  <div class="wrapper">
+  <div class="ui-wrapper">
     <div class="header">
       <h1>{{ header }}</h1>
       <p> {{ desc }}</p>
@@ -9,21 +9,11 @@
       <div id="search">
         <div class="filter-bar">
           <label for="search-filter"><img src="img/filter-grid-icon.png" /> Filter the gallery</label>
-          <div id="search-filter" class="ui-append ui-select">
-            <span class="ui-selected ui-smedium"></span>
-            <a class="icon icon-chevron-down"></a>
-            <div class="ui-select-menu">
-              <ul>
-                {% for option in options %}
-                  {% if (option.default) %}
-                  <li data-value="{{ option.value }}" data-selected>{{ option.title }}</li>
-                  {% else %}
-                  <li data-value="{{ option.value }}">{{ option.title }}</li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
+          <select id="search-filter">
+            {% for option in options %}
+              <option value="{{ option.value }}"{% if (option.default) %} selected{% endif %}>{{ option.title }}</option>
+            {% endfor %}
+          </select>
         </div>
       </div>
     </div>

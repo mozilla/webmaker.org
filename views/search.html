@@ -2,7 +2,7 @@
 {% block title %}Learn{% endblock %}
 {% block midbar %}
 <div {% if query %} class="search-poster focus" data-query="{{query}}" {% else %} class="search-poster" {% endif %}>
-  <div class="wrapper">
+  <div class="ui-wrapper">
     <div class="giant-search-container">
       <h1 class="main-title">What are you looking for?</h1>
       <form class="search-wrapper" action="" method="get">
@@ -25,7 +25,7 @@
 </div>
 {% endblock %}
 {% block body %}
-<div class="wrapper">
+<div class="ui-wrapper">
   <h3 class="search-title">Search {{searchType}} / <span class="search-query-word">{{query}}</span></h3>
   <div class="main-gallery packery-hide">
     <div class="gutter-sizer"></div>

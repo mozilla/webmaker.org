@@ -26,7 +26,11 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
     var media = new MediaGallery(webmaker);
 
-    //SEARCH
+    $('#template').on('click', function( e ) {
+      media.search( { 'tags': [ 'template' ] } );
+    } );
+
+    // Search
     var query = $( ".search-poster" ).attr( "data-query" ),
         queryKeys = URI.parse( window.location.href ).queryKey,
         $searchPoster = $( ".search-poster" ),

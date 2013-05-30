@@ -15,11 +15,11 @@
             <div class="ui-select-menu">
               <ul>
                 {% for option in options %}
-                {% if (option.default) %}
-                <li data-value="{{ option.value }}" data-selected>{{ option.title }}</li>
-                {% else %}
-                <li data-value="{{ option.value }}">{{ option.title }}</li>
-                {% endif %}
+                  {% if (option.default) %}
+                  <li data-value="{{ option.value }}" data-selected>{{ option.title }}</li>
+                  {% else %}
+                  <li data-value="{{ option.value }}">{{ option.title }}</li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             </div>
@@ -44,13 +44,7 @@
 </div>
 <div class="make-teach clone-item">
   <h3 class="title"></h3>
-  <p class="info level-info"><b>Level</b> <span class="level"></span></p>
-  <p class="info skills-info"><b>Skills</b> <span class="skills"></span></p>
   <p class="author-info">Made by <span class="author"></span></p>
-  <div class="actions">
-    <a href="javascript:;" class="remix">Remix</a>
-    <a href="javascript:;" class="share">Share</a>
-  </div>
 </div>
 <div class="event-back clone-item">
   <h3 class="event-title"></h3>

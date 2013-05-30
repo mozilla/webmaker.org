@@ -45,12 +45,9 @@ a {
 
 #content {
   margin-bottom: 40px;
+  padding: @gutter * @unit;
   position: relative;
   width: 100%;
-
-  #index & {
-    padding: @gutter * @unit;
-  }
 
   > .clone-item {
     display: none;
@@ -422,12 +419,12 @@ p {
 #teach {
   .make {
     background-color: #FFF;
-    height: 420px;
+    height: 200px;
 
     .preview-img {
       clear: both;
       float: left;
-      height: 129px;
+      height: 95px;
       overflow: hidden;
       padding: 5px 5px 0 5px;
     }
@@ -439,18 +436,10 @@ p {
       padding: 5px;
     }
 
-    .level-info {
-      height: 25px;
-    }
-
-    .skills-info {
-      height: 50px;
-    }
-
     .info {
       background-image: url('../img/bkgFooter.jpg');
       color: #838383;
-      margin-bottom: 3px;
+      margin: 3px 0;
       width: 230px;
 
       b, span {
@@ -469,7 +458,6 @@ p {
 
     .title {
       font-size: 18px;
-      height: 70px;
       line-height: 24px;
       margin: 15px 5px;
     }
@@ -477,28 +465,6 @@ p {
     .author-info {
       color: #838383;
       font-size: 14px;
-    }
-
-    .info {
-      margin: 3px 0;
-    }
-
-    .actions {
-      bottom: 5px;
-      position: absolute;
-      right: 5px;
-
-      a {
-        background-color: #73B5E5;
-        color: #FFF;
-        display: block;
-        float: left;
-        font-size: 12px;
-        margin-left: 3px;
-        padding: 2px 0;
-        text-align: center;
-        width: 80px;
-      }
     }
   }
 }

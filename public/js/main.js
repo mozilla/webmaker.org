@@ -1,5 +1,6 @@
 requirejs.config({
   paths: {
+    'text': '../ext/js/text',
     'jquery': '../ext/js/jquery-1.9.1',
     'jquery.carousel': '../ext/js/jquery.carouFredSel-6.2.1',
     'moment': '../ext/js/moment',

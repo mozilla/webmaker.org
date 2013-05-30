@@ -30,20 +30,34 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
     UI.select( '#search-filter', function( val ) {
       switch ( val ) {
+        case 'recommended':
+          media.search( {
+            tags: [ 'featured', 'recommended' ],
+            sortByField: { 'createdAt' : 'desc' }
+          } );
+          break;
+
         case 'featured':
-          media.search( { tags: [ 'featured' ] } );
+          media.search( {
+            tags: [ 'featured' ],
+            sortByField: { 'createdAt' : 'desc' }
+          } );
           break;
 
         case 'popcorn':
-          media.search( { tags: [ 'featured' ], contentType: 'application/x-popcorn' } );
+          media.search( {
+            tags: [ 'featured' ],
+            sortByField: { 'createdAt' : 'desc' },
+            contentType: 'application/x-popcorn'
+          } );
           break;
 
         case 'thimble':
-          media.search( { tags: [ 'featured' ], contentType: 'application/x-thimble' } );
-          break;
-
-        case 'user':
-          media.search( { tags: [ 'featured' ],  sortByField: { "user" : "asc" } } );
+          media.search( {
+            tags: [ 'featured' ],
+            sortByField: { 'createdAt' : 'desc' },
+            contentType: 'application/x-thimble'
+          } );
           break;
       }
     });

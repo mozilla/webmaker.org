@@ -116,6 +116,14 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
             contentType: 'application/x-thimble'
           } );
           break;
+
+        case 'guide':
+          media.search( {
+            tags: [ 'featured', 'guide' ],
+            sortByField: { 'createdAt' : 'desc' },
+            contentType: 'application/x-thimble'
+          } );
+          break;
       }
     });
 

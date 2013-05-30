@@ -42,13 +42,16 @@ a {
  * MAIN
  */
 
+#index #content {
+  padding: @gutter * @unit;
+}
+
 #content {
   margin-bottom: 40px;
-  padding: @gutter * @unit;
   position: relative;
   width: 100%;
 
-  > .clone-item {
+  .clone-container   {
     display: none;
   }
 }
@@ -398,7 +401,7 @@ p {
   position: absolute;
   right: 0;
   top: 440px;
-  width: 500px;
+  .width( 4 );
 
   p {
     background-color: #FFF;

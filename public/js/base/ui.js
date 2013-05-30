@@ -13,7 +13,8 @@ define( ["jquery", "text!html/ui-fragments.html" ], function( $, _fragments ) {
         $li = $menu.find( "li" );
 
     var $select = $( select ),
-        $options = $( "option", select );
+        $options = $( "option", select ),
+        id = $select.attr( "id" );
 
     fn = fn || function() {};
 
@@ -32,7 +33,7 @@ define( ["jquery", "text!html/ui-fragments.html" ], function( $, _fragments ) {
 
         $menu.find( "[data-selected]" ).removeAttr( "data-selected" );
         $( this ).attr( "data-selected", true );
-        $selectedEl.text( val );
+        $selectedEl.text( html );
         $menuContainer.hide();
         fn( val );
         $select.val( val );
@@ -47,6 +48,9 @@ define( ["jquery", "text!html/ui-fragments.html" ], function( $, _fragments ) {
     $toggleBtn.click( function( e ) {
       $menuContainer.toggle();
     });
+
+    $el.attr( "id", id );
+    $select.removeAttr( "id" );
 
     $li.remove();
     $el.insertAfter( $select );

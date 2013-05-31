@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}Learn{% endblock %}
+{% block title %}Search{% endblock %}
 {% block midbar %}
 <div {% if query %} class="search-poster focus" data-query="{{query}}" {% else %} class="search-poster" {% endif %}>
   <div class="ui-wrapper">
@@ -26,7 +26,13 @@
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
-  <h3 class="search-title">Search {{searchType}} / <span class="search-query-word-{{searchType}}">{{query}}</span></h3>
+  <h3 class="search-title">Search {{searchType}} / <span class="search-query-word">
+	{% if searchType == 'tags' %}
+	{{ query|join(', ') }}
+	{% else %}
+	{{ query }}
+	{% endif %}
+  </span></h3>
   <div class="main-gallery packery-hide">
     <div class="gutter-sizer"></div>
     {% for make in makes %}

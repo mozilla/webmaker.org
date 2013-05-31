@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}{% endblock %} - Mozilla Webmaker</title>
-  {% block head %}
   <link rel="stylesheet" href="/ext/css/font-awesome.css">
   <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css">
   <link rel="stylesheet" href="/css/style.css">
   <meta name="persona-email" content="{{ email }}">
+  {% block head %}
   {% endblock %}
 </head>
 <body id="{{ page }}" data-endpoint="{{ makeEndpoint }}">

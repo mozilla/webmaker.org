@@ -2,8 +2,18 @@
 
 {% include 'macros.html' %}
 
+{% block head %}
+<script type="text/javascript">
+var hash = window.location.hash;
+if( hash.length > 0 ) {
+  var tag = hash.slice(1);
+  window.location = window.location.origin + '/t/' + tag;
+}
+</script>
+{% endblock %}
 {% block title %}Home{% endblock %}
 {% block midbar %}
+<!-- check for search right when page loads -->
 {{ galleryHeader("Start making with Webmaker.", "This headline should introduce what Webmaker is all about, should fit two lines (about 25 words) and can have a <a href='#'>link</a> or <a href='#'>two</a>.",
       [ { 'title': 'Recommended', 'value': 'recommended', 'default': true },
        { 'title': 'Featured', 'value': 'featured' },

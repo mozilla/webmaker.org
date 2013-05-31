@@ -16,10 +16,18 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
       }
       for (var i = 0, l = tags.length; i < l; i ++) {
         var tag = tags[i];
+        // check for hashtag, remove
+        if ( tag.charAt(0) === '#' ) {
+          tag = tag.slice(1);
+        }
         options.tags.push(tag);
       }
     }
     else {
+      // check for '@', remove
+      if ( query.charAt(0) === '@' ) {
+        query = query.slice(1);
+      }
       options[ type ] = query;
     }
 

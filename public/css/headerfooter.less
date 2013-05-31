@@ -565,97 +565,38 @@ footer {
     width: 100%;
   }
 
-  .content {
-    position: relative;
-    top: -15px;
-  }
-
   header {
-    height: 290px;
-    padding: 0 10px;
-    margin-bottom: 20px;
-    position: relative;
-
-    .persona-mobile {
-      z-index: 1000; // Tabzilla has a z-index of 999, this is to bring persona box over tabzilla
+    .webmaker-nav-container {
+      height: auto;
+    }
+    .user-info {
+      display: none;
+    }
+    #logo {
+      float: none;
+    }
+    .user-nav-container {
+      margin: 0;
+    }
+    .nav-list {
       position: relative;
-      left: -2%;
-      display: block;
-      background: url("../img/bkgFooter.jpg") repeat scroll 50% 0 #f9f9f9;
-      width: 640px;
-      height: 85px;
-      font-size: 24px;
-      .box-shadow(0, 1px, 10px, #a9a9a9);
-
-      div {
-        padding-top: 20px;
-      }
-
-      .fl {
-        padding-left: 20px;
-      }
-
-      .fr {
-        padding-right: 40px;
-
-        a {
-          padding-left: 35px;
-        }
-      }
-
-    }
-
-    .rightHeader {
-      float: auto;
-      bottom: 0;
-
-      .persona {
-        display: none;
-      }
-      .nav-list {
-        font-size: 30px;
-        position: relative;
-        top: 70px;
-        left: 15px;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-
-        #nav-search {
-          font-size: 30px;
-        }
-
-        a {
-          padding: 0;
-          padding-right: 40px;
-        }
+      right: auto;
+      left: auto;
+      text-align: left;
+      > li {
+        font-size: 1em;
+        width: 70px;
+        padding: 0.5em 0;
       }
     }
+
   }
 
-  #index #midbar {
-
-    .search-wrapper {
-      height: 280px;
-
-      .filter-bar {
-        float: left;
-
-        label {
-          padding: 10px 10px 0;
-        }
-
-        form {
-          padding: 0 10px;
-        }
-
-        label, form {
-          display: block;
-          margin: 0;
-          text-align: left;
-        }
-      }
-    }
+  .gallery-header .header h1 {
+    font-size: 2em;
+    line-height: 1;
+    display: block;
+    margin-top: 0;
   }
 
   .make-footer {

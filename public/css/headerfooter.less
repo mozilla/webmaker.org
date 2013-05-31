@@ -10,7 +10,7 @@
   height: 85px;
   background: #FFF;
   overflow: visible;
-  box-shadow: 0 0 3px rgba( 0, 0, 0, 0.2 );
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   z-index: 4;
 }
 
@@ -160,6 +160,87 @@
 }
 
 /*********************************************************
+* Filter
+*/
+
+.gallery-header {
+  .header {
+    float: left;
+    padding-bottom: 10px;
+    font-family: 'Open Sans Light', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin-right: @gutter * @unit;
+
+    h1, p {
+      display: inline;
+      margin-right: 10px;
+      font-weight: normal;
+      letter-spacing: -0.25px
+    }
+
+    h1 {
+      font-size: 2.4em;
+      color: @green;
+    }
+
+    p {
+      font-size: 1.4em;
+      color: @grey;
+      line-height: 1.4;
+
+      a {
+        color: @green;
+        text-decoration: underline;
+        &:hover {
+          color: lighten(@blue, 10%);
+        }
+      }
+    }
+  }
+}
+
+.filter {
+  position: relative;
+  background: @green;
+  float: right;
+  z-index: 3;
+  padding: 0.5em 1em 1em;
+  .border-box;
+
+  label {
+    color: #FFF;
+    line-height: 1.6;
+  }
+
+  #search-filter {
+    border-color: darken(@green, 5%);
+    &:hover {
+      border-color: darken(@green, 15%);
+    }
+    .icon {
+      background: darken(@green, 10%);
+    }
+    .ui-select-menu {
+      border-color: @green;
+    }
+  }
+
+  &:before { // Arrow
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid @green;
+    margin-left: -10px;
+  }
+}
+
+/*********************************************************
 * Persona/SSO Overrides
 */
 .persona-icon {
@@ -263,7 +344,7 @@
 
 .partners {
   padding: 40px 0;
-  background: url("../img/bkgFooter.jpg") repeat scroll 50% 0 #f9f9f9;
+  background: url(../img/bkgFooter.jpg) repeat scroll 50% 0 #f9f9f9;
   text-align: center;
 
   hr {
@@ -431,13 +512,6 @@
   }
 }
 
-#index {
-  .ui-wrapper {
-    width: 100%;
-    padding: 0 20px;
-  }
-}
-
 #midbar {
   position: relative;
   z-index: 3;
@@ -472,7 +546,7 @@ footer {
     text-align: center;
     width: 150px;
     &:hover {
-      background: lighten( #C82626, 10% );
+      background: lighten(#C82626, 10%);
     }
   }
 }
@@ -555,10 +629,6 @@ footer {
   }
 
   #index #midbar {
-    height: 98px;
-    position: absolute;
-    right: 10px;
-    width: 600px;
 
     .search-wrapper {
       height: 280px;

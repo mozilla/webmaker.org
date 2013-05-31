@@ -1,5 +1,5 @@
-define(['jquery'],
-  function ($) {
+define(['jquery', 'moment'],
+  function ($, moment) {
   'use strict';
 
   var countLarge = 2,
@@ -19,26 +19,24 @@ define(['jquery'],
   function createMakeBack( data, $el ) {
     var $backTemplate = $makeBackTemplate.clone( true ),
         $placeSpan = $('.place', $backTemplate),
-        $titleSpan = $('.title', $backTemplate),
+        $titleLink = $('.title', $backTemplate),
         $dateSpan = $('.date', $backTemplate),
-        $authorSpan = $('.author', $backTemplate),
+        $authorLink = $('.author', $backTemplate),
         $descSpan = $('.description', $backTemplate),
-        createdDate = new Date( data.createdAt );
+        $typeSpan = $('.type', $backTemplate),
+        $viewBtn = $('.view-btn', $backTemplate),
+        $forkBtn = $('.fork-btn', $backTemplate),
+        createdAtDate = moment( new Date( data.createdAt ) ).fromNow();
+        // Note that this is not working... no createdAt?
 
-    $titleSpan.text( data.title );
-    $dateSpan = $('.date', $backTemplate),
-    $authorSpan.text( data.author );
+    $typeSpan.text( data.type );
+    $titleLink.text( data.title );
+    $titleLink.attr( "href", data.url );
+    $dateSpan.text( createdAtDate );
+    $authorLink.text( "@" + data.username );
+    $authorLink.attr( "href", "/u/" + data.username );
     $descSpan.text( data.description );
-    $el.append( $backTemplate );
-  }
-
-  function createSmallMakeBack( data, $el ) {
-    var $backTemplate = $('<div>').addClass('make-back-small');
-    var $see = $('<div>').addClass('see-more').text('See make details');
-    var $arrow = $('<div>').addClass('make-small-arrow');
-    $backTemplate.append( $see );
-    $backTemplate.append( $arrow );
-
+    $viewBtn.attr( "href", data.url );
     $el.append( $backTemplate );
   }
 
@@ -84,6 +82,13 @@ define(['jquery'],
         makeContainer = $makeContainer[0],
         randSize = 'large';
 
+    // Make these easier to use
+    if ( data.tags.guide ) {
+      data.type = "guide";
+    } else {
+      data.type = data.contentType.replace( /application\/x\-/g, "" );
+    }
+
     // If we're not in mobile view, we want to display multiple sizes for
     // the home page and the medium size for the teach page.
     if (!isMobile) {
@@ -109,30 +114,14 @@ define(['jquery'],
     }
 
     // create front Element & populate
-    var $frontEl = $('<div class="front"><div class="preview-img"><img src="' + data.thumbnail +
-      '" alt="' + data.title + '"><img class="share-icon" alt="Share" src="../img/share-icon.png" /></div></div>');
+    var $frontEl = $('<div class="front" style="background-image:url(' + data.thumbnail +
+      ');"><div class="type-icon"></div></div></div>');
 
     // create back element & populate
     var $backEl = $('<div class="back"></div>');
     var tags = data.tags;
 
-    /*
-     * Not going to make it for June 15th/MVP
-     * so I'm commenting this out. - DK
-    if ( tags.popcorn ) {
-      $frontEl.addClass( 'popcorn' );
-    } else if ( tags.challenge ) {
-      $frontEl.addClass( 'challenge' );
-    } else if ( tags.event ) {
-      $frontEl.addClass( 'event' );
-    } else if ( tags.guide ) {
-      $frontEl.addClass( 'guide' );
-    } else if ( tags['make-demo'] ) {
-      $frontEl.addClass( 'make-demo' );
-    } else {
-      $frontEl.addClass( 'default' );
-    }
-    */
+    $makeContainer.addClass( 'make-type-' + data.type );
     $makeContainer.addClass(randSize);
 
     switch( $body[0].id ) {
@@ -155,8 +144,8 @@ define(['jquery'],
     $flip.append($frontEl).append( $backEl );
 
     // add flip container & link to make container
-    var $a = $('<a href="' + data.url + '"></a>');
-    $makeContainer.append( $a.append( $flip ) );
+    //var $a = $('<a href="' + data.url + '"></a>');
+    $makeContainer.append( $flip );
 
     // add to gallery & packery
     $mainGallery.append( $makeContainer );
@@ -235,7 +224,7 @@ define(['jquery'],
           "<p>Join us! We're a global community of technies, educators and friendly humans on " +
           'a mission.</p></div>');
         $mainGallery.append( $stickyBanner );
-        this.limit = 6;
+        this.limit = 12;
 
         this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, function( data ) {
           searchCallback( data, self )

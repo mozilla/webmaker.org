@@ -1,7 +1,7 @@
 @import "mixins";
 @import "webfonts";
-@import "headerfooter";
 @import "ui";
+@import "headerfooter";
 @import "search";
 
 /*********************************************************
@@ -42,10 +42,6 @@ a {
  * MAIN
  */
 
-#index #content {
-  padding: @gutter * @unit;
-}
-
 #content {
   margin-bottom: 40px;
   position: relative;
@@ -56,62 +52,6 @@ a {
   }
 }
 
-.gallery-header {
-  position: relative;
-  margin-top: 30px;
-  height: 100px;
-  .border-box;
-
-  .header {
-    float: left;
-    padding-bottom: 10px;
-    .width( 6 );
-
-    h1, p {
-      display: inline;
-      margin-right: 10px;
-    }
-
-    h1 {
-      font-family: 'Open Sans Light';
-      font-size: 2.125em;
-      color: @green;
-    }
-
-    p {
-      font-size: 17px;
-      color: @grey;
-      line-height: 30px;
-
-      a {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .filter {
-    float: right;
-    z-index: 3;
-    margin-top: 10px;
-    height: 70px;
-    width: 210px;
-    background: @green;
-
-    label {
-      position: relative;
-      margin-left: 10px;
-      height: 30px;
-      line-height: 30px;
-      font-size: 17px;
-      color: #FFF;
-    }
-
-    #search-filter {
-      left: 10px;
-    }
-  }
-
-}
 
 /*********************************************************
  * MAKE
@@ -127,41 +67,38 @@ a {
   clear: both;
 }
 
-.make {
-  color: #FFF;
-  position: relative;
-  overflow: hidden;
-
-  .border-radius;
-  .border-box;
-  .box-shadow(0, 2px, 2px, #BBB);
-  .perspective(800px);
-
-  a {
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
-  }
-}
-
 .gutter-sizer {
-  width: 20px;
+  width: @gutter * @unit;
 }
 
 .grid-sizer {
-  width: 20px;
+  width: @gutter * @unit;
 }
 
-.flipContainer {
+
+.make {
+  color: #FFF;
+  position: relative;
+  .border-radius;
+  .border-box;
+
+}
+
+.flipContainer { //card
   -webkit-transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: all 0.3s linear;
   -moz-transform-style: preserve-3d;
-  -moz-transition: -moz-transform 0.3s;
-  position: absolute;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  transform-style: preserve-3d;
   width: 100%;
   height: 100%;
+  .border-radius;
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
+}
+
+.flipContainer.flip {
+  .rotateY(180deg);
 }
 
 .make-item-title {
@@ -176,24 +113,17 @@ a {
 .back {
   .backface-visibility(hidden);
   .border-radius;
-  bottom: 0;
-  display: block;
-  overflow: hidden;
+  .border-box;
   position: absolute;
-  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-position: top center;
+  background-size: cover;
 }
 
 .front {
-  left: 0;
-  right: 0;
-  position: relative;
-  height: 100%;
-
-  img {
-    .border-radius;
-    width: 100%;
-  }
-
+  background-color: #FFF;
   .share-icon {
     width: 25px;
     height: 25px;
@@ -201,94 +131,148 @@ a {
     position: absolute;
     bottom: 2px;
     left: 2px;
-
   }
 }
 
 .back {
   color: #4E4E4E;
   background: #FFF;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  .rotateY(180deg);
-
-  .description, .author {
-    font-size: 12px;
-  }
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-.flip {
   .rotateY(180deg);
 }
-
-.popcorn {
-  border-bottom: @make-border-size solid #FFEA00;
-}
-
-.thimble {
-  border-bottom: @make-border-size solid green;
-}
-
-.challenge {
-  border-bottom: @make-border-size solid #FFA200;
-}
-
-.event {
-  border-bottom: @make-border-size solid #27AAE1;
-}
-
-.guide {
-  border-bottom: @make-border-size solid pink;
-}
-
-.demo {
-  border-bottom: @make-border-size solid #000;
-}
-
-.thimble {
-  border-bottom: @make-border-size solid #63D9E5;
-}
-
-.default {
-  border-bottom: @make-border-size solid #FFF;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-@ratio: 0.5625;
 
 .large {
-  height: @ratio * 515px;
-  width: 500px;
+  font-size: 2em;
+  .width(4);
+  .height(4);
+  .perspective(600px);
 }
 
 .medium {
-  height: @ratio * 240px;
-  width: 240px;
+  font-size: 1em;
+  .width(2);
+  .height(2);
+  .perspective(300px);
 }
 
 .small {
-  height: @ratio * 99px;
-  width: 110px;
+  .width(1);
+  .height(1);
+  .perspective(100px);
+}
 
-  .flipContainer {
-    p, h3 {
-      display: none;
+// This is the details stuff
+.make-back {
+  position: realtive;
+  z-index: 2;
+  padding: 1.2em;
+  .border-box;
+  h3, p {
+    font-family: "Open Sans Light", sans-serif;
+    margin: 0;
+    font-weight: normal;
+  }
+  h3 {
+    line-height: 1.2;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    max-height: 3.6em;
+    overflow: hidden;
+  }
+  p {
+    font-size: 0.9em;
+    color: #999;
+  }
+  .title {
+    color: inherit;
+  }
+  .author {
+    font-family: "Open Sans";
+    font-weight: 400;
+  }
+  .make-type-container {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    .type {
+      display: block;
     }
+  }
+  .btn-container {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+  }
+}
+.fork-btn,
+.view-btn {
+  display: inline-block;
+  cursor: pointer;
+  @_size: 1.8em;
+  width: @_size;
+  height: @_size;
+  line-height: @_size;
+  text-align: center;
+  font-size: 1.6em;
+  border-radius: 3px;
+  transition: bottom 0.1s;
+  box-shadow: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.fork-btn {
+    color: #FFF;
+    background: @green;
+    border: 1px solid darken(@green, 5%);
+  &:hover {
+    background: lighten(@green, 20%);
+  }
+}
+.view-btn {
+  background: @lightgrey;
+  color: @grey;
+  border: 1px solid darken(@lightgrey, 5%);
+   &:hover {
+    background: lighten(@lightgrey, 10%);
+  }
+}
+.type-icon {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+}
+.front .type-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.make-type-thimble .type-icon {
+  background-image: url(../img/icon-make-thimble.png);
+}
+.make-type-popcorn .type-icon {
+  background-image: url(../img/icon-make-popcorn.png);
+}
+.make-type-guide .type-icon {
+  background-image: none;
+  background-color: #FF7430;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  border-radius: 35px;
+  font-size: 18px;
+  color: #FFF;
+  text-align: center;
+  border: 2px solid #FFF;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+
+  &:before {
+    font-family: FontAwesome;
+    content: "\f0b1";
   }
 }
 
@@ -319,33 +303,32 @@ p {
 }
 
 #banner-join {
-  background-color: #b7251b;
+  background-color: @red;
   color: #FFF;
-  font-size: 30px;
   font-weight: 100;
   position: absolute;
   text-align: center;
-  height: 135px;
+  padding: 1em;
   left: 0;
-  top: 155px;
-  width: 500px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  top: (@row + @gutter) * 2 * @unit;
+  .width(4);
+  .height(2);
+  .border-box;
 
   h1, h2 {
-    font-family: 'Open Sans Light', "Helvetica Neue", sans-serif;
+    font-family: 'Open Sans Light', sans-serif;
     margin: 0;
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 1.6em;
     font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 1px
+    margin-top: 1em;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 1.1em;
+    line-height: 2;
     font-weight: 400;
   }
 
@@ -393,7 +376,6 @@ p {
       }
     }
   }
-
 }
 
 #banner-teach {
@@ -401,7 +383,7 @@ p {
   position: absolute;
   right: 0;
   top: 440px;
-  .width( 4 );
+  .width(4);
 
   p {
     background-color: #FFF;

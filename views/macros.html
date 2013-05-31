@@ -1,14 +1,14 @@
 {% macro galleryHeader(header, desc, options) %}
 <div class="gallery-header">
   <div class="ui-wrapper">
-    <div class="header">
+    <div class="g-6 header">
       <h1>{{ header }}</h1>
       <p> {{ desc }}</p>
     </div>
-    <div class="filter">
+    <div class="g-2 filter">
       <div id="search">
         <div class="filter-bar">
-          <label for="search-filter"><img src="img/filter-grid-icon.png" /> Filter the gallery</label>
+          <label for="search-filter"><span class="icon-th"></span> Filter the gallery</label>
           <select id="search-filter">
             {% for option in options %}
               <option value="{{ option.value }}"{% if (option.default) %} selected{% endif %}>{{ option.title }}</option>
@@ -30,9 +30,17 @@
   <div class="clone-container">
     <div class="make clone-item"></div>
     <div class="make-back clone-item">
-      <h3 class="title"></h3>
-      <p>by <span class="author"></span></p>
+      <h3><a class="title"></a></h3>
+      <p>Made <span class="date"></span> by <a class="author"></a></p>
       <p><span class="description"></span></p>
+      <div class="btn-container">
+        <a class="view-btn"><span class="icon-eye-open"></span></a>
+        <a class="fork-btn"><span class="icon-code-fork"></span></a>
+      </div>
+      <div class="make-type-container">
+        <span class="type-icon"></span>
+        <span class="type"></span>
+      </div>
     </div>
     <div class="make-teach clone-item">
       <h3 class="title"></h3>

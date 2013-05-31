@@ -64,7 +64,7 @@ define(['jquery', 'uri', 'base/ui'],
     });
 
     if ( query ) {
-      $searchField.val( query );
+      $searchField.val( query.replace(/,/g,", ") );
       onKeyDown();
     } else {
       $searchField.on( "keydown", onKeyDown );

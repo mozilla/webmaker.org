@@ -16,6 +16,7 @@ requirejs.config({
 require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/privacy', 'base/ui', 'uri', 'tabzilla' ],
   function ( $, carousel, webmaker, MediaGallery, privacy, UI, URI ) {
   'use strict';
+
   $(document).ready(function() {
     var $body = $('body');
 

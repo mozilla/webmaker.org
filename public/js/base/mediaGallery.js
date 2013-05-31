@@ -246,7 +246,6 @@ define(['jquery', 'moment'],
       gutter: '.gutter-sizer',
       transitionDuration: 0.1
     });
-    $body.attr('id', 'search-results');
     this.limit = 16;
     this.wm.doSearch( options, this.limit, function( data ) {
       searchCallback( data, self )

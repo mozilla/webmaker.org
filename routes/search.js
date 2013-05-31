@@ -8,7 +8,7 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
     page = req.param( "page" ) || 1,
     options = {};
 
-    if( type === 'tags' ) {
+    if ( type === 'tags' ) {
       var tags = query.split(',');
       options.tags = [];
       if( tags.length === 1 ) { // try splitting with spaces, too
@@ -41,6 +41,7 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
         makeSize: makeSize,
         page: "search",
         pagination: page,
+        hasQuery: req.param( "q" ),
         query: options[type],
         searchType: type,
         makeEndpoint: makeURL,

@@ -158,8 +158,10 @@
     position: relative;
     z-index: 1;
   }
+  .search-query-word,
   .search-query-word-user,
   .search-query-word-tags {
+    font-weight: normal;
     color: @green;
   }
   .search-query-word-tags:before {
@@ -215,6 +217,7 @@
     background-size: cover;
     background-position: center;
     box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.3 );
+    overflow: hidden;
     .width( 2 );
     .height( 2 );
     &.expand {

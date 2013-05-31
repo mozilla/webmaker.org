@@ -134,6 +134,25 @@ a {
   }
 }
 
+.front-title {
+  font-size: 16px;
+  display: none;
+  line-height: 1.2;
+  background: fade( #FFF, 96% );
+  color: @grey;
+  padding: 1em;
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.make-template .front-title {
+  display: block;
+  &:before {
+    content: "Template / ";
+    color: lighten( @grey, 30% );
+  }
+}
+
 .back {
   color: #4E4E4E;
   background: #FFF;
@@ -184,12 +203,17 @@ a {
   }
   .title {
     color: inherit;
+    &:hover {
+      color: @green;
+    }
   }
-  .author {
-    text-decoration: underline;
-    color: inherit;
+  .desc a {
+    color: lighten( @grey, 20% );
     font-family: "Open Sans";
     font-weight: 400;
+    &:hover {
+      color: @green;
+    }
   }
   .make-type-container {
     display: none;
@@ -205,7 +229,7 @@ a {
     }
   }
   .btn-container {
-    font-size: 14px;
+    font-size: 16px;
     position: absolute;
     left: 1em;
     bottom: 1em;
@@ -244,10 +268,16 @@ a {
     background: lighten(@lightgrey, 10%);
   }
 }
+.type {
+  text-transform: capitalize;
+}
 .type-icon {
   display: inline-block;
   height: 44px;
   width: 44px;
+  .make:hover & {
+    display: none;
+  }
 }
 .front .type-icon {
   position: absolute;

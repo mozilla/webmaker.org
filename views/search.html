@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Search{% endblock %}
 {% block midbar %}
-<div {% if query %} class="search-poster focus" data-query="{{query}}" {% else %} class="search-poster" {% endif %}>
+<div {% if hasQuery %} class="search-poster focus" data-query="{{query}}" {% else %} class="search-poster" {% endif %}>
   <div class="ui-wrapper">
     <div class="giant-search-container">
       <h1 class="main-title">What are you looking for?</h1>

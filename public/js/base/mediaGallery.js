@@ -35,8 +35,10 @@ define(['jquery', 'moment'],
     $dateSpan.text( createdAtDate );
     $authorLink.text( "@" + data.username );
     $authorLink.attr( "href", "/u/" + data.username );
-    $descSpan.text( data.description );
+    // $descSpan.text( data.description ); No desc for now
     $viewBtn.attr( "href", data.url );
+    $forkBtn.attr( "href", data.url );
+    // Note that the remix url doesn't exist right now?
     $el.append( $backTemplate );
   }
 
@@ -115,12 +117,15 @@ define(['jquery', 'moment'],
 
     // create front Element & populate
     var $frontEl = $('<div class="front" style="background-image:url(' + data.thumbnail +
-      ');"><div class="type-icon"></div></div></div>');
+      ');"><div class="type-icon"></div><div class="front-title">' + data.title + '</div></div></div>');
 
     // create back element & populate
     var $backEl = $('<div class="back"></div>');
     var tags = data.tags;
 
+     if ( tags.template ) {
+      $makeContainer.addClass( 'make-template' );
+    }
     $makeContainer.addClass( 'make-type-' + data.type );
     $makeContainer.addClass(randSize);
 

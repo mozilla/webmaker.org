@@ -15,7 +15,7 @@
     "express-persona": "0.0.7",
     "habitat": "0.4.1",
     "less-middleware": "0.1.9",
-    "nunjucks": "0.1.8a",
+    "nunjucks": "0.1.9",
     "webmaker-loginapi": "0.1.1",
     "makeapi": "0.1.9"
   },

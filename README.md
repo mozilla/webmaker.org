@@ -17,5 +17,5 @@ To add `webmaker-events` to the dependency list in `package.json`,
 
     "webmaker-events": "git://github.com/AmoebaConsulting/webmaker-events.git"
 
-Take a look at AmoebaConsulting/events.webmaker.org for all the changes
+Take a look at [AmoebaConsulting/webmaker.org#events](https://github.com/AmoebaConsulting/webmaker.org/tree/events) for all the changes
 required to get it working with Webmaker.

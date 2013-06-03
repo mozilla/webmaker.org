@@ -12,7 +12,7 @@
   {% block head %}
   {% endblock %}
 </head>
-<body id="{{ page }}" data-endpoint="{{ makeEndpoint }}">
+<body id="{{ page }}" {% if view %}class="{{ view }}"{% endif %} data-endpoint="{{ makeEndpoint }}">
 <div class="webmaker-outer-wrapper">
   <header id="webmaker-nav">
     <nav class="webmaker-nav-container">
@@ -51,7 +51,7 @@
           </li>
           <!-- <li><a {% if page == 'learn' %}class="on"{% endif %} id="nav-learn" href="/learn">Learn</a></li> -->
           <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/teach">Teach</a></li>
-          <li><a {% if page == 'party' %}class="on"{% endif %} id="nav-party" href="/events">Events</a></li>
+          <li><a {% if page == 'events' %}class="on"{% endif %} id="nav-events" href="/events">Events</a></li>
           <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/search"><span class="icon-search"></span></a></li>
         </ul>
       </div>
@@ -80,10 +80,10 @@
       </div>
     </section>
     <section class="partners">
-	<span class="partners-header">
-	  With support from our gracious partners and Mozillians like you!
-	  <img class="refresh-sponsors" src="/img/icon-refresh.png" alt="Refresh Sponsors" />
-	</span>
+      <span class="partners-header">
+        With support from our gracious partners and Mozillians like you!
+        <img class="refresh-sponsors" src="/img/icon-refresh.png" alt="Refresh Sponsors" />
+      </span>
       <ul class="sponsors">
         <li><a href="#">Chicago Instructional Technology Foundation</a></li>
         <li><a href="#">City of Chicago</a></li>
@@ -139,7 +139,7 @@
 <script src="{{ loginAPI }}/js/sso-ux.js"></script>
 <script src="{{ makeEndpoint }}/js/make-api.js"></script>
 <script src="/ext/js/packery.js"></script>
-<script src="/ext/js/require.js" data-main="/js/main"></script>
+<script src="/ext/js/require.js" data-main="{% block require_main %}/js/main{% endblock %}"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

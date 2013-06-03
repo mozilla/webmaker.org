@@ -42,6 +42,20 @@ app.use( express.cookieSession({
   },
   proxy: true
 }));
+
+app.use(function(req, res, next) {
+  res.locals({
+    makeEndpoint : process.env.MAKE_ENDPOINT,
+    personaSSO   : process.env.AUDIENCE,
+    loginAPI     : process.env.LOGIN,
+    email        : req.session.email || '',
+    webmakerID   : req.session.webmakerid || ''
+  });
+  next();
+});
+
+require( "webmaker-events" ).init( app, nunjucksEnv, lessMiddleWare, __dirname );
+
 app.use( app.router );
 
 var optimize = NODE_ENV !== "development",

@@ -20,7 +20,8 @@
     "nunjucks": "0.1.9",
     "makeapi": "0.1.15",
     "moment": "~2.0.0",
-    "webmaker-loginapi": "0.1.4"
+    "webmaker-loginapi": "0.1.4",
+    "webmaker-events": "git://github.com/mozilla/webmaker-events.git"
   },
   "devDependencies": {
     "grunt": "0.4.1",

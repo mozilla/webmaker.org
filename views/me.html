@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block title %}Me{% endblock %}
+{% block midbar %}
+<div class="ui-wrapper">
+  <div class="me-info">
+    <h1 class="me-title"><div class="avatar"style="background-image:url({{avatar}});"></div> {{username}}, these are your makes:</h1>
+  </div>
+</div>
+</div>
+{% endblock %}
+{% block body %}
+<div class="ui-wrapper">
+  <div class="main-gallery packery-hide search-gallery">
+    <div class="gutter-sizer"></div>
+    {% for make in makes %}
+    <div class="make medium" style="background-image:url({{make.thumbnail}});">
+      <div class="make-info">
+        <p class="title">{{make.title}}</p>
+        <p><span class="make-type">{{make.type}}</span> make</p>
+        <p class="updatedAt">Last updated {{make.updatedAt}}</p>
+      </div>
+      <div class="btn-container">
+        <a href="{{make.url}}" class="ui-btn view-btn"><span class="icon icon-link"></span></a>
+        <button type="submit" data-make-id="{{make._id}}" class="ui-btn delete-btn"><span class="icon icon-trash"></span></button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if makes.length == 0%}
+  <div class="no-makes">Jeez, make something!</div>
+  {% endif %}
+</div>
+{% endblock %}
+{% block scripts %}{% endblock %}

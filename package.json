@@ -17,7 +17,8 @@
     "less-middleware": "0.1.9",
     "nunjucks": "0.1.9",
     "webmaker-loginapi": "0.1.1",
-    "makeapi": "0.1.9"
+    "makeapi": "0.1.9",
+    "moment": "~2.0.0"
   },
   "devDependencies": {
     "grunt": "0.4.1",

@@ -9,12 +9,14 @@ module.exports = function( make, makeEndpoint, personaSSO, loginAPI ){
     search: function() {
       return require( "./search" )( make, makeEndpoint, personaSSO, loginAPI );
     },
+    me: require("./me")( make, makeEndpoint, personaSSO, loginAPI ),
     tag: function( req, res ) {
       res.redirect( "/search?type=tags&q=" + req.params.tag );
     },
     user: function( req, res ) {
       res.redirect( "/search?type=user&q=" + req.params.user );
     },
+    remove: require( "./remove" )( make ),
     includejs: function( hostname ) {
       return function( req, res ) {
         res.set( "Content-Type", "application/javascript;charset=utf-8" );

@@ -98,7 +98,6 @@ define(['jquery', 'uri', 'base/ui'],
     }
   };
 
-
   var self = {
     init: function( options ) {
       makeURL = options.makeURL;

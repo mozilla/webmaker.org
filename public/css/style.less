@@ -3,6 +3,7 @@
 @import "ui";
 @import "headerfooter";
 @import "search";
+@import "me";
 
 /*********************************************************
  * BODY
@@ -228,44 +229,52 @@ a {
       display: block;
     }
   }
-  .btn-container {
-    font-size: 16px;
-    position: absolute;
-    left: 1em;
-    bottom: 1em;
-  }
 }
-.fork-btn,
-.view-btn {
-  display: inline-block;
-  cursor: pointer;
+.btn-container {
   @_size: 1.8em;
-  width: @_size;
-  height: @_size;
-  line-height: @_size;
-  text-align: center;
-  font-size: 1.6em;
-  border-radius: 3px;
-  transition: bottom 0.1s;
-  box-shadow: none;
-  &:hover {
-    text-decoration: none;
+  font-size: 16px;
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+
+  form {
+    display: inline;
   }
-}
-.fork-btn {
-    color: #FFF;
-    background: @green;
-    border: 1px solid darken(@green, 5%);
-  &:hover {
-    background: lighten(@green, 20%);
+
+  .ui-btn {
+    display: inline-block;
+    cursor: pointer;
+    width: @_size;
+    height: @_size;
+    text-align: center;
+    font-size: 1.6em;
+    border-radius: 3px;
+    transition: bottom 0.1s;
+    box-shadow: none;
+    .border-box;
+    &:hover {
+      text-decoration: none;
+    }
   }
-}
-.view-btn {
-  background: @lightgrey;
-  color: @grey;
-  border: 1px solid darken(@lightgrey, 5%);
-   &:hover {
-    background: lighten(@lightgrey, 10%);
+  a.ui-btn {
+    line-height: @_size;
+  }
+  .fork-btn {
+      color: #FFF;
+      background: @green;
+      border: 1px solid darken(@green, 5%);
+    &:hover {
+      background: lighten(@green, 20%);
+    }
+  }
+  .view-btn,
+  .delete-btn {
+    background: @lightgrey;
+    color: @grey;
+    border: 1px solid darken(@lightgrey, 5%);
+     &:hover {
+      background: lighten(@lightgrey, 10%);
+    }
   }
 }
 .type {

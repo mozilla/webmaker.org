@@ -173,13 +173,6 @@
   .no-makes {
     font-style: italic;
   }
-
-  .main-gallery {
-    transition: opacity 0.5s ease-out;
-  }
-  .packery-hide {
-    opacity: 0; // Fade in on Packery's 'layoutComplete'
-  }
   .pagination {
     margin-top: @gutter * 2 * @unit;
   }
@@ -206,7 +199,14 @@
       }
     }
   }
+}
 
+.packery-hide {
+    opacity: 0; // Fade in on Packery's 'layoutComplete'
+  }
+
+.search-gallery {
+  transition: opacity 0.5s ease-out;
   /*********************************************************
   * MAKES
   */
@@ -232,6 +232,10 @@
   /*********************************************************
   * Make elements
   */
+  .btn-container {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
   .make-fork-btn {
     @_size: 60px;
     position: absolute;
@@ -262,17 +266,27 @@
     padding: 1em;
     opacity: 1;
     transition: opacity 0.1s;
+    p {
+      color: lighten( @grey, 10% );
+      padding: 0;
+      margin: 0;
+      font-size: 0.8em;
+    }
+    .make-type {
+      text-transform: capitalize;
+    }
+    .title {
+      font-weight: 700;
+      color: @grey;
+      margin-bottom: 0.5em;
+    }
   }
-
   /*********************************************************
   * Hover
   */
   .make:hover {
     box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.6 );
-    .make-fork-btn {
-      bottom: 5px;
-    }
-    .make-info {
+    .btn-container {
       opacity: 1;
     }
   }
@@ -286,6 +300,5 @@
       .height( 3 );
     }
   }
-
 }
 

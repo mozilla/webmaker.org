@@ -56,6 +56,9 @@ app.get( "/teach", routes.page( "teach" ) );
 app.get( "/party", routes.page( "party" ) );
 app.get( "/search", routes.search() );
 
+app.get( "/me", routes.me );
+app.post( "/remove", routes.remove );
+
 app.get( "/t/:tag", routes.tag );
 app.get( "/u/:user", routes.user );
 
@@ -78,7 +81,9 @@ app.get( "/user/:userid", function( req, res ) {
         reason: (err || "user not defined")
       });
     }
-    req.session.webmakerid = user.subdomain;
+
+    req.session.webmakerid = user.username;
+    console.log( user, req.session );
     res.json({
       status: "okay",
       user: user

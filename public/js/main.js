@@ -33,6 +33,24 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
     media.init();
 
+    var deleteBtn = $(".delete-btn");
+    deleteBtn.on( "click", function(e) {
+      e.preventDefault();
+      var $this = $(this),
+          makeID = $this.data("make-id");
+      if(confirm('Are you sure you want to delete this make?')) {
+        $.post("/remove", { makeID: makeID }, function(res) {
+          if( res.deletedAt ) {
+            media.packery.remove( $this.closest(".make")[0] );
+            media.packery.layout();
+          } else {
+            alert("Oops, we couldn't delete this make :(");
+            console.log(res);
+          }
+        });
+      }
+    });
+
     UI.select( '#search-filter', function( val ) {
       switch ( val ) {
         case 'recommended':

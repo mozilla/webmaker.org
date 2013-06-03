@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Search{% endblock %}
 {% block midbar %}
-<div {% if hasQuery %} class="search-poster focus" data-query="{{query}}" {% else %} class="search-poster" {% endif %}>
+<div class="search-poster{% if hasQuery %} focus{% endif %}" data-query="{{query}}">
   <div class="ui-wrapper">
     <div class="giant-search-container">
       <h1 class="main-title">What are you looking for?</h1>
@@ -26,19 +26,21 @@
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
-  <h3 class="search-title">Search {{searchType}} / <span class="search-query-word">
+  <h3 class="search-title"> Search {{searchType}} / <span class="search-query-word">
 	{% if searchType == 'tags' %}
 	{{ query|join(', ') }}
 	{% else %}
 	{{ query }}
 	{% endif %}
   </span></h3>
-  <div class="main-gallery packery-hide">
+  <div class="main-gallery packery-hide search-gallery">
     <div class="gutter-sizer"></div>
     {% for make in makes %}
     <div class="make {{makeSize}}" style="background-image:url({{make.thumbnail}});">
       <div class="make-info">{{make.title}} by <a class="user-link" data-username="{{make.username}}">@{{make.username}}</a></div>
-      <a href="{{make.url}}" class="ui-btn make-fork-btn"><span class="icon icon-code-fork"></span></a>
+      <div class="btn-container">
+        <a href="{{make.url}}" class="ui-btn fork-btn"><span class="icon icon-code-fork"></span></a>
+      </div>
     </div>
     {% endfor %}
   </div>

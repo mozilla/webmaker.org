@@ -6,6 +6,7 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
     sortByField = req.param( "sortByField" ) || "createdAt",
     sortByOrder = req.param( "order" ) || "desc",
     page = req.param( "page" ) || 1,
+    username = req.session.webmakerid,
     options = {};
 
     if ( type === 'tags' ) {
@@ -37,6 +38,7 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
     .page( page )
     .then( function( err, data ) {
       res.render( "search.html", {
+        currentUser: username,
         makes: data || [],
         makeSize: makeSize,
         page: "search",

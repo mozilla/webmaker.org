@@ -22,7 +22,7 @@
           <li class="user">
             Hi <span id="identity" class="user-name-container"></span>
           </li>
-          <li class="makes"><button>My makes</button></li>
+          <li class="makes"><a href="/me">My makes</a></li>
           <li>
             <button id="webmaker-login">Sign in <span>Sign up</span></button>
             <button id="webmaker-logout">Sign out</button>
@@ -61,9 +61,6 @@
       </div>
       <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
     </nav>
-    <div class="my-projects-container">
-      <iframe src="/myprojects?app=webmaker&email={{ email }}"></iframe>
-    </div>
   </header>
 
   <div id="midbar">{% block midbar %}{% endblock %}</div>

@@ -1,0 +1,123 @@
+// variables
+@userImageWidth: 50px;
+@iconWidth: 20px;
+@grayTextColor: gray;
+@blackTextColor: black;
+
+@grayButtonColor: rgba(200,200,200,1);
+@redButtonColor: rgba(237,31,35,1);
+
+.info-bubble-container {
+  .box-shadow(0px, 1px, 20px, rgba(0,0,0,.6));
+}
+
+.info-container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 10px;  // space for orange bar at bottom
+
+  background-color: rgba(245,245,245,1);
+}
+
+// DON'T NEST THIS INSIDE .info-container
+// this div is put in a temporary div for measuring the size, css breaks if nested
+.info-content {
+  padding: 12px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.info-title {
+  color: @blackTextColor;
+
+  text-align: center;
+  font-size: 26px;
+  color: #808080;
+
+  margin-bottom: 12px;
+}
+
+.info-when-where {
+  // this hack added to get the floating divs to resize the container to the correct height
+  overflow: hidden;
+  width: 100%;
+
+  .info-date {
+    color: @grayTextColor;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  .info-address {
+    color: @grayTextColor;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .icon-img {
+    margin-right: 4px;
+    height: @iconWidth;
+    width: @iconWidth;
+    display: inline-block;
+  }
+}
+
+.info-description {
+  color: @blackTextColor;
+  line-height: 1.5em;
+
+  text-align: justify;
+
+  font-size: 16px;
+
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.organizer-img {
+  margin-right: 4px;
+
+  height: @userImageWidth;
+  width: @userImageWidth;
+  border-radius: @userImageWidth / 2;
+  float: left;
+  border: 2px solid white;
+}
+
+.info-organizer {
+  color: @blackTextColor;
+
+  .title {
+    color: @grayTextColor;
+  }
+
+  float: left;
+  font-size: 16px;
+}
+
+// stacked info button using fontawesome
+.info-button {
+  float: right;
+
+}
+
+// generic font awesome button classes
+.icon-button-color {
+  color: @grayButtonColor;
+}
+
+  a:hover .icon-button-color {
+    color: @redButtonColor;
+  }
+
+.icon-button-size {
+  font-size: 1.5em;
+}
+
+
+

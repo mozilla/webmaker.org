@@ -1,0 +1,131 @@
+body#events.details {
+    background: #23B881;
+
+    #details-pane {
+        background: white;
+        width:      100%;
+        height:     100%;
+        border-radius:  4px;
+        margin:     30px auto;
+
+        .temporal-local {
+            display:    inline-block;
+            margin:     4px;
+
+            .datetime-range,.address {
+                display: inline-block;
+                margin: 0px 4px;
+                font-size: 14px;
+
+                vertical-align: top;
+            }
+            img.calendar-icon {
+                width:  17px;
+                margin-top: 2px;
+
+                vertical-align: top;
+            }
+            img.pin-icon {
+                width:      17px;
+                margin-top: -1px;
+
+                vertical-align: top;
+            }
+        }
+        .gallery-sidebar {
+            float:      left;
+        }
+        #event-picture {
+            background: #444;
+
+            margin:     11px;
+            margin-right: 20px;
+
+            vertical-align: top;
+
+            img { }
+        }
+        #event-registration {
+            width:      400px;
+            padding-bottom: 40px;
+            margin-top: 20px;
+
+            text-align: center;
+
+            #registerLink {
+                display:        inline-block;
+                background:     #4F74BB;
+                border-radius:  7px;
+                border-top:     1px solid #888;
+                border-left:    1px solid #aaa;
+                margin:         20px auto;
+                padding:        18px;
+                padding-top:    16px;
+
+                color:      #eee;
+                font-size:  19px;
+
+                .icon-chevron-right {
+                    color:      #f2f2f2;
+                    font-size:  16px;
+                }
+                .clickable;
+                &:hover {
+                    background: #517CCB;
+                }
+                &:active {
+                    background: #4062A1;
+                }
+            }
+            p {
+                width:      320px;
+                margin:     0px auto;
+
+                color: #888;
+            }
+        }
+        #event-description {
+            background: white;
+            border-radius:  4px;
+            padding: 10px 20px;
+            padding-left: 30px;
+
+            > h1 {
+                font-weight: 300;
+                font-size:   35px;
+            }
+            > p {
+                color:      #333;
+                font-size:  15px;
+                line-height: 25px;
+            }
+            #event-organizer {
+                height:     60px;
+                margin-top: 10px;
+
+                color:      #888;
+
+                img {
+                    height: 35px;
+                    width:  35px;
+                    border-radius: 40px;
+                }
+                span {
+                    font-size: 14px;
+                    padding-left: 5px;
+
+                    vertical-align: 80%;
+                }
+                .clickable;
+            }
+        }
+        #bottom-stripe {
+            background: #FEA300;
+            width:      100%;
+            height:     6px;
+            margin-top: 1ex;
+
+            border-radius: 0px 0px 4px 4px;
+        }
+    }
+}

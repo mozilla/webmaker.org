@@ -1,0 +1,47 @@
+@import "event_create";
+@import "event_details";
+@import "map";
+@import "marker_info_window";
+
+body#events {
+    #content {
+        max-width:  1020px;
+        width:      100%;
+        padding:    0px;
+    }
+    main {
+        margin-bottom: 0px;
+    }
+    header {
+        margin-bottom:  0px;
+        padding-bottom: 20px;
+    }
+    footer,.make-footer {
+        margin-top: 0px;
+    }
+    .clear { clear: both; }
+}
+
+// Temporarily copied from mixins.less
+.box-shadow (@first, @second, @third, @colour) {
+  -webkit-box-shadow: @first @second @third @colour;
+  -moz-box-shadow:    @first @second @third @colour;
+  box-shadow:         @first @second @third @colour;
+}
+
+.clickable {
+  cursor: pointer; cursor: hand;
+  text-decoration: none;
+
+  &:hover {
+      text-shadow: #bbb 0px 0px 1px;
+  }
+}
+.disable-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

@@ -26,11 +26,6 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
     });
 
     var media = new MediaGallery(webmaker);
-
-    $('#template').on('click', function( e ) {
-      media.search( { tags: [ 'template' ] } );
-    } );
-
     media.init();
 
     var deleteBtn = $(".delete-btn");

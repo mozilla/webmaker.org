@@ -33,7 +33,8 @@
 	{{ query }}
 	{% endif %}
   </span></h3>
-  <div class="main-gallery packery-hide search-gallery">
+  <div class="main-gallery search-gallery">
+    <div class="loading"></div>
     <div class="gutter-sizer"></div>
     {% for make in makes %}
     <div class="make {{makeSize}}" style="background-image:url({{make.thumbnail}});">

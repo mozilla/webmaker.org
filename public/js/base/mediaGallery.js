@@ -12,6 +12,7 @@ define(['jquery', 'moment'],
       mainGallery = $mainGallery[0],
       $makeTemplate = $body.find( 'div.make' ),
       $makeBackTemplate = $body.find( 'div.make-back' ),
+      $loading = $( '.loading', $mainGallery ),
       isMobile = false;
 
   function createMakeBack( data, $el ) {
@@ -112,7 +113,8 @@ define(['jquery', 'moment'],
     });
 
     this.packery.on( 'layoutComplete', function() {
-      $mainGallery.removeClass('packery-hide');
+      $loading.hide();
+      $('.packery-hide', $mainGallery ).removeClass( 'packery-hide' );
     });
 
     this.packery.layout();
@@ -137,7 +139,7 @@ define(['jquery', 'moment'],
         });
         break;
       case 'index':
-        var $stickyBanner = $('<div class="make internal rf" id="banner-join">');
+        var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
         var $h1 = $('<h1>Make history. Or, um, cat videos.</h1>');
         var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
         var $signup_div = $('<div class="sign-up-div">');
@@ -174,7 +176,7 @@ define(['jquery', 'moment'],
         break;
 
       case 'teach':
-        var $stickyBanner = $('<div id="banner-teach" class="rf">' +
+        var $stickyBanner = $('<div id="banner-teach" class="rf packery-hide">' +
           '<img src="/img/webmaker-community.jpg" alt="Webmaker Community">' +
           "<p>Join us! We're a global community of technies, educators and friendly humans on " +
           'a mission.</p></div>');
@@ -195,13 +197,17 @@ define(['jquery', 'moment'],
   MediaGallery.prototype.search = function( options ) {
     var self = this;
     $('.rf').remove();
+    $loading.show();
 
     // Every time we redraw all the elements, we need to recreate Packery or else
     // it draws the layout based on the previous setup.
     this.packery = new Packery(mainGallery, {
       itemSelector: 'div.make',
       gutter: '.gutter-sizer',
-      transitionDuration: 0.1
+      transitionDuration: '0.2'
+    });
+    this.packery.on( 'layoutComplete', function() {
+      $loading.hide();
     });
     this.limit = 16;
     this.wm.doSearch( options, this.limit, function( data ) {

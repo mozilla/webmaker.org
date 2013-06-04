@@ -40,7 +40,7 @@ module.exports = function (app) {
                 reply(req, res, 500, 'Could not create Event', { error: err });
             });
         },
-        show:   function(req, res)
+        details: function(req, res)
         {
             Event.find(req.params.id).success(function (event) {
                 resFmt(req, res, {
@@ -78,7 +78,7 @@ module.exports = function (app) {
                 reply(req, res, 404, 'Event not found');
             });
         },
-        destroy:function(req, res)
+        destroy: function(req, res)
         {
             Event.find(req.params.id).success(function (event) {
                 event.destroy().success(function () {

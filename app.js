@@ -1,5 +1,6 @@
 var express = require( "express" ),
     habitat = require( "habitat" ),
+    helmet = require( "helmet" ),
     nunjucks = require( "nunjucks" ),
     path = require( "path" ),
     persona = require( "express-persona" ),
@@ -24,13 +25,22 @@ nunjucksEnv.express( app );
 app.disable( "x-powered-by" );
 
 app.use( express.logger( NODE_ENV === "development" ? "dev" : "" ) );
+if ( !!env.get( "FORCE_SSL" ) ) {
+  app.use( helmet.hsts() );
+  app.enable( "trust proxy" );
+}
 app.use( express.compress() );
 app.use( express.static( path.join( __dirname, "public" )));
 app.use( express.bodyParser() );
 app.use( express.cookieParser() );
 app.use( express.cookieSession({
   key: "webmaker.sid",
-  secret: env.get('SESSION_SECRET')
+  secret: env.get( "SESSION_SECRET" ),
+  cookie: {
+    maxAge: 2678400000, // 31 days. Persona saves session data for 1 month
+    secure: !!env.get( "FORCE_SSL" )
+  },
+  proxy: true
 }));
 app.use( app.router );
 
@@ -70,7 +80,7 @@ app.get( "/myprojects", routes.myprojects() );
 /**
  * WEBMAKER SSO
  */
-// LoginAPI helper Module    
+// LoginAPI helper Module
 var loginAPI = require( "webmaker-loginapi" )( app, env.get( "LOGINAPI" ) );
 
 persona(app, { audience: env.get( "AUDIENCE" ) } );

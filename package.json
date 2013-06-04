@@ -14,6 +14,7 @@
     "express": "3.2.0",
     "express-persona": "0.0.7",
     "habitat": "0.4.1",
+    "helmet": "0.0.9",
     "less-middleware": "0.1.9",
     "nunjucks": "0.1.9",
     "makeapi": "0.1.9",

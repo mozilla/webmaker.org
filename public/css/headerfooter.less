@@ -583,10 +583,28 @@ footer {
       right: auto;
       left: auto;
       text-align: left;
-      > li {
+      .border-box;
+      width: 100%;
+
+      li {
         font-size: 1em;
-        width: 70px;
+        width: 23%;
         padding: 0.5em 0;
+
+        // Hide Make menu on mobile
+        &:hover .makenav-hover {
+          display: none;
+        }
+
+        &:hover #nav-index {
+          background: none;
+          color: @blue;
+          padding: 0;
+          border: none;
+          width: auto;
+          height: auto;
+          .border-box;
+        }
       }
     }
 
@@ -597,15 +615,23 @@ footer {
     line-height: 1;
     display: block;
     margin-top: 0;
+
+  }
+  .filter-bar {
+    width: 195px;
+    margin: 0 auto;
   }
 
   .make-footer {
     height: 220px;
     width: 640px;
 
+    .carousel-wrapper {
+      width: 100%;
+    }
+
     .make-wrapper {
       width: 600px;
-      padding-top: 10px;
       margin-left: auto;
       margin-right: auto;
       height: 100%;
@@ -623,12 +649,28 @@ footer {
   }
 
   .partners {
-    .partner-list {
-      text-align: left;
+    width: 100%;
 
-      .sponsor-item {
-        width: 250px;
-        margin-bottom: 10px;
+    hr {
+      margin-top: 20px;
+    }
+
+    .refresh-sponsors {
+      display: none;
+    }
+    .sponsors {
+      text-align: center;
+      li {
+        padding: 3px 0;
+        display: block;
+      }
+
+    }
+    .links {
+      padding: 0;
+      > li {
+        font-size: 0.8em;
+        text-align: center;
       }
     }
   }
@@ -663,5 +705,52 @@ footer {
   text-align: center;
   padding-left: 7px;
   .border-box;
+}
 
+
+/*********************************************************
+* MOBILE (320px wide, retina)
+*/
+@media only screen and (max-width: 320px) {
+  header {
+    .webmaker-nav-container {
+      height: 140px;
+
+      #logo {
+        text-align: center;
+      }
+
+      #tabzilla {
+        display: none;
+      }
+    }
+    .nav-list {
+      li {
+        width: 25%;
+        border: none;
+        float: left;
+      }
+    }
+  }
+}
+
+#footer-actions {
+  right: auto;
+}
+
+#banner-join {
+  display: none;
+}
+
+.make-footer {
+  height: auto;
+  width: auto;
+  padding-bottom: 15px;
+  .make-wrapper {
+    width: auto;
+
+    .make-footer-item {
+      margin-left: 9px;
+    }
+  }
 }

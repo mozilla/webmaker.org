@@ -1,7 +1,7 @@
 module.exports = function( make, makeURL, personaSSO, loginAPI ) {
   var moment = require( "moment" );
   return function( req, res ) {
-    var username = req.session.webmakerid,
+    var username = req.session.username,
         page = req.param.page || 1;
 
     if ( !username ) {

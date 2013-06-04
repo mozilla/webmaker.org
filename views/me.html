@@ -9,10 +9,11 @@
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
-  <div class="main-gallery packery-hide search-gallery">
+  <div class="main-gallery search-gallery">
+    <div class="loading"></div>
     <div class="gutter-sizer"></div>
     {% for make in makes %}
-    <div class="make medium" style="background-image:url({{make.thumbnail}});">
+    <div class="make packery-hide medium" style="background-image:url({{make.thumbnail}});">
       <div class="make-info">
         <p class="title">{{make.title}}</p>
         <p><span class="make-type">{{make.type}}</span> make</p>

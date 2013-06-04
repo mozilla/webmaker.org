@@ -37,7 +37,7 @@
     <div class="loading"></div>
     <div class="gutter-sizer"></div>
     {% for make in makes %}
-    <div class="make {{makeSize}}" style="background-image:url({{make.thumbnail}});">
+    <div class="make packery-hide {{makeSize}}" style="background-image:url({{make.thumbnail}});">
       <div class="make-info">{{make.title}} by <a class="user-link" data-username="{{make.username}}">@{{make.username}}</a></div>
       <div class="btn-container">
         <a href="{{make.url}}" class="ui-btn fork-btn"><span class="icon icon-code-fork"></span></a>

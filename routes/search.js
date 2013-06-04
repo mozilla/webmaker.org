@@ -6,7 +6,7 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
     sortByField = req.param( "sortByField" ) || "createdAt",
     sortByOrder = req.param( "order" ) || "desc",
     page = req.param( "page" ) || 1,
-    username = req.session.webmakerid,
+    username = req.session.username,
     options = {};
 
     if ( type === 'tags' ) {

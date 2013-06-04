@@ -12,7 +12,6 @@ habitat.load();
 var app = express(),
     env = new habitat(),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' ))),
-    loginAPI = require( "webmaker-loginapi" )( env.get( "LOGINAPI" ) ),
     make = makeAPI.makeAPI({
       apiURL: env.get( "MAKE_ENDPOINT" ),
       auth: env.get( "MAKE_AUTH" )
@@ -71,25 +70,10 @@ app.get( "/myprojects", routes.myprojects() );
 /**
  * WEBMAKER SSO
  */
+// LoginAPI helper Module    
+var loginAPI = require( "webmaker-loginapi" )( app, env.get( "LOGINAPI" ) );
+
 persona(app, { audience: env.get( "AUDIENCE" ) } );
-
-app.get( "/user/:userid", function( req, res ) {
-  loginAPI.getUser(req.session.email, function(err, user) {
-    if(err || !user) {
-      return res.json({
-        status: "failed",
-        reason: (err || "user not defined")
-      });
-    }
-
-    req.session.webmakerid = user.username;
-    console.log( user, req.session );
-    res.json({
-      status: "okay",
-      user: user
-    });
-  });
-});
 /**
  * END WEBMAKER SSO
  */

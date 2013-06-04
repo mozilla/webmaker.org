@@ -7,7 +7,7 @@ module.exports = function( make ) {
       if ( err ) {
         res.send( err );
       }
-      else if ( username === req.session.webmakerid ) {
+      else if ( username === req.session.username ) {
         make.remove( id, function( err, data ) {
           if ( err ) {
             res.send( err );

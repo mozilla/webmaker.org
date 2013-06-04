@@ -6,7 +6,7 @@ module.exports = function( view, makeURL, personaSSO, loginAPI ) {
       personaSSO: personaSSO,
       loginAPI: loginAPI,
       email: req.session.email || '',
-      webmakerID: req.session.webmakerid || ''
+      webmakerID: req.session.username || ''
     } );
   };
 };

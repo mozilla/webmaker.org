@@ -11,9 +11,7 @@ define(['jquery', 'moment'],
       $mainGallery = $('.main-gallery'),
       mainGallery = $mainGallery[0],
       $makeTemplate = $body.find( 'div.make' ),
-      $makeTeachTemplate = $body.find( 'div.make-teach' ),
       $makeBackTemplate = $body.find( 'div.make-back' ),
-      $eventBackTemplate = $body.find( 'div.event-back' ),
       isMobile = false;
 
   function createMakeBack( data, $el ) {
@@ -35,48 +33,12 @@ define(['jquery', 'moment'],
     $dateSpan.text( createdAtDate );
     $authorLink.text( "@" + data.username );
     $authorLink.attr( "href", "/u/" + data.username );
-    // $descSpan.text( data.description ); No desc for now
     $viewBtn.attr( "href", data.url );
     $forkBtn.attr( "href", data.url );
-    // Note that the remix url doesn't exist right now?
-    $el.append( $backTemplate );
-  }
-
-  function createMakeTeach( data, $el ) {
-    var $teachTemplate = $makeTeachTemplate.clone( true ),
-        $titleSpan = $('.title', $teachTemplate),
-        $levelSpan = $('.level', $teachTemplate),
-        $skillsSpan = $('.skills', $teachTemplate),
-        $authorSpan = $('.author', $teachTemplate);
-
-    $titleSpan.text( data.description );
-    $levelSpan.text( data.level );
-    $skillsSpan.text( data.skills );
-    $authorSpan.text( data.author );
-    $el.append( $teachTemplate );
-  }
-
-  function createEventBack( data, $el ) {
-    var $backTemplate = $eventBackTemplate.clone( true ),
-        $eventSpan = $('.event-title', $backTemplate),
-        $dateSpan = $('.date', $backTemplate),
-        $placeSpan = $('.place', $backTemplate),
-        $descSpan = $('.description', $backTemplate),
-        $organizerSpan = $('.organizer', $backTemplate);
-
-    $eventSpan.text( data.title );
-    $dateSpan.text( date.createdAt );
-    $placeSpan.text( 'PLACE' );
     $descSpan.text( data.description );
-    $organizerSpan.text( 'MOZILLA' );
-    $el.append( $backTemplate );
-  }
+    // Note that the remix url doesn't exist right now?
 
-  // set up mouse over handlers
-  if ($body[0].id === 'index' || $body[0].id === 'search-results') {
-    $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
-      $('.flipContainer', this).toggleClass( 'flip' );
-    });
+    $el.append( $backTemplate );
   }
 
   function searchCallback( data, self ) {
@@ -91,28 +53,22 @@ define(['jquery', 'moment'],
       data.type = data.contentType.replace( /application\/x\-/g, "" );
     }
 
-    // If we're not in mobile view, we want to display multiple sizes for
     // the home page and the medium size for the teach page.
-    if (!isMobile) {
-      switch( $body[0].id ) {
-        case 'index':
-          if (countLarge > 0) {
-            randSize = 'large';
-            countLarge --;
-          } else {
-            randSize = 'medium';
-            countMedium --;
-          }
-          break;
 
-        case 'teach':
+    switch( $body[0].id ) {
+      case 'index':
+        if (countLarge > 0) {
+          randSize = 'large';
+          countLarge --;
+        } else {
           randSize = 'medium';
-          break;
+          countMedium --;
+        }
+        break;
 
-        case 'search-results':
-          randSize = 'medium';
-          break;
-      }
+      case 'teach':
+        randSize = 'medium';
+        break;
     }
 
     // create front Element & populate
@@ -129,19 +85,7 @@ define(['jquery', 'moment'],
     $makeContainer.addClass( 'make-type-' + data.type );
     $makeContainer.addClass(randSize);
 
-    switch( $body[0].id ) {
-      case 'index':
-        createMakeBack( data, $backEl );
-        break;
-
-      case 'teach':
-        createMakeTeach( data, $frontEl );
-        break;
-
-      case 'search-results':
-        createMakeBack( data, $backEl );
-        break;
-    }
+    createMakeBack( data, $backEl );
 
     // add front & back elements to flip container
     var $flip = $('<div class="flipContainer"></div>');
@@ -216,6 +160,12 @@ define(['jquery', 'moment'],
 
         $mainGallery.append( $stickyBanner );
 
+        // set up mouse over handlers
+        $makeTemplate.addClass( "make-flip" );
+        $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
+          $('.flipContainer', this).toggleClass( 'flip' );
+        });
+
         this.wm.doSearch( { tags: ['featured'] }, this.limit, function( data ) {
           searchCallback( data, self )
         });
@@ -225,11 +175,13 @@ define(['jquery', 'moment'],
 
       case 'teach':
         var $stickyBanner = $('<div id="banner-teach" class="rf">' +
-          '<img src="../img/webmaker-community.jpg" alt="Webmaker Community">' +
+          '<img src="/img/webmaker-community.jpg" alt="Webmaker Community">' +
           "<p>Join us! We're a global community of technies, educators and friendly humans on " +
           'a mission.</p></div>');
         $mainGallery.append( $stickyBanner );
         this.limit = 12;
+
+        $makeTemplate.addClass( "make-teach" );
 
         this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, function( data ) {
           searchCallback( data, self )

@@ -76,7 +76,6 @@ a {
   width: @gutter * @unit;
 }
 
-
 .make {
   color: #FFF;
   position: relative;
@@ -85,21 +84,40 @@ a {
 
 }
 
-.flipContainer { //card
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: all 0.3s linear;
-  -moz-transform-style: preserve-3d;
-  -moz-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
-  .border-radius;
-  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
-}
+.make-flip {
+  .flipContainer { //card
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all 0.3s linear;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    .border-radius;
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
+  }
 
-.flipContainer.flip {
-  .rotateY(180deg);
+  .flipContainer.flip {
+    .rotateY(180deg);
+  }
+  .front,
+  .back {
+    .backface-visibility(hidden);
+    .border-radius;
+    .border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-position: top center;
+    background-size: cover;
+  }
+  .back {
+    color: #4E4E4E;
+    background: #FFF;
+    .rotateY(180deg);
+  }
 }
 
 .make-item-title {
@@ -108,19 +126,6 @@ a {
   position: absolute;
   bottom: 0;
   left: 2px;
-}
-
-.front,
-.back {
-  .backface-visibility(hidden);
-  .border-radius;
-  .border-box;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-position: top center;
-  background-size: cover;
 }
 
 .front {
@@ -154,14 +159,8 @@ a {
   }
 }
 
-.back {
-  color: #4E4E4E;
-  background: #FFF;
-  .rotateY(180deg);
-}
-
 .large {
-  font-size: 2em;
+  font-size: 1.4em;
   .width(4);
   .height(4);
   .perspective(600px);
@@ -182,7 +181,6 @@ a {
 
 // This is the details stuff
 .make-back {
-  position: realtive;
   z-index: 2;
   padding: 1.2em;
   .border-box;
@@ -192,7 +190,7 @@ a {
     font-weight: normal;
   }
   h3 {
-    line-height: 1.2;
+    line-height: 1.3;
     font-size: 1.3em;
     margin-bottom: 0.5em;
     max-height: 3.6em;
@@ -209,12 +207,15 @@ a {
     }
   }
   .desc a {
-    color: lighten( @grey, 20% );
+    color: lighten( @grey, 10% );
     font-family: "Open Sans";
     font-weight: 400;
     &:hover {
       color: @green;
     }
+  }
+  .description {
+    margin-bottom: 1em;
   }
   .make-type-container {
     display: none;
@@ -293,6 +294,8 @@ a {
   bottom: 5px;
   right: 5px;
 }
+
+
 .make-type-thimble .type-icon {
   background-image: url(../img/icon-make-thimble.png);
 }
@@ -421,74 +424,47 @@ a {
   }
 }
 
-#banner-teach {
-  height: 420px;
-  position: absolute;
-  right: 0;
-  top: 440px;
-  .width(4);
-
-  p {
-    background-color: #FFF;
-    color: #27AAE1;
-    font-size: 20px;
-    height: 60px;
-    margin-top: 3px;
-    overflow: hidden;
-    padding: 10px;
+.make-teach {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
+  height: auto;
+  .front {
+    width: 100%;
+    height: 150px;
+    background-position: top center;
+    background-size: cover;
+  }
+  background: #FFF;
+  .make-back .title {
+    color: @green;
+  }
+  .type-icon {
+    display: none;
+  }
+  .btn-container {
+    transition: opacity 0.1s ease;
+    margin-top: 1em;
+    position: relative;
+    bottom: auto;
+    left: auto;
   }
 }
 
-#teach {
-  .make {
-    background-color: #FFF;
-    height: 200px;
+#banner-teach {
+  float: right;
+  .height(4);
+  .width(4);
+  margin-bottom: @gutter * @unit;
 
-    .preview-img {
-      clear: both;
-      float: left;
-      height: 95px;
-      overflow: hidden;
-      padding: 5px 5px 0 5px;
-    }
-
-    .title, p {
-      clear: both;
-      float: left;
-      overflow: hidden;
-      padding: 5px;
-    }
-
-    .info {
-      background-image: url('../img/bkgFooter.jpg');
-      color: #838383;
-      margin: 3px 0;
-      width: 230px;
-
-      b, span {
-        display: inline-block;
-        float: left;
-      }
-
-      span {
-        width: 150px;
-      }
-
-      b {
-        width: 80px;
-      }
-    }
-
-    .title {
-      font-size: 18px;
-      line-height: 24px;
-      margin: 15px 5px;
-    }
-
-    .author-info {
-      color: #838383;
-      font-size: 14px;
-    }
+  img {
+    display: block;
+  }
+  p {
+    font-family: "Open Sans Light", sans-serif;
+    margin: 0;
+    font-size: 1.5em;
+    background-color: @red;
+    color: #FFF;
+    padding: 1em;
   }
 }
 

@@ -105,7 +105,7 @@ define(['jquery', 'uri', 'base/ui'],
       make = Make({ apiURL: makeURL });
       setup.page( page );
     },
-    doSearch: function( options, limit, each ) {
+    doSearch: function( options, limit, each, pageNo ) {
       var sortBy = 'createdAt',
           sortOrder = 'desc',
           options = options || {};
@@ -118,6 +118,7 @@ define(['jquery', 'uri', 'base/ui'],
       make
       .find( options )
       .limit( limit )
+      .page ( pageNo || 1 )
       .sortByField( sortBy, sortOrder )
       .then( function( error, results ) {
         var result;

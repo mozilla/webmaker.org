@@ -111,6 +111,8 @@ define(['jquery', 'moment'],
       gutter: '.gutter-sizer',
       transitionDuration: '0.2s'
     });
+    this.lastSearch = { tags: [ 'featured', 'guide' ] };
+    this.pageNo = 1;
 
     this.packery.on( 'layoutComplete', function() {
       $loading.hide();
@@ -169,7 +171,7 @@ define(['jquery', 'moment'],
         });
 
         this.wm.doSearch( { tags: ['featured'] }, this.limit, function( data ) {
-          searchCallback( data, self )
+          searchCallback( data, self );
         });
         this.packery.stamp( $stickyBanner[0] );
         this.packery.layout();
@@ -186,7 +188,7 @@ define(['jquery', 'moment'],
         $makeTemplate.addClass( "make-teach" );
 
         this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, function( data ) {
-          searchCallback( data, self )
+          searchCallback( data, self );
         });
         this.packery.stamp( $stickyBanner[0] );
         this.packery.layout();
@@ -194,8 +196,18 @@ define(['jquery', 'moment'],
     }
   };
 
+  MediaGallery.prototype.loadMore = function () {
+    var self = this;
+    var pageNo = ++this.pageNo;
+    this.wm.doSearch( this.lastSearch, this.limit, function( data ) {
+      searchCallback( data, self );
+    }, pageNo );
+  };
+
   MediaGallery.prototype.search = function( options ) {
     var self = this;
+    this.pageNo = 1;
+    this.lastSearch = options;
     $('.rf').remove();
     $loading.show();
 

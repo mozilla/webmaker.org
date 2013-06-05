@@ -19,7 +19,7 @@
     "nunjucks": "0.1.9",
     "makeapi": "0.1.9",
     "moment": "~2.0.0",
-    "webmaker-loginapi": "0.1.3"
+    "webmaker-loginapi": "0.1.4"
   },
   "devDependencies": {
     "grunt": "0.4.1",

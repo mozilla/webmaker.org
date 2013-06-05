@@ -4,7 +4,7 @@ define(['resource_model'], function (ResourceModel) {
         name:   'event',
         fields: [ 'title', 'description', 'address', 'latitude', 'longitude',
             'attendees', 'beginDate', 'beginTime', 'endDate', 'endTime',
-            'registerLink', 'picture', 'organizer', 'created', 'id' ],
+            'registerLink', 'picture', 'organizer', 'organizerId', 'created', 'id' ],
     });
 
     EventModel.prototype.datetimeHTML = function() {

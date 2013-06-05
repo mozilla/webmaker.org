@@ -27,7 +27,8 @@ module.exports = function () {
         Date:   Sequelize.DATE,
         URL: {
             type: Sequelize.STRING,
-            validate: { isUrl: true }
+            validate: { isUrl: true },
+            allowNull: true,
         },
         Email: {
             type: Sequelize.STRING,

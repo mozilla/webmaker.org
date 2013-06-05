@@ -20,24 +20,30 @@ module.exports = function (app) {
         create: function(req, res)
         {
             var event = req.body.event;
-            if (event) {
-                [ 'begin', 'end' ].map(function (f) {
-                    var df = f + 'Date';
-                    event[df] = event[df] ? new Date(event[df].split('-')) : null;
-                    if (event[df] == "Invalid Date")
-                        event[df] = null;
+            if (!event)
+                return reply(req, res, 400, 'No Event provided');
+            ['begin', 'end'].map(function (f) {
+                var df = f + 'Date';
+                event[df] = event[df] ? new Date(event[df].split('-')) : null;
+                if (event[df] == "Invalid Date")
+                    event[df] = null;
 
-                    var tf = f + 'Time';
-                    var ts = event[tf].split(':');
-                    event[tf] = event[tf] ? new Date(0,0,0,ts[0],ts[1]) : null;
-                    if (event[tf] == "Invalid Date")
-                        event[tf] = null;
-                });
-            }
+                var tf = f + 'Time';
+                var ts = event[tf].split(':');
+                event[tf] = event[tf] ? new Date(0,0,0,ts[0],ts[1]) : null;
+                if (event[tf] == "Invalid Date")
+                    event[tf] = null;
+            });
+            ['registerLink', 'picture'].forEach(function (f) {
+                if (!event[f]) event[f] = null;
+            });
+            if (!(event.organizer = req.session.email))
+                return reply(req, res, 401, 'Log in to create Events');
+            event.organizerId = req.session.webmakerID;
             Event.create(event).success(function (event) {
                 reply(req, res, 200, 'Event created', { event: event });
             }).error(function (err) {
-                reply(req, res, 500, 'Could not create Event', { error: err });
+                reply(req, res, 400, 'Invalid Event provided', { error: err });
             });
         },
         details: function(req, res)
@@ -48,6 +54,7 @@ module.exports = function (app) {
                     html: function () {
                         function fmtDate(x) { return new Date(x).toDateString() }
                         function fmtTime(x) { return new Date(x).toTimeString().split(' ')[0] }
+
                         var evt = {};
                         for (var p in event) switch(p) {
                             case 'beginDate':

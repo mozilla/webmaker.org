@@ -12,7 +12,7 @@ module.exports = function (Model, Types) {
             allowNull:      true,
             defaultValue:   null,
         },
-        latitude: {
+        longitude: {
             type:                           Types.Float,
             validate: {
                 isFloat: true,
@@ -29,6 +29,7 @@ module.exports = function (Model, Types) {
         registerLink:                       Types.URL,
         picture:                            Types.URL,
         organizer:                          Types.Email,
+        organizerId:                        Types.String,
     }, function (M) {
         this.hasMany( M.Gallery, { as: 'Galleries' } );
         this.hasMany( M.Make,    { as: 'Makes'     } );

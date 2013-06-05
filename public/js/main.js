@@ -46,6 +46,14 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
       }
     });
 
+    $( '.load-more' ).on( 'click', function ( e ) {
+      media.loadMore();
+    } );
+
+    $( '#bottom-search-btn' ).on( 'click', function ( e ) {
+      document.getElementById('webmaker-nav').scrollIntoView();
+    } );
+
     UI.select( '#search-filter', function( val ) {
       switch ( val ) {
         case 'recommended':

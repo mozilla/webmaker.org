@@ -1,18 +1,30 @@
-exports.init = function (app, nunjucksEnv) {
-    var express = require('express');
-    // Static + Assets
-    app.use(express.static(__dirname+'/static'));
-    app.use(require('connect-assets')({
-        src:        __dirname+'/assets',
-        buildDir:   'public/_cache'
-    }));
+exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
+    var express = require('express'),
+        nunjucks = require('nunjucks'),
+        here = __dirname,
+        paths = {
+            views:  here+'/views',
+            static: here+'/static',
+            less:   here+'/assets',
+        };
 
     // Views
-    var nunjucks = require('nunjucks');
-    var nunjucksLoader = new nunjucks.FileSystemLoader(__dirname+'/views');
-    if (!nunjucksEnv)
-        nunjucksEnv = new nunjucks.Environment(nunjucksLoader);
-    nunjucksEnv.loaders.push(nunjucksLoader);
+    nunjucksEnv.loaders.push(new nunjucks.FileSystemLoader(paths.views));
+
+    // Assets
+    var optimize = process.env.NODE_ENV === 'production';
+    app.use(lessMiddleware({
+        dest:     paths.static,
+        src:      paths.less,
+        paths:    [ app_root+'/public/css' ],
+
+        once: optimize, debug: !optimize,
+        compress: optimize, yuicompress: optimize,
+        optimization: optimize * 2
+    }));
+
+    // Static
+    app.use(express.static(paths.static));
 
     // Models
     var ORM = require('./config/orm').call(app, app);
@@ -24,4 +36,6 @@ exports.init = function (app, nunjucksEnv) {
     process.nextTick(function () {
         require('./routes').call(app, Controllers, app);
     });
+
+    return paths;
 };

@@ -1,6 +1,7 @@
 @import "event_create";
 @import "event_details";
 @import "map";
+@import "mixins";
 @import "marker_info_window";
 
 body#events {
@@ -13,13 +14,6 @@ body#events {
         margin-top: 0px;
     }
     .clear { clear: both; }
-}
-
-// Temporarily copied from mixins.less
-.box-shadow (@first, @second, @third, @colour) {
-  -webkit-box-shadow: @first @second @third @colour;
-  -moz-box-shadow:    @first @second @third @colour;
-  box-shadow:         @first @second @third @colour;
 }
 
 .clickable {

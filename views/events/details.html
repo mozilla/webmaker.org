@@ -11,7 +11,7 @@
     <div id="details-pane">
         <div class="gallery-sidebar">
             {% if event.picture %}
-            <img id="event-picture" src="http://lorempixel.com/400/600/nature/" />
+            <img id="event-picture" src="{{ event.picture }}" onerror="this.style.display='none'" />
             {% endif %}
             {% if event.registerLink %}
             <div id="event-registration">

@@ -11,7 +11,7 @@
   { "express": "3.2.0"
   , "connect-assets": "*"
   , "nunjucks": "0.1.8a"
-  , "less": "latest"
+  , "less-middleware": "latest"
   , "mysql": "latest"
   , "sequelize": "latest"
   , "markdown": "latest"

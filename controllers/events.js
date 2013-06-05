@@ -119,7 +119,6 @@ function render_page(req, res, page, data) {
     data.email        = req.session.email || '';
     data.webmakerID   = req.session.webmakerid || '';
 
-    data.css = css;
     res.render('events/'+page+'.html', data);
 };
 function reply(req, res, code, msg, obj) {

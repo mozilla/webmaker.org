@@ -141,28 +141,25 @@ define(['jquery', 'moment'],
         });
         break;
       case 'index':
-        var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
-        var $h1 = $('<h1>Make history. Or, um, cat videos.</h1>');
-        var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
-        var $signup_div = $('<div class="sign-up-div">');
-        var $url_span = $('<span class="sign-up-span">Webmaker.org/</span>');
-        var $form_div = $('<div class="form-div class="ui-input">');
-        var $signup_form = $('<form action="get" class="ui-input">');
-        var $name_input = $('<input name="yourname" id="yourname" required>').prop('placeholder', 'yournamehere');
-        var $button = $('<button>').html('Sign up <i class="icon-chevron-right"></i>');
+        if ( $('meta[name="persona-email"]').prop('content') ) {
+          var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
+          var $h1 = $('<h1>The web is still wild. Build it.</h1>');
+          var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
+          var $signin = $('<button class="ui-huge-button sign-in">Sign in!</button>');
 
-        $signup_form.append($name_input);
-        $signup_form.append($button);
-        $form_div.append($signup_form);
+          $signin.on('click', function( e ) {
+            navigator.idSSO.request();
+          } );
 
-        $signup_div.append($url_span);
-        $signup_div.append($form_div);
+          $stickyBanner.append( $h1 );
+          $stickyBanner.append( $h2 );
+          $stickyBanner.append( $signin );
 
-        $stickyBanner.append($h1);
-        $stickyBanner.append($h2);
-        $stickyBanner.append($signup_div);
+          $mainGallery.append( $stickyBanner );
 
-        $mainGallery.append( $stickyBanner );
+          this.packery.stamp( $stickyBanner[0] );
+          this.packery.layout();
+        }
 
         // set up mouse over handlers
         $makeTemplate.addClass( "make-flip" );
@@ -173,8 +170,6 @@ define(['jquery', 'moment'],
         this.wm.doSearch( { tags: ['featured'] }, this.limit, function( data ) {
           searchCallback( data, self );
         });
-        this.packery.stamp( $stickyBanner[0] );
-        this.packery.layout();
         break;
 
       case 'teach':

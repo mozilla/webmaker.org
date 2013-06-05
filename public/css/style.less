@@ -351,12 +351,11 @@ a {
 #banner-join {
   background-color: @red;
   color: #FFF;
-  font-weight: 100;
   position: absolute;
   text-align: center;
-  padding: 1em;
-  left: 0;
+  padding-top: 25px;
   top: (@row + @gutter) * 2 * @unit;
+  left: 0;
   .width(4);
   .height(2);
   .border-box;
@@ -367,60 +366,20 @@ a {
   }
 
   h1 {
-    font-size: 1.6em;
-    font-weight: 400;
-    margin-top: 1em;
+    font-size: 2em;
   }
 
   h2 {
-    font-size: 1.1em;
-    line-height: 2;
-    font-weight: 400;
+    font-size: 1.4em;
+    margin-bottom: 10px;
   }
 
-  .sign-up-div {
-    width: 100%;
-    text-align: left;
-
-    .sign-up-span {
-      display: inline-block;
-      font-weight: 600;
-      font-size: 14px;
-      margin-left: 70px;
-    }
-
-    .form-div {
-      margin-left: 5px;
-      padding-top: 10px;
-      display: inline-block;
-      height: 30px;
-      .border-box;
-
-      input {
-        height: 30px;
-        width: 150px;
-        font-size: 13px;
-        padding-left: 5px;
-        border: 2px solid #FFF;
-        float: left;
-        .border-box;
-      }
-
-      button {
-        height: 30px;
-        font-family: 'Open Sans Light', 'Helvetica Neue', sans-serif;
-        width: 88px;
-        font-weight: 200;
-        border: 2px solid white;
-        float: left;
-        cursor: pointer;
-        margin: 0;
-        padding: 0;
-        background: #27aae1;
-        color: #FFF;
-        font-size: 16px;
-      }
-    }
+  .sign-in {
+    color: #fff;
+    background-color: @green;
+    border: 1px solid @lightgrey;
+    padding: 15px;
+    font-size: 2em;
   }
 }
 

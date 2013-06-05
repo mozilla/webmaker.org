@@ -3,6 +3,8 @@ var app   = 'events',
 module.exports = function (app) {
     var Event = app.models.Event;
 
+    var markdown = require('markdown').markdown;
+
     return {
         index:  function(req, res)
         {
@@ -65,6 +67,8 @@ module.exports = function (app) {
                             case 'endTime':
                                 evt[p] = fmtTime(event[p]);
                                 break;
+                            case 'description':
+                                evt[p] = markdown.toHTML(event[p]);
                             default:
                                 evt[p] = event[p];
                         }

@@ -14,5 +14,6 @@
   , "less": "latest"
   , "mysql": "latest"
   , "sequelize": "latest"
+  , "markdown": "latest"
   }
 }

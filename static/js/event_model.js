@@ -34,26 +34,38 @@ define(['resource_model'], function (ResourceModel) {
     };
     EventModel.prototype.organizerHTML = function() {
         return '<img src="http://lorempixel.com/75/75/" class="organizer-img" />'
-            + '<div class="info-organizer"><span class="title">Organized by</span><br/>cassiemc</div>'
+            + '<div class="info-organizer"><span class="title">Organized by</span><br/>'
+            + this.organizerId + '</div>'
+    };
+    EventModel.prototype.descriptionHTML = function() {
+        var desc = this.description,
+            len  = 240;
+        if (desc.length > len) {
+            desc = desc.substring(0, len);
+            desc = desc.replace(/\w+$/, '');
+            desc += ' ...';
+        }
+        return '<div class="info-description">' + desc + '</div>'
     };
 
+    // TODO: convert to html-fragment
     EventModel.prototype.popupHTML = function() {
         return '<div class="info-content">'
-          + '<div class="info-title">' + this.title + '</div>'
-          + '<div class="info-when-where">'
-            + this.datetimeHTML()
-            + this.addressHTML()
-          + '</div>'
-          + '<div class="info-description">' + this.description + '</div>'
-          + this.organizerHTML()
+            + '<div class="info-title">' + this.title + '</div>'
+            + '<div class="info-when-where">'
+              + this.datetimeHTML()
+              + this.addressHTML()
+            + '</div>'
+            + this.descriptionHTML()
+            + this.organizerHTML()
 
             // show details button
-          + '<a href="' + this._uri + '">'
-          + '<span class="icon-stack icon-button-size info-button">'
+            + '<a href="' + this._uri + '">'
+            + '<span class="icon-stack icon-button-size info-button">'
                 // XXX: change to span
-              + '<i class="icon-sign-blank icon-stack-base icon-button-color"></i>'
-              + '<i class="icon-chevron-right icon-light"></i>'
-          + '</span></a></div>';
+                + '<i class="icon-sign-blank icon-stack-base icon-button-color"></i>'
+                + '<i class="icon-chevron-right icon-light"></i>'
+            + '</span></a></div>';
     };
 
     return EventModel;

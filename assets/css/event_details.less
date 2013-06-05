@@ -1,12 +1,12 @@
 body#events.details {
-    background: #23B881;
-
+    .ui-poster {
+        min-height: 10px;
+    }
     #details-pane {
         background: white;
         width:      100%;
         height:     100%;
         border-radius:  4px;
-        margin:     30px auto;
 
         .temporal-local {
             display:    inline-block;
@@ -87,8 +87,6 @@ body#events.details {
         #event-description {
             background: white;
             border-radius:  4px;
-            padding: 10px 20px;
-            padding-left: 30px;
 
             > h1 {
                 font-weight: 300;
@@ -119,13 +117,13 @@ body#events.details {
                 .clickable;
             }
         }
-        #bottom-stripe {
-            background: #FEA300;
-            width:      100%;
-            height:     6px;
-            margin-top: 1ex;
+    }
+    #bottom-stripe {
+        background: #FEA300;
+        width:      100%;
+        height:     8px;
+        margin-top: 1ex;
 
-            border-radius: 0px 0px 4px 4px;
-        }
+        border-radius: 0px 0px 4px 4px;
     }
 }

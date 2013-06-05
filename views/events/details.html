@@ -1,57 +1,61 @@
-{% extends "layout.html" %}
+{% extends "events/layout.html" %}
+
 {% block title %}{{ event.title }}{% endblock %}
 
 {% block body %}
+<div class="ui-wrapper ui-body">
 
-<div id="details-pane">
-    <div class="gallery-sidebar">
-        {% if event.picture %}
-        <div id="event-picture">
-            <img src="{{ event.picture }}" />
-        </div>
-        {% endif %}
-        {% if event.registerLink %}
-        <div id="event-registration">
-            <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
-            <p>This link will take you to an external event registration service, such as Eventbrite.</p>
-        </div>
-        {% endif %}
-    </div>
-    <span><div id="event-description">
-        <h1>{{ event.title }}</h1>
-        <div id="event-whenwhere">
-            <div class="temporal-local">
-            {% if event.beginDate or event.endDate %}
-                <img class="calendar-icon" src="/img/map/calendar.png" />
+    <div class="ui-poster"></div>
+
+    <div class="ui-section">
+    <div id="details-pane">
+        <div class="gallery-sidebar">
+            {% if event.picture %}
+            <img id="event-picture" src="http://lorempixel.com/400/600/nature/" />
             {% endif %}
-                <div class="datetime-range">
-                    <div> {{ event.beginDate }}
-                            {% if event.beginDate and event.endDate %} - {% endif %}
-                          {{ event.endDate }} </div>
-                    <div> {{ event.beginTime }}
-                            {% if event.beginTime and event.endTime %} - {% endif %}
-                          {{ event.endTime }} </div>
+            {% if event.registerLink %}
+            <div id="event-registration">
+                <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
+                <p>This link will take you to an external event registration service, such as Eventbrite.</p>
+            </div>
+            {% endif %}
+        </div>
+        <span><div id="event-description">
+            <h1>{{ event.title }}</h1>
+            <div id="event-whenwhere">
+                <div class="temporal-local">
+                {% if event.beginDate or event.endDate %}
+                    <img class="calendar-icon" src="/img/map/calendar.png" />
+                {% endif %}
+                    <div class="datetime-range">
+                        <div> {{ event.beginDate }}
+                                {% if event.beginDate and event.endDate %} - {% endif %}
+                              {{ event.endDate }} </div>
+                        <div> {{ event.beginTime }}
+                                {% if event.beginTime and event.endTime %} - {% endif %}
+                              {{ event.endTime }} </div>
+                    </div>
+                </div>
+                <div class="temporal-local">
+                {% if event.address %}
+                    <img class="pin-icon" src="/img/map/pin-event-red.png" />
+                    <div class="address">
+                        <div> {{ event.address }} </div>
+                        <div> {{ event.city }} </div>
+                    </div>
+                {% endif %}
                 </div>
             </div>
-            <div class="temporal-local">
-            {% if event.address %}
-                <img class="pin-icon" src="/img/map/pin-event-red.png" />
-                <div class="address">
-                    <div> {{ event.address }} </div>
-                    <div> {{ event.city }} </div>
-                </div>
-            {% endif %}
+            <div id="event-organizer">
+                <img src="http://lorempixel.com/25/25/people/" />
+                <span>Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
             </div>
-        </div>
-        <div id="event-organizer">
-            <img src="http://lorempixel.com/25/25/people/" />
-            <span>Organized by <strong class="organizer">cassiemc</strong></span>
-        </div>
-        <p>{{ event.description }}</p>
-    </div></span>
+            <p>{{ event.description }}</p>
+        </div></span>
         <div class="clear"></div>
+    </div>
+    </div>
     <div id="bottom-stripe"></div>
 </div>
-{% endblock %}
-{% block scripts %}
+
 {% endblock %}

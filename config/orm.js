@@ -1,4 +1,4 @@
-var DB_FIELDS = ['driver', 'host', 'port', 'database', 'username', 'password'];
+var DB_FIELDS = ['dialect', 'host', 'port', 'database', 'username', 'password', 'storage'];
 module.exports = function () {
     var Sequelize = require('sequelize'), db;
 
@@ -24,7 +24,8 @@ module.exports = function () {
         return model;
     };
     Model.sequelize = new Sequelize(db.database, db.username, db.password,
-                                    { host: db.host, port: db.port });
+                                    { host: db.host, port: db.port, dialect: db.dialect,
+                                      storage: db.storage });
     Model.models    = {};
     Model.types     = extend(Object.create(Sequelize), {
         String: Sequelize.STRING,

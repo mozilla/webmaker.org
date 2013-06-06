@@ -4,7 +4,7 @@
 , "main": "index.js"
 , "repository":
   { "type": "git"
-  , "url": "git://github.com/AmoebaConsulting/webmaker-events.git"
+  , "url": "git://github.com/mozilla/webmaker-events.git"
   }
 , "license": "MPL-2.0"
 , "dependencies":

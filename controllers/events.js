@@ -20,7 +20,7 @@ module.exports = function (app, initMiddleware) {
         },
         create: function(req, res)
         {
-            var event = req.body.event;
+            var event = req.body.event || req.body;
             if (!event)
                 return res.reply(400, 'No Event provided');
             ['begin', 'end'].map(function (f) {

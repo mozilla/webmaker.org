@@ -1,10 +1,17 @@
+var DB_FIELDS = ['driver', 'host', 'port', 'database', 'username', 'password'];
 module.exports = function () {
     var Sequelize = require('sequelize'), db;
 
     /* Load Database Configuration */
     try { db = require('./databases')[this.get('env')]; } catch (e) {}
-    if (!db) db = this.get('database');
-    if (!db) throw new Error("Database configuration not found.");
+    if (!isValidDB(db)) {
+        db = {};
+        DB_FIELDS.forEach(function (v) {
+            db[v] = process.env['DB_'+v.toUpperCase()];
+        });
+        console.log(db);
+    }
+    if (!isValidDB(db)) throw new Error("Database configuration not found.");
 
     /* Connect to Database Server */
     var Model; Model = function(name, fields, init) {
@@ -43,4 +50,7 @@ module.exports = function () {
 function extend(o, a) {
     Object.keys(a).forEach(function (k) { o[k] = a[k]; });
     return o;
+}
+function isValidDB(db) {
+    return db && DB_FIELDS.every(function (x) { return db[x] !== undefined });
 }

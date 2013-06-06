@@ -130,5 +130,6 @@ function ($, EventModel) { return function (mapMaker) {
         EventModel.all(function (models) {
             mapMaker.dropPins(models);
         });
+        window.scroll();
     });
 }})

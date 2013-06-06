@@ -1,5 +1,6 @@
 define(['jquery', 'event_model'],
 function ($, EventModel) { return function (mapMaker) {
+    $.event.props.push('dataTransfer');
     $(document).ready(function () {
         var create_form = $('form#create-event');
         var find_form = $('form#find-event');
@@ -23,6 +24,8 @@ function ($, EventModel) { return function (mapMaker) {
         // based on MDN example
         function handleImg(file) {
             if (file.type.match(/image.*/)) {
+                if (!upload_div._prev_text)
+                    upload_div._prev_text = upload_div.text();
                 upload_div.html("<img />");
                 var img = upload_div.find("img")[0];
                 img.file = file;
@@ -101,6 +104,8 @@ function ($, EventModel) { return function (mapMaker) {
         // setup form toggle button
         function toggleCreateForm() {
             create_form[0].reset();
+            upload_div.find('> img').attr('src', '');
+            upload_div.text(upload_div._prev_text);
 
             create_form.toggleClass('toggleHidden');
             $("#add-event-button").toggleClass('toggleHidden');

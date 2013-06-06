@@ -1,20 +1,19 @@
-var app   = 'events',
-    model = 'event';
 module.exports = function (app) {
-    var Event = app.models.Event;
+    setupMiddleware(app);
 
-    var markdown = require('markdown').markdown;
+    var Event = app.models.Event,
+        markdown = require('markdown').markdown;
 
     return {
         index:  function(req, res)
         {
             Event.all().success(function (events) {
-                resFmt(req, res, {
+                res.format({
                     json: function () {
-                        res.send(200, { events: events });
+                        res.reply(200, { events: events });
                     },
                     html: function () {
-                        render_page(req, res, 'map', { events: events });
+                        res.reply('map', { events: events });
                     }
                 })
             });
@@ -23,7 +22,7 @@ module.exports = function (app) {
         {
             var event = req.body.event;
             if (!event)
-                return reply(req, res, 400, 'No Event provided');
+                return res.reply(400, 'No Event provided');
             ['begin', 'end'].map(function (f) {
                 var df = f + 'Date';
                 event[df] = event[df] ? new Date(event[df].split('-')) : null;
@@ -40,19 +39,19 @@ module.exports = function (app) {
                 if (!event[f]) event[f] = null;
             });
             if (!(event.organizer = req.session.email))
-                return reply(req, res, 401, 'Log in to create Events');
+                return res.reply(401, 'Log in to create Events');
             event.organizerId = req.session.webmakerID;
             Event.create(event).success(function (event) {
-                reply(req, res, 200, 'Event created', { event: event });
+                res.reply(200, 'Event created', { event: event });
             }).error(function (err) {
-                reply(req, res, 400, 'Invalid Event provided', { error: err });
+                res.reply(400, 'Invalid Event provided', { error: err });
             });
         },
         details: function(req, res)
         {
             Event.find(req.params.id).success(function (event) {
-                resFmt(req, res, {
-                    json: function () { res.send(200, event) },
+                res.format({
+                    json: function () { res.reply(200, { event: event }) },
                     html: function () {
                         function fmtDate(x) { return new Date(x).toDateString() }
                         function fmtTime(x) { return new Date(x).toTimeString().split(' ')[0] }
@@ -72,64 +71,80 @@ module.exports = function (app) {
                             default:
                                 evt[p] = event[p];
                         }
-                        render_page(req, res, 'details', { event: evt });
+                        res.reply('details', { event: evt });
                     }
                 });
             }).error(function (err) {
-                reply(req, res, 404, 'Event not found');
+                res.reply(404, 'Event not found');
             });
         },
         update: function(req, res)
         {
             Event.find(req.params.id).success(function (event) {
                 event.updateAttributes(req.params.id).success(function () {
-                    reply(req, res, 200, 'Event updated', { event: event });
+                    res.reply(200, 'Event updated', { event: event });
                 });
             }).error(function (err) {
-                reply(req, res, 404, 'Event not found');
+                res.reply(404, 'Event not found');
             });
         },
         destroy: function(req, res)
         {
             Event.find(req.params.id).success(function (event) {
                 event.destroy().success(function () {
-                    reply(req, res, 200, 'Event deleted');
+                    res.reply(200, 'Event deleted');
                 });
             }).error(function (err) {
-                reply(req, res, 404, 'Event not found');
+                res.reply(404, 'Event not found');
             });
         }
     };
 };
+function setupMiddleware(app) {
+    var app_name   = 'events',
+        model_name = 'event';
 
-function resFmt(req, res, fmts) {
-    // Optional Content-Type override via 'format' query-parameter.
-    var fmt = req.param('format');
-    if (fmt && fmts[fmt])
-        return fmts[fmt]();
-    return res.format(fmts);
-};
-function render_page(req, res, page, data) {
-    data.page   = app;  // legacy from Webmaker layout
-    data.view   = page;
-
-    data.makeEndpoint = process.env.MAKE_ENDPOINT;
-    data.personaSSO   = process.env.AUDIENCE;
-    data.loginAPI     = process.env.LOGIN;
-    data.email        = req.session.email || '';
-    data.webmakerID   = req.session.webmakerid || '';
-
-    res.render('events/'+page+'.html', data);
-};
-function reply(req, res, code, msg, obj) {
-    var isError = code >= 400;
-    resFmt(req, res, {
-        json: function () {
-            if (!obj) obj = isError ? { error: msg } : { msg: msg };
-            res.send(code, obj);
-        },
-        html: function () {
-            res.redirect('/'+app+(obj && obj[model] ? '/'+obj[model].id : ''));
-        },
+    app.use('/'+app_name, function (req, res, next) {
+        // Optional Content-Type override via 'format' query-parameter.
+        var format = res.format.bind(res);
+        res.format = function(fmts)
+        {
+            var fmt = req.param('format');
+            return (fmt && fmts[fmt]) ? fmts[fmt]() : format(fmts);
+        };
+        res.reply = function(code, msg, obj)
+        {
+            if (!obj && typeof msg !== "string") {  // handle 2-arg case
+                obj = msg;
+                delete msg;
+            }
+            if (typeof code === "string") { // code is actually a view-name
+                var page = code;
+                obj = obj || {};
+                obj.page = app_name;  // legacy naming from Webmaker layout
+                obj.view = page;
+                // TODO: move into main app's middleware
+                res.locals({
+                    makeEndpoint : process.env.MAKE_ENDPOINT,
+                    personaSSO   : process.env.AUDIENCE,
+                    loginAPI     : process.env.LOGIN,
+                    email        : req.session.email || '',
+                    webmakerID   : req.session.webmakerid || ''
+                });
+                return res.render(app_name+'/'+page+'.html', obj);
+            }
+            var isError = code >= 400;
+            res.format({
+                json: function () {
+                    if (!obj) obj = isError ? { error: msg } : { msg: msg };
+                    res.send(code, obj);
+                },
+                html: function () {
+                    var id = obj && obj[model_name] && obj[model_name].id;
+                    res.redirect('/'+app_name + id ? '/'+id : '');
+                },
+            });
+        };
+        next();
     });
-};
+}

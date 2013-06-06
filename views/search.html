@@ -12,6 +12,8 @@
           <span class="icon-caret-down"></span>
           <div class="filter-list ui-select-menu">
             <ul>
+              <li data-value="title"><span class="icon-title"></span> Title</li>
+              <li data-value="description"><span class="icon-description"></span> Description</li>
               <li data-value="tags"><span class="icon-tags"></span> Tags</li>
               <li data-value="user"><span class="icon-user"></span> Users</li>
             </ul>
@@ -27,11 +29,11 @@
 {% block body %}
 <div class="ui-wrapper">
   <h3 class="search-title"> Search {{searchType}} / <span class="search-query-word">
-	{% if searchType == 'tags' %}
-	{{ query|join(', ') }}
-	{% else %}
-	{{ query }}
-	{% endif %}
+  {% if searchType == 'tags' %}
+  {{ query|join(', ') }}
+  {% else %}
+  {{ query }}
+  {% endif %}
   </span></h3>
   <div class="main-gallery search-gallery">
     <div class="loading"></div>

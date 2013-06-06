@@ -33,9 +33,7 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
 
     // Controllers
     var Controllers = require('./controllers').call(app, app);
-    process.nextTick(function () {
-        require('./routes').call(app, Controllers, app);
-    });
+    process.nextTick(require('./routes').bind(app, Controllers, app));
 
     return paths;
 };

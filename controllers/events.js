@@ -1,5 +1,5 @@
-module.exports = function (app) {
-    setupMiddleware(app);
+module.exports = function (app, initMiddleware) {
+    initMiddleware('events', 'event');
 
     var Event = app.models.Event,
         markdown = require('markdown').markdown;
@@ -100,51 +100,3 @@ module.exports = function (app) {
         }
     };
 };
-function setupMiddleware(app) {
-    var app_name   = 'events',
-        model_name = 'event';
-
-    app.use('/'+app_name, function (req, res, next) {
-        // Optional Content-Type override via 'format' query-parameter.
-        var format = res.format.bind(res);
-        res.format = function(fmts)
-        {
-            var fmt = req.param('format');
-            return (fmt && fmts[fmt]) ? fmts[fmt]() : format(fmts);
-        };
-        res.reply = function(code, msg, obj)
-        {
-            if (!obj && typeof msg !== "string") {  // handle 2-arg case
-                obj = msg;
-                delete msg;
-            }
-            if (typeof code === "string") { // code is actually a view-name
-                var page = code;
-                obj = obj || {};
-                obj.page = app_name;  // legacy naming from Webmaker layout
-                obj.view = page;
-                // TODO: move into main app's middleware
-                res.locals({
-                    makeEndpoint : process.env.MAKE_ENDPOINT,
-                    personaSSO   : process.env.AUDIENCE,
-                    loginAPI     : process.env.LOGIN,
-                    email        : req.session.email || '',
-                    webmakerID   : req.session.webmakerid || ''
-                });
-                return res.render(app_name+'/'+page+'.html', obj);
-            }
-            var isError = code >= 400;
-            res.format({
-                json: function () {
-                    if (!obj) obj = isError ? { error: msg } : { msg: msg };
-                    res.send(code, obj);
-                },
-                html: function () {
-                    var id = obj && obj[model_name] && obj[model_name].id;
-                    res.redirect('/'+app_name + id ? '/'+id : '');
-                },
-            });
-        };
-        next();
-    });
-}

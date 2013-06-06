@@ -261,9 +261,9 @@ a {
     line-height: @_size;
   }
   .fork-btn {
-      color: #FFF;
-      background: @green;
-      border: 1px solid darken(@green, 5%);
+    color: #FFF;
+    background: @green;
+    border: 1px solid darken(@green, 5%);
     &:hover {
       background: lighten(@green, 20%);
     }
@@ -273,7 +273,7 @@ a {
     background: @lightgrey;
     color: @grey;
     border: 1px solid darken(@lightgrey, 5%);
-     &:hover {
+    &:hover {
       background: lighten(@lightgrey, 10%);
     }
   }
@@ -449,5 +449,72 @@ a {
   }
   .make.large {
     .height( 3 );
+  }
+}
+
+/*********************************************************
+ * PARTY
+ */
+
+.party-banner {
+  height: 496px;
+  min-height: auto;
+  margin-bottom: 30px;
+  .border-top-radius(25px);
+  border-radius: 50px;
+}
+
+.party-partners {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.party-up-to-date {
+  width: 230px;
+  height: 200px;
+  background-color: @blue;
+  position: relative;
+  ul {
+    list-style: none;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    li {
+      line-height: 45px;
+      a {
+        font-family: 'Open Sans Light';
+        font-size: 20px;
+        color: #FFF;
+      }
+    }
+  }
+}
+
+#party {
+  h1, h2{
+    color: @blue;
+  }
+  #content {
+    a {
+      text-decoration: underline;
+    }
+    .download {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.makers-making {
+  width: 500px;
+}
+
+.maker-party-logo {
+  width: 160px;
+
+  img {
+    width: auto;
   }
 }

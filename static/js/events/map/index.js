@@ -131,7 +131,7 @@ function ($, google, MapMaker, EventForms) {
                     google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN ]
             },
 
-            zoomControl: false,
+            zoomControl: true,
             zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.LARGE
             }

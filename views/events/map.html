@@ -19,7 +19,7 @@
       <h2 class='formExpandButton'><span class="icon-plus"></span> Add an event</h2>
     </div>
 
-    <form id="create-event" action="/events" method="POST" class='toggleHidden'>
+    <form id="create-event" action="/events" method="POST" class='hidden'>
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
             <label for="title"> Name your event </label>
@@ -44,24 +44,44 @@
             </select><br />
 
             <label for="address"> Event location </label>
-            <input name="address" type="text" /><br />
+            <span class="ui-append ui-select">
+                <input name="address" type="text" />
+            </span><br />
             <input name="latitude" type="hidden" />
             <input name="longitude" type="hidden" />
 
             <label for="registerLink"> Event Link </label>
-            <input name="registerLink" type="url"
-                placeholder="Link to registration page" /><br />
+            <span class="ui-append ui-select">
+                <input name="registerLink" type="url"
+                    placeholder="Link to registration page" />
+            </span><br />
 
             <label for="beginDate"> Event begins </label>
             <div class='datetime'>
-                <input name="beginDate" type="date" />
-                <input name="beginTime" type="time" />
+                <span class="ui-append ui-select">
+                    <span class="icon-calendar"></span>
+                    <input name="beginDate" type="text" class="datepicker"
+                        placeholder="--/--/--" />
+                    <a class="icon icon-chevron-down"></a>
+                </span>
+                <span class="ui-append ui-select">
+                    <input name="beginTime" type="text" class="timespinner"
+                            placeholder="--:--  --" />
+                </span>
             </div><br />
 
             <label for="endDate"> Event ends </label>
             <div class='datetime'>
-                <input name="endDate" type="date" />
-                <input name="endTime" type="time" />
+                <span class="ui-append ui-select">
+                    <span class="icon-calendar"></span>
+                    <input name="endDate" type="text" class="datepicker"
+                            placeholder="--/--/--" />
+                    <a class="icon icon-chevron-down"></a>
+                </span>
+                <span class="ui-append ui-select">
+                    <input name="endTime" type="text" class="timespinner"
+                            placeholder="--:--  --" />
+                </span>
             </div><br />
 
             <div class="upload">

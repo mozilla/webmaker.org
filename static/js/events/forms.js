@@ -1,5 +1,5 @@
-define(['jquery', 'model'],
-function ($, EventModel) { return function (mapMaker) {
+define(['jquery', 'model', '../base/ui', 'globalize', 'jquery-ui', 'jquery.mousewheel'],
+function ($, EventModel, UI, Globalize) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {
         var create_form = $('form#create-event');
@@ -107,8 +107,8 @@ function ($, EventModel) { return function (mapMaker) {
             upload_div.find('> img').attr('src', '');
             upload_div.text(upload_div._prev_text);
 
-            create_form.toggleClass('toggleHidden');
-            $("#add-event-button").toggleClass('toggleHidden');
+            create_form.toggleClass('hidden');
+            $("#add-event-button").toggleClass('hidden');
         }
         $("h2.formExpandButton").click(function(ev) {
             ev.preventDefault();
@@ -132,9 +132,32 @@ function ($, EventModel) { return function (mapMaker) {
                 }
             }
         });
-        EventModel.all(function (models) {
-            mapMaker.dropPins(models);
+        EventModel.all(function (models) { mapMaker.dropPins(models); });
+
+        $('.datepicker').datepicker().each(function(i, elem) {
+            $(elem).next('a.icon').click(function () { $(elem).focus();});
         });
+        $.widget('ui.timespinner', $.ui.spinner, {
+            options: { step: 60 * 1000, // seconds
+                       page: 60 },      // hours
+            _parse: function( value ) {
+                if (typeof value === 'string') {
+                    // already a timestamp
+                    if (Number(value) == value)
+                        return Number( value );
+                    return +Globalize.parseDate(value);
+                }
+                return value;
+            },
+            _format: function(value) {
+                return Globalize.format(new Date(value), 't');
+            }
+        });
+        $('.timespinner').timespinner();
+
+        UI.select('select[name="attendees"]');
+
         window.scroll();
+        toggleCreateForm();
     });
 }})

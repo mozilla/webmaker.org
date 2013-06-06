@@ -1,4 +1,13 @@
-define(['jquery', 'google', 'map_maker', 'event_forms'],
+require.config({
+    paths: {
+        'oms':          '/ext/js/oms',
+        'infobubble':   '/ext/js/infobubble',
+
+        'google':           'map/google',
+        'markerclusterer':  'map/markerclusterer',
+    },
+});
+define(['jquery', 'google', 'map/map_maker', 'forms'],
 function ($, google, MapMaker, EventForms) {
 
     var defaultZoom = 13;

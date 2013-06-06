@@ -1,4 +1,4 @@
-define(['jquery', 'event_model'],
+define(['jquery', 'model'],
 function ($, EventModel) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {

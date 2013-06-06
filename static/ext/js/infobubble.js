@@ -27,7 +27,6 @@
  */
 
 
-define('infobubble', ['google'], function () {
 /**
  * A CSS3 InfoBubble v0.8
  * @param {Object.<string, *>=} opt_options Optional properties to set.
@@ -1780,5 +1779,3 @@ InfoBubble.prototype.positionCloseButton_ = function() {
   this.close_.style['right'] = this.px(right);
   this.close_.style['top'] = this.px(top);
 };
-    return InfoBubble;
-});

@@ -10,9 +10,6 @@ module.exports = function( make, makeEndpoint, personaSSO, loginAPI ){
       return require( "./search" )( make, makeEndpoint, personaSSO, loginAPI );
     },
     me: require("./me")( make, makeEndpoint, personaSSO, loginAPI ),
-    myprojects: function( req, res ) {
-      res.redirect("/me");
-    },
     remove: require( "./remove" )( make ),
     tag: function( req, res ) {
       res.redirect( "/search?type=tags&q=" + req.params.tag );

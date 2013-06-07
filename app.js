@@ -86,7 +86,7 @@ app.get( "/search", routes.search() );
 
 app.get( "/me", routes.me );
 // Old
-app.get( "/myprojects", routes.myprojects );
+app.get( "/myprojects", routes.me );
 app.post( "/remove", routes.remove );
 
 app.get( "/t/:tag", routes.tag );

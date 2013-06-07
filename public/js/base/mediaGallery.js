@@ -141,7 +141,7 @@ define(['jquery', 'moment'],
         });
         break;
       case 'index':
-        if ( $('meta[name="persona-email"]').prop('content') ) {
+        if ( $('meta[name="persona-email"]').prop('content') === '' ) {
           var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
           var $h1 = $('<h1>The web is still wild. Build it.</h1>');
           var $h2 = $('<h2>Claim your Webmaker domain:</h2>');

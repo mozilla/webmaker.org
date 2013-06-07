@@ -14,5 +14,6 @@
   , "sequelize": "latest"
   , "markdown": "latest"
   , "sqlite3": "2.1.7"
+  , "uuid": "latest"
   }
 }

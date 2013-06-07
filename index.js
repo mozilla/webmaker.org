@@ -1,12 +1,14 @@
 exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
-    var express = require('express'),
+    var express  = require('express'),
         nunjucks = require('nunjucks'),
-        here = __dirname,
+        util  = require('./util'),
+        here  = __dirname,
         paths = {
             views:  here+'/views',
             static: here+'/static',
-            less:   here+'/assets',
-        };
+            assets: here+'/assets',
+            root:   here,
+        }, ctx = { dirs: paths, app: app };
 
     // Views
     nunjucksEnv.loaders.push(new nunjucks.FileSystemLoader(paths.views));
@@ -15,7 +17,7 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     var optimize = process.env.NODE_ENV === 'production';
     app.use(lessMiddleware({
         dest:     paths.static,
-        src:      paths.less,
+        src:      paths.assets,
         paths:    [ app_root+'/public/css' ],
 
         once: optimize, debug: !optimize,
@@ -27,13 +29,20 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     app.use(express.static(paths.static));
 
     // Models
-    var ORM = require('./config/orm').call(app, app);
-    require('./models').call(app, ORM, app);
-    ORM.sequelize.sync();
+    ctx.orm = require('./config/orm').call(ctx, app);
+    util.shortcut(ctx, 'models', ctx.orm);
+    require('./models').call(ctx, ctx.orm);
+
+    // S3 Client
+    ctx.s3 = require('./config/s3').call(ctx, app);
 
     // Controllers
-    var Controllers = require('./controllers').call(app, app);
-    process.nextTick(require('./routes').bind(app, Controllers, app));
+    ctx.controllers = require('./controllers').call(ctx, app);
+    process.nextTick(require('./routes').bind(ctx, ctx.controllers, app));
 
-    return paths;
+    // Handy shortcuts
+    util.shortcut(ctx, 'M', 'models');
+    util.shortcut(ctx, 'C', 'controllers');
+
+    return ctx;
 };

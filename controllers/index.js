@@ -1,11 +1,11 @@
 module.exports = function (app) {
     var cs = require("../util").loadSubmodules(__dirname);
     Object.keys(cs).map(function (c) {
-        cs[c] = cs[c].call(app, app, exports.initMiddleware.bind(app, app));
+        cs[c] = cs[c].call(this, exports.initMiddleware.bind(this, app));
         Object.keys(cs[c]).map(function (a) {
-            cs[c][a] = cs[c][a].bind(cs[c]);
-        });
-    });
+            cs[c][a] = cs[c][a].bind(this);
+        }, this);
+    }, this);
     return cs;
 };
 exports.initMiddleware = function(app, app_name, model_name)

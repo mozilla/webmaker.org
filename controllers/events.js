@@ -1,8 +1,16 @@
-module.exports = function (app, initMiddleware) {
-    initMiddleware('events', 'event');
+module.exports = function (init) {
+    init('events', 'event');
 
-    var Event = app.models.Event,
+    var Event = this.models.Event,
+        util  = require('../util'),
+        uuid  = require('uuid'),
+        fs    = require('fs'),
+        express  = require('express'),
         markdown = require('markdown').markdown;
+
+    // Limit upload filesize
+    //this.app.use('/events', express.limit('10M'));
+    var s3_client = this.s3.client;
 
     return {
         index:  function(req, res)
@@ -20,10 +28,10 @@ module.exports = function (app, initMiddleware) {
         },
         create: function(req, res)
         {
-            var event = req.body.event || req.body;
-            if (!event)
-                return res.reply(400, 'No Event provided');
-            ['begin', 'end'].map(function (f) {
+            var event = util.clone(req.body);
+
+            // pre-process the Date/Time fields
+            ['begin', 'end'].forEach(function (f) {
                 var df = f + 'Date';
                 event[df] = event[df] ? new Date(event[df].split('-')) : null;
                 if (event[df] == "Invalid Date")
@@ -35,13 +43,40 @@ module.exports = function (app, initMiddleware) {
                 if (event[tf] == "Invalid Date")
                     event[tf] = null;
             });
-            ['registerLink', 'picture'].forEach(function (f) {
+            // set blank as null
+            ['registerLink'].forEach(function (f) {
                 if (!event[f]) event[f] = null;
             });
+            event.picture = null;
+
             if (!(event.organizer = req.session.email))
                 return res.reply(401, 'Log in to create Events');
             event.organizerId = req.session.webmakerID;
+
             Event.create(event).success(function (event) {
+                if (req.files && req.files.picture
+                              && req.files.picture.size > 0) {
+                    var picture = req.files.picture;
+                    fs.readFile(picture.path, function(err, data) {
+                        if (err) {
+                            return res.reply(500, 'Could not read uploaded file.', { error: err });
+                        } else {
+                            var s3_req = s3_client.put(uuid.v4(), {
+                                'Content-Length':   data.length,
+                                'Content-Type':     picture.type,
+                                'x-amz-acl':        'public-read'
+                            });
+                            s3_req.on('response', function(s3_res) {
+                                if (s3_res.statusCode === 200) {
+                                    console.log(s3_req.url);
+                                    event.url = s3_req.url;
+                                    event.save();
+                                }
+                            });
+                            s3_req.end(data);
+                        }
+                    });
+                }
                 res.reply(200, 'Event created', { event: event });
             }).error(function (err) {
                 res.reply(400, 'Invalid Event provided', { error: err });

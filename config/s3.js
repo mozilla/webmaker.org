@@ -1,11 +1,20 @@
 var S3_FIELDS = ['key', 'secret', 'bucket', 'prefix'];
-module.exports = function (app) {
-    var noxmox = require("noxmox");
+module.exports = function () {
+    var noxmox = require('noxmox'),
+        util = require('../util');
 
     /* Load S3 Configuration */
-    var s3_conf = require('../util').getEnvConf(S3_FIELDS, { prefix: 'S3_' });
-    if (!s3_conf) throw new Error("S3 configuration not found.");
+    var s3_conf = util.getEnvConf(S3_FIELDS, { prefix: 'S3_' }),
+        s3_mode = this.app.get('env') === 'production' ? 'nox' : 'mox';
 
-    return noxmox[app.get('env') === 'production' ? 'nox' : 'mox'].createClient({
-    });
+    if (!util.hasFields(s3_conf, ['key', 'secret']))
+        throw new Error("Missing or incomplete S3 configuration.");
+
+    s3_conf.prefix = s3_conf.prefix || __dirname+'/../static/uploads';
+    s3_conf.bucket = s3_conf.bucket || 'events.webmaker.org';
+
+    return {
+        mode: s3_mode, conf: s3_conf,
+        client: noxmox[s3_mode].createClient(s3_conf)
+    };
 };

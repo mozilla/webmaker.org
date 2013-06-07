@@ -1,4 +1,4 @@
-define(['jquery', 'model', 'jquery.form'],
+define(['jquery', 'model', 'jquery.form', 'bootstrap-markdown'],
 function ($, EventModel) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {
@@ -41,16 +41,20 @@ function ($, EventModel) { return function (mapMaker) {
             }
         }
 
+        create_form.find('button[type="submit"]').click(function (ev) {
+            ev.preventDefault();
+            create_form.submit();
+        });
         create_form.ajaxForm({
-            clearForm: true,
             dataType: 'json',
+            clearForm: true,
             success: function (data) {
-                console.log(data.event);
+                console.log(data);
                 if (data.event) {
                     toggleCreateForm();
                     mapMaker.addMarker(new EventModel(data.event));
                 }
-            }
+            },
         });
 
         find_form.find('button[type="submit"]').click(function (ev) {

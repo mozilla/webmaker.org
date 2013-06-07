@@ -1,6 +1,10 @@
 {% extends "events/layout.html" %}
 
 {% block title %}Event Map{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="/ext/css/bootstrap-markdown.css">
+{% endblock %}
 
 {% block body %}
 
@@ -9,9 +13,9 @@
 
     <form id="find-event" action="/events" method="GET">
         <h2><span class="icon-search"></span> Find an event</h2>
+        <input name="_csrf" type="hidden" value="{{ csrf_token }}" />
         <input name="find-where" type="text" placeholder="Where?" />
         <input name="find-when"  type="date" placeholder="When?" />
-        <input name="_csrf" type="hidden" value="{{ csrf_token }}" />
         <button type="submit"><span class="icon-chevron-right"></span></button>
     </form>
 
@@ -23,16 +27,16 @@
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
             <label for="title"> Name your event </label>
-            <textarea name="title" rows=3 cols=40
-                placeholder="Use an awesome title so people will come!"></textarea><br />
+            <span class="cell"><input name="title"
+                placeholder="Use an awesome title so people will come!" /></span>
 
             <label for="description"> Describe your event </label>
-            <textarea name="description" rows=10 cols=40
+            <textarea name="description" data-provide="markdown"
                 placeholder="Tell people a few more details about your event. What can they expect?"></textarea><br />
         </fieldset>
         <fieldset>
             <label for="attendees"> How many attendees are you expecting? </label>
-            <select name="attendees">
+            <span class="cell"><select name="attendees">
                 <option value=0> 1-10 </option>
                 <option value=1> 10-20 </option>
                 <option value=2> 20-50 </option>
@@ -41,28 +45,29 @@
                 <option value=4> 100-200 </option>
                 <option value=5> 200-500 </option>
                 <option value=5> 500+ </option>
-            </select><br />
+            </select></span><br />
 
             <label for="address"> Event location </label>
-            <input name="address" type="text" /><br />
+            <span class="cell"><input name="address" type="text" /></span>
+
             <input name="latitude" type="hidden" />
             <input name="longitude" type="hidden" />
 
             <label for="registerLink"> Event Link </label>
-            <input name="registerLink" type="url"
-                placeholder="Link to registration page" /><br />
+            <span class="cell"><input name="registerLink" type="url"
+                placeholder="Link to registration page" /></span>
 
             <label for="beginDate"> Event begins </label>
-            <div class='datetime'>
+            <span class="datetime cell">
                 <input name="beginDate" type="date" />
                 <input name="beginTime" type="time" />
-            </div><br />
+            </span>
 
             <label for="endDate"> Event ends </label>
-            <div class='datetime'>
+            <span class="datetime cell">
                 <input name="endDate" type="date" />
                 <input name="endTime" type="time" />
-            </div><br />
+            </span>
 
             <div class="upload">
                 <input name="picture" type="file" accept="image/*" />

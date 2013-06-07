@@ -2,14 +2,9 @@ require.config({
     paths: {
         'oms':          '/ext/js/oms',
         'infobubble':   '/ext/js/infobubble',
-        'jquery.form':  '/ext/js/jquery.form',
-
         'google':           'map/google',
         'markerclusterer':  'map/markerclusterer',
-    },
-    shim: {
-        'jquery.form':  ['jquery'],
-    },
+    }
 });
 define(['jquery', 'google', 'map/map_maker', 'forms'],
 function ($, google, MapMaker, EventForms) {

@@ -2,10 +2,9 @@ require.config({
     paths: {
         'oms':          '/ext/js/oms',
         'infobubble':   '/ext/js/infobubble',
-
         'google':           'map/google',
         'markerclusterer':  'map/markerclusterer',
-    },
+    }
 });
 define(['jquery', 'google', 'map/map_maker', 'forms'],
 function ($, google, MapMaker, EventForms) {
@@ -131,7 +130,7 @@ function ($, google, MapMaker, EventForms) {
                     google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN ]
             },
 
-            zoomControl: false,
+            zoomControl: true,
             zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.LARGE
             }

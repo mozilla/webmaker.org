@@ -23,7 +23,7 @@
         <h2 class='formExpandButton'><span class="icon-plus"></span> Add an event</h2>
     </div>
 
-    <form id="create-event" action="/events" method="POST" class='hidden'>
+    <form id="create-event" action="/events" method="POST" enctype="multipart/form-data" class='hidden'>
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
             <label for="title"> Name your event </label>
@@ -51,13 +51,15 @@
             <span class="cell">
                 <input name="address" type="text" />
             </span>
+
             <input name="latitude" type="hidden" />
             <input name="longitude" type="hidden" />
 
             <label for="registerLink"> Event Link </label>
             <span class="cell">
                 <input name="registerLink" type="url"
-                        placeholder="Link to registration page" /></span>
+                        placeholder="Link to registration page" />
+            </span>
 
             {% for i in ['begin','end'] %}
             <label for="{{i}}Date"> Event {{i}}s </label>
@@ -76,8 +78,7 @@
             {% endfor %}
 
             <div class="upload">
-                <input type="file" accept="image/*" />
-                <input name="picture" type="hidden" />
+                <input name="picture" type="file" accept="image/*" />
                 <div id="image-upload">Upload an image</div>
             </div>
             <input name="_csrf" type="hidden" value="{{ csrf_token }}" />

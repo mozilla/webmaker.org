@@ -30,6 +30,13 @@ module.exports = function (Model, Types) {
         picture:                            Types.URL,
         organizer:                          Types.Email,
         organizerId:                        Types.String,
+
+        $validate: {
+            coordinates: function() {
+                if (!!this.latitude ^ !this.longitude)
+                    return false;
+            },
+        },
     }, function (M) {
         this.hasMany( M.Gallery, { as: 'Galleries' } );
         this.hasMany( M.Make,    { as: 'Makes'     } );

@@ -6,5 +6,6 @@ module.exports = function (ORM) {
     Object.keys(ORM.models).forEach(function (m) {
         ORM.models[m].init();
     });
+    ORM.sequelize.sync().error(console.error);
     return models;
 };

@@ -1,14 +1,33 @@
+var DB_FIELDS = ['dialect', 'host', 'port', 'database', 'username', 'password', 'storage'];
 module.exports = function () {
-    var Sequelize = require('sequelize'), db;
+    var Sequelize = require('sequelize'),
+        util = require('../util');
 
     /* Load Database Configuration */
-    try { db = require('./databases')[this.get('env')]; } catch (e) {}
-    if (!db) db = this.get('database');
-    if (!db) throw new Error("Database configuration not found.");
+    var db = util.getEnvConf(DB_FIELDS, { prefix: 'DB_' });
+
+    // use sqlite by defaults if no dialect is specified
+    db.dialect = db.dialect || 'sqlite';
+    switch (db.dialect) {
+    case 'sqlite':
+        db.storage = db.storage || 'app.db';
+        break;
+    case 'mysql':
+        if (!util.hasFields(db, ['host', 'port', 'database', 'username', 'password']))
+            throw new Error("Missing or incomplete MySQL database configuration.");
+        break;
+    }
 
     /* Connect to Database Server */
     var Model; Model = function(name, fields, init) {
-        var model = Model.models[name] = Model.sequelize.define(name, fields);
+        var config = {};
+        Object.keys(fields)
+            .filter(function (f) { return f.match(/^\$/); })
+            .forEach(function (f) {
+                config[f.replace(/^\$/, '')] = fields[f];
+                delete fields[f];
+            });
+        var model = Model.models[name] = Model.sequelize.define(name, fields, config);
         init = init || function(){};
         model.init = function () {
             init.call(model, Model.models);
@@ -16,31 +35,35 @@ module.exports = function () {
         model.init.bind(model);
         return model;
     };
+    function make_types(typedefs) {
+        var types = {};
+        Object.keys(typedefs).forEach(function (t) {
+            var type = typedefs[t].type;
+            types[t] = util.autoconfig(typedefs[t])({ toString: type.toString.bind(type) });
+            util.defProp(types[t], 'type', { get: function () { return this.toString(); } });
+        });
+        return types;
+    }
+    Model.config = db;
     Model.sequelize = new Sequelize(db.database, db.username, db.password,
-                                    { host: db.host, port: db.port });
+                                    { host: db.host, port: db.port, dialect: db.dialect,
+                                      storage: db.storage });
     Model.models    = {};
-    Model.types     = extend(Object.create(Sequelize), {
-        String: Sequelize.STRING,
-        Text:   Sequelize.TEXT,
-        Float:  Sequelize.FLOAT,
-        Int:    Sequelize.INTEGER,
-        Date:   Sequelize.DATE,
-        URL: {
-            type: Sequelize.STRING,
-            validate: { isUrl: true },
-            allowNull: true,
+    Model.types     = make_types({
+        String: { type: Sequelize.STRING  },
+        Text:   { type: Sequelize.TEXT    },
+        Int:    { type: Sequelize.INTEGER },
+        Date:   { type: Sequelize.DATE    },
+        Float:  { type: Sequelize.FLOAT   },
+        URL:    {
+            type:       Sequelize.STRING,
+            validate:   { isUrl: true },
+            allowNull:  true
         },
-        Email: {
-            type: Sequelize.STRING,
-            validate: { isEmail: true }
-        }
+        Email:  {
+            type:       Sequelize.STRING,
+            validate:   { isEmail: true }
+        },
     });
-    Model.app  = this;
-    this.models = Model.models;
     return Model;
 };
-
-function extend(o, a) {
-    Object.keys(a).forEach(function (k) { o[k] = a[k]; });
-    return o;
-}

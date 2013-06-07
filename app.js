@@ -1,3 +1,7 @@
+if ( process.env.NEW_RELIC_HOME ) {
+  require( 'newrelic' );
+}
+
 var express = require( "express" ),
     habitat = require( "habitat" ),
     helmet = require( "helmet" ),

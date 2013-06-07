@@ -1,4 +1,4 @@
-define(['jquery', 'model', '../base/ui', 'globalize', 'jquery-ui', 'jquery.mousewheel'],
+define(['jquery', 'model', '../base/ui', 'globalize', 'jquery-ui', 'jquery.mousewheel', 'bootstrap-markdown'],
 function ($, EventModel, UI, Globalize) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {
@@ -110,7 +110,7 @@ function ($, EventModel, UI, Globalize) { return function (mapMaker) {
             create_form.toggleClass('hidden');
             $("#add-event-button").toggleClass('hidden');
         }
-        $("h2.formExpandButton").click(function(ev) {
+        $(".formExpandButton").click(function(ev) {
             ev.preventDefault();
             toggleCreateForm();
         });
@@ -135,7 +135,7 @@ function ($, EventModel, UI, Globalize) { return function (mapMaker) {
         EventModel.all(function (models) { mapMaker.dropPins(models); });
 
         $('.datepicker').datepicker().each(function(i, elem) {
-            $(elem).next('a.icon').click(function () { $(elem).focus();});
+            $(elem).next('.icon').click(function () { $(elem).focus();});
         });
         $.widget('ui.timespinner', $.ui.spinner, {
             options: { step: 60 * 1000, // seconds
@@ -157,7 +157,6 @@ function ($, EventModel, UI, Globalize) { return function (mapMaker) {
 
         UI.select('select[name="attendees"]');
 
-        window.scroll();
-        toggleCreateForm();
+        window.scroll(0,0);
     });
 }})

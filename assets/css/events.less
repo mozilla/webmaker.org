@@ -5,23 +5,25 @@
 @import "marker_info_window";
 
 body#events {
+    * { box-sizing: border-box; }
     main {
         margin-bottom: 0px;
     }
     footer,.make-footer {
         margin-top: 0px;
     }
-    .clear { clear: both; }
 }
 
+.clear { clear: both; }
+.hidden { display: none; }
 .clickable {
-  cursor: pointer; cursor: hand;
-  text-decoration: none;
+    cursor: pointer; cursor: hand;
+    text-decoration: none;
 
-  &:hover {
-      text-shadow: #bbb 0px 0px 1px;
-  }
-  .disable-selection;
+    &:hover {
+        text-shadow: #ccc 0px 0px 1px;
+    }
+    .disable-selection;
 }
 .disable-selection {
   -webkit-touch-callout: none;

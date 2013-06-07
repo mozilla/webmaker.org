@@ -85,6 +85,8 @@ app.get( "/tools", routes.page( "tools" ) );
 app.get( "/search", routes.search() );
 
 app.get( "/me", routes.me );
+// Old
+app.get( "/myprojects", routes.myprojects );
 app.post( "/remove", routes.remove );
 
 app.get( "/t/:tag", routes.tag );
@@ -93,7 +95,6 @@ app.get( "/u/:user", routes.user );
 app.get( "/template", routes.page( "template" ) );
 
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
-app.get( "/myprojects", routes.myprojects() );
 
 
 /**

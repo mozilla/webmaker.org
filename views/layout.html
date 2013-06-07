@@ -14,6 +14,7 @@
 </head>
 <body id="{{ page }}" {% if view %}class="{{ view }}"{% endif %} data-endpoint="{{ makeEndpoint }}">
 <div class="webmaker-outer-wrapper">
+  {% block header %}
   <header id="webmaker-nav">
     <nav class="webmaker-nav-container">
       <div class="user-nav-container">
@@ -58,7 +59,7 @@
       <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
     </nav>
   </header>
-
+  {% endblock %}
   <div id="midbar">{% block midbar %}{% endblock %}</div>
 
   <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>

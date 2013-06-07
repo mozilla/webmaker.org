@@ -10,24 +10,22 @@ module.exports = function( make, makeEndpoint, personaSSO, loginAPI ){
       return require( "./search" )( make, makeEndpoint, personaSSO, loginAPI );
     },
     me: require("./me")( make, makeEndpoint, personaSSO, loginAPI ),
+    myprojects: function( req, res ) {
+      res.redirect("/me");
+    },
+    remove: require( "./remove" )( make ),
     tag: function( req, res ) {
       res.redirect( "/search?type=tags&q=" + req.params.tag );
     },
     user: function( req, res ) {
       res.redirect( "/search?type=user&q=" + req.params.user );
     },
-    remove: require( "./remove" )( make ),
     includejs: function( hostname ) {
       return function( req, res ) {
         res.set( "Content-Type", "application/javascript;charset=utf-8" );
         res.render( "sso/include.js", {
           HOSTNAME: hostname
         });
-      };
-    },
-    myprojects: function() {
-      return function( req, res ) {
-        res.render( "myprojects.html", { app: "thimble", makeEndpoint: makeEndpoint } );
       };
     }
   };

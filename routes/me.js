@@ -24,6 +24,7 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
 
         res.render( "me.html", {
           page: "me",
+          view: req.query.app || "webmaker",
           makes: data || [],
           pagination: page,
           makeEndpoint: makeURL,

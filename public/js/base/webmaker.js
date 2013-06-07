@@ -92,6 +92,16 @@ define(['jquery', 'uri', 'base/ui'],
     });
   };
 
+  setup.me = function() {
+    var $body = $( "body" );
+    if ( $body.hasClass( "thimble" ) || $body.hasClass( "popcorn" ) ) {
+      var $makes = $( ".make" ),
+          baseWidth = $makes.width(),
+          gutter = $( ".gutter-sizer" ).width();
+      $( ".webmaker-outer-wrapper" ).css( "width", ( baseWidth + gutter ) * $makes.length + gutter );
+    }
+  };
+
   setup.page = function( page ) {
     if ( setup[ page ] ) {
       setup[ page ]();

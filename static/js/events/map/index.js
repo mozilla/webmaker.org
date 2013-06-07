@@ -7,7 +7,7 @@ require.config({
         'markerclusterer':  'map/markerclusterer',
     },
 });
-define(['jquery', 'google', 'map/map_maker', 'forms'],
+define(['jquery', 'google', 'map/map_maker', 'map/forms'],
 function ($, google, MapMaker, EventForms) {
 
     var defaultZoom = 13;

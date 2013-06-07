@@ -1,4 +1,4 @@
-define(['jquery', 'model'],
+define(['jquery', 'model', 'bootstrap-markdown'],
 function ($, EventModel) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {

@@ -19,7 +19,7 @@
       <h2 class='formExpandButton'><span class="icon-plus"></span> Add an event</h2>
     </div>
 
-    <form id="create-event" action="/events" method="POST" class='toggleHidden'>
+    <form id="create-event" action="/events" method="POST" enctype="multipart/form-data" class='toggleHidden'>
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
             <label for="title"> Name your event </label>
@@ -65,8 +65,7 @@
             </div><br />
 
             <div class="upload">
-                <input type="file" accept="image/*" />
-                <input name="picture" type="hidden" />
+                <input name="picture" type="file" accept="image/*" />
                 <div id="image-upload">Upload an image</div>
             </div>
             <input name="_csrf" type="hidden" value="{{ csrf_token }}" />

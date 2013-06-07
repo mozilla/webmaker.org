@@ -1,4 +1,4 @@
-define(['jquery', 'model'],
+define(['jquery', 'model', 'jquery.form'],
 function ($, EventModel) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {
@@ -41,32 +41,16 @@ function ($, EventModel) { return function (mapMaker) {
             }
         }
 
-        create_form.find('button[type="submit"]').click(function (ev) {
-            ev.preventDefault();
-            create_form.submit();
-        });
-        create_form.on("submit", function(ev) {
-            ev.preventDefault();
-            var form_fields = create_form.serializeArray();
-            var data = { event: {} };
-            form_fields.forEach(function (f) {
-                if (f.name) switch (f.name) {
-                    case '_csrf':
-                        data[f.name] = f.value;
-                        break;
-                    case 'address': // TODO: split address into two lines
-                    default:
-                        data.event[f.name] = f.value;
-                }
-            });
-            $.post(create_form.attr('action'), data, function (data) {
+        create_form.ajaxForm({
+            clearForm: true,
+            dataType: 'json',
+            success: function (data) {
                 console.log(data.event);
                 if (data.event) {
                     toggleCreateForm();
                     mapMaker.addMarker(new EventModel(data.event));
                 }
-            }, 'json');
-            return false;
+            }
         });
 
         find_form.find('button[type="submit"]').click(function (ev) {

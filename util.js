@@ -19,5 +19,12 @@ module.exports = {
         }).replace(/\w+/g, function (m, m1) {
             return m.charAt(0).toUpperCase() + m.substr(1);
         });
+    },
+    getEnvConf: function (fields, opts) {
+        var prefix = opts.prefix || '', conf = {};
+        return !fields.every(function (f) {
+            db[f] = process.env[(prefix + f).toUpperCase()];
+            return db[f] !== undefined;
+        }) ? null : conf;
     }
 }

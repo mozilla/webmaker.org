@@ -22,7 +22,7 @@ module.exports = function () {
     var Model; Model = function(name, fields, init) {
         var config = {};
         Object.keys(fields)
-            .filter(function (f) { return f.match(/^\$/); })
+            .filter(function (f) { return f.match(/^\$/) })
             .forEach(function (f) {
                 config[f.replace(/^\$/, '')] = fields[f];
                 delete fields[f];
@@ -40,7 +40,7 @@ module.exports = function () {
         Object.keys(typedefs).forEach(function (t) {
             var type = typedefs[t].type;
             types[t] = util.autoconfig(typedefs[t])({ toString: type.toString.bind(type) });
-            util.defProp(types[t], 'type', { get: function () { return this.toString(); } });
+            util.defProp(types[t], 'type', { get: function () { return this.toString() } });
         });
         return types;
     }

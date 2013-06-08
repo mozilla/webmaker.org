@@ -21,7 +21,7 @@ module.exports = {
         });
     },
     hasFields: function (o, fields) {
-        return o && fields.every(function (f) { return o[f] !== undefined; });
+        return o && fields.every(function (f) { return o[f] !== undefined });
     },
     getEnvConf: function (fields, opts) {
         var prefix = opts.prefix || '', conf = {};
@@ -48,7 +48,7 @@ module.exports = {
             other = obj;
         }
         other_key = other_key || key;
-        Object.defineProperty(obj, key, { get: function() { return other[key]; }});
+        Object.defineProperty(obj, key, { get: function() { return other[key] }});
     },
     autoconfig: function (defs) {
         var extend     = this.extend.bind(this),

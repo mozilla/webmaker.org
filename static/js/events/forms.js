@@ -1,15 +1,15 @@
-define(['jquery', 'model', '../base/ui', 'jquery-ui', 'bootstrap-markdown', 'jquery.form', 'jquery.timepicker'],
+define(['jquery', 'model', '../base/ui', 'bootstrap-markdown', 'jquery.form', 'jquery.timepicker', 'jquery-ui.datepicker'],
 function ($, EventModel, UI) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {
-        var $create_form = $('form#create-event');
-        var $find_form = $('form#find-event');
+        var $createForm = $('form#create-event');
+        var $findForm   = $('form#find-event');
 
-        var $file_input = $create_form.find('input[type="file"]');
-        var $upload_div = $create_form.find('#image-upload');
-        $upload_div.on("click", function(ev) {
+        var $fileInput = $createForm.find('input[type="file"]');
+        var $uploadDiv = $createForm.find('#image-upload');
+        $uploadDiv.on("click", function(ev) {
             ev.preventDefault();
-            $file_input.click();
+            $fileInput.click();
         }).on("dragenter dragover drop", function(ev) {
             ev.preventDefault();
             ev.stopPropagation();
@@ -18,16 +18,16 @@ function ($, EventModel, UI) { return function (mapMaker) {
             ev.stopPropagation();
             handleImg(ev.dataTransfer.files[0]);
         });
-        $file_input.on("change", function (ev) {
+        $fileInput.on("change", function (ev) {
             handleImg(this.files[0]);
         });
         // based on MDN example
         function handleImg(file) {
             if (file.type.match(/image.*/)) {
-                if (!$upload_div._prev_text)
-                    $upload_div._prev_text = $upload_div.text();
-                $upload_div.html("<img />");
-                var img = $upload_div.find("img")[0];
+                if (!$uploadDiv._prev_text)
+                    $uploadDiv._prev_text = $uploadDiv.text();
+                $uploadDiv.html("<img />");
+                var img = $uploadDiv.find("img")[0];
                 img.file = file;
 
                 var reader = new FileReader();
@@ -41,13 +41,13 @@ function ($, EventModel, UI) { return function (mapMaker) {
             }
         }
 
-        $create_form.find('button[type="submit"]').click(function (ev) {
+        $createForm.find('button[type="submit"]').click(function (ev) {
             ev.preventDefault();
-            $create_form.submit();
+            $createForm.submit();
         });
-        $create_form.on("submit", function(ev) {
+        $createForm.on("submit", function(ev) {
             ev.preventDefault();
-            var form_fields = $create_form.serializeArray();
+            var form_fields = $createForm.serializeArray();
             var data = { event: {} };
             form_fields.forEach(function (f) {
                 if (f.name) switch (f.name) {
@@ -59,7 +59,7 @@ function ($, EventModel, UI) { return function (mapMaker) {
                         data.event[f.name] = f.value;
                 }
             });
-            $.post($create_form.attr('action'), data, function (data) {
+            $.post($createForm.attr('action'), data, function (data) {
                 console.log(data.event);
                 if (data.event) {
                     toggleCreateForm();
@@ -69,18 +69,18 @@ function ($, EventModel, UI) { return function (mapMaker) {
             return false;
         });
 
-        $find_form.find('button[type="submit"]').click(function (ev) {
+        $findForm.find('button[type="submit"]').click(function (ev) {
             ev.preventDefault();
-            $find_form.submit();
+            $findForm.submit();
         });
-        var find_when = $find_form.find('input[name="find-when"]');
-        find_when.blur(function(ev) { $find_form.submit() });
+        var $when = $findForm.find('input[name="find-when"]');
+        $when.blur(function(ev) { $findForm.submit() });
         mmm = mapMaker;
-        $find_form.on("submit", function(ev) {
+        $findForm.on("submit", function(ev) {
             ev.preventDefault();
             EventModel.all(function (models) {
                 mapMaker.clearMarkers();
-                var targetDateStr = find_when[0].value;
+                var targetDateStr = $when[0].value;
                 if (!targetDateStr)
                     mapMaker.dropPins(models, false);
                 else {
@@ -105,13 +105,13 @@ function ($, EventModel, UI) { return function (mapMaker) {
         // setup form toggle button
         function toggleCreateForm() {
             var $select = $('select[name="attendees"]');
-            $create_form[0].reset();
+            $createForm[0].reset();
             $select.next('.ui-select').remove();
             UI.select($select);
-            $upload_div.find('> img').attr('src', '');
-            $upload_div.text($upload_div._prev_text);
+            $uploadDiv.find('> img').attr('src', '');
+            $uploadDiv.text($uploadDiv._prev_text);
 
-            $create_form.toggleClass('hidden');
+            $createForm.toggleClass('hidden');
             $("#add-event-button").toggleClass('hidden');
         }
         $(".formExpandButton").click(function(ev) {
@@ -137,8 +137,8 @@ function ($, EventModel, UI) { return function (mapMaker) {
             }
         });
 
-        $('.datepicker').datepicker().each(function(i, elem) {
-            $(elem).next('.icon').click(function () { $(elem).focus();});
+        $createForm.find('.datepicker').datepicker().each(function(i, elem) {
+            $(elem).next('.icon').click(function () { $(elem).focus() });
         });
         var $beginTime = $('[name="beginTime"]'),
             $endTime   = $('[name="endTime"]');
@@ -149,14 +149,14 @@ function ($, EventModel, UI) { return function (mapMaker) {
                 .css('left', '0px');
         });
         $beginTime.timepicker({
-            appendTo: function (elem) { return $(elem).parent(); }
+            appendTo: function (elem) { return $(elem).parent() }
         });
         $endTime.timepicker({
-            appendTo: function (elem) { return $(elem).parent(); },
+            appendTo: function (elem) { return $(elem).parent() },
             showDuration: true
         });
 
-        EventModel.all(function (models) { mapMaker.dropPins(models); });
+        EventModel.all(function (models) { mapMaker.dropPins(models) });
 
         window.scroll(0,0);
     });

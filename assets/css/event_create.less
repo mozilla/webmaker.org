@@ -3,7 +3,7 @@
 body#events .overlay-container {
     position:  relative;
     margin:    0px auto;
-    max-width: 1200px;
+    max-width: 1080px;
 }
 body#events .map-overlay {
     position:  absolute;
@@ -53,7 +53,6 @@ body#events .map-overlay {
         .redButton;
     }
 
-
     .cell {
         display: block;
         overflow: hidden;
@@ -63,19 +62,23 @@ body#events .map-overlay {
     }
     .ui-select {
         box-sizing: content-box;
+        margin:     4px;
     }
     .datetime > *[class^="ui-"] {
-        margin: 4px;
 
+        input {
+            padding:    0px 10px;
+        }
         vertical-align: top;
 
         .icon-calendar {
             padding-right: 6px;
             vertical-align: middle;
         }
-        .ui-input {
+        &.select-time {
             padding: 0px;
             input {
+                .ui-small;
                 margin-left: 1em;
             }
         }
@@ -160,11 +163,11 @@ body#events .map-overlay {
             float:      left;
             clear:      left;
         }
-        label,.md-editor,input,select {
+        label,.md-editor,input {
             vertical-align: top;
             font-size:      13px;
         }
-        .md-editor,input,select {
+        .md-editor,input {
             background: white;
             outline:    0px;
             border:     0.5px solid #444;
@@ -202,9 +205,6 @@ body#events .map-overlay {
                     background:  #fafafa;
                 }
             }
-        }
-        input,select {
-            padding:    0px 10px;
         }
         input[name="title"] {
             min-width: 21em;
@@ -245,4 +245,9 @@ body#events .map-overlay {
             }
         }
     }
+}
+.ui-datepicker {
+    border:     1px solid #ddd;
+    margin-left: -34.5px;
+    margin-top:  11px;
 }

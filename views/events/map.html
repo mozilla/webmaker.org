@@ -3,6 +3,7 @@
 {% block title %}Event Map{% endblock %}
 {% block head %}
   {{ super() }}
+  <link rel="stylesheet" href="/ext/css/jquery-ui-1.10.3.custom.css" />
   <link rel="stylesheet" href="/ext/css/jquery.timepicker.css">
   <link rel="stylesheet" href="/ext/css/bootstrap-markdown.css">
 {% endblock %}
@@ -16,7 +17,7 @@
         <h2><span class="icon-search"></span> Find an event</h2>
         <input name="_csrf" type="hidden" value="{{ csrf_token }}" />
         <input name="find-where" type="text" placeholder="Where?" />
-        <input name="find-when"  type="date" placeholder="When?" />
+        <input name="find-when"  type="text" placeholder="When?" class="datepicker" />
         <button type="submit"><span class="icon-chevron-right"></span></button>
     </form>
 
@@ -28,7 +29,7 @@
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
             <label for="title"> Name your event </label>
-            <span class="cell"><input name="title"
+            <span class="cell ui-select ui-append"><input name="title"
                 placeholder="Use an awesome title so people will come!" /></span>
 
             <label for="description"> Describe your event </label>
@@ -49,7 +50,7 @@
             </select></div><br />
 
             <label for="address"> Event location </label>
-            <span class="cell ui-input ui-append">
+            <span class="cell ui-select ui-append">
                 <input name="address" type="text" />
             </span>
 
@@ -57,7 +58,7 @@
             <input name="longitude" type="hidden" />
 
             <label for="registerLink"> Event Link </label>
-            <span class="cell ui-input ui-append">
+            <span class="cell ui-select ui-append">
                 <input name="registerLink" type="url"
                         placeholder="Link to registration page" />
             </span>
@@ -65,15 +66,16 @@
             {% for i in ['begin','end'] %}
             <label for="{{i}}Date"> Event {{i}}s </label>
             <div class='datetime'>
-                <span class="ui-append ui-select">
+                <span class="ui-append ui-select select-date">
                     <span class="icon-calendar"></span>
                     <input name="{{i}}Date" type="text" class="datepicker"
                             placeholder="--/--/--" />
                     <a class="icon icon-chevron-down"></a>
                 </span>
-                <span class="ui-append ui-input">
+                <span class="ui-append ui-select select-time">
                     <input name="{{i}}Time" type="text" class="timepicker"
-                        placeholder="--:--  --" />
+                            placeholder="--:--  --" />
+                    <a class="icon icon-chevron-down"></a>
                 </span>
             </div>
             {% endfor %}

@@ -15,7 +15,7 @@ define(['jquery'], function ($) {
             o.fields.forEach(function (field) {
                 Model._fields[field] = {
                     get: function () { return this._data[field] },
-                    set: function (val) { this._data[field] = val; },
+                    set: function (val) { this._data[field] = val },
                 };
             }, this);
         } else {

@@ -29,7 +29,7 @@
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
             <label for="title"> Name your event </label>
-            <span class="cell ui-select ui-append"><input name="title"
+            <span class="cell ui-input ui-append"><input name="title"
                 placeholder="Use an awesome title so people will come!" /></span>
 
             <label for="description"> Describe your event </label>
@@ -50,7 +50,7 @@
             </select></div><br />
 
             <label for="address"> Event location </label>
-            <span class="cell ui-select ui-append">
+            <span class="cell ui-input ui-append">
                 <input name="address" type="text" />
             </span>
 
@@ -58,7 +58,7 @@
             <input name="longitude" type="hidden" />
 
             <label for="registerLink"> Event Link </label>
-            <span class="cell ui-select ui-append">
+            <span class="registerLink cell ui-input ui-append">
                 <input name="registerLink" type="url"
                         placeholder="Link to registration page" />
             </span>
@@ -72,6 +72,7 @@
                             placeholder="--/--/--" />
                     <a class="icon icon-chevron-down"></a>
                 </span>
+                <label class="switch"></label><br class="switch"/>
                 <span class="ui-append ui-select select-time">
                     <input name="{{i}}Time" type="text" class="timepicker"
                             placeholder="--:--  --" />

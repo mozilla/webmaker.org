@@ -140,14 +140,16 @@ function ($, EventModel, UI) { return function (mapMaker) {
         $createForm.find('.datepicker').datepicker().each(function(i, elem) {
             $(elem).next('.icon').click(function () { $(elem).focus() });
         });
-        var $beginTime = $('[name="beginTime"]'),
-            $endTime   = $('[name="endTime"]');
-        $('.timepicker').timepicker().on('showTimepicker', function () {
+        $createForm.find('.timepicker').timepicker().each(function(i, elem) {
+            $(elem).next('.icon').click(function () { $(elem).focus() });
+        }).on('showTimepicker', function () {
             var $parent = $(this).parent();
             $parent.find('.ui-timepicker-wrapper')
                 .css('width', $parent.css('width'))
                 .css('left', '0px');
         });
+        var $beginTime = $('[name="beginTime"]'),
+            $endTime   = $('[name="endTime"]');
         $beginTime.timepicker({
             appendTo: function (elem) { return $(elem).parent() }
         });

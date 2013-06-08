@@ -3,7 +3,7 @@
 body#events .overlay-container {
     position:  relative;
     margin:    0px auto;
-    max-width: 1080px;
+    max-width: 980px;
 }
 body#events .map-overlay {
     position:  absolute;
@@ -58,19 +58,20 @@ body#events .map-overlay {
         overflow: hidden;
     }
     .ui-select-menu {
-        z-index: 1;
+        z-index: 2;
     }
     .ui-select {
         box-sizing: content-box;
         margin:     4px;
     }
     .datetime > *[class^="ui-"] {
+        margin-left: 0px;
+
+        vertical-align: top;
 
         input {
             padding:    0px 10px;
         }
-        vertical-align: top;
-
         .icon-calendar {
             padding-right: 6px;
             vertical-align: middle;
@@ -82,13 +83,6 @@ body#events .map-overlay {
                 margin-left: 1em;
             }
         }
-    }
-
-    .ui-widget-content {
-        border: 0px;
-    }
-    .ui-corner-all {
-        border-radius: 0px;
     }
 
     form {
@@ -150,6 +144,9 @@ body#events .map-overlay {
             vertical-align: top;
         }
         @media (max-width: 1000px) {
+            .datetime .switch {
+                display: none;
+            }
             fieldset {
                 width:  100%;
                 padding-right: 30px;
@@ -164,7 +161,7 @@ body#events .map-overlay {
             clear:      left;
         }
         label,.md-editor,input {
-            vertical-align: top;
+            vertical-align: middle;
             font-size:      13px;
         }
         .md-editor,input {
@@ -178,11 +175,22 @@ body#events .map-overlay {
                 width:  100%;
             }
         }
+        :not(.datetime) .ui-select {
+            margin-left: 0px;
+        }
+        .registerLink { // hack
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
         .md-editor {
-            padding:    4px;
+            background:     #222;
+            margin-left:    -1px;
+            padding:        4px;
+            padding-top:    0px;
             clear: left;
 
             textarea {
+                height:  36ex;
                 padding: 8px 10px;
 
                 font-family: inherit;
@@ -194,15 +202,25 @@ body#events .map-overlay {
 
                 color:  #333;
             }
+            .md-header {
+                background: #222;
+            }
             .btn-group {
                 display: inline-block;
             }
             button {
                 .ui-btn;
                 .clickable;
+                background: inherit;
+                border:     0px;
+                border-radius:  1px;
+                padding:    4px 8px;
+
+                color: #eee;
                 &:hover {
-                    text-shadow: none;
                     background:  #fafafa;
+                    text-shadow: none;
+                    color: #222;
                 }
             }
         }

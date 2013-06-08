@@ -9,6 +9,7 @@ require.config({
         'jquery.form':  '/ext/js/jquery.form',
         'markdown':     '/ext/js/markdown',
         'to-markdown':  '/ext/js/to-markdown',
+        'jquery.timepicker':    '/ext/js/jquery.timepicker',
         'bootstrap-markdown':   '/ext/js/bootstrap-markdown',
     },
     shim: {

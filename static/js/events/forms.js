@@ -1,15 +1,15 @@
-define(['jquery', 'model', '../base/ui', 'jquery-ui', 'bootstrap-markdown', 'jquery.form'],
+define(['jquery', 'model', '../base/ui', 'jquery-ui', 'bootstrap-markdown', 'jquery.form', 'jquery.timepicker'],
 function ($, EventModel, UI) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {
-        var create_form = $('form#create-event');
-        var find_form = $('form#find-event');
+        var $create_form = $('form#create-event');
+        var $find_form = $('form#find-event');
 
-        var file_input = create_form.find('input[type="file"]');
-        var upload_div = create_form.find('#image-upload');
-        upload_div.on("click", function(ev) {
+        var $file_input = $create_form.find('input[type="file"]');
+        var $upload_div = $create_form.find('#image-upload');
+        $upload_div.on("click", function(ev) {
             ev.preventDefault();
-            file_input.click();
+            $file_input.click();
         }).on("dragenter dragover drop", function(ev) {
             ev.preventDefault();
             ev.stopPropagation();
@@ -18,16 +18,16 @@ function ($, EventModel, UI) { return function (mapMaker) {
             ev.stopPropagation();
             handleImg(ev.dataTransfer.files[0]);
         });
-        file_input.on("change", function (ev) {
+        $file_input.on("change", function (ev) {
             handleImg(this.files[0]);
         });
         // based on MDN example
         function handleImg(file) {
             if (file.type.match(/image.*/)) {
-                if (!upload_div._prev_text)
-                    upload_div._prev_text = upload_div.text();
-                upload_div.html("<img />");
-                var img = upload_div.find("img")[0];
+                if (!$upload_div._prev_text)
+                    $upload_div._prev_text = $upload_div.text();
+                $upload_div.html("<img />");
+                var img = $upload_div.find("img")[0];
                 img.file = file;
 
                 var reader = new FileReader();
@@ -41,30 +41,42 @@ function ($, EventModel, UI) { return function (mapMaker) {
             }
         }
 
-        create_form.find('button[type="submit"]').click(function (ev) {
+        $create_form.find('button[type="submit"]').click(function (ev) {
             ev.preventDefault();
-            create_form.submit();
+            $create_form.submit();
         });
-        create_form.ajaxForm({
-            dataType: 'json',
-            clearForm: true,
-            success: function (data) {
-                console.log(data);
+        $create_form.on("submit", function(ev) {
+            ev.preventDefault();
+            var form_fields = $create_form.serializeArray();
+            var data = { event: {} };
+            form_fields.forEach(function (f) {
+                if (f.name) switch (f.name) {
+                    case '_csrf':
+                        data[f.name] = f.value;
+                        break;
+                    case 'address': // TODO: split address into two lines
+                    default:
+                        data.event[f.name] = f.value;
+                }
+            });
+            $.post($create_form.attr('action'), data, function (data) {
+                console.log(data.event);
                 if (data.event) {
                     toggleCreateForm();
                     mapMaker.addMarker(new EventModel(data.event));
                 }
-            },
+            }, 'json');
+            return false;
         });
 
-        find_form.find('button[type="submit"]').click(function (ev) {
+        $find_form.find('button[type="submit"]').click(function (ev) {
             ev.preventDefault();
-            find_form.submit();
+            $find_form.submit();
         });
-        var find_when = find_form.find('input[name="find-when"]');
-        find_when.blur(function(ev) { find_form.submit() });
+        var find_when = $find_form.find('input[name="find-when"]');
+        find_when.blur(function(ev) { $find_form.submit() });
         mmm = mapMaker;
-        find_form.on("submit", function(ev) {
+        $find_form.on("submit", function(ev) {
             ev.preventDefault();
             EventModel.all(function (models) {
                 mapMaker.clearMarkers();
@@ -89,13 +101,17 @@ function ($, EventModel, UI) { return function (mapMaker) {
             });
         });
 
+
         // setup form toggle button
         function toggleCreateForm() {
-            create_form[0].reset();
-            upload_div.find('> img').attr('src', '');
-            upload_div.text(upload_div._prev_text);
+            var $select = $('select[name="attendees"]');
+            $create_form[0].reset();
+            $select.next('.ui-select').remove();
+            UI.select($select);
+            $upload_div.find('> img').attr('src', '');
+            $upload_div.text($upload_div._prev_text);
 
-            create_form.toggleClass('hidden');
+            $create_form.toggleClass('hidden');
             $("#add-event-button").toggleClass('hidden');
         }
         $(".formExpandButton").click(function(ev) {
@@ -120,13 +136,27 @@ function ($, EventModel, UI) { return function (mapMaker) {
                 }
             }
         });
-        EventModel.all(function (models) { mapMaker.dropPins(models); });
 
         $('.datepicker').datepicker().each(function(i, elem) {
             $(elem).next('.icon').click(function () { $(elem).focus();});
         });
+        var $beginTime = $('[name="beginTime"]'),
+            $endTime   = $('[name="endTime"]');
+        $('.timepicker').timepicker().on('showTimepicker', function () {
+            var $parent = $(this).parent();
+            $parent.find('.ui-timepicker-wrapper')
+                .css('width', $parent.css('width'))
+                .css('left', '0px');
+        });
+        $beginTime.timepicker({
+            appendTo: function (elem) { return $(elem).parent(); }
+        });
+        $endTime.timepicker({
+            appendTo: function (elem) { return $(elem).parent(); },
+            showDuration: true
+        });
 
-        UI.select('select[name="attendees"]');
+        EventModel.all(function (models) { mapMaker.dropPins(models); });
 
         window.scroll(0,0);
     });

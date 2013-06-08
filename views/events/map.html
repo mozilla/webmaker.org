@@ -3,6 +3,7 @@
 {% block title %}Event Map{% endblock %}
 {% block head %}
   {{ super() }}
+  <link rel="stylesheet" href="/ext/css/jquery.timepicker.css">
   <link rel="stylesheet" href="/ext/css/bootstrap-markdown.css">
 {% endblock %}
 
@@ -36,7 +37,7 @@
         </fieldset>
         <fieldset>
             <label for="attendees"> How many attendees are you expecting? </label>
-            <div class="cell"><select name="attendees">
+            <div><select name="attendees">
                 <option value=0> 1-10 </option>
                 <option value=1> 10-20 </option>
                 <option value=2> 20-50 </option>
@@ -48,7 +49,7 @@
             </select></div><br />
 
             <label for="address"> Event location </label>
-            <span class="cell">
+            <span class="cell ui-input ui-append">
                 <input name="address" type="text" />
             </span>
 
@@ -56,7 +57,7 @@
             <input name="longitude" type="hidden" />
 
             <label for="registerLink"> Event Link </label>
-            <span class="cell">
+            <span class="cell ui-input ui-append">
                 <input name="registerLink" type="url"
                         placeholder="Link to registration page" />
             </span>
@@ -64,14 +65,14 @@
             {% for i in ['begin','end'] %}
             <label for="{{i}}Date"> Event {{i}}s </label>
             <div class='datetime'>
-                <span class="ui-input ui-append ui-select">
+                <span class="ui-append ui-select">
                     <span class="icon-calendar"></span>
                     <input name="{{i}}Date" type="text" class="datepicker"
                             placeholder="--/--/--" />
                     <a class="icon icon-chevron-down"></a>
                 </span>
-                <span class="ui-input">
-                    <input name="{{i}}Time" type="text"
+                <span class="ui-append ui-input">
+                    <input name="{{i}}Time" type="text" class="timepicker"
                         placeholder="--:--  --" />
                 </span>
             </div>

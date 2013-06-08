@@ -53,16 +53,15 @@ body#events .map-overlay {
         .redButton;
     }
 
-    .ui-selected {
-        padding-left: 4px;
+
+    .cell {
+        display: block;
+        overflow: hidden;
     }
     .ui-select-menu {
         z-index: 1;
     }
-    .ui-selected li {
-        padding-left: 4px;
-    }
-    .ui-select {
+    .datetime > *[class^="ui-"] {
         margin: 4px;
         vertical-align: top;
 
@@ -71,10 +70,6 @@ body#events .map-overlay {
         }
     }
 
-    .ui-spinner a {
-        border-radius: 0px;
-        .ui-btn;
-    }
     .ui-widget-content {
         border: 0px;
     }
@@ -140,10 +135,6 @@ body#events .map-overlay {
 
             vertical-align: top;
         }
-        .cell {
-            display: block;
-            overflow: hidden;
-        }
         @media (max-width: 1000px) {
             fieldset {
                 width:  100%;
@@ -201,15 +192,14 @@ body#events .map-overlay {
             }
         }
         input,select {
-            height:     5ex;
             padding:    0px 10px;
         }
         input[name="title"] {
             min-width: 21em;
         }
         .upload {
-            margin:  10px 0px;
             display: inline-block;
+            margin:  10px 0px;
         }
         #image-upload {
             display:    table-cell;

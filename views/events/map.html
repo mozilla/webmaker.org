@@ -36,7 +36,7 @@
         </fieldset>
         <fieldset>
             <label for="attendees"> How many attendees are you expecting? </label>
-            <span class="cell"><select name="attendees">
+            <div class="cell"><select name="attendees">
                 <option value=0> 1-10 </option>
                 <option value=1> 10-20 </option>
                 <option value=2> 20-50 </option>
@@ -45,7 +45,7 @@
                 <option value=4> 100-200 </option>
                 <option value=5> 200-500 </option>
                 <option value=5> 500+ </option>
-            </select></span><br />
+            </select></div><br />
 
             <label for="address"> Event location </label>
             <span class="cell">
@@ -64,14 +64,14 @@
             {% for i in ['begin','end'] %}
             <label for="{{i}}Date"> Event {{i}}s </label>
             <div class='datetime'>
-                <span class="cell ui-append ui-select">
+                <span class="ui-input ui-append ui-select">
                     <span class="icon-calendar"></span>
                     <input name="{{i}}Date" type="text" class="datepicker"
                             placeholder="--/--/--" />
                     <a class="icon icon-chevron-down"></a>
                 </span>
-                <span class="ui-append ui-select">
-                    <input name="{{i}}Time" type="text" class="timespinner"
+                <span class="ui-input">
+                    <input name="{{i}}Time" type="text"
                         placeholder="--:--  --" />
                 </span>
             </div>

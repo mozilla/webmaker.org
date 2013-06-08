@@ -1,5 +1,5 @@
-define(['jquery', 'model', '../base/ui', 'globalize', 'jquery-ui', 'jquery.mousewheel', 'bootstrap-markdown', 'jquery.form'],
-function ($, EventModel, UI, Globalize) { return function (mapMaker) {
+define(['jquery', 'model', '../base/ui', 'jquery-ui', 'bootstrap-markdown', 'jquery.form'],
+function ($, EventModel, UI) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     $(document).ready(function () {
         var create_form = $('form#create-event');
@@ -125,23 +125,6 @@ function ($, EventModel, UI, Globalize) { return function (mapMaker) {
         $('.datepicker').datepicker().each(function(i, elem) {
             $(elem).next('.icon').click(function () { $(elem).focus();});
         });
-        $.widget('ui.timespinner', $.ui.spinner, {
-            options: { step: 60 * 1000, // seconds
-                       page: 60 },      // hours
-            _parse: function( value ) {
-                if (typeof value === 'string') {
-                    // already a timestamp
-                    if (Number(value) == value)
-                        return Number( value );
-                    return +Globalize.parseDate(value);
-                }
-                return value;
-            },
-            _format: function(value) {
-                return Globalize.format(new Date(value), 't');
-            }
-        });
-        $('.timespinner').timespinner();
 
         UI.select('select[name="attendees"]');
 

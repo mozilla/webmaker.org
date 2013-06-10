@@ -1,11 +1,12 @@
 module.exports = function( view, makeURL, personaSSO, loginAPI ) {
   return function( req, res ) {
     res.render( view + ".html", {
-      page: view,
+      csrf: req.session._csrf,
+      email: req.session.email || '',
+      loginAPI: loginAPI,
       makeEndpoint: makeURL,
       personaSSO: personaSSO,
-      loginAPI: loginAPI,
-      email: req.session.email || '',
+      page: view,
       webmakerID: req.session.username || ''
     } );
   };

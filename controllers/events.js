@@ -51,7 +51,6 @@ module.exports = function (init) {
 
             if (!(event.organizer = req.session.email))
                 return res.reply(401, 'Log in to create Events');
-            event.organizerId = req.session.webmakerID;
 
             Event.create(event).success(function (event) {
                 if (req.files && req.files.picture
@@ -70,7 +69,7 @@ module.exports = function (init) {
                                 if (s3_res.statusCode === 200) {
                                     console.log(s3_req.url);
                                     event.url = s3_req.url;
-                                    event.save();
+                                    event.save(['url']);
                                 }
                             });
                             s3_req.end(data);

@@ -29,7 +29,6 @@ module.exports = function (Model, Types) {
         registerLink:                       Types.URL,
         picture:                            Types.URL,
         organizer:                          Types.Email,
-        organizerId:                        Types.String,
 
         $validate: {
             coordinates: function() {

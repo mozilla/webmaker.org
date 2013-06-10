@@ -10,7 +10,7 @@ module.exports = function (init) {
 
     // Limit upload filesize
     //this.app.use('/events', express.limit('10M'));
-    var s3_client = this.s3.client;
+    var s3 = this.s3;
 
     return {
         index:  function(req, res)
@@ -85,16 +85,17 @@ module.exports = function (init) {
             var picture = event.picture;
             Event.create(trns_event, Object.keys(fields)).success(function (event) {
                 if (picture) {
-                    var s3_req = s3_client.put(uuid.v4(), {
+                    var filename = uuid.v4();
+                    var s3_req = s3.client.put(filename, {
                         'Content-Length':   picture.data.length,
                         'Content-Type':     picture.type,
                         'x-amz-acl':        'public-read'
                     });
                     s3_req.on('response', function(s3_res) {
-                        if (s3_res.statusCode === 200) {
-                            event.picture = s3_req.url;
-                            event.save(['picture']);
-                        }
+                        if (s3_res.statusCode === 200)
+                            event.updateAttributes({
+                                picture: s3.url(filename)
+                            });
                     });
                     s3_req.end(picture.data);
                 }

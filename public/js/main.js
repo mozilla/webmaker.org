@@ -100,5 +100,15 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
     carousel.attachToPartners();
 
     privacy.attach();
+
+    if ( $body[0].id === 'index' ) {
+      navigator.idSSO.app.onlogin = function(loggedInUser, displayName) {
+        $('.internal').hide();
+        media.layout();
+      };
+      navigator.idSSO.app.onlogout = function() {
+        window.location.reload();
+      };
+    }
   });
 });

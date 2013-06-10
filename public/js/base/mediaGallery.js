@@ -5,7 +5,8 @@ define(['jquery', 'moment'],
   var countLarge = 2,
       countMedium = 8,
       LIMIT_DESKTOP = 20,
-      LIMIT_MOBILE = 6;
+      LIMIT_MOBILE = 6,
+      currentIter = 1;
 
   var $body = $( 'body' ),
       $mainGallery = $('.main-gallery'),
@@ -58,13 +59,14 @@ define(['jquery', 'moment'],
 
     switch( $body[0].id ) {
       case 'index':
-        if (countLarge > 0) {
+        if (countLarge > 0 && ( currentIter === 3 || currentIter === 4 ) ) {
           randSize = 'large';
           countLarge --;
         } else {
           randSize = 'medium';
           countMedium --;
         }
+        ++currentIter;
         break;
 
       case 'teach':
@@ -131,6 +133,10 @@ define(['jquery', 'moment'],
     }
   };
 
+  MediaGallery.prototype.layout = function() {
+    this.packery.layout();
+  }
+
   MediaGallery.prototype.init = function() {
     var self = this;
 
@@ -155,25 +161,23 @@ define(['jquery', 'moment'],
         }
         break;
       case 'index':
-        if ( $('meta[name="persona-email"]').prop('content') === '' ) {
-          var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
-          var $h1 = $('<h1>The web is still wild. Build it.</h1>');
-          var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
-          var $signin = $('<button class="ui-huge-button sign-in">Sign in!</button>');
+        var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
+        var $h1 = $('<h1>The web is still wild. Build it.</h1>');
+        var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
+        var $signin = $('<button class="ui-huge-button sign-in">Sign in!</button>');
 
-          $signin.on('click', function( e ) {
-            navigator.idSSO.request();
-          } );
+        $signin.on('click', function( e ) {
+          navigator.idSSO.request();
+        } );
 
-          $stickyBanner.append( $h1 );
-          $stickyBanner.append( $h2 );
-          $stickyBanner.append( $signin );
+        $stickyBanner.append( $h1 );
+        $stickyBanner.append( $h2 );
+        $stickyBanner.append( $signin );
 
-          $mainGallery.append( $stickyBanner );
+        $mainGallery.append( $stickyBanner );
 
-          this.packery.stamp( $stickyBanner[0] );
-          this.packery.layout();
-        }
+        this.packery.stamp( $stickyBanner[0] );
+        this.packery.layout();
 
         // set up mouse over handlers
         $makeTemplate.addClass( "make-flip" );

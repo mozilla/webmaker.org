@@ -38,18 +38,19 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
     .page( page )
     .then( function( err, data ) {
       res.render( "search.html", {
+        csrf: req.session._csrf,
         currentUser: username,
+        email: req.session.email || '',
+        hasQuery: req.param( "q" ),
+        loginAPI: loginAPI,
+        makeEndpoint: makeURL,
         makes: data || [],
         makeSize: makeSize,
         page: "search",
         pagination: page,
-        hasQuery: req.param( "q" ),
-        query: options[type],
-        searchType: type,
-        makeEndpoint: makeURL,
         personaSSO: personaSSO,
-        loginAPI: loginAPI,
-        email: req.session.email || ''
+        query: options[type],
+        searchType: type
       });
     });
   };

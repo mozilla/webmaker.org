@@ -1,5 +1,5 @@
 require.config({
-    deps: ['main', 'jquery.css3finalize', 'jquery-ui.datepicker'],
+    deps: ['main', 'jquery.css3finalize', 'jquery-ui.datepicker', 'bootstrap-markdown'],
     paths: {
         'html':                 '/js/html',
         'base':                 '/js/base',

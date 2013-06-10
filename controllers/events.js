@@ -65,7 +65,7 @@ module.exports = function (init) {
                     var ts = val.split(':');
                     return new Date(0, 0, 0, ts[0], ts[1]);
                 });
-                function datetime_transform(f, tranform) {
+                function datetime_transform(f, transform) {
                     var dtf = pfx + f;
                     event[dtf] = (function(event) {
                         if (!event[dtf]) return null;
@@ -82,8 +82,8 @@ module.exports = function (init) {
             if (!required.every(function (f) { return !empty(trns_event[f]) }))
                 return res.reply(400, 'Invalid Event provided');
 
+            var picture = event.picture;
             Event.create(trns_event, Object.keys(fields)).success(function (event) {
-                var picture = trns_event.picture;
                 if (picture) {
                     var s3_req = s3_client.put(uuid.v4(), {
                         'Content-Length':   picture.data.length,
@@ -92,15 +92,12 @@ module.exports = function (init) {
                     });
                     s3_req.on('response', function(s3_res) {
                         if (s3_res.statusCode === 200) {
-                            console.log(s3_req.url);
                             event.picture = s3_req.url;
                             event.save(['picture']);
-                            console.log(event);
                         }
                     });
                     s3_req.end(picture.data);
                 }
-                console.log(event);
                 res.reply(200, 'Event created', { event: event });
             }).error(function (err) {
                 res.reply(400, 'Invalid Event provided', { error: err });
@@ -109,6 +106,7 @@ module.exports = function (init) {
         details: function(req, res)
         {
             Event.find(req.params.id).success(function (event) {
+                if (!event) return res.reply(404, 'Event not found');
                 res.format({
                     json: function () { res.reply(200, { event: event }) },
                     html: function () {
@@ -133,8 +131,6 @@ module.exports = function (init) {
                         res.reply('details', { event: evt });
                     }
                 });
-            }).error(function (err) {
-                res.reply(404, 'Event not found');
             });
         },
         update: function(req, res)

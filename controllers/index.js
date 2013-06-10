@@ -42,7 +42,7 @@ exports.initMiddleware = function(app, app_name, model_name)
                 },
                 html: function () {
                     var id = obj && obj[model_name] && obj[model_name].id;
-                    res.redirect('/'+app_name + id ? '/'+id : '');
+                    res.redirect('/'+app_name + (id ? '/'+id : ''));
                 },
             });
         };

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/ext/css/font-awesome.css">
+  <link media="screen" rel="stylesheet" href="/css/style.css">
+  <link media="screen" rel="stylesheet" href="/css/make-details.css">
+</head>
+<body class="{{tool}}">
+  <div class="make-details-page">
+    <div id="content" class="content clearfix">
+      <div class="make-details">
+        <div class="wrapper">
+          <!-- LH side of make-details -->
+          <div class="remixed-from">
+            <div class="remix-info">
+              {% if remixedFromData %}
+              <span class="remixed-from-txt">Remixed from</span>
+              <a href="{{ remixedFromData.url }}"><span class="remixed-user">@{{ remixedFromData.username }}</span></a>
+              {% endif %}
+              <div class="make-type-{{type}}">
+                <div class="make-thumbnail" style="background-image:url({{ thumbnail }})"></div>
+              </div>
+            </div>
+
+            {% if remixCount %}
+            <div class="remixed-by">
+              {{remixCount}} remix{% if remixCount > 1 %}s{% endif %} by
+              <ul>
+                {% for remix in remixes %}
+                <li><a href="{{remix.url}}">@{{remix.username}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+          </div>
+
+          <!-- RH side of make-details -->
+          <div class="make-details-deets">
+            <h1 class="make-title">{{ title }}</h1>
+
+            <div class="make-made-by">
+              <a href="//webmaker.org">
+                <img class="make-user-gravatar" src="http://gravatar.com/avatar/{{ emailHash }}?s=26" alt="USER NAME" />
+              </a>
+              <div class="made-by">
+                Made by <a class="make-username" href="/u/{{ username }}">{{ username }}</a>
+                <span class="make-relative-date">{{ createdAt }}</span>
+              </div>
+            </div>
+            <div class="make-tools-languages">
+              <span class="built-with">Built with</span>
+              <a href="//webmaker.org">
+                <span class="tool-name">{{ tool }}</span></a>
+
+              <span class="languages">Languages</span>
+              <ul class="langs">
+                <li class="lang-item active-lang">English</li>
+                <li class="lang-item"><a href="//webmaker.org">Español</a></li>
+              </ul>
+            </div>
+
+            <p class="make-desc">{{ description }}</p>
+
+            <p><a id="share-btn" class="share ui-btn"><span class="icon-share"></span> Share</a>
+            <div id="share-container" class="hidden">
+              <a id="google-btn"></a>
+              <a id="twitter-btn"></a>
+              <a id="fb-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/ext/js/require.js"></script>
+  <script>
+    requirejs.config({
+      paths: {
+        'jquery': '../../ext/js/jquery-1.9.1',
+        'social': '../../ext/js/socialmedia'
+      }
+    });
+
+    require(['jquery', 'social'],
+    function ( $, SocialMedia ) {
+      var social,
+          $shareBtn = $( "#share-btn" ),
+          $shareContainer = $( "#share-container" );
+          googleBtn = document.getElementById( "google-btn" ),
+          twitterBtn = document.getElementById( "twitter-btn" ),
+          fbBtn = document.getElementById( "fb-btn" );
+
+        social = new SocialMedia({
+          message: "Tweet this awesome {{tool}} project: ",
+          via: "#webmaker"
+        });
+
+        function shareOnClick() {
+          social.hotLoad( twitterBtn, social.twitter, "{{ url }}" );
+          social.hotLoad( googleBtn, social.google, "{{ url }}" );
+          social.hotLoad( fbBtn, social.facebook, "{{ url }}" );
+          $shareBtn.addClass( "hidden" );
+          $shareContainer.removeClass( "hidden" );
+          $shareBtn.off( "click", shareOnClick );
+        }
+
+        $shareBtn.on( "click", shareOnClick );
+
+    });
+  </script>
+</body>
+</html>

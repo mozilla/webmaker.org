@@ -3,14 +3,13 @@ module.exports = function( make, makeEndpoint, personaSSO, loginAPI ){
     api: {
       healthcheck: require( "./api/healthcheck" )
     },
+    details: require( "./details" )( make ),
+    me: require("./me")( make, makeEndpoint, personaSSO, loginAPI ),
     page: function( view ) {
       return require( "./page" )( view, makeEndpoint, personaSSO, loginAPI );
     },
-    search: function() {
-      return require( "./search" )( make, makeEndpoint, personaSSO, loginAPI );
-    },
-    me: require("./me")( make, makeEndpoint, personaSSO, loginAPI ),
     remove: require( "./remove" )( make ),
+    search: require( "./search" )( make, makeEndpoint, personaSSO, loginAPI ),
     tag: function( req, res ) {
       res.redirect( "/search?type=tags&q=" + req.params.tag );
     },

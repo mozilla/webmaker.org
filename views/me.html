@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% include "macros.html" %}
 {% block title %}Me{% endblock %}
 {% block midbar %}
   <div class="ui-wrapper">
@@ -12,19 +13,7 @@
   <div class="main-gallery search-gallery">
     <div class="loading"></div>
     <div class="gutter-sizer"></div>
-    {% for make in makes %}
-    <div class="make packery-hide medium" style="background-image:url({{make.thumbnail}});">
-      <div class="make-info">
-        <p class="title">{{make.title}}</p>
-        <p><span class="make-type">{{make.type}}</span> make</p>
-        <p class="updatedAt">Last updated {{make.updatedAt}}</p>
-      </div>
-      <div class="btn-container">
-        <a href="{{make.url}}" class="ui-btn view-btn"><span class="icon icon-link"></span></a>
-        <button type="submit" data-make-id="{{make._id}}" class="ui-btn delete-btn"><span class="icon icon-trash"></span></button>
-      </div>
-    </div>
-    {% endfor %}
+    {{ memakes() }}
   </div>
   {% if makes.length == 0%}
   <div class="no-makes">Jeez, make something!</div>

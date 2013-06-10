@@ -37,6 +37,10 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
     .sortByField( sortByField, sortByOrder )
     .page( page )
     .then( function( err, data ) {
+      // Need to replace this with make results processing module
+      for(var i=0; i<data.length;i++) {
+        data[i].type = data[i].contentType.replace( /application\/x\-/g, "" );
+      }
       res.render( "search.html", {
         currentUser: username,
         makes: data || [],

@@ -46,3 +46,33 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro searchmakes() %}
+  {% for make in makes %}
+    <div class="make packery-hide {{makeSize}} make-type-{{make.type}}">
+      <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
+      <div class="make-info">{{make.title}} by <a class="user-link" data-username="{{make.username}}">@{{make.username}}</a></div>
+      <div class="btn-container">
+        <a href="{{make.url}}" class="ui-btn fork-btn"><span class="icon icon-code-fork"></span></a>
+      </div>
+    </div>
+  {% endfor %}
+{% endmacro %}
+
+{% macro memakes() %}
+  {% for make in makes %}
+    <div class="make packery-hide medium make-type-{{make.type}}">
+      <div class="make-thumbnail {% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
+      <div class="make-info">
+        <p class="title">{{make.title}}</p>
+        <p><span class="make-type">{{make.type}}</span> make</p>
+        <p class="updatedAt">Last updated {{make.updatedAt}}</p>
+      </div>
+      <div class="btn-container">
+        <a href="{{make.url}}" class="ui-btn view-btn"><span class="icon icon-link"></span></a>
+        <button type="submit" data-make-id="{{make._id}}" class="ui-btn delete-btn"><span class="icon icon-trash"></span></button>
+      </div>
+    </div>
+  {% endfor %}
+{% endmacro %}
+

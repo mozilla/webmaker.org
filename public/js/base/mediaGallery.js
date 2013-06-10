@@ -73,8 +73,12 @@ define(['jquery', 'moment'],
     }
 
     // create front Element & populate
-    var $frontEl = $('<div class="front" style="background-image:url(' + data.thumbnail +
-      ');"><div class="type-icon"></div><div class="front-title">' + data.title + '</div></div></div>');
+    var $frontEl = $('<div class="front make-thumbnail"><div class="type-icon"></div><div class="front-title">' + data.title + '</div></div></div>');
+
+    // if there's a thumbnail, set the right css
+    if ( data.thumbnail ) {
+      $frontEl.addClass( "thumbnail" ).css( "background-image", "url(" + data.thumbnail + ")" );
+    }
 
     // create back element & populate
     var $backEl = $('<div class="back"></div>');

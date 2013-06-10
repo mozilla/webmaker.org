@@ -132,8 +132,6 @@ a {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-position: top center;
-    background-size: cover;
   }
   .back {
     color: #4E4E4E;
@@ -151,7 +149,6 @@ a {
 }
 
 .front {
-  background-color: #FFF;
   .share-icon {
     width: 25px;
     height: 25px;
@@ -317,30 +314,72 @@ a {
   right: 5px;
 }
 
-
-.make-type-thimble .type-icon {
-  background-image: url(../img/icon-make-thimble.png);
+.make-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.make-type-popcorn .type-icon {
-  background-image: url(../img/icon-make-popcorn.png);
+.make .make-thumbnail.thumbnail {
+  // Has a thumbnail image
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.make-type-guide .type-icon {
-  background-image: none;
-  background-color: #FF7430;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  border-radius: 35px;
-  font-size: 18px;
-  color: #FFF;
-  text-align: center;
-  border: 2px solid #FFF;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
 
-  &:before {
-    font-family: FontAwesome;
-    content: "\f0b1";
+.make-type-thimble {
+  .type-icon {
+    background-image: url(../img/icon-make-thimble.png);
+  }
+  .make-thumbnail {
+    background: #EE8950 url(../img/thumbs/thimble-grey.png) center no-repeat;
+  }
+}
+.make-type-popcorn {
+  .type-icon {
+    background-image: url(../img/icon-make-popcorn.png);
+  }
+  .make-thumbnail {
+    background: @green url(../img/thumbs/popcorn-grey.png) center no-repeat;
+  }
+}
+
+.make-type-guide {
+  .type-icon,
+  .make-thumbnail {
+    background-image: none;
+    background-color: #FF7430;
+    color: #FFF;
+    text-align: center;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+     &:before {
+      font-family: FontAwesome;
+      content: "\f0b1";
+    }
+  }
+  .type-icon {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 35px;
+    font-size: 18px;
+    border: 2px solid #FFF;
+  }
+  .make-thumbnail:before {
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  .make-thumbnail.thumbnail:before {
+    display: none;
   }
 }
 
@@ -409,10 +448,9 @@ a {
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
   height: auto;
   .front {
+    position: relative;
     width: 100%;
     height: 150px;
-    background-position: top center;
-    background-size: cover;
   }
   background: #FFF;
   .make-back .title {

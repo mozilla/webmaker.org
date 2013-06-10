@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% include "macros.html" %}
 {% block title %}Search{% endblock %}
 {% block midbar %}
 <div class="search-poster{% if hasQuery %} focus{% endif %}" data-query="{{query}}">
@@ -38,25 +39,13 @@
   <div class="main-gallery search-gallery">
     <div class="loading"></div>
     <div class="gutter-sizer"></div>
-    {% for make in makes %}
-    <div class="make packery-hide {{makeSize}}" style="background-image:url({{make.thumbnail}});">
-      <div class="make-info">{{make.title}} by <a class="user-link" data-username="{{make.username}}">@{{make.username}}</a></div>
-      <div class="btn-container">
-        <a href="{{make.url}}" class="ui-btn fork-btn"><span class="icon icon-code-fork"></span></a>
-      </div>
-    </div>
-    {% endfor %}
+    {{ searchmakes() }}
   </div>
   {% if makes.length == 0%}
   <div class="no-makes">No makes :(</div>
   {% else %}
     <div class="ui-row pagination">
       <ol class="pagination-list">
-        <!--
-        Needs range implemented in nunjucks
-        <li class="selected"></li>
-        <li></li>
-        -->
         {% if pagination > 1 %}
         <li class="previous-page"><span class="icon-arrow-left"></span> Newer</li>
         {% endif %}

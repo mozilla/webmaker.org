@@ -1,5 +1,4 @@
 module.exports = function( make, makeURL, personaSSO, loginAPI ) {
-  var moment = require( "moment" );
   return function( req, res ) {
     var username = req.session.username,
         page = req.param.page || 1;
@@ -11,15 +10,10 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
       .limit( 50 )
       .sortByField( "updatedAt", "desc" )
       .page( page )
-      .then( function( err, data ) {
+      .process( function( err, data ) {
         if ( err ) {
           res.send( err );
           return;
-        }
-
-        for(var i=0; i<data.length;i++) {
-          data[i].type = data[i].contentType.replace( /application\/x\-/g, "" );
-          data[i].updatedAt = moment( data[i].updatedAt ).fromNow();
         }
 
         res.render( "me.html", {

@@ -10,14 +10,14 @@ var express = require( "express" ),
     persona = require( "express-persona" ),
     route = require( "./routes" ),
     lessMiddleWare = require( "less-middleware" ),
-    makeAPI = require( "makeapi" );
+    makeAPI = require( "./lib/makeapi-webmaker" );
 
 habitat.load();
 
 var app = express(),
     env = new habitat(),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' ))),
-    make = makeAPI.makeAPI({
+    make = makeAPI({
       apiURL: env.get( "MAKE_ENDPOINT" ),
       auth: env.get( "MAKE_AUTH" )
     }),

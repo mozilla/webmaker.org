@@ -17,7 +17,8 @@ module.exports = function () {
         mode: s3_mode,
         conf: s3_conf,
         url: function (filename) {
-            return this.mode === 'mox' ? '/uploads/' + this.conf.bucket + filename
+            return this.mode === 'mox' ? '/uploads/' + this.conf.bucket
+                                               + '/' + filename
                                        : this.client.url(filename)
         },
         client: noxmox[s3_mode].createClient(s3_conf)

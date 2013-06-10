@@ -23,16 +23,17 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
         }
 
         res.render( "me.html", {
-          page: "me",
-          view: req.query.app || "webmaker",
-          makes: data || [],
-          pagination: page,
-          makeEndpoint: makeURL,
-          personaSSO: personaSSO,
-          loginAPI: loginAPI,
-          username: username,
           avatar: req.session.avatar,
-          email: req.session.email || ''
+          csrf: req.session._csrf,
+          email: req.session.email || '',
+          loginAPI: loginAPI,
+          makeEndpoint: makeURL,
+          makes: data || [],
+          page: "me",
+          pagination: page,
+          personaSSO: personaSSO,
+          view: req.query.app || "webmaker",
+          username: username
         });
       });
     }

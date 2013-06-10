@@ -1,7 +1,7 @@
 require.config({
     paths: {
-        'oms':          '/ext/js/oms',
-        'infobubble':   '/ext/js/infobubble',
+        'oms':              '/ext/js/oms',
+        'infobubble':       '/ext/js/infobubble',
         'google':           'map/google',
         'markerclusterer':  'map/markerclusterer',
     }

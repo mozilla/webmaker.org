@@ -34,6 +34,7 @@ exports.initMiddleware = function(app, app_name, model_name)
                 return res.render(app_name+'/'+page+'.html', obj);
             }
             var isError = code >= 400;
+            if (isError) console.error(arguments);
             res.format({
                 json: function () {
                     if (!obj) obj = isError ? { error: msg } : { msg: msg };

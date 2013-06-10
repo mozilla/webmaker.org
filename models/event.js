@@ -4,7 +4,7 @@ module.exports = function (Model, Types) {
         description:                        Types.Text,
         address:                            Types.String,
         latitude: {
-            type:                           Types.Float,
+            type:                           Types.FLOAT,
             validate: {
                 isFloat: true,
                 min: -90.0, max: 90.0
@@ -13,7 +13,7 @@ module.exports = function (Model, Types) {
             defaultValue:   null,
         },
         longitude: {
-            type:                           Types.Float,
+            type:                           Types.FLOAT,
             validate: {
                 isFloat: true,
                 min: -180.0, max: 180.0
@@ -29,13 +29,6 @@ module.exports = function (Model, Types) {
         registerLink:                       Types.URL,
         picture:                            Types.URL,
         organizer:                          Types.Email,
-
-        $validate: {
-            coordinates: function() {
-                if (!!this.latitude ^ !this.longitude)
-                    return false;
-            },
-        },
     }, function (M) {
         this.hasMany( M.Gallery, { as: 'Galleries' } );
         this.hasMany( M.Make,    { as: 'Makes'     } );

@@ -42,7 +42,7 @@ module.exports = function () {
             types[t] = util.autoconfig(typedefs[t])({ toString: type.toString.bind(type) });
             util.defProp(types[t], 'type', { get: function () { return this.toString() } });
         });
-        return types;
+        return util.extend(Sequelize, types);
     }
     Model.config = db;
     Model.sequelize = new Sequelize(db.database, db.username, db.password,
@@ -53,8 +53,11 @@ module.exports = function () {
         String: { type: Sequelize.STRING  },
         Text:   { type: Sequelize.TEXT    },
         Int:    { type: Sequelize.INTEGER },
-        Date:   { type: Sequelize.DATE    },
         Float:  { type: Sequelize.FLOAT   },
+        Date:   {
+            type:       Sequelize.DATE,
+            allowNull:  true
+        },
         URL:    {
             type:       Sequelize.STRING,
             validate:   { isUrl: true },

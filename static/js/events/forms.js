@@ -1,4 +1,4 @@
-define(['jquery', 'model', '../base/ui', 'bootstrap-markdown', 'jquery.form', 'jquery.timepicker', 'jquery-ui.datepicker', 'domReady!'],
+define(['jquery', 'model', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.datepicker', 'domReady!'],
 function ($, EventModel, UI) { return function (mapMaker) {
     $.event.props.push('dataTransfer');
     var $createForm = $('form#create-event');
@@ -22,7 +22,7 @@ function ($, EventModel, UI) { return function (mapMaker) {
     });
     // based on MDN example
     function handleImg(file) {
-        if (file.type.match(/image.*/)) {
+        if (file.type.match(/^image\//)) {
             if (!$uploadDiv._prev_text)
                 $uploadDiv._prev_text = $uploadDiv.text();
             $uploadDiv.html("<img />");
@@ -33,7 +33,7 @@ function ($, EventModel, UI) { return function (mapMaker) {
             reader.onload = (function(img) {
                 return function(ev) {
                     img.src = ev.target.result;
-                    $('.upload input[name="picture"]')[0].value = img.src;
+                    $createForm.find('input[name="picture"]').prop('value', img.src);
                 };
             })(img);
             reader.readAsDataURL(file);
@@ -107,7 +107,8 @@ function ($, EventModel, UI) { return function (mapMaker) {
         $createForm[0].reset();
         $select.next('.ui-select').remove();
         UI.select($select);
-        $uploadDiv.find('> img').attr('src', '');
+        $createForm.find('input[name="picture"]').prop('value', '');
+        $uploadDiv.find('> img').prop('src', '');
         $uploadDiv.text($uploadDiv._prev_text);
 
         $createForm.toggleClass('hidden');
@@ -154,6 +155,10 @@ function ($, EventModel, UI) { return function (mapMaker) {
     });
     $endTime.timepicker({
         appendTo: function (elem) { return $(elem).parent() },
+        durationTime: function () {
+            var beginTime = $beginTime.timepicker('getTime');
+            return beginTime ? beginTime : '0:00am';
+        },
         showDuration: true
     });
 

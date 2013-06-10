@@ -82,7 +82,8 @@
             {% endfor %}
 
             <div class="upload">
-                <input name="picture" type="file" accept="image/*" />
+                <input type="file" accept="image/*" />
+                <input name="picture" type="hidden" />
                 <div id="image-upload">Upload an image</div>
             </div>
             <input name="_csrf" type="hidden" value="{{ csrf_token }}" />

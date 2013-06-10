@@ -28,54 +28,79 @@ module.exports = function (init) {
         },
         create: function(req, res)
         {
-            var event = util.clone(req.body);
+            var event = req.body.event || req.body;
+            console.log(event);
 
-            // pre-process the Date/Time fields
-            ['begin', 'end'].forEach(function (f) {
-                var df = f + 'Date';
-                event[df] = event[df] ? new Date(event[df].split('-')) : null;
-                if (event[df] == "Invalid Date")
-                    event[df] = null;
-
-                var tf = f + 'Time';
-                var ts = event[tf].split(':');
-                event[tf] = event[tf] ? new Date(0,0,0,ts[0],ts[1]) : null;
-                if (event[tf] == "Invalid Date")
-                    event[tf] = null;
-            });
-            // set blank as null
-            ['registerLink'].forEach(function (f) {
-                if (!event[f]) event[f] = null;
-            });
-            event.picture = null;
+            var fields = {  // undefined fields are required
+                title:          undefined,
+                description:    undefined,
+                address:        undefined,
+                organizer:      undefined,
+                latitude:       null,
+                longitude:      null,
+                attendees:      3,
+                beginDate:      null,
+                endDate:        null,
+                beginTime:      null,
+                endTime:        null,
+                registerLink:   null
+            };
+            var required = [ 'title', 'description', 'latitude', 'longitude', 'address' ];
 
             if (!(event.organizer = req.session.email))
                 return res.reply(401, 'Log in to create Events');
+            if (event.picture) {
+                var match = event.picture.match(/^data:(image\/[\w+-]+);.*?base64,(.*)/);
+                event.picture = match ? {
+                    type: match[1],
+                    data: new Buffer(match[2], 'base64')
+                } : null
+            }
+            // pre-process the Date/Time fields
+            ['begin', 'end'].forEach(function (pfx) {
+                datetime_transform('Date', function (val) {
+                    return new Date(val.split('-'));
+                });
+                datetime_transform('Time', function (val) {
+                    var ts = val.split(':');
+                    return new Date(0, 0, 0, ts[0], ts[1]);
+                });
+                function datetime_transform(f, tranform) {
+                    var dtf = pfx + f;
+                    event[dtf] = (function(event) {
+                        if (!event[dtf]) return null;
+                        var new_time = transform(event[dtf]);
+                        return new_time != "Invalid Date" ? new_time : null;
+                    })(event)
+                }
+            });
+            function empty(x) { return x === '' || x === undefined }
+            var trns_event = {};
+            Object.keys(fields).forEach(function (f) {
+                trns_event[f] = empty(event[f]) ? fields[f] : event[f];
+            });
+            if (!required.every(function (f) { return !empty(trns_event[f]) }))
+                return res.reply(400, 'Invalid Event provided');
 
-            Event.create(event).success(function (event) {
-                if (req.files && req.files.picture
-                              && req.files.picture.size > 0) {
-                    var picture = req.files.picture;
-                    fs.readFile(picture.path, function(err, data) {
-                        if (err) {
-                            return res.reply(500, 'Could not read uploaded file.', { error: err });
-                        } else {
-                            var s3_req = s3_client.put(uuid.v4(), {
-                                'Content-Length':   data.length,
-                                'Content-Type':     picture.type,
-                                'x-amz-acl':        'public-read'
-                            });
-                            s3_req.on('response', function(s3_res) {
-                                if (s3_res.statusCode === 200) {
-                                    console.log(s3_req.url);
-                                    event.url = s3_req.url;
-                                    event.save(['url']);
-                                }
-                            });
-                            s3_req.end(data);
+            Event.create(trns_event, Object.keys(fields)).success(function (event) {
+                var picture = trns_event.picture;
+                if (picture) {
+                    var s3_req = s3_client.put(uuid.v4(), {
+                        'Content-Length':   picture.data.length,
+                        'Content-Type':     picture.type,
+                        'x-amz-acl':        'public-read'
+                    });
+                    s3_req.on('response', function(s3_res) {
+                        if (s3_res.statusCode === 200) {
+                            console.log(s3_req.url);
+                            event.picture = s3_req.url;
+                            event.save(['picture']);
+                            console.log(event);
                         }
                     });
+                    s3_req.end(picture.data);
                 }
+                console.log(event);
                 res.reply(200, 'Event created', { event: event });
             }).error(function (err) {
                 res.reply(400, 'Invalid Event provided', { error: err });

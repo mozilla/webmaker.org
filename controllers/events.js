@@ -36,6 +36,7 @@ module.exports = function (init) {
                 description:    undefined,
                 address:        undefined,
                 organizer:      undefined,
+                organizerId:    undefined,
                 latitude:       null,
                 longitude:      null,
                 attendees:      3,
@@ -49,6 +50,7 @@ module.exports = function (init) {
 
             if (!(event.organizer = req.session.email))
                 return res.reply(401, 'Log in to create Events');
+            event.organizerId = req.session.username;
             if (event.picture) {
                 var match = event.picture.match(/^data:(image\/[\w+-]+);.*?base64,(.*)/);
                 event.picture = match ? {

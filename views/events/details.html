@@ -9,8 +9,6 @@
         <div class="gallery-sidebar">
             {% if event.picture %}
             <img id="event-picture" src="{{ event.picture }}" onerror="this.style.display='none'" />
-            {% else %}
-            <img id="event-picture" src="http://lorempixel.com/400/600/nature/" onerror="this.style.display='none'" />
             {% endif %}
             {% if event.registerLink %}
             <div id="event-registration">
@@ -52,8 +50,8 @@
             </div>
             {% endif %}
             {% if email and event.organizer == email %}
-              <button id="edit-event-button"   class="owner-btn ui-btn">Edit</button>
-              <button id="delete-event-button" class="owner-btn ui-btn">Delete</button>
+              <button id="edit-event"   class="owner-btn ui-btn">Edit</button>
+              <button id="delete-event" class="owner-btn ui-btn">Delete</button>
             {% endif %}
             <p>{{ event.description }}</p>
 

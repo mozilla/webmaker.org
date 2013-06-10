@@ -1,11 +1,11 @@
 requirejs.config({
   paths: {
-    'text': '../ext/js/text',
-    'jquery': '../ext/js/jquery-1.9.1',
-    'jquery.carousel': '../ext/js/jquery.carouFredSel-6.2.1',
-    'moment': '../ext/js/moment',
-    'tabzilla': 'https://www.mozilla.org/tabzilla/media/js/tabzilla',
-    'uri': '../ext/js/uri'
+    'text':             '/ext/js/text',
+    'jquery':           '/ext/js/jquery-1.9.1',
+    'jquery.carousel':  '/ext/js/jquery.carouFredSel-6.2.1',
+    'moment':           '/ext/js/moment',
+    'uri':              '/ext/js/uri',
+    'tabzilla': 'https://www.mozilla.org/tabzilla/media/js/tabzilla'
   },
   shim: {
     'tabzilla': ['jquery'],

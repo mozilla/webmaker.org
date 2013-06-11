@@ -3,11 +3,13 @@ module.exports = function( make ) {
     var id = req.body.makeID;
 
     make.id( id ).then( function( err, data ) {
-      var username = data[0].username;
       if ( err ) {
-        res.send( err );
+        return res.send( err );
       }
-      else if ( username === req.session.username ) {
+
+      var username = data[0].username;
+
+      if ( username === req.session.username ) {
         make.remove( id, function( err, data ) {
           if ( err ) {
             res.send( err );

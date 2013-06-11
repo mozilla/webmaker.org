@@ -45,6 +45,14 @@
   height: ( @rows * ( @row + @gutter ) - @gutter ) * @unit;
 }
 
+.ui-fl {
+  float: left;
+}
+
+.ui-fr {
+  float: right;
+}
+
 .ui-row {
   margin-bottom: @gutter * @unit;
   .clearfix;
@@ -205,7 +213,6 @@
 .ui-poster {
   display: block;
   width: 100%;
-  min-height: 560px;
   position: relative;
 }
 
@@ -256,6 +263,10 @@ figure {
     margin-right: @gutter * @unit;
   }
   cite {
+    a {
+      text-decoration: none;
+      font-style: normal;
+    }
     &:before {
       content: "\2014\2002";
     }

@@ -83,6 +83,7 @@ app.use( express.static( tmpDir ) );
 app.get( "/healthcheck", routes.api.healthcheck );
 
 app.get( "/", routes.page( "index" ) );
+app.get( "/about", routes.page( "about" ) );
 app.get( "/learn", routes.page( "learn" ) );
 app.get( "/teach", routes.page( "teach" ) );
 app.get( "/party", routes.page( "party" ) );

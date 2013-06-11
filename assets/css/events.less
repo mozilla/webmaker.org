@@ -13,7 +13,6 @@ body#events {
         margin-top: 0px;
     }
 }
-
 .clear { clear: both; }
 .hidden { display: none; }
 .clickable {
@@ -32,4 +31,51 @@ body#events {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.ui-datepicker {
+    border:     1px solid #ddd;
+    margin-left: -34.5px;
+    margin-top:  11px;
+}
+.md-editor {
+    background:     #222;
+    margin-left:    -1px;
+    padding:        4px;
+    padding-top:    0px;
+    clear: left;
+
+    textarea {
+        height:  34ex;
+        padding: 8px 10px;
+
+        font-family: inherit;
+        font-size:   14px;
+    }
+    .md-preview {
+        min-height: 5ex;
+        padding:    8px 10px;
+
+        color:  #333;
+    }
+    .md-header {
+        background: #222;
+    }
+    .btn-group {
+        display: inline-block;
+    }
+    button {
+        .ui-btn;
+        .clickable;
+        background: inherit;
+        border:     0px;
+        border-radius:  1px;
+        padding:    4px 8px;
+
+        color: #eee;
+        &:hover {
+            background:  #fafafa;
+            text-shadow: none;
+            color: #222;
+        }
+    }
 }

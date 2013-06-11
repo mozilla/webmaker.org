@@ -3,62 +3,93 @@
 {% block title %}{{ event.title }}{% endblock %}
 
 {% block body %}
-<div class="ui-wrapper ui-body">
+{{ super() }}
+<form id="edit-event" action="/events/{{ event.id }}" method="POST">
+  <input name="_csrf"   value="{{ csrf }}" type="hidden">
 
+  <div class="ui-wrapper ui-body">
     <div id="details-pane" class="ui-section">
-        <div class="gallery-sidebar">
-            {% if event.picture %}
-            <img id="event-picture" src="{{ event.picture }}" onerror="this.style.display='none'" />
-            {% endif %}
-            {% if event.registerLink %}
-            <div id="event-registration">
-                <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
-                <p>This link will take you to an external event registration service, such as Eventbrite.</p>
+      <div class="gallery-sidebar">
+        {% if event.picture %}
+         <img id="event-picture" src="{{ event.picture }}" onerror="this.style.display='none'" />
+        {% endif %}
+        {% if event.registerLink %}
+         <div id="event-registration">
+           <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
+           <p>This link will take you to an external event registration service, such as Eventbrite.</p>
+         </div>
+        {% endif %}
+      </div>
+      <span><div id="event-description">
+        <h1 class="show">{{ event.title }}</h1>
+        <span class="edit hidden">
+          <input type="text" name="title" placeholder="{{ event.title }}" />
+        </span>
+        <div id="event-whenwhere">
+          <div class="temporal-local">
+            <img class="calendar-icon" src="/img/map/calendar.png" />
+            <div class="datetime-range">
+              <span class="show">
+                <div>
+                  {{ event.beginDate }}
+                    {% if event.beginDate and event.endDate %} - {% endif %}
+                  {{ event.endDate }}
+                </div>
+                <div>
+                  {{ event.beginTime }}
+                    {% if event.beginTime and event.endTime %} - {% endif %}
+                  {{ event.endTime }}
+                </div>
+              </span>
+              <span class="edit hidden">
+                <div> <input type="text" name="beginDate" class="datepicker" placeholder="{{ event.beginDate }}" />
+                    - <input type="text" name="endDate"   class="datepicker" placeholder="{{ event.endDate }}" />
+                </div>
+                <div> <input type="text" name="beginTime" class="timepicker" placeholder="{{ event.beginTime }}" />
+                    - <input type="text" name="endTime"   class="timepicker" placeholder="{{ event.endTime }}" />
+                </div>
+              </span>
             </div>
+          </div>
+          <div class="temporal-local">
+            <img class="pin-icon" src="/img/map/pin-event-red.png" />
+            {% if event.address %}
+             <span class="show">
+               <div class="address">{{ event.address }}</div>
+             </span>
             {% endif %}
+            <span class="edit hidden">
+              <input type="text" name="address" class="edit address" placeholder="{{ event.address }}" />
+            </span>
+          </div>
         </div>
-        <span><div id="event-description">
-            <h1>{{ event.title }}</h1>
-            <div id="event-whenwhere">
-                <div class="temporal-local">
-                {% if event.beginDate or event.endDate %}
-                    <img class="calendar-icon" src="/img/map/calendar.png" />
-                {% endif %}
-                    <div class="datetime-range">
-                        <div> {{ event.beginDate }}
-                                {% if event.beginDate and event.endDate %} - {% endif %}
-                              {{ event.endDate }} </div>
-                        <div> {{ event.beginTime }}
-                                {% if event.beginTime and event.endTime %} - {% endif %}
-                              {{ event.endTime }} </div>
-                    </div>
-                </div>
-                <div class="temporal-local">
-                {% if event.address %}
-                    <img class="pin-icon" src="/img/map/pin-event-red.png" />
-                    <div class="address">
-                        <div> {{ event.address }} </div>
-                        <div> {{ event.city }} </div>
-                    </div>
-                {% endif %}
-                </div>
-            </div>
-            {% if event.organizer %}
-            <div id="event-organizer">
-                <img src="http://lorempixel.com/25/25/people/" />
-                <span>Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
-            </div>
-            {% endif %}
-            {% if email and event.organizer == email %}
-              <button id="edit-event"   class="owner-btn ui-btn">Edit</button>
-              <button id="delete-event" class="owner-btn ui-btn">Delete</button>
-            {% endif %}
-            <p>{{ event.description }}</p>
+        <div id="event-organizer">
+          <img src="{{ event.organizerImg }}" />
+          <span>Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
+        </div>
+        {% if email and event.organizer == email %}
+         <div>
+           <span class="show">
+             <button id="edit-mode" type="button"   class="owner-btn ui-btn">Edit</button>
+           </span>
+           <span class="edit hidden">
+             <button id="save-edit" class="owner-btn ui-btn"
+                 type="submit" name="_method" value="PATCH">Save</button>
+             <button id="cancel-edit" type="button" class="owner-btn ui-btn">Cancel</button>
+             <button id="delete-event" class="owner-btn ui-btn"
+                 type="submit" name="_method" value="DELETE">Delete</button>
+           </span>
+         </div>
+        {% endif %}
+        <p class="show">{{ event.description }}</p>
+        <span class="edit hidden">
+          <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
+        </span>
 
-            <div class="clear"></div>
-        </div></span>
+        <div class="clear"></div>
+      </div></span>
     </div>
     <div id="bottom-stripe"></div>
-</div>
-
+  </div>
+</form>
 {% endblock %}

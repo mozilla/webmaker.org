@@ -2,11 +2,18 @@
 {% include 'macros.html' %}
 
 {% block title %}{% endblock %}
+
 {% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="/ext/css/jquery-ui-1.10.3.custom.css" />
+  <link rel="stylesheet" href="/ext/css/jquery.timepicker.css">
+  <link rel="stylesheet" href="/ext/css/bootstrap-markdown.css">
   <link rel="stylesheet" href="/css/events.css">
 {% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+{{ gallery() }}
+{% endblock %}
 
 {% block require_main %}/js/events/index{% endblock %}
 {% block scripts %}

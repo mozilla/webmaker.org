@@ -1,11 +1,11 @@
 @import "ui";
 
-body#events .overlay-container {
+body#events.map .overlay-container {
     position:  relative;
     margin:    0px auto;
     max-width: 980px;
 }
-body#events .map-overlay {
+body#events.map .map-overlay {
     position:  absolute;
     z-index:   1;
     margin:    20px;
@@ -165,7 +165,6 @@ body#events .map-overlay {
             font-size:      13px;
         }
         .md-editor,input {
-            background: white;
             outline:    0px;
             border:     0.5px solid #444;
             margin:     6px 4px;
@@ -181,48 +180,6 @@ body#events .map-overlay {
         .registerLink { // hack
             margin-top: 8px;
             margin-bottom: 4px;
-        }
-        .md-editor {
-            background:     #222;
-            margin-left:    -1px;
-            padding:        4px;
-            padding-top:    0px;
-            clear: left;
-
-            textarea {
-                height:  34ex;
-                padding: 8px 10px;
-
-                font-family: inherit;
-                font-size:   14px;
-            }
-            .md-preview {
-                min-height: 5ex;
-                padding:    8px 10px;
-
-                color:  #333;
-            }
-            .md-header {
-                background: #222;
-            }
-            .btn-group {
-                display: inline-block;
-            }
-            button {
-                .ui-btn;
-                .clickable;
-                background: inherit;
-                border:     0px;
-                border-radius:  1px;
-                padding:    4px 8px;
-
-                color: #eee;
-                &:hover {
-                    background:  #fafafa;
-                    text-shadow: none;
-                    color: #222;
-                }
-            }
         }
         input[name="title"] {
             min-width: 21em;
@@ -263,9 +220,4 @@ body#events .map-overlay {
             }
         }
     }
-}
-.ui-datepicker {
-    border:     1px solid #ddd;
-    margin-left: -34.5px;
-    margin-top:  11px;
 }

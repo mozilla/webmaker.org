@@ -3,9 +3,10 @@ module.exports = function (C, app) {
         app[method.toLowerCase()](path + '.:format?', action);
     }
 
-    route( 'GET',    '/events',     C.Events.index   );
-    route( 'GET',    '/events/:id', C.Events.details );
-    route( 'POST',   '/events',     C.Events.create  );
-    route( 'PUT',    '/events/:id', C.Events.update  );
-    route( 'DELETE', '/events/:id', C.Events.destroy );
+    route( 'GET',    '/events',           C.Events.index   );
+    route( 'GET',    '/events/:id',       C.Events.details );
+    route( 'POST',   '/events',           C.Events.create  );
+    route( 'PATCH',  '/events/:id',       C.Events.change  );
+    //route( 'PUT',    '/events/:id',       C.Events.update  );
+    route( 'DELETE', '/events/:id',       C.Events.destroy );
 };

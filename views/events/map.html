@@ -1,21 +1,15 @@
 {% extends "events/layout.html" %}
 
 {% block title %}Event Map{% endblock %}
-{% block head %}
-  {{ super() }}
-  <link rel="stylesheet" href="/ext/css/jquery-ui-1.10.3.custom.css" />
-  <link rel="stylesheet" href="/ext/css/jquery.timepicker.css">
-  <link rel="stylesheet" href="/ext/css/bootstrap-markdown.css">
-{% endblock %}
 
 {% block body %}
-
+{{ super() }}
 <div class="overlay-container">
 <div class="map-overlay">
 
     <form id="find-event" action="/events" method="GET">
         <h2><span class="icon-search"></span> Find an event</h2>
-        <input name="_csrf" type="hidden" value="{{ csrf_token }}" />
+        <input name="_csrf" type="hidden" value="{{ csrf }}" />
         <input name="find-where" type="text" placeholder="Where?" />
         <input name="find-when"  type="text" placeholder="When?" class="datepicker" />
         <button type="submit"><span class="icon-chevron-right"></span></button>
@@ -25,7 +19,7 @@
         <h2 class='formExpandButton'><span class="icon-plus"></span> Add an event</h2>
     </div>
 
-    <form id="create-event" action="/events" method="POST" enctype="multipart/form-data" class='hidden'>
+    <form id="create-event" action="/events" method="POST" class='hidden'>
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
             <label for="title"> Name your event </label>
@@ -86,7 +80,7 @@
                 <input name="picture" type="hidden" />
                 <div id="image-upload">Upload an image</div>
             </div>
-            <input name="_csrf" type="hidden" value="{{ csrf_token }}" />
+            <input name="_csrf" type="hidden" value="{{ csrf }}" />
 
             <button type="submit"><span class="icon-plus"></span> Submit your event</button>
         </fieldset>

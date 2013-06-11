@@ -21,6 +21,14 @@ module.exports = function () {
                                                + '/' + filename
                                        : this.client.url(filename)
         },
+        delete: function (url) {
+            var match = url.match(/\/([^\/]+)\/?$/);
+            if (match) {
+                this.client.del(match[1]);
+                return true;
+            } else console.error("Error: S3 url ("+url+") seems to be invalid.");
+            return false;
+        },
         client: noxmox[s3_mode].createClient(s3_conf)
     };
 };

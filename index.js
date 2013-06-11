@@ -38,6 +38,7 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
 
     // Controllers
     ctx.controllers = require('./controllers').call(ctx, app);
+    app.use(express.methodOverride());
     process.nextTick(require('./routes').bind(ctx, ctx.controllers, app));
 
     // Handy shortcuts

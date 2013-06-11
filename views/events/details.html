@@ -27,9 +27,10 @@
         </span>
         <div id="event-whenwhere">
           <div class="temporal-local">
-            <img class="calendar-icon" src="/img/map/calendar.png" />
-            <div class="datetime-range">
-              <span class="show">
+            <span class="show">
+            {% if event.beginDate or event.endDate or event.beginTime %}
+              <img class="calendar-icon" src="/img/map/calendar.png" />
+              <div class="datetime-range">
                 <div>
                   {{ event.beginDate }}
                     {% if event.beginDate and event.endDate %} - {% endif %}
@@ -40,25 +41,30 @@
                     {% if event.beginTime and event.endTime %} - {% endif %}
                   {{ event.endTime }}
                 </div>
-              </span>
-              <span class="edit hidden">
+              </div>
+            {% endif %}
+            </span>
+            <span class="edit hidden">
+              <img class="calendar-icon" src="/img/map/calendar.png" />
+              <div class="datetime-range">
                 <div> <input type="text" name="beginDate" class="datepicker" placeholder="{{ event.beginDate }}" />
                     - <input type="text" name="endDate"   class="datepicker" placeholder="{{ event.endDate }}" />
                 </div>
                 <div> <input type="text" name="beginTime" class="timepicker" placeholder="{{ event.beginTime }}" />
                     - <input type="text" name="endTime"   class="timepicker" placeholder="{{ event.endTime }}" />
                 </div>
-              </span>
-            </div>
+              </div>
+            </span>
           </div>
           <div class="temporal-local">
-            <img class="pin-icon" src="/img/map/pin-event-red.png" />
             {% if event.address %}
              <span class="show">
+               <img class="pin-icon" src="/img/map/pin-event-red.png" />
                <div class="address">{{ event.address }}</div>
              </span>
             {% endif %}
             <span class="edit hidden">
+              <img class="pin-icon" src="/img/map/pin-event-red.png" />
               <input type="text" name="address" class="edit address" placeholder="{{ event.address }}" />
             </span>
           </div>
@@ -81,10 +87,10 @@
            </span>
          </div>
         {% endif %}
-        <p class="show">{{ event.description }}</p>
         <span class="edit hidden">
-          <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
+          <textarea name="description" data-provide="markdown"></textarea>
         </span>
+        <p>{{ event.description }}</p>
 
         <div class="clear"></div>
       </div></span>

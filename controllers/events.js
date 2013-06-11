@@ -184,7 +184,6 @@ module.exports = function (init) {
             Object.keys(transforms).forEach(function (f) {
                 evt[f] = transforms[f](event);
             });
-        console.log(evt);
         Object.keys(fields).forEach(function (f) {
             if (!(f in evt)) evt[f] = event[f];
         });
@@ -204,14 +203,18 @@ module.exports = function (init) {
         for (var p in event) switch(p) {
             case 'beginDate':
             case 'endDate':
-                evt[p] = fmtDate(event[p]);
+                if (event[p])
+                    evt[p] = fmtDate(event[p]);
                 break;
             case 'beginTime':
             case 'endTime':
-                evt[p] = fmtTime(event[p]);
+                if (event[p])
+                    evt[p] = fmtTime(event[p]);
                 break;
             case 'description':
                 evt[p] = markdown.toHTML(event[p]);
+                evt.desc_md = event[p];
+                break;
             default:
                 evt[p] = event[p];
         }

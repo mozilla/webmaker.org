@@ -42,7 +42,7 @@ module.exports = function (init) {
             var fields = ['title', 'description', 'address', 'latitude',
                 'longitude', 'attendees', 'beginDate', 'endDate', 'beginTime',
                 'endTime', 'registerLink', 'organizer', 'organizerId'];
-            Event.create(trns_event, fields).success(function (event) {
+            Event.create(event, fields).success(function (event) {
                 if (picture) {
                     var filename = uuid.v4();
                     var s3_req = s3.client.put(filename, {

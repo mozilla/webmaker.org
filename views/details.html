@@ -10,6 +10,7 @@
 <body class="{{tool}}">
   <div class="make-details-page">
     <div id="content" class="content clearfix">
+      {% if remixes %}
       <div class="make-details">
         <div class="wrapper">
           <!-- LH side of make-details -->
@@ -72,6 +73,11 @@
           </div>
         </div>
       </div>
+      {% else %}
+      <div class="make-error">
+        Sorry, that make doesn't exist! :(
+      </div>
+      {% endif %}
     </div>
   </div>
   <script src="/ext/js/require.js"></script>

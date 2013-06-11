@@ -7,6 +7,10 @@ module.exports = function( make ) {
         return res.send( err );
       }
 
+      if ( data && !data.length ) {
+        return res.send( "Sorry, we couldn't find a make with that id!" );
+      }
+
       var username = data[0].username;
 
       if ( username === req.session.username ) {

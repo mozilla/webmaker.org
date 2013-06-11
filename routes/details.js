@@ -1,10 +1,14 @@
 module.exports = function( make ) {
   return function( req, res ) {
     make.id( req.params.id ).process( function( err, data ) {
+      if ( data && !data.length ) {
+        return res.render( "details.html", {} );
+      }
+
       var makeData = data[ 0 ];
 
       // Prep remixes, max of 5
-      makeData.remixes( function( err, remixData) {
+      makeData.remixes( function( err, remixData ) {
         makeData.remixCount = remixData.length;
         makeData.remixes = [];
         for ( var i = 0; i < Math.min( remixData.length, 5 ); i++ ) {

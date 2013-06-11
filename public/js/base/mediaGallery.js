@@ -117,7 +117,7 @@ define(['jquery', 'moment'],
       gutter: '.gutter-sizer',
       transitionDuration: '0.2s'
     });
-    this.lastSearch = { tags: [ 'featured', 'guide' ] };
+    this.lastSearch = { tags: [ 'webmaker:featured', 'guide' ] };
     this.pageNo = 1;
 
     this.packery.on( 'layoutComplete', function() {
@@ -185,7 +185,7 @@ define(['jquery', 'moment'],
           $('.flipContainer', this).toggleClass( 'flip' );
         });
 
-        this.wm.doSearch( { tags: ['featured'] }, this.limit, function( data ) {
+        this.wm.doSearch( { tags: ['webmaker:featured'] }, this.limit, function( data ) {
           searchCallback( data, self );
         });
         break;
@@ -200,7 +200,7 @@ define(['jquery', 'moment'],
 
         $makeTemplate.addClass( "make-teach" );
 
-        this.wm.doSearch( { tags: ['featured', 'guide'] }, this.limit, function( data ) {
+        this.wm.doSearch( { tags: ['webmaker:featured', 'guide'] }, this.limit, function( data ) {
           searchCallback( data, self );
         });
         this.packery.stamp( $stickyBanner[0] );

@@ -58,21 +58,21 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
       switch ( val ) {
         case 'recommended':
           media.search( {
-            tags: [ 'recommended' ],
+            tags: [ 'webmaker:recommended' ],
             sortByField: { 'createdAt' : 'desc' }
           } );
           break;
 
         case 'featured':
           media.search( {
-            tags: [ 'featured' ],
+            tags: [ 'webmaker:featured' ],
             sortByField: { 'createdAt' : 'desc' }
           } );
           break;
 
         case 'popcorn':
           media.search( {
-            tags: [ 'featured' ],
+            tags: [ 'webmaker:featured' ],
             sortByField: { 'createdAt' : 'desc' },
             contentType: 'application/x-popcorn'
           } );
@@ -80,7 +80,7 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
         case 'thimble':
           media.search( {
-            tags: [ 'featured' ],
+            tags: [ 'webmaker:featured' ],
             sortByField: { 'createdAt' : 'desc' },
             contentType: 'application/x-thimble'
           } );
@@ -88,7 +88,7 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
         case 'guide':
           media.search( {
-            tags: [ 'featured', 'guide' ],
+            tags: [ 'webmaker:featured', 'guide' ],
             sortByField: { 'createdAt' : 'desc' },
             contentType: 'application/x-thimble'
           } );

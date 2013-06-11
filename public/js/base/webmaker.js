@@ -122,6 +122,11 @@ define(['jquery', 'uri', 'base/ui'],
       .sortByField( sortBy, sortOrder )
       .then( function( error, results ) {
         var result;
+
+        if ( error || !results ) {
+          return;
+        }
+
         for ( var i = 0; i < results.length; i++ ) {
           result = results[ i ];
           result.tags = getTags( result.tags );

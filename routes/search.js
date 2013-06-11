@@ -1,4 +1,4 @@
-module.exports = function( make, makeURL, personaSSO, loginAPI ) {
+module.exports = function( make ) {
   return function( req, res ) {
     var type = req.param( "type" ) || "title",
     query = req.param( "q" ) || "featured",
@@ -38,17 +38,12 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
     .page( page )
     .process( function( err, data ) {
       res.render( "search.html", {
-        csrf: req.session._csrf,
         currentUser: username,
-        email: req.session.email || '',
         hasQuery: req.param( "q" ),
-        loginAPI: loginAPI,
-        makeEndpoint: makeURL,
         makes: data || [],
         makeSize: makeSize,
         page: "search",
         pagination: page,
-        personaSSO: personaSSO,
         query: options[type],
         searchType: type
       });

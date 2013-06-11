@@ -1,15 +1,15 @@
-module.exports = function( make, makeEndpoint, personaSSO, loginAPI ){
+module.exports = function( make ){
   return {
     api: {
       healthcheck: require( "./api/healthcheck" )
     },
     details: require( "./details" )( make ),
-    me: require("./me")( make, makeEndpoint, personaSSO, loginAPI ),
+    me: require( "./me" )( make ),
     page: function( view ) {
-      return require( "./page" )( view, makeEndpoint, personaSSO, loginAPI );
+      return require( "./page" )( view );
     },
     remove: require( "./remove" )( make ),
-    search: require( "./search" )( make, makeEndpoint, personaSSO, loginAPI ),
+    search: require( "./search" )( make ),
     tag: function( req, res ) {
       res.redirect( "/search?type=tags&q=" + req.params.tag );
     },

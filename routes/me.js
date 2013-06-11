@@ -1,4 +1,4 @@
-module.exports = function( make, makeURL, personaSSO, loginAPI ) {
+module.exports = function( make ) {
   return function( req, res ) {
     var username = req.session.username,
         page = req.param.page || 1;
@@ -18,14 +18,9 @@ module.exports = function( make, makeURL, personaSSO, loginAPI ) {
 
         res.render( "me.html", {
           avatar: req.session.avatar,
-          csrf: req.session._csrf,
-          email: req.session.email || '',
-          loginAPI: loginAPI,
-          makeEndpoint: makeURL,
           makes: data || [],
           page: "me",
           pagination: page,
-          personaSSO: personaSSO,
           view: req.query.app || "webmaker",
           username: username
         });

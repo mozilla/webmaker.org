@@ -21,7 +21,7 @@ var app = express(),
       apiURL: env.get( "MAKE_ENDPOINT" ),
       auth: env.get( "MAKE_AUTH" )
     }),
-    routes = route( make, env.get( "MAKE_ENDPOINT" ), env.get( "AUDIENCE" ), env.get( "LOGIN" ) ),
+    routes = route( make ),
     NODE_ENV = env.get( "NODE_ENV" ),
     WWW_ROOT = path.resolve( __dirname, "public" );
 
@@ -48,13 +48,17 @@ app.use( express.cookieSession({
 }));
 app.use( express.csrf() );
 
-app.use(function(req, res, next) {
+app.locals({
+  makeEndpoint: env.get( "MAKE_ENDPOINT" ),
+  personaSSO: env.get( "AUDIENCE" ),
+  loginAPI: env.get( "LOGIN" )
+});
+
+app.use(function( req, res, next ) {
   res.locals({
-    makeEndpoint : process.env.MAKE_ENDPOINT,
-    personaSSO   : process.env.AUDIENCE,
-    loginAPI     : process.env.LOGIN,
-    email        : req.session.email || '',
-    webmakerID   : req.session.webmakerid || ''
+    email: req.session.email || '',
+    webmakerID: req.session.webmakerid || '',
+    csrf: req.session._csrf
   });
   next();
 });

@@ -1,6 +1,7 @@
 var S3_FIELDS = ['key', 'secret', 'bucket', 'local'];
 module.exports = function () {
     var noxmox = require('noxmox'),
+        knox = require('knox'),
         util = require('../util');
 
     /* Load S3 Configuration */
@@ -10,7 +11,7 @@ module.exports = function () {
     if (!util.hasFields(s3_conf, ['key', 'secret']))
         throw new Error("Missing or incomplete S3 configuration.");
 
-    s3_conf.local =  s3_conf.local  || __dirname+'/../static/uploads';
+    s3_conf.prefix = s3_conf.local  || __dirname+'/../static/uploads';
     s3_conf.bucket = s3_conf.bucket || 'events.webmaker.org';
 
     return {
@@ -29,6 +30,6 @@ module.exports = function () {
             } else console.error("Error: S3 url ("+url+") seems to be invalid.");
             return false;
         },
-        client: noxmox[s3_mode].createClient(s3_conf)
+        client: { mox: noxmox.mox, nox: knox }[s3_mode].createClient(s3_conf)
     };
 };

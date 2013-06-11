@@ -76,9 +76,7 @@ module.exports = function (init) {
         },
         change: function(req, res)
         {
-            console.log(req.body.event || req.body);
             var changes = event_input_filter(req.body.event || req.body, false, true, false);
-            console.log(changes);
             if (!changes)
                 return res.reply(400, 'Invalid Event changes requested');
             var allowed = [ 'title', 'description', 'address', 'latitude',
@@ -213,7 +211,6 @@ module.exports = function (init) {
                 break;
             case 'description':
                 evt[p] = markdown.toHTML(event[p]);
-                evt.desc_md = event[p];
                 break;
             default:
                 evt[p] = event[p];

@@ -1,7 +1,7 @@
 require.config({
     deps: ['main', 'jquery.css3finalize', 'bootstrap-markdown',
             'jquery.timepicker', 'jquery-ui.custom', 'jquery.validate',
-            'additional-methods', 'cta'],
+            'additional-methods'],
     paths: {
         'html':                 '/js/html',
         'base':                 '/js/base',
@@ -16,7 +16,6 @@ require.config({
         'jquery.validate':      '/ext/js/jquery.validate',
         'additional-methods':   '/ext/js/additional-methods',
         'jquery.css3finalize':  '/ext/js/jquery.css3finalize-v3.x.min',
-        'jquery.carousel':      '/ext/js/jquery.carouFredSel-6.2.1',
 
         'oms':                  '/ext/js/oms',
         'infobubble':           '/ext/js/infobubble',
@@ -34,7 +33,6 @@ require.config({
         'bootstrap-markdown':   ['jquery', 'markdown', 'to-markdown'],
         'jquery.validate':      ['jquery'],
         'additional-methods':   ['jquery.validate'],
-        'jquery.carousel':      ['jquery'],
     },
     callback: function () {
         require(['jquery'], function ($) {

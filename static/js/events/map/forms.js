@@ -67,7 +67,6 @@ function ($, EventModel, forms) { return function (mapMaker) {
                 }
             });
             $.post($createForm.attr('action'), data, function (data) {
-                console.log(data.event);
                 if (data.event) {
                     toggleCreateForm();
                     scroll();
@@ -85,7 +84,6 @@ function ($, EventModel, forms) { return function (mapMaker) {
         },
         highlight: function (input, errorClass, validClass) {
             var $parent = $(input).parent('.ui-append');
-            console.log($parent);
             $parent.addClass(errorClass).removeClass(validClass);
         },
         unhighlight: function (input, errorClass, validClass) {
@@ -102,9 +100,15 @@ function ($, EventModel, forms) { return function (mapMaker) {
         appendTo: function (elem) { return $(elem).parent() }
     });
 
+    mapMaker.setupAutocomplete($createForm.find('input[name="address"]')[0], false, function (place) {
+        var loc = { latitude:   place.geometry.location.lat(),
+                    longitude:  place.geometry.location.lng() };
+        for (var k in loc)
+            $createForm.find('input[name="'+k+'"]').val(loc[k]);
+    });
+
     forms.setupImageUpload($createForm);
     forms.setupSelectUI($createForm);
-    forms.setupAddressField($createForm, mapMaker);
 
     // setup form toggle button
     function toggleCreateForm() {

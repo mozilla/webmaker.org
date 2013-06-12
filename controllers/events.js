@@ -22,8 +22,7 @@ module.exports = function (init) {
             Event.all().success(function (events) {
                 res.format({
                     json: function () {
-                        res.reply(200, { events: events.map(function (event) {
-                                return event_output_filter(event, false) }) });
+                        res.reply(200, { events: events.map(event_output_filter) });
                     },
                     html: function () {
                         res.reply('map', { events: events.map(event_output_filter) });
@@ -66,7 +65,7 @@ module.exports = function (init) {
         {
             fetch_event(req, function (event) {
                 res.format({
-                    json: function () { res.reply(200, { event: event_output_filter(event, false) }) },
+                    json: function () { res.reply(200, { event: event_output_filter(event) }) },
                     html: function () {
                         res.reply('details', { event: event_output_filter(event) });
                     }
@@ -191,10 +190,9 @@ module.exports = function (init) {
             evt = required.every(function (f) { return !blank(evt[f]) }) ? evt : null;
         return evt
     }
-    function event_output_filter(event, format_dt) {
-        format_dt = format_dt === undefined ? true : format_dt;
-        function fmtDate(x) { return format_dt ? new Date(x).toDateString() : x }
-        function fmtTime(x) { if (!format_dt) return x;
+    function event_output_filter(event) {
+        function fmtDate(x) { return new Date(x).toDateString() }
+        function fmtTime(x) {
             var hms = new Date(x).toTimeString().split(' ')[0].split(':');
             var h = hms[0] % 12;
             if (h == 0) h = 12;

@@ -12,15 +12,15 @@ define(['resource_model'], function (ResourceModel) {
         var bD = this.beginDate, eD = this.endDate,
             bT = this.beginTime, eT = this.endTime,
             icon = '<img class="icon-img" src="/img/map/calendar.png" />';
-        function fmtRange(b, e, f) {
+        function fmtRange(b, e) {
             var sep = (b && e ? ' - ' : '');
-            return b || e ? '<div>' + f(b) + sep + f(e) + '</div>' : '';
+            return b || e ? '<div>' + (b ? b : '') + sep + (e ? e : '') + '</div>' : '';
         }
         if (!bD && !eD && !bT && !eT) return '';
         return '<div class="temporal-local">' + icon
             + '<div class="info-date">'
-              + fmtRange(bD, eD, function (x) { return new Date(x).toDateString() })
-              + fmtRange(bT, eT, function (x) { return new Date(x).toTimeString().split(' ')[0] })
+              + fmtRange(bD, eD)
+              + fmtRange(bT, eT)
             + '</div></div>';
     };
 

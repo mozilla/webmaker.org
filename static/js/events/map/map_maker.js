@@ -158,18 +158,6 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             cb.call(self, place);
         });
     };
-    // no-map version
-    MapMaker.setupAutocomplete = function (input, cityLevel, cb) {
-        var autocomplete = new google.maps.places.Autocomplete(input, {
-            types: cityLevel ? ['(regions)'] : ['geocode']
-        });
-
-        var self = this;
-        google.maps.event.addListener(autocomplete, 'place_changed', function() {
-            var place = autocomplete.getPlace();
-            cb.call(self, place);
-        });
-    };
     MapMaker.prototype.updateLocation = function() {
         var google_map = this.google_map;
         function getCurrentPosition_success(pos) {

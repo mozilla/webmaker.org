@@ -23,16 +23,18 @@
           </div>
         </span>
         {% if event.registerLink %}
-         <div id="event-registration">
-           <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
-           <p>This link will take you to an external event registration service, such as Eventbrite.</p>
-         </div>
+         <span class="show">
+           <div id="event-registration">
+             <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
+             <p>This link will take you to an external event registration service, such as Eventbrite.</p>
+           </div>
+         </span>
         {% endif %}
       </div>
       <span><div id="event-description">
         <h1 class="show">{{ event.title }}</h1>
         <span class="edit hidden">
-          <input type="text" name="title" placeholder="{{ event.title }}" />
+          <input type="text" name="title" placeholder="{{ event.title_raw | escape }}" />
         </span>
         <div id="event-whenwhere">
           <div class="temporal-local">
@@ -56,11 +58,15 @@
             <span class="edit hidden">
               <img class="calendar-icon" src="/img/map/calendar.png" />
               <div class="datetime-range">
-                <div> <input type="text" name="beginDate" class="datepicker" placeholder="{{ event.beginDate }}" />
-                    - <input type="text" name="endDate"   class="datepicker" placeholder="{{ event.endDate }}" />
+                <div> <input type="text" name="beginDate" class="datepicker"
+                        placeholder="{{ event.beginDate or "--/--/----" }}" />
+                    - <input type="text" name="endDate"   class="datepicker"
+                        placeholder="{{ event.endDate   or "--/--/----" }}" />
                 </div>
-                <div> <input type="text" name="beginTime" class="timepicker" placeholder="{{ event.beginTime }}" />
-                    - <input type="text" name="endTime"   class="timepicker" placeholder="{{ event.endTime }}" />
+                <div> <input type="text" name="beginTime" class="timepicker"
+                        placeholder="{{ event.beginTime or "-- : --  --" }}" />
+                    - <input type="text" name="endTime"   class="timepicker"
+                        placeholder="{{ event.endTime   or "-- : --  --" }}" />
                 </div>
               </div>
             </span>
@@ -74,7 +80,7 @@
             {% endif %}
             <span class="edit hidden">
               <img class="pin-icon" src="/img/map/pin-event-red.png" />
-              <input type="text" name="address" class="edit address" placeholder="{{ event.address }}" />
+              <input type="text" name="address" class="address" placeholder="{{ event.address }}" />
             </span>
           </div>
         </div>
@@ -100,7 +106,10 @@
           <p>{{ event.description }}</p>
         </span>
         <span class="edit hidden">
-          <textarea name="description" data-provide="markdown">{{ event.desc_src | escape }}</textarea>
+          <textarea name="description" data-provide="markdown">{{ event.description_raw | escape }}</textarea>
+          <label for="event_registerLink">Registration Link: </label>
+          <input id="event_registerLink" type="text" name="registerLink"
+                placeholder="{{ event.registerLink or "http://example.com/" }}" />
         </span>
 
         <div class="clear"></div>

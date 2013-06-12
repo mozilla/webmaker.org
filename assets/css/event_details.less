@@ -132,7 +132,7 @@ body#events.details {
 
         border-radius: 0px 0px 4px 4px;
     }
-    form {
+    form#edit-event {
         input {
             border: 1px solid #ccc;
             padding-left: 4px;
@@ -168,5 +168,10 @@ body#events.details {
             .clickable;
         }
         input[type="file"] { .hidden; }
+
+        input[name="registerLink"] {
+            width: 24em;
+            margin: 20px 10px;
+        }
     }
 }

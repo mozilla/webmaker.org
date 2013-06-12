@@ -17,6 +17,11 @@ require.config({
         'additional-methods':   '/ext/js/additional-methods',
         'jquery.css3finalize':  '/ext/js/jquery.css3finalize-v3.x.min',
 
+        'oms':                  '/ext/js/oms',
+        'infobubble':           '/ext/js/infobubble',
+        'google':               'map/google',
+        'markerclusterer':      'map/markerclusterer',
+
         'markdown':             '/ext/js/markdown',
         'to-markdown':          '/ext/js/to-markdown',
         'bootstrap-markdown':   '/ext/js/bootstrap-markdown',

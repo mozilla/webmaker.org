@@ -1,11 +1,3 @@
-require.config({
-    paths: {
-        'oms':              '/ext/js/oms',
-        'infobubble':       '/ext/js/infobubble',
-        'google':           'map/google',
-        'markerclusterer':  'map/markerclusterer',
-    }
-});
 define(['jquery', 'google', 'map/map_maker', 'map/forms'],
 function ($, google, MapMaker, EventForms) {
 

@@ -11,78 +11,8 @@ define(['jquery', 'jquery.carousel'], function($) {
     isMobile = true;
   }
 
-  // grab CTA data
-  var homeCTA = [{
-    "title": "Tools",
-    "desc": "Get started with Thimble, Popcorn or X-Ray Goggles.",
-    "image": "http://lorempixel.com/75/75/",
-    "url": "http://google.com"
-  },
-  {
-    "title": "Skills",
-    "desc": "Learn new digital and tech skills – and earn badges that prove it.",
-    "image": "http://lorempixel.com/75/75/",
-    "url": "http://google.com"
-  },
-  {
-    "title": "Guides",
-    "desc": "Teach digital literacy through fun making and sharing.",
-    "image": "http://lorempixel.com/75/75/",
-    "url": "http://google.com"
-  },
-  {
-    "title": "Party",
-    "desc": "Now to Sept 15: get together at Maker Party events everywhere.",
-    "image": "http://lorempixel.com/75/75/",
-    "url": "http://google.com"
-  },
-  {
-    "title": "Tools",
-    "desc": "Get started with Thimble, Popcorn or X-Ray Goggles.",
-    "image": "http://lorempixel.com/75/75/",
-    "url": "http://google.com"
-  }];
-
-  var teachCTA = [{
-    "title": "Become a Mentor",
-    "desc": "Provide direct feedback to learners of any age from around the world",
-    "image": "http://lorempixel.com/75/75/",
-    "url": "/mentor"
-  },
-  {
-    "title": "Maker Party",
-    "desc": "From now to September 15, join other webmakers in a global Maker Party.",
-    "image": "/img/cta-Party.jpg",
-    "url": "/party"
-  },
-  {
-    "title": "Get Involved",
-    "desc": "Need help? Access support and connect with the Webmaker community.",
-    "image": "/img/cta-Get-Involved.jpg",
-    "url": "/getinvolved"
-  },
-  {
-    "title": "Use our Tools",
-    "desc": "Create an original or a remix using Popcorn Maker and Thimble.",
-    "image": "/img/cta-Tools.jpg",
-    "url": "/tools"
-  }];
-
   function attachToCTA() {
     var page = $body[0].id;
-    var cta;
-    switch(page) {
-      case 'index':
-        cta = homeCTA;
-        break;
-      case 'teach':
-        cta = teachCTA;
-        break;
-      default:
-        cta = homeCTA;
-        break;
-    }
-
     var frag = document.createDocumentFragment();
 
     if(cta.length > 4 && !isMobile) {

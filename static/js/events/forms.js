@@ -23,7 +23,7 @@ function ($, UI, MapMaker) {
         showDuration: true
     });
 
-    setTimeout(scroll, 100);
+    setTimeout(scroll.bind(window, 0, 0), 100);
 
     return {
         setupImageUpload: function ($form) {

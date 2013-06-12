@@ -1,5 +1,6 @@
 define(['jquery', 'model', 'forms', 'bootstrap-markdown', 'domReady!'],
 function ($, EventModel, forms) { return function (mapMaker) {
+
     var $findForm   = $('form#find-event');
     $findForm.find('button[type="submit"]').click(function (ev) {
         ev.preventDefault();
@@ -69,7 +70,7 @@ function ($, EventModel, forms) { return function (mapMaker) {
             $.post($createForm.attr('action'), data, function (data) {
                 if (data.event) {
                     toggleCreateForm();
-                    scroll();
+                    scroll(0, 0);
                     var evt = new EventModel(data.event);
                     $where.val('');
                     mapMaker.google_map.setCenter(
@@ -108,10 +109,12 @@ function ($, EventModel, forms) { return function (mapMaker) {
     });
 
     mapMaker.setupAutocomplete($createForm.find('input[name="address"]')[0], false, function (place) {
-        var loc = { latitude:   place.geometry.location.lat(),
-                    longitude:  place.geometry.location.lng() };
-        for (var k in loc)
-            $createForm.find('input[name="'+k+'"]').val(loc[k]);
+        if (place && place.geometry) {
+            var loc = { latitude:   place.geometry.location.lat(),
+                        longitude:  place.geometry.location.lng() };
+            for (var k in loc)
+                $createForm.find('input[name="'+k+'"]').val(loc[k]);
+        }
     });
 
     forms.setupImageUpload($createForm);

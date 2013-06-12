@@ -60,11 +60,13 @@ module.exports = function (init) {
                         if (s3_res.statusCode === 200)
                             event.updateAttributes({
                                 picture: s3.url(filename)
+                            }).success(function (event) {
+                                res.reply(200, 'Event created',
+                                    { event: event_output_filter(event) });
                             });
                     });
                     s3_req.end(picture.data);
-                }
-                res.reply(200, 'Event created', { event: event_output_filter(event) });
+                } else res.reply(200, 'Event created', { event: event_output_filter(event) });
             }).error(function (err) {
                 res.reply(400, 'Invalid Event provided', { error: err });
             });
@@ -94,8 +96,9 @@ module.exports = function (init) {
                     delete changes[k];
             });
             var picture = changes.picture;
+            delete changes.picture;
             fetch_event(req, function (event) {
-                event.updateAttributes(changes, allowed).success(function () {
+                event.updateAttributes(changes, allowed).success(function (event) {
                     if (picture) {
                         var filename = uuid.v4();
                         var s3_req = s3.client.put(filename, {
@@ -105,7 +108,8 @@ module.exports = function (init) {
                         });
                         s3_req.on('response', function(s3_res) {
                             if (s3_res.statusCode === 200)
-                                s3.delete(event.picture);
+                                if (event.picture)
+                                    s3.delete(event.picture);
                                 event.updateAttributes({
                                     picture: s3.url(filename)
                                 });

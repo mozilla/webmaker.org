@@ -11,8 +11,17 @@
     <div id="details-pane" class="ui-section">
       <div class="gallery-sidebar">
         {% if event.picture %}
-         <img id="event-picture" src="{{ event.picture }}" onerror="this.style.display='none'" />
+         <span class="show">
+           <img id="event-picture" src="{{ event.picture }}" onerror="this.style.display='none'" />
+         </span>
         {% endif %}
+        <span class="edit hidden">
+          <div class="upload">
+              <input type="file" accept="image/*" />
+              <input name="picture" type="hidden" />
+              <div id="image-upload">Change Event Picture</div>
+          </div>
+        </span>
         {% if event.registerLink %}
          <div id="event-registration">
            <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>

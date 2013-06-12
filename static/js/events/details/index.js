@@ -20,4 +20,5 @@ function ($, forms, google) {
     $editForm.find('button#delete-event').click(function(ev) {
         // TODO: show modal with confirmation
     });
+    forms.setupImageUpload($editForm);
 });

@@ -118,20 +118,18 @@ module.exports = function (init) {
                     }
                     res.reply(200, 'Event modified', { event: event_output_filter(event) });
                 });
-            });
+            }, true);
         },
         destroy: function(req, res)
         {
-            Event.find(req.params.id).success(function (event) {
+            fetch_event(req, function (event) {
                 var picture = event.picture;
                 event.destroy().success(function () {
                     if (picture)
                         s3.delete(picture);
                     res.reply(200, 'Event deleted');
                 });
-            }).error(function (err) {
-                res.reply(404, 'Event not found');
-            });
+            }, true);
         }
     };
 
@@ -233,12 +231,15 @@ module.exports = function (init) {
         });
         return evt;
     }
-    function fetch_event(req, success) {
+    function fetch_event(req, success, modify) {
+        var res = req.res;
         return Event.find(req.params.id).success(function (event) {
-            if (!event) return req.res.reply(404, 'Event not found');
+            if (!event) return res.reply(404, 'Event not found');
+            if (modify && req.session.email != event.organizer)
+                return res.reply(403, 'User does not own Event');
             success(event);
         }).error(function (err) {
-            req.res.reply(404, 'Event not found');
+            res.reply(404, 'Event not found');
         });
     }
 };

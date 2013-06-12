@@ -21,6 +21,19 @@ function ($, google, forms) {
     $editForm.find('button#delete-event').click(function(ev) {
         // TODO: show modal with confirmation
     });
+    $("#delete-confirm").dialog({
+        resizable:  false,
+        height:     160,
+        modal:      true,
+        buttons: {
+          "Delete event": function() {
+            $(this).dialog("close");
+          },
+          Cancel: function() {
+            $(this).dialog("close");
+          }
+        }
+    });
     forms.setupImageUpload($editForm);
 
     var ac = new google.maps.places.Autocomplete(

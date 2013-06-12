@@ -12,6 +12,7 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
 
     // Views
     nunjucksEnv.loaders.push(new nunjucks.FileSystemLoader(paths.views));
+    nunjucksEnv.addFilter('json', JSON.stringify.bind(JSON));
 
     // Assets
     var optimize = process.env.NODE_ENV === 'production';

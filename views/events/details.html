@@ -70,7 +70,7 @@
           </div>
         </div>
         <div id="event-organizer">
-          <img src="{{ event.organizerImg }}" />
+          <img src="https://www.gravatar.com/avatar/{{ event.organizerHash }}" />
           <span>Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
         </div>
         {% if email and event.organizer == email %}
@@ -87,10 +87,12 @@
            </span>
          </div>
         {% endif %}
-        <span class="edit hidden">
-          <textarea name="description" data-provide="markdown"></textarea>
+        <span class="show">
+          <p>{{ event.description }}</p>
         </span>
-        <p>{{ event.description }}</p>
+        <span class="edit hidden">
+          <textarea name="description" data-provide="markdown">{{ event.desc_src | escape }}</textarea>
+        </span>
 
         <div class="clear"></div>
       </div></span>

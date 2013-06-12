@@ -31,8 +31,9 @@ module.exports = function () {
         init = init || function(){};
         model.init = function () {
             init.call(model, Model.models);
-        };
-        model.init.bind(model);
+        }.bind(model);
+        model.fields = Object.keys(fields)
+                             .filter(function (f) { return !f.match(/^\$/) });
         return model;
     };
     function make_types(typedefs) {

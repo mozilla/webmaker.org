@@ -4,6 +4,9 @@
 
 {% block body %}
 {{ super() }}
+<script>
+var EventSeeds = {{ events|json }};
+</script>
 <div class="overlay-container">
 <div class="map-overlay">
 

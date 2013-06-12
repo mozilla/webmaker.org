@@ -5,8 +5,13 @@ module.exports = function (init) {
         util  = require('../util'),
         uuid  = require('uuid'),
         fs    = require('fs'),
+        crypto   = require('crypto'),
         express  = require('express'),
         markdown = require('markdown').markdown;
+
+    var md5 = function (data) {
+        return crypto.createHash('md5').update(data).digest("hex");
+    }
 
     // Limit upload filesize
     //this.app.use('/events', express.limit('10M'));
@@ -18,10 +23,10 @@ module.exports = function (init) {
             Event.all().success(function (events) {
                 res.format({
                     json: function () {
-                        res.reply(200, { events: events });
+                        res.reply(200, { events: events.map(event_output_filter) });
                     },
                     html: function () {
-                        res.reply('map', { events: events });
+                        res.reply('map', { events: events.map(event_output_filter) });
                     }
                 })
             });
@@ -58,7 +63,7 @@ module.exports = function (init) {
                     });
                     s3_req.end(picture.data);
                 }
-                res.reply(200, 'Event created', { event: event });
+                res.reply(200, 'Event created', { event: event_output_filter(event) });
             }).error(function (err) {
                 res.reply(400, 'Invalid Event provided', { error: err });
             });
@@ -67,7 +72,7 @@ module.exports = function (init) {
         {
             fetch_event(req, function (event) {
                 res.format({
-                    json: function () { res.reply(200, { event: event }) },
+                    json: function () { res.reply(200, { event: event_output_filter(event) }) },
                     html: function () {
                         res.reply('details', { event: event_output_filter(event) });
                     }
@@ -106,7 +111,7 @@ module.exports = function (init) {
                         });
                         s3_req.end(picture.data);
                     }
-                    res.reply(200, 'Event modified', { event: event });
+                    res.reply(200, 'Event modified', { event: event_output_filter(event) });
                 });
             });
         },
@@ -135,7 +140,7 @@ module.exports = function (init) {
 
         var fields = {  // undefined fields are required
             title:          undefined,
-            description:    undefined,
+            description:    '',
             address:        undefined,
             latitude:       null,
             longitude:      null,
@@ -146,7 +151,7 @@ module.exports = function (init) {
             endTime:        null,
             registerLink:   null
         };
-        var required = [ 'title', 'description', 'latitude', 'longitude', 'address' ];
+        var required = [ 'title', 'latitude', 'longitude', 'address' ];
 
         var transforms = {
             picture: function (event) {
@@ -198,23 +203,28 @@ module.exports = function (init) {
         function fmtTime(x) { return new Date(x).toTimeString().split(' ')[0] }
 
         var evt = {};
-        for (var p in event) switch(p) {
-            case 'beginDate':
-            case 'endDate':
-                if (event[p])
-                    evt[p] = fmtDate(event[p]);
-                break;
-            case 'beginTime':
-            case 'endTime':
-                if (event[p])
-                    evt[p] = fmtTime(event[p]);
-                break;
-            case 'description':
-                evt[p] = markdown.toHTML(event[p]);
-                break;
-            default:
-                evt[p] = event[p];
-        }
+        Event.fields.forEach(function (p) {
+            switch(p) {
+                case 'beginDate':
+                case 'endDate':
+                    evt[p] = event[p] ? fmtDate(event[p]) : null;
+                    break;
+                case 'beginTime':
+                case 'endTime':
+                    evt[p] = event[p] ? fmtTime(event[p]) : null;
+                    break;
+                case 'description':
+                    evt.desc_src = event[p];
+                    evt[p] = markdown.toHTML(event[p]);
+                    break;
+                case 'organizer':
+                    evt.organizerHash = md5(event[p]);
+                    evt[p] = event[p];
+                    break;
+                default:
+                    evt[p] = event[p];
+            }
+        });
         return evt;
     }
     function fetch_event(req, success) {

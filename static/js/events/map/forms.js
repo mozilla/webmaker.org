@@ -93,5 +93,7 @@ function ($, EventModel, forms) { return function (mapMaker) {
         }
     });
 
-    EventModel.all(function (models) { mapMaker.dropPins(models) });
+    mapMaker.dropPins(EventSeeds.map(function (event) {
+        return new EventModel(event);
+    }));
 }});

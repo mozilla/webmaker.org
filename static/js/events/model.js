@@ -4,7 +4,8 @@ define(['resource_model'], function (ResourceModel) {
         name:   'event',
         fields: [ 'title', 'description', 'address', 'latitude', 'longitude',
             'attendees', 'beginDate', 'beginTime', 'endDate', 'endTime',
-            'registerLink', 'picture', 'organizer', 'organizerId', 'created', 'id' ],
+            'registerLink', 'picture', 'organizer', 'organizerId',
+            'organizerHash', 'created', 'id' ],
     });
 
     EventModel.prototype.datetimeHTML = function() {
@@ -33,7 +34,7 @@ define(['resource_model'], function (ResourceModel) {
             }).join("\n") + '</div></div>';
     };
     EventModel.prototype.organizerHTML = function() {
-        return '<img src="http://lorempixel.com/75/75/" class="organizer-img" />'
+        return '<img src="https://gravatar.com/avatar/' + this.organizerHash + '" class="organizer-img" />'
             + '<div class="info-organizer"><span class="title">Organized by</span><br/>'
             + this.organizerId + '</div>'
     };

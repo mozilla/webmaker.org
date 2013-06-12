@@ -7,3 +7,73 @@
     border-radius: 40px;
   }
 }
+
+.me-make {
+  .make-info {
+    font-size: 13px;
+    p {
+      font-size: 1em;
+      margin-bottom: 0.5em;
+    }
+    .updatedAt {
+      color: #999;
+    }
+  }
+  &.make-type-popcorn .btn-container .view-btn:hover {
+    color: @green;
+  }
+  &.make-type-thimble .btn-container .view-btn:hover {
+    color: @blue;
+  }
+}
+
+.type-label {
+  position: absolute;
+  text-transform: capitalize;
+  right: 14px;
+  bottom: 14px;
+  background: @green;
+  font-size: 11px;
+  padding: 0.5em;
+  border-radius: 5px;
+  color: #FFF;
+  border: 1px solid #FFF;
+  .make-type-popcorn & {
+    background: @green;
+  }
+  .make-type-thimble & {
+    background: @blue;
+  }
+}
+
+// For in-app version
+.thimble,
+.popcorn {
+  #midbar,
+  #webmaker-nav,
+  .footer {
+    display: none;
+  }
+  .webmaker-outer-wrapper {
+    height: 300px;
+    width: 3000px; // Should be set in js, see base/mediaGallery.js
+  }
+  .ui-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 30px;
+  }
+  .me-make {
+    float: left;
+    margin-right: 20px;
+    transition: left 0.2s ease;
+    box-shadow: none;
+    &.make-type-popcorn:hover {
+      box-shadow: 0 0 0 1px @green;
+    }
+    &.make-type-thimble:hover {
+      box-shadow: 0 0 0 1px @blue;
+    }
+  }
+}

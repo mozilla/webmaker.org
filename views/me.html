@@ -11,7 +11,6 @@
 {% block body %}
 <div class="ui-wrapper">
   <div class="main-gallery search-gallery">
-    <div class="loading"></div>
     <div class="gutter-sizer"></div>
     {{ memakes() }}
   </div>
@@ -20,4 +19,11 @@
   {% endif %}
 </div>
 {% endblock %}
-{% block scripts %}{% endblock %}
+{% block require_main %}{% endblock %}
+{% block scripts %}
+<script>
+  require(['./js/app'], function (app) {
+    require(['pages/me']);
+  });
+</script>
+{% endblock %}

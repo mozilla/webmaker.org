@@ -150,16 +150,6 @@ define(['jquery', 'moment'],
           self.packery.layout();
         });
         break;
-      case 'me':
-        // Check it it's an in-app version
-        if ( $body.hasClass( "thimble" ) || $body.hasClass( "popcorn" ) ) {
-          var $makes = $( ".make" ),
-              baseWidth = $makes.width(),
-              gutter = $( ".gutter-sizer" ).width();
-          $( ".webmaker-outer-wrapper" ).css( "width", ( baseWidth + gutter ) * $makes.length + gutter );
-          self.packery.layout();
-        }
-        break;
       case 'index':
         var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
         var $rotator = $('<div class="rotator">');

@@ -5,6 +5,7 @@ function ($, google, MapMaker, EventForms) {
     var mapCenter = new google.maps.LatLng(37.774546, -122.433523);
     var mapOptions = {
         zoom: defaultZoom,
+        scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: mapCenter,
 

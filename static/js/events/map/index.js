@@ -38,13 +38,16 @@ function ($, google, MapMaker, EventForms) {
     var mcOptions = {
         gridSize: 20,
         maxZoom: 15,    // Don't cluster after this zoom level
-                        // Clicking on a cluster goes to zoom 16,
-                        //  we don't want clusters at this level.
+                        // (clicking on a cluster goes to zoom 16)
         imagePath: "/img/map/c",
         imageSizes: [43, 43, 43, 43, 43]
     };
+    var omsOptions = {
+        keepSpiderfied: true,
+        legWeight: 0.8
+    };
 
-    var mapMaker = new MapMaker($('#map-canvas')[0], mapOptions, mcOptions);
+    var mapMaker = new MapMaker($('#map-canvas')[0], mapOptions, mcOptions, omsOptions);
     mapMaker.setupInfoWindow();
     mapMaker.updateLocation() ;
 

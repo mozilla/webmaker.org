@@ -5,7 +5,8 @@ function ($, EventModel, forms) { return function (mapMaker) {
         ev.preventDefault();
         $findForm.submit();
     });
-    var $when = $findForm.find('input[name="find-when"]');
+    var $when  = $findForm.find('input[name="find-when"]'),
+        $where = $findForm.find('input[name="find-where"]');
     $findForm.on("submit", function(ev) {
         ev.preventDefault();
         EventModel.all(function (models) {
@@ -30,7 +31,8 @@ function ($, EventModel, forms) { return function (mapMaker) {
             }
         });
     });
-    mapMaker.setupAutocomplete($('input[name="find-where"]')[0], true, function (place) {
+    mapMaker.setupAutocomplete($where[0], true, function (place) {
+        mapMaker.closeInfoWindow();
         if (place.geometry) {
             // If the place has a geometry, then present it on a map.
             if (place.geometry.viewport) {
@@ -39,6 +41,8 @@ function ($, EventModel, forms) { return function (mapMaker) {
                 this.google_map.setCenter(place.geometry.location);
                 this.google_map.setZoom(14);
             }
+        } else {
+            this.updateLocation();
         }
     });
 
@@ -66,7 +70,13 @@ function ($, EventModel, forms) { return function (mapMaker) {
                 console.log(data.event);
                 if (data.event) {
                     toggleCreateForm();
-                    mapMaker.addMarker(new EventModel(data.event));
+                    scroll();
+                    var evt = new EventModel(data.event);
+                    $where.val('');
+                    mapMaker.google_map.setCenter(
+                        new google.maps.LatLng(evt.latitude, evt.longitude)
+                    );
+                    mapMaker.addMarker(evt);
                 }
             }, 'json');
         },

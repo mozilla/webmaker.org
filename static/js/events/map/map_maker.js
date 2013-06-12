@@ -1,7 +1,7 @@
 define(['jquery', 'google', 'infobubble', 'oms', 'markerclusterer'],
 function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
 
-    function MapMaker(map_canvas, mapOptions, mcOptions) {
+    function MapMaker(map_canvas, mapOptions, mcOptions, omsOptions) {
         this.map_canvas = map_canvas;
         this.google_map = new google.maps.Map(map_canvas, mapOptions);
         this.geocoder = new google.maps.Geocoder();
@@ -10,9 +10,30 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
 
         var self = this;
         // this handles multiple markers at the same location
-        this.oms = new OverlappingMarkerSpiderfier(this.google_map);
+        this.oms = new OverlappingMarkerSpiderfier(this.google_map, omsOptions);
         this.oms.addListener('click', function(marker, evt) {
             self.showInfoWindow(marker);
+        });
+        google.maps.event.addListener(this.google_map, 'zoom_changed', function(ev) {
+            setTimeout(function () {
+                if (self.google_map.getZoom() <= 15) return;
+                var markers = self.oms.markersNearAnyOtherMarker();
+                var seen = {};
+                var clusters = [];
+                var ID = '__gm_id';
+                self.oms.unspiderfy();
+                markers.forEach(function (m) {
+                    if (m[ID] in seen) return;
+                    self.oms.markersNearMarker(m).forEach(function (nm) {
+                        seen[nm[ID]] = true;
+                    });
+                    clusters.push(m);
+                    seen[m[ID]] = true;
+                });
+                clusters.forEach(function (m) {
+                    google.maps.event.trigger(m, 'click');
+                });
+            }, 400);
         });
     }
     MapMaker.prototype.dropPins = function (models, animate, filter) {
@@ -61,6 +82,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
     /* Delete all markers by removing references to them */
     MapMaker.prototype.clearMarkers = function () {
         this.markerManager.clearMarkers();
+        this.oms.clearMarkers();
     }
     MapMaker.prototype.getMarkers = function() {
         return this.markerManager.getMarkers();
@@ -125,7 +147,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
         this.infoWindow.open(this.google_map, marker);
     };
     MapMaker.prototype.setupAutocomplete = function (input, cityLevel, cb) {
-        var options = { types: cityLevel ? ['(cities)'] : ['geocode', 'establishment'] }; // [] is all
+        var options = { types: cityLevel ? ['(regions)'] : ['geocode', 'establishment'] }; // [] is all
         var autocomplete = new google.maps.places.Autocomplete(input, options);
         autocomplete.bindTo('bounds', this.google_map);
 

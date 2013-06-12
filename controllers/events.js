@@ -164,14 +164,27 @@ module.exports = function (init) {
                     type: match[1],
                     data: new Buffer(match[2], 'base64')
                 } : undefined
-            }
+            },
+            address: function (event) {
+                if ('latitude' in event && 'longitude' in event)
+                    return event.address;
+            },
+            latitude: function (event) {
+                if ('address' in event && 'longitude' in event)
+                    return event.latitude;
+            },
+            longitude: function (event) {
+                if ('address' in event && 'latitude' in event)
+                    return event.longitude;
+            },
         };
         // pre-process the Date/Time fields
         ['begin', 'end'].forEach(function (pfx) {
             datetime_transform('Date', function (val) {
-                return new Date(val.split(/[-\/]/));
+                return val ? new Date(val.split(/[-\/]/)) : null;
             });
             datetime_transform('Time', function (val) {
+                if (!val) return null;
                 var m = val.match(/^(\d+):(\d+)\s*([ap]m)$/);
                 return m ? new Date(0, 0, 0,
                     m[1] % 12 + (m[3] == "pm") * 12, m[2]) : null;

@@ -20,81 +20,83 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
   $(document).ready(function() {
     var $body = $('body');
 
-    webmaker.init({
-      page: $body[0].id,
-      makeURL: $body.data('endpoint')
-    });
+    if ( $body[0].id !== "events" ) {
+       webmaker.init({
+        page: $body[0].id,
+        makeURL: $body.data('endpoint')
+      });
 
-    var media = new MediaGallery(webmaker);
-    media.init();
+      var media = new MediaGallery(webmaker);
+      media.init();
 
-    var deleteBtn = $(".delete-btn");
-    deleteBtn.on( "click", function(e) {
-      e.preventDefault();
-      var $this = $(this),
-          makeID = $this.data("make-id");
-      if(confirm('Are you sure you want to delete this make?')) {
-        $.post("/remove", { makeID: makeID }, function(res) {
-          if( res.deletedAt ) {
-            media.packery.remove( $this.closest(".make")[0] );
-            media.packery.layout();
-          } else {
-            alert("Oops, we couldn't delete this make :(");
-            console.log(res);
-          }
-        });
-      }
-    });
+      var deleteBtn = $(".delete-btn");
+      deleteBtn.on( "click", function(e) {
+        e.preventDefault();
+        var $this = $(this),
+            makeID = $this.data("make-id");
+        if(confirm('Are you sure you want to delete this make?')) {
+          $.post("/remove", { makeID: makeID }, function(res) {
+            if( res.deletedAt ) {
+              media.packery.remove( $this.closest(".make")[0] );
+              media.packery.layout();
+            } else {
+              alert("Oops, we couldn't delete this make :(");
+              console.log(res);
+            }
+          });
+        }
+      });
 
-    $( '.load-more' ).on( 'click', function ( e ) {
-      media.loadMore();
-    } );
+      $( '.load-more' ).on( 'click', function ( e ) {
+        media.loadMore();
+      } );
+
+      UI.select( '#search-filter', function( val ) {
+        switch ( val ) {
+          case 'recommended':
+            media.search( {
+              tags: [ 'webmaker:recommended' ],
+              sortByField: { 'createdAt' : 'desc' }
+            } );
+            break;
+
+          case 'featured':
+            media.search( {
+              tags: [ 'webmaker:featured' ],
+              sortByField: { 'createdAt' : 'desc' }
+            } );
+            break;
+
+          case 'popcorn':
+            media.search( {
+              tags: [ 'webmaker:featured' ],
+              sortByField: { 'createdAt' : 'desc' },
+              contentType: 'application/x-popcorn'
+            } );
+            break;
+
+          case 'thimble':
+            media.search( {
+              tags: [ 'webmaker:featured' ],
+              sortByField: { 'createdAt' : 'desc' },
+              contentType: 'application/x-thimble'
+            } );
+            break;
+
+          case 'guide':
+            media.search( {
+              tags: [ 'webmaker:featured', 'guide' ],
+              sortByField: { 'createdAt' : 'desc' },
+              contentType: 'application/x-thimble'
+            } );
+            break;
+        }
+      });
+    }
 
     $( '#bottom-search-btn' ).on( 'click', function ( e ) {
       document.getElementById('webmaker-nav').scrollIntoView();
     } );
-
-    UI.select( '#search-filter', function( val ) {
-      switch ( val ) {
-        case 'recommended':
-          media.search( {
-            tags: [ 'webmaker:recommended' ],
-            sortByField: { 'createdAt' : 'desc' }
-          } );
-          break;
-
-        case 'featured':
-          media.search( {
-            tags: [ 'webmaker:featured' ],
-            sortByField: { 'createdAt' : 'desc' }
-          } );
-          break;
-
-        case 'popcorn':
-          media.search( {
-            tags: [ 'webmaker:featured' ],
-            sortByField: { 'createdAt' : 'desc' },
-            contentType: 'application/x-popcorn'
-          } );
-          break;
-
-        case 'thimble':
-          media.search( {
-            tags: [ 'webmaker:featured' ],
-            sortByField: { 'createdAt' : 'desc' },
-            contentType: 'application/x-thimble'
-          } );
-          break;
-
-        case 'guide':
-          media.search( {
-            tags: [ 'webmaker:featured', 'guide' ],
-            sortByField: { 'createdAt' : 'desc' },
-            contentType: 'application/x-thimble'
-          } );
-          break;
-      }
-    });
 
     carousel.attachToCTA();
     carousel.attachToPartners();

@@ -124,12 +124,24 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
         this.infoWindow.open(this.google_map, marker);
     };
     MapMaker.prototype.setupAutocomplete = function (input, cityLevel, cb) {
-        var options = { types: cityLevel ? ['(regions)'] : [] }; // [] is all
+        var options = { types: cityLevel ? ['(cities)'] : ['geocode', 'establishment'] }; // [] is all
         var autocomplete = new google.maps.places.Autocomplete(input, options);
         autocomplete.bindTo('bounds', this.google_map);
 
         var self = this;
         // listen for location changes on this text field and center the map on new position
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            var place = autocomplete.getPlace();
+            cb.call(self, place);
+        });
+    };
+    // no-map version
+    MapMaker.setupAutocomplete = function (input, cityLevel, cb) {
+        var autocomplete = new google.maps.places.Autocomplete(input, {
+            types: cityLevel ? ['(regions)'] : ['geocode']
+        });
+
+        var self = this;
         google.maps.event.addListener(autocomplete, 'place_changed', function() {
             var place = autocomplete.getPlace();
             cb.call(self, place);

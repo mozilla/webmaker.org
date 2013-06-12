@@ -81,6 +81,9 @@
             <span class="edit hidden">
               <img class="pin-icon" src="/img/map/pin-event-red.png" />
               <input type="text" name="address" class="address" placeholder="{{ event.address }}" />
+              // NOTE: only let address/latitude/longitude change together
+              <input name="latitude"  type="hidden" />
+              <input name="longitude" type="hidden" />
             </span>
           </div>
         </div>

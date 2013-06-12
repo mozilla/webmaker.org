@@ -30,6 +30,17 @@ function ($, EventModel, forms) { return function (mapMaker) {
             }
         });
     });
+    mapMaker.setupAutocomplete($('input[name="find-where"]')[0], true, function (place) {
+        if (place.geometry) {
+            // If the place has a geometry, then present it on a map.
+            if (place.geometry.viewport) {
+                this.google_map.fitBounds(place.geometry.viewport);
+            } else {
+                this.google_map.setCenter(place.geometry.location);
+                this.google_map.setZoom(14);
+            }
+        }
+    });
 
     var $createForm = $('form#create-event');
     $createForm.validate({
@@ -83,6 +94,7 @@ function ($, EventModel, forms) { return function (mapMaker) {
 
     forms.setupImageUpload($createForm);
     forms.setupSelectUI($createForm);
+    forms.setupAddressField($createForm, mapMaker);
 
     // setup form toggle button
     function toggleCreateForm() {
@@ -93,24 +105,6 @@ function ($, EventModel, forms) { return function (mapMaker) {
     $(".formExpandButton").click(function(ev) {
         ev.preventDefault();
         toggleCreateForm();
-    });
-
-    mapMaker.setupAutocomplete($('input[name="address"]')[0], false, function (place) {
-        var loc = { latitude:   place.geometry.location.lat(),
-                    longitude:  place.geometry.location.lng() };
-        for (var k in loc)
-            $createForm.find('input[name="'+k+'"]').val(loc[k]);
-    });
-    mapMaker.setupAutocomplete($('input[name="find-where"]')[0], true, function (place) {
-        if (place.geometry) {
-            // If the place has a geometry, then present it on a map.
-            if (place.geometry.viewport) {
-                this.google_map.fitBounds(place.geometry.viewport);
-            } else {
-                this.google_map.setCenter(place.geometry.location);
-                this.google_map.setZoom(14);
-            }
-        }
     });
 
     EventModel.all(function (events) { mapMaker.dropPins(events) });

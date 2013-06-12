@@ -1,5 +1,5 @@
-define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'domReady!'],
-function ($, UI) {
+define(['jquery', '../base/ui', 'map/map_maker', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'domReady!'],
+function ($, UI, MapMaker) {
     $('.datepicker').datepicker().each(function(i, elem) {
         $(elem).next('.icon').click(function () { $(elem).focus() });
     });
@@ -74,6 +74,16 @@ function ($, UI) {
                 var $select = $('select[name="attendees"]');
                 $select.next('.ui-select').remove();
                 UI.select($select);
+            });
+        },
+        setupAddressField: function ($form, mapMaker) {
+            var ac = mapMaker ? mapMaker.setupAutocomplete.bind(mapMaker)
+                              : MapMaker.prototype.setupAutocomplete;
+            ac($form.find('input[name="address"]')[0], false, function (place) {
+                var loc = { latitude:   place.geometry.location.lat(),
+                            longitude:  place.geometry.location.lng() };
+                for (var k in loc)
+                    $form.find('input[name="'+k+'"]').val(loc[k]);
             });
         },
     };

@@ -1,16 +1,16 @@
-require.config({
-    paths: {
-        'google':           'map/google',
-    }
-});
-define(['jquery', 'forms', 'google', 'domReady!'],
+define(['jquery', 'forms', 'domReady!'],
 function ($, forms, google) {
     var $editForm = $('form#edit-event');
+    $editForm.validate({
+        rules: {
+            registerLink: 'url'
+        }
+    });
+
     function toggleEditMode() {
         $('.show').toggleClass('hidden');
         $('.edit').toggleClass('hidden');
     }
-    new google.maps.places.Autocomplete($editForm.find('input[name="address"]')[0]);
     $editForm.find('button#edit-mode').click(function(ev) {
         toggleEditMode();
     });
@@ -20,5 +20,6 @@ function ($, forms, google) {
     $editForm.find('button#delete-event').click(function(ev) {
         // TODO: show modal with confirmation
     });
+    forms.setupAddressField($editForm);
     forms.setupImageUpload($editForm);
 });

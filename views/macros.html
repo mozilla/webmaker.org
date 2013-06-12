@@ -5,6 +5,7 @@
       <h1>{{ header }}</h1>
       <p> {{ desc }}</p>
     </div>
+    {% if options.length %}
     <div class="g-2 filter">
       <div id="search">
         <div class="filter-bar">
@@ -17,6 +18,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
   </div>
 </div>
 {% endmacro %}

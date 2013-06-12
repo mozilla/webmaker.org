@@ -135,6 +135,11 @@
   .padright(1);
 }
 
+.ui-section-nopad {
+  padding-top: @gutter * @unit;
+  padding-bottom: @gutter * 2 * @unit;
+}
+
 @media (max-width: 640px) {
   .ui-wrapper {
     width: 100%;
@@ -159,6 +164,19 @@
   box-shadow: 0 35px 20px -40px rgba( 0, 0, 0, 0.9 );
 }
 
+.ui-body-nobg {
+  font-size: 14px;
+  color: @grey;
+  line-height: 1.8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ui-bg-column {
+  background-color: #FFF;
+}
+
+.ui-body-nobg,
 .ui-body {
   h1, h2, h3 {
     margin: 0 0 (@gutter / 2 * @unit) 0;
@@ -303,6 +321,20 @@ figure {
   &:hover {
     text-decoration: none;
   }
+}
+
+.ui-blue-btn {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  background-color: @blue;
+  height: 50px;
+  line-height: 50px;
+  width: 275px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 /*********************************************************

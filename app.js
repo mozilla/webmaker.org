@@ -92,6 +92,7 @@ app.get( "/party", routes.page( "party" ) );
 app.get( "/tools", routes.page( "tools" ) );
 app.get( "/mentor", routes.page( "mentor" ) );
 app.get( "/getinvolved", routes.page( "getinvolved" ) );
+app.get( "/guides", routes.page( "guides" ) );
 app.get( "/search", routes.search );
 
 app.get( "/details", routes.details );

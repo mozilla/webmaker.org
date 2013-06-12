@@ -152,22 +152,16 @@ define(['jquery', 'jquery.carousel'], function($) {
   }
 
   function attachToPartners() {
-    var $partners = $('.sponsors');
 
-    var carouOptions = {
-      items: {
-        visible: 3,
-        width: DEFAULT_FOOTER_ITEM_WIDTH
-      },
+    var $partners = $(".sponsors").carouFredSel({
+      width : 870,
+      items : 3,
       align: 'center',
       scroll: { fx: 'fade' },
       next: { button: $('.refresh-sponsors') },
-      responsive: true
-    };
 
-    if (!isMobile) {
-      $partners.carouFredSel(carouOptions);
-    }
+    });
+
   }
 
   var self = {

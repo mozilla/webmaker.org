@@ -106,9 +106,6 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
         $('.internal').hide();
         media.layout();
       };
-      navigator.idSSO.app.onlogout = function() {
-        window.location.reload();
-      };
     }
   });
 });

@@ -149,6 +149,40 @@
   </footer>
   <div class="mobile"></div>
 </div><!-- webmaker-outer-wrapper -->
+<script>
+window.cta = {% block CTA %}
+  [{
+    "title": "Tools",
+    "desc": "Get started with Thimble, Popcorn or X-Ray Goggles.",
+    "image": "http://lorempixel.com/75/75/",
+    "url": "http://google.com"
+  },
+  {
+    "title": "Skills",
+    "desc": "Learn new digital and tech skills – and earn badges that prove it.",
+    "image": "http://lorempixel.com/75/75/",
+    "url": "http://google.com"
+  },
+  {
+    "title": "Guides",
+    "desc": "Teach digital literacy through fun making and sharing.",
+    "image": "http://lorempixel.com/75/75/",
+    "url": "http://google.com"
+  },
+  {
+    "title": "Party",
+    "desc": "Now to Sept 15: get together at Maker Party events everywhere.",
+    "image": "http://lorempixel.com/75/75/",
+    "url": "http://google.com"
+  },
+  {
+    "title": "Tools",
+    "desc": "Get started with Thimble, Popcorn or X-Ray Goggles.",
+    "image": "http://lorempixel.com/75/75/",
+    "url": "http://google.com"
+  }];
+{% endblock %} ;
+</script>
 <script src="{{ personaSSO }}/sso/include.js"></script>
 <script src="{{ loginAPI }}/js/sso-ux.js"></script>
 <script src="{{ makeEndpoint }}/js/make-api.js"></script>

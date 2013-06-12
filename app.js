@@ -51,7 +51,9 @@ app.use( express.csrf() );
 app.locals({
   makeEndpoint: env.get( "MAKE_ENDPOINT" ),
   personaSSO: env.get( "AUDIENCE" ),
-  loginAPI: env.get( "LOGIN" )
+  loginAPI: env.get( "LOGIN" ),
+  ga_account: env.get( "GA_ACCOUNT" ),
+  ga_domain: env.get( "GA_DOMAIN" )
 });
 
 app.use(function( req, res, next ) {

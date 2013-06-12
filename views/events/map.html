@@ -21,17 +21,17 @@
     <form id="create-event" action="/events" method="POST" class='hidden'>
         <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
         <fieldset>
-            <label for="title"> Name your event </label>
-            <span class="cell ui-input ui-append"><input name="title"
+            <label for="event_title"> Name your event </label>
+            <span class="cell ui-input ui-append"><input id="event_title" name="title"
                 placeholder="Use an awesome title so people will come!" /></span>
 
-            <label for="description"> Describe your event </label>
-            <textarea name="description" data-provide="markdown"
+            <label for="event_description"> Describe your event </label>
+            <textarea id="event_description" name="description" data-provide="markdown"
                 placeholder="Tell people a few more details about your event. What can they expect?"></textarea><br />
         </fieldset>
         <fieldset>
-            <label for="attendees"> How many attendees are you expecting? </label>
-            <div><select name="attendees">
+            <label for="event_attendees"> How many attendees are you expecting? </label>
+            <div><select id="event_attendees" name="attendees">
                 <option value=0> 1-10 </option>
                 <option value=1> 10-20 </option>
                 <option value=2> 20-50 </option>
@@ -42,26 +42,25 @@
                 <option value=5> 500+ </option>
             </select></div><br />
 
-            <label for="address"> Event location </label>
+            <label for="event_address"> Event location </label>
             <span class="cell ui-input ui-append">
-                <input name="address" type="text" />
+                <input id="event_address" name="address" type="text" />
             </span>
 
             <input name="latitude" type="hidden" />
             <input name="longitude" type="hidden" />
 
-            <label for="registerLink"> Event Link </label>
+            <label for="event_registerLink"> Event Link </label>
             <span class="registerLink cell ui-input ui-append">
-                <input name="registerLink" type="url"
-                        placeholder="Link to registration page" />
-            </span>
+                <input id="event_registerLink" name="registerLink" type="url"
+                        placeholder="Link to registration page" /> </span>
 
             {% for i in ['begin','end'] %}
-            <label for="{{i}}Date"> Event {{i}}s </label>
+            <label for="event_{{i}}Date"> Event {{i}}s </label>
             <div class='datetime'>
                 <span class="ui-append ui-select select-date">
                     <span class="icon-calendar"></span>
-                    <input name="{{i}}Date" type="text" class="datepicker"
+                    <input id="event_{{i}}Date" name="{{i}}Date" type="text" class="datepicker"
                             placeholder="--/--/--" />
                     <a class="icon icon-chevron-down"></a>
                 </span>

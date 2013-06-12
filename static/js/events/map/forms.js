@@ -32,28 +32,45 @@ function ($, EventModel, forms) { return function (mapMaker) {
     });
 
     var $createForm = $('form#create-event');
-    $createForm.on('submit', function(ev) {
-        ev.preventDefault();
-        var form_fields = $createForm.serializeArray();
-        var data = { event: {} };
-        form_fields.forEach(function (f) {
-            if (f.name) switch (f.name) {
-                case '_csrf':
-                    data[f.name] = f.value;
-                    break;
-                case 'address': // TODO: split address into two lines
-                default:
-                    data.event[f.name] = f.value;
-            }
-        });
-        $.post($createForm.attr('action'), data, function (data) {
-            console.log(data.event);
-            if (data.event) {
-                toggleCreateForm();
-                mapMaker.addMarker(new EventModel(data.event));
-            }
-        }, 'json');
-        return false;
+    $createForm.validate({
+        rules: {
+            title: 'required',
+            registerLink: 'url',
+            address: 'required'
+        },
+        submitHandler: function() {
+            var form_fields = $createForm.serializeArray();
+            var data = { event: {} };
+            form_fields.forEach(function (f) {
+                if (f.name) switch (f.name) {
+                    case '_csrf':
+                        data[f.name] = f.value;
+                        break;
+                    case 'address': // TODO: split address into two lines
+                    default:
+                        data.event[f.name] = f.value;
+                }
+            });
+            $.post($createForm.attr('action'), data, function (data) {
+                console.log(data.event);
+                if (data.event) {
+                    toggleCreateForm();
+                    mapMaker.addMarker(new EventModel(data.event));
+                }
+            }, 'json');
+        },
+        errorPlacement: function ($errors, $elem) {
+            $elem.prop('placeholder', $errors.first().text());
+        },
+        highlight: function (input, errorClass, validClass) {
+            var $parent = $(input).parent('.ui-append');
+            console.log($parent);
+            $parent.addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (input, errorClass, validClass) {
+            var $parent = $(input).parent('.ui-append');
+            $parent.addClass(validClass).removeClass(errorClass);
+        }
     });
     var $beginTime = $createForm.find('[name="beginTime"]'),
         $endTime   = $createForm.find('[name="endTime"]');

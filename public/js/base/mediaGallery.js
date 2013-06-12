@@ -36,7 +36,7 @@ define(['jquery', 'moment'],
     $authorLink.text( "@" + data.username );
     $authorLink.attr( "href", "/u/" + data.username );
     $viewBtn.attr( "href", data.url );
-    $forkBtn.attr( "href", data.url );
+    $forkBtn.attr( "href", data.url + '/remix' );
     $descSpan.text( data.description );
     // Note that the remix url doesn't exist right now?
 

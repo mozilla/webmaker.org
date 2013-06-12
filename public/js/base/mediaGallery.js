@@ -162,7 +162,18 @@ define(['jquery', 'moment'],
         break;
       case 'index':
         var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
-        var $h1 = $('<h1>The web is still wild. Build it.</h1>');
+        var $rotator = $('<div class="rotator">');
+        var stampHeaders = [
+          'The web is still wild. Build it.',
+          'The web is still open. Hack it.',
+          'The web is still weird. Create it.',
+          'The web is still fun. Make it.'
+        ];
+
+        for (var i = 0, l = stampHeaders.length; i < l; i ++) {
+          $rotator.append('<h1>' + stampHeaders[i] + '</h1>');
+        }
+
         var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
         var $signin = $('<button class="ui-huge-button sign-in">Sign in!</button>');
 
@@ -170,7 +181,7 @@ define(['jquery', 'moment'],
           navigator.idSSO.request();
         } );
 
-        $stickyBanner.append( $h1 );
+        $stickyBanner.append( $rotator );
         $stickyBanner.append( $h2 );
         $stickyBanner.append( $signin );
 
@@ -178,6 +189,12 @@ define(['jquery', 'moment'],
 
         this.packery.stamp( $stickyBanner[0] );
         this.packery.layout();
+
+        $('.rotator').carouFredSel({
+          padding: [0, 0, 0, 20],
+          scroll: { fx: 'crossfade', items: 1 },
+          items: { width: '100%' }
+        });
 
         // set up mouse over handlers
         $makeTemplate.addClass( "make-flip" );

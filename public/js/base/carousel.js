@@ -15,10 +15,6 @@ define(['jquery', 'jquery.carousel'], function($) {
     var page = $body[0].id;
     var frag = document.createDocumentFragment();
 
-    if(cta.length > 4 && !isMobile) {
-      $arrows.show();
-    }
-
     for(var i = 0; i < cta.length; ++i) {
       var item = createCTA({
         "title": cta[i].title,
@@ -44,8 +40,9 @@ define(['jquery', 'jquery.carousel'], function($) {
       next: { button: $('.c-rightarrow') }
     };
 
-    if (!isMobile) {
+    if (!isMobile && cta.length > 4) {
       $('.make-wrapper').carouFredSel(carouOptions);
+      $arrows.show();
     }
   }
 

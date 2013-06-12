@@ -4,12 +4,8 @@
 
 {% block body %}
 {{ super() }}
-<script>
-var EventSeeds = {{ events|json }};
-</script>
 <div class="overlay-container">
 <div class="map-overlay">
-
     <form id="find-event" action="/events" method="GET">
         <h2><span class="icon-search"></span> Find an event</h2>
         <input name="_csrf" type="hidden" value="{{ csrf }}" />

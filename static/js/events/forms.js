@@ -1,10 +1,11 @@
 define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'domReady!'],
 function ($, UI) {
-
     $('.datepicker').datepicker().each(function(i, elem) {
         $(elem).next('.icon').click(function () { $(elem).focus() });
     });
-    $('.timepicker').timepicker().each(function(i, elem) {
+    $('.timepicker').timepicker({
+        scrollDefaultTime: "10:00",
+    }).each(function(i, elem) {
         $(elem).next('.icon').click(function () { $(elem).focus() });
     }).on('showTimepicker', function () {
         var $parent = $(this).parent();
@@ -14,7 +15,7 @@ function ($, UI) {
     });
     var $beginTime = $('[name="beginTime"]'),
         $endTime   = $('[name="endTime"]');
-    $endTime.timepicker({
+    $endTime.timepicker('option', {
         durationTime: function () {
             var beginTime = $beginTime.timepicker('getTime');
             return beginTime ? beginTime : '0:00am';

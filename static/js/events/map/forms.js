@@ -6,7 +6,6 @@ function ($, EventModel, forms) { return function (mapMaker) {
         $findForm.submit();
     });
     var $when = $findForm.find('input[name="find-when"]');
-    $when.blur(function(ev) { $findForm.submit() });
     $findForm.on("submit", function(ev) {
         ev.preventDefault();
         EventModel.all(function (models) {
@@ -58,8 +57,12 @@ function ($, EventModel, forms) { return function (mapMaker) {
     });
     var $beginTime = $createForm.find('[name="beginTime"]'),
         $endTime   = $createForm.find('[name="endTime"]');
-    $beginTime.timepicker({ appendTo: function (elem) { return $(elem).parent() } });
-    $endTime.timepicker({ appendTo: function (elem) { return $(elem).parent() } });
+    $beginTime.timepicker('option', {
+        appendTo: function (elem) { return $(elem).parent() }
+    });
+    $endTime.timepicker('option', {
+        appendTo: function (elem) { return $(elem).parent() }
+    });
 
     forms.setupImageUpload($createForm);
     forms.setupSelectUI($createForm);
@@ -93,7 +96,5 @@ function ($, EventModel, forms) { return function (mapMaker) {
         }
     });
 
-    mapMaker.dropPins(EventSeeds.map(function (event) {
-        return new EventModel(event);
-    }));
+    EventModel.all(function (events) { mapMaker.dropPins(events) });
 }});

@@ -24,7 +24,7 @@ module.exports = function (Model, Types) {
         attendees:                          Types.Int,      // (0..5)
         beginDate:                          Types.Date,
         endDate:                            Types.Date,
-        beginTime:                          Types.Date,     // UTC
+        beginTime:                          Types.Date,
         endTime:                            Types.Date,
         registerLink:                       Types.URL,
         picture:                            Types.URL,

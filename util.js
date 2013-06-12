@@ -59,5 +59,12 @@ module.exports = {
         }
         conf.__proto__ = extend(conf.__proto__, defs);
         return conf;
+    },
+    objMap: function (old, mapper) {
+        var obj = {};
+        Object.keys(old).forEach(function (f) {
+            obj[f] = mapper(old[f], f);
+        });
+        return obj;
     }
 }

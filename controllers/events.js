@@ -23,7 +23,8 @@ module.exports = function (init) {
             Event.all().success(function (events) {
                 res.format({
                     json: function () {
-                        res.reply(200, { events: events.map(event_output_filter) });
+                        res.reply(200, { events: events.map(function (event) {
+                                return event_output_filter(event, false) }) });
                     },
                     html: function () {
                         res.reply('map', { events: events.map(event_output_filter) });
@@ -72,7 +73,7 @@ module.exports = function (init) {
         {
             fetch_event(req, function (event) {
                 res.format({
-                    json: function () { res.reply(200, { event: event_output_filter(event) }) },
+                    json: function () { res.reply(200, { event: event_output_filter(event, false) }) },
                     html: function () {
                         res.reply('details', { event: event_output_filter(event) });
                     }
@@ -89,7 +90,7 @@ module.exports = function (init) {
                     'beginTime', 'endTime', 'registerLink' ];
 
             Object.keys(changes).forEach(function (k) {
-                if (empty(changes[k]))
+                if (blank(changes[k]))
                     delete changes[k];
             });
             var picture = changes.picture;
@@ -130,7 +131,7 @@ module.exports = function (init) {
         }
     };
 
-    function empty(x) { return x === '' || x === undefined }
+    function blank(x) { return x === '' || x === undefined }
     function event_input_filter(event, set_defaults, do_transforms, check_required) {
         if (!event) return null;
 
@@ -142,8 +143,8 @@ module.exports = function (init) {
             title:          undefined,
             description:    '',
             address:        undefined,
-            latitude:       null,
-            longitude:      null,
+            latitude:       undefined,
+            longitude:      undefined,
             attendees:      3,
             beginDate:      null,
             endDate:        null,
@@ -151,7 +152,7 @@ module.exports = function (init) {
             endTime:        null,
             registerLink:   null
         };
-        var required = [ 'title', 'latitude', 'longitude', 'address' ];
+        var required = Object.keys(fields).filter(function (x) { x === undefined });
 
         var transforms = {
             picture: function (event) {
@@ -166,11 +167,12 @@ module.exports = function (init) {
         // pre-process the Date/Time fields
         ['begin', 'end'].forEach(function (pfx) {
             datetime_transform('Date', function (val) {
-                return new Date(val.split('-'));
+                return new Date(val.split(/[-\/]/));
             });
             datetime_transform('Time', function (val) {
-                var ts = val.split(':');
-                return new Date(0, 0, 0, ts[0], ts[1]);
+                var m = val.match(/^(\d+):(\d+)\s*([ap]m)$/);
+                return m ? new Date(0, 0, 0,
+                    m[1] % 12 + (m[3] == "pm") * 12, m[2]) : null;
             });
             function datetime_transform(f, transform) {
                 var dtf = pfx + f;
@@ -182,25 +184,25 @@ module.exports = function (init) {
                 };
             }
         });
-        var evt = {};
-        if (do_transforms)
-            Object.keys(transforms).forEach(function (f) {
-                evt[f] = transforms[f](event);
-            });
+        var evt = do_transforms ? util.objMap(transforms,
+                function (transform) { return transform(event) }) : {};
         Object.keys(fields).forEach(function (f) {
-            if (!(f in evt)) evt[f] = event[f];
+            if (!(f in evt))
+                evt[f] = (set_defaults && blank(event[f])) ? fields[f] : event[f];
         });
-        if (set_defaults)
-            Object.keys(fields).forEach(function (f) {
-                evt[f] = empty(event[f]) ? fields[f] : event[f];
-            });
         if (check_required)
-            evt = required.every(function (f) { return !empty(evt[f]) }) ? evt : null;
+            evt = required.every(function (f) { return !blank(evt[f]) }) ? evt : null;
         return evt
     }
-    function event_output_filter(event) {
-        function fmtDate(x) { return new Date(x).toDateString() }
-        function fmtTime(x) { return new Date(x).toTimeString().split(' ')[0] }
+    function event_output_filter(event, format_dt) {
+        format_dt = format_dt === undefined ? true : format_dt;
+        function fmtDate(x) { return format_dt ? new Date(x).toDateString() : x }
+        function fmtTime(x) { if (!format_dt) return x;
+            var hms = new Date(x).toTimeString().split(' ')[0].split(':');
+            var h = hms[0] % 12;
+            if (h == 0) h = 12;
+            return h + ':' + hms[1] + (Math.floor(hms[0] / 12) ? 'pm' : 'am');
+        }
 
         var evt = {};
         Event.fields.forEach(function (p) {

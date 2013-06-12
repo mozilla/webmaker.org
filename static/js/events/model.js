@@ -63,9 +63,8 @@ define(['resource_model'], function (ResourceModel) {
             // show details button
             + '<a href="' + this._uri + '">'
             + '<span class="icon-stack icon-button-size info-button">'
-                // XXX: change to span
-                + '<i class="icon-sign-blank icon-stack-base icon-button-color"></i>'
-                + '<i class="icon-chevron-right icon-light"></i>'
+                + '<span class="icon-sign-blank icon-stack-base icon-button-color"></span>'
+                + '<span class="icon-chevron-right icon-light"></span>'
             + '</span></a></div>';
     };
 

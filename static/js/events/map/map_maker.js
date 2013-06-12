@@ -50,6 +50,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
 
         this.markerManager.addMarker(marker);
         this.oms.addMarker(marker);    // must keep oms in sync
+        scroll();
 
         // store the content for the info window in the marker
         marker.set('infoContent', model.popupHTML());

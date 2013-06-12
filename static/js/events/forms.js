@@ -1,4 +1,4 @@
-define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.datepicker', 'domReady!'],
+define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'domReady!'],
 function ($, UI) {
 
     $('.datepicker').datepicker().each(function(i, elem) {

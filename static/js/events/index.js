@@ -1,5 +1,5 @@
 require.config({
-    deps: ['main', 'jquery.css3finalize', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.datepicker'],
+    deps: ['main', 'jquery.css3finalize', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom'],
     paths: {
         'html':                 '/js/html',
         'base':                 '/js/base',
@@ -10,13 +10,13 @@ require.config({
         'jquery':               '/ext/js/jquery-1.9.1',
         'markdown':             '/ext/js/markdown',
         'to-markdown':          '/ext/js/to-markdown',
-        'jquery-ui.datepicker': '/ext/js/jquery-ui-1.10.3.datepicker-custom',
+        'jquery-ui.custom':     '/ext/js/jquery-ui-1.10.3.custom',
         'jquery.timepicker':    '/ext/js/jquery.timepicker',
         'bootstrap-markdown':   '/ext/js/bootstrap-markdown',
         'jquery.css3finalize':  '/ext/js/jquery.css3finalize-v3.x.min',
     },
     shim: {
-        'jquery-ui.datepicker': ['jquery'],
+        'jquery-ui.custom':     ['jquery'],
         'jquery.css3finalize':  ['jquery'],
         'bootstrap-markdown':   ['jquery', 'markdown', 'to-markdown']
     },
@@ -25,5 +25,6 @@ require.config({
             var page = $('body').attr('class').split(/\s+/)[0];
             require(['./'+page+'/index']);
         });
-    }
+    },
+    waitSeconds: 0
 });

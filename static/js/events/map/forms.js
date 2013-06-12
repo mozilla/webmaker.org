@@ -77,7 +77,14 @@ function ($, EventModel, forms) { return function (mapMaker) {
                     );
                     mapMaker.addMarker(evt);
                 }
-            }, 'json');
+            }, 'json').error(function (res) {
+                switch (res.status) {
+                    case 401:
+                        navigator.idSSO.request();
+                        break;
+                    default:
+                }
+            });
         },
         errorPlacement: function ($errors, $elem) {
             $elem.prop('placeholder', $errors.first().text());

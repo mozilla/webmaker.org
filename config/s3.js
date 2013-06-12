@@ -2,6 +2,7 @@ var S3_FIELDS = ['key', 'secret', 'bucket', 'local'];
 module.exports = function () {
     var noxmox = require('noxmox'),
         knox = require('knox'),
+        uuid = require('uuid'),
         util = require('../util');
 
     /* Load S3 Configuration */
@@ -21,6 +22,20 @@ module.exports = function () {
             return this.mode === 'mox' ? '/uploads/' + this.conf.bucket
                                                + '/' + filename
                                        : this.client.url(filename)
+        },
+        put: function (data, type, cb) {
+            var filename = uuid.v4();
+            var s3_req = this.client.put(filename, {
+                'Content-Length':   data.length,
+                'Content-Type':     type,
+                'x-amz-acl':        'public-read'
+            });
+            s3_req.on('response', function(s3_res) {
+                if (s3_res.statusCode === 200)
+                    cb(filename, s3_res);
+            });
+            s3_req.end(data);
+            return filename;
         },
         delete: function (url) {
             var match = url.match(/\/([^\/]+)\/?$/);

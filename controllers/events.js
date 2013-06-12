@@ -3,7 +3,6 @@ module.exports = function (init) {
 
     var Event = this.models.Event,
         util  = require('../util'),
-        uuid  = require('uuid'),
         fs    = require('fs'),
         crypto   = require('crypto'),
         express  = require('express'),
@@ -49,24 +48,16 @@ module.exports = function (init) {
                 'longitude', 'attendees', 'beginDate', 'endDate', 'beginTime',
                 'endTime', 'registerLink', 'organizer', 'organizerId'];
             Event.create(event, fields).success(function (event) {
-                if (picture) {
-                    var filename = uuid.v4();
-                    var s3_req = s3.client.put(filename, {
-                        'Content-Length':   picture.data.length,
-                        'Content-Type':     picture.type,
-                        'x-amz-acl':        'public-read'
+                if (picture)
+                    s3.put(picture.data, picture.type, function (filename) {
+                        event.updateAttributes({
+                            picture: s3.url(filename)
+                        }).success(function (event) {
+                            res.reply(200, 'Event created',
+                                { event: event_output_filter(event) });
+                        });
                     });
-                    s3_req.on('response', function(s3_res) {
-                        if (s3_res.statusCode === 200)
-                            event.updateAttributes({
-                                picture: s3.url(filename)
-                            }).success(function (event) {
-                                res.reply(200, 'Event created',
-                                    { event: event_output_filter(event) });
-                            });
-                    });
-                    s3_req.end(picture.data);
-                } else res.reply(200, 'Event created', { event: event_output_filter(event) });
+                else res.reply(200, 'Event created', { event: event_output_filter(event) });
             }).error(function (err) {
                 res.reply(400, 'Invalid Event provided', { error: err });
             });
@@ -99,23 +90,14 @@ module.exports = function (init) {
             delete changes.picture;
             fetch_event(req, function (event) {
                 event.updateAttributes(changes, allowed).success(function (event) {
-                    if (picture) {
-                        var filename = uuid.v4();
-                        var s3_req = s3.client.put(filename, {
-                            'Content-Length':   picture.data.length,
-                            'Content-Type':     picture.type,
-                            'x-amz-acl':        'public-read'
+                    if (picture)
+                        s3.put(picture.data, picture.type, function (filename) {
+                            if (event.picture)
+                                s3.delete(event.picture);
+                            event.updateAttributes({
+                                picture: s3.url(filename)
+                            });
                         });
-                        s3_req.on('response', function(s3_res) {
-                            if (s3_res.statusCode === 200)
-                                if (event.picture)
-                                    s3.delete(event.picture);
-                                event.updateAttributes({
-                                    picture: s3.url(filename)
-                                });
-                        });
-                        s3_req.end(picture.data);
-                    }
                     res.reply(200, 'Event modified', { event: event_output_filter(event) });
                 });
             }, true);

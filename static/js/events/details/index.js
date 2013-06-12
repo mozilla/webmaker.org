@@ -18,20 +18,26 @@ function ($, google, forms) {
         toggleEditMode();
         $editForm[0].reset();
     });
+    var delete_safety = 1;
     $editForm.find('button#delete-event').click(function(ev) {
-        // TODO: show modal with confirmation
-    });
-    $("#delete-confirm").dialog({
-        resizable:  false,
-        height:     160,
-        modal:      true,
-        buttons: {
-          "Delete event": function() {
-            $(this).dialog("close");
-          },
-          Cancel: function() {
-            $(this).dialog("close");
-          }
+        var $deleteSubmit = $(this);
+        if (delete_safety) {
+            $('#delete-confirm').dialog({
+                resizable:  false,
+                height:     160,
+                modal:      true,
+                buttons: {
+                    'Do It!': function() {
+                        delete_safety = 0;
+                        $(this).dialog('close');
+                        $deleteSubmit.click();
+                    },
+                    Cancel: function() {
+                        $(this).dialog('close');
+                    }
+                }
+            });
+            return false;
         }
     });
     forms.setupImageUpload($editForm);

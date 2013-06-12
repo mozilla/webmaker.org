@@ -70,6 +70,7 @@ body#events.map .map-overlay {
         vertical-align: top;
 
         input {
+            .ui-small;
             padding:    0px 10px;
         }
         .icon-calendar {
@@ -167,13 +168,15 @@ body#events.map .map-overlay {
         }
         .md-editor,input {
             outline:    0px;
-            border:     0.5px solid #444;
             margin:     6px 4px;
             margin-left: 0px;
 
             &:not([name$="Date"]):not([name$="Time"]) {
                 width:  100%;
             }
+        }
+        .md-editor {
+            border:     0.5px solid #444;
         }
         :not(.datetime) .ui-select {
             margin-left: 0px;

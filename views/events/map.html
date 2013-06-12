@@ -58,14 +58,14 @@
             {% for i in ['begin','end'] %}
             <label for="event_{{i}}Date"> Event {{i}}s </label>
             <div class='datetime'>
-                <span class="ui-append ui-select select-date">
+                <span class="ui-append ui-select ui-input select-date">
                     <span class="icon-calendar"></span>
                     <input id="event_{{i}}Date" name="{{i}}Date" type="text" class="datepicker"
                             placeholder="--/--/--" />
                     <a class="icon icon-chevron-down"></a>
                 </span>
-                <label class="switch"></label><br class="switch"/>
-                <span class="ui-append ui-select select-time">
+                <label class="switch"></label>
+                <span class="ui-append ui-select ui-input select-time">
                     <input name="{{i}}Time" type="text" class="timepicker"
                             placeholder="--:--  --" />
                     <a class="icon icon-chevron-down"></a>

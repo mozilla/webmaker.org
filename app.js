@@ -90,6 +90,7 @@ app.get( "/learn", routes.page( "learn" ) );
 app.get( "/teach", routes.page( "teach" ) );
 app.get( "/party", routes.page( "party" ) );
 app.get( "/tools", routes.page( "tools" ) );
+app.get( "/mentor", routes.page( "mentor" ) );
 app.get( "/search", routes.search );
 
 app.get( "/details/:id", routes.details );

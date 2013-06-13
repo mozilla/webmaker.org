@@ -40,7 +40,7 @@
           <div class="temporal-local">
             <span class="show">
             {% if event.beginDate or event.endDate or event.beginTime %}
-              <img class="calendar-icon" src="/img/map/calendar.png" />
+              <img class="calendar-icon" src="/img/event-detail-icon-calendar.png" />
               <div class="datetime-range">
                 <div>
                   {{ event.beginDate }}
@@ -56,7 +56,7 @@
             {% endif %}
             </span>
             <span class="edit hidden">
-              <img class="calendar-icon" src="/img/map/calendar.png" />
+              <img class="calendar-icon" src="/img/event-detail-icon-calendar.png" />
               <div class="datetime-range">
                 <div> <input type="text" name="beginDate" class="datepicker"
                         placeholder="{{ event.beginDate or "--/--/----" }}" />
@@ -74,12 +74,12 @@
           <div class="temporal-local">
             {% if event.address %}
              <span class="show">
-               <img class="pin-icon" src="/img/map/pin-event-red.png" />
+               <img class="pin-icon" src="/img/event-detail-icon-pointer.png" />
                <div class="address">{{ event.address }}</div>
              </span>
             {% endif %}
             <span class="edit hidden">
-              <img class="pin-icon" src="/img/map/pin-event-red.png" />
+              <img class="pin-icon" src="/img/event-detail-icon-pointer.png" />
               <input type="text" name="address" class="address" placeholder="{{ event.address }}" />
               <input name="latitude"  type="hidden" />
               <input name="longitude" type="hidden" />

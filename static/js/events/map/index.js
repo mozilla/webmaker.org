@@ -1,10 +1,9 @@
 define(['jquery', 'google', 'map/map_maker', 'map/forms'],
 function ($, google, MapMaker, EventForms) {
 
-    var defaultZoom = 13;
     var mapCenter = new google.maps.LatLng(37.774546, -122.433523);
     var mapOptions = {
-        zoom: defaultZoom,
+        zoom: 2,  // starting zoom level, show whole world
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: mapCenter,
 

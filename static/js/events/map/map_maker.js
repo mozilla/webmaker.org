@@ -175,6 +175,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(getCurrentPosition_success, getCurrentPosition_error, options);
+            google_map.setZoom(13);
         } else {
             console.log("Sorry - your browser doesn't support geolocation!");
         }

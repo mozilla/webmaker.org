@@ -36,17 +36,6 @@
         font-size: 1em;
         line-height: 60px;
       }
-      .search-filter {
-        &:hover {
-          border-radius: 10px 10px 0 0;
-          color: @grey;
-          background: #FFF;
-          border: 1px solid darken( #E0EBEE, 5% );
-          .filter-list {
-            display: block;
-          }
-        }
-      }
       .search-btn {
         background: @green;
         border: 1px solid darken( @green, 5% );
@@ -108,6 +97,15 @@
     text-decoration: none;
     border: none;
     background: none;
+    &:hover {
+        border-radius: 10px 10px 0 0;
+        color: @grey;
+        background: #FFF;
+        border: 1px solid darken( #E0EBEE, 5% );
+        .filter-list {
+          display: block;
+        }
+      }
     .icon-caret-down {
       font-size: 0.5em;
     }

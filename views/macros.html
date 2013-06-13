@@ -49,7 +49,7 @@
 
 {% macro searchmakes() %}
   {% for make in makes %}
-    <div class="make packery-hide {{makeSize}} make-type-{{make.type}}">
+    <div class="make {{makeSize}} make-type-{{make.type}}">
       <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
       <div class="make-info">{{make.title}} by <a class="user-link" data-username="{{make.username}}">@{{make.username}}</a></div>
       <div class="btn-container">

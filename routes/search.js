@@ -1,7 +1,7 @@
 module.exports = function( make ) {
   return function( req, res ) {
-    var type = req.param( "type" ) || "title",
-    query = req.param( "q" ) || "featured",
+    var type = req.param( "type" ) || "tags",
+    query = req.param( "q" ) || "webmaker:featured",
     makeSize = req.param( "size" ),
     sortByField = req.param( "sortByField" ) || "createdAt",
     sortByOrder = req.param( "order" ) || "desc",

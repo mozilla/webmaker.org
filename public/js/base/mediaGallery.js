@@ -144,12 +144,6 @@ define(['jquery', 'moment'],
     switch ($body[0].id) {
       case 'template':
         break;
-      case 'search':
-        $('.make').click( function() {
-          $( this ).toggleClass('expand');
-          self.packery.layout();
-        });
-        break;
       case 'index':
         var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
         var $rotator = $('<div class="rotator">');

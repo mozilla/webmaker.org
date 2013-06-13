@@ -118,7 +118,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             maxWidth: 330,
             minHeight: 210,
             maxHeight: 710,
-            shadowStyle: 0,
+            shadowStyle: 1,
             padding: 0,
             // Padding around the tabs, now set separately from the InfoBubble padding
             tabPadding: 12,

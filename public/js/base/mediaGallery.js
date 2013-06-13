@@ -183,8 +183,11 @@ define(['jquery', 'moment'],
 
         // set up mouse over handlers
         $makeTemplate.addClass( "make-flip" );
-        $makeTemplate.on('mouseenter focusin, mouseleave focusout', function ( e ) {
-          $('.flipContainer', this).toggleClass( 'flip' );
+        $makeTemplate.on('mouseenter focusin', function ( e ) {
+          $('.flipContainer', this).addClass( 'flip' );
+        });
+        $makeTemplate.on('mouseleave focusout', function ( e ) {
+          $('.flipContainer', this).removeClass( 'flip' );
         });
 
         this.wm.doSearch( { tags: ['webmaker:featured'] }, this.limit, function( data ) {

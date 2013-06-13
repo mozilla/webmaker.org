@@ -7,10 +7,13 @@ module.exports = function( make ) {
     }
 
     // Use a URL in the querystring or an ID
-    var searchOptions = {};
+    var searchOptions = {},
+        searchCriteria;
     if ( req.query.id ) {
+      searchCriteria = "id";
       searchOptions.id = req.query.id;
     } else if ( req.query.url ) {
+      searchCriteria = "url";
       searchOptions.url = decodeURIComponent( req.query.url );
     } else {
       return renderError("No URL or ID was passed" );
@@ -49,13 +52,16 @@ module.exports = function( make ) {
 
         // Prep original source
         if ( makeData.remixedFrom ) {
-          make.id( makeData.remixedFrom ).then( function( err, remixedFromData ) {
+          make[ searchCriteria ]( makeData.remixedFrom ).then( function( err, remixedFromData ) {
             if ( err ) {
-              return renderError("Looks like there is a problem with the make API");
+              return renderError( "Looks like there is a problem with the make API" );
             }
-            makeData.remixedFromData = {};
-            makeData.remixedFromData.url = remixedFromData[ 0 ].url;
-            makeData.remixedFromData.username = remixedFromData[ 0 ].username;
+
+            if ( remixedFromData && remixedFromData.length ) {
+              makeData.remixedFromData = {};
+              makeData.remixedFromData.url = remixedFromData[ 0 ].url;
+              makeData.remixedFromData.username = remixedFromData[ 0 ].username;
+            }
             res.render( "details.html", makeData );
           });
         } else {

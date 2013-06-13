@@ -211,14 +211,6 @@ module.exports = function (init) {
                 case 'endTime':
                     evt[p] = event[p] ? fmtTime(event[p]) : null;
                     break;
-                case 'title':
-                    evt.title_raw = event[p];
-                    evt[p] = markdown.toHTML(event[p]);
-                    break;
-                case 'description':
-                    evt.description_raw = event[p];
-                    evt[p] = markdown.toHTML(event[p]);
-                    break;
                 case 'organizer':
                     evt.organizerHash = md5(event[p]);
                     evt[p] = event[p];

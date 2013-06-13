@@ -1,6 +1,7 @@
 exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     var express  = require('express'),
         nunjucks = require('nunjucks'),
+        markdown = require('markdown').markdown,
         util  = require('./util'),
         here  = __dirname,
         paths = {
@@ -13,6 +14,7 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     // Views
     nunjucksEnv.loaders.push(new nunjucks.FileSystemLoader(paths.views));
     nunjucksEnv.addFilter('json', JSON.stringify.bind(JSON));
+    nunjucksEnv.addFilter('markdown', markdown.toHTML.bind(markdown));
 
     // Assets
     var optimize = process.env.NODE_ENV === 'production';

@@ -129,7 +129,6 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             borderWidth: 1,
             // Now that there is no borderWidth check, you can define
             // a borderColor and it will apply to Just the arrow
-            borderColor: '#888888',
             disableAutoPan: false,
             hideCloseButton: true,
             arrowPosition: '50%',

@@ -11,7 +11,7 @@ define(['resource_model'], function (ResourceModel) {
     EventModel.prototype.datetimeHTML = function() {
         var bD = this.beginDate, eD = this.endDate,
             bT = this.beginTime, eT = this.endTime,
-            icon = '<img class="icon-img" src="/img/map/calendar.png" />';
+            icon = '<img class="icon-img" src="/img/event-detail-icon-calendar.png" />';
         function fmtRange(b, e) {
             var sep = (b && e ? ' - ' : '');
             return b || e ? '<div>' + (b ? b : '') + sep + (e ? e : '') + '</div>' : '';
@@ -26,8 +26,10 @@ define(['resource_model'], function (ResourceModel) {
 
     EventModel.prototype.addressHTML = function() {
         if (!this.address) return '';
-        var address_lines = this.address.split("\n");
-        var icon = '<img class="icon-img" src="/img/map/pin-event.png" />';
+        var address_lines = this.address.match(/^([^,]+),(.*)/);
+        if (address_lines) address_lines.shift(); // remove global match
+        else address_lines = [this.address];
+        var icon = '<img class="icon-img" src="/img/event-detail-icon-pointer.png" />';
         return '<div class="temporal-local">' + icon
             + '<div class="info-address">' + address_lines.map(function (line) {
                 return '<div>' + line + '</div>';

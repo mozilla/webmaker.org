@@ -13,6 +13,11 @@ define(['jquery'],
   // Are we inside thimble or popcorn?
   var inApp = $body.hasClass("popcorn") || $body.hasClass("thimble");
 
+  // Do we have any makes?
+  if (!$makes.length) {
+    return;
+  }
+
   // Set up scrollable container
   if (inApp) {
     $(".webmaker-outer-wrapper").css("width", ( ( BASE_WIDTH + GUTTER ) * $makes.length + GUTTER * 2 ) + "px");

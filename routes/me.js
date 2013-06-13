@@ -24,7 +24,6 @@ module.exports = function( make ) {
         return res.send( err );
       }
       res.render( "me.html", {
-        avatar: req.session.avatar,
         makes: data || [],
         page: "me",
         pagination: page,

@@ -1,0 +1,37 @@
+@import "webfonts";
+
+body {
+  height: 30px;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  padding: 0 10px;
+  background: transparent;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1.1;
+  color: #27AAE1;
+  cursor: pointer;
+}
+
+button span {
+  background: #27AAE1;
+  color: #fff;
+  padding: 0.5em;
+  margin-left: 24px;
+  position: relative;
+}
+
+button span:before {
+  content: "";
+  border-right: 14px solid #27AAE1;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: -14px;
+}

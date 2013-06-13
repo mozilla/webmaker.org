@@ -2,57 +2,81 @@
 <html>
   <head>
     <title>Persona SSO</title>
+    <link rel="stylesheet" href="/css/include.css">
   </head>
   <body>
     <script src="https://login.persona.org/include.js"></script>
     <script>
+      // placeholders for the login/logout html buttons
+      var loginButton = {
+            style: {
+              display: false
+            }
+          },
+          logoutButton = loginButton;
+
+      /**
+       * factory function for sso_... handling
+       */
       function proxyPersona(source, type) {
         return function(arg) {
           var payload = {
             type: type,
             data: {}
-          }
-
+          };
           switch (type) {
             case "sso_onlogin":
               payload.data.assertion = arg;
               break;
           }
-
           source.postMessage(JSON.stringify(payload), "*");
         }
       }
 
-      var myOrigin = location.protocol + "//" + location.host;
-
+      /**
+       * Listen for messages from owning document.
+       */
       window.addEventListener("message", function(event) {
-
         var payload = JSON.parse(event.data);
 
-        switch (payload.type) {
-          case "sso_watch":
-            navigator.id.watch({
-              loggedInUser: payload.data.loggedInUser,
-              onlogin: proxyPersona(event.source, "sso_onlogin"),
-              onlogout: proxyPersona(event.source, "sso_onlogout"),
-              onmatch: proxyPersona(event.source, "sso_onmatch")
-            });
-            break;
-          case "sso_request":
-            navigator.id.request({
-              oncancel: proxyPersona(event.source, "sso_oncancel"),
-              privacyPolicy: payload.data.privacyPolicy,
-              returnTo: payload.data.returnTo,
-              siteLogo: payload.data.siteLogo,
-              siteName: payload.data.siteName,
-              termsOfService: payload.data.termsOfService
-            });
-            break;
-          case "sso_logout":
-            navigator.id.logout();
-            break;
+        if (payload.type === "sso_watch") {
+          var proxyLogin = proxyPersona(event.source, "sso_onlogin"),
+              proxyLogout = proxyPersona(event.source, "sso_onlogout");
+
+          navigator.id.watch({
+            loggedInUser: payload.data.loggedInUser,
+            onlogin: function(assertion) {
+              proxyLogin(assertion);
+              loginButton.style.display = "none";
+              logoutButton.style.display = "block";
+            },
+            onlogout: function() {
+              logoutButton.style.display = "none";
+              loginButton.style.display = "block";
+              proxyLogout();
+            },
+            onmatch: proxyPersona(event.source, "sso_onmatch")
+          });
         }
       }, false);
     </script>
+
+    <button id="webmaker-login">Sign in to save <span>Sign up</span></button>
+    <button id="webmaker-logout" style="display:none;">Sign out</button>
+
+    <script>
+      // Set up the login button's UX
+      loginButton = document.getElementById("webmaker-login");
+      loginButton.addEventListener("click", function() {
+        navigator.id.request();
+      }, false);
+
+      // Set up the logout button's UX
+      logoutButton = document.getElementById("webmaker-logout");
+      logoutButton.addEventListener("click", function() {
+        navigator.id.logout();
+      }, false);
+    </script>
+
   </body>
 </html>

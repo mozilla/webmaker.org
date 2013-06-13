@@ -40,7 +40,7 @@ define(['jquery'], function($) {
 
   var self = {
     attach: attach
-  }
+  };
 
   return self;
 });

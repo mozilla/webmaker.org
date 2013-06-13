@@ -85,8 +85,7 @@ define(['jquery', 'jquery.carousel'], function($) {
       items : 3,
       align: 'center',
       scroll: { fx: 'fade' },
-      next: { button: $('.refresh-sponsors') },
-
+      next: { button: $('.refresh-sponsors') }
     });
 
   }

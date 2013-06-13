@@ -46,15 +46,16 @@ define(['jquery', 'uri', 'base/ui'],
     init: function( options ) {
       makeURL = options.makeURL;
       page = options.page;
-      make = Make({ apiURL: makeURL });
+      make = new Make({ apiURL: makeURL });
       setup.page( page );
     },
     doSearch: function( options, limit, each, pageNo ) {
       var sortBy = 'createdAt',
-          sortOrder = 'desc',
-          options = options || {};
+          sortOrder = 'desc';
 
-      if (options && options.title) {
+      options = options || {};
+
+      if (options.title) {
         sortBy = 'title';
         sortOrder = 'asc';
       }

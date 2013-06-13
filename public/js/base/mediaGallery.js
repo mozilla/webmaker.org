@@ -135,17 +135,18 @@ define(['jquery', 'moment'],
 
   MediaGallery.prototype.layout = function() {
     this.packery.layout();
-  }
+  };
 
   MediaGallery.prototype.init = function() {
-    var self = this;
+    var self = this,
+        $stickyBanner;
 
     // Handles all packery-related content loading.
     switch ($body[0].id) {
       case 'template':
         break;
       case 'index':
-        var $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
+        $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
         var $rotator = $('<div class="rotator">');
         var stampHeaders = [
           'The web is still wild. Build it.',
@@ -192,7 +193,7 @@ define(['jquery', 'moment'],
         break;
 
       case 'teach':
-        var $stickyBanner = $('<div id="banner-teach" class="rf packery-hide">' +
+        $stickyBanner = $('<div id="banner-teach" class="rf packery-hide">' +
           '<img src="/img/webmaker-community.jpg" alt="Webmaker Community">' +
           "<p>We're a <a href='/about'/>global community</a> of friendly humans on " +
           "a mission to  help people learn the building blocks of the web.<a href='/mentor'>Explore " +
@@ -238,7 +239,7 @@ define(['jquery', 'moment'],
     });
     this.limit = 16;
     this.wm.doSearch( options, this.limit, function( data ) {
-      searchCallback( data, self )
+      searchCallback( data, self );
     });
     this.packery.layout();
   };

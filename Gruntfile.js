@@ -12,7 +12,7 @@ module.exports = function( grunt ) {
         },
         src: [
           "public/css/style.less",
-          "public/css/myprojects.less"
+          "public/css/make-details.less"
         ]
       }
     },
@@ -22,8 +22,7 @@ module.exports = function( grunt ) {
         "app.js",
         "lib/**/*.js",
         "package.json",
-        "public/js/*.js",
-        "public/sso/*.js",
+        "public/js/**/*.js",
         "routes/**/*.js"
       ]
     }

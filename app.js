@@ -111,6 +111,7 @@ app.get( "/u/:user", routes.user );
 
 app.get( "/template", routes.page( "template" ) );
 app.get( "/terms", routes.page( "terms" ) );
+app.get( "/privacy", routes.page( "privacy" ) );
 
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 

@@ -110,6 +110,7 @@ app.get( "/t/:tag", routes.tag );
 app.get( "/u/:user", routes.user );
 
 app.get( "/template", routes.page( "template" ) );
+app.get( "/terms", routes.page( "terms" ) );
 
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 

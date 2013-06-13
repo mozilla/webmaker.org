@@ -38,7 +38,8 @@ module.exports = function (init) {
 
             if (!(event.organizer = req.session.email))
                 return res.reply(401, 'Log in to create Events');
-            event.organizerId = req.session.username;
+            if (!(event.organizerId = req.session.username))
+                return res.reply(403, 'Create an account first');
 
             var picture = event.picture;
             delete event.picture;

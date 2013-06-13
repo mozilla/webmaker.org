@@ -22,7 +22,6 @@
   font-size: @uiFontSize;
 }
 
-
 /*********************************************************
 * Grid
 */
@@ -89,7 +88,8 @@
   .g-5,
   .g-6,
   .g-7,
-  .g-8 {
+  .g-8,
+  .g-fl {
     width: 100%;
     margin-right: 0;
     margin-bottom: @gutter * @unit;
@@ -402,4 +402,23 @@ figure {
 
 .icon-title:before, .icon-description:before {
   content: "\f036";
+}
+
+
+.icon-thimble,
+.icon-popcorn {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  margin-top: -2px;
+  background-size: 100%;
+}
+
+.icon-thimble {
+  background-image: url(../img/icon-make-thimble.png);
+}
+
+.icon-popcorn {
+  background-image: url(../img/icon-make-popcorn.png);
 }

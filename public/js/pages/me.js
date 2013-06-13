@@ -27,9 +27,9 @@ define(['jquery'],
   // Or, set up packery if we are on webmaker.org
   if (!inApp) {
     packery = new Packery( mainGallery, {
-      itemSelector: "div.make",
-      gutter: ".gutter-sizer",
-      transitionDuration: "0.2"
+      itemSelector: 'div.make',
+      gutter: '.gutter-sizer',
+      transitionDuration: '0.2'
     });
   }
 

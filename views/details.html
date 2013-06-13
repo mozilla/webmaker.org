@@ -7,114 +7,97 @@
   <link media="screen" rel="stylesheet" href="/css/style.css">
   <link media="screen" rel="stylesheet" href="/css/make-details.css">
 </head>
-<body class="{{tool}}">
-  <div class="make-details-page">
-    <div id="content" class="content clearfix">
-      {% if remixes %}
-      <div class="make-details">
-        <div class="wrapper">
+<body class="details-{{tool}}" data-tool="{{tool}}" data-url="{{url}}">
+  <div id="content">
+    <div id="mobile-warning">
+      <h1>Hey, just so you know, this site isn't fully functional on mobile.</h1>
+    </div>
+    {% if remixes %}
+      <div class="ui-wrapper">
+        <div class="ui-row">
           <!-- LH side of make-details -->
-          <div class="remixed-from">
+          <div class="g-2 remixed-from">
+
             <div class="remix-info">
               {% if remixedFromData %}
               <span class="remixed-from-txt">Remixed from</span>
               <a href="{{ remixedFromData.url }}"><span class="remixed-user">@{{ remixedFromData.username }}</span></a>
               {% endif %}
               <div class="make-type-{{type}}">
-                <div class="make-thumbnail" style="background-image:url({{ thumbnail }})"></div>
+                <div class="make-thumbnail{% if thumbnail %} thumbnail" style="background-image:url({{ thumbnail }}){% endif %}"></div>
               </div>
             </div>
 
-            {% if remixCount %}
+            {% if remixes.length %}
             <div class="remixed-by">
-              {{remixCount}} remix{% if remixCount > 1 %}s{% endif %} by
-              <ul>
+              {{remixCount}} by
+              <ul class="remixed-by-list">
                 {% for remix in remixes %}
                 <li><a href="{{remix.url}}">@{{remix.username}}</a></li>
                 {% endfor %}
               </ul>
             </div>
             {% endif %}
+
           </div>
 
           <!-- RH side of make-details -->
-          <div class="make-details-deets">
-            <h1 class="make-title">{{ title }}</h1>
+          <div class="g-6 make-details-deets">
 
-            <div class="make-made-by">
-              <a href="//webmaker.org">
-                <img class="make-user-gravatar" src="http://gravatar.com/avatar/{{ emailHash }}?s=26" alt="USER NAME" />
-              </a>
-              <div class="made-by">
-                Made by <a class="make-username" href="/u/{{ username }}">{{ username }}</a>
-                <span class="make-relative-date">{{ createdAt }}</span>
+            <div class="ui-row">
+              <h1 class="make-title">{{ title }}</h1>
+            </div>
+
+            <div id="url" class="ui-row">
+              <a href="{{url}}" class="make-url">{{url}}</a>
+            </div>
+
+            <div class="ui-row">
+              <div class="user-info">
+                <img class="make-user-gravatar" src="http://gravatar.com/avatar/{{ emailHash }}?s=40" alt="USER NAME" />
+                <span class="made-by">
+                  Made by
+                  <a class="make-username" href="/u/{{ username }}">@{{ username }}</a>
+                  <span class="make-relative-date">{{ createdAt }}</span>
+                </span>
               </div>
-            </div>
-            <div class="make-tools-languages">
-              <span class="built-with">Built with</span>
-              <a href="//webmaker.org">
-                <span class="tool-name">{{ tool }}</span></a>
 
-              <span class="languages">Languages</span>
-              <ul class="langs">
-                <li class="lang-item active-lang">English</li>
-                <li class="lang-item"><a href="//webmaker.org">Español</a></li>
-              </ul>
+              <span class="social-media">
+                <a id="share-btn" class="share ui-btn"><span class="icon-share"></span> Share</a>
+                <span id="share-container" class="hidden">
+                  <a id="google-btn"></a>
+                  <a id="twitter-btn"></a>
+                  <a id="fb-btn"></a>
+                </span>
+              </span>
             </div>
+
+            <p class="built-with"><span class="built-with">Built with</span>
+              <span class="icon-{{tool}}"></span>
+              <a href="{{remixurl}}" class="tool-name">{{ tool }}</a>
+            </p>
 
             <p class="make-desc">{{ description }}</p>
 
-            <p><a id="share-btn" class="share ui-btn"><span class="icon-share"></span> Share</a>
-            <div id="share-container" class="hidden">
-              <a id="google-btn"></a>
-              <a id="twitter-btn"></a>
-              <a id="fb-btn"></a>
-            </div>
           </div>
         </div>
-      </div>
-      {% else %}
-      <div class="make-error">
-        Sorry, that make doesn't exist! :(
-      </div>
-      {% endif %}
+      </div><!-- ui-wrapper -->
+    </div><!-- content -->
+    {% else %}
+    <div class="make-error">
+      {{error}}
     </div>
+    {% endif %}
   </div>
   <script src="/ext/js/require.js"></script>
   <script>
-    requirejs.config({
+     requirejs.config({
       paths: {
-        'jquery': '../../ext/js/jquery-1.9.1',
-        'social': '../../ext/js/socialmedia'
+        'jquery': '/ext/js/jquery-1.9.1',
+        'social': '/ext/js/socialmedia'
       }
     });
-
-    require(['jquery', 'social'],
-    function ( $, SocialMedia ) {
-      var social,
-          $shareBtn = $( "#share-btn" ),
-          $shareContainer = $( "#share-container" );
-          googleBtn = document.getElementById( "google-btn" ),
-          twitterBtn = document.getElementById( "twitter-btn" ),
-          fbBtn = document.getElementById( "fb-btn" );
-
-        social = new SocialMedia({
-          message: "Tweet this awesome {{tool}} project: ",
-          via: "#webmaker"
-        });
-
-        function shareOnClick() {
-          social.hotLoad( twitterBtn, social.twitter, "{{ url }}" );
-          social.hotLoad( googleBtn, social.google, "{{ url }}" );
-          social.hotLoad( fbBtn, social.facebook, "{{ url }}" );
-          $shareBtn.addClass( "hidden" );
-          $shareContainer.removeClass( "hidden" );
-          $shareBtn.off( "click", shareOnClick );
-        }
-
-        $shareBtn.on( "click", shareOnClick );
-
-    });
+    require(['./js/pages/details']);
   </script>
 </body>
 </html>

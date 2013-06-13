@@ -93,7 +93,11 @@ app.get( "/tools", routes.page( "tools" ) );
 app.get( "/mentor", routes.page( "mentor" ) );
 app.get( "/search", routes.search );
 
-app.get( "/details/:id", routes.details );
+app.get( "/details", routes.details );
+// Old
+app.get( "/details/:id", function(req,res) {
+  res.redirect("/details?id=" + req.params.id);
+});
 
 app.get( "/me", routes.me );
 // Old

@@ -7,11 +7,14 @@ requirejs.config({
     'moment':           '/ext/js/moment',
     'social':           '/ext/js/socialmedia',
     'uri':              '/ext/js/uri',
-    'tabzilla':         'https://www.mozilla.org/tabzilla/media/js/tabzilla'
+    'tabzilla': 'https://www.mozilla.org/tabzilla/media/js/tabzilla',
+    // XXX: window.__loginAPI gets templated in server-side in layout.html 
+    'sso-ux':            window.__loginAPI + '/js/sso-ux'       
   },
   shim: {
     'tabzilla': ['jquery'],
-    'jquery.carousel': ['jquery']
+    'jquery.carousel': ['jquery'],
+    'sso-ux': ['jquery']
   }
 });
 

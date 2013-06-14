@@ -179,7 +179,11 @@ window.cta = {% block CTA %}
 {% endblock %} ;
 </script>
 <script src="{{ personaSSO }}/sso/include.js"></script>
-<script src="{{ loginAPI }}/js/sso-ux.js"></script>
+<script>
+// XXX: we need to load this after require loads jquery, but can't hard-code a path
+// in the require config.
+window.__loginAPI = "{{ loginAPI }}";
+</script>
 <script src="{{ makeEndpoint }}/js/make-api.js"></script>
 <script src="/ext/js/packery.js"></script>
 <script src="/ext/js/require.js" data-main="{% block require_main %}/js/main{% endblock %}"></script>

@@ -2,8 +2,11 @@
 
 {% block title %}Event Map{% endblock %}
 
+{% block midbar %}
+<img src="/img/party-banner.png">
+{% endblock %}
+
 {% block body %}
-{{ super() }}
 <div class="map-overlay">
     <form id="find-event" action="/events" method="GET">
         <h2 class="header"><span class="icon-search"></span> Find an Event</h2>
@@ -102,3 +105,5 @@
 <div id="map-canvas"></div>
 
 {% endblock %}
+
+{% block footer %}{% endblock %}

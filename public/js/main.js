@@ -20,7 +20,9 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
   $(document).ready(function() {
     var $body = $('body');
 
-    if ( $body[0].id !== "events" ) {
+    var pages = [ "index", "teach" ];
+
+    if ( pages.indexOf( $body[0].id ) !== -1 ) {
        webmaker.init({
         page: $body[0].id,
         makeURL: $body.data('endpoint')

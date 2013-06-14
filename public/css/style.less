@@ -751,6 +751,103 @@ a {
 }
 
 /*********************************************************
+ * TOOLS
+ */
+#tools {
+
+  .ui-wrapper {
+    margin: 10px auto 0 auto;
+  }
+  .ui-section {
+    padding: 0;
+  }
+  .column-tools {
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    padding: 30px 20px 0 20px;
+    height: 525px;
+    width: 48%;
+    .border-box;
+
+    header {
+      margin: 0 auto;
+      position: relative;
+      padding-left: 50px;
+      display: block;
+      height: auto;
+      img {
+        float: left;
+        margin-right: 30px;
+        height: 75px;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+
+      .popcorn {
+        position: relative;
+        top: -3px;
+      }
+      h2 {
+        font-size: 38px;
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 300;
+      }
+    }
+    .or {
+      background-color: @lightgrey;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 10px;
+    }
+    ul {
+      margin-top: 0;
+      padding-left: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    .tools-action {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 100%;
+
+      .btn-container {
+        display: inline-block;
+        position: static;
+
+        .ui-btn {
+          width: 205px;
+        }
+
+        .remix-btn {
+          background-color: @blue;
+        }
+
+        .fork-btn-label {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+/*********************************************************
  * EVENT GUIDES
  */
 #guides {
@@ -768,11 +865,11 @@ a {
     a {
       font-weight: 300;
       i {
-	display: inline-block;
-	position: relative;
-	margin-left: 10px;
-	font-size: 28px;
-	top: 2px;
+        display: inline-block;
+        position: relative;
+        margin-left: 10px;
+        font-size: 28px;
+        top: 2px;
       }
     }
 

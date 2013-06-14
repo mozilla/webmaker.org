@@ -1,40 +1,68 @@
 {% extends "layout.html" %}
+{% include 'macros.html' %}
 {% block title %}Tools{% endblock %}
+{% block midbar %}
+{{ galleryHeader("Create and remix the web with Webmaker tools.", "", []) }}
+{% endblock %}
 {% block body %}
-<div class="ui-wrapper ui-body">
+<div class="ui-wrapper ui-body-nobg">
 
-  <div class="ui-section">
-
-    <div class="ui-row">
-      <h1>Webmaker helps you create something original or remix pieces of the web</h1>
-    </div>
-
-    <div class="ui-row">
-      <div class="g-3">
-        <header>
-          <img src="../img/thimble-logo.png" alt="Thimble">
-          <h2>Thimble</h2>
-          <h3>Webmaking made easy</h3>
-        </header>
-        <p>Thimble makes it ridiculously simple to create and share your own web pages.
-        Write and edit HTML and CSS right in your browser, then instantly preview your work.
-        Host and share your finished projects with a single click. Perfect for beginners and experts alike.</p>
-        <a href="http://thimble.webmaker.org/">Get started</a>
+  <div class="ui-bg-column column-tools">
+    <header>
+      <img class="popcorn" src="/img/icon-tools-popcorn-2x.png" alt="Popcorn">
+      <h2>Popcorn Maker</h2>
+      <h3>Supercharge web video</h3>
+    </header>
+    <p>Popcorn Maker helps you easily remix web video, audio and images into cool mashups that
+    you can embed on other websites. Drag and drop content from the web, then add your
+    own comments and links —all within your browser. Popcorn Maker videos are dynamic,
+    full of links and unique with every view.</p>
+    <h3>You can build:</h3>
+    <ul>
+      <li>an animated gif with sound</li>
+      <li>a short documentary</li>
+      <li>a video profile to introduce yourself to the world</li>
+      <li>and more!</li>
+    </ul>
+    <div class="tools-action">
+      <h3>Get started</h3>
+      <div class="btn-container">
+        <a class="ui-btn fork-btn fork-btn-label remix-btn">Start from scratch <span class="icon-angle-right"></span></a>
       </div>
-      <div class="g-3">
-        <header>
-          <img src="../img/popcorn-logo.png" alt="Popcorn">
-          <h2>Popcorn Maker</h2>
-          <h3>Supercharge web video</h3>
-        </header>
-        <p>Popcorn Maker helps you easily remix web video. Drag and drop content from the web, then add your own
-        comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique
-        with every view.</p>
-        <a href="https://popcorn.webmaker.org/">Get started</a>
+      <span class="or">or</span>
+      <div class="btn-container">
+        <a class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> Remix a project</a>
       </div>
     </div>
-
   </div>
+  <div class="ui-bg-column column-tools">
+    <header>
+      <img src="/img/icon-tools-thimble-2x.png" alt="Thimble">
+      <h2>Thimble</h2>
+      <h3>Webmaking made easy</h3>
+    </header>
+    <p>Thimble makes it ridiculously simple to create and share your own web pages.
+    Write and edit HTML and CSS right in your browser, then instantly preview your work.
+    Host and share your finished projects with a single click. Perfect for beginners and experts alike.</p>
+    <h3>You can build:</h3>
+    <ul>
+      <li>a personalized greeting card</li>
+      <li>an online poster for your favourite movie</li>
+      <li>a hilarious meme</li>
+      <li>and so much more!</li>
+    </ul>
+    <div class="tools-action">
+      <h3>Get started</h3>
+      <div class="btn-container">
+        <a class="ui-btn fork-btn fork-btn-label remix-btn">Start from scratch <span class="icon-angle-right"></span></a>
+      </div>
+      <span class="or">or</span>
+      <div class="btn-container">
+        <a class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> Remix a project</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 {% endblock %}
 {% block scripts %}

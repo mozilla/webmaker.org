@@ -6,7 +6,8 @@ define(['jquery', 'moment'],
       countMedium = 8,
       LIMIT_DESKTOP = 20,
       LIMIT_MOBILE = 6,
-      currentIter = 1;
+      currentIter = 1,
+      defaultAvatar = "http%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png";
 
   var $body = $( 'body' ),
       $mainGallery = $('.main-gallery'),
@@ -75,7 +76,7 @@ define(['jquery', 'moment'],
     }
 
     // create front Element & populate
-    var $frontEl = $('<div class="front make-thumbnail"><div class="type-icon"></div><div class="front-title">' + data.title + '</div></div></div>');
+    var $frontEl = $('<div class="front make-thumbnail">' + "<img class='make-avatar' src='http://www.gravatar.com/avatar/" + data.emailHash + "?s=44&d=" + defaultAvatar + "' alt='" + data.emailHash + "'>" + '<div class="front-title">' + data.title + '</div></div></div>');
 
     // if there's a thumbnail, set the right css
     if ( data.thumbnail ) {
@@ -95,7 +96,7 @@ define(['jquery', 'moment'],
     createMakeBack( data, $backEl );
 
     // add front & back elements to flip container
-    var $flip = $('<div class="flipContainer"></div>');
+    var $flip = $('<a href="'+ data.url +'" class="flipContainer"></a>');
 
     $flip.append($frontEl).append( $backEl );
 

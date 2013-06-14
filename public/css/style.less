@@ -92,6 +92,7 @@ a {
 
 .make-flip {
   .flipContainer { //card
+    display: block;
     -webkit-transform-style: preserve-3d;
     -webkit-transition: all 0.3s linear;
     -moz-transform-style: preserve-3d;
@@ -219,6 +220,8 @@ a {
   }
   .description {
     margin-bottom: 1em;
+    max-height: 4.3em;
+    overflow: hidden;
   }
   .make-type-container {
     display: none;
@@ -263,12 +266,24 @@ a {
   a.ui-btn {
     line-height: @_size;
   }
-  .fork-btn {
+  .fork-btn,
+  .fork-btn-label {
     color: #FFF;
     background: @green;
     border: 1px solid darken(@green, 5%);
     &:hover {
       background: lighten(@green, 20%);
+    }
+  }
+  .fork-btn-label {
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    padding: 0.6em 0.9em 0.5em 0.9em;
+    > span {
+      font-size: 1.4em;
+      margin-right: 0.1em;
     }
   }
   .view-btn,
@@ -284,7 +299,8 @@ a {
 .type {
   text-transform: capitalize;
 }
-.type-icon {
+.type-icon,
+.make-avatar {
   display: inline-block;
   height: 44px;
   width: 44px;
@@ -292,10 +308,11 @@ a {
     display: none;
   }
 }
-.front .type-icon {
+.front .make-avatar {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 44px;
 }
 
 .make-thumbnail {

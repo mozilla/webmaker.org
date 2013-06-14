@@ -27,6 +27,7 @@ define(['jquery', 'moment'],
         $typeSpan = $('.type', $backTemplate),
         $viewBtn = $('.view-btn', $backTemplate),
         $forkBtn = $('.fork-btn', $backTemplate),
+        $avatar = $('.make-avatar'),
         createdAtDate = moment( new Date( data.createdAt ) ).fromNow();
         // Note that this is not working... no createdAt?
 
@@ -39,6 +40,7 @@ define(['jquery', 'moment'],
     $viewBtn.attr( "href", data.url );
     $forkBtn.attr( "href", data.url + '/remix' );
     $descSpan.text( data.description );
+    $avatar.attr( "src", "http://www.gravatar.com/avatar/" + data.emailHash + "?s=44&d=" + defaultAvatar );
     // Note that the remix url doesn't exist right now?
 
     $el.append( $backTemplate );
@@ -76,7 +78,7 @@ define(['jquery', 'moment'],
     }
 
     // create front Element & populate
-    var $frontEl = $('<div class="front make-thumbnail">' + "<img class='make-avatar' src='http://www.gravatar.com/avatar/" + data.emailHash + "?s=44&d=" + defaultAvatar + "' alt='" + data.emailHash + "'>" + '<div class="front-title">' + data.title + '</div></div></div>');
+    var $frontEl = $('<div class="front make-thumbnail">' + '<div class="front-title">' + data.title + '</div></div></div>');
 
     // if there's a thumbnail, set the right css
     if ( data.thumbnail ) {
@@ -164,7 +166,7 @@ define(['jquery', 'moment'],
 
         var $borderDiv = $('<div class="join-border">');
         var $signinDiv = $('<div class="join-signin">');
-        var $signin = $('<a class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a>');
+        var $signin = $('<span class="btn-join-container"><a class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>');
         var $claim = $('<span class="join-claim">').text('Claim your webmaker domain.');
 
         $signinDiv.append($claim);

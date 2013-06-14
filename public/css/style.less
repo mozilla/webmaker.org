@@ -201,7 +201,6 @@ a {
     overflow: hidden;
   }
   p {
-    font-size: 0.9em;
     color: #999;
   }
   .title {
@@ -210,8 +209,16 @@ a {
       color: @green;
     }
   }
-  .desc a {
-    color: lighten( @grey, 10% );
+  .desc {
+    overflow: hidden;
+    height: 9.8em;
+  }
+  .author-date{
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+  .author-date a {
+    color: @grey;
     font-family: "Open Sans";
     font-weight: 400;
     &:hover {
@@ -220,8 +227,6 @@ a {
   }
   .description {
     margin-bottom: 1em;
-    max-height: 4.3em;
-    overflow: hidden;
   }
   .make-type-container {
     display: none;
@@ -299,8 +304,7 @@ a {
 .type {
   text-transform: capitalize;
 }
-.type-icon,
-.make-avatar {
+.type-icon {
   display: inline-block;
   height: 44px;
   width: 44px;
@@ -308,11 +312,13 @@ a {
     display: none;
   }
 }
-.front .make-avatar {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+
+.make-avatar {
+  float: left;
+  margin-right: 0.8em;
   border-radius: 44px;
+  height: 44px;
+  width: 44px;
 }
 
 .make-thumbnail {
@@ -412,7 +418,7 @@ a {
 
 #banner-join {
   color: #FFF;
-  background: url(../img/bkgFooter.jpg);
+  background: #FFF;
   position: absolute;
   top: (@row + @gutter) * 2 * @unit;
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
@@ -442,17 +448,23 @@ a {
     padding: 0 20px;
     line-height: 90px;
     position: relative;
+    .border-box;
 
     .join-claim {
       font-size: 18px;
+    }
+
+    .btn-join-container {
+      float: right;
+      height: 100%;
     }
 
     .btn-signin {
       position: relative;
       width: 150px;
       bottom: auto;
-      margin-left: 30px;
       left: auto;
+      vertical-align: middle;
 
       i {
         position: relative;

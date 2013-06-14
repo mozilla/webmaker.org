@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Error - {{code}}{% endblock %}
+{% block body %}
+<div class="ui-wrapper ui-body">
+  <div class="ui-poster error-container">
+    <div class="error-code">
+      <img class="error-img" src="/img/webmaker-404.png">
+    </div>{% if code %}{{code}} : {% endif %}{{message}}</div>
+  </div>
+</div>
+
+{% endblock %}
+{% block require_main %}/js/app{% endblock %}

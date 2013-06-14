@@ -42,7 +42,6 @@
         if (payload.type === "sso_watch") {
           var proxyLogin = proxyPersona(event.source, "sso_onlogin"),
               proxyLogout = proxyPersona(event.source, "sso_onlogout");
-
           navigator.id.watch({
             loggedInUser: payload.data.loggedInUser,
             onlogin: function(assertion) {

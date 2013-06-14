@@ -8,8 +8,8 @@ requirejs.config({
     'social':           '/ext/js/socialmedia',
     'uri':              '/ext/js/uri',
     'tabzilla': 'https://www.mozilla.org/tabzilla/media/js/tabzilla',
-    // XXX: window.__loginAPI gets templated in server-side in layout.html 
-    'sso-ux':            window.__loginAPI + '/js/sso-ux'       
+    // XXX: window.__loginAPI gets templated in server-side in layout.html
+    'sso-ux':            window.__loginAPI + '/js/sso-ux'
   },
   shim: {
     'tabzilla': ['jquery'],
@@ -18,7 +18,7 @@ requirejs.config({
   }
 });
 
-require(['jquery','base/carousel', 'base/privacy', 'tabzilla' ],
+require(['jquery','base/carousel', 'base/privacy', 'tabzilla', 'sso-ux' ],
   function ( $, carousel, privacy ) {
     "use strict";
 

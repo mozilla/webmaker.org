@@ -67,7 +67,6 @@ app.use(function( req, res, next ) {
 
 require( "webmaker-events" ).init( app, nunjucksEnv, lessMiddleWare, __dirname );
 
-app.use( app.router );
 
 var optimize = NODE_ENV !== "development",
     tmpDir = path.join( require( "os" ).tmpDir(), "mozilla.webmaker.org" );
@@ -81,6 +80,19 @@ app.use( lessMiddleWare({
   optimization: optimize ? 0 : 2
 }));
 app.use( express.static( tmpDir ) );
+app.use( app.router );
+app.use( function( err, req, res, next) {
+  if ( !err.status ) {
+    err.status = 500;
+  }
+
+  res.status( err.status );
+  res.render( 'error.html', { message: err.message, code: err.status });
+});
+app.use( function( req, res, next ) {
+  res.status( 404 );
+  res.render( 'error.html', { message: "You found a loose thread!<br>Please try a <a href='/search'>search</a> or visit our <a href='/'>homepage.</a>", code: 404 });
+});
 
 app.get( "/healthcheck", routes.api.healthcheck );
 

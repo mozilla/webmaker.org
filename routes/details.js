@@ -2,8 +2,9 @@ module.exports = function( make ) {
   var MAX_REMIXES = 5;
   return function( req, res ) {
 
-    function renderError(message) {
-      return res.render("details.html", {error: message});
+    function renderError(message, err) {
+      err = err || {};
+      return res.render("error.html", {code: err.code, message: message || err.message});
     }
 
     // Use a URL in the querystring or an ID
@@ -16,7 +17,7 @@ module.exports = function( make ) {
       searchCriteria = "url";
       searchOptions.url = decodeURIComponent( req.query.url );
     } else {
-      return renderError("No URL or ID was passed" );
+      return renderError("No URL or ID was passed");
     }
 
     make.find(searchOptions).process( function( err, data ) {

@@ -411,38 +411,71 @@ a {
 }
 
 #banner-join {
-  background-color: @red;
   color: #FFF;
+  background: url(../img/bkgFooter.jpg);
   position: absolute;
-  text-align: center;
-  padding-top: 25px;
   top: (@row + @gutter) * 2 * @unit;
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
   left: 0;
   .width(4);
   .height(2);
   .border-box;
 
+  .rotator {
+    padding-top: 25px;
+    .border-box;
+
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    background-color: @red;
+
+    h2 {
+      font-size: 34px;
+    }
+  }
+
+  .join-signin {
+    color: @grey;
+    height: 90px;
+    width: 100%;
+    padding: 0 20px;
+    line-height: 90px;
+    position: relative;
+
+    .join-claim {
+      font-size: 18px;
+    }
+
+    .btn-signin {
+      position: relative;
+      width: 150px;
+      bottom: auto;
+      margin-left: 30px;
+      left: auto;
+
+      i {
+        position: relative;
+        margin-left: 10px;
+        top: 2px;
+        font-size: 28px;
+      }
+    }
+  }
+
+  .join-border {
+    width: 100%;
+    height: 5px;
+    background: url("/img/bkg-pat-wave.png") repeat-x;
+  }
+
   h1, h2 {
     font-family: 'Open Sans Light', sans-serif;
+    font-weight: 100;
     margin: 0;
+    padding: 0;
   }
 
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-  }
-
-  .sign-in {
-    color: #fff;
-    background-color: @green;
-    border: 1px solid @lightgrey;
-    padding: 15px;
-    font-size: 2em;
-  }
 }
 
 .make-teach {

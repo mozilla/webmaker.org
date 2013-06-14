@@ -149,38 +149,56 @@ define(['jquery', 'moment'],
       case 'index':
         $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
         var $rotator = $('<div class="rotator">');
+        var $theweb = $('<h2>');
+        $rotator.append($theweb);
         var stampHeaders = [
-          'The web is still wild. Build it.',
-          'The web is still open. Hack it.',
-          'The web is still weird. Create it.',
-          'The web is still fun. Make it.'
+          'The web is still wild.<br> Build it.',
+          'The web is still open.<br> Hack it.',
+          'The web is still weird.<br> Create it.',
+          'The web is still fun.<br> Make it.'
         ];
 
-        for (var i = 0, l = stampHeaders.length; i < l; i ++) {
-          $rotator.append('<h1>' + stampHeaders[i] + '</h1>');
-        }
+        // for (var i = 0, l = stampHeaders.length; i < l; i ++) {
+        //   $rotator.append('<h2>' + stampHeaders[i] + '</h2>');
+        // }
 
-        var $h2 = $('<h2>Claim your Webmaker domain:</h2>');
-        var $signin = $('<button class="ui-huge-button sign-in">Sign in!</button>');
+        var $borderDiv = $('<div class="join-border">');
+        var $signinDiv = $('<div class="join-signin">');
+        var $signin = $('<a class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a>');
+        var $claim = $('<span class="join-claim">').text('Claim your webmaker domain.');
+
+        $signinDiv.append($claim);
+        $signinDiv.append($signin);
 
         $signin.on('click', function( e ) {
           navigator.idSSO.request();
         } );
 
         $stickyBanner.append( $rotator );
-        $stickyBanner.append( $h2 );
-        $stickyBanner.append( $signin );
+        $stickyBanner.append( $borderDiv );
+        $stickyBanner.append( $signinDiv );
 
         $mainGallery.append( $stickyBanner );
 
         this.packery.stamp( $stickyBanner[0] );
         this.packery.layout();
 
-        $('.rotator').carouFredSel({
-          padding: [0, 0, 0, 20],
-          scroll: { fx: 'crossfade', items: 1 },
-          items: { width: '100%' }
-        });
+        var carouselTime = 5; // seconds
+        var iterate = 0;
+
+        // initial population
+        var v = stampHeaders[iterate];
+        $theweb.html(v);
+        iterate++;
+
+        var interval = setInterval(function(){
+          var v = stampHeaders[iterate];
+          $theweb.fadeOut(500, function() {
+            $(this).html(v).fadeIn(500);
+          });
+          iterate++;
+          if (iterate === stampHeaders.length - 1) iterate = 0;
+        }, carouselTime * 1000);
 
         // set up mouse over handlers
         $makeTemplate.addClass( "make-flip" );

@@ -91,13 +91,14 @@
   </div>
   <script src="/ext/js/require.js"></script>
   <script>
-     requirejs.config({
+    requirejs.config({
+      baseUrl: '/js',
       paths: {
-        'jquery': '/ext/js/jquery-1.9.1',
-        'social': '/ext/js/socialmedia'
+        'jquery': '../ext/js/jquery-1.9.1',
+        'social': '../ext/js/socialmedia'
       }
     });
-    require(['./js/pages/details']);
+    require(['pages/details']);
   </script>
 </body>
 </html>

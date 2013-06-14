@@ -117,6 +117,11 @@ app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 
 
 /**
+ * Legacy Webmaker Redirects
+ */
+require( "./routes/redirect" )( app );
+
+/**
  * WEBMAKER SSO
  */
 // LoginAPI helper Module

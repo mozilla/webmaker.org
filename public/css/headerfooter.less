@@ -276,6 +276,20 @@
 /*********************************************************
 * FOOTER
 */
+
+
+.footerHr {
+
+  width: 75%;
+  border-width: 1px;
+  border-top: solid;
+  color: #c5c7c9;
+  opacity: 0.7;
+  border-width: 1px;
+  margin: 40px auto 20px auto;
+  position: relative;
+}
+
 .make-footer {
   margin-top: 20px;
   position: relative;
@@ -483,13 +497,17 @@
       color: #21a4dc;
       display: inline-block;
       font-size: 14px;
-      margin-right: 20px;
       position: relative;
+      padding-right: 35px;
 
       i {
         font-size: 22px;
         position: relative;
         top: 2px;
+      }
+
+       a:hover { 
+        text-decoration: none;  
       }
     }
   }
@@ -497,6 +515,7 @@
   .links {
     list-style: none;
     margin: 0;
+    padding: 15px 0 0 0;
 
     li {
       display: inline-block;
@@ -522,8 +541,8 @@
     font-family: "Open Sans Light";
   }
 
-  .footer-social {
-    padding-left: 15px;
+  li.icon-google-plus { 
+    font-size: 20px;
   }
 }
 
@@ -677,7 +696,7 @@ footer {
 
     }
     .links {
-      padding: 0;
+      padding: 15px 0 0 0;
       > li {
         font-size: 0.8em;
         text-align: center;

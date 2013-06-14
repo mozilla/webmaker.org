@@ -1,9 +1,9 @@
 {% macro galleryHeader(header, desc, options) %}
 <div class="gallery-header">
   <div class="ui-wrapper">
-    <div class="g-6 header">
+    <div class="{% if desc %}g-6{% endif %} header">
       <h1>{{ header }}</h1>
-      <p> {{ desc }}</p>
+      {% if desc %}<p> {{ desc }}</p>{% endif %}
     </div>
     {% if options.length %}
     <div class="g-2 filter">

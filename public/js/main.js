@@ -38,47 +38,65 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
         media.loadMore();
       } );
 
-      UI.select( '#search-filter', function( val ) {
-        switch ( val ) {
-          case 'recommended':
-            media.search( {
-              tags: [ 'webmaker:recommended' ],
-              sortByField: { 'createdAt' : 'desc' }
-            } );
-            break;
+      // set up proper search handlers for filter
+      switch ( $body[0].id ) {
+        case 'index':
+          UI.select( '#search-filter', function( val ) {
+            switch ( val ) {
+              case 'featured':
+                media.search( {
+                tags: [ 'webmaker:featured' ],
+                sortByField: { 'createdAt' : 'desc' }
+              } );
+              break;
 
-          case 'featured':
-            media.search( {
-              tags: [ 'webmaker:featured' ],
-              sortByField: { 'createdAt' : 'desc' }
-            } );
-            break;
+              case 'popcorn':
+                media.search( {
+                tags: [ 'webmaker:featured' ],
+                sortByField: { 'createdAt' : 'desc' },
+                contentType: 'application/x-popcorn'
+              } );
+              break;
 
-          case 'popcorn':
-            media.search( {
-              tags: [ 'webmaker:featured' ],
-              sortByField: { 'createdAt' : 'desc' },
-              contentType: 'application/x-popcorn'
-            } );
-            break;
+              case 'thimble':
+                media.search( {
+                tags: [ 'webmaker:featured' ],
+                sortByField: { 'createdAt' : 'desc' },
+                contentType: 'application/x-thimble'
+              } );
+              break;
+            }
+        });
+        break;
+      case 'teach':
+        UI.select( '#search-filter', function( val ) {
+          switch ( val ) {
+            case 'featured':
+              media.search( {
+                tags: [ 'webmaker:featured', 'guide' ],
+                sortByField: { 'createdAt' : 'desc' }
+              } );
+              break;
 
-          case 'thimble':
-            media.search( {
-              tags: [ 'webmaker:featured' ],
-              sortByField: { 'createdAt' : 'desc' },
-              contentType: 'application/x-thimble'
-            } );
-            break;
+            case 'popcorn':
+              media.search( {
+                tags: [ 'guide' ],
+                sortByField: { 'createdAt' : 'desc' },
+                contentType: 'application/x-popcorn'
+              } );
+              break;
 
-          case 'guide':
-            media.search( {
-              tags: [ 'webmaker:featured', 'guide' ],
-              sortByField: { 'createdAt' : 'desc' },
-              contentType: 'application/x-thimble'
-            } );
-            break;
-        }
-      });
+            case 'thimble':
+              media.search( {
+                tags: [ 'guide' ],
+                sortByField: { 'createdAt' : 'desc' },
+                contentType: 'application/x-thimble'
+              } );
+              break;
+          }
+        });
+        break;
+      }
     }
 
     $( '#bottom-search-btn' ).on( 'click', function ( e ) {

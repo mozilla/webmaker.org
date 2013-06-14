@@ -1,0 +1,101 @@
+@import "ui";
+
+body#events.map form#create-event {
+    width:      100%;
+    margin-top: 10px;
+
+    fieldset {
+        display:        inline-block;
+        border:         0px;
+        margin-left:    10px;
+        margin-right:   10px;
+
+        vertical-align: top;
+    }
+    @media (max-width: 1000px) {
+        .datetime .switch {
+            display: none;
+        }
+        fieldset {
+            width:  100%;
+            padding-right: 30px;
+        }
+    }
+    label {
+        display:    inline-block;
+        width:      11em;
+        margin:     8px;
+        margin-left: 0px;
+        float:      left;
+        clear:      left;
+    }
+    label,.md-editor,input {
+        vertical-align: middle;
+        font-size:      13px;
+    }
+    .md-editor,input {
+        outline:    0px;
+        margin:     6px 4px;
+        margin-left: 0px;
+
+        &:not([name$="Date"]):not([name$="Time"]) {
+            width:  100%;
+        }
+    }
+    .md-editor {
+        border:     0.5px solid #444;
+    }
+    :not(.datetime) .ui-select {
+        margin-left: 0px;
+    }
+    .registerLink { // hack
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+    label[for="event_registerLink"] {
+        margin-top: 13px;
+    }
+    input[name="title"] {
+        min-width: 21em;
+    }
+    .upload {
+        margin:     10px 0px;
+        float:      left;
+    }
+    #image-upload {
+        display:    table-cell;
+        width:      125px;
+        height:     80px;
+        border:     1px #fff dashed;
+        border-radius: 6px;
+
+        font-size:  13px;
+        text-align: center;
+        vertical-align: middle;
+        .clickable;
+
+        img { max-width: 123px;
+              max-height: 78px; }
+    }
+    input[type="file"] { .hidden; }
+
+    button[type="submit"] {
+        position:   absolute;
+        bottom: 15px; right: 15px;
+
+        padding:    12px 18px;
+        padding-bottom: 12.5px;
+
+        font-size: 22px;
+
+        .icon-plus {
+            font-size: 17px;
+            margin-right: 4px;
+        }
+    }
+    .error {
+        background: #ffeeee;
+        outline: red solid 1px;
+        input { background: #ffeeee; }
+    }
+}

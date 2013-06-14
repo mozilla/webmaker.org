@@ -1,5 +1,8 @@
 define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'domReady!'],
 function ($, UI, MapMaker) {
+    $('.clear-input').click(function () {
+        $(this).prev('input').val('');
+    });
     $('.datepicker').datepicker().each(function(i, elem) {
         $(elem).next('.icon').click(function () { $(elem).focus() });
     });

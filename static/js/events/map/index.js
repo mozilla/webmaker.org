@@ -1,29 +1,36 @@
 define(['jquery', 'google', 'map/map_maker', 'map/forms'],
 function ($, google, MapMaker, EventForms) {
 
-    var mapCenter = new google.maps.LatLng(37.774546, -122.433523);
+    var gm = google.maps;
+    gm.visualRefresh = true;
+    var mapCenter = new gm.LatLng(37.774546, -122.433523);
     var mapOptions = {
         zoom: 2,  // starting zoom level, show whole world
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeId: gm.MapTypeId.ROADMAP,
         center: mapCenter,
+        backgroundColor: "#a5bfdd", // set color of loading tiles
 
-        panControl: false,
         rotateControl: false,
-        scaleControl: false,
+        scaleControl: true,
         streetViewControl: true,
         overviewMapControl: false,
 
         mapTypeControl: false,
         mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            style: gm.MapTypeControlStyle.HORIZONTAL_BAR,
             mapTypeIds: [ 'webmaker_style',
-                google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE,
-                google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN ]
+                gm.MapTypeId.ROADMAP, gm.MapTypeId.SATELLITE,
+                gm.MapTypeId.HYBRID, gm.MapTypeId.TERRAIN ]
         },
 
+        panControl: true,
+        panControlOptions: {
+            position:   gm.ControlPosition.TOP_RIGHT
+        },
         zoomControl: true,
         zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.LARGE
+            style:      gm.ZoomControlStyle.LARGE,
+            position:   gm.ControlPosition.TOP_RIGHT
         }
     };
     var mcOptions = {

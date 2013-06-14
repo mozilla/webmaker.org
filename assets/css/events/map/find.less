@@ -1,0 +1,62 @@
+
+body#events.map form#find-event {
+    display: inline-block;
+    height: 45px;
+    line-height: 100%;
+    white-space: nowrap;
+
+    .header {
+        display:    inline-block;
+        color:      #fff;
+
+        .icon-search {
+            color: #888;
+            margin-left: -1px;
+            margin-right: 2px;
+        }
+    }
+    .ui-input {
+        overflow:   hidden;
+        height:     75%;
+        margin:     0px 2px 3px 0px;
+        padding:    0px 10px;
+
+        .pointer-icon {
+            width:  18px;
+            vertical-align: -8px;
+            margin-left: -4px;
+        }
+        .calendar-icon {
+            width:  16px;
+            vertical-align: -7px;
+        }
+        input {
+            height:     65%;
+            padding:    0px 0px 0px 6px;
+
+            font-size:  14px;
+            vertical-align: -2px;
+
+            &[name="when"] { .ui-small; }
+            &[name="where"] { .ui-medium; }
+        }
+        .icon-remove {
+            .clickable;
+            color:  rgba(0, 0, 0, 0.07);
+            font-size:  18px;
+            vertical-align: middle;
+        }
+    }
+    button[type="submit"] {
+        height: 74%;
+        width:  34px;
+        margin-right: 6px;
+
+        line-height: 100%;
+        font-size:   13px;
+
+        .icon-chevron-right {
+            font-size:  16px;
+        }
+    }
+}

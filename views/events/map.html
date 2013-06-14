@@ -4,22 +4,36 @@
 
 {% block body %}
 {{ super() }}
-<div class="overlay-container">
 <div class="map-overlay">
     <form id="find-event" action="/events" method="GET">
-        <h2><span class="icon-search"></span> Find an event</h2>
+        <h2 class="header"><span class="icon-search"></span> Find an Event</h2>
         <input name="_csrf" type="hidden" value="{{ csrf }}" />
-        <input name="find-where" type="text" placeholder="Where?" />
-        <input name="find-when"  type="text" placeholder="When?" class="datepicker" />
+        <span class="ui-input ui-append">
+            <img class="pointer-icon"  src="/img/event-detail-icon-pointer.png">
+            <input name="where" type="text" placeholder="Where?" />
+            <span class="icon-remove clear-input"></span>
+        </span>
+        <span class="ui-input ui-append">
+            <img class="calendar-icon" src="/img/event-detail-icon-calendar.png">
+            <input name="when"  type="text" placeholder="When?" class="datepicker" />
+            <span class="icon-remove clear-input"></span>
+        </span>
         <button type="submit"><span class="icon-chevron-right"></span></button>
     </form>
 
-    <div id="add-event-button">
-        <h2 class='formExpandButton'><span class="icon-plus"></span> Add an event</h2>
+    <div class="overlay-buttons">
+        <a class="header expand-form">
+            <span class="icon-plus"></span>
+            Add an Event
+        </a>
+        <a href="/party" id="event-guides" class="header">
+            Event Guides
+            <span class="icon-chevron-right"></span>
+        </a>
     </div>
 
-    <form id="create-event" action="/events" method="POST" class='hidden'>
-        <h2 class='formExpandButton'><span class="icon-remove"></span> Add an event</h2>
+    <form id="create-event" action="/events" method="POST" class="hidden">
+        <a class="header expand-form"><span class="icon-remove"></span> Add an Event</a><br />
         <fieldset>
             <label for="event_title"> Name your event </label>
             <span class="cell ui-input ui-append"><input id="event_title" name="title"
@@ -83,7 +97,6 @@
             <button type="submit"><span class="icon-plus"></span> Submit your event</button>
         </fieldset>
     </form>
-</div>
 </div>
 
 <div id="map-canvas"></div>

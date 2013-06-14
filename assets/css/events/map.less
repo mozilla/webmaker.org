@@ -1,0 +1,115 @@
+// variables
+@blueButtonColor: #27aae1;
+.blueButton {
+    background: @blueButtonColor;
+    &:hover  { background: lighten(@blueButtonColor, 10%); }
+    &:active { background: darken(@blueButtonColor, 5%); }
+    border:     0px;
+    color:      #fff;
+    .clickable;
+}
+@oceanBlue: #a5bfdd;
+
+@import "map/marker_info_window";
+@import "map/create";
+@import "map/find";
+
+body#events.map {
+
+    #map-canvas {
+        height: 800px;
+        background: @oceanBlue;
+    }
+
+    .map-overlay {
+        position:  absolute;
+        top: 20px; left: 20px;
+        display: inline;
+        z-index:   1;
+
+        color:  #fafafa;
+
+        .header {
+            display:    inline-block;
+            margin:     0px;
+            padding:    0px 15px;
+            line-height: 45px;
+            white-space: nowrap;
+
+            font-size:      20px;
+            font-weight:    300;
+            color:          #fff;
+        }
+        .overlay-buttons {
+            .header {
+                .blueButton;
+                height:     45px;
+                margin:     10px 5px 10px 0px;
+
+                color:          #fff;
+            }
+            .icon-chevron-right {
+                font-size:      18px;
+                margin-left:    5px;
+            }
+        }
+
+        .expand-form {
+            .clickable;
+            border:     0px;
+            font-size:  20px;
+
+            .icon-plus {
+                margin-right:   3px;
+
+                font-size:      19px;
+                vertical-align: -1px;
+            }
+            .icon-remove {
+                margin-right:   3px;
+            }
+        }
+
+        .cell {
+            display: block;
+            overflow: hidden;
+        }
+        .ui-select-menu {
+            z-index: 2;
+        }
+        .ui-select {
+            box-sizing: content-box;
+            margin:     4px;
+        }
+        .datetime > *[class^="ui-"] {
+            margin-left: 0px;
+
+            vertical-align: top;
+
+            input {
+                .ui-small;
+                padding:    0px 10px;
+            }
+            .icon-calendar {
+                padding-right: 6px;
+                vertical-align: middle;
+            }
+            &.select-time {
+                padding: 0px;
+                input {
+                    .ui-small;
+                    margin-left: 1em;
+                }
+            }
+        }
+        input {
+            background: white;
+            outline:    0px;
+            border:     0px;
+        }
+        form {
+            background: rgba(32,32,32,.8);
+            button[type="submit"] { .blueButton; }
+        }
+    }
+}

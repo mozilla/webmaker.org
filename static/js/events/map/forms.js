@@ -6,8 +6,8 @@ function ($, EventModel, forms) { return function (mapMaker) {
         ev.preventDefault();
         $findForm.submit();
     });
-    var $when  = $findForm.find('input[name="find-when"]'),
-        $where = $findForm.find('input[name="find-where"]');
+    var $when  = $findForm.find('input[name="when"]'),
+        $where = $findForm.find('input[name="where"]');
     $findForm.on("submit", function(ev) {
         ev.preventDefault();
         EventModel.all(function (models) {
@@ -124,9 +124,9 @@ function ($, EventModel, forms) { return function (mapMaker) {
     function toggleCreateForm() {
         $createForm[0].reset();
         $createForm.toggleClass('hidden');
-        $("#add-event-button").toggleClass('hidden');
+        $(".overlay-buttons").toggleClass('hidden');
     }
-    $(".formExpandButton").click(function(ev) {
+    $(".expand-form").click(function(ev) {
         ev.preventDefault();
         toggleCreateForm();
     });

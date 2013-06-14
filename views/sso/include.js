@@ -1,51 +1,52 @@
-(function() {
+/*
+  Dummy object for catching navigator.idSSO calls
+  before the actual idSSO iframe has finished loading.
+  The passed objects will be used to call watch, request,
+  and/or logout immediately when the iframe has loaded.
+*/
+navigator.idSSO = {
+  watch: function(watchObject) {
+    this.watch = watchObject;
+  },
+  request: function(requestObject) {
+    this.request = requestObject;
+  },
+  logout: function(logoutObject) {
+    this.logout = logoutObject;
+  }
+};
 
-  var commChan;
+/*
+  The personaObserver is essentially a dummy object
+  until initialised through "sso_watch", and is used
+  to help reroute handlers from local to owning window.
+*/
+var personaObserver = {
+  onlogin: function() {},
+  onlogout: function() {},
+  onmatch: function() {},
+  oncancel: function() {}
+};
+
+/*
+  Try to set up the postMessage connection between the owning page
+  and the persona iframe. If the iframe is not available yet,
+  schedule a retry on DOMContentLoaded.
+*/
+(function setupInterconnection() {
+  document.removeEventListener("DOMContentLoaded", setupInterconnection, false);
+
+  var iframe = document.querySelector("#webmaker-nav iframe");
+  if(!iframe) {
+    document.addEventListener("DOMContentLoaded", setupInterconnection, false);
+    return;
+  }
 
   /*
-    Dummy object for catching navigator.idSSO calls
-    before the actual idSSO iframe has finished loading.
-    The passed objects will be used to call watch, request,
-    and/or logout immediately when the iframe has loaded.
+    set up the navigator bindings, using the onpage iframe
+    (see include.html for the iframe-side of things).
   */
-  navigator.idSSO = {
-    watch: function(watchObject) {
-      this.watch = watchObject;
-    },
-    request: function(requestObject) {
-      this.request = requestObject;
-    },
-    logout: function(logoutObject) {
-      this.logout = logoutObject;
-    }
-  };
-
-  /*
-    data = data from message
-    origin = domain from which message was sent
-    source = window object message was sent from
-  */
-  var personaObserver = {
-    onlogin: function(assertion){
-      console.log('onlogin');
-    },
-    onlogout: function(){
-      console.log('onlogout');
-    },
-    onmatch: function(){
-      console.log('onmatch');
-    },
-    oncancel: function(){
-      console.log('oncancel');
-    }
-  };
-
-
-  /*
-    Inject an iframe for Persona communication (see include.html)
-  */
-  var iframe = document.createElement("iframe");
-  iframe.addEventListener("load", function() {
+  function setupBindings(iframe) {
     commChan = iframe.contentWindow;
 
     /*
@@ -107,16 +108,11 @@
     if(typeof preset === "object")  navigator.idSSO.logout(preset);
 
     /*
-      data = data from message
-      origin = domain from which message was sent
-      source = window object message was sent from
+     start listening for post messages
     */
-    // set up the comm. channel listener
     window.addEventListener("message", function(event) {
-
       var payload = JSON.parse(event.data);
       var fn = personaObserver[payload.type];
-
       if(fn) {
         switch(payload.type) {
           case "sso_onlogin":
@@ -130,9 +126,22 @@
         }
       }
     }, false);
-  });
-  iframe.style.display = "none";
-  iframe.src = "{{ HOSTNAME }}/sso/include.html";
-  document.body.appendChild(iframe);
+
+    return commChan;
+  };
+
+  /*
+    Try to bind the communication channel, and if we succeed,
+    inform the iframe that we want to watch SSO operations.
+  */
+  commChan = setupBindings(iframe);
+  iframe.addEventListener("load", function() {
+    commChan.postMessage(JSON.stringify({
+      type: "sso_watch",
+      data: {
+        loggedInUser: false
+      }
+    }), "*");
+  }, false);
 
 }());

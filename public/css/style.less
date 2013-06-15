@@ -574,9 +574,7 @@ a {
  */
 
 .party-banner {
-  height: 496px;
   min-height: auto;
-  margin-bottom: 30px;
   .border-top-radius(25px);
   border-radius: 50px;
 }
@@ -607,11 +605,95 @@ a {
   }
 }
 
+.party-hosts {
+  text-align: center;
+
+  h3 {
+    text-align: left;
+  }
+
+  img {
+    width: 50%;
+  }
+}
+
 #party {
   h1, h2{
-    color: @blue;
+    color: @green;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
   }
   #content {
+    .commitment-carousel {
+      background-color: @lightgrey;
+      padding: 1em;
+      width: 100%;
+      .border-box;
+
+      img {
+        border-radius: 50em;
+        width: 87px;
+        float: left;
+        margin-right: 10px;
+      }
+
+      p {
+        font-size: 1.3em;
+        line-height: 1.2;
+        margin: 0 0 0.3em 0;
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:before {
+          content: "\2013";
+          margin-right: 3px;
+        }
+      }
+    }
+    .commitment-carousel-items {
+      position: relative;
+      padding: 10px 0 0 110px;
+      .commitment-carousel-item {
+        display: none;
+        &:first-child {
+          display: block;
+        }
+      }
+    }
+
+    .commitment-list-column {
+      ul {
+        padding-left: 20px;
+        margin: 0;
+        font-size: 0.6em;
+        font-family: 'Open Sans Light';
+        list-style: square;
+
+        h4 {
+          margin: 0;
+        }
+
+        a {
+          vertical-align: middle;
+          font-size: 1.5em;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
     a {
       text-decoration: underline;
     }
@@ -623,6 +705,7 @@ a {
     }
   }
 }
+
 
 .makers-making {
   width: 500px;

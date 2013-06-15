@@ -1,5 +1,4 @@
 requirejs.config({
-  baseUrl: '/js',
   paths: {
     'text':             '/ext/js/text',
     'jquery':           '/ext/js/jquery-1.9.1',

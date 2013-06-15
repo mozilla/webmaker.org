@@ -57,7 +57,8 @@
 {% block require_main %}{% endblock %}
 {% block scripts %}
 <script>
-  require(['./js/app'], function (app) {
+  requirejs.config({baseUrl: '/js'});
+  require(['app'], function (app) {
     require(['pages/search']);
   });
 </script>

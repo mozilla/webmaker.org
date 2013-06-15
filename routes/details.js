@@ -18,7 +18,7 @@ module.exports = function( make ) {
     } else {
       return renderError("No URL or ID was passed");
     }
-    console.log(searchOptions);
+
     make.find(searchOptions).process( function( err, data ) {
       if ( err ) {
         return renderError("Looks like there is a problem with the make API");

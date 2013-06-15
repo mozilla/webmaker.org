@@ -755,6 +755,11 @@ a {
 
 #mentor {
 
+  ul {
+    padding-left: 0;
+    line-height: 2;
+  }
+
   .the-mentors {
     background-color: #e3ebee;
     border-radius: 5px;
@@ -800,21 +805,28 @@ a {
 
   .mentors-connect {
     list-style: none;
+    padding: 0;
 
-    p {
-      margin: 0 20px;
+    li {
+      position: relative;
+      margin-left: 40px;
     }
 
     i {
+      position: absolute;
+      left: -40px;
       font-size: 30px;
       color: @green;
       float: left;
     }
 
+    p {
+      margin-top: 0;
+    }
+
     h3 {
       position: relative;
       font-size: 20px;
-      padding: 0 0 0 5px;
       margin: 0;
       display: inline-block;
     }

@@ -36,7 +36,7 @@ define(['resource_model'], function (ResourceModel) {
             }).join("\n") + '</div></div>';
     };
     EventModel.prototype.organizerHTML = function() {
-        return '<img src="https://gravatar.com/avatar/' + this.organizerHash + '" class="organizer-img" />'
+        return '<img src="https://secure.gravatar.com/avatar/' + this.organizerHash + '" class="organizer-img" />'
             + '<div class="info-organizer"><span class="title">Organized by</span><br/>'
             + this.organizerId + '</div>'
     };

@@ -40,7 +40,7 @@ define(['jquery', 'moment'],
     $viewBtn.attr( "href", data.url );
     $forkBtn.attr( "href", data.url + '/remix' );
     $descSpan.text( data.description );
-    $avatar.attr( "src", "http://www.gravatar.com/avatar/" + data.emailHash + "?s=44&d=" + defaultAvatar );
+    $avatar.attr( "src", "https://secure.gravatar.com/avatar/" + data.emailHash + "?s=44&d=" + defaultAvatar );
     // Note that the remix url doesn't exist right now?
 
     $el.append( $backTemplate );

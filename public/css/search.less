@@ -12,10 +12,13 @@
     position: relative;
     font-size: 3em;
     color: #FFF;
-    padding: 3em 0 2em 0;
+    padding: 2em 0 2.6em 0;
     text-align: center;
     transition-duration: 0.2s;
     transition-property: color, background, padding, font-size;
+    .ui-wrapper {
+      margin: 0 auto;
+    }
     &.focus {
       color: #555;
       background: #E0EBEE;
@@ -228,6 +231,12 @@
     overflow: hidden;
     .width( 2 );
     .height( 2 );
+    .make-link {
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+      }
+    }
     &.expand {
       .width( 4 );
       .height( 4 );
@@ -235,6 +244,9 @@
     &.big {
       .width( 4 );
       .height( 3 );
+    }
+    .fork-btn-label {
+        border: 1px solid #FFF;
     }
   }
   /*********************************************************
@@ -244,29 +256,6 @@
     opacity: 0;
     transition: opacity 0.2s ease;
   }
-  .make-fork-btn {
-    @_size: 60px;
-    position: absolute;
-    bottom: -(@_size + 5);
-    top: auto;
-    left: 5px;
-    width: @_size;
-    height: @_size;
-    font-size: 35px;
-    border-radius: 3px;
-    color: #FFF;
-    background: @green;
-    border: 1px solid #FFF;
-    transition: bottom 0.1s;
-    box-shadow: none;
-    > span {
-      line-height: @_size;
-    }
-    &:hover {
-      background: lighten( @green, 20% );
-      box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.6 );
-    }
-  }
   .make-info {
     position: relative;
     line-height: 1.2;
@@ -275,6 +264,9 @@
     padding: 1em;
     opacity: 1;
     transition: opacity 0.1s;
+    a {
+      color: @green;
+    }
     p {
       color: lighten( @grey, 10% );
       padding: 0;
@@ -297,6 +289,9 @@
     box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.6 );
     .btn-container {
       opacity: 1;
+    }
+    .make-thumbnail {
+      opacity: 0.75;
     }
   }
 

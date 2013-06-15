@@ -36,12 +36,6 @@ define(["jquery", "uri" ],
     transitionDuration: "0.2"
   });
 
-  // Expand
-  $makes.click( function() {
-    $(this).toggleClass("expand");
-    packery.layout();
-  });
-
   // Change what kind of search
   $searchFilter.find("li").click( function(){
     var $this = $(this),

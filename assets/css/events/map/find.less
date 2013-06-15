@@ -2,10 +2,12 @@
 @inputHeight: 34px;
 
 body#events.map form#find-event {
-    display: block;
-    line-height: @formHeight;
-    white-space: nowrap;
-    padding-right: 6px;
+    display:    block;
+    clear:      both;
+    padding-right:  6px;
+
+    line-height:    @formHeight;
+    white-space:    nowrap;
 
     .header {
         display:    inline-block;
@@ -53,10 +55,13 @@ body#events.map form#find-event {
         }
     }
     button[type="submit"].icon-chevron-right {
-        height: @inputHeight;
-        width:  @inputHeight;
+        position:   relative;   // hack, for vertical alignment
+        top:        -1px;
+        vertical-align: middle; // (needed for ^^hack)
+
+        height:     @inputHeight;
+        width:      @inputHeight;
 
         font-size:  18px;
-        vertical-align: middle;
     }
 }

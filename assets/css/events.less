@@ -24,6 +24,12 @@ body#events {
     }
     .disable-selection;
 }
+.clickthrough {
+    pointer-events: none;
+    background:     transparent;
+
+    * { pointer-events: auto; }
+}
 .disable-selection {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

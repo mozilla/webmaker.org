@@ -5,7 +5,7 @@
     &:hover  { background: lighten(@blueButtonColor, 10%); }
     &:active { background: darken(@blueButtonColor, 5%); }
     border:     0px;
-    color:      #fff;
+    color:      #fcfcfc;
     .clickable;
 }
 @oceanBlue: #a5bfdd;
@@ -16,44 +16,41 @@
 
 body#events.map {
 
-    a {
-        .clickable;
-        text-decoration: none;
-        color: inherit;
-    }
     #map-canvas {
-        position: relative;
-        height: 800px;
         background: @oceanBlue;
-        z-index:   1;
+        position:   relative;
+        height:     800px;
+        z-index:    1;
     }
 
     .map-overlay {
-        position: absolute;
-        display: inline-block;
-        margin: 10px;
-        z-index:   2;
+        .clickthrough;
+        position:   absolute;
+        display:    inline-block;
+        margin:     10px;
+        z-index:    2;
 
-        color:  #fafafa;
+        color:      #fafafa;
     }
     .header {
-        display:    inline-block;
-        margin:     0px;
-        padding:    0px 15px;
-        line-height: 45px;
-        white-space: nowrap;
+        display:        inline-block;
+        margin:         0px;
+        padding:        0px 15px;
+        line-height:    45px;
+        white-space:    nowrap;
 
         font-size:      20px;
         font-weight:    300;
         color:          #fff;
     }
     .overlay-buttons {
+        .clickthrough;
         .header {
             .blueButton;
             height:     45px;
             margin:     10px 5px 10px 0px;
 
-            color:          #fff;
+            color:      #fff;
         }
         .icon-chevron-right {
             font-size:      18px;
@@ -117,5 +114,9 @@ body#events.map {
     form {
         background: rgba(32,32,32,.8);
         button[type="submit"] { .blueButton; }
+    }
+    a {
+        .clickable;
+        text-decoration: none;
     }
 }

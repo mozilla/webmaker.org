@@ -88,28 +88,26 @@
         </div>
         <div id="event-organizer">
           <img src="https://secure.gravatar.com/avatar/{{ event.organizerHash }}" />
-          <span>Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
+          <span class="organized-by">Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
+          {% if email and event.organizer == email %}
+           <div id="owner-panel">
+             <span class="show">
+               <button id="edit-mode" type="button"   class="owner-btn ui-btn">Edit</button>
+             </span>
+             <span class="edit hidden">
+               <button id="save-edit" class="owner-btn ui-btn"
+                   type="submit" name="_method" value="PATCH">Save</button>
+               <button id="cancel-edit" type="button" class="owner-btn ui-btn">Cancel</button>
+               <button id="delete-event" class="owner-btn ui-btn"
+                   type="submit" name="_method" value="DELETE">Delete</button>
+               <div id="delete-confirm" class="hidden" title="Delete Event">
+                   Are you sure you want to permanently delete this event?
+               </div>
+             </span>
+           </div>
+          {% endif %}
         </div>
-        {% if email and event.organizer == email %}
-         <div>
-           <span class="show">
-             <button id="edit-mode" type="button"   class="owner-btn ui-btn">Edit</button>
-           </span>
-           <span class="edit hidden">
-             <button id="save-edit" class="owner-btn ui-btn"
-                 type="submit" name="_method" value="PATCH">Save</button>
-             <button id="cancel-edit" type="button" class="owner-btn ui-btn">Cancel</button>
-             <button id="delete-event" class="owner-btn ui-btn"
-                 type="submit" name="_method" value="DELETE">Delete</button>
-             <div id="delete-confirm" class="hidden" title="Delete Event">
-                 Are you sure you want to permanently delete this event?
-             </div>
-           </span>
-         </div>
-        {% endif %}
-        <span class="show">
-          <p>{{ event.description | markdown }}</p>
-        </span>
+        <span id="description-body" class="show">{{ event.description | markdown }}</span>
         <span class="edit hidden">
           <textarea name="description" data-provide="markdown">{{ event.description | escape }}</textarea>
           <label for="event_registerLink">Registration Link: </label>

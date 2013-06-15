@@ -27,7 +27,7 @@
     #event-details-link {
         .blueButton;
 
-        @btnSize:   36px;
+        @btnSize:   38px;
         background: @grayButtonColor;
         height:     @btnSize;
         width:      @btnSize;
@@ -36,20 +36,17 @@
         margin-top: 5px;
 
         font-size:  18px;
-        color:      #fcfcfc;
         text-align: center;
         vertical-align: middle;
     }
 }
 
 .info-title {
-  text-align: center;
-  font-size: 26px;
-  color: #808080;
+    margin-bottom: 6px;
 
-  p {
-    margin: 10px auto;
-  }
+    text-align: center;
+    font-size:  26px;
+    color:      #808080;
 }
 
 .info-when-where {
@@ -83,35 +80,33 @@ line-height: 100%;
 
 .info-description {
   color: @blackTextColor;
-  line-height: 1.5em;
-
-  text-align: justify;
-
-  font-size: 14px;
-
   margin-top: 12px;
   margin-bottom: 12px;
+
+  line-height:  1.5;
+  text-align:   justify;
+  font-size:    14px;
 }
 
 .organizer-img {
-  margin-right: 4px;
-
-  height: @userImageWidth;
-  width: @userImageWidth;
-  border-radius: @userImageWidth / 2;
-  float: left;
-  border: 2px solid white;
+    background: transparent;
+    height:     @userImageWidth;
+    width:      @userImageWidth;
+    border:     2px solid white;
+    border-radius:  @userImageWidth / 2;
+    margin-right:   4px;
+    float:      left;
 }
 
 .info-organizer {
-  color: @blackTextColor;
+    color:  @blackTextColor;
 
-  .title {
-    color: @grayTextColor;
-  }
+    .title {
+        color:  @grayTextColor;
+    }
 
-  vertical-align: bottom;
-  float: left;
-  font-size: 16px;
+    vertical-align: bottom;
+    float:          left;
+    font-size:      16px;
 }
 

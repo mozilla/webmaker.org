@@ -1,3 +1,5 @@
+@profileImgSize: 35px;
+
 body#events.details {
     background: #e7edf0;
 
@@ -28,6 +30,7 @@ body#events.details {
         #event-picture {
             background: #444;
             max-width:  400px;
+            .box-shadow(0px, 2px, 10px, rgba(0, 0, 0, 0.25));
 
             margin:     11px;
             margin-right: 30px;
@@ -36,27 +39,29 @@ body#events.details {
         }
         #event-registration {
             width:      400px;
-            padding-bottom: 40px;
-            margin-top: 20px;
+            padding-bottom: 30px;
+            margin-top: 40px;
 
             text-align: center;
 
             #registerLink {
                 display:        inline-block;
                 background:     #4F74BB;
-                border-radius:  7px;
+                .box-shadow(0px, 2px, 8px, rgba(0, 0, 0, 0.2));
+                border-radius:  8px;
                 border-top:     1px solid #888;
                 border-left:    1px solid #aaa;
                 margin:         20px auto;
                 padding:        18px;
                 padding-top:    16px;
 
-                color:      #eee;
-                font-size:  19px;
+                color:      #fafafa;
+                font-size:  20px;
+                line-height: 2;
 
                 .icon-chevron-right {
+                    margin-left: 3px;
                     color:      #f2f2f2;
-                    font-size:  16px;
                 }
                 .clickable;
                 &:hover {
@@ -67,55 +72,61 @@ body#events.details {
                 }
             }
             p {
-                width:      320px;
-                margin:     0px auto;
+                width:  320px;
+                margin: 0px auto;
 
-                color: #888;
+                color:  #888;
             }
         }
         #event-description {
-            padding: 15px;
+            padding:    15px;
 
             > h1 {
                 position:   relative;
-                left:       3px;
+                left:       14px;
 
                 font-weight: 300;
                 font-size:   35px;
             }
-            > p {
-                color:      #333;
+            #description-body {
+                color:      #787878;
                 font-size:  15px;
-                line-height: 25px;
+                line-height: 1.6;
             }
             #event-organizer {
-                height:     60px;
                 display:    inline-block;
                 margin-top: 8px;
-                margin-left: 4px;
+                margin-left: @profileImgSize/3;
+                line-height: @profileImgSize;
 
                 color:      #888;
 
                 img {
-                    height: 35px;
-                    width:  35px;
-                    border-radius: 40px;
+                    height: @profileImgSize;
+                    width:  @profileImgSize;
+                    border-radius: @profileImgSize + 10px;
                 }
-                span {
-                    font-size: 14px;
-                    padding-left: 5px;
+                .organized-by {
+                    .clickable;
+                    padding-left:   5px;
 
-                    vertical-align: 55%;
+                    font-size:      14px;
+                    vertical-align: top;
                 }
-                .clickable;
-            }
-            .owner-btn {
-                vertical-align: 85%;
 
-                &:hover {
-                    background: darken(#fff, 4%);
+                #owner-panel {
+                    position: relative;
+                    left:   @profileImgSize * 1.2;
+
+                    .owner-btn {
+                        vertical-align: 85%;
+
+                        &:hover {
+                            background: darken(#fff, 4%);
+                        }
+                        .clickable;
+                    }
                 }
-                .clickable;
             }
         }
     }

@@ -38,7 +38,9 @@ var personaObserver = {
 
   var iframe = document.querySelector("#webmaker-nav iframe");
   if(!iframe) {
-    document.addEventListener("DOMContentLoaded", setupInterconnection, false);
+    setTimeout(function() {
+      setupInterconnection();
+    }, 100 );
     return;
   }
 

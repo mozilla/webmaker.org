@@ -90,6 +90,10 @@ a {
 
 }
 
+.flipContainer:hover {
+  text-decoration: none;
+}
+
 .make-flip {
   .flipContainer { //card
     display: block;
@@ -267,7 +271,7 @@ a {
   .fork-btn-label {
     color: #FFF;
     background: @green;
-    border: 1px solid darken(@green, 5%);
+    border: none;
     &:hover {
       background: lighten(@green, 20%);
     }
@@ -494,8 +498,20 @@ a {
   .make-back .title {
     color: @green;
   }
+  .make-thumbnail {
+    opacity: 1;
+  }
+  &:hover {
+    .make-thumbnail {
+      opacity: 0.75
+    }
+  }
   .type-icon {
     display: none;
+  }
+  .desc {
+    height: auto;
+    overflow: visible;
   }
   .btn-container {
     transition: opacity 0.1s ease;
@@ -511,7 +527,10 @@ a {
   .height(4);
   .width(4);
   margin-bottom: @gutter * @unit;
-
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
   img {
     display: block;
   }

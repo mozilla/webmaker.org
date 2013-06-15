@@ -219,7 +219,7 @@ define(['jquery', 'moment'],
         $stickyBanner = $('<div id="banner-teach" class="rf packery-hide">' +
           '<img src="/img/webmaker-community.jpg" alt="Webmaker Community">' +
           "<p>We're a <a href='/about'/>global community</a> of friendly humans on " +
-          "a mission to  help people learn the building blocks of the web.<a href='/mentor'>Explore " +
+          "a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>Explore " +
           "our mentoring program.</p></div>");
         $mainGallery.append( $stickyBanner );
         this.limit = 12;

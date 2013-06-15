@@ -2,9 +2,8 @@ module.exports = function( make ) {
   var MAX_REMIXES = 5;
   return function( req, res ) {
 
-    function renderError(message, err) {
-      err = err || {};
-      return res.render("error.html", {code: err.code, message: message || err.message});
+    function renderError(message) {
+      return res.render("details.html", {error:message});
     }
 
     // Use a URL in the querystring or an ID

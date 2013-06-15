@@ -40,16 +40,17 @@
         <a class="header expand-form-button"><span class="icon-remove"></span> Add an Event</a><br />
         <fieldset>
             <label for="event_title"> Name your event </label>
-            <span class="ui-input ui-append"><input id="event_title" name="title"
-                placeholder="Use an awesome title so people will come!" /></span>
+            <span class="ui-input ui-append">
+                <input id="event_title" name="title" {{ tabIndex() }}
+                    placeholder="Use an awesome title so people will come!" /></span>
 
             <label for="event_description"> Describe your event </label>
-            <textarea id="event_description" name="description" data-provide="markdown"
+            <textarea id="event_description" name="description" data-provide="markdown" {{ tabIndex() }}
                 placeholder="Tell people a few more details about your event. What can they expect?"></textarea><br />
         </fieldset>
         <fieldset>
             <label for="event_attendees"> How many attendees are you expecting? </label>
-            <div><select id="event_attendees" name="attendees">
+            <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
                 <option value=0> 1-10 </option>
                 <option value=1> 10-20 </option>
                 <option value=2> 20-50 </option>
@@ -62,7 +63,7 @@
 
             <label for="event_address"> Event location </label>
             <span class="cell ui-input ui-append">
-                <input id="event_address" name="address" type="text" />
+                <input id="event_address" name="address" type="text" {{ tabIndex() }} />
             </span>
 
             <input name="latitude" type="hidden" />
@@ -70,7 +71,7 @@
 
             <label for="event_registerLink"> Event Link </label>
             <span class="registerLink cell ui-input ui-append">
-                <input id="event_registerLink" name="registerLink" type="url"
+                <input id="event_registerLink" name="registerLink" type="url" {{ tabIndex() }}
                         placeholder="Link to registration page" /> </span>
 
             {% for i in ['begin','end'] %}
@@ -78,13 +79,13 @@
             <div class='datetime'>
                 <span class="ui-append ui-select ui-input select-date">
                     <span class="icon-calendar"></span>
-                    <input id="event_{{i}}Date" name="{{i}}Date" type="text" class="datepicker"
+                    <input id="event_{{i}}Date" name="{{i}}Date" type="text" class="datepicker" {{ tabIndex() }}
                             placeholder="--/--/--" />
                     <a class="icon icon-chevron-down"></a>
                 </span>
                 <label class="switch"></label>
                 <span class="ui-append ui-select ui-input select-time">
-                    <input name="{{i}}Time" type="text" class="timepicker"
+                    <input name="{{i}}Time" type="text" class="timepicker" {{ tabIndex() }}
                             placeholder="--:--  --" />
                     <a class="icon icon-chevron-down"></a>
                 </span>

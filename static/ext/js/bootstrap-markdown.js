@@ -538,6 +538,7 @@
           break
 
         case 9: // tab
+          break // hike@amoeba: use tab to switch input fields
           var nextTab
           if (nextTab = this.getNextTab(),nextTab != null) {
             // Get the nextTab if exists

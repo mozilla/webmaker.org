@@ -117,7 +117,9 @@ define(['jquery', 'moment'],
       gutter: '.gutter-sizer',
       transitionDuration: '0.2s'
     });
-    this.lastSearch = { tags: [ 'webmaker:featured', 'guide' ] };
+    this.lastSearch = $body[0].id === 'teach' ?
+      { tags: [ 'webmaker:recommended', 'guide' ] } :
+      { tags: [ 'webmaker:recommended' ] };
     this.pageNo = 1;
 
     this.packery.on( 'layoutComplete', function() {

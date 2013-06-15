@@ -89,9 +89,6 @@ define(['jquery', 'moment'],
     var $backEl = $('<div class="back"></div>');
     var tags = data.tags;
 
-     if ( tags.template ) {
-      $makeContainer.addClass( 'make-template' );
-    }
     $makeContainer.addClass( 'make-type-' + data.type );
     $makeContainer.addClass(randSize);
 

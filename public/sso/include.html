@@ -67,7 +67,12 @@
       // Set up the login button's UX
       loginButton = document.getElementById("webmaker-login");
       loginButton.addEventListener("click", function() {
-        navigator.id.request();
+        navigator.id.request({
+          termsOfService: '/terms',
+          privacyPolicy: '/privacy',
+          siteLogo: "/img/logo-webmaker.png",
+          siteName: "Mozilla Webmaker"
+        });
       }, false);
 
       // Set up the logout button's UX

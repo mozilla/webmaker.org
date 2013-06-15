@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block body %}
+
 <div class="map-overlay">
     <form id="find-event" action="/events" method="GET">
         <h2 class="header"><span class="icon-search"></span> Find an Event</h2>
@@ -21,11 +22,11 @@
             <input name="when"  type="text" placeholder="When?" class="datepicker" />
             <span class="icon-remove clear-input"></span>
         </span>
-        <button type="submit"><span class="icon-chevron-right"></span></button>
+        <button type="submit" class="icon-chevron-right"></button>
     </form>
 
     <div class="overlay-buttons">
-        <a class="header expand-form">
+        <a class="header expand-form-button">
             <span class="icon-plus"></span>
             Add an Event
         </a>
@@ -35,11 +36,11 @@
         </a>
     </div>
 
-    <form id="create-event" action="/events" method="POST" class="hidden">
-        <a class="header expand-form"><span class="icon-remove"></span> Add an Event</a><br />
+    <form id="create-event" class="hidden" action="/events" method="POST">
+        <a class="header expand-form-button"><span class="icon-remove"></span> Add an Event</a><br />
         <fieldset>
             <label for="event_title"> Name your event </label>
-            <span class="cell ui-input ui-append"><input id="event_title" name="title"
+            <span class="ui-input ui-append"><input id="event_title" name="title"
                 placeholder="Use an awesome title so people will come!" /></span>
 
             <label for="event_description"> Describe your event </label>

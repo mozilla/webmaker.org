@@ -54,20 +54,18 @@ define(['resource_model'], function (ResourceModel) {
     // TODO: convert to html-fragment
     EventModel.prototype.popupHTML = function() {
         return '<div class="info-content">'
-            + '<div class="info-title">' + this.title + '</div>'
-            + '<div class="info-when-where">'
-              + this.datetimeHTML()
-              + this.addressHTML()
-            + '</div>'
-            + this.descriptionHTML()
-            + this.organizerHTML()
-
-            // show details button
-            + '<a href="' + this._uri + '">'
-            + '<span class="icon-stack icon-button-size info-button">'
-                + '<span class="icon-sign-blank icon-stack-base icon-button-color"></span>'
-                + '<span class="icon-chevron-right icon-light"></span>'
-            + '</span></a></div>';
+               + '<div class="info-title">' + this.title + '</div>'
+               + '<div class="info-when-where">'
+                 + this.datetimeHTML()
+                 + this.addressHTML()
+               + '</div>'
+               + this.descriptionHTML()
+               + '<div id="bottom-row">'
+                 + this.organizerHTML()
+                 + '<a id="event-details-link" href="' + this._uri + '" class="icon-chevron-right"></a>'
+                 + '<span class="clear"></span>'
+               + '</div>'
+             + '</div>';
     };
 
     return EventModel;

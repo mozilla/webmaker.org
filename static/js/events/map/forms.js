@@ -126,7 +126,7 @@ function ($, EventModel, forms) { return function (mapMaker) {
         $createForm.toggleClass('hidden');
         $(".overlay-buttons").toggleClass('hidden');
     }
-    $(".expand-form").click(function(ev) {
+    $(".expand-form-button").click(function(ev) {
         ev.preventDefault();
         toggleCreateForm();
     });

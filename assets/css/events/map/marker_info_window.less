@@ -1,6 +1,6 @@
 // variables
 @userImageWidth: 35px;
-@iconWidth: 15px;
+@iconWidth: 16px;
 @grayTextColor: gray;
 @blackTextColor: black;
 
@@ -11,25 +11,38 @@
 }
 
 .info-container {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
 }
 
 // DON'T NEST THIS INSIDE .info-container
 // this div is put in a temporary div for measuring the size, css breaks if nested
 .info-content {
-  padding: 12px;
+    position:   relative;
+    padding:    12px 12px 32px;
+}
+#bottom-row {
+    width:          100%;
+    margin-bottom:  40px;
+    vertical-align: bottom;
 
-  a {
-    text-decoration: none;
-  }
+    #event-details-link {
+        .blueButton;
+
+        @btnSize:   36px;
+        background: @grayButtonColor;
+        height:     @btnSize;
+        width:      @btnSize;
+        line-height: @btnSize;
+        float:      right;
+        margin-top: 5px;
+
+        font-size:  18px;
+        color:      #fcfcfc;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
 .info-title {
-  color: @blackTextColor;
-
   text-align: center;
   font-size: 26px;
   color: #808080;
@@ -43,28 +56,29 @@
   // this hack added to get the floating divs to resize the container to the correct height
   overflow: hidden;
   width: 100%;
+line-height: 100%;
 
-  .info-date {
-    color: @grayTextColor;
-    display: inline-block;
-    font-size: 14px;
-    vertical-align: middle;
-  }
+    .info-date {
+        display:        inline-block;
+        margin-bottom:  4px;
 
-  .info-address {
-    color: @grayTextColor;
-    display: inline-block;
-    font-size: 14px;
-  }
+        font-size:  13px;
+        color:      @grayTextColor;
+        vertical-align: middle;
+    }
 
-  .icon-img {
-    margin: 4px;
-    margin-right: 6px;
-    height: @iconWidth;
-    width:  @iconWidth;
-    display: inline-block;
-    vertical-align: top;
-  }
+    .info-address {
+        color: @grayTextColor;
+        display: inline-block;
+        font-size: 13px;
+    }
+
+    .icon-img {
+        margin: 0px 6px 4px;
+        width:  @iconWidth;
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 .info-description {
@@ -73,7 +87,7 @@
 
   text-align: justify;
 
-  font-size: 16px;
+  font-size: 14px;
 
   margin-top: 12px;
   margin-bottom: 12px;
@@ -100,23 +114,4 @@
   float: left;
   font-size: 16px;
 }
-
-// stacked info button using fontawesome
-.info-button {
-  float: right;
-
-}
-
-// generic font awesome button classes
-.icon-button-color {
-  color: @grayButtonColor;
-}
-
-.icon-button-color { .blueButton; }
-
-.icon-button-size {
-  font-size: 1.5em;
-}
-
-
 

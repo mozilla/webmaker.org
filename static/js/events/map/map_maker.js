@@ -50,8 +50,9 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
                 self.addMarker(model, animate);
         })
     };
-    MapMaker.prototype.addMarker = function (model, animate) {
-        animate = (animate === undefined) ? true : animate;
+    MapMaker.prototype.addMarker = function (model, animate, old) {
+        animate = animate === undefined ? true  : animate;
+        old     = old     === undefined ? false : old;
 
         var icon = {
             url: "/img/map/pin-event.png",            // 43 x 51
@@ -116,7 +117,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             position: latLng,
             minWidth: 330,
             maxWidth: 330,
-            minHeight: 210,
+            minHeight: 130,
             maxHeight: 710,
             shadowStyle: 1,
             padding: 0,

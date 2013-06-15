@@ -1,9 +1,11 @@
+@formHeight:  45px;
+@inputHeight: 34px;
 
 body#events.map form#find-event {
-    display: inline-block;
-    height: 45px;
-    line-height: 100%;
+    display: block;
+    line-height: @formHeight;
     white-space: nowrap;
+    padding-right: 6px;
 
     .header {
         display:    inline-block;
@@ -17,46 +19,44 @@ body#events.map form#find-event {
     }
     .ui-input {
         overflow:   hidden;
-        height:     75%;
-        margin:     0px 2px 3px 0px;
+        height:     @inputHeight;
+        margin-bottom: 2px;
+        margin-right: 2px;
         padding:    0px 10px;
 
         .pointer-icon {
+            position: relative;
+            top:    6px;
+            left:   -4px;
             width:  18px;
-            vertical-align: -8px;
-            margin-left: -4px;
+            vertical-align: top;
         }
         .calendar-icon {
+            position: relative;
+            top:    10px;
             width:  16px;
-            vertical-align: -7px;
+            vertical-align: top;
         }
         input {
-            height:     65%;
             padding:    0px 0px 0px 6px;
 
-            font-size:  14px;
-            vertical-align: -2px;
+            font-size:  14.5px;
 
             &[name="when"] { .ui-small; }
             &[name="where"] { .ui-medium; }
         }
         .icon-remove {
             .clickable;
-            color:  rgba(0, 0, 0, 0.07);
-            font-size:  18px;
-            vertical-align: middle;
+            color:          rgba(0, 0, 0, 0.07);
+            font-size:      18px;
+            line-height:    @inputHeight;
         }
     }
-    button[type="submit"] {
-        height: 74%;
-        width:  34px;
-        margin-right: 6px;
+    button[type="submit"].icon-chevron-right {
+        height: @inputHeight;
+        width:  @inputHeight;
 
-        line-height: 100%;
-        font-size:   13px;
-
-        .icon-chevron-right {
-            font-size:  16px;
-        }
+        font-size:  18px;
+        vertical-align: middle;
     }
 }

@@ -34,23 +34,19 @@
 .nav-list {
   position: absolute;
   z-index: 3;
-  right: -35px;
   bottom: 0;
-
+  right: 0;
   margin: 0;
   list-style: none;
-
-  padding: 10px;
   font-size: 1.5em;
-
 
   li {
     display: inline-block;
     position: relative;
     text-align: center;
-    width: 95px;
+    padding: 0.5em 1em;
     border: 1px solid transparent;
-    //padding: 0 1em;
+    .border-box;
     &:last-of-type {
       padding-right: 0;
     }
@@ -59,21 +55,18 @@
       display: block;
     }
 
-    &:hover #nav-index {
+    &:first-child:hover {
       color: #55575c;
-      width: 100%;
-      height: 100%;
       background: url(../img/bkgFooter.jpg);
-      padding-top: 10px;
-      display: inline-block;
       border: 1px solid #fff;
       border-bottom: none;
-      .border-box;
+      box-shadow: 0 3px 3px #888888;
     }
 
     .makenav-hover {
       display: none;
       position: absolute;
+      left: -1px;
       border: 1px solid #fff;
       border-top: none;
       width: 265px;
@@ -100,7 +93,7 @@
         margin: 5px 15px 0 0;
 
         img {
-          float: left;
+          display: inline-block;
           margin-bottom: 5px;
         }
 
@@ -507,8 +500,8 @@
         top: 2px;
       }
 
-       a:hover { 
-        text-decoration: none;  
+       a:hover {
+        text-decoration: none;
       }
     }
   }
@@ -542,7 +535,7 @@
     font-family: "Open Sans Light";
   }
 
-  li.icon-google-plus { 
+  li.icon-google-plus {
     font-size: 20px;
   }
 }
@@ -609,31 +602,23 @@ footer {
       margin: 0;
     }
     .nav-list {
+      padding: 0;
       position: relative;
       right: auto;
       left: auto;
-      text-align: left;
+      text-align: center;
       .border-box;
       width: 100%;
 
       li {
         font-size: 1em;
-        width: 23%;
-        padding: 0.5em 0;
-
-        // Hide Make menu on mobile
-        &:hover .makenav-hover {
-          display: none;
-        }
-
-        &:hover #nav-index {
+        &:first-child:hover {
           background: none;
           color: @blue;
-          padding: 0;
-          border: none;
-          width: auto;
-          height: auto;
-          .border-box;
+          box-shadow: none; 
+          .makenav-hover {
+            display: none;
+          }
         }
       }
     }

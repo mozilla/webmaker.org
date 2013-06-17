@@ -43,7 +43,6 @@
   padding: 10px;
   font-size: 1.5em;
 
-
   li {
     display: inline-block;
     position: relative;
@@ -273,14 +272,11 @@
   left: 4px;
 }
 
-
 /*********************************************************
 * FOOTER
 */
 
-
 .footerHr {
-
   width: 75%;
   border-width: 1px;
   border-top: solid;
@@ -394,7 +390,6 @@
   .refresh-sponsors {
     cursor: pointer;
   }
-
 
   .sponsors {
     list-style: none;
@@ -536,7 +531,6 @@
     }
   }
 
-
   .small-partners-header {
     font-size: 20px;
     font-family: "Open Sans Light";
@@ -583,6 +577,21 @@ footer {
     &:hover {
       background: lighten(@green, 10%);
     }
+  }
+
+  .backToTop {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    height: 0;
+    transition: height 0.2s ease-out;
+    overflow: hidden;
+
+  }
+  
+  .addMore {
+    height: 50px;
+    line-height: 50px;
   }
 }
 

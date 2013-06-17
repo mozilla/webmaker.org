@@ -68,9 +68,10 @@
       loginButton = document.getElementById("webmaker-login");
       loginButton.addEventListener("click", function() {
         var personaObj = {
-              termsOfService: '/terms',
-              privacyPolicy: '/privacy',
-              siteName: "Mozilla Webmaker"
+              privacyPolicy: "/privacy",
+              returnTo: "/",
+              siteName: "Mozilla Webmaker",
+              termsOfService: "/terms"
             };
 
         if ( location.protocol === "https:" ) {

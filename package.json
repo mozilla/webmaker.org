@@ -19,7 +19,7 @@
     "nunjucks": "0.1.9",
     "makeapi": "0.1.22",
     "moment": "~2.0.0",
-    "webmaker-loginapi": "0.1.4",
+    "webmaker-loginapi": "0.1.6",
     "newrelic": "~0.9.19",
     "webmaker-events": "git://github.com/mozilla/webmaker-events.git"
   },

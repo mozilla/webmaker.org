@@ -36,7 +36,7 @@ var personaObserver = {
 (function setupInterconnection() {
   document.removeEventListener("DOMContentLoaded", setupInterconnection, false);
 
-  var iframe = document.querySelector("#webmaker-nav iframe");
+  var iframe = document.querySelector("#persona-iframe") || document.querySelector("#webmaker-nav iframe");
   if(!iframe) {
     setTimeout(function() {
       setupInterconnection();

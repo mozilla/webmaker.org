@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}Guides{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="/css/user/persona.css">
+{% endblock %}
+{% block midbar %}{% endblock %}
+{% block body %}
+<div class="wm-user-panel">
+  <div class="ui-wrapper ui-body">
+      <div id="poster" class="ui-section">
+          <div class="ui-row">
+            <div class="g-4"><h1>Webmaker uses Persona,<br>a secure way to sign in.</h1></div>
+            <div class="g-2"><div id="persona-container">
+              <a href="#" class="persona-button"><span class="text">Sign in</span><span class="tip"></span><iframe id="persona-iframe" src="{{personaSSO}}/sso/sso.html" allowTransparency="true"></iframe></a>
+            </div></div>
+          </div>
+      </div>
+      <div class="ui-section">
+        <div class="ui-row">
+          <div class="subtitle">Mozilla Webmaker creates software, projects and events that
+            promote digital literacy through making and sharing. We're an open source project
+            powered by makers, mentors and community leaders. We'd love you to get involved.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block require_main %}{% endblock %}
+{% block scripts %}
+<script>
+  requirejs.config({
+    baseUrl: "/js",
+    paths: {
+      'jquery': '/ext/js/jquery-1.9.1',
+      'sso-ux': '{{loginAPI}}/js/sso-ux'
+    },
+    shim: {
+      'sso-ux': ['jquery']
+    }
+  });
+  require(['user/login']);
+</script>
+{% endblock %}

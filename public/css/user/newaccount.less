@@ -1,0 +1,76 @@
+@import "../mixins";
+@import "../webfonts";
+@import "../ui";
+@import "base";
+
+
+#poster {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  padding-bottom: 3em;
+  padding-top: 6em;
+}
+#claim-image {
+  opacity: 0.2;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#claim-message {
+  position: relative;
+  color: #FFF;
+  line-height: 4;
+  left: 0;
+  width: 100%;
+  h1 {
+    color: inherit;
+    font-size: 3.5em;
+    margin-bottom: 0.3em;
+  }
+}
+#claim-label {
+  font-size: 1.4em;
+}
+#claim-input {
+  border: none;
+  font-family: "Open sans", sans-serif;
+  padding: 0.5em;
+  font-size: 1.2em;
+  width: 10em;
+  &:focus {
+    outline: none;
+  }
+}
+
+.sign-up {
+  background: @blue;
+  font-size: 1.4em;
+  border: 1px solid lighten(@blue,20%);
+  color: #FFF;
+  line-height: 1.2em;
+  padding: 0.5em 1em;
+  &:hover {
+    cursor: pointer;
+    background: lighten( @blue, 5% );
+  }
+}
+
+.form-wrapper {
+  display: inline-block;
+  text-align: left;
+}
+
+.checkboxes {
+  font-size: 0.9em;
+  .row {
+    color: #999;
+    text-align: left;
+    line-height: 2;
+    input {
+      margin-left: 0;
+    }
+  }
+}
+

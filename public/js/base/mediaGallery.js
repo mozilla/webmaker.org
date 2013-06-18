@@ -145,6 +145,8 @@ define(['jquery', 'moment'],
     var self = this,
         $stickyBanner;
 
+    var loginUrl = $("meta[name='login-url']").attr("content");
+
     // Handles all packery-related content loading.
     switch ($body[0].id) {
       case 'template':
@@ -167,15 +169,11 @@ define(['jquery', 'moment'],
 
         var $borderDiv = $('<div class="join-border">');
         var $signinDiv = $('<div class="join-signin">');
-        var $signin = $('<span class="btn-join-container"><a class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>');
+        var $signin = $('<span class="btn-join-container"><a href="/login" class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>');
         var $claim = $('<span class="join-claim">').text('Claim your webmaker domain.');
 
         $signinDiv.append($claim);
         $signinDiv.append($signin);
-
-        $signin.on('click', function( e ) {
-          navigator.idSSO.request();
-        } );
 
         $stickyBanner.append( $rotator );
         $stickyBanner.append( $borderDiv );

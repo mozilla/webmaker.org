@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block title %}Guides{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="/css/user/newaccount.css">
+{% endblock %}
+{% block midbar %}{% endblock %}
+{% block body %}
+<div class="wm-user-panel">
+  <div class="ui-wrapper ui-body">
+      <div id="poster" class="ui-section">
+        <img id="claim-image" src="/img/img-Get-Involved-feature.jpg" alt="Get Involved">
+          <div id="claim-message">
+            <h1>Claim your webmaker space</h1>
+            <div class="form-wrapper">
+            <form id="sso_create" action="{{personaSSO}}/user" method="POST">
+              <div id="claim-label"><input id="claim-input" placeholder="you" type="text" name="username" required> .mywebmaker.org</div>
+
+              <p id="error-container"></p>
+
+             <div class="checkboxes">
+              <div class="row">
+                <input type="checkbox" name="bsd" id="bsd" class="inline">
+                <label for="bsd" class="inline">Send me email updates about Mozilla Webmaker and other projects</label>
+              </div>
+              <div class="row">
+                <input type="checkbox" name="terms" id="terms" class="inline" required>
+                <label for="terms" class="inline">I agree to your <a href="{{personaSSO}}/terms">terms</a>
+                 and <a href="{{personaSSO}}/privacy">conditions</a></label>
+              </div>
+            </div>
+            <p><button type="submit" class="sign-up" class="ui-btn">Sign up</button></p>
+          </form>
+          </div>
+        </div>
+
+      </div>
+      <div class="ui-section">
+        <div class="ui-row">
+          <div class="subtitle">Mozilla Webmaker creates software, projects and events that
+            promote digital literacy through making and sharing. We're an open source project
+            powered by makers, mentors and community leaders. We'd love you to get involved.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block require_main %}{% endblock %}
+{% block scripts %}
+<script>
+  requirejs.config({
+    baseUrl: "/js",
+    paths: {
+      'jquery': '/ext/js/jquery-1.9.1',
+      'sso-ux': '{{loginAPI}}/js/sso-ux'
+    },
+    shim: {
+      'sso-ux': ['jquery']
+    }
+  });
+  require(['user/new']);
+</script>
+{% endblock %}

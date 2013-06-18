@@ -13,7 +13,8 @@ module.exports = function( make ){
     tag: function( req, res ) {
       res.redirect( "/search?type=tags&q=" + req.params.tag );
     },
-    user: function( req, res ) {
+    user: require( "./user" ),
+    usersearch: function( req, res ) {
       res.redirect( "/search?type=user&q=" + req.params.user );
     },
     includejs: function( hostname ) {

@@ -119,8 +119,12 @@ app.get( "/me", routes.me );
 app.get( "/myprojects", routes.me );
 app.post( "/remove", routes.remove );
 
+// Account
+app.get( "/login", routes.user.login );
+app.get( "/new", routes.user.newaccount );
+
 app.get( "/t/:tag", routes.tag );
-app.get( "/u/:user", routes.user );
+app.get( "/u/:user", routes.usersearch );
 
 app.get( "/terms", routes.page( "terms" ) );
 app.get( "/privacy", routes.page( "privacy" ) );

@@ -121,7 +121,6 @@ app.post( "/remove", routes.remove );
 app.get( "/t/:tag", routes.tag );
 app.get( "/u/:user", routes.user );
 
-app.get( "/template", routes.page( "template" ) );
 app.get( "/terms", routes.page( "terms" ) );
 app.get( "/privacy", routes.page( "privacy" ) );
 

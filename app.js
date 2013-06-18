@@ -16,7 +16,9 @@ habitat.load();
 
 var app = express(),
     env = new habitat(),
-    nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' ))),
+    nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
+      autoescape: true
+    }),
     make = makeAPI({
       apiURL: env.get( "MAKE_ENDPOINT" ),
       auth: env.get( "MAKE_AUTH" )

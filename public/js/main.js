@@ -99,9 +99,18 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
       }
     }
 
-    $( '#bottom-search-btn' ).on( 'click', function ( e ) {
-      document.getElementById('webmaker-nav').scrollIntoView();
-    } );
+    $('.backToTop').click(function(){
+      $('html, body').animate({scrollTop : 0},500);
+      return false;
+    });
+
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+        $('.backToTop').addClass("addMore");
+      } else {
+        $('.backToTop').removeClass("addMore");
+      }
+    });
 
     carousel.attachToCTA();
     carousel.attachToPartners();

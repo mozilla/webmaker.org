@@ -1,21 +1,24 @@
-{ "name": "webmaker-events"
-, "version": "0.0.1"
-, "engines": ["node >= 0.8.0"]
-, "main": "index.js"
-, "repository":
-  { "type": "git"
-  , "url": "git://github.com/mozilla/webmaker-events.git"
-  }
-, "license": "MPL-2.0"
-, "dependencies":
-  { "express": "3.2.0"
-  , "nunjucks": "0.1.8a"
-  , "mysql": "latest"
-  , "sequelize": "latest"
-  , "markdown": "latest"
-  , "sqlite3": "2.1.7"
-  , "uuid": "latest"
-  , "noxmox": "latest"
-  , "knox": "latest"
+{
+  "name": "webmaker-events",
+  "version": "0.1.0",
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mozilla/webmaker-events.git"
+  },
+  "license": "MPL-2.0",
+  "dependencies": {
+    "express": "3.2.0",
+    "nunjucks": "0.1.8a",
+    "mysql": "latest",
+    "sequelize": "latest",
+    "markdown": "latest",
+    "sqlite3": "2.1.7",
+    "uuid": "latest",
+    "noxmox": "latest",
+    "knox": "latest"
   }
 }

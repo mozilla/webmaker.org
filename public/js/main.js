@@ -104,13 +104,17 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
       return false;
     });
 
-    $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
-        $('.backToTop').addClass("addMore");
-      } else {
-        $('.backToTop').removeClass("addMore");
-      }
-    });
+    var noTop = ["tools", "guides"];
+
+    if ( noTop.indexOf( $body[0].id ) === -1 ) {
+      $(window).scroll(function(){
+       if ($(this).scrollTop() > 100) {
+         $('.backToTop').addClass("addMore");
+       } else {
+         $('.backToTop').removeClass("addMore");
+       }
+      });
+    }
 
     carousel.attachToCTA();
     carousel.attachToPartners();

@@ -5,10 +5,6 @@ module.exports = function( make ) {
         app = req.query.app,
         options = {};
 
-    if ( !username ) {
-      return res.send( "Oops...you are not signed in :(" );
-    }
-
     // Set up search options
     options.user = username;
     if ( app ) {

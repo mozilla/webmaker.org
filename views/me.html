@@ -4,16 +4,22 @@
 {% block midbar %}
   <div class="ui-wrapper">
     <div class="me-info">
+      {% if username %}
       <h1 class="me-title">{{username}}, these are your makes:</h1>
+      {% else %}
+      <h1>Oops...you are not signed in :(</h1>
+      {% endif %}
     </div>
   </div>
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
+  {% if username %}
   <div class="main-gallery search-gallery">
     <div class="gutter-sizer"></div>
     {{ memakes() }}
   </div>
+  {% endif %}
   {% if makes.length == 0%}
   <div class="no-makes">You don't have any {{view}} makes :(</div>
   {% endif %}

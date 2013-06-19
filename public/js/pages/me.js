@@ -13,6 +13,18 @@ define(['jquery'],
   // Are we inside thimble or popcorn?
   var inApp = $body.hasClass("popcorn") || $body.hasClass("thimble");
 
+  // If the user is not logged in yet,
+  // refresh the page once they are.
+  // This properly generates server side project data
+  // for apps using my makes.
+  if (inApp && !$("meta[name='persona-email']").attr("content")) {
+    navigator.idSSO.app = {
+      onlogin: function(){
+        window.location.replace(window.location);
+      }
+    };
+  }
+
   // Do we have any makes?
   if (!$makes.length) {
     return;

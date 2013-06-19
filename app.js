@@ -93,7 +93,7 @@ app.use( function( err, req, res, next) {
 });
 app.use( function( req, res, next ) {
   res.status( 404 );
-  res.render( 'error.html', { message: "You found a loose thread!<br>Please try a <a href='/search'>search</a> or visit our <a href='/'>homepage.</a>", code: 404 });
+  res.render( 'error.html', { code: 404 });
 });
 
 app.get( "/healthcheck", routes.api.healthcheck );

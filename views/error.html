@@ -5,7 +5,14 @@
   <div class="ui-poster error-container">
     <div class="error-code">
       <img class="error-img" src="/img/webmaker-404.png">
-    </div>{% if code %}{{code}} : {% endif %}{{message}}</div>
+    </div>
+    <div>
+      {% if code == 404 %}
+      404: You found a loose thread!<br>Please try a <a href="/search">search</a> or visit our <a href="/">homepage.</a>
+      {% else %}
+      {{code}}: {{message}}
+      {% endif %}
+    </div>
   </div>
 </div>
 

@@ -32,6 +32,11 @@ define(['jquery', 'moment'],
         createdAtDate = moment( new Date( data.createdAt ) ).fromNow();
         // Note that this is not working... no createdAt?
 
+    // Limit description length
+    if ( data.description.length > 370 ) {
+      data.description = data.description.slice(0,370) + "...";
+    }
+
     $typeSpan.text( data.type );
     $titleLink.text( data.title );
     $titleLink.attr( "href", data.url );

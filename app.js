@@ -130,6 +130,8 @@ app.get( "/terms", routes.page( "terms" ) );
 app.get( "/privacy", routes.page( "privacy" ) );
 
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
+app.get( "/sso/include.html", routes.include() );
+app.get( "/sso/include-transparent.html", routes.include("transparent" ));
 
 /**
  * Legacy Webmaker Redirects

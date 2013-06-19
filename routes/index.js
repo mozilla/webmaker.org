@@ -17,6 +17,13 @@ module.exports = function( make ){
     usersearch: function( req, res ) {
       res.redirect( "/search?type=user&q=" + req.params.user );
     },
+    include: function( transparent ) {
+      return function( req, res ) {
+        res.render( "sso/include.html", {
+          transparent: transparent
+        });
+      };
+    },
     includejs: function( hostname ) {
       return function( req, res ) {
         res.set( "Content-Type", "application/javascript;charset=utf-8" );

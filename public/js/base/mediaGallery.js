@@ -217,10 +217,12 @@ define(['jquery', 'moment'],
 
       case 'teach':
         $stickyBanner = $('<div id="banner-teach" class="rf packery-hide">' +
-          '<img src="/img/webmaker-community.jpg" alt="Webmaker Community">' +
+          '<img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>' +
           "<p>We're a <a href='/about'/>global community</a> of friendly humans on " +
-          "a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>Explore " +
-          "our mentoring program.</p></div>");
+          "a mission to  help people learn the building blocks of the web.<br><a href='/mentor'> " +
+          "<button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'> " +
+          "</i></button></a></p></div>");
+
         $mainGallery.append( $stickyBanner );
         this.limit = 12;
 

@@ -13,12 +13,12 @@
         <h2 class="header"><span class="icon-search"></span> Find an Event</h2>
         <input name="_csrf" type="hidden" value="{{ csrf }}" />
         <span class="ui-input ui-append">
-            <img class="pointer-icon"  src="/img/event-detail-icon-pointer.png">
+            <img class="pointer-icon"  src="/img/map/pin-event-dim.png">
             <input name="where" type="text" placeholder="Where?" />
             <span class="icon-remove clear-input"></span>
         </span>
         <span class="ui-input ui-append">
-            <img class="calendar-icon" src="/img/event-detail-icon-calendar.png">
+            <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
             <input name="when"  type="text" placeholder="When?" class="datepicker" />
             <span class="icon-remove clear-input"></span>
         </span>
@@ -99,7 +99,10 @@
             </div>
             <input name="_csrf" type="hidden" value="{{ csrf }}" />
 
-            <button type="submit"><span class="icon-plus"></span> Submit your event</button>
+            <button type="submit">
+                Submit your event
+                <span class="icon-chevron-right"></span>
+            </button>
         </fieldset>
     </form>
 </div>

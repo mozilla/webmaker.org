@@ -82,17 +82,20 @@ body#events.map form#create-event {
     input[type="file"] { .hidden; }
 
     button[type="submit"] {
+        @height:    50px;
         position:   absolute;
-        bottom: 15px; right: 15px;
+        bottom:     15px;
+        right:      15px;
+        height:     @height;
+        padding:    0px 18px;
 
-        padding:    12px 18px;
-        padding-bottom: 12.5px;
+        font-size:  20px;
+        line-height: @height;
 
-        font-size: 22px;
-
-        .icon-plus {
-            font-size: 17px;
-            margin-right: 4px;
+        .icon-chevron-right {
+            font-size:      13px;
+            margin-left:    4px;
+            vertical-align: middle;
         }
     }
     .error {

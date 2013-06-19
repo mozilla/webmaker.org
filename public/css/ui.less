@@ -122,14 +122,21 @@
     padding: 0 @gutter * 2 * @unit;
   }
 }
-@media (min-width: 1539px) {
-  .ui-wrapper {
-    width: 1020px;
+
+// Galleries only
+#index,
+#teach,
+#search,
+#me {
+  @media (max-width: 1539px) {
+    .ui-wrapper {
+      width: 1020px;
+    }
   }
-}
-@media (min-width: 1540px) { // 12 cols
-  .ui-wrapper {
-    width: 1540px;
+  @media (min-width: 1540px) { // 12 cols
+    .ui-wrapper {
+      width: 1540px;
+    }
   }
 }
 
@@ -152,6 +159,7 @@
      padding: @gutter * @unit;
   }
 }
+
 
 
 /*********************************************************

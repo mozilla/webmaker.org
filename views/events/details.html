@@ -112,7 +112,7 @@
           <span class="organized-by">Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
         </div>
         <br />
-        <span id="description-body" class="show">{{ event.description }}</span>
+        <span id="description-body" class="show">{{ event.description|markdown|safe }}</span>
         <span class="edit hidden">
           <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
           <label for="event_registerLink">Registration Link: </label>

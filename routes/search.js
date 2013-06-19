@@ -37,6 +37,10 @@ module.exports = function( make ) {
     .sortByField( sortByField, sortByOrder )
     .page( page )
     .process( function( err, data ) {
+      // query can be an array of tags sometimes,
+      // so force a string so that it's autoescaped
+      var query = options[type].toString();
+
       res.render( "search.html", {
         currentUser: username,
         hasQuery: req.param( "q" ),
@@ -44,7 +48,7 @@ module.exports = function( make ) {
         makeSize: makeSize,
         page: "search",
         pagination: page,
-        query: options[type],
+        query: query,
         searchType: type
       });
     });

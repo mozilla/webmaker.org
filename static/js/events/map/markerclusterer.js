@@ -282,12 +282,12 @@ ClusterIcon.prototype.useStyle = function (sums) {
   this.anchor_ = [0, 19]; // SNG style.anchor;
   this.anchorIcon_ = style.anchorIcon || [parseInt(this.height_ / 2, 10), parseInt(this.width_ / 2, 10)];
   this.textColor_ = style.textColor || "white"; // SNG "black";
-  this.textSize_ = style.textSize || 16; // SNG 11;
+  this.textSize_ = style.textSize || 15; // SNG 11;
   this.textDecoration_ = style.textDecoration || "none";
   this.fontWeight_ = style.fontWeight || "normal"; // SNG "bold";
   this.fontStyle_ = style.fontStyle || "normal";
   this.fontFamily_ = style.fontFamily || "Arial,sans-serif";
-  this.backgroundPosition_ = style.backgroundPosition || "0 0";
+  this.backgroundPosition_ = style.backgroundPosition || "-1px 0";
 };
 
 

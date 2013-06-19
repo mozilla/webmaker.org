@@ -5,6 +5,26 @@ body#events.details {
 
     #details-pane {
 
+        #event-title {
+            display: inline-block;
+        }
+        #owner-panel {
+            display:    inline-block;
+            position:   relative;
+            left:       20px;
+
+            line-height:    35px;
+            vertical-align: bottom;
+
+            .owner-btn {
+                vertical-align: 85%;
+
+                &:hover {
+                    background: darken(#fff, 4%);
+                }
+                .clickable;
+            }
+        }
         .temporal-local {
             display:    inline-block;
             margin:     4px;
@@ -32,7 +52,7 @@ body#events.details {
         #event-picture {
             background: #444;
             max-width:  400px;
-            .box-shadow(0px, 2px, 10px, rgba(0, 0, 0, 0.25));
+            .box-shadow(0px, 2px, 20px, rgba(0, 0, 0, 0.25));
 
             margin:     11px;
             margin-right: 30px;
@@ -48,30 +68,28 @@ body#events.details {
             text-align: center;
 
             #registerLink {
+                @height:        50px;
+                background:     #3fb58e;
                 display:        inline-block;
-                background:     #4F74BB;
-                .box-shadow(0px, 2px, 8px, rgba(0, 0, 0, 0.2));
-                border-radius:  8px;
-                border-top:     1px solid #888;
-                border-left:    1px solid #aaa;
+                height:         @height;
                 margin:         20px auto;
-                padding:        18px;
-                padding-top:    16px;
+                padding:        0px 20px;
 
-                color:      #fafafa;
-                font-size:  20px;
-                line-height: 2;
+                color:          #fcfcfc;
+                font-size:      16px;
+                line-height:    @height;
 
                 .icon-chevron-right {
-                    margin-left: 3px;
-                    color:      #f2f2f2;
+                    position:   relative;
+                    left:       1px;
+                    font-size:  13px;
                 }
                 .clickable;
                 &:hover {
-                    background: #517CCB;
+                    background: #60c7a5;
                 }
                 &:active {
-                    background: #4062A1;
+                    background: darken(#60c7a5, 5%);
                 }
             }
             p {
@@ -116,20 +134,6 @@ body#events.details {
 
                     font-size:      14px;
                     vertical-align: top;
-                }
-
-                #owner-panel {
-                    position: relative;
-                    left:   @profileImgSize * 1.2;
-
-                    .owner-btn {
-                        vertical-align: 85%;
-
-                        &:hover {
-                            background: darken(#fff, 4%);
-                        }
-                        .clickable;
-                    }
                 }
             }
         }

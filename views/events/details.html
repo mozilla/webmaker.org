@@ -32,7 +32,7 @@
         {% endif %}
       </div>
       <span><div id="event-description">
-        <h1 class="show">{{ event.title | markdown }}</h1>
+        <h1 class="show">{{ event.title }}</h1>
         <span class="edit hidden">
           <input type="text" name="title" placeholder="{{ event.title }}" />
         </span>
@@ -107,7 +107,7 @@
            </div>
           {% endif %}
         </div>
-        <span id="description-body" class="show">{{ event.description | markdown }}</span>
+        <span id="description-body" class="show">{{ event.description }}</span>
         <span class="edit hidden">
           <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
           <label for="event_registerLink">Registration Link: </label>

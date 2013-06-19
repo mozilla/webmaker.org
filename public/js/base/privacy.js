@@ -4,7 +4,7 @@ define(['jquery'], function($) {
   var $input = $('#email-updates');
   var $submit = $('#email-submit');
   var $privacy = $('.privacy-box');
-  var $cheќkbox = $('#theCheckbox').prop('checked', false);
+  var $checkbox = $('#theCheckbox').prop('checked', false);
   var $form = $('#privacy-form');
   var $newsletter = $('.newsletter');
   var timeOut = false;

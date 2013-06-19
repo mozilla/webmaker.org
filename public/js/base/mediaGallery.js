@@ -27,6 +27,7 @@ define(['jquery', 'moment'],
         $typeSpan = $('.type', $backTemplate),
         $viewBtn = $('.view-btn', $backTemplate),
         $forkBtn = $('.fork-btn', $backTemplate),
+        $detailsBtn = $('.details-btn', $backTemplate),
         $avatar = $('.make-avatar'),
         createdAtDate = moment( new Date( data.createdAt ) ).fromNow();
         // Note that this is not working... no createdAt?
@@ -39,6 +40,7 @@ define(['jquery', 'moment'],
     $authorLink.attr( "href", "/u/" + data.username );
     $viewBtn.attr( "href", data.url );
     $forkBtn.attr( "href", data.url + '/remix' );
+    $detailsBtn.attr( "href", data.url );
     $descSpan.text( data.description );
     $avatar.attr( "src", "https://secure.gravatar.com/avatar/" + data.emailHash + "?s=44&d=" + defaultAvatar );
     // Note that the remix url doesn't exist right now?
@@ -208,6 +210,20 @@ define(['jquery', 'moment'],
         });
         $makeTemplate.on('mouseleave focusout', function ( e ) {
           $('.flipContainer', this).removeClass( 'flip' );
+        });
+        $makeTemplate.on('touchend', function ( e ) {
+          e.preventDefault();
+          if( $( e.target ).hasClass( 'front' ) ||
+               $( e.target ).hasClass( 'back' ) ||
+               $( e.target ).hasClass( 'make-back' )  ) {
+            $('.flipContainer', this).toggleClass( 'flip' );
+          }
+          else if ( e.target.nodeName === 'A') {
+            e.target.click();
+          }
+          else {
+            return false;
+          }
         });
 
         this.wm.doSearch( { tags: ['webmaker:recommended'] }, this.limit, function( data ) {

@@ -131,26 +131,6 @@ app.get( "/privacy", routes.page( "privacy" ) );
 
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 
-app.get("/testmakeapi", function(req,res) {
-  var searchOptions = {},
-      searchCriteria;
-  if ( req.query.id ) {
-    searchCriteria = "id";
-    searchOptions.id = req.query.id;
-  } else if ( req.query.url ) {
-    searchCriteria = "url";
-    searchOptions.url = decodeURIComponent( req.query.url );
-  }
-  make.find(searchOptions).then( function(err, data){
-    if ( err ) {
-      return res.json({
-        searchOptions: searchOptions,
-        err: err
-      });
-    }
-    res.json({searchOptions: searchOptions, data: data});
-  });
-});
 /**
  * Legacy Webmaker Redirects
  */

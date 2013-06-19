@@ -1,6 +1,6 @@
 {% extends "events/layout.html" %}
 
-{% block title %}{{ event.title | escape }}{% endblock %}
+{% block title %}{{ event.title }}{% endblock %}
 
 {% block body %}
 {{ super() }}
@@ -34,7 +34,7 @@
       <span><div id="event-description">
         <h1 class="show">{{ event.title | markdown }}</h1>
         <span class="edit hidden">
-          <input type="text" name="title" placeholder="{{ event.title | escape }}" />
+          <input type="text" name="title" placeholder="{{ event.title }}" />
         </span>
         <div id="event-whenwhere">
           <div class="temporal-local">
@@ -109,7 +109,7 @@
         </div>
         <span id="description-body" class="show">{{ event.description | markdown }}</span>
         <span class="edit hidden">
-          <textarea name="description" data-provide="markdown">{{ event.description | escape }}</textarea>
+          <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
           <label for="event_registerLink">Registration Link: </label>
           <input id="event_registerLink" type="text" name="registerLink"
                 placeholder="{{ event.registerLink or "http://example.com/" }}" />

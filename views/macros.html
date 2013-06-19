@@ -2,8 +2,8 @@
 <div class="gallery-header">
   <div class="ui-wrapper">
     <div class="{% if desc %}g-6{% endif %} header">
-      <h1>{{ header }}</h1>
-      {% if desc %}<p> {{ desc }}</p>{% endif %}
+      <h1>{{ header | safe }}</h1>
+      {% if desc %}<p> {{ desc | safe }}</p>{% endif %}
     </div>
     {% if options.length %}
     <div class="g-2 filter">
@@ -12,7 +12,7 @@
           <label for="search-filter"><span class="icon-th"></span> Filter the gallery</label>
           <select id="search-filter">
             {% for option in options %}
-              <option value="{{ option.value }}"{% if (option.default) %} selected{% endif %}>{{ option.title }}</option>
+              <option value="{{ option.value | safe }}"{% if (option.default) %} selected{% endif %}>{{ option.title | safe }}</option>
             {% endfor %}
           </select>
         </div>

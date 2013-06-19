@@ -163,6 +163,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
         function getCurrentPosition_success(pos) {
             var crd = pos.coords;
             var mapCenter = new google.maps.LatLng(crd.latitude, crd.longitude);
+            google_map.setZoom(13);
             google_map.setCenter(mapCenter);
         }
         function getCurrentPosition_error(err) {
@@ -176,7 +177,6 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(getCurrentPosition_success, getCurrentPosition_error, options);
-            google_map.setZoom(13);
         } else {
             console.log("Sorry - your browser doesn't support geolocation!");
         }

@@ -56,25 +56,27 @@
          </div>
         {% endif %}
         <div id="event-whenwhere">
-          <div class="temporal-local">
-            <span class="show">
-            {% if event.beginDate or event.endDate or event.beginTime %}
-              <img class="calendar-icon" src="/img/event-detail-icon-calendar.png" />
-              <div class="datetime-range">
-                <div>
-                  {{ event.beginDate }}
-                    {% if event.beginDate and event.endDate %} - {% endif %}
-                  {{ event.endDate }}
-                </div>
-                <div>
-                  {{ event.beginTime }}
-                    {% if event.beginTime and event.endTime %} - {% endif %}
-                  {{ event.endTime }}
-                </div>
-              </div>
-            {% endif %}
-            </span>
-            <span class="edit hidden">
+          {% if event.beginDate or event.endDate or event.beginTime %}
+           <span class="show">
+             <div class="temporal-local">
+               <img class="calendar-icon" src="/img/event-detail-icon-calendar.png" />
+               <div class="datetime-range">
+                 <div>
+                   {{ event.beginDate }}
+                     {% if event.beginDate and event.endDate %} - {% endif %}
+                   {{ event.endDate }}
+                 </div>
+                 <div>
+                   {{ event.beginTime }}
+                     {% if event.beginTime and event.endTime %} - {% endif %}
+                   {{ event.endTime }}
+                 </div>
+               </div>
+             </div>
+           </span>
+          {% endif %}
+          <span class="edit hidden">
+            <div class="temporal-local">
               <img class="calendar-icon" src="/img/event-detail-icon-calendar.png" />
               <div class="datetime-range">
                 <div> <input type="text" name="beginDate" class="datepicker"
@@ -88,8 +90,8 @@
                         placeholder="{{ event.endTime   or "-- : --  --" }}" />
                 </div>
               </div>
-            </span>
-          </div>
+            </div>
+          </span>
           <div class="temporal-local">
             {% if event.address %}
              <span class="show">

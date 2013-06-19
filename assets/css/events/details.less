@@ -7,6 +7,11 @@ body#events.details {
 
         #event-title {
             display: inline-block;
+
+            h1 {
+                margin-top:   6px;
+                margin-left:  4px;
+            }
         }
         #owner-panel {
             display:    inline-block;
@@ -26,6 +31,8 @@ body#events.details {
             }
         }
         .temporal-local {
+            position:   relative;
+            left:       16px;
             display:    inline-block;
             margin:     4px;
 
@@ -44,28 +51,28 @@ body#events.details {
                 vertical-align: top;
             }
         }
+        @galleryWidth:  350px;
         .gallery-sidebar {
-            background: rgba(127, 127, 127, 0.4);
-            border-radius: 3px;
-            margin:     35px 30px 10px 15px;
+            background: rgba(127, 127, 127, 0.25);
+            margin:     05px 30px 10px 2px;
             float:      left;
             z-index: 1;
             position: relative;
         }
         #event-picture {
             background: #444;
-            max-width:  400px;
-            margin:     11px;
-            .box-shadow(0px, 2px, 20px, rgba(0, 0, 0, 0.25));
+            max-width:  (@galleryWidth - 20px);
+            margin:     10px;
+            .box-shadow(0px, 2px, 8px, rgba(0, 0, 0, 0.2));
 
             vertical-align: top;
         }
         #event-registration {
-            width:      400px;
+            min-width:  (@galleryWidth - 20px);
             padding-bottom: 30px;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 20px;
+            margin-top: 10px;
 
             text-align: center;
 
@@ -108,13 +115,6 @@ body#events.details {
         #event-description {
             padding:    15px;
 
-            > h1 {
-                position:   relative;
-                left:       14px;
-
-                font-weight: 300;
-                font-size:   35px;
-            }
             #description-body {
                 color:      #787878;
                 font-size:  15px;
@@ -123,7 +123,7 @@ body#events.details {
             #event-organizer {
                 display:    inline-block;
                 margin-top: 8px;
-                margin-left: @profileImgSize/3;
+                margin-left: 18px;
                 line-height: @profileImgSize;
 
                 color:      #888;
@@ -160,24 +160,25 @@ body#events.details {
         }
         .upload {
             display: inline-block;
-            margin:  30px 30px 10px 20px;
+            margin:  10px 10px 0px;
 
-            img {
-                max-width:  250px;
+            #image-upload {
+                display:    table-cell;
+                width:      125px;
+                height:     100px;
+                border:     2px #aaa dashed;
                 border-radius: 6px;
-            }
-        }
-        #image-upload {
-            display:    table-cell;
-            width:      125px;
-            height:     100px;
-            border:     2px #aaa dashed;
-            border-radius: 6px;
+                padding:    6px 6px 0px;
 
-            font-size:  15px;
-            text-align: center;
-            vertical-align: middle;
-            .clickable;
+                font-size:  15px;
+                text-align: center;
+                vertical-align: middle;
+                .clickable;
+
+                img {
+                    max-width:  120px;
+                }
+            }
         }
         input[type="file"] { .hidden; }
 

@@ -133,7 +133,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             disableAutoPan: false,
             hideCloseButton: true,
             arrowPosition: '50%',
-            backgroundColor: 'rgba(245, 245, 245, 1)',
+            backgroundColor: '#fff',
             // use the .phoney class to define all styling for your InfoBubble
             backgroundClassName: 'info-container',
             // define a CSS class name for all, this is technically the "inactive" tab class

@@ -5,6 +5,7 @@ define(['jquery', 'uri', 'base/ui'],
   var makeURL,
       page,
       make,
+      retrieved = 0,
       setup = {};
 
   function getTags( tagList ) {
@@ -65,11 +66,17 @@ define(['jquery', 'uri', 'base/ui'],
       .limit( limit )
       .page ( pageNo || 1 )
       .sortByField( sortBy, sortOrder )
-      .then( function( error, results ) {
+      .then( function( error, results, totalHits ) {
         var result;
 
         if ( error || !results ) {
           return;
+        }
+
+        retrieved += results.length;
+
+        if ( retrieved >= totalHits ) {
+          $('.load-more').hide();
         }
 
         for ( var i = 0; i < results.length; i++ ) {

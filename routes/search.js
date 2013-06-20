@@ -32,14 +32,20 @@ module.exports = function( make ) {
       options[ type ] = query;
     }
 
+    var limit = 12;
+
     make.find( options )
-    .limit( 12 )
+    .limit( limit )
     .sortByField( sortByField, sortByOrder )
     .page( page )
-    .process( function( err, data ) {
+    .process( function( err, data, totalHits ) {
+      if( err ) {
+        return res.send(err);
+      }
       // query can be an array of tags sometimes,
       // so force a string so that it's autoescaped
       var query = options[type].toString();
+      var showOlder = ( totalHits > page * limit );
 
       res.render( "search.html", {
         currentUser: username,
@@ -49,7 +55,8 @@ module.exports = function( make ) {
         page: "search",
         pagination: page,
         query: query,
-        searchType: type
+        searchType: type,
+        showOlder: showOlder
       });
     });
   };

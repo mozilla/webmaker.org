@@ -15,6 +15,9 @@
 @import "map/find";
 
 body#events.map {
+    .ui-append {
+        display: inline-block;
+    }
 
     #map-canvas {
         background: @oceanBlue;
@@ -88,9 +91,6 @@ body#events.map {
     .ui-select {
         box-sizing: content-box;
         margin:     4px;
-    }
-    .ui-append {
-        display: inline-block;
     }
     .datetime > *[class^="ui-"] {
         margin-left: 0px;

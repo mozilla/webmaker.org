@@ -22,7 +22,6 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
   $(document).ready(function() {
     var $body = $('body');
-
     var pages = [ "index", "teach" ];
 
     if ( pages.indexOf( $body[0].id ) !== -1 ) {

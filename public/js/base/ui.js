@@ -5,6 +5,9 @@ define( ["jquery", "text!html/ui-fragments.html" ], function( $, _fragments ) {
       $fragments = $( document.createElement( "div" ) ).html( _fragments );
 
   UI.select = function( select, fn ) {
+    
+    $(".filter").removeClass("hide");
+
     var $el = $( ".ui-select", $fragments ).clone( true ),
         $toggleBtn = $el.find( ".icon" ),
         $selectedEl = $el.find( ".ui-selected" ),

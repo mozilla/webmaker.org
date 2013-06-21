@@ -30,9 +30,18 @@ require(['jquery','base/carousel', 'base/privacy', 'tabzilla', 'sso-ux' ],
     });
 
     //Footer
-    $("#bottom-search-btn").on("click", function (e) {
-      document.getElementById("webmaker-nav").scrollIntoView();
+    $(".backToTop").on("click", function (e) {
+      $('html, body').animate({scrollTop : 0},500);
+      return false;
     });
+    $(window).scroll(function(){
+     if ($(this).scrollTop() > 100) {
+       $('.backToTop').addClass("addMore");
+     } else {
+       $('.backToTop').removeClass("addMore");
+     }
+    });
+
     carousel.attachToCTA();
     carousel.attachToPartners();
     privacy.attach();

@@ -9,35 +9,36 @@
 
   <div class="ui-section">
     <div class="ui-row">
-      <h1>Introducing Maker Party</h1>
-      <p>From June 15 to September 15, thousands of people around the world are
-      meeting up, making cool stuff and teaching others at the 2013 Maker Party.</p>
+      <h1>Make something amazing on the web</h1>
+      <p>From June 15 to September 15, thousands of people around the world are meeting up, making cool stuff and teaching others at the 2013 Maker Party.</p>
     </div>
 
     <div class="ui-row">
       <div class="g-2">
-        <h3>Make It</h3>
-        <p>From coding your first line of HTML to building apps that change the world,
-        Maker Party is your chance to connect with a global community of creators. Build
-        something from scratch or remix a project and make it your own.
-        <a href="/" class="ui-block">View Makes</a>
+        <h3>Make Something</h3>
+        <p>From coding your first line of HTML to building apps that change the world, Maker Party is your chance to connect with a global community of creators. Build something from scratch or remix a project and make it your own.
+        <a href="/tools" class="ui-block">Start Making</a>
         </p>
       </div>
       <div class="g-2">
-        <h3>Share It</h3>
-        <p>You don’t need to be a coding wizard to inspire others with your work. Share
-        your knowledge, show off your creation and feel the love from the Webmaker community.
-        <a href="/teach" class="ui-block">View Teaching Guides</a>
+        <h3>Show Off Your Work</h3>
+        <p>Tag your work with #makerparty and inspire others. Share your knowledge, show off your creation and feel the love from the Webmaker community.
+        <a href="https://mozteach.makes.org/thimble/what-i-made-maker-party" class="ui-block">Share Your Project</a>
         </p>
       </div>
       <div class="g-2">
-        <h3>Party</h3>
-        <p>The worldwide Maker Party consists of hundreds of events over three months, from
-        workshops, design sprints and code-a-thons to teen tech bashes and father-daughter
-        hack jams. Find a party near you or use our handy event guides to host your own.
+        <h3>Create With Others</h3>
+        <p>The worldwide Maker Party will bring people together at hundreds of events over three months, from workshops, design sprints and code-a-thons to teen tech bashes and father-daughter hack jams. Find a party near you or use our handy event guides to host your own.
         <br><a href="/events" class="ui-block">View Events</a>
         </p>
       </div>
+    </div>
+
+    <div class="ui-row">
+      <h3>Need Help?</h3>
+      <p>
+        Contact <a href="mailto:makerparty@mozilla.org">makerparty@mozilla.org</a> with your questions.
+      </p>
     </div>
 
     <div class="ui-row ui-two-picture-row">
@@ -56,7 +57,7 @@
 
   <div class="ui-section">
     <div class="ui-row">
-      <h2>Goodies</h2>
+      <h2>Logos and Partner Stuff</h2>
     </div>
 
     <div class="ui-row">
@@ -329,6 +330,32 @@
   </div>
 
 </div>
+{% endblock %}
+{% block CTA %}
+  [{
+    "title": "Tools",
+    "desc": "Create an original or a remix using Popcorn Maker and Thimble.",
+    "image": "/img/cta-Tools.jpg",
+    "url": "/tools"
+  },
+  {
+    "title": "Events",
+    "desc": "Find an event near you or host your own.",
+    "image": "/img/cta-Party.jpg",
+    "url": "/events"
+  },
+  {
+    "title": "Teach",
+    "desc": "Teach the world digital literacy and webmaking.",
+    "image": "/img/cta-Teach.jpg",
+    "url": "/teach"
+  },
+  {
+    "title": "About",
+    "desc": "Learn more about who we are and what makes us tick.",
+    "image": "/img/cta-About-us.jpg",
+    "url": "/about"
+  }];
 {% endblock %}
 {% block require_main %}{% endblock %}
 {% block scripts %}

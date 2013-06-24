@@ -21,7 +21,7 @@
             <div class="remix-info">
               {% if remixedFromData %}
               <span class="remixed-from-txt">Remixed from</span>
-              <a href="{{ remixedFromData.url }}"><span class="remixed-user">@{{ remixedFromData.username }}</span></a>
+              <a target="_blank" href="{{ remixedFromData.url }}"><span class="remixed-user">@{{ remixedFromData.username }}</span></a>
               {% endif %}
               <div class="make-type-{{type}}">
                 <div class="make-thumbnail{% if thumbnail %} thumbnail" style="background-image:url({{ thumbnail }}){% endif %}"></div>
@@ -33,7 +33,7 @@
               {{remixCount}} by
               <ul class="remixed-by-list">
                 {% for remix in remixes %}
-                <li><a href="{{remix.url}}">@{{remix.username}}</a></li>
+                <li><a target="_blank" href="{{remix.url}}">@{{remix.username}}</a></li>
                 {% endfor %}
               </ul>
             </div>
@@ -49,7 +49,7 @@
             </div>
 
             <div id="url" class="ui-row">
-              <a href="{{url}}" class="make-url">{{url}}</a>
+              <a target="_blank" href="{{url}}" class="make-url">{{url}}</a>
             </div>
 
             <div class="ui-row">
@@ -57,7 +57,7 @@
                 <img class="make-user-gravatar" src="https://secure.gravatar.com/avatar/{{ emailHash }}?s=40d=http%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png" alt="{{ username}}">
                 <span class="made-by">
                   Made by
-                  <a class="make-username" href="/u/{{ username }}">@{{ username }}</a>
+                  <a target="_blank" class="make-username" href="/u/{{ username }}">@{{ username }}</a>
                   <span class="make-relative-date">{{ createdAt }}</span>
                 </span>
               </div>
@@ -65,16 +65,16 @@
               <span class="social-media">
                 <a id="share-btn" class="share ui-btn"><span class="icon-share"></span> Share</a>
                 <span id="share-container" class="hidden">
-                  <a id="google-btn"></a>
-                  <a id="twitter-btn"></a>
-                  <a id="fb-btn"></a>
+                  <a target="_blank" id="google-btn"></a>
+                  <a target="_blank" id="twitter-btn"></a>
+                  <a target="_blank" id="fb-btn"></a>
                 </span>
               </span>
             </div>
 
             <p class="built-with"><span class="built-with">Built with</span>
               <span class="icon-{{tool}}"></span>
-              <a href="{{remixurl}}" class="tool-name">{{ tool }}</a>
+              <a target="_blank" href="{{remixurl}}" class="tool-name">{{ tool }}</a>
             </p>
 
             <p class="make-desc">{{ description }}</p>

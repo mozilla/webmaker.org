@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="X-CSRF-Token" content="{{ csrf }}">
   <meta name="login-url" content="{{ loginAPI }}">
+  <meta name="persona-email" content="{{ email }}">
   <title>{% block title %}{% endblock %} - Mozilla Webmaker</title>
+  {% block css %}{% endblock %}
   <link rel="stylesheet" href="/ext/css/font-awesome.css">
   <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/png" href="/img/favicon.ico">
-  {% block css %}{% endblock %}
-  <meta name="persona-email" content="{{ email }}">
-  {% block head %}
-  {% endblock %}
 </head>
 <body id="{{ page }}" {% if view %}class="{{ view }}"{% endif %} data-endpoint="{{ makeEndpoint }}">
 <div class="webmaker-outer-wrapper">

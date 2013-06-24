@@ -2,15 +2,6 @@
 
 {% include 'macros.html' %}
 
-{% block head %}
-<script type="text/javascript">
-var hash = window.location.hash;
-if( hash.length > 0 ) {
-  var tag = hash.slice(1);
-  window.location = window.location.origin + '/t/' + tag;
-}
-</script>
-{% endblock %}
 {% block title %}Home{% endblock %}
 {% block midbar %}
 <!-- check for search right when page loads -->
@@ -23,3 +14,14 @@ if( hash.length > 0 ) {
 {% block body %}
 {{ gallery() }}
 {% endblock %}
+{% block scripts %}
+<script type="text/javascript">
+var hash = window.location.hash;
+if( hash.length > 0 ) {
+  var tag = hash.slice(1);
+  window.location = window.location.origin + '/t/' + tag;
+}
+</script>
+{% endblock %}
+
+

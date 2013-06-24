@@ -28,7 +28,7 @@ define(['jquery', 'moment'],
         $viewBtn = $('.view-btn', $backTemplate),
         $forkBtn = $('.fork-btn', $backTemplate),
         $detailsBtn = $('.details-btn', $backTemplate),
-        $avatar = $('.make-avatar'),
+        $avatar = $('.make-avatar', $backTemplate),
         createdAtDate = moment( new Date( data.createdAt ) ).fromNow();
         // Note that this is not working... no createdAt?
 

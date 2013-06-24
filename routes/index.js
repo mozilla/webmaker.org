@@ -8,6 +8,9 @@ module.exports = function( make ){
     page: function( view ) {
       return require( "./page" )( view );
     },
+    sitemap: function( sightmap ) {
+      return require( "./sitemap" )( sightmap );
+    },    
     remove: require( "./remove" )( make ),
     search: require( "./search" )( make ),
     tag: function( req, res ) {

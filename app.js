@@ -9,6 +9,7 @@ var express = require( "express" ),
     path = require( "path" ),
     persona = require( "express-persona" ),
     route = require( "./routes" ),
+    sightmap = require( "sightmap" ),
     lessMiddleWare = require( "less-middleware" ),
     makeAPI = require( "./lib/makeapi-webmaker" );
 
@@ -132,7 +133,7 @@ app.get( "/privacy", routes.page( "privacy" ) );
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 app.get( "/sso/include.html", routes.include() );
 app.get( "/sso/include-transparent.html", routes.include("transparent" ));
-
+app.get( "/sitemap.xml", routes.sitemap( sightmap ) );
 app.get( "/js/make-api.js", function( req, res ) {
   res.sendfile( path.resolve( __dirname, "node_modules/makeapi-client/src/make-api.js" ) );
 });

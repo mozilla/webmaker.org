@@ -193,6 +193,7 @@ a {
     font-weight: normal;
   }
   h3 {
+    display: inline-block;
     line-height: 1.3;
     font-size: 1.3em;
     margin-bottom: 0.5em;
@@ -553,10 +554,17 @@ a {
   }
 }
 
-@media (max-width: 640px) {
+.mobile {
+  display: none;
+}
+
+@media (max-device-width: 640px) {
   .mobile {
-    display: none;
+    display: block;
   }
+}
+
+@media (max-width: 640px) {
   .make.medium,
   .make.large,
   #banner-join {

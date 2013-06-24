@@ -44,7 +44,9 @@
         {% if pagination > 1 %}
         <li class="previous-page"><span class="icon-arrow-left"></span> Newer</li>
         {% endif %}
+        {% if showOlder %}
         <li class="next-page">Older <span class="icon-arrow-right"></span></li>
+        {% endif %}
       </ol>
     </div>
   {% endif %}

@@ -1,13 +1,24 @@
 module.exports = function( make ) {
   return function( req, res ) {
-    var type = req.param( "type" ) || "tags",
-    query = req.param( "q" ) || "webmaker:featured",
-    makeSize = req.param( "size" ),
-    sortByField = req.param( "sortByField" ) || "createdAt",
-    sortByOrder = req.param( "order" ) || "desc",
-    page = req.param( "page" ) || 1,
-    username = req.session.username,
-    options = {};
+    var DEFAULT_TYPE = "tags",
+        DEFAULT_QUERY = "webmaker:featured",
+        VALID_TYPES = [
+          "tags",
+          "title",
+          "user",
+          "description"
+        ];
+
+    var type = ( req.query.type || DEFAULT_TYPE ).toString(),
+        query = ( req.query.q || DEFAULT_QUERY ).toString(),
+        sortByField = ( req.query.sortByField || "createdAt" ).toString(),
+        sortByOrder = ( req.query.order || "desc" ).toString(),
+        page = ( req.query.page || 1 ).toString(),
+        options = {};
+
+    if ( VALID_TYPES.indexOf( type ) === -1 ) {
+      type = DEFAULT_TYPE;
+    }
 
     if ( type === 'tags' ) {
       var tags = query.split(',');
@@ -48,10 +59,8 @@ module.exports = function( make ) {
       var showOlder = ( totalHits > page * limit );
 
       res.render( "search.html", {
-        currentUser: username,
-        hasQuery: req.param( "q" ),
+        hasQuery: !!req.query.q,
         makes: data || [],
-        makeSize: makeSize,
         page: "search",
         pagination: page,
         query: query,

@@ -20,7 +20,7 @@
     <h3>You can build:</h3>
     <ul>
       <li>an animated gif with sound</li>
-      <li>a short documentary</li>
+      <li>a documentary with dynamic links</li>
       <li>a video profile to introduce yourself to the world</li>
       <li>and more!</li>
     </ul>
@@ -49,7 +49,7 @@
       <li>a personalized greeting card</li>
       <li>an online poster for your favourite movie</li>
       <li>a hilarious meme</li>
-      <li>and so much more!</li>
+      <li>and more!</li>
     </ul>
     <div class="tools-action">
       <h3>Get started</h3>
@@ -66,4 +66,30 @@
 </div>
 {% endblock %}
 {% block scripts %}
+{% endblock %}
+{% block CTA %}
+  [{
+    "title": "Get Involved",
+    "desc": "Access support and connect with the Webmaker community.",
+    "image": "/img/cta-Get-Involved.jpg",
+    "url": "/getinvolved"
+  },
+  {
+    "title": "Teach",
+    "desc": "Teach the world digital literacy and webmaking.",
+    "image": "/img/cta-Teach.jpg",
+    "url": "/teach"
+  },
+  {
+    "title": "Maker Party",
+    "desc": "From now to Sept 15, join other webmakers in a global Maker Party.",
+    "image": "/img/cta-Party.jpg",
+    "url": "/party"
+  },
+  {
+    "title": "About Us",
+    "desc": "Learn more about who we are and what makes us tick.",
+    "image": "/img/cta-About-us.jpg",
+    "url": "/about"
+  }];
 {% endblock %}

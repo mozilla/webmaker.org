@@ -14,10 +14,11 @@
       <p>
         Welcome to Webmaker &mdash; a <a href="https://www.mozilla.org/en-US/mission/">Mozilla</a>
         project dedicated to helping you create something amazing on the <a href="/">web</a>.
-        Our <a href="/tools">tools</a>, <a href="/events">events</a> and <a href="/teach">learning guides</a>
+        Our <a href="/tools">tools</a>, <a href="/events">events</a> and <a href="/teach">teaching guides</a>
         allow webmakers to not only create the content that makes the web great, but &mdash; perhaps more
         importantly &mdash; understand how the web works. With this knowledge, we can make a web without limits.
-        That's the philosophy behind webmaker.org. We've built everything so you can remix it. Enjoy!
+        That's the philosophy behind webmaker.org. We've built everything so you can see how it works, take it 
+        apart and remix it. Enjoy!
       </p>
       <p><strong>Our goal:</strong> encourage millions of people around the world to move beyond using the web
       to making it.</p>
@@ -28,18 +29,18 @@
         <h3><a href="/tools">Tools</a></h3>
         <p>
           Creating the web is the heart of our work. We build tools like <a href="//thimble.webmaker.org">Thimble</a>
-          and <a href="//popcorn.webmaker.org">Popcorn Maker</a> that allow people to create amazing content while
-          peeking under the hood of the internet, getting familiar with all the moving parts and getting their hands
-          dirty by creating, hacking and remixing parts of the web with
-          foundational elements like HTML, CSS and JavaScript.
+          and <a href="//popcorn.webmaker.org">Popcorn Maker</a> that allow people to create amazing content while 
+          peeking under the hood of the internet, getting familiar with all the moving parts and getting their 
+          hands dirty with foundational elements like HTML, CSS and JavaScript.
         </p>
       </div>
       <div class="g-2">
         <h3><a href="/teach">Teach &amp; Learning</a></h3>
         <p>
-          Learning through making is a core part of Mozilla's mission and we provide starter projects,
-          <a href="/t/template">templates</a> and <a href="/teach">how-to guides</a> to inspire teachers and learners
-          at every level to create on the web and share their knowledge with others. We consider
+          Learning through making is a core part of Mozilla's mission. We provide 
+          <a href="/search?type=tags&q=webmaker:template">starter projects</a>,
+          templates and <a href="/teach">how-to guides</a> to inspire 
+          teachers and learners at every level to create on the web and share their knowledge with others. We consider
           <a href="https://wiki.mozilla.org/Learning/WebLiteracies">digital literacy</a> a critical skill just like reading, writing and math.
           After all, it's only when we understand the building blocks of the web that we can have a hand in shaping its future.
         </p>
@@ -61,4 +62,30 @@
 </div>
 {% endblock %}
 {% block scripts %}
+{% endblock %}
+{% block CTA %}
+  [{
+    "title": "Tools",
+    "desc": "Create an original or a remix using Popcorn Maker and Thimble.",
+    "image": "/img/cta-Tools.jpg",
+    "url": "/tools"
+  },
+  {
+    "title": "Teach",
+    "desc": "Teach the world digital literacy and webmaking.",
+    "image": "/img/cta-Teach.jpg",
+    "url": "/teach"
+  },
+  {
+    "title": "Maker Party",
+    "desc": "From now to Sept 15, join other webmakers in a global Maker Party.",
+    "image": "/img/cta-Party.jpg",
+    "url": "/party"
+  },
+  {
+    "title": "Get Involved",
+    "desc": "Access support and connect with the Webmaker community.",
+    "image": "/img/cta-Get-Involved.jpg",
+    "url": "/getinvolved"
+  }];
 {% endblock %}

@@ -173,7 +173,7 @@ define(['jquery', 'moment'],
           var $borderDiv = $('<div class="join-border">');
           var $signinDiv = $('<div class="join-signin">');
           var $signin = $('<span class="btn-join-container"><a href="/login" class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>');
-          var $claim = $('<span class="join-claim">').text('Claim your webmaker domain.');
+          var $claim = $('<span class="join-claim">').text('Claim your Webmaker domain.');
 
           $signinDiv.append($claim);
           $signinDiv.append($signin);

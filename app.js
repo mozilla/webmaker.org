@@ -133,6 +133,10 @@ app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 app.get( "/sso/include.html", routes.include() );
 app.get( "/sso/include-transparent.html", routes.include("transparent" ));
 
+app.get( "/js/make-api.js", function( req, res ) {
+  res.sendfile( path.resolve( __dirname, "node_modules/makeapi-client/src/make-api.js" ) );
+});
+
 /**
  * Legacy Webmaker Redirects
  */

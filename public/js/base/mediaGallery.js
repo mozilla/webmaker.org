@@ -15,7 +15,7 @@ define(['jquery', 'moment'],
       $makeTemplate = $body.find( 'div.make' ),
       $makeBackTemplate = $body.find( 'div.make-back' ),
       $loading = $( '.loading', $mainGallery ),
-      isMobile = false;
+      isMobile = $('.mobile').css('display') === 'block';
 
   function createMakeBack( data, $el ) {
     var $backTemplate = $makeBackTemplate.clone( true ),
@@ -139,6 +139,7 @@ define(['jquery', 'moment'],
     // Detect whether we are in mobile dimensions or not.
     if (isMobile) {
       this.limit = LIMIT_MOBILE;
+      countLarge = 0;
     }
   };
 
@@ -157,54 +158,52 @@ define(['jquery', 'moment'],
       case 'template':
         break;
       case 'index':
-        $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
-        var $rotator = $('<div class="rotator">');
-        var $theweb = $('<h2>');
-        $rotator.append($theweb);
-        var stampHeaders = [
-          'The web is still wild.<br> Build it.',
-          'The web is still open.<br> Hack it.',
-          'The web is still weird.<br> Create it.',
-          'The web is still fun.<br> Make it.'
-        ];
+        if ( !isMobile ) {
+          $stickyBanner = $('<div class="make internal rf packery-hide" id="banner-join">');
+          var $rotator = $('<div class="rotator">');
+          var $theweb = $('<h2>');
+          $rotator.append($theweb);
+          var stampHeaders = [
+            'The web is still wild.<br> Build it.',
+            'The web is still open.<br> Hack it.',
+            'The web is still weird.<br> Create it.',
+            'The web is still fun.<br> Make it.'
+          ];
 
-        // for (var i = 0, l = stampHeaders.length; i < l; i ++) {
-        //   $rotator.append('<h2>' + stampHeaders[i] + '</h2>');
-        // }
+          var $borderDiv = $('<div class="join-border">');
+          var $signinDiv = $('<div class="join-signin">');
+          var $signin = $('<span class="btn-join-container"><a href="/login" class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>');
+          var $claim = $('<span class="join-claim">').text('Claim your webmaker domain.');
 
-        var $borderDiv = $('<div class="join-border">');
-        var $signinDiv = $('<div class="join-signin">');
-        var $signin = $('<span class="btn-join-container"><a href="/login" class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>');
-        var $claim = $('<span class="join-claim">').text('Claim your webmaker domain.');
+          $signinDiv.append($claim);
+          $signinDiv.append($signin);
 
-        $signinDiv.append($claim);
-        $signinDiv.append($signin);
+          $stickyBanner.append( $rotator );
+          $stickyBanner.append( $borderDiv );
+          $stickyBanner.append( $signinDiv );
 
-        $stickyBanner.append( $rotator );
-        $stickyBanner.append( $borderDiv );
-        $stickyBanner.append( $signinDiv );
+          $mainGallery.append( $stickyBanner );
 
-        $mainGallery.append( $stickyBanner );
+          this.packery.stamp( $stickyBanner[0] );
+          this.packery.layout();
 
-        this.packery.stamp( $stickyBanner[0] );
-        this.packery.layout();
+          var carouselTime = 5; // seconds
+          var iterate = 0;
 
-        var carouselTime = 5; // seconds
-        var iterate = 0;
-
-        // initial population
-        var v = stampHeaders[iterate];
-        $theweb.html(v);
-        iterate++;
-
-        var interval = setInterval(function(){
+          // initial population
           var v = stampHeaders[iterate];
-          $theweb.fadeOut(500, function() {
-            $(this).html(v).fadeIn(500);
-          });
+          $theweb.html(v);
           iterate++;
-          if (iterate === stampHeaders.length - 1) iterate = 0;
-        }, carouselTime * 1000);
+
+          var interval = setInterval(function(){
+            var v = stampHeaders[iterate];
+            $theweb.fadeOut(500, function() {
+              $(this).html(v).fadeIn(500);
+            });
+            iterate++;
+            if (iterate === stampHeaders.length - 1) iterate = 0;
+          }, carouselTime * 1000);
+        }
 
         // set up mouse over handlers
         $makeTemplate.addClass( "make-flip" );
@@ -217,11 +216,14 @@ define(['jquery', 'moment'],
         $makeTemplate.on('touchend', function ( e ) {
           e.preventDefault();
           if( $( e.target ).hasClass( 'front' ) ||
-               $( e.target ).hasClass( 'back' ) ||
-               $( e.target ).hasClass( 'make-back' )  ) {
+              $( e.target ).hasClass( 'back' ) ||
+              $( e.target ).hasClass( 'make-back' )  ) {
             $('.flipContainer', this).toggleClass( 'flip' );
           }
-          else if ( e.target.nodeName === 'A') {
+          else if ( e.target.nodeName === 'A' )  {
+            if ( $(e.target).hasClass('flipContainer') ) {
+              return false;
+            }
             e.target.click();
           }
           else {
@@ -233,7 +235,6 @@ define(['jquery', 'moment'],
           searchCallback( data, self );
         });
         break;
-
       case 'teach':
         $stickyBanner = $('<div id="banner-teach" class="rf packery-hide">' +
           '<img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>' +

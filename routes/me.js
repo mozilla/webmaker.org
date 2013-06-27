@@ -1,9 +1,10 @@
 module.exports = function( req, res ) {
   var make = require("../lib/makeapi"),
       username = req.session.username,
-      page = req.param.page || 1,
+      page = req.query.page || 1,
       app = req.query.app,
-      options = {};
+      options = {},
+      limit = 50;
 
   // MakeAPI doesn't handle undefined being passed for user. To
   // prevent the MakeAPI error showing when no signed in user accesses the page
@@ -23,18 +24,21 @@ module.exports = function( req, res ) {
   }
 
   make.find( options )
-  .limit( 50 )
+  .limit( limit )
   .sortByField( "updatedAt", "desc" )
   .page( page )
-  .process( function( err, data ) {
+  .process( function( err, data, totalHits ) {
     if ( err ) {
       return res.send( err );
     }
+
     res.render( "me.html", {
       makes: data || [],
       page: "me",
       pagination: page,
       view: app || "webmaker",
+      showOlder: ( totalHits > page * limit ),
+      showPagination: ( totalHits > limit ),
       username: username
     });
   });

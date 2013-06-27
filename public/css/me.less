@@ -47,8 +47,8 @@
 }
 
 // For in-app version
-.thimble,
-.popcorn {
+#me.thimble,
+#me.popcorn {
   #midbar,
   #webmaker-nav,
   .footer {
@@ -62,7 +62,10 @@
     width: 100%;
     height: 100%;
     padding: 0;
-    margin: 30px;
+    margin: 5px 30px 30px;
+    &.no-page {
+      margin: 30px;
+    }
   }
   .no-makes {
     text-align: center;
@@ -80,5 +83,11 @@
     &.make-type-thimble:hover {
       box-shadow: 0 0 0 1px @blue;
     }
+  }
+  .pagination {
+    position: fixed;
+    top: 240px;
+    left: 30px;
+    margin: 0;
   }
 }

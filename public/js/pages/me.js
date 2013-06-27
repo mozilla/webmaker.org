@@ -1,11 +1,14 @@
-define(['jquery'],
-  function ($) {
+define(['jquery', 'uri'],
+  function ($, URI) {
   'use strict';
 
   var $body = $("body"),
       $makes = $(".make"),
       $deleteBtn = $(".delete-btn"),
+      $nextBtn = $(".next-page"),
+      $prevBtn = $(".previous-page"),
       mainGallery = $(".main-gallery")[0],
+      queryKeys = URI.parse( window.location.href ).queryKey,
       BASE_WIDTH = 240,
       GUTTER = 20,
       packery;
@@ -66,5 +69,15 @@ define(['jquery'],
         console.log(res.responseText);
       });
     }
+  });
+
+  // Pagination
+  $nextBtn.click( function(e) {
+    queryKeys.page = queryKeys.page ? parseInt(queryKeys.page, 10) + 1 : 2;
+    window.location.search = $.param( queryKeys );
+  });
+  $prevBtn.click( function(e) {
+    queryKeys.page = queryKeys.page > 1 ? parseInt(queryKeys.page, 10) - 1 : 1;
+    window.location.search = $.param( queryKeys );
   });
 });

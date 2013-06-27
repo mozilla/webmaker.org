@@ -13,7 +13,7 @@
   </div>
 {% endblock %}
 {% block body %}
-<div class="ui-wrapper">
+<div class="ui-wrapper {% if not showPagination %} no-page {% endif %}">
   {% if username %}
   <div class="main-gallery search-gallery">
     <div class="gutter-sizer"></div>
@@ -22,6 +22,17 @@
   {% endif %}
   {% if makes.length == 0%}
   <div class="no-makes">You don't have any {{view}} makes :(</div>
+  {% else %}
+    <div class="ui-row pagination">
+      <ol class="pagination-list">
+        {% if pagination > 1 %}
+        <li class="previous-page"><span class="icon-arrow-left"></span> Newer</li>
+        {% endif %}
+        {% if showOlder %}
+        <li class="next-page">Older <span class="icon-arrow-right"></span></li>
+        {% endif %}
+      </ol>
+    </div>
   {% endif %}
 </div>
 {% endblock %}

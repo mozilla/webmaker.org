@@ -6,8 +6,8 @@ requirejs.config({
     'moment':           '/ext/js/moment',
     'uri':              '/ext/js/uri',
     'tabzilla': 'https://www.mozilla.org/tabzilla/media/js/tabzilla',
-    // XXX: window.__loginAPI gets templated in server-side in layout.html 
-    'sso-ux':            window.__loginAPI + '/js/sso-ux'       
+    // XXX: window.__loginAPI gets templated in server-side in layout.html
+    'sso-ux':            window.__loginAPI + '/js/sso-ux'
   },
   shim: {
     'tabzilla': ['jquery'],
@@ -44,25 +44,31 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
             switch ( val ) {
               case 'featured':
                 media.search( {
-                tags: [ 'webmaker:featured' ],
+                tags: [{
+                  tags: [ 'webmaker:featured' ]
+                }],
                 sortByField: { 'createdAt' : 'desc' }
-              } );
+              });
               break;
 
               case 'popcorn':
                 media.search( {
-                tags: [ 'webmaker:featured' ],
+                tags: [{
+                  tags: [ 'webmaker:featured' ]
+                }],
                 sortByField: { 'createdAt' : 'desc' },
                 contentType: 'application/x-popcorn'
-              } );
+              });
               break;
 
               case 'thimble':
-                media.search( {
-                tags: [ 'webmaker:featured' ],
+                media.search({
+                tags: [{
+                  tags: [ 'webmaker:featured' ]
+                }],
                 sortByField: { 'createdAt' : 'desc' },
                 contentType: 'application/x-thimble'
-              } );
+              });
               break;
             }
         });
@@ -71,26 +77,32 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
         UI.select( '#search-filter', function( val ) {
           switch ( val ) {
             case 'featured':
-              media.search( {
-                tags: [ 'webmaker:featured', 'guide' ],
+              media.search({
+                tags: [{
+                  tags: [ 'webmaker:featured', 'guide' ]
+                }],
                 sortByField: { 'createdAt' : 'desc' }
-              } );
+              });
               break;
 
             case 'popcorn':
-              media.search( {
-                tags: [ 'guide' ],
+              media.search({
+                tags: [{
+                  tags: [ 'guide' ]
+                }],
                 sortByField: { 'createdAt' : 'desc' },
                 contentType: 'application/x-popcorn'
-              } );
+              });
               break;
 
             case 'thimble':
-              media.search( {
-                tags: [ 'guide' ],
+              media.search({
+                tags: [{
+                  tags:[ 'guide' ]
+                }],
                 sortByField: { 'createdAt' : 'desc' },
                 contentType: 'application/x-thimble'
-              } );
+              });
               break;
           }
         });

@@ -26,18 +26,17 @@ module.exports = function( make ) {
       if( tags.length === 1 ) { // try splitting with spaces, too
         tags = query.split(' ');
       }
-      for (var i = 0, l = tags.length; i < l; i ++) {
-        var tag = tags[i];
+      options.tags[0] = tags.map(function( t ) {
         // check for hashtag, remove
-        if ( tag.charAt(0) === '#' ) {
-          tag = tag.slice(1);
+        if ( t[0] === '#' ) {
+          return tag.slice(1);
         }
-        options.tags.push(tag);
-      }
+        return t;
+      });
     }
     else {
       // check for '@', remove
-      if ( query.charAt(0) === '@' ) {
+      if ( query[0] === '@' ) {
         query = query.slice(1);
       }
       options[ type ] = query;

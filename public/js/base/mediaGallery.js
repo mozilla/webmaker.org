@@ -231,7 +231,7 @@ define(['jquery', 'moment'],
           }
         });
 
-        this.wm.doSearch( { tags: ['webmaker:recommended'] }, this.limit, function( data ) {
+        this.wm.doSearch( { tags: [{ tags: ['webmaker:recommended'] }] }, this.limit, function( data ) {
           searchCallback( data, self );
         });
         break;
@@ -248,7 +248,7 @@ define(['jquery', 'moment'],
 
         $makeTemplate.addClass( "make-teach" );
 
-        this.wm.doSearch( { tags: ['webmaker:recommended', 'guide'] }, this.limit, function( data ) {
+        this.wm.doSearch( { tags:[{ tags: ['webmaker:recommended', 'guide']}] }, this.limit, function( data ) {
           searchCallback( data, self );
         });
         this.packery.stamp( $stickyBanner[0] );

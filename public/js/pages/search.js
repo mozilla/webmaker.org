@@ -61,10 +61,12 @@ define(["jquery", "uri" ],
   // Pagination
   $nextBtn.click( function(e) {
     queryKeys.page = queryKeys.page ? parseInt(queryKeys.page, 10) + 1 : 2;
+    queryKeys.q = decodeURIComponent(queryKeys.q);
     window.location.search = $.param( queryKeys );
   });
   $prevBtn.click( function(e) {
     queryKeys.page = queryKeys.page > 1 ? parseInt(queryKeys.page, 10) - 1 : 1;
+    queryKeys.q = decodeURIComponent(queryKeys.q);
     window.location.search = $.param( queryKeys );
   });
 

@@ -11,7 +11,36 @@
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
-  {{ gallery() }}
+  <div class="main-gallery">
+    <div class="gutter-sizer"></div>
+
+    <div id="banner-teach">
+      <img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>
+      <p>We're a <a href='/about'/>global community</a> of friendly humans on a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>
+        <button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'></i></button></a>
+      </p>
+    </div>
+
+    {% for make in makes %}
+    <div class="make make-teach medium">
+      <a href="{{make.url}}">
+        <div class="make-thumbnail thumbnail" style="background-image: url({{make.thumbnail}});"></div>
+        <div class="make-back">
+          <div class="desc">
+            <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
+            <p class="author-date"><img class="make-avatar" src="{{make.avatar}}"><a><span class="type">guide</span> make</a> by <a class="author" href="/u/{{make.username}}">@{{make.username}}</a> created <span class="date">{{make.createdAt}}</span></p>
+            <p class="description">{{make.description}}</p>
+          </div>
+          <div class="btn-container">
+            <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixUrl}}"><span class="icon-code-fork"></span> Remix</a>
+            <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}">Details</a>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+
+  </div>
 </div>
 {% endblock %}
 {% block CTA %}
@@ -39,4 +68,13 @@
     "image": "/img/cta-Tools.jpg",
     "url": "/tools"
   }];
+{% endblock %}
+{% block require_main %}{% endblock %}
+{% block scripts %}
+<script>
+  requirejs.config({baseUrl: '/js'});
+  require(['app'], function (app) {
+    require(['pages/teach']);
+  });
+</script>
 {% endblock %}

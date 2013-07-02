@@ -100,7 +100,7 @@ app.get( "/healthcheck", routes.api.healthcheck );
 
 app.get( "/", routes.page( "index" ) );
 app.get( "/about", routes.page( "about" ) );
-app.get( "/teach", routes.page( "teach" ) );
+app.get( "/teach", routes.teach );
 app.get( "/party", routes.page( "party" ) );
 app.get( "/tools", routes.page( "tools" ) );
 app.get( "/mentor", routes.page( "mentor" ) );

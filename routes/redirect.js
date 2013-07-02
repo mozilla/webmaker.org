@@ -47,7 +47,12 @@ module.exports = function( app ) {
       paths: [
         "/connect"
       ]
-    }
+    }, {
+      route: "/event-guides",
+      paths: [
+        "/guides"
+      ]
+    }    
   ];
 
   app.get( /^\/en-US\/(.+)/, function( req, res ) {

@@ -22,6 +22,11 @@ a {
   text-decoration: none;
 }
 
+a,
+img {
+  border: none;
+}
+
 .webmaker-outer-wrapper {
   overflow: hidden; // This is so the box-shadow on the header doesn't look bad with Tabzilla
 }
@@ -82,14 +87,6 @@ a {
   width: @gutter * @unit;
 }
 
-.make {
-  color: #FFF;
-  position: relative;
-  .border-radius;
-  .border-box;
-
-}
-
 .flipContainer:hover {
   text-decoration: none;
 }
@@ -97,38 +94,123 @@ a {
 .make-flip {
   .flipContainer { //card
     display: block;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: all 0.3s linear;
-    -moz-transform-style: preserve-3d;
-    -moz-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    transform-style: preserve-3d;
+    position: relative;
     width: 100%;
     height: 100%;
-    .border-radius;
+  }
+
+  .front,
+  .make-back {
+    .border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition:0.3s linear;
+    -moz-transition:0.3s linear;
+    transition:0.3s linear;
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
   }
 
-  .flipContainer.flip {
-    .rotateY(180deg);
-  }
-  .front,
-  .back {
-    .backface-visibility(hidden);
-    .border-radius;
-    .border-box;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  .back {
-    color: #4E4E4E;
-    background: #FFF;
-    .rotateY(180deg);
-  }
   &.medium .description {
     display: none;
+  }
+}
+
+.small {
+  .flip,
+  &:hover {
+    .front {
+      -webkit-transform:perspective(100px) rotateY(-179.9deg);
+      -moz-transform:perspective(100px) rotateY(-179.9deg);
+      transform:perspective(100px) rotateY(-179.9deg);
+    }
+    .make-back {
+      -moz-transform:perspective(100px) rotateY(0);
+      -webkit-transform:perspective(100px) rotateY(0);
+      transform:perspective(100px) rotateY(0);
+    }
+  }
+
+  .front {
+    .backface-visibility(hidden);
+    -moz-transform:perspective(100px) rotateY(0deg);
+    -webkit-transform:perspective(100px) rotateY(0deg);
+    transform:perspective(100px) rotateY(0deg);
+  }
+
+  .make-back {
+    .backface-visibility(hidden);
+    -moz-transform:perspective(100px) rotateY(180deg);
+    -webkit-transform:perspective(100px) rotateY(180deg);
+    transform:perspective(100px) rotateY(180deg);
+    color: #4E4E4E;
+    background: #FFF;
+  }
+}
+
+.medium {
+  .flip,
+  &:hover {
+    .front {
+      -webkit-transform:perspective(300px) rotateY(-179.9deg);
+      -moz-transform:perspective(300px) rotateY(-179.9deg);
+      transform:perspective(300px) rotateY(-179.9deg);
+    }
+    .make-back {
+      -moz-transform:perspective(300px) rotateY(0);
+      -webkit-transform:perspective(300px) rotateY(0);
+      transform:perspective(300px) rotateY(0);
+    }
+  }
+
+  .front {
+    .backface-visibility(hidden);
+    -moz-transform:perspective(300px) rotateY(0deg);
+    -webkit-transform:perspective(300px) rotateY(0deg);
+    transform:perspective(300px) rotateY(0deg);
+  }
+
+  .make-back {
+    .backface-visibility(hidden);
+    -moz-transform:perspective(300px) rotateY(180deg);
+    -webkit-transform:perspective(300px) rotateY(180deg);
+    transform:perspective(300px) rotateY(180deg);
+    color: #4E4E4E;
+    background: #FFF;
+  }
+}
+
+.large {
+  .flip,
+  &:hover {
+    .front {
+      -webkit-transform:perspective(600px) rotateY(-179.9deg);
+      -moz-transform:perspective(600px) rotateY(-179.9deg);
+      transform:perspective(600px) rotateY(-179.9deg);
+    }
+    .make-back {
+      -moz-transform:perspective(600px) rotateY(0);
+      -webkit-transform:perspective(600px) rotateY(0);
+      transform:perspective(600px) rotateY(0);
+    }
+  }
+
+  .front {
+    .backface-visibility(hidden);
+    -moz-transform:perspective(600px) rotateY(0deg);
+    -webkit-transform:perspective(600px) rotateY(0deg);
+    transform:perspective(600px) rotateY(0deg);
+  }
+
+  .make-back {
+    .backface-visibility(hidden);
+    -moz-transform:perspective(600px) rotateY(180deg);
+    -webkit-transform:perspective(600px) rotateY(180deg);
+    transform:perspective(600px) rotateY(180deg);
+    color: #4E4E4E;
+    background: #FFF;
   }
 }
 
@@ -166,20 +248,17 @@ a {
   font-size: 1.4em;
   .width(4);
   .height(4);
-  .perspective(600px);
 }
 
 .medium {
   font-size: 1em;
   .width(2);
   .height(2);
-  .perspective(300px);
 }
 
 .small {
   .width(1);
   .height(1);
-  .perspective(100px);
 }
 
 // This is the details stuff

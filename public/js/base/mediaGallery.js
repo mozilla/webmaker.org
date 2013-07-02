@@ -104,7 +104,7 @@ define(['jquery', 'moment'],
     // add front & back elements to flip container
     var $flip = $('<a href="'+ data.url +'" class="flipContainer"></a>');
 
-    $flip.append($frontEl).append( $backEl );
+    $flip.append( $backEl ).append( $frontEl );
 
     // add flip container & link to make container
     //var $a = $('<a href="' + data.url + '"></a>');
@@ -205,23 +205,15 @@ define(['jquery', 'moment'],
           }, carouselTime * 1000);
         }
 
-        // set up mouse over handlers
-        $makeTemplate.addClass( "make-flip" );
-        $makeTemplate.on('mouseenter focusin', function ( e ) {
-          $('.flipContainer', this).addClass( 'flip' );
-        });
-        $makeTemplate.on('mouseleave focusout', function ( e ) {
-          $('.flipContainer', this).removeClass( 'flip' );
-        });
+        // set up touch handlers
         $makeTemplate.on('touchend', function ( e ) {
           e.preventDefault();
-          if( $( e.target ).hasClass( 'front' ) ||
-              $( e.target ).hasClass( 'back' ) ||
-              $( e.target ).hasClass( 'make-back' )  ) {
+          if( $( e.target ).is( '.make-back, .front, .back' ) ) {
             $('.flipContainer', this).toggleClass( 'flip' );
+            return false;
           }
           else if ( e.target.nodeName === 'A' )  {
-            if ( $(e.target).hasClass('flipContainer') ) {
+            if ( $( e.target ).is( '.flipContainer' ) ) {
               return false;
             }
             e.target.click();

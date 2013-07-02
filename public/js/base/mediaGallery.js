@@ -25,6 +25,7 @@ define(['jquery', 'moment'],
         $authorLink = $('.author', $backTemplate),
         $descSpan = $('.description', $backTemplate),
         $typeSpan = $('.type', $backTemplate),
+        $toolUrl = $('.tool-url', $backTemplate),
         $viewBtn = $('.view-btn', $backTemplate),
         $forkBtn = $('.fork-btn', $backTemplate),
         $detailsBtn = $('.details-btn', $backTemplate),
@@ -37,6 +38,12 @@ define(['jquery', 'moment'],
       data.description = data.description.slice(0,370) + "...";
     }
 
+    if( data.type === 'popcorn' ) {
+      $toolUrl.attr( 'href', 'https://popcorn.webmaker.org/editor/' );
+    }
+    else if( data.type === 'thimble' ) {
+      $toolUrl.attr( 'href', 'https://thimble.webmaker.org/' );
+    }
     $typeSpan.text( data.type );
     $titleLink.text( data.title );
     $titleLink.attr( "href", data.url );
@@ -48,7 +55,6 @@ define(['jquery', 'moment'],
     $detailsBtn.attr( "href", data.url );
     $descSpan.text( data.description );
     $avatar.attr( "src", "https://secure.gravatar.com/avatar/" + data.emailHash + "?s=44&d=" + defaultAvatar );
-    // Note that the remix url doesn't exist right now?
 
     $el.append( $backTemplate );
   }

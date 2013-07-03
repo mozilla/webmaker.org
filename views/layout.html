@@ -63,7 +63,7 @@
   {% endblock %}
   <div id="midbar">{% block midbar %}{% endblock %}</div>
 
-  <main id="content" class="content clearfix">{% block body %}{% endblock %}</main>
+  <main id="content" class="content {% if page != 'events' %} clearfix {% endif %}">{% block body %}{% endblock %}</main>
 
   <footer class="footer">
     <div id="footer-actions">

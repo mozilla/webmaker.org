@@ -12,7 +12,7 @@
     <div id="mobile-warning">
       <h1>Hey, just so you know, this site isn't fully functional on mobile.</h1>
     </div>
-    {% if remixes %}
+    {% if remixList %}
       <div class="ui-wrapper">
         <div class="ui-row">
           <!-- LH side of make-details -->
@@ -28,11 +28,11 @@
               </div>
             </div>
 
-            {% if remixes.length %}
+            {% if remixList.length %}
             <div class="remixed-by">
               {{remixCount}} by
               <ul class="remixed-by-list">
-                {% for remix in remixes %}
+                {% for remix in remixList %}
                 <li><a target="_blank" href="{{remix.url}}">@{{remix.username}}</a></li>
                 {% endfor %}
               </ul>

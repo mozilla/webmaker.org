@@ -33,10 +33,10 @@ module.exports = function( make ) {
         if ( err ) {
           return renderError("Looks like there is a problem with the make API");
         }
-        makeData.remixes = [];
+        makeData.remixList = [];
 
         for ( var i = 0; i < Math.min( remixData.length, MAX_REMIXES ); i++ ) {
-          makeData.remixes.push({
+          makeData.remixList.push({
             url: remixData[ i ].url,
             username: remixData[ i ].username
           });

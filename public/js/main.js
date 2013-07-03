@@ -22,7 +22,7 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
 
   $(document).ready(function() {
     var $body = $('body');
-    var pages = [ "index", "teach" ];
+    var pages = [ "index" ];
 
     if ( pages.indexOf( $body[0].id ) !== -1 ) {
        webmaker.init({
@@ -71,40 +71,6 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
               });
               break;
             }
-        });
-        break;
-      case 'teach':
-        UI.select( '#search-filter', function( val ) {
-          switch ( val ) {
-            case 'featured':
-              media.search({
-                tags: [{
-                  tags: [ 'webmaker:featured', 'guide' ]
-                }],
-                sortByField: { 'createdAt' : 'desc' }
-              });
-              break;
-
-            case 'popcorn':
-              media.search({
-                tags: [{
-                  tags: [ 'guide' ]
-                }],
-                sortByField: { 'createdAt' : 'desc' },
-                contentType: 'application/x-popcorn'
-              });
-              break;
-
-            case 'thimble':
-              media.search({
-                tags: [{
-                  tags:[ 'guide' ]
-                }],
-                sortByField: { 'createdAt' : 'desc' },
-                contentType: 'application/x-thimble'
-              });
-              break;
-          }
         });
         break;
       }

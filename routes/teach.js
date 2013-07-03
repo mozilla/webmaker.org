@@ -5,7 +5,7 @@ module.exports = function( make ) {
     .tags(['webmaker:recommended', 'guide'])
     .limit( 12 )
     .sortByField( "createdAt", "desc" )
-    .process( function( err, data ) {
+    .process( function( err, data, totalHits ) {
       if ( err ) {
         return res.send( err );
       }

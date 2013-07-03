@@ -71,8 +71,6 @@ define(['jquery', 'moment'],
       data.type = data.contentType.replace( /application\/x\-/g, "" );
     }
 
-    // the home page and the medium size for the teach page.
-
     switch( $body[0].id ) {
       case 'index':
         if (countLarge > 0 && ( currentIter === 3 || currentIter === 4 ) ) {
@@ -83,10 +81,6 @@ define(['jquery', 'moment'],
           countMedium --;
         }
         ++currentIter;
-        break;
-
-      case 'teach':
-        randSize = 'medium';
         break;
     }
 
@@ -130,9 +124,7 @@ define(['jquery', 'moment'],
       gutter: '.gutter-sizer',
       transitionDuration: '0.2s'
     });
-    this.lastSearch = $body[0].id === 'teach' ?
-      { tags: [ 'webmaker:recommended', 'guide' ] } :
-      { tags: [ 'webmaker:recommended' ] };
+    this.lastSearch = { tags: [ 'webmaker:recommended' ] };
     this.pageNo = 1;
 
     this.packery.on( 'layoutComplete', function() {
@@ -232,25 +224,6 @@ define(['jquery', 'moment'],
         this.wm.doSearch( { tags: [{ tags: ['webmaker:recommended'] }] }, this.limit, function( data ) {
           searchCallback( data, self );
         });
-        break;
-      case 'teach':
-        $stickyBanner = $('<div id="banner-teach" class="rf packery-hide">' +
-          '<img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>' +
-          "<p>We're a <a href='/about'/>global community</a> of friendly humans on " +
-          "a mission to  help people learn the building blocks of the web.<br><a href='/mentor'> " +
-          "<button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'> " +
-          "</i></button></a></p></div>");
-
-        $mainGallery.append( $stickyBanner );
-        this.limit = 12;
-
-        $makeTemplate.addClass( "make-teach" );
-
-        this.wm.doSearch( { tags:[{ tags: ['webmaker:recommended', 'guide']}] }, this.limit, function( data ) {
-          searchCallback( data, self );
-        });
-        this.packery.stamp( $stickyBanner[0] );
-        this.packery.layout();
         break;
     }
   };

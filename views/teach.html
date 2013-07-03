@@ -5,16 +5,20 @@
 {% block title %}Teach{% endblock %}
 {% block midbar %}
 {{ galleryHeader("Let's Teach the Web Together.", "You don't need to be a wizard to help others. We've got resources to help teach digital literacy, webmaking, online storytelling and more.",
-      [ { 'title': 'Featured', 'value': 'featured', 'default': true },
+      [{'title': 'Filter projects by...', 'value': 'dummy', 'default': true },
+       { 'title': 'Featured', 'value': 'featured' },
        { 'title': 'Popcorn', 'value': 'popcorn' },
        { 'title': 'Thimble', 'value': 'thimble' } ]) }}
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
   <div class="main-gallery">
-    <div class="gutter-sizer"></div>
 
-    <div id="banner-teach">
+    <div class="gutter-sizer"></div>
+    <div class="no-makes-found">No makes were found!</div>
+    <div class="loading-cat g-4"></div>
+
+    <div id="banner-teach" class="packery-hide g-4">
       <img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>
       <p>We're a <a href='/about'/>global community</a> of friendly humans on a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>
         <button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'></i></button></a>
@@ -22,22 +26,7 @@
     </div>
 
     {% for make in makes %}
-    <div class="make make-teach medium">
-      <a href="{{make.url}}">
-        <div class="make-thumbnail thumbnail" style="background-image: url({{make.thumbnail}});"></div>
-        <div class="make-back">
-          <div class="desc">
-            <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
-            <p class="author-date"><img class="make-avatar" src="{{make.avatar}}"><a><span class="type">guide</span> make</a> by <a class="author" href="/u/{{make.username}}">@{{make.username}}</a> created <span class="date">{{make.createdAt}}</span></p>
-            <p class="description">{{make.description}}</p>
-          </div>
-          <div class="btn-container">
-            <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixUrl}}"><span class="icon-code-fork"></span> Remix</a>
-            <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}">Details</a>
-          </div>
-        </div>
-      </a>
-    </div>
+      {% include "make-templates/make-teach.html" %}
     {% endfor %}
 
   </div>

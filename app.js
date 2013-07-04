@@ -7,7 +7,6 @@ var express = require( "express" ),
     helmet = require( "helmet" ),
     nunjucks = require( "nunjucks" ),
     path = require( "path" ),
-    persona = require( "express-persona" ),
     route = require( "./routes" ),
     sightmap = require( "sightmap" ),
     lessMiddleWare = require( "less-middleware" ),
@@ -147,9 +146,10 @@ require( "./routes/redirect" )( app );
  * WEBMAKER SSO
  */
 // LoginAPI helper Module
-var loginAPI = require( "webmaker-loginapi" )( app, env.get( "LOGINAPI" ) );
-
-persona(app, { audience: env.get( "AUDIENCE" ) } );
+var loginAPI = require( "webmaker-loginapi" )( app, {
+  loginURL: env.get( "LOGINAPI" ),
+  audience: env.get( "AUDIENCE" )
+});
 /**
  * END WEBMAKER SSO
  */

@@ -34,7 +34,7 @@ define(['jquery', 'moment'],
         // Note that this is not working... no createdAt?
 
     // Limit description length
-    if ( data.description.length > 370 ) {
+    if ( data.description && data.description.length > 370 ) {
       data.description = data.description.slice(0,370) + "...";
     }
 
@@ -221,7 +221,9 @@ define(['jquery', 'moment'],
           }
         });
 
-        this.wm.doSearch( { tags: [{ tags: ['webmaker:recommended'] }] }, this.limit, function( data ) {
+        this.wm.doSearch( {
+          tags: { tags: ['webmaker:recommended'] }
+        }, this.limit, function( data ) {
           searchCallback( data, self );
         });
         break;

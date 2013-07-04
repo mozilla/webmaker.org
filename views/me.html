@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 {% include "macros.html" %}
-{% block title %}Me{% endblock %}
+{% block title %}{{ gettext("Me") }}{% endblock %}
 {% block midbar %}
   <div class="ui-wrapper">
     <div class="me-info">
       {% if username %}
-      <h1 class="me-title">{{username}}, these are your makes:</h1>
+      <h1 class="me-title">{{username}}, {{ gettext("these are your makes:") }}</h1>
       {% else %}
-      <h1>Oops...you are not signed in :(</h1>
+      <h1>{{ gettext("You are not signed in") }}</h1>
       {% endif %}
     </div>
   </div>
@@ -21,15 +21,15 @@
   </div>
   {% endif %}
   {% if makes.length == 0%}
-  <div class="no-makes">You don't have any {{view}} makes :(</div>
+  <div class="no-makes">{{ gettext("noMakes") }}</div>
   {% else %}
     <div class="ui-row pagination">
       <ol class="pagination-list">
         {% if pagination > 1 %}
-        <li class="previous-page"><span class="icon-arrow-left"></span> Newer</li>
+        <li class="previous-page"><span class="icon-arrow-left"></span> {{ gettext("Newer") }}</li>
         {% endif %}
         {% if showOlder %}
-        <li class="next-page">Older <span class="icon-arrow-right"></span></li>
+        <li class="next-page">{{ gettext("Older") }} <span class="icon-arrow-right"></span></li>
         {% endif %}
       </ol>
     </div>

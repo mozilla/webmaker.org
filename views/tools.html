@@ -1,64 +1,63 @@
 {% extends "layout.html" %}
 {% include 'macros.html' %}
-{% block title %}Tools{% endblock %}
+{% block title %}{{ gettext("Tools") }}{% endblock %}
 {% block midbar %}
-{{ galleryHeader("Create and remix the web with Webmaker tools.", "", []) }}
+{% set header = gettext("toolsHeader") %}
+{{ galleryHeader(header, "", []) }}
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper ui-body-nobg">
 
   <div class="ui-bg-column column-tools">
     <header>
-      <img class="popcorn" src="/img/icon-tools-popcorn-2x.png" alt="Popcorn">
-      <h2>Popcorn Maker</h2>
-      <h3>Supercharge web video</h3>
+      <img class="popcorn" src="/img/icon-tools-popcorn-2x.png" alt="{{ gettext("Popcorn Maker") }}">
+      <h2>{{ gettext("Popcorn Maker") }}</h2>
+      <h3>{{ gettext("Supercharge web video") }}</h3>
     </header>
-    <p>Popcorn Maker helps you easily remix web video, audio and images into cool mashups that
-    you can embed on other websites. Drag and drop content from the web, then add your
-    own comments and links —all within your browser. Popcorn Maker videos are dynamic,
-    full of links and unique with every view.</p>
-    <h3>You can build:</h3>
+    <p>{{ gettext("toolsPMDesc") }}</p>
+    <h3>{{ gettext("You can build:") }}</h3>
     <ul>
-      <li>an animated gif with sound</li>
-      <li>a documentary with dynamic links</li>
-      <li>a video profile to introduce yourself to the world</li>
-      <li>and more!</li>
+      <li>{{ gettext("an animated gif with sound") }}</li>
+      <li>{{ gettext("a documentary with dynamic links") }}</li>
+      <li>{{ gettext("vdo-profile") }}</li>
+      <li>{{ gettext("and more!") }}</li>
     </ul>
     <div class="tools-action">
-      <h3>Get started</h3>
+      <h3>{{ gettext("Get started") }}</h3>
       <div class="btn-container">
-        <a href="https://popcorn.webmaker.org/editor/" class="ui-btn fork-btn fork-btn-label remix-btn">Start from scratch <span class="icon-angle-right"></span></a>
+        <a href="https://popcorn.webmaker.org/editor/" class="ui-btn fork-btn fork-btn-label remix-btn">
+          {{ gettext("Start from scratch")}} <span class="icon-angle-right"></span></a>
       </div>
-      <span class="or">or</span>
+      <span class="or">{{ gettext("or") }}</span>
       <div class="btn-container">
-        <a href="/search?type=tags&q=webmaker%3Atemplate&contentType=application/x-popcorn" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> Remix a project</a>
+        <a href="/{{lang}}/search?type=tags&q=webmaker%3Atemplate" class="ui-btn fork-btn fork-btn-label">
+          <span class="icon-code-fork"></span> {{ gettext("Remix a project") }}</a>
       </div>
     </div>
   </div>
   <div class="ui-bg-column column-tools">
     <header>
-      <img src="/img/icon-tools-thimble-2x.png" alt="Thimble">
-      <h2>Thimble</h2>
-      <h3>Webmaking made easy</h3>
+      <img src="/img/icon-tools-thimble-2x.png" alt="{{ gettext("Thimble") }}">
+      <h2>{{ gettext("Thimble") }}</h2>
+      <h3>{{ gettext("Webmaking made easy") }}</h3>
     </header>
-    <p>Thimble makes it ridiculously simple to create and share your own web pages.
-    Write and edit HTML and CSS right in your browser, then instantly preview your work.
-    Host and share your finished projects with a single click. Perfect for beginners and experts alike.</p>
-    <h3>You can build:</h3>
+    <p>{{ gettext("toolsThimbleDesc") }}</p>
+    <h3>{{ gettext("You can build:") }}</h3>
     <ul>
-      <li>a personalized greeting card</li>
-      <li>an online poster for your favourite movie</li>
-      <li>a hilarious meme</li>
-      <li>and more!</li>
+      <li>{{ gettext("a personalized greeting card") }}</li>
+      <li>{{ ("an online poster for your favourite movie")}}</li>
+      <li>{{ gettext("a hilarious meme") }}</li>
+      <li>{{ gettext("and more!") }}</li>
     </ul>
     <div class="tools-action">
-      <h3>Get started</h3>
+      <h3>{{ gettext("Get started") }}</h3>
       <div class="btn-container">
-        <a href="https://thimble.webmaker.org/" class="ui-btn fork-btn fork-btn-label remix-btn">Start from scratch <span class="icon-angle-right"></span></a>
+        <a href="https://thimble.webmaker.org/" class="ui-btn fork-btn fork-btn-label remix-btn">
+          {{ gettext("Start from scratch")}} <span class="icon-angle-right"></span></a>
       </div>
-      <span class="or">or</span>
+      <span class="or">{{ gettext("or") }}</span>
       <div class="btn-container">
-        <a href="/search?type=tags&q=webmaker%3Atemplate&contentType=application/x-thimble" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> Remix a project</a>
+        <a href="/{{lang}}/search?type=tags&q=webmaker%3Atemplate" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix a project") }}</a>
       </div>
     </div>
   </div>
@@ -69,28 +68,27 @@
 {% endblock %}
 {% block CTA %}
   [{
-    "title": "Get Involved",
-    "desc": "Access support and connect with the Webmaker community.",
+    "title": "{{ gettext("Get Involved") }}",
+    "desc": "{{ gettext("Get Involved Desc") }}",
     "image": "/img/cta-Get-Involved.jpg",
-    "url": "/getinvolved"
+    "url": "/{{lang}}/getinvolved"
   },
   {
-    "title": "Teach",
-    "desc": "Teach the world digital literacy and webmaking.",
+    "title": "{{ gettext("Teach") }}",
+    "desc": "{{ gettext("Teach Desc") }}",
     "image": "/img/cta-Teach.jpg",
-    "url": "/teach"
+    "url": "/{{lang}}/teach"
   },
   {
-    "title": "Maker Party",
-    "desc": "From now to Sept 15, join other webmakers in a global Maker Party.",
+    "title": "{{ gettext("Maker Party") }}",
+    "desc": "{{ gettext("Maker Party Desc")}}",
     "image": "/img/cta-Party.jpg",
-    "url": "/party"
+    "url": "/{{lang}}/party"
   },
   {
-    "title": "About Us",
-    "desc": "Learn more about who we are and what makes us tick.",
+    "title": "{{ gettext("About Us") }}",
+    "desc": "{{ gettext("About Us Desc") }}",
     "image": "/img/cta-About-us.jpg",
-    "url": "/about"
+    "url": "/{{lang}}/about"
   }];
 {% endblock %}
-

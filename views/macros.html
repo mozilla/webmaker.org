@@ -3,7 +3,7 @@
   <div class="ui-wrapper">
     <div class="{% if desc %}g-6{% endif %} header">
       <h1>{{ header | safe }}</h1>
-      {% if desc %}<p> {{ desc | safe }}</p>{% endif %}
+      {% if desc %}<p> {{ desc | instantiate |safe }}</p>{% endif %}
     </div>
     {% if options.length %}
     <div class="g-2 filter hide">

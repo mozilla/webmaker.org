@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}" dir="{{ lang_dir }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="X-CSRF-Token" content="{{ csrf }}">
   <meta name="login-url" content="{{ loginAPI }}">
   <meta name="persona-email" content="{{ email }}">
-  <title>{% block title %}{% endblock %} - Mozilla Webmaker</title>
+  <title>{% block title %}{% endblock %} - {{ gettext("Mozilla Webmaker") }}</title>
   {% block css %}{% endblock %}
   <link rel="stylesheet" href="/ext/css/font-awesome.css">
   <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
@@ -20,41 +20,45 @@
   <header id="webmaker-nav">
     <nav class="webmaker-nav-container">
       <div class="user-nav-container">
-        <a id="logo" href="/"><img src="/img/logo.png" alt="Mozilla Webmaker"></a>
+        <a id="logo" href="/{{lang}}/"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
         <ul class="webmaker-nav user-info">
           <li class="user">
-            Hi <span id="identity" class="user-name-container"></span>
+            {{ gettext("Hi") }} <span id="identity" class="user-name-container"></span>
           </li>
-          <li class="makes"><a href="/me">My makes</a></li>
+          <li class="makes"><a href="/me">{{ gettext("My makes") }}</a></li>
           <li>
             <iframe src="{{audience}}/sso/include.html" class="include-frame"></iframe>
           </li>
         </ul>
         <ul class="nav-list">
           <li>
-            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/">Make</a>
+            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/">{{ gettext("Make") }}</a>
             <div class="makenav-hover">
               <a href="/t/webmaker%3Atemplate" class="makenav-hover-item">
-                <img src="/img/icon-make-template.png" alt="From Template" />
-                <span>From template</span>
+                <img src="/img/icon-make-template.png" alt="{{ gettext("From template") }}" />
+                <span>{{ gettext("From template") }}</span>
               </a>
               <a href="https://popcorn.webmaker.org/editor/" class="makenav-hover-item">
-                <img src="/img/icon-make-popcorn.png" alt="Popcorn Maker" />
-                <span>Popcorn Maker</span>
+                <img src="/img/icon-make-popcorn.png" alt="{{ gettext("Popcorn Maker") }}" />
+                <span>{{ gettext("Popcorn Maker") }}</span>
               </a>
               <a href="https://thimble.webmaker.org/" class="makenav-hover-item">
-                <img src="/img/icon-make-thimble.png" alt="Thimble" />
-                <span>Thimble</span>
+                <img src="/img/icon-make-thimble.png" alt="{{ gettext("Thimble") }}" />
+                <span>{{ gettext("Thimble") }}</span>
               </a>
               <div class="help">
-                <i class="icon-info-sign"></i><span>Not sure what to make? <a href="/tools">Let us help.</a></span>
+                <i class="icon-info-sign"></i><span>{{ gettext("Not sure what to make?") }} 
+                <a href="/{{lang}}/tools">{{ gettext("Let us help.") }}</a></span>
               </div>
             </div>
           </li>
           <!-- <li><a {% if page == 'learn' %}class="on"{% endif %} id="nav-learn" href="/learn">Learn</a></li> -->
-          <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/teach">Teach</a></li>
-          <li><a {% if page == 'events' %}class="on"{% endif %} id="nav-events" href="/events">Events</a></li>
-          <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/search"><span class="icon-search"></span></a></li>
+          <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/{{lang}}/teach">
+            {{ gettext("Teach") }}</a></li>
+          <li><a {% if page == 'events' %}class="on"{% endif %} id="nav-events" href="/{{lang}}/events">
+            {{ gettext("Events")}}</a></li>
+          <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/{{lang}}/search">
+            <span class="icon-search"></span></a></li>
         </ul>
       </div>
       <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
@@ -68,9 +72,9 @@
   <footer class="footer">
     <div id="footer-actions">
       {% if page == 'index' or page == 'teach' %}
-      <button class="load-more">Load more <span class="icon-angle-down"></span></button>
+      <button class="load-more">{{ gettext("Load more") }} <span class="icon-angle-down"></span></button>
       {% endif %}
-      <button class="backToTop">Back to top <span class="icon-angle-up"></span></button>
+      <button class="backToTop">{{ gettext("Back to top") }} <span class="icon-angle-up"></span></button>
     </div>
     {% block footer %}
     <section class="make-footer">
@@ -88,7 +92,7 @@
     <div class="partnerWrapper">
     <section class="partners">
       <span class="partners-header">
-        With support from our wonderful partners and Mozillians like you!
+        {{ gettext("Mozillaian like you") }}
       </span>
       <ul class="sponsors">
         <li>Chicago Community Trust</li>
@@ -120,7 +124,7 @@
         <li id="email-li">
         <div class="newsletter">
           <form id="privacy-form" action="https://sendto.mozilla.org/page/s/webmaker" method="post">
-            <input type="email" id="email-updates" name="email" placeholder="Sign up for email updates" required />
+            <input type="email" id="email-updates" name="email" placeholder="{{ gettext("Sign up for email updates") }}" required />
             <button id="email-submit" type="submit">
               <i class="icon-chevron-right"></i>
             </button>
@@ -129,8 +133,8 @@
                   <input id="theCheckbox" name="custom-1216" type="checkbox" required />
                 </div>
                 <div class="privacy-desc">
-                  I'm okay with you handling this info as you explain in your
-                  <a href="/privacy">privacy policy</a>.
+                  {{ gettext("privacy-desc") }}
+                  <a href="/{{lang}}/privacy">{{ gettext("privacy policy") }}</a>.
                 </div>
               </div>
             </form>
@@ -138,13 +142,13 @@
         </li>
       </ul>
       <ul class="links">
-        <li><a href="http://blog.webmaker.org">Blog</a></li>
-        <li><a href="/about">About us</a></li>
-        <li><a href="/getinvolved">Get involved</a></li>
-        <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">Donate</a></li>
-        <li><a href="mailto:makerparty@mozilla.org">Contact</a></li>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/terms">Legal</a></li>
+        <li><a href="http://blog.webmaker.org">{{ gettext("Blog") }}</a></li>
+        <li><a href="/{{lang}}/about">{{ gettext("About Us") }}</a></li>
+        <li><a href="/{{lang}}/getinvolved">{{ gettext("Get Involved") }}</a></li>
+        <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ gettext("Donate") }}</a></li>
+        <li><a href="mailto:makerparty@mozilla.org">{{ gettext("Contact") }}</a></li>
+        <li><a href="/{{lang}}/privacy">{{ gettext("Privacy") }}</a></li>
+        <li><a href="/{{lang}}/terms">{{ gettext("Legal") }}</a></li>
       </ul>
     </section>
   </div>
@@ -154,28 +158,28 @@
 <script>
 window.cta = {% block CTA %}
   [{
-    "title": "Tools",
-    "desc": "Create an original or a remix using Popcorn Maker and Thimble.",
+    "title": "{{ gettext("Tools") }}",
+    "desc": "{{ gettext("Use our Tools Desc") }}",
     "image": "/img/cta-Tools.jpg",
-    "url": "/tools"
+    "url": "/{{lang}}/tools"
   },
   {
-    "title": "Teach",
-    "desc": "Teach the world digital literacy and webmaking.",
+    "title": "{{ gettext("Teach") }}",
+    "desc": "{{ gettext("Teach Desc") }}",
     "image": "/img/cta-Teach.jpg",
-    "url": "/teach"
+    "url": "/{{lang}}/teach"
   },
   {
-    "title": "Maker Party",
-    "desc": "From now to Sept 15, join other webmakers in a global Maker Party.",
+    "title": "{{ gettext("Maker Party") }}",
+    "desc": "{{ gettext("Maker Party Desc") }}",
     "image": "/img/cta-Party.jpg",
-    "url": "/party"
+    "url": "/{{lang}}/party"
   },
   {
-    "title": "About Us",
-    "desc": "Learn more about who we are and what makes us tick.",
+    "title": "{{ gettext("About Us") }}",
+    "desc": "{{ gettext("About Us Desc") }}",
     "image": "/img/cta-About-us.jpg",
-    "url": "/about"
+    "url": "/{{lang}}/about"
   }];
 {% endblock %} ;
 </script>

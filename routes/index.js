@@ -27,10 +27,10 @@ module.exports = {
   search: require("./search"),
   sitemap: require("./sitemap"),
   tag: function( req, res ) {
-    res.redirect("/search?type=tags&q=" + req.params.tag);
+    res.redirect( "/" + req.lang + "/search?type=tags&q=" + req.params.tag );
   },
   user: require("./user"),
   usersearch: function( req, res ) {
-    res.redirect( "/search?type=user&q=" + req.params.user );
+    res.redirect( "/" + req.lang + "/search?type=user&q=" + req.params.user );
   }
 };

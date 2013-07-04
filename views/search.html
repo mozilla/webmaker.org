@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 {% include "macros.html" %}
-{% block title %}Search{% endblock %}
+{% block title %}{{ gettext("Search") }}{% endblock %}
 {% block midbar %}
 <div class="search-poster{% if hasQuery %} focus{% endif %}" data-query="{{query}}">
   <div class="ui-wrapper">
     <div class="giant-search-container">
-      <h1 class="main-title">What are you looking for?</h1>
+      <h1 class="main-title">{{ gettext("What are you looking for?") }}</h1>
       <form class="search-wrapper" method="get">
         <div id="search-type" class="search-filter">
           <input type="hidden" name="type" value="{{ searchType }}">
@@ -13,10 +13,10 @@
           <span class="icon-caret-down"></span>
           <div class="filter-list ui-select-menu">
             <ul>
-              <li data-value="title"><span class="icon-title"></span> Title</li>
-              <li data-value="description"><span class="icon-description"></span> Description</li>
-              <li data-value="tags"><span class="icon-tags"></span> Tags</li>
-              <li data-value="user"><span class="icon-user"></span> Users</li>
+              <li data-value="title"><span class="icon-title"></span> {{ gettext("Title") }}</li>
+              <li data-value="description"><span class="icon-description"></span> {{ gettext("Description") }}</li>
+              <li data-value="tags"><span class="icon-tags"></span> {{ gettext("Tags") }}</li>
+              <li data-value="user"><span class="icon-user"></span> {{ gettext("Users") }}</li>
             </ul>
           </div>
         </div>
@@ -29,7 +29,7 @@
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
-  <h3 class="search-title"> Search {{searchType}} / <span class="search-query-word">
+  <h3 class="search-title"> {{ gettext("Search") }} {{searchType}} / <span class="search-query-word">
   {{ query }}
   </span></h3>
   <div class="main-gallery search-gallery">
@@ -37,15 +37,15 @@
     {{ searchmakes() }}
   </div>
   {% if makes.length == 0%}
-  <div class="no-makes">No makes :( Did you mean to search by title?</div>
+  <div class="no-makes">{{ gettext("No makes found.") }}</div>
   {% else %}
     <div class="ui-row pagination">
       <ol class="pagination-list">
         {% if pagination > 1 %}
-        <li class="previous-page"><span class="icon-arrow-left"></span> Newer</li>
+        <li class="previous-page"><span class="icon-arrow-left"></span> {{ gettext("Newer")}}</li>
         {% endif %}
         {% if showOlder %}
-        <li class="next-page">Older <span class="icon-arrow-right"></span></li>
+        <li class="next-page">{{ gettext("Older") }} <span class="icon-arrow-right"></span></li>
         {% endif %}
       </ol>
     </div>

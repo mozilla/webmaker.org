@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}Error - {{code}}{% endblock %}
+{% block title %}{{ gettext("Error") }} - {{code}}{% endblock %}
 {% block body %}
 <div class="ui-wrapper ui-body">
   <div class="ui-poster error-container">
@@ -8,7 +8,7 @@
     </div>
     <div>
       {% if code == 404 %}
-      404: You found a loose thread!<br>Please try a <a href="/search">search</a> or visit our <a href="/">homepage.</a>
+      {{ gettext("error-404") | instantiate | safe }}
       {% else %}
       {{code}}: {{message}}
       {% endif %}

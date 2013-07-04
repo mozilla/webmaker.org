@@ -1,12 +1,17 @@
 {% extends "layout.html" %}
 
-{% include 'macros.html' %}
+{% include "macros.html" %}
 
 {% block title %}Home{% endblock %}
 {% block midbar %}
+
+{% set header = gettext("indexHeader") %}
+{% set desc = gettext("indexDesc") %}
+{% set filterprojectby = gettext("Filter projects by...") %}
+
 <!-- check for search right when page loads -->
-{{ galleryHeader("Make Something with Webmaker.", "We're a global community that doesn't just use the web, we <em>make</em> it by creating, remixing and teaching. <a href='/login'>Sign up</a> and start making!",
-      [ {'title': 'Filter projects by...', 'value': 'dummy', 'default': true },
+{{ galleryHeader(header, desc,
+      [ {'title': filterprojectby, 'value': 'dummy', 'default': true },
        { 'title': 'Featured', 'value': 'featured' },
        { 'title': 'Popcorn', 'value': 'popcorn' },
        { 'title': 'Thimble', 'value': 'thimble' } ]) }}
@@ -26,5 +31,3 @@ if( hash.length > 0 ) {
 }
 </script>
 {% endblock %}
-
-

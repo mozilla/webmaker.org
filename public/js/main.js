@@ -81,7 +81,7 @@ require(['jquery','base/carousel', 'base/webmaker', 'base/mediaGallery', 'base/p
       return false;
     });
 
-    var noTop = ["tools", "guides"];
+    var noTop = ["tools", "event-guides"];
 
     if ( noTop.indexOf( $body[0].id ) === -1 ) {
       $(window).scroll(function(){

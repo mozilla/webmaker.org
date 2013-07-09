@@ -5,6 +5,7 @@ define(["jquery", "nunjucks", "base/ui", "moment"],
   var MAKE_VIEW = "make-templates/make-teach.html";
   var MAKE_URL = $("body").data("endpoint");
   var LIMIT = 12;
+  var STICKY_PREFIX = "webmaker:teach-";
 
   var $loadMore = $(".load-more");
   var $loading = $(".loading-cat");
@@ -27,6 +28,7 @@ define(["jquery", "nunjucks", "base/ui", "moment"],
   // Create make client for teach, set up default options
   var make = new Make({apiURL: MAKE_URL});
   var options = {
+    tagPrefix: [STICKY_PREFIX, true], // NOT sticky
     tags: {tags:["webmaker:recommended", "guide"]},
     limit: LIMIT,
     page: 1
@@ -62,13 +64,15 @@ define(["jquery", "nunjucks", "base/ui", "moment"],
     totalMakes = total;
     var elems = [];
     for (var i=0; i<data.length; i++) {
-      data[i].avatar = generateGravatar(data[i].emailHash);
-      data[i].updatedAt = moment( data[i].updatedAt ).fromNow();
-      data[i].createdAt = moment( data[i].createdAt ).fromNow();
-      data[i].remixurl = data[i].url + "/remix";
-      var $item = $.parseHTML(nunjucks.env.render(MAKE_VIEW, {make: data[i]}));
-      $mainGallery.append($item);
-      elems.push($item[0]);
+      if (data[i]) {
+        data[i].avatar = generateGravatar(data[i].emailHash);
+        data[i].updatedAt = moment( data[i].updatedAt ).fromNow();
+        data[i].createdAt = moment( data[i].createdAt ).fromNow();
+        data[i].remixurl = data[i].url + "/remix";
+        var $item = $.parseHTML(nunjucks.env.render(MAKE_VIEW, {make: data[i]}));
+        $mainGallery.append($item);
+        elems.push($item[0]);
+      }
     }
     packery.appended(elems);
     packery.layout();

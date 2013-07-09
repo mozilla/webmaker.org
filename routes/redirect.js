@@ -55,10 +55,6 @@ module.exports = function( app ) {
     }    
   ];
 
-  app.get( /^\/en-US\/(.+)/, function( req, res ) {
-    res.redirect( 301, "/" + req.params[0] );
-  });
-
   redirectMap.forEach(function( redirect ) {
     redirect.paths.forEach(function( legacyRoute ) {
       app.get( legacyRoute, function( req, res ){

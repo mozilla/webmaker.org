@@ -7,7 +7,8 @@ var express = require( "express" ),
     helmet = require( "helmet" ),
     nunjucks = require( "nunjucks" ),
     path = require( "path" ),
-    lessMiddleWare = require( "less-middleware" );
+    lessMiddleWare = require( "less-middleware" ),
+    i18n = require( "i18n-abide" );
 
 habitat.load();
 
@@ -35,8 +36,21 @@ if ( !!env.get( "FORCE_SSL" ) ) {
   app.use( helmet.hsts() );
   app.enable( "trust proxy" );
 }
+
 app.use( express.compress() );
 app.use( express.static( path.join( __dirname, "public" )));
+
+// Setup locales with i18n
+app.use( i18n.abide({
+  supported_languages: [
+    'en-US'
+  ],
+  default_lang: "en_US",
+  translation_type: "key-value-json",
+  translation_directory: "locale",
+  locale_on_url: true
+}));
+
 app.use( express.bodyParser() );
 app.use( express.cookieParser() );
 app.use( express.cookieSession({

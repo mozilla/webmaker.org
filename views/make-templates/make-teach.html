@@ -13,5 +13,13 @@
       </div>
     </div>
   </a>
+  {% if isAdmin %}
+  <div class="admin-top">
+    {%if make.index %}
+    <div class="admin-makeindex">webmaker:{{prefix}}-{{make.index}}</div>
+    {% endif %}
+    <div class="admin-maketitle">Title: {{make.title}}</div>
+  </div>
+  {% endif %}
 </div>
 

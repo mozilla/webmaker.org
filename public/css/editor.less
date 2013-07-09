@@ -1,0 +1,209 @@
+@import "mixins";
+@import "ui";
+
+
+// ALL
+ select {
+  display: none;
+}
+
+
+// MAKES admin info
+.admin-top {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  z-index: 3;
+  display: block;
+  background: black;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-family: menlo, mono;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.admin-make-tags {
+  display: none;
+  .make:hover & {
+    display: block;
+  }
+}
+.admin-make-tag {
+  color: #000;
+  background: #FFF;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0 5px;
+  line-height: 1.2;
+}
+
+
+// SIDEBAR
+.content {
+  padding-left: 300px;
+  .ui-wrapper {
+    margin: 60px;
+  }
+}
+.admin-sidebar {
+  z-index: 3;
+  font-family: "Open Sans Light", sans-serif;
+  position: fixed;
+  left: 0;
+  top: 83px;
+  bottom: 0;
+  width: 300px;
+  background: white;
+  color: #555;
+  .border-box;
+
+}
+.search-type {
+  height: 35px;
+  line-height: 35px;
+  background: darken(@green, 10%);
+  label {
+    &.active {
+      font-family: "Open Sans", sans-serif;
+      background: @green;
+      color: white;
+    }
+    color: fade(white, 40%);
+    float: left;
+    padding: 0 15px;
+    height: 100%;
+    font-size: 13px;
+  }
+}
+
+.sidebar-search {
+  background: @green;
+  color: white;
+  padding: 15px;
+  border-bottom: 1px solid darken(@green,10%);
+  input {
+    font-size: 13px;
+    color: #CCC;
+    width: 100%;
+    font-family: inherit;
+    padding: 0.8em;
+    border: 1px solid darken(@green,10%);
+    .border-box;
+    &:focus {
+      color: #999;
+      outline: none;
+    }
+  }
+  .input-wrapper {
+    position: relative;
+  }
+  .icon-search {
+    color: #CCC;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+  }
+}
+.search-filter {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.5em;
+  label {
+    color: #555;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+  .ui-append {
+    display: inline-block;
+    > .icon {
+      right: 0;
+      background: @green;
+      &:hover {
+        background: darken(@green, 10%);
+      }
+    }
+    &:hover {
+      border-color: darken(@green, 15%);
+    }
+  }
+  .ui-select-menu {
+    border-color: @green;
+    &:hover {
+      border-color: darken(@green, 15%);
+    }
+  }
+}
+
+.pagination {
+  padding: 0 1em;
+}
+
+.search-summary {
+  padding: 1em;
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+.search-results-container {
+  padding: 10px 0 10px 10px;
+  position: absolute;
+  top: 250px;
+  border-top: 1px solid #EEE;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  .border-box;
+}
+
+.make-admin-search {
+  overflow: hidden;
+  float: left;
+  width: 127px;
+  border: 1px solid #CCC;
+  font-size: 13px;
+  .border-box;
+  .make-back h3 {
+    font-size: 1em;
+  }
+}
+
+.admin-drag-active {
+  opacity: 0.5;
+  border: 1px solid red;
+}
+
+.admin-dragover {
+  border: 1px solid blue;
+}
+
+// Main area
+
+.warning {
+  color: @red;
+  line-height: 1.5em;
+  display: inline-block;
+  .border-box;
+  margin-bottom: 10px;
+  &:before {
+    margin-right: 1em;
+    padding: 0.5em 0.8em;
+    font-size: 0.7em;
+    content: "WARNING";
+    background: @red;
+    color: #FFF;
+    border-radius: 3px;
+  }
+}
+
+#layout-header {
+  position: relative;
+  .ui-select {
+    margin: 0 0.5em;
+  }
+}
+

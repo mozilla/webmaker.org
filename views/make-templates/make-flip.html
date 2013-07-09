@@ -1,0 +1,26 @@
+<div class="make make-flip make-type-{{make.type}} {{make.size or 'medium'}} packery-hide">
+  <div class="flipContainer">
+    <div class="back">
+      <div class="make-back">
+        <div class="desc">
+          <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
+          <p class="author-date"><img class="make-avatar" src="{{make.avatar}}">
+          <a class="tool-url" href="{{make.tool}}"><span class="type">{{make.type}}</span> make</a> by <a class="author" href="/u/{{make.username}}">@{{make.username}}</a> created <span class="date">{{make.createdAt}}</span></p>
+          <p class="description">{{make.description}}</p>
+        </div>
+        <div class="btn-container">
+          <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> Remix</a>
+          <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}"> Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="front make-thumbnail thumbnail" style="background-image: url({{make.thumbnail}});"></div>
+  </div>
+  {% if isAdmin %}
+  <div class="admin-top">
+    {%if make.index %}<div class="admin-make-index">webmaker:{{prefix}}-{{make.index}}</div>{% endif %}
+    <div class="admin-make-title">Title: {{make.title}}</div>
+    <div class="admin-make-tags">Tags: {% for tag in make.tags %}<span class="admin-make-tag">{{tag}}</span> {% endfor %}</div>
+  </div>
+  {% endif %}
+</div>

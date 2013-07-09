@@ -61,7 +61,7 @@ app.locals({
 app.use(function( req, res, next ) {
   res.locals({
     email: req.session.email || '',
-    webmakerID: req.session.webmakerid || '',
+    username: req.session.username|| '',
     csrf: req.session._csrf
   });
   next();
@@ -94,7 +94,6 @@ app.use( function( err, req, res, next) {
   if ( !err.status ) {
     err.status = 500;
   }
-
   res.status( err.status );
   res.render( 'error.html', { message: err.message, code: err.status });
 });
@@ -103,9 +102,17 @@ app.use( function( req, res, next ) {
   res.render( 'error.html', { code: 404 });
 });
 
+require( "./lib/loginapi" )( app, {
+  loginURL: env.get( "LOGINAPI" ),
+  audience: env.get( "AUDIENCE" )
+});
+
+var middleware = require( "./lib/middleware" );
+
 app.get( "/healthcheck", routes.api.healthcheck );
 
 app.get( "/", routes.page( "index" ) );
+app.get( "/editor", middleware.checkAdmin, routes.editor );
 app.get( "/about", routes.page( "about" ) );
 app.get( "/teach", routes.teach );
 app.get( "/party", routes.page( "party" ) );
@@ -148,18 +155,6 @@ app.get( "/js/make-api.js", function( req, res ) {
  * Legacy Webmaker Redirects
  */
 require( "./routes/redirect" )( app );
-
-/**
- * WEBMAKER SSO
- */
-// LoginAPI helper Module
-var loginAPI = require( "webmaker-loginapi" )( app, {
-  loginURL: env.get( "LOGINAPI" ),
-  audience: env.get( "AUDIENCE" )
-});
-/**
- * END WEBMAKER SSO
- */
 
 app.listen( env.get( "PORT" ), function() {
   console.log( "Server listening ( http://localhost:%d )", env.get( "PORT" ));

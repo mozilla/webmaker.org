@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% include 'macros.html' %}
+
+{% block title %}Editor{% endblock %}
+{% block css %}<link rel="stylesheet" href="/css/editor.css">{% endblock %}
+{% block midbar %}{% endblock %}
+{% block body %}
+<div class="admin-sidebar">
+  <div class="search-type">
+    <label class="active" data-field="user">User</label>
+    <label data-field="title">Title</label>
+    <label data-field="tags">Tags</label>
+    <label data-field="tagPrefix">Prefix</label>
+    <label data-field="id">ID</label>
+  </div>
+
+  <div class="sidebar-search">
+    <span class="input-wrapper">
+      <input id="admin-search-input" type="text" value="{{username}}">
+      <span class="icon-search"></span>
+    </span>
+  </div>
+  <div class="search-filter">
+    <label>Sort by</label>
+    <select id="filter">
+      <option value="createdAt" selected>Created at</option>
+      <option value="updatedAt">Updated at</option>
+      <option value="title">Title</option>
+    </select>
+  </div>
+  <div class="search-summary"></div>
+  <div class="pagination"><ul></ul></div>
+  <div class="search-results-container"><div id="search-results"></div></div>
+</div>
+<div class="ui-wrapper">
+
+  <!-- Admin options and stuff -->
+  <div id="layout-header" class="ui-row">
+    <div class="g-8">
+      <label>You are displaying the </label>
+      <select id="layout-select">
+        <option value="home"{% if layout == 'home'%} selected{% endif %}>Home page</option>
+        <option value="teach"{% if layout == 'teach'%} selected{% endif %}>Teach page</option>
+      </select>
+      <label> layout with the prefix </label>
+      <select id="prefix-select">
+        <option value="p"{% if prefix =='p'%} selected{% endif %}>webmaker:p-</option>
+        <option value="teach"{% if prefix == 'teach'%} selected{% endif %}>webmaker:teach-</option>
+        <option value="test"{% if prefix == 'test'%} selected{% endif %}>webmaker:test-</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Warnings, in case sticky numbers are missing -->
+  <div id="warnings" class="ui-row">
+    {% for warning in warnings %}
+    <div class="warning g-8">{{warning}}</div>
+    {% endfor %}
+  </div>
+
+  <div class="main-gallery">
+    <!-- Packery helper stuff -->
+    <div class="gutter-sizer"></div>
+    <div class="no-makes-found">No makes were found!</div>
+    <div class="loading-cat g-4"></div>
+
+    <!-- STICKY BANNERS -->
+    {% if layout=='home' %}
+    <div id="banner-join" class="packery-hide stamp" >
+      <div class="rotator">
+        <h2 style="display: block;">The web is still open.<br> Hack it.</h2></div><div class="join-border"></div><div class="join-signin"><span class="join-claim">Claim your Webmaker domain.</span><span class="btn-join-container"><a href="/login" class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>
+      </div>
+    </div>
+    {% endif %}
+    {% if layout=='teach' %}
+    <div id="banner-teach" class="packery-hide g-4 stamp">
+      <img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>
+      <p>We're a <a href='/about'/>global community</a> of friendly humans on a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>
+        <button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'></i></button></a>
+      </p>
+    </div>
+    {% endif %}
+
+    <!-- Actual makes -->
+    {% for make in makes %}
+      {% include ("make-templates/" + template) %}
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block require_main %}{% endblock %}
+{% block scripts %}
+<script>
+  requirejs.config({baseUrl: '/js'});
+  require(['app'], function (app) {
+    require(['pages/editor']);
+  });
+</script>
+{% endblock %}

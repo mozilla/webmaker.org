@@ -36,6 +36,7 @@ module.exports = function(req, res) {
     if (data[0].length) {
       sticky = make.sortByPriority(STICKY_PREFIX, data[0]);
     }
+
     normal = data[1];
     all = sticky.concat(normal);
 

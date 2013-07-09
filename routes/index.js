@@ -3,6 +3,7 @@ module.exports = {
     healthcheck: require("./api/healthcheck")
   },
   details: require("./details"),
+  editor: require("./editor"),
   include: function( transparent ) {
     return function( req, res ) {
       res.render( "sso/include.html", {

@@ -21,7 +21,6 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
                 var seen = {};
                 var clusters = [];
                 var ID = '__gm_id';
-                self.oms.unspiderfy();
                 markers.forEach(function (m) {
                     if (m[ID] in seen) return;
                     self.oms.markersNearMarker(m).forEach(function (nm) {

@@ -17,5 +17,6 @@ coverage.html
 .settings
 doc
 public/css/
+static/css/
 *.swp
 .env

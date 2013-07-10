@@ -130,6 +130,30 @@ function ($, EventModel, forms) { return function (mapMaker) {
         ev.preventDefault();
         toggleCreateForm();
     });
+    navigator.idSSO.watch( {
+      onlogin: function( assert ){
+        var $button = $('.loggedout-expand-form-button')
+          .removeClass('loggedout-expand-form-button')
+          .addClass('expand-form-button')
+          .click(function(ev) {
+            ev.preventDefault();
+            toggleCreateForm();
+          });
+        $('.event-button-text', $button).text('Add an Event');
+        if( document.referrer.indexOf( 'login' ) !== -1 ){
+          toggleCreateForm();
+          $( '#event_title' ).focus();
+        }
+      },
+      onlogout: function(){
+        var $button = $('.expand-form-button')
+          .addClass('loggedout-expand-form-button')
+          .removeClass('expand-form-button')
+          .unbind('click');
+        $('.event-button-text', $button).text('Log in to add an Event');
+      }
+    } );
+
 
     EventModel.all(function (events) { mapMaker.dropPins(events) });
 }});

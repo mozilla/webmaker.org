@@ -29,7 +29,7 @@ module.exports = function(req, res) {
     var makeData = data[ 0 ];
 
     // Prep remixes, max of 10
-    makeData.remixes( function( err, remixData ) {
+    makeData.remixes( function( err, remixData, totalHits ) {
       if ( err ) {
         return renderError("Looks like there is a problem with the make API");
       }
@@ -42,12 +42,10 @@ module.exports = function(req, res) {
         });
       }
 
-      if ( remixData.length >= MAX_REMIXES ) {
-        makeData.remixCount = remixData.length + "+ remixes";
-      } else if ( remixData.length > 1 ) {
-        makeData.remixCount = remixData.length + " remixes";
-      } else if ( remixData.length === 1 ) {
+      if ( totalHits === 1 ) {
         makeData.remixCount = "1 remix";
+      } else {
+        makeData.remixCount = totalHits + " remixes";
       }
 
       // Prep original source

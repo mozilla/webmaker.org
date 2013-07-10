@@ -55,8 +55,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
         old     = old     === undefined ? false : old;
 
         var icon = {
-            url: "/img/map/pin-event"+(old?'-dim':'')+".png",   // 43 x 51
-            anchor: new google.maps.Point(23, 0)
+            url: "/img/map/pin-event"+(old?'-dim':'')+".png"   // 43 x 51
         };
 
         var marker = new google.maps.Marker({

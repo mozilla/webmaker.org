@@ -7,10 +7,7 @@ var express = require( "express" ),
     helmet = require( "helmet" ),
     nunjucks = require( "nunjucks" ),
     path = require( "path" ),
-    route = require( "./routes" ),
-    sightmap = require( "sightmap" ),
-    lessMiddleWare = require( "less-middleware" ),
-    makeAPI = require( "./lib/makeapi-webmaker" );
+    lessMiddleWare = require( "less-middleware" );
 
 habitat.load();
 
@@ -19,13 +16,16 @@ var app = express(),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
       autoescape: true
     }),
-    make = makeAPI({
-      apiURL: env.get( "MAKE_ENDPOINT" ),
-      auth: env.get( "MAKE_AUTH" )
-    }),
-    routes = route( make ),
     NODE_ENV = env.get( "NODE_ENV" ),
     WWW_ROOT = path.resolve( __dirname, "public" );
+
+// Initialize make client so it is available to other modules
+require("./lib/makeapi")({
+  apiURL: env.get( "MAKE_ENDPOINT" ),
+  auth: env.get( "MAKE_AUTH" )
+});
+
+var routes = require("./routes");
 
 nunjucksEnv.express( app );
 app.disable( "x-powered-by" );
@@ -139,7 +139,7 @@ app.get( "/privacy", routes.page( "privacy" ) );
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 app.get( "/sso/include.html", routes.include() );
 app.get( "/sso/include-transparent.html", routes.include("transparent" ));
-app.get( "/sitemap.xml", routes.sitemap( sightmap ) );
+app.get( "/sitemap.xml", routes.sitemap);
 app.get( "/js/make-api.js", function( req, res ) {
   res.sendfile( path.resolve( __dirname, "node_modules/makeapi-client/src/make-api.js" ) );
 });

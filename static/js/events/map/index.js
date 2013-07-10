@@ -3,9 +3,9 @@ function ($, google, MapMaker, EventForms) {
 
     var gm = google.maps;
     gm.visualRefresh = true;
-    var mapCenter = new gm.LatLng(37.774546, -122.433523);
+    var mapCenter = new gm.LatLng(20.324167, 30.029293); // CONGO
     var mapOptions = {
-        zoom: 2,  // starting zoom level, show whole world
+        zoom: 3,  // starting zoom level, show whole world
         mapTypeId: gm.MapTypeId.ROADMAP,
         center: mapCenter,
         backgroundColor: "#a5bfdd", // set color of loading tiles

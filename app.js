@@ -20,6 +20,11 @@ var app = express(),
     NODE_ENV = env.get( "NODE_ENV" ),
     WWW_ROOT = path.resolve( __dirname, "public" );
 
+nunjucksEnv.addFilter("instantiate", function(input) {
+    var tmpl = new nunjucks.Template(input);
+    return tmpl.render(this.getVariables());
+});    
+
 // Initialize make client so it is available to other modules
 require("./lib/makeapi")({
   apiURL: env.get( "MAKE_ENDPOINT" ),

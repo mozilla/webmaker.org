@@ -2,9 +2,13 @@
 
 {% include 'macros.html' %}
 
-{% block title %}Teach{% endblock %}
+{% block title %}{{ gettext("Teach") }}{% endblock %}
 {% block midbar %}
-{{ galleryHeader("Let's Teach the Web Together.", "You don't need to be a wizard to help others. We've got resources to help teach digital literacy, webmaking, online storytelling and more.") }}
+
+{% set header = gettext("teachHeader") %}
+{% set desc = gettext("teachDesc") %}
+
+{{ galleryHeader(header, desc) }}
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
@@ -13,28 +17,28 @@
 {% endblock %}
 {% block CTA %}
   [{
-    "title": "Become a Mentor",
-    "desc": "Provide direct feedback to learners of any age from around the world",
+    "title": "{{ gettext("Become a Mentor") }}",
+    "desc": "{{ gettext("Provide direct feedback to learners of any age from around the world") }}",
     "image": "/img/cta-Mentor.jpg",
-    "url": "/mentor"
+    "url": "/{{lang}}/mentor"
   },
   {
-    "title": "Maker Party",
-    "desc": "From now to September 15, join other webmakers in a global Maker Party.",
+    "title": "{{ gettext("Maker Party")}}",
+    "desc": "{{ gettext("From now to September 15, join other webmakers in a global Maker Party.") }}",
     "image": "/img/cta-Party.jpg",
-    "url": "/party"
+    "url": "/{{lang}}/party"
   },
   {
-    "title": "Get Involved",
-    "desc": "Access support and connect with the Webmaker community.",
+    "title": "{{ gettext("Get Involved")}}",
+    "desc": "{{ gettext("Access support and connect with the Webmaker community.") }}",
     "image": "/img/cta-Get-Involved.jpg",
-    "url": "/getinvolved"
+    "url": "/{{lang}}/getinvolved"
   },
   {
-    "title": "Use our Tools",
-    "desc": "Create an original or a remix using Popcorn Maker and Thimble.",
+    "title": "{{ gettext("Use our Tools") }}",
+    "desc": "{{ gettext("Create an original or a remix using Popcorn Maker and Thimble.") }}",
     "image": "/img/cta-Tools.jpg",
-    "url": "/tools"
+    "url": "/{{lang}}/tools"
   }];
 {% endblock %}
 {% block require_page %}pages/teach{% endblock %}

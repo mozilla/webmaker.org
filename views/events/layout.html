@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% include 'macros.html' %}
 
-{% block title %}{% endblock %}
-
 {% block css %}
   {{ super() }}
   <link rel="stylesheet" href="/ext/css/jquery-ui.custom/jquery-ui-1.10.3.custom.css" />
@@ -11,44 +9,7 @@
   <link rel="stylesheet" href="/css/events.css">
 {% endblock %}
 
-{% block midbar %}
-{% endblock %}
-
-{% block CTA %}
-[
-    {
-        title:  "Event Guides",
-        url:    "/guides",
-        image:  "http://lorempixel.com/75/75/",
-        desc:   "Step-by-step guides for event planning."
-    },
-    {
-        title:  "Maker Party",
-        url:    "/party",
-        image:  "http://lorempixel.com/75/75/",
-        desc:   "From now to September 15, join other webmakers in a global Maker Party."
-    },
-    {
-        title:  "Teach",
-        url:    "/teach",
-        image:  "http://lorempixel.com/75/75/",
-        desc:   "Resources for teaching digital literacy and webmaking."
-    },
-    {
-        title:  "Get Involved",
-        url:    "/getinvolved",
-        image:  "http://lorempixel.com/75/75/",
-        desc:   "Need help? Access support and connect with the Webmaker community."
-    },
-]
-{% endblock %}
-
-{% block body %}
-{% endblock %}
-
 {% block require_main %}/js/events/index{% endblock %}
-{% block scripts %}
-{% endblock %}
 
 {% set j=0 %}
 {% macro tabIndex() %}tabIndex="{{ ++j }}"{% endmacro %}

@@ -37,8 +37,32 @@ function ($, google, MapMaker, EventForms) {
         gridSize: 20,
         maxZoom: 15,    // Don't cluster after this zoom level
                         // (clicking on a cluster goes to zoom 16)
-        imagePath: "/img/map/c",
-        imageSizes: [43, 43, 43, 43, 43]
+        calculator: function(markers, numStyles) {
+          var title = '',
+              index = 0,
+              len = markers.length,
+              count = len.toString();
+
+          return {
+            text: count,
+            index: (count > 9) ? 2 : 1,
+            title: title
+          };
+        },
+        styles: [
+          { url: '/img/map/c1.png',
+            anchor: [0, 20],
+            fontFamily: 'Open Sans',
+            textSize: 10,
+            height: 43,
+            width: 43 },
+          { url: '/img/map/c1.png',
+            anchor: [0, 17],
+            fontFamily: 'Open Sans',
+            textSize: 10,
+            height: 43,
+            width: 43 }
+        ]
     };
     var omsOptions = {
         keepSpiderfied: true,

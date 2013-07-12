@@ -20,7 +20,7 @@
     "moment": "~2.0.0",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.9",
     "newrelic": "0.9.22",
-    "webmaker-events": "https://github.com/mozilla/webmaker-events/tarball/v0.1.7",
+    "webmaker-events": "https://github.com/mozilla/webmaker-events/tarball/v0.1.9",
     "sightmap": "0.0.1",
     "async": "0.2.9"
   },

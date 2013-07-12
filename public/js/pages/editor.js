@@ -21,6 +21,7 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri"],
       $searchResults = $(searchResults),
       lastQuery,
       makeAPIUrl = $("body").data("endpoint"),
+      makeAPIUrlHost = URI.parse(makeAPIUrl).host,
       queryKeys = URI.parse( window.location.href ).queryKey;
 
   nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader("/views", true));
@@ -114,7 +115,7 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri"],
       searchPackery.remove(oldMakes);
     }
     $loading.hide();
-    $(".search-summary").html( showingString + " results for " + lastQuery.field + " = " + lastQuery.value + " on " + "<a href=\"" + makeAPIUrl + "/admin\">" + makeAPIUrl + "</a>");
+    $(".search-summary").html( showingString + " results for " + lastQuery.field + " = " + lastQuery.value + " on " + "<a href=\"" + makeAPIUrl + "/admin\">" + makeAPIUrlHost + "</a>");
     setPagination(lastQuery.page, total);
     if (err || !data.length) {
       return;

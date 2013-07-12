@@ -50,7 +50,7 @@ define(["jquery", "nunjucks", "base/ui", "moment"],
 
   function generateGravatar(hash) {
     // TODO: Combine with makeapi-webmaker.js into universal module
-    var DEFAULT_AVATAR = "http%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png",
+    var DEFAULT_AVATAR = "https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png",
         DEFAULT_SIZE = 44;
     return "https://secure.gravatar.com/avatar/" + hash + "?s="+ DEFAULT_SIZE +"&d=" + DEFAULT_AVATAR;
   }

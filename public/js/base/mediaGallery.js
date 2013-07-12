@@ -7,7 +7,7 @@ define(['jquery', 'moment'],
       LIMIT_DESKTOP = 20,
       LIMIT_MOBILE = 6,
       currentIter = 1,
-      defaultAvatar = "http%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png";
+      defaultAvatar = "https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png";
 
   var $body = $( 'body' ),
       $mainGallery = $('.main-gallery'),

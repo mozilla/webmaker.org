@@ -24,13 +24,11 @@ module.exports = function(req, res) {
   if ( type === 'tags' ) {
     var tags = query.split(',');
     options.tags = [];
-    if( tags.length === 1 ) { // try splitting with spaces, too
-      tags = query.split(' ');
-    }
     options.tags[0] = tags.map(function( t ) {
       // check for hashtag, remove
+      t = t.trim();
       if ( t[0] === '#' ) {
-        return tag.slice(1);
+        return t.slice(1);
       }
       return t;
     });

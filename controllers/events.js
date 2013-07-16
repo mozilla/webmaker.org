@@ -119,6 +119,10 @@ module.exports = function (init) {
                     res.reply(200, 'Event deleted');
                 });
             }, true);
+        },
+        admin: function(req, res)
+        {
+            res.reply('admin')
         }
     };
 

@@ -3,6 +3,9 @@ module.exports = function (C, app) {
         app[method.toLowerCase()](path + '.:format?', action);
     }
 
+    // Admin Interface
+    route( 'GET',    '/events/admin',     C.Events.admin   );
+
     route( 'GET',    '/events',           C.Events.index   );
     route( 'GET',    '/events/:id',       C.Events.details );
     route( 'POST',   '/events',           C.Events.create  );

@@ -16,6 +16,7 @@ require.config({
         'jquery.validate':      '/ext/js/jquery.validate',
         'additional-methods':   '/ext/js/additional-methods',
         'jquery.css3finalize':  '/ext/js/jquery.css3finalize-v3.x.min',
+        'rails':                '/ext/js/rails',
 
         'oms':                  '/ext/js/oms',
         'infobubble':           '/ext/js/infobubble',
@@ -32,6 +33,7 @@ require.config({
         'jquery.css3finalize':  ['jquery'],
         'bootstrap-markdown':   ['jquery', 'markdown', 'to-markdown'],
         'jquery.validate':      ['jquery'],
+        'rails':                ['jquery'],
         'additional-methods':   ['jquery.validate'],
     },
     callback: function () {

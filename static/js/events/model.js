@@ -2,10 +2,9 @@ define(['resource_model'], function (ResourceModel) {
 
     var EventModel = new ResourceModel({
         name:   'event',
-        fields: [ 'title', 'description', 'address', 'latitude', 'longitude',
+        fields: [ 'id', 'title', 'description', 'address', 'latitude', 'longitude',
             'attendees', 'beginDate', 'beginTime', 'endDate', 'endTime',
-            'registerLink', 'picture', 'organizer', 'organizerId',
-            'organizerHash', 'created', 'id' ],
+            'registerLink', 'picture', 'organizerId', 'organizerHash' ],
     });
 
     EventModel.prototype.datetimeHTML = function() {

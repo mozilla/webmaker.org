@@ -1,0 +1,18 @@
+{% extends "events/layout.html" %}
+
+{% block title %}Event Admin{% endblock %}
+
+{% block body %}
+<table>
+  <thead>
+    <tr>
+    {% for c in [ 'id', 'title', 'beginDate', 'endDate', 'beginTime', 'endTime', 'address', 'organizerId' ] %}
+      <td>{{ c }}</td>
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+{% endblock %}
+
+{% block footer %}{% endblock %}

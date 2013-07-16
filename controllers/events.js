@@ -215,7 +215,17 @@ module.exports = function (init) {
                     evt.organizerHash = md5(event[p]);
                     evt[p] = event[p];
                     break;
-                default:
+                case 'title':
+                case 'description':
+                case 'address':
+                case 'latitude':
+                case 'longitude':
+                case 'attendees':
+                case 'registerLink':
+                case 'picture':
+                case 'organizerHash':
+                case 'organizerId':
+                case 'id':
                     evt[p] = event[p];
             }
         });

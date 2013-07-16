@@ -6,30 +6,30 @@ function ($, EventModel, forms) { return function (mapMaker) {
         ev.preventDefault();
         $findForm.submit();
     });
-    var $when  = $findForm.find('input[name="when"]'),
+    var $when_start  = $findForm.find('input[name="when-start"]'),
+        $when_end    = $findForm.find('input[name="when-end"]'),
         $where = $findForm.find('input[name="where"]');
+
+    $when_start.datepicker('setDate', new Date());
+
     $findForm.on("submit", function(ev) {
         ev.preventDefault();
+
         EventModel.all(function (models) {
-            mapMaker.clearMarkers();
-            var targetDateStr = $when[0].value;
-            if (!targetDateStr)
-                mapMaker.dropPins(models, false);
-            else {
-                var targetDate = new Date(targetDateStr.split('-'));
-                mapMaker.dropPins(models, false, function (model) {
-                    var beginDate  = new Date(model.beginDate),
-                        endDate    = new Date(model.endDate);
-                    if (model.beginDate && model.endDate)
-                        return beginDate <= targetDate
-                            && endDate >= targetDate
-                    else if (beginDate)
-                        return beginDate <= targetDate
-                    else if (endDate)
-                        return endDate >= targetDate
-                    else return true
-                });
-            }
+            console.log($when_start[0].value);
+            var target_start = $when_start[0].value,
+                target_end   = $when_end[0].value;
+            var earliestDate = target_start ? new Date(target_start.split('/')) : -Infinity,
+                latestDate   = target_end   ? new Date(target_end.split('/'))   : Infinity;
+
+            mapMaker.clearMarkers().dropPins(models, false, function (model) {
+                var mB = model.beginDate ? new Date(model.beginDate) : -Infinity,
+                    mE = model.endDate   ? new Date(model.endDate)   : Infinity,
+                    tB = earliestDate,
+                    tE = latestDate;
+
+                return !((mB < tB && mE < tB) || (mB > tE && mE > tE))
+            });
         });
     });
     mapMaker.setupAutocomplete($where[0], true, function (place) {

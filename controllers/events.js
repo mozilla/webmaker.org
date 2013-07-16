@@ -139,7 +139,35 @@ module.exports = function (init) {
         },
         admin: function(req, res)
         {
-            res.reply('admin')
+            Event.all().success(function (events) {
+                res.format({
+                    html: function () {
+                        res.reply('admin', {
+                            events: events.map(function (event) {
+                                var evt = util.objMap(event, function (v, k) {
+                                switch(k) {
+                                    case 'beginDate':
+                                    case 'endDate':
+                                        var date = new Date(v);
+                                        return date == "Invalid Date"
+                                            ? null
+                                            : [ date.getMonth() + 1,
+                                                date.getDate(),
+                                                date.getFullYear() ].join('/')
+                                    case 'beginTime':
+                                    case 'endTime':
+                                        return v ? fmtTime(v) : null;
+                                    default:
+                                        if (SAFE_FIELDS.indexOf(k) != -1)
+                                            return v
+                                }});
+                                evt.uri = event.uri();
+                                return evt;
+                            })
+                        })
+                    }
+                })
+            });
         }
     };
 
@@ -218,15 +246,15 @@ module.exports = function (init) {
             evt = required.every(function (f) { return !blank(evt[f]) }) ? evt : null;
         return evt
     }
-    function event_output_filter(event) {
-        function fmtDate(x) { return new Date(x).toDateString() }
-        function fmtTime(x) {
-            var hms = new Date(x).toTimeString().split(' ')[0].split(':');
-            var h = hms[0] % 12;
-            if (h == 0) h = 12;
-            return h + ':' + hms[1] + (Math.floor(hms[0] / 12) ? 'pm' : 'am');
-        }
 
+    function fmtDate(x) { return new Date(x).toDateString() }
+    function fmtTime(x) {
+        var hms = new Date(x).toTimeString().split(' ')[0].split(':');
+        var h = hms[0] % 12;
+        if (h == 0) h = 12;
+        return h + ':' + hms[1] + (Math.floor(hms[0] / 12) ? 'pm' : 'am');
+    }
+    function event_output_filter(event) {
         var evt = {};
         Event.fields.forEach(function (p) {
             switch(p) {

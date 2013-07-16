@@ -3,15 +3,21 @@
 {% block title %}Event Admin{% endblock %}
 
 {% block body %}
+{% set columns = [ 'id', 'title', 'beginDate', 'endDate', 'beginTime', 'endTime', 'address', 'organizerId' ] %}
 <table id="event-list">
   <thead>
-    <tr>
-    {% for c in [ 'id', 'title', 'beginDate', 'endDate', 'beginTime', 'endTime', 'address', 'organizerId' ] %}
-      <td>{{ c }}</td>
-    {% endfor %}
-    </tr>
+    <tr> {% for c in columns %} <td>{{ c }}</td> {% endfor %} </tr>
   </thead>
-  <tbody></tbody>
+  <tbody>
+  {% for event in events %}
+  <tr> {% for c in columns %} <td>{{ event[c] }}</td> {% endfor %}
+    <td><a data-remote="true" data-confirm="Really delete?" data-method="DELETE" href="{{ event.uri }}">
+        <i class="icon-remove-sign"></i></a></td>
+    <td><a href="{{ event.uri }}#edit"><i class="icon-edit-sign"></i></a></td>
+    <td><a href="{{ event.uri }}"><i class="icon-chevron-sign-right"></i></a></td>
+  </tr>
+  {% endfor %}
+  </tbody>
 </table>
 {% endblock %}
 

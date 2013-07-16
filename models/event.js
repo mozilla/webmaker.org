@@ -31,6 +31,11 @@ module.exports = function (Model, t) {
         organizer:                          t.Email,
         organizerId:                        t.String,
 
+        featured: {
+            type:                           t.BOOLEAN,
+            defaultValue: false,
+        },
+
         $instanceMethods: {
             uri: function (root) {
                 root = root || '/';

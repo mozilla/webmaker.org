@@ -14,9 +14,10 @@
   <tbody>
   {% for event in events %}
     <tr>
-      <td><a class="toggle-featured" href="{{ event.uri }}"
-             data-params="featured=true" data-remote="true" data-method="PATCH">
-          <i class="icon-star-empty icon-star"></i></a></td>
+      <td><form class="toggle-featured" href="{{ event.uri }}" data-remote="true" data-method="PATCH">
+            <button class="icon-star-empty {% if event.featured %}hidden{% endif %}" type="submit" name="featured" value="true" />
+            <button class="icon-star {% if not event.featured %}hidden{% endif %}" type="submit" name="featured" value="false" />
+          </form></td>
       {% for c in columns %} <td>{{ event[c] }}</td> {% endfor %}
       <td><a data-remote="true" data-confirm="Really delete?" data-method="DELETE" href="{{ event.uri }}">
           <i class="icon-remove-sign"></i></a></td>

@@ -2,6 +2,7 @@ module.exports = function (init) {
     init('events', 'event');
 
     var Event = this.models.Event,
+        Admin = this.models.Admin,
         util  = require('../util'),
         csv   = require('csv'),
         fs    = require('fs'),
@@ -19,7 +20,7 @@ module.exports = function (init) {
 
     var SAFE_FIELDS = [ 'id', 'beginDate', 'endDate', 'beginTime', 'endTime',
         'title', 'description', 'address', 'latitude', 'longitude',
-        'attendees', 'registerLink', 'picture', 'organizerId' ];
+        'attendees', 'registerLink', 'picture', 'organizerId', 'featured' ];
 
     var PAGE_SIZE = 20;
 
@@ -105,6 +106,8 @@ module.exports = function (init) {
             var allowed = [ 'title', 'description', 'address', 'latitude',
                     'longitude', 'attendees', 'beginDate', 'endDate',
                     'beginTime', 'endTime', 'registerLink' ];
+            if (Admin.checkUser(req.session.email))
+                allowed.push('featured');
 
             Object.keys(changes).forEach(function (k) {
                 if (blank(changes[k]))
@@ -139,7 +142,9 @@ module.exports = function (init) {
         },
         admin: function(req, res)
         {
-            Event.all().success(function (events) {
+            if (!Admin.checkUser(req.session.email))
+                res.reply(403, 'Must be an admin user.');
+            else Event.all().success(function (events) {
                 res.format({
                     html: function () {
                         res.reply('admin', {

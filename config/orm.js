@@ -4,7 +4,7 @@ module.exports = function () {
         util = require('../util');
 
     /* Load Database Configuration */
-    var db = util.getEnvConf(DB_FIELDS, { prefix: 'DB_' });
+    var db = util.getEnvConfig(DB_FIELDS, { prefix: 'DB_' });
 
     // use sqlite by defaults if no dialect is specified
     db.dialect = db.dialect || 'sqlite';

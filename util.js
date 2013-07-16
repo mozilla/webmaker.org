@@ -23,7 +23,7 @@ module.exports = {
     hasFields: function (o, fields) {
         return o && fields.every(function (f) { return o[f] !== undefined });
     },
-    getEnvConf: function (fields, opts) {
+    getEnvConfig: function (fields, opts) {
         var prefix = opts.prefix || '', conf = {};
         fields.forEach(function (f) {
             conf[f] = process.env[(prefix + f).toUpperCase()];

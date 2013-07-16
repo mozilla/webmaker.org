@@ -3,7 +3,7 @@
 {% block title %}Event Admin{% endblock %}
 
 {% block body %}
-<table>
+<table id="event-list">
   <thead>
     <tr>
     {% for c in [ 'id', 'title', 'beginDate', 'endDate', 'beginTime', 'endTime', 'address', 'organizerId' ] %}

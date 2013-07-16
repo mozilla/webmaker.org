@@ -21,10 +21,27 @@ module.exports = function (init) {
         'title', 'description', 'address', 'latitude', 'longitude',
         'attendees', 'registerLink', 'picture', 'organizerId' ];
 
+    var PAGE_SIZE = 20;
+
     return {
         index:  function(req, res)
         {
-            Event.all().success(function (events) {
+            if (req.query._page || req.query._limit) {
+                // paginate results
+                var page  = Math.abs(parseInt(req.query._page) || 0),
+                    limit = Math.abs(parseInt(req.query._limit) || PAGE_SIZE);
+                Event.findAll({ offset: page * limit, limit: limit }).success(function (events) {
+                    var count = events.length;
+                    res.reply(200, {
+                        count:      events.length,
+                        page:       page,
+                        next:       count ? '/events/?_page='+(page+1) : null,
+                        previous:   page  ? '/events/?_page='+(page-1) : null,
+                        offset:     page * limit,
+                        events:     events.map(event_output_filter)
+                    });
+                })
+            } else Event.all().success(function (events) {
                 res.format({
                     html: function () { res.reply('map', { events: events.map(event_output_filter) }) },
                     json: function () { res.reply(200, { events: events.map(event_safe_filter) }) },

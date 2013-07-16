@@ -34,7 +34,9 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     // Models
     ctx.orm = require('./config/orm').call(ctx);
     require('./models').call(ctx);
-    require('./config/fixtures').call(ctx);
+
+    if (!require('./config/fixtures').call(ctx))
+        ctx.orm.sequelize.sync().error(console.error.bind(console));
 
     util.shortcut(ctx, 'models', ctx.orm);
 

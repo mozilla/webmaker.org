@@ -23,34 +23,6 @@
 </div>
 {% endmacro %}
 
-{% macro gallery() %}
-<div class="ui-wrapper">
-  <div class="main-gallery">
-    <div class="loading"></div>
-    <div class="gutter-sizer"></div>
-    <div class="grid-sizer"></div>
-  </div>
-  <div class="clone-container">
-    <div class="make-back clone-item">
-      <div class="desc">
-        <h3><a class="title"></a></h3>
-        <p class="author-date"><img class="make-avatar"><a class="tool-url"><span class="type"></span> make</a> by <a class="author"></a> created <span class="date"></span></p>
-        <p class="description"></p>
-      </div>
-      <div class="btn-container">
-        <a class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> Remix</a>
-        <a class="ui-btn details-btn fork-btn-label">Details</a>
-      </div>
-      <div class="make-type-container">
-        <span class="type-icon"></span>
-        <span class="type"></span>
-      </div>
-    </div>
-    <div class="make make-flip clone-item"></div>
-  </div>
-</div>
-{% endmacro %}
-
 {% macro searchmakes() %}
   {% for make in makes %}
     <div class="make {{makeSize}} make-type-{{make.type}}">

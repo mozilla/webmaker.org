@@ -17,10 +17,3 @@
 </div>
 
 {% endblock %}
-{% block require_main %}{% endblock %}
-{% block scripts %}
-<script>
-  requirejs.config({baseUrl: '/js'});
-  require(['app']);
-</script>
-{% endblock %}

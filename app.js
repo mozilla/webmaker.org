@@ -111,10 +111,18 @@ var middleware = require( "./lib/middleware" );
 
 app.get( "/healthcheck", routes.api.healthcheck );
 
-app.get( "/", routes.page( "index" ) );
-app.get( "/editor", middleware.checkAdmin, routes.editor );
+app.get( "/", routes.gallery({
+  layout: "index",
+  prefix: "p"
+}));
+app.get( "/editor", middleware.checkAdmin, routes.gallery({
+  page: "editor"
+}));
 app.get( "/about", routes.page( "about" ) );
-app.get( "/teach", routes.teach );
+app.get( "/teach", routes.gallery({
+  layout: "teach",
+  prefix: "teach"
+}));
 app.get( "/party", routes.page( "party" ) );
 app.get( "/tools", routes.page( "tools" ) );
 app.get( "/mentor", routes.page( "mentor" ) );

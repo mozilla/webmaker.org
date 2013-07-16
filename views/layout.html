@@ -188,7 +188,12 @@ window.__loginAPI = "{{ loginAPI }}";
 </script>
 <script src="/js/make-api.js"></script>
 <script src="/ext/js/packery.js"></script>
-<script src="/ext/js/require.js" data-main="{% block require_main %}/js/main{% endblock %}"></script>
+
+<script id="require-js" src="/ext/js/require.js"
+  data-main="{% block require_main %}/js/main.js{% endblock %}"
+  data-page="{% block require_page %}{% endblock %}">
+</script>
+
 {% block scripts %}{% endblock %}
 
 {% if ga_account %}

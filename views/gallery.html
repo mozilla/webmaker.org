@@ -1,0 +1,31 @@
+<div class="main-gallery">
+  <!-- Packery helper stuff -->
+  <div class="gutter-sizer"></div>
+  <div class="no-makes-found">No makes were found!</div>
+  <div class="loading-cat g-4"></div>
+
+  <!-- STICKY BANNERS -->
+  {% if layout=='index' %}
+  <div id="banner-join" class="packery-hide stamp" >
+    <div class="rotator">
+      <h2 style="display: block;">The web is still open.<br> Hack it.</h2></div><div class="join-border"></div><div class="join-signin"><span class="join-claim">Claim your Webmaker domain.</span><span class="btn-join-container"><a href="/login" class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>
+    </div>
+  </div>
+  {% endif %}
+  {% if layout=='teach' %}
+  <div id="banner-teach" class="packery-hide g-4 stamp">
+    <img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>
+    <p>We're a <a href='/about'/>global community</a> of friendly humans on a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>
+      <button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'></i></button></a>
+    </p>
+  </div>
+  {% endif %}
+
+  <!-- Actual makes -->
+  {% for make in makes %}
+    {% if make %}
+      {% include ("make-templates/" + template) %}
+    {% endif %}
+  {% endfor %}
+
+</div>

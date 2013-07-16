@@ -595,12 +595,4 @@
     "url": "/about"
   }];
 {% endblock %}
-{% block require_main %}{% endblock %}
-{% block scripts %}
-<script>
-  requirejs.config({baseUrl: '/js'});
-  require(['app'], function (app) {
-    require(['pages/party']);
-  });
-</script>
-{% endblock %}
+{% block require_page %}pages/party{% endblock %}

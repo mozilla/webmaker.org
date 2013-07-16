@@ -168,7 +168,6 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri"],
     };
 
     searchQuery[options.field] = options.value;
-    console.log(searchQuery);
     make.find(searchQuery).then(resultsCallback);
   }
 

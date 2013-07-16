@@ -12,8 +12,11 @@
        { 'title': 'Thimble', 'value': 'thimble' } ]) }}
 {% endblock %}
 {% block body %}
-{{ gallery() }}
+<div class="ui-wrapper">
+  {% include "gallery.html" %}
+</div>
 {% endblock %}
+{% block require_page %}pages/index{% endblock %}
 {% block scripts %}
 <script type="text/javascript">
 var hash = window.location.hash;

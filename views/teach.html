@@ -12,26 +12,7 @@
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper">
-  <div class="main-gallery">
-
-    <div class="gutter-sizer"></div>
-    <div class="no-makes-found">No makes were found!</div>
-    <div class="loading-cat g-4"></div>
-
-    <div id="banner-teach" class="packery-hide g-4">
-      <img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>
-      <p>We're a <a href='/about'/>global community</a> of friendly humans on a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>
-        <button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'></i></button></a>
-      </p>
-    </div>
-
-    {% for make in makes %}
-      {% if make %}
-        {% include "make-templates/make-teach.html" %}
-      {% endif %}
-    {% endfor %}
-
-  </div>
+  {% include "gallery.html" %}
 </div>
 {% endblock %}
 {% block CTA %}
@@ -60,12 +41,4 @@
     "url": "/tools"
   }];
 {% endblock %}
-{% block require_main %}{% endblock %}
-{% block scripts %}
-<script>
-  requirejs.config({baseUrl: '/js'});
-  require(['app'], function (app) {
-    require(['pages/teach']);
-  });
-</script>
-{% endblock %}
+{% block require_page %}pages/teach{% endblock %}

@@ -3,7 +3,7 @@ module.exports = {
     healthcheck: require("./api/healthcheck")
   },
   details: require("./details"),
-  editor: require("./editor"),
+  gallery: require("./gallery"),
   include: function( transparent ) {
     return function( req, res ) {
       res.render( "sso/include.html", {
@@ -29,7 +29,6 @@ module.exports = {
   tag: function( req, res ) {
     res.redirect("/search?type=tags&q=" + req.params.tag);
   },
-  teach: require("./teach"),
   user: require("./user"),
   usersearch: function( req, res ) {
     res.redirect( "/search?type=user&q=" + req.params.user );

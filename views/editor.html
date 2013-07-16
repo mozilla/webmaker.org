@@ -39,7 +39,7 @@
     <div class="g-8">
       <label>You are displaying the </label>
       <select id="layout-select">
-        <option value="home"{% if layout == 'home'%} selected{% endif %}>Home page</option>
+        <option value="index"{% if layout == 'index'%} selected{% endif %}>Home page</option>
         <option value="teach"{% if layout == 'teach'%} selected{% endif %}>Teach page</option>
       </select>
       <label> layout with the prefix </label>
@@ -58,44 +58,9 @@
     {% endfor %}
   </div>
 
-  <div class="main-gallery">
-    <!-- Packery helper stuff -->
-    <div class="gutter-sizer"></div>
-    <div class="no-makes-found">No makes were found!</div>
-    <div class="loading-cat g-4"></div>
-
-    <!-- STICKY BANNERS -->
-    {% if layout=='home' %}
-    <div id="banner-join" class="packery-hide stamp" >
-      <div class="rotator">
-        <h2 style="display: block;">The web is still open.<br> Hack it.</h2></div><div class="join-border"></div><div class="join-signin"><span class="join-claim">Claim your Webmaker domain.</span><span class="btn-join-container"><a href="/login" class="ui-blue-btn btn-signin">Sign in<i class="icon-angle-right"></i></a></span>
-      </div>
-    </div>
-    {% endif %}
-    {% if layout=='teach' %}
-    <div id="banner-teach" class="packery-hide g-4 stamp">
-      <img src="/img/webmaker-community.jpg" alt="Webmaker Community"><div class="joinBorder"></div>
-      <p>We're a <a href='/about'/>global community</a> of friendly humans on a mission to  help people learn the building blocks of the web.<br><a href='/mentor'>
-        <button class='ui-blue-btn'>Explore our mentoring program <i class='icon-angle-right'></i></button></a>
-      </p>
-    </div>
-    {% endif %}
-
-    <!-- Actual makes -->
-    {% for make in makes %}
-      {% include ("make-templates/" + template) %}
-    {% endfor %}
-  </div>
+  {% include "gallery.html" %}
 
 </div>
 {% endblock %}
 {% block footer %}{% endblock %}
-{% block require_main %}{% endblock %}
-{% block scripts %}
-<script>
-  requirejs.config({baseUrl: '/js'});
-  require(['app'], function (app) {
-    require(['pages/editor']);
-  });
-</script>
-{% endblock %}
+{% block require_page %}pages/editor{% endblock %}

@@ -30,6 +30,13 @@ module.exports = function (Model, t) {
         picture:                            t.URL,
         organizer:                          t.Email,
         organizerId:                        t.String,
+
+        $instanceMethods: {
+            uri: function (root) {
+                root = root || '/';
+                return root + 'events/' + this.id;
+            }
+        }
     }, function (M) {
         this.hasMany( M.Gallery, { as: 'Galleries' } );
         this.hasMany( M.Make,    { as: 'Makes'     } );

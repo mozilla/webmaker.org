@@ -17,29 +17,23 @@ module.exports = function (init) {
     //this.app.use('/events', express.limit('10M'));
     var s3 = this.s3;
 
+    var SAFE_FIELDS = [ 'id', 'beginDate', 'endDate', 'beginTime', 'endTime',
+        'title', 'description', 'address', 'latitude', 'longitude',
+        'attendees', 'registerLink', 'picture', 'organizerId' ];
+
     return {
         index:  function(req, res)
         {
             Event.all().success(function (events) {
                 res.format({
-                    json: function () {
-                        res.reply(200, { events: events.map(event_output_filter) });
-                    },
-                    html: function () {
-                        res.reply('map', { events: events.map(event_output_filter) });
-                    },
+                    html: function () { res.reply('map', { events: events.map(event_output_filter) }) },
+                    json: function () { res.reply(200, { events: events.map(event_safe_filter) }) },
                     csv:  function () {
-                        var columns = [ 'id', 'beginDate', 'endDate', 'beginTime', 'endTime',
-                            'title', 'description', 'address', 'latitude', 'longitude',
-                            'attendees', 'registerLink', 'picture', 'organizerId' ];
-                        res.setHeader('Content-type', 'text/csv');
-                        // Uncomment for 'save-as' vs embedded viewer
-                        // res.setHeader('Content-Disposition', 'attachment;filename="events.csv"');
-                        var source_array = events.map(event_output_filter).map(function (event) {
-                            return columns.map(function (c) { return event[c] })
+                        var source_array = events.map(event_safe_filter).map(function (event) {
+                            return SAFE_FIELDS.map(function (c) { return event[c] })
                         });
-                        source_array.unshift(columns);
-                        csv().from.array(source_array).to.stream(res);
+                        source_array.unshift(SAFE_FIELDS);
+                        res.reply(200, source_array);
                     }
                 })
             });
@@ -67,11 +61,12 @@ module.exports = function (init) {
                         event.updateAttributes({
                             picture: s3.url(filename)
                         }).success(function (event) {
-                            res.reply(200, 'Event created',
-                                { event: event_output_filter(event) });
+                            res.reply(201, 'Event created',
+                                { event: event_safe_filter(event) }, { location: event.uri() });
                         });
                     });
-                else res.reply(200, 'Event created', { event: event_output_filter(event) });
+                else res.reply(201, 'Event created',
+                    { event: event_safe_filter(event) }, { location: event.uri() });
             }).error(function (err) {
                 res.reply(400, 'Invalid Event provided', { error: err });
             });
@@ -80,10 +75,8 @@ module.exports = function (init) {
         {
             fetch_event(req, function (event) {
                 res.format({
-                    json: function () { res.reply(200, { event: event_output_filter(event) }) },
-                    html: function () {
-                        res.reply('details', { event: event_output_filter(event) });
-                    }
+                    html: function () { res.reply('details', { event: event_output_filter(event) }) },
+                    json: function () { res.reply(200, { event: event_safe_filter(event) }) }
                 });
             });
         },
@@ -112,7 +105,7 @@ module.exports = function (init) {
                                 picture: s3.url(filename)
                             });
                         });
-                    res.reply(200, 'Event modified', { event: event_output_filter(event) });
+                    res.reply(200, 'Event modified', { event: event_safe_filter(event) });
                 });
             }, true);
         },
@@ -243,6 +236,13 @@ module.exports = function (init) {
                     evt[p] = event[p];
             }
         });
+        return evt;
+    }
+    function event_safe_filter(event) {
+        event = event_output_filter(event);
+        var evt = {};
+        Event.fields.filter(function (p) { return SAFE_FIELDS.indexOf(p) != -1 })
+                    .forEach(function (p) { evt[p] = event[p] });
         return evt;
     }
     function fetch_event(req, success, modify) {

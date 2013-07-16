@@ -3,6 +3,7 @@ module.exports = function (init) {
 
     var Event = this.models.Event,
         util  = require('../util'),
+        csv   = require('csv'),
         fs    = require('fs'),
         crypto   = require('crypto'),
         express  = require('express'),
@@ -26,6 +27,19 @@ module.exports = function (init) {
                     },
                     html: function () {
                         res.reply('map', { events: events.map(event_output_filter) });
+                    },
+                    csv:  function () {
+                        var columns = [ 'id', 'beginDate', 'endDate', 'beginTime', 'endTime',
+                            'title', 'description', 'address', 'latitude', 'longitude',
+                            'attendees', 'registerLink', 'picture', 'organizerId' ];
+                        res.setHeader('Content-type', 'text/csv');
+                        // Uncomment for 'save-as' vs embedded viewer
+                        // res.setHeader('Content-Disposition', 'attachment;filename="events.csv"');
+                        var source_array = events.map(event_output_filter).map(function (event) {
+                            return columns.map(function (c) { return event[c] })
+                        });
+                        source_array.unshift(columns);
+                        csv().from.array(source_array).to.stream(res);
                     }
                 })
             });

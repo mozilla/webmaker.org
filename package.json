@@ -19,6 +19,7 @@
     "sqlite3": "2.1.7",
     "uuid": "latest",
     "noxmox": "latest",
-    "knox": "latest"
+    "knox": "latest",
+    "csv": "latest"
   }
 }

@@ -206,6 +206,7 @@ module.exports = function (init) {
                 case 'beginDate':
                 case 'endDate':
                     evt[p] = event[p] ? fmtDate(event[p]) : null;
+                    evt[p] = evt[p] == "Invalid Date" ? null : evt[p];
                     break;
                 case 'beginTime':
                 case 'endTime':

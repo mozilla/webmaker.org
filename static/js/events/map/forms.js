@@ -19,8 +19,8 @@ function ($, EventModel, forms) { return function (mapMaker) {
             console.log($when_start[0].value);
             var target_start = $when_start[0].value,
                 target_end   = $when_end[0].value;
-            var earliestDate = target_start ? new Date(target_start.split('/')) : -Infinity,
-                latestDate   = target_end   ? new Date(target_end.split('/'))   : Infinity;
+            var earliestDate = target_start ? new Date(target_start.split(/[-\/]/)) : -Infinity,
+                latestDate   = target_end   ? new Date(target_end.split(/[-\/]/))   : Infinity;
 
             mapMaker.clearMarkers().dropPins(models, false, function (model) {
                 var mB = model.beginDate ? new Date(model.beginDate) : -Infinity,

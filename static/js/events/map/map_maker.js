@@ -82,6 +82,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
     MapMaker.prototype.clearMarkers = function () {
         this.markerManager.clearMarkers();
         this.oms.clearMarkers();
+        return this;
     }
     MapMaker.prototype.getMarkers = function() {
         return this.markerManager.getMarkers();

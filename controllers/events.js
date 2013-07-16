@@ -163,7 +163,7 @@ module.exports = function (init) {
         // pre-process the Date/Time fields
         ['begin', 'end'].forEach(function (pfx) {
             datetime_transform('Date', function (val) {
-                return val ? new Date(val.split(/[-\/]/)) : null;
+                return val ? new Date(val) : null;
             });
             datetime_transform('Time', function (val) {
                 if (!val) return null;
@@ -176,8 +176,7 @@ module.exports = function (init) {
                 transforms[dtf] = function(event) {
                     if (!event[dtf]) return;
                     var new_time = transform(event[dtf]);
-                    if (new_time != "Invalid Date")
-                        return new_time;
+                    return (new_time != "Invalid Date") ? new_time : null;
                 };
             }
         });
@@ -206,6 +205,7 @@ module.exports = function (init) {
                 case 'beginDate':
                 case 'endDate':
                     evt[p] = event[p] ? fmtDate(event[p]) : null;
+                    evt[p] = evt[p] == "Invalid Date" ? null : evt[p];
                     break;
                 case 'beginTime':
                 case 'endTime':

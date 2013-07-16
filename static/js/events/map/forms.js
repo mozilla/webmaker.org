@@ -6,32 +6,42 @@ function ($, EventModel, forms) { return function (mapMaker) {
         ev.preventDefault();
         $findForm.submit();
     });
-    var $when  = $findForm.find('input[name="when"]'),
+    var $when_start  = $findForm.find('input[name="when-start"]'),
+        $when_end    = $findForm.find('input[name="when-end"]'),
         $where = $findForm.find('input[name="where"]');
+
+    $findForm.find('[name|="when"]').on("change", function() {
+        if (new Date($when_start.val()) > new Date($when_end.val())) {
+            $(this).val((this.name == 'when-start' ? $when_end : $when_start).val());
+        } else {
+            $findForm.submit();
+        }
+    });
+    $when_start.datepicker('setDate', new Date());
+
+    var first_pindrop = true; // animate only the first time
     $findForm.on("submit", function(ev) {
         ev.preventDefault();
+
         EventModel.all(function (models) {
-            mapMaker.clearMarkers();
-            var targetDateStr = $when[0].value;
-            if (!targetDateStr)
-                mapMaker.dropPins(models, false);
-            else {
-                var targetDate = new Date(targetDateStr.split('-'));
-                mapMaker.dropPins(models, false, function (model) {
-                    var beginDate  = new Date(model.beginDate),
-                        endDate    = new Date(model.endDate);
-                    if (model.beginDate && model.endDate)
-                        return beginDate <= targetDate
-                            && endDate >= targetDate
-                    else if (beginDate)
-                        return beginDate <= targetDate
-                    else if (endDate)
-                        return endDate >= targetDate
-                    else return true
-                });
-            }
+            var target_start = $when_start[0].value,
+                target_end   = $when_end[0].value;
+
+            var earliest = target_start ? new Date(target_start) : -Infinity,
+                latest   = target_end   ? new Date(target_end)   : Infinity;
+
+            mapMaker.clearMarkers().dropPins(models, first_pindrop, function (model) {
+                var start = model.beginDate ? new Date(model.beginDate) : -Infinity,
+                    end   = model.endDate   ? new Date(model.endDate)   : Infinity;
+
+                return (start >= earliest && start <= latest)
+                    || (end   >= earliest && end   <= latest)
+                    || (start <= earliest && end   >= latest)
+            });
+            first_pindrop = false;
         });
     });
+    $findForm.submit();
     mapMaker.setupAutocomplete($where[0], true, function (place) {
         mapMaker.closeInfoWindow();
         if (place.geometry) {
@@ -151,6 +161,4 @@ function ($, EventModel, forms) { return function (mapMaker) {
       .unbind('click');
       $('.event-button-text', $button).text('Log in to add an Event');
     };
-
-    EventModel.all(function (events) { mapMaker.dropPins(events) });
 }});

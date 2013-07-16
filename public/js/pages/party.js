@@ -16,7 +16,6 @@ define(["jquery"],
     }
     var $item = $(".commitment-carousel-item:nth-child(" + count + ")", $carouselContainer ),
         $nextItem = $(".commitment-carousel-item:nth-child(" + next + ")", $carouselContainer );
-    console.log( $item, $nextItem );
     $item.fadeOut(function(){
       $nextItem.fadeIn();
     });

@@ -1,10 +1,10 @@
-module.exports = function (Model, Types) {
+module.exports = function (Model, t) {
     Model('Event', {
-        title:                              Types.String,
-        description:                        Types.Text,
-        address:                            Types.String,
+        title:                              t.String,
+        description:                        t.Text,
+        address:                            t.String,
         latitude: {
-            type:                           Types.FLOAT,
+            type:                           t.FLOAT,
             validate: {
                 isFloat: true,
                 min: -90.0, max: 90.0
@@ -13,7 +13,7 @@ module.exports = function (Model, Types) {
             defaultValue:   null,
         },
         longitude: {
-            type:                           Types.FLOAT,
+            type:                           t.FLOAT,
             validate: {
                 isFloat: true,
                 min: -180.0, max: 180.0
@@ -21,15 +21,15 @@ module.exports = function (Model, Types) {
             allowNull: true,
             defaultValue: null,
         },
-        attendees:                          Types.Int,      // (0..5)
-        beginDate:                          Types.Date,
-        endDate:                            Types.Date,
-        beginTime:                          Types.Date,
-        endTime:                            Types.Date,
-        registerLink:                       Types.URL,
-        picture:                            Types.URL,
-        organizer:                          Types.Email,
-        organizerId:                        Types.String,
+        attendees:                          t.Int,      // (0..5)
+        beginDate:                          t.Date,
+        endDate:                            t.Date,
+        beginTime:                          t.Date,
+        endTime:                            t.Date,
+        registerLink:                       t.URL,
+        picture:                            t.URL,
+        organizer:                          t.Email,
+        organizerId:                        t.String,
     }, function (M) {
         this.hasMany( M.Gallery, { as: 'Galleries' } );
         this.hasMany( M.Make,    { as: 'Makes'     } );

@@ -1,14 +1,21 @@
 body#events.admin {
     table#event-list {
         margin: 4px;
+        border-collapse: collapse;
 
         thead {
+            .icon-star {
+                color: yellow;
+            }
             td {
                 font-weight: bold;
             }
         }
         tbody {
             a { .clickable }
+            tr:hover {
+                background: #eeeeff;
+            }
         }
     }
 }

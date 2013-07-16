@@ -6,16 +6,23 @@
 {% set columns = [ 'id', 'title', 'beginDate', 'endDate', 'beginTime', 'endTime', 'address', 'organizerId' ] %}
 <table id="event-list">
   <thead>
-    <tr> {% for c in columns %} <td>{{ c }}</td> {% endfor %} </tr>
+    <tr>
+      <td><i class="icon-star"></i></td>
+      {% for c in columns %} <td>{{ c }}</td> {% endfor %}
+    </tr>
   </thead>
   <tbody>
   {% for event in events %}
-  <tr> {% for c in columns %} <td>{{ event[c] }}</td> {% endfor %}
-    <td><a data-remote="true" data-confirm="Really delete?" data-method="DELETE" href="{{ event.uri }}">
-        <i class="icon-remove-sign"></i></a></td>
-    <td><a href="{{ event.uri }}#edit"><i class="icon-edit-sign"></i></a></td>
-    <td><a href="{{ event.uri }}"><i class="icon-chevron-sign-right"></i></a></td>
-  </tr>
+    <tr>
+      <td><a class="toggle-featured" href="{{ event.uri }}"
+             data-params="featured=true" data-remote="true" data-method="PATCH">
+          <i class="icon-star-empty icon-star"></i></a></td>
+      {% for c in columns %} <td>{{ event[c] }}</td> {% endfor %}
+      <td><a data-remote="true" data-confirm="Really delete?" data-method="DELETE" href="{{ event.uri }}">
+          <i class="icon-remove-sign"></i></a></td>
+      <td><a href="{{ event.uri }}#edit"><i class="icon-edit-sign"></i></a></td>
+      <td><a href="{{ event.uri }}"><i class="icon-chevron-sign-right"></i></a></td>
+    </tr>
   {% endfor %}
   </tbody>
 </table>

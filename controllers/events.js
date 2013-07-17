@@ -91,7 +91,7 @@ module.exports = function (init) {
         },
         details: function(req, res)
         {
-            fetch_event(req, function (event) {
+            fetch_event(req, function(event, isAdmin) {
                 res.format({
                     html: function () { res.reply('details', { event: event_output_filter(event) }) },
                     json: function () { res.reply(200, { event: event_safe_filter(event) }) }
@@ -106,16 +106,17 @@ module.exports = function (init) {
             var allowed = [ 'title', 'description', 'address', 'latitude',
                     'longitude', 'attendees', 'beginDate', 'endDate',
                     'beginTime', 'endTime', 'registerLink' ];
-            if (Admin.checkUser(req.session.email))
-                allowed.push('featured');
 
             Object.keys(changes).forEach(function (k) {
                 if (blank(changes[k]))
                     delete changes[k];
             });
+
             var picture = changes.picture;
             delete changes.picture;
-            fetch_event(req, function (event) {
+            fetch_event(req, function(event, isAdmin) {
+                if (isAdmin)
+                    allowed.push('featured');
                 event.updateAttributes(changes, allowed).success(function (event) {
                     if (picture)
                         s3.put(picture.data, picture.type, function (filename) {
@@ -131,7 +132,7 @@ module.exports = function (init) {
         },
         destroy: function(req, res)
         {
-            fetch_event(req, function (event) {
+            fetch_event(req, function(event, isAdmin) {
                 var picture = event.picture;
                 event.destroy().success(function () {
                     if (picture)
@@ -142,36 +143,33 @@ module.exports = function (init) {
         },
         admin: function(req, res)
         {
-            if (!Admin.checkUser(req.session.email))
-                res.reply(403, 'Must be an admin user.');
-            else Event.all().success(function (events) {
-                res.format({
-                    html: function () {
-                        res.reply('admin', {
-                            events: events.map(function (event) {
-                                var evt = util.objMap(event, function (v, k) {
-                                switch(k) {
-                                    case 'beginDate':
-                                    case 'endDate':
-                                        var date = new Date(v);
-                                        return date == "Invalid Date"
-                                            ? null
-                                            : [ date.getMonth() + 1,
-                                                date.getDate(),
-                                                date.getFullYear() ].join('/')
-                                    case 'beginTime':
-                                    case 'endTime':
-                                        return v ? fmtTime(v) : null;
-                                    default:
-                                        if (SAFE_FIELDS.indexOf(k) != -1)
-                                            return v
-                                }});
-                                evt.uri = event.uri();
-                                return evt;
-                            })
+            Admin.checkUser(req.session.email, function (isAdmin) {
+                if (!isAdmin)
+                    res.reply(403, 'Must be an admin user.');
+                else Event.all().success(function (events) {
+                    res.reply('admin', {
+                        events: events.map(function (event) {
+                            var evt = util.objMap(event, function (v, k) {
+                            switch(k) {
+                                case 'beginDate':
+                                case 'endDate':
+                                    var date = new Date(v);
+                                    return date == "Invalid Date"
+                                        ? null : [ date.getMonth() + 1,
+                                                   date.getDate(),
+                                                   date.getFullYear() ].join('/')
+                                case 'beginTime':
+                                case 'endTime':
+                                    return v ? fmtTime(v) : null;
+                                default:
+                                    if (SAFE_FIELDS.indexOf(k) != -1)
+                                        return v
+                            }});
+                            evt.uri = event.uri();
+                            return evt;
                         })
-                    }
-                })
+                    })
+                });
             });
         }
     };

@@ -299,13 +299,15 @@ module.exports = function (init) {
     }
     function fetch_event(req, success, modify) {
         var res = req.res;
-        return Event.find(req.params.id).success(function (event) {
-            if (!event) return res.reply(404, 'Event not found');
-            if (modify && req.session.email != event.organizer)
-                return res.reply(403, 'User does not own Event');
-            success(event);
-        }).error(function (err) {
-            res.reply(404, 'Event not found');
-        });
+        Admin.checkUser(req.session.email, function (isAdmin) {
+            Event.find(req.params.id).success(function (event) {
+                if (!event) return res.reply(404, 'Event not found');
+                if (modify && req.session.email != event.organizer && !isAdmin)
+                    return res.reply(403, 'User does not own Event');
+                success(event, isAdmin);
+            }).error(function (err) {
+                res.reply(404, 'Event not found');
+            });
+        })
     }
 };

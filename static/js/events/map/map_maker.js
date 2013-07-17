@@ -49,13 +49,13 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
                 self.addMarker(model, animate);
         })
     };
-    MapMaker.prototype.addMarker = function (model, animate, old) {
+    MapMaker.prototype.addMarker = function (model, animate, dim) {
         animate = animate === undefined ? true  : animate;
-        old     = old     === undefined ? false : old;
+        dim     = dim     === undefined ? false : dim;
 
         var icon = {
             url: "/img/map/pin-event" + (
-                (model.featured && '-red') || (old && '-dim')
+                (model.featured && '-featured') || (dim && '-dim') || ''
             ) + ".png"   // 43 x 51
         };
 

@@ -14,9 +14,13 @@
   <tbody>
   {% for event in events %}
     <tr>
-      <td><form class="toggle-featured" href="{{ event.uri }}" data-remote="true" data-method="PATCH">
-            <button class="icon-star-empty {% if event.featured %}hidden{% endif %}" type="submit" name="featured" value="true" />
-            <button class="icon-star {% if not event.featured %}hidden{% endif %}" type="submit" name="featured" value="false" />
+      <td><form class="toggle-featured" action="{{ event.uri }}" data-remote="true" data-type="json" method="PATCH">
+            <button class="featured-star {% if event.featured %}hidden{% endif %}"
+                    type="submit" name="featured" value="true">
+              <i class="icon-star-empty"></i></button>
+            <button class="featured-star {% if not event.featured %}hidden{% endif %}"
+                    type="submit" name="featured" value="false">
+              <i class="icon-star"></i></button>
           </form></td>
       {% for c in columns %} <td>{{ event[c] }}</td> {% endfor %}
       <td><a data-remote="true" data-confirm="Really delete?" data-method="DELETE" href="{{ event.uri }}">

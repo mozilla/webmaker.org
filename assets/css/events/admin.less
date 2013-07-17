@@ -13,8 +13,17 @@ body#events.admin {
         }
         tbody {
             a { .clickable }
-            tr:hover {
-                background: #eeeeff;
+            tr {
+                &:hover {
+                    background: #eeeeff;
+                    .clickable;
+                }
+            }
+            button {
+                background: transparent;
+                border:     none;
+
+                .clickable;
             }
         }
     }

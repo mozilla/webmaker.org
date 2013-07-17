@@ -7,21 +7,24 @@
 <table id="event-list">
   <thead>
     <tr>
-      <td><i class="icon-star"></i></td>
+      <td id="featured-column-header"><i class="icon-star"></i></td>
       {% for c in columns %} <td>{{ c }}</td> {% endfor %}
     </tr>
   </thead>
   <tbody>
   {% for event in events %}
     <tr>
-      <td><form class="toggle-featured" action="{{ event.uri }}" data-remote="true" data-type="json" method="PATCH">
-            <button class="featured-star {% if event.featured %}hidden{% endif %}"
-                    type="submit" name="featured" value="true">
-              <i class="icon-star-empty"></i></button>
-            <button class="featured-star {% if not event.featured %}hidden{% endif %}"
-                    type="submit" name="featured" value="false">
-              <i class="icon-star"></i></button>
-          </form></td>
+      <td>
+        <form class="toggle-featured" action="{{ event.uri }}" data-remote="true" method="PATCH">
+          <button type="submit" name="featured" value="1" class="{% if event.featured %}hidden{% endif %}">
+            <i class="icon-star-empty"></i>
+          </button>
+          <button type="submit" name="featured" value="0" class="{% if not event.featured %}hidden{% endif %}">
+            <i class="icon-star"></i>
+          </button>
+          <input name="_csrf" value="{{ csrf }}" type="hidden" />
+        </form>
+      </td>
       {% for c in columns %} <td>{{ event[c] }}</td> {% endfor %}
       <td><a data-remote="true" data-confirm="Really delete?" data-method="DELETE" href="{{ event.uri }}">
           <i class="icon-remove-sign"></i></a></td>

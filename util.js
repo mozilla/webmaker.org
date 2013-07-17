@@ -62,9 +62,21 @@ module.exports = {
     },
     objMap: function (old, mapper) {
         var obj = {};
-        Object.keys(old).forEach(function (f) {
+        Object.keys(old).forEach(function(f) {
             obj[f] = mapper(old[f], f);
         });
         return obj;
+    },
+    objFilter: function (old, filter) {
+        var obj = {};
+        Object.keys(old).filter(function(f) { return filter(old[f], f) })
+                        .forEach(function(f) { obj[f] = old[f] });
+        return obj;
+    },
+    sans: function (A, B) {
+        return A.filter(function(x) { return B.indexOf(x) < 0 });
+    },
+    ifndef: function(x, d) {
+        return x === undefined ? d : x
     }
 }

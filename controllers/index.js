@@ -1,4 +1,5 @@
-var util = require("../util");
+var util = require("../util"),
+    csv  = require('csv');
 module.exports = function (app) {
     var cs = util.loadSubmodules(__dirname);
     Object.keys(cs).map(function (c) {

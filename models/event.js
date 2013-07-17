@@ -34,6 +34,7 @@ module.exports = function (Model, t) {
         featured: {
             type:                           t.BOOLEAN,
             defaultValue: false,
+            allowNull: false
         },
 
         $instanceMethods: {

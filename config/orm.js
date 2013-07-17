@@ -52,17 +52,23 @@ module.exports = function () {
     Model.models    = {};
     Model.types     = make_types({
         String: { type: Sequelize.STRING  },
-        Text:   { type: Sequelize.TEXT    },
+        Text:   {
+            type:       Sequelize.TEXT,
+            allowNull:  false,
+            defaultValue: ''
+        },
         Int:    { type: Sequelize.INTEGER },
         Float:  { type: Sequelize.FLOAT   },
         Date:   {
             type:       Sequelize.DATE,
-            allowNull:  true
+            allowNull:  true,
+            defaultValue: null
         },
         URL:    {
             type:       Sequelize.STRING,
             validate:   { isUrl: true },
-            allowNull:  true
+            allowNull:  true,
+            defaultValue: null
         },
         Email:  {
             type:       Sequelize.STRING,

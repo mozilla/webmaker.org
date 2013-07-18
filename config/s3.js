@@ -6,7 +6,7 @@ module.exports = function () {
         util = require('../util');
 
     /* Load S3 Configuration */
-    var s3_conf = util.getEnvConf(S3_FIELDS, { prefix: 'S3_' }),
+    var s3_conf = util.getEnvConfig(S3_FIELDS, { prefix: 'S3_' }),
         s3_mode = this.app.get('env') === 'production' ? 'nox' : 'mox';
 
     if (!util.hasFields(s3_conf, ['key', 'secret']))

@@ -1,0 +1,33 @@
+body#events.admin {
+    table#event-list {
+        margin: 4px;
+        border-collapse: collapse;
+
+        thead {
+            .icon-star {
+                color: yellow;
+            }
+            td {
+                font-weight: bold;
+            }
+            td#featured-column-header {
+                text-align: center;
+            }
+        }
+        tbody {
+            a { .clickable }
+            tr {
+                &:hover {
+                    background: #eeeeff;
+                    .clickable;
+                }
+            }
+            button {
+                background: transparent;
+                border:     none;
+
+                .clickable;
+            }
+        }
+    }
+}

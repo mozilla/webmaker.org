@@ -1,7 +1,10 @@
 module.exports = function (C, app) {
     function route(method, path, action) {
-        app[method.toLowerCase()](path + '.:format?', action);
+        app[method.toLowerCase()](path + '.:_format?', action);
     }
+
+    // Admin Interface
+    route( 'GET',    '/events/admin',     C.Events.admin   );
 
     route( 'GET',    '/events',           C.Events.index   );
     route( 'GET',    '/events/metrics',   C.Events.metrics );

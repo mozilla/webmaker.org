@@ -10,6 +10,7 @@ function ($, google, forms) {
     function toggleEditMode() {
         $('.show').toggleClass('hidden');
         $('.edit').toggleClass('hidden');
+        location.hash = (location.hash == '#edit') ? '' : '#edit';
     }
     $editForm.find('button#edit-mode').click(function(ev) {
         toggleEditMode();
@@ -18,6 +19,9 @@ function ($, google, forms) {
         toggleEditMode();
         $editForm[0].reset();
     });
+    if (location.hash == '#edit')
+        toggleEditMode();
+
     var delete_safety = 1;
     $editForm.find('button#delete-event').click(function(ev) {
         var $deleteSubmit = $(this);

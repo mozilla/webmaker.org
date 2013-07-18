@@ -43,8 +43,8 @@ module.exports = function(init) {
                 })
             } else Event.all().success(function(events) {
                 res.format({
-                    html: function() { res.reply('map', { events: events.map(event_output_transform) }) },
-                    json: function() { res.reply(200, { events: events.map(event_output_filter) }) },
+                    html: ['map', { events: events.map(event_output_transform) }],
+                    json: [200, { events: events.map(event_output_filter) }],
                     csv:  function() {
                         var source_array = events.map(event_output_filter).map(function(event) {
                             return SAFE_FIELDS.map(function(c) { return event[c] })
@@ -73,7 +73,7 @@ module.exports = function(init) {
             var picture = event.picture;
             delete event.picture;
 
-            var allowed = util.sans(SAFE_FIELDS, ['id', 'featured', 'picture']) + ['organizer'];
+            var allowed = util.sans(SAFE_FIELDS, ['id', 'featured', 'picture']).concat('organizer');
 
             Event.create(event, allowed).success(picture_handler(picture, function (event) {
                 res.reply(201, 'Event created', { event: event_output_filter(event) },
@@ -86,8 +86,8 @@ module.exports = function(init) {
         {
             fetch_event(req, function(event, isAdmin) {
                 res.format({
-                    html: function() { res.reply('details', { event: event_output_transform(event) }) },
-                    json: function() { res.reply(200, { event: event_output_filter(event) }) }
+                    html: ['details', { event: event_output_transform(event) }],
+                    json: [200, { event: event_output_filter(event) }]
                 });
             });
         },
@@ -134,7 +134,19 @@ module.exports = function(init) {
                 if (!isAdmin)
                     res.reply(403, 'Must be an admin user.');
                 else Event.all().success(function(events) {
-                    res.reply('admin', { events: events.map(event_output_transform) })
+                    events = events.map(event_output_transform);
+                    res.format({
+                        html: ['admin', { events: events }],
+                        json: [200, { events: events }],
+                        csv:  function() {
+                            var fields = SAFE_FIELDS.concat('organizer');
+                            var source_array = events.map(function(event) {
+                                return fields.map(function(c) { return event[c] })
+                            });
+                            source_array.unshift(fields);
+                            res.reply(200, source_array);
+                        }
+                    })
                 });
             });
         }
@@ -256,7 +268,6 @@ module.exports = function(init) {
                     break;
                 case 'organizer':
                     evt.organizerHash = md5(event[p]);
-                    break;
                 default:
                     evt[p] = event[p];
             }

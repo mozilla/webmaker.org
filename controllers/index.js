@@ -19,6 +19,10 @@ exports.initMiddleware = function(app, app_name, model_name)
         res.format = function(fmts)
         {
             var fmt = req.param('_format');
+            util.objMap(fmts, function(v, k) {
+                if (v instanceof Array)
+                    fmts[k] = function() { res.reply.apply(res, v) }
+            });
             return (fmt && fmts[fmt]) ? fmts[fmt]() : format(fmts);
         };
 

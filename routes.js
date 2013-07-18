@@ -4,6 +4,7 @@ module.exports = function (C, app) {
     }
 
     route( 'GET',    '/events',           C.Events.index   );
+    route( 'GET',    '/events/metrics',   C.Events.metrics );
     route( 'GET',    '/events/:id',       C.Events.details );
     route( 'POST',   '/events',           C.Events.create  );
     route( 'PATCH',  '/events/:id',       C.Events.change  );

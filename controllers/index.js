@@ -14,11 +14,11 @@ exports.initMiddleware = function(app, app_name, model_name)
 {
     app.use('/'+app_name, function (req, res, next) {
 
-        // Optional Content-Type override via 'format' query-parameter.
+        // Optional Content-Type selection via '_format' query-parameter.
         var format = res.format.bind(res);
         res.format = function(fmts)
         {
-            var fmt = req.param('format');
+            var fmt = req.param('_format');
             return (fmt && fmts[fmt]) ? fmts[fmt]() : format(fmts);
         };
 

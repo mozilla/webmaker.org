@@ -149,6 +149,10 @@ module.exports = function(init) {
                     })
                 });
             });
+        },
+        metrics: function(req, res)
+        {
+            res.reply('metrics');
         }
     };
 

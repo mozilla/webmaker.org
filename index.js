@@ -43,6 +43,11 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     // S3 Client
     ctx.s3 = require('./config/s3').call(ctx, app);
 
+    // LoginAPI
+    process.nextTick(function() {
+        ctx.loginAPI = require(app_root+'/lib/loginapi');
+    });
+
     // Controllers
     ctx.controllers = require('./controllers').call(ctx, app);
     app.use(express.methodOverride());

@@ -2,8 +2,8 @@ module.exports = function(init) {
     init('events', 'event');
 
     var Event = this.models.Event,
-        Admin = this.models.Admin,
         s3    = this.s3,
+        ctx   = this,
         util  = require('../util'),
         fs    = require('fs'),
         crypto   = require('crypto'),
@@ -240,7 +240,11 @@ module.exports = function(init) {
 
     function fetch_event(req, cb, modify) {
         var res = req.res;
-        Admin.checkUser(req.session.email, function(isAdmin) {
+
+        ctx.loginAPI.isAdmin(req.session.username, function(err, isAdmin) {
+            if (err)
+                return res.reply(500, err);
+
             Event.find(req.params.id).success(function(event) {
                 if (!event)
                     return res.reply(404, 'Event not found');
@@ -260,6 +264,7 @@ module.exports = function(init) {
         function _reply(body, isAdmin) {
             var events_safe = body.events.map(event_output_filter),
                 events = body.events.map(event_output_transform);
+
             res.format({
                 html: function() {
                     body.events = events;
@@ -281,7 +286,11 @@ module.exports = function(init) {
                 }
             })
         }
-        Admin.checkUser(req.session.email, function(isAdmin) {
+
+        ctx.loginAPI.isAdmin(req.session.username, function(err, isAdmin) {
+            if (err)
+                return res.reply(500, err);
+
             if (requireAdmin && !isAdmin)
                 return res.reply(403, 'Must be an admin user.');
 
@@ -289,8 +298,10 @@ module.exports = function(init) {
                 // paginate results
                 var page  = Math.abs(parseInt(req.query._page)  || 0),
                     limit = Math.abs(parseInt(req.query._limit) || PAGE_SIZE);
+
                 Event.findAll({ offset: page * limit, limit: limit }).success(function(events) {
                     var count = events.length;
+
                     _reply({
                         count:      count,
                         page:       page,

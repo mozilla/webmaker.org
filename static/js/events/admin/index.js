@@ -1,4 +1,4 @@
-define(['jquery', 'rails'],
+define(['jquery', 'rails', 'responsive', 'domReady!'],
 function ($) {
     $('.toggle-featured').on('ajax:beforeSend', function(ev, xhr, status) {
         console.log(xhr);
@@ -12,5 +12,9 @@ function ($) {
             console.log(action, featured);
             $b[featured ^ action ? 'removeClass':'addClass']('hidden');
         });
+    });
+    $('table#event-list tr').click(function(ev) {
+        if ($(ev.target).is('td'))
+            location = $(this).find('a.icon-chevron-sign-right').prop('href');
     });
 });

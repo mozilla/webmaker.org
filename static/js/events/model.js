@@ -1,4 +1,4 @@
-define(['resource_model'], function (ResourceModel) {
+define(['resource_model', 'markdown'], function (ResourceModel) {
 
     var EventModel = new ResourceModel({
         name:   'event',
@@ -40,14 +40,14 @@ define(['resource_model'], function (ResourceModel) {
             + this.organizerId + '</div>'
     };
     EventModel.prototype.descriptionHTML = function() {
-        var desc = this.description,
-            len  = 240;
-        if (desc.length > len) {
-            desc = desc.substring(0, len);
+        var desc = this.description || "",
+            max_len  = 240;
+        if (desc.length > max_len) {
+            desc = desc.substring(0, max_len);
             desc = desc.replace(/\w+$/, '');
             desc += ' ...';
         }
-        return '<div class="info-description">' + desc + '</div>'
+        return '<div class="info-description">' + markdown.toHTML(desc) + '</div>'
     };
 
     // TODO: convert to html-fragment

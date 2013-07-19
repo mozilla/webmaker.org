@@ -1,54 +1,58 @@
 body#events.admin {
     table#event-list {
-        margin: 4px;
         border-collapse: collapse;
+        margin: 4px;
 
-        thead {
-            .icon-star {
-                color: yellow;
-            }
-            td {
-                font-weight: bold;
-            }
-            td#featured-column-header {
-                text-align: center;
+        td {
+            padding: 2px 6px;
+        }
+        @media (max-width: 640px) {
+            .collapse {
+                display: block;
             }
         }
-        tbody {
-            a { .clickable }
-            tr {
-                .actions-overlay {
-                    padding: 1px 4px;
-                    background: rgba(180, 180, 180, 0.6);
-                    border-radius: 8px;
-                    position: absolute;
-                    right: 10px;
+        .email-address {
+            font-family: 'monospace';
+            &:before { content: '<'; }
+            &:after  { content: '>'; }
+        }
+        tr {
+            &:nth-child(odd) {
+                background: #eeeeff;
+            }
+            .actions-overlay {
+                background: rgba(180, 180, 180, 0.6);
+                display:    none;
+                position:   absolute;
+                right:      10px;
 
-                    line-height: 1;
+                border-radius: 7px;
+                padding:    2px 4px;
 
-                    display: none;
-                    a {
-                        color: #f3f3f3;
-                        &:hover {
-                            color: #fff;
-                        }
-                    }
-                }
-                &:hover {
-                    background: #eeeeff;
-                    .clickable;
+                line-height: 1;
 
-                    .actions-overlay {
-                        display: inline;
+                a {
+                    color: #f3f3f3;
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
-            button {
-                background: transparent;
-                border:     none;
-
+            &:hover {
+                background: #dfdfdf;
                 .clickable;
+
+                .actions-overlay {
+                    display: inline;
+                }
             }
+        }
+        a { .clickable }
+        button {
+            background: transparent;
+            border:     none;
+
+            .clickable;
         }
     }
 }

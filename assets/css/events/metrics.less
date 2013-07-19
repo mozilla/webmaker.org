@@ -7,6 +7,15 @@ body#events.metrics {
 
     .metrics {
       position: relative;
+      font-size: .85em;
+
+      .value {
+        font-weight: bold;
+        font-size: 1.8em;
+        display: block;
+        line-height: 1;
+        margin-top: 10px;
+      }
 
       .squares {
         float: left;
@@ -36,17 +45,10 @@ body#events.metrics {
       }
 
       .square, .rectangle {
-        padding: 20px;
+        padding: 30px;
         color: white;
         font-size: 3em;
       }
-    }
-
-    img.desaturate{
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
-      filter: grayscale(100%);
-      filter: url(desaturate.svg#greyscale);
     }
   }
 }

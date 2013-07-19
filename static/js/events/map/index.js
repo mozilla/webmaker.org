@@ -11,25 +11,17 @@ function ($, google, MapMaker, EventForms) {
         backgroundColor: "#a5bfdd", // set color of loading tiles
 
         rotateControl: false,
-        scaleControl: true,
-        streetViewControl: true,
+        scaleControl: false,
         overviewMapControl: false,
-
         mapTypeControl: false,
-        mapTypeControlOptions: {
-            style: gm.MapTypeControlStyle.HORIZONTAL_BAR,
-            mapTypeIds: [ 'webmaker_style',
-                gm.MapTypeId.ROADMAP, gm.MapTypeId.SATELLITE,
-                gm.MapTypeId.HYBRID, gm.MapTypeId.TERRAIN ]
-        },
+        panControl: false,
 
-        panControl: true,
-        panControlOptions: {
-            position:   gm.ControlPosition.TOP_RIGHT
-        },
         zoomControl: true,
         zoomControlOptions: {
-            style:      gm.ZoomControlStyle.LARGE,
+            position:   gm.ControlPosition.TOP_RIGHT
+        },
+        streetViewControl: true,
+        streetViewControlOptions: {
             position:   gm.ControlPosition.TOP_RIGHT
         }
     };

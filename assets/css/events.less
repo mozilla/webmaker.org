@@ -4,16 +4,27 @@
 @import "events/party";
 @import "events/admin";
 
+html { height: 100%; }
 body#events {
+    height: 100%;
+
+
     * { box-sizing: border-box; }
-    #map-canvas * { box-sizing: content-box; }
+
+    .webmaker-outer-wrapper {
+        height: 100%;
+    }
     main {
-        overflow: auto;
+        height: 100%;
         margin-bottom: 0px;
+        overflow: auto;
     }
     footer,.make-footer {
         z-index: 2;
         margin-top: 0px;
+    }
+    #footer-actions {
+        display: none;
     }
 }
 .clear { clear: both; }

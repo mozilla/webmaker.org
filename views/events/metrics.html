@@ -3,5 +3,26 @@
 {% block title %}Event Metrics{% endblock %}
 
 {% block body %}
+{{ super() }}
+
+<div class="dashboard">
+  <div class="metrics">
+    <div class="squares">
+      <div class="square blue desaturate">
+        2,305
+        Total Events
+        Submitted by 902 users
+      </div>
+      <div class="square gray">
+        648 Upcoming Events
+      </div>
+    </div>
+    <div class="rectangle">
+      20,654 Attendees
+      in  1,104 Cities
+
+      Across 76 Countries
+    </div>
+  </div>
 
 {% endblock %}

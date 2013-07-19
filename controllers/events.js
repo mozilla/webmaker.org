@@ -7,8 +7,7 @@ module.exports = function(init) {
         util  = require('../util'),
         fs    = require('fs'),
         crypto   = require('crypto'),
-        express  = require('express'),
-        markdown = require('markdown').markdown;
+        express  = require('express');
 
     function md5(data) {
         return crypto.createHash('md5').update(data).digest("hex");

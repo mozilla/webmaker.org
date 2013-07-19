@@ -7,8 +7,7 @@ module.exports = function(init) {
         util  = require('../util'),
         fs    = require('fs'),
         crypto   = require('crypto'),
-        express  = require('express'),
-        markdown = require('markdown').markdown;
+        express  = require('express');
 
     function md5(data) {
         return crypto.createHash('md5').update(data).digest("hex");
@@ -26,34 +25,7 @@ module.exports = function(init) {
     return {
         index:  function(req, res)
         {
-            if (req.query._page || req.query._limit) {
-                // paginate results
-                var page  = Math.abs(parseInt(req.query._page) || 0),
-                    limit = Math.abs(parseInt(req.query._limit) || PAGE_SIZE);
-                Event.findAll({ offset: page * limit, limit: limit }).success(function(events) {
-                    var count = events.length;
-                    res.reply(200, {
-                        count:      events.length,
-                        page:       page,
-                        next:       count ? '/events/?_page='+(page+1) : null,
-                        previous:   page  ? '/events/?_page='+(page-1) : null,
-                        offset:     page * limit,
-                        events:     events.map(event_output_filter)
-                    });
-                })
-            } else Event.all().success(function(events) {
-                res.format({
-                    html: ['map', { events: events.map(event_output_transform) }],
-                    json: [200, { events: events.map(event_output_filter) }],
-                    csv:  function() {
-                        var source_array = events.map(event_output_filter).map(function(event) {
-                            return SAFE_FIELDS.map(function(c) { return event[c] })
-                        });
-                        source_array.unshift(SAFE_FIELDS);
-                        res.reply(200, source_array);
-                    }
-                })
-            });
+            list_events(req, 'map');
         },
         create: function(req, res)
         {
@@ -130,25 +102,7 @@ module.exports = function(init) {
         },
         admin: function(req, res)
         {
-            Admin.checkUser(req.session.email, function(isAdmin) {
-                if (!isAdmin)
-                    res.reply(403, 'Must be an admin user.');
-                else Event.all().success(function(events) {
-                    events = events.map(event_output_transform);
-                    res.format({
-                        html: ['admin', { events: events }],
-                        json: [200, { events: events }],
-                        csv:  function() {
-                            var fields = SAFE_FIELDS.concat('organizer');
-                            var source_array = events.map(function(event) {
-                                return fields.map(function(c) { return event[c] })
-                            });
-                            source_array.unshift(fields);
-                            res.reply(200, source_array);
-                        }
-                    })
-                });
-            });
+            list_events(req, 'admin', true);
         },
         metrics: function(req, res)
         {
@@ -202,10 +156,10 @@ module.exports = function(init) {
             featured: function(event) {
                 var bool_true   = event.featured == true,
                     bool_false  = event.featured == false,
-                    sbool_true    = event.featured == "true",
-                    sbool_false   = event.featured == "false",
-                    snum_true    = event.featured == "1",
-                    snum_false   = event.featured == "0";
+                    sbool_true  = event.featured == "true",
+                    sbool_false = event.featured == "false",
+                    snum_true   = event.featured == "1",
+                    snum_false  = event.featured == "0";
                 if (bool_true ^ bool_false)
                     return bool_true
                 if (sbool_true ^ sbool_false)
@@ -287,6 +241,7 @@ module.exports = function(init) {
                     .forEach(function(p) { evt[p] = event[p] });
         return evt;
     }
+
     function fetch_event(req, cb, modify) {
         var res = req.res;
         Admin.checkUser(req.session.email, function(isAdmin) {
@@ -300,6 +255,55 @@ module.exports = function(init) {
                 cb(event, isAdmin);
             }).error(function(err) {
                 res.reply(404, 'Event not found');
+            });
+        })
+    }
+    function list_events(req, view, requireAdmin) {
+        var res = req.res;
+
+        function _reply(body, isAdmin) {
+            var events_safe = body.events.map(event_output_filter),
+                events = body.events.map(event_output_transform);
+            res.format({
+                html: function() {
+                    body.events = events;
+                    res.reply(view, body);
+                },
+                json: function() {
+                    body.events = isAdmin ? events : events_safe;
+                    res.reply(200, body);
+                },
+                csv:  function() {
+                    body.events = isAdmin ? events : events_safe;
+                    var fields  = isAdmin ? SAFE_FIELDS.concat('organizer')
+                                          : SAFE_FIELDS;
+                    var source_array = body.events.map(function(event) {
+                        return fields.map(function(c) { return event[c] })
+                    });
+                    source_array.unshift(fields);
+                    res.reply(200, source_array);
+                }
+            })
+        }
+        Admin.checkUser(req.session.email, function(isAdmin) {
+            if (requireAdmin && !isAdmin)
+                return res.reply(403, 'Must be an admin user.');
+
+            if (req.query._page || req.query._limit) {
+                // paginate results
+                var page  = Math.abs(parseInt(req.query._page)  || 0),
+                    limit = Math.abs(parseInt(req.query._limit) || PAGE_SIZE);
+                Event.findAll({ offset: page * limit, limit: limit }).success(function(events) {
+                    _reply({
+                        page:       page,
+                        next:       count ? '/events/?_page='+(page+1) : null,
+                        previous:   page  ? '/events/?_page='+(page-1) : null,
+                        offset:     page * limit,
+                        events:     events.map(event_output_filter)
+                    }, isAdmin);
+                });
+            } else Event.all().success(function(events) {
+                _reply({ events: events }, isAdmin);
             });
         })
     }

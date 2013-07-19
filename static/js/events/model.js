@@ -40,10 +40,10 @@ define(['resource_model', 'markdown'], function (ResourceModel) {
             + this.organizerId + '</div>'
     };
     EventModel.prototype.descriptionHTML = function() {
-        var desc = this.description,
-            len  = 240;
-        if (desc.length > len) {
-            desc = desc.substring(0, len);
+        var desc = this.description || "",
+            max_len  = 240;
+        if (desc.length > max_len) {
+            desc = desc.substring(0, max_len);
             desc = desc.replace(/\w+$/, '');
             desc += ' ...';
         }

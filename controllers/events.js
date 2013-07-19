@@ -290,12 +290,14 @@ module.exports = function(init) {
                 var page  = Math.abs(parseInt(req.query._page)  || 0),
                     limit = Math.abs(parseInt(req.query._limit) || PAGE_SIZE);
                 Event.findAll({ offset: page * limit, limit: limit }).success(function(events) {
+                    var count = events.length;
                     _reply({
+                        count:      count,
                         page:       page,
                         next:       count ? '/events/?_page='+(page+1) : null,
                         previous:   page  ? '/events/?_page='+(page-1) : null,
                         offset:     page * limit,
-                        events:     events.map(event_output_filter)
+                        events:     events
                     }, isAdmin);
                 });
             } else Event.all().success(function(events) {

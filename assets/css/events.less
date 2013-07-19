@@ -1,14 +1,10 @@
 @import "mixins";
 @import "events/details";
 @import "events/map";
-@import "events/party";
 @import "events/admin";
 
-html { height: 100%; }
+html,body { height: 100%; }
 body#events {
-    height: 100%;
-
-
     * { box-sizing: border-box; }
 
     .webmaker-outer-wrapper {
@@ -16,7 +12,7 @@ body#events {
     }
     main {
         height: 100%;
-        margin-bottom: 0px;
+        width:  100%;
         overflow: auto;
     }
     footer,.make-footer {

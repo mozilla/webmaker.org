@@ -1,4 +1,4 @@
-define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'domReady!'],
+define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'responsive', 'domReady!'],
 function ($, UI, MapMaker) {
     $('.clear-input').click(function () {
         $(this).prev('input').val('').trigger('change');
@@ -25,8 +25,6 @@ function ($, UI, MapMaker) {
         },
         showDuration: true
     });
-
-    setTimeout(scroll.bind(window, 0, 0), 100);
 
     return {
         setupImageUpload: function ($form) {

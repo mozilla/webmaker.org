@@ -15,6 +15,14 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     nunjucksEnv.loaders.push(new nunjucks.FileSystemLoader(paths.views));
     nunjucksEnv.addFilter('json', JSON.stringify.bind(JSON));
     nunjucksEnv.addFilter('markdown', markdown.toHTML.bind(markdown));
+    nunjucksEnv.addFilter('intcomma', function(val) {
+        var oldStr = val.toString(), newStr;
+        while (oldStr != newStr) {
+            newStr = oldStr.replace(/^(-?\d+)(\d{3})/, '$1,$2');
+            oldStr = newStr;
+        }
+        return newStr;
+    });
 
     // Assets
     var optimize = process.env.NODE_ENV === 'production';

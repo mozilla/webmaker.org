@@ -106,7 +106,18 @@ module.exports = function(init) {
         },
         metrics: function(req, res)
         {
-            res.reply('metrics');
+            var event_stats = {
+                total_events: 2305,
+                upcoming_events: 648,
+                users: 902,
+                total_attendees: 20654,
+                cities: 1104,
+                countries: 76
+            };
+            res.format({
+                html: ['metrics', { stats: event_stats }],
+                json: [200, { stats: event_stats }]
+            });
         }
     };
 

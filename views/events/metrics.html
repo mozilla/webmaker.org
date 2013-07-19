@@ -9,19 +9,21 @@
   <div class="metrics">
     <div class="squares">
       <div class="square blue desaturate">
-        2,305
+        {{ stats.total_events|intcomma }}
         Total Events
-        Submitted by 902 users
+        Submitted by {{ stats.users|intcomma }} users
       </div>
       <div class="square gray">
-        648 Upcoming Events
+        {{ stats.upcoming_events|intcomma }}
+        Upcoming Events
       </div>
     </div>
     <div class="rectangle">
-      20,654 Attendees
-      in  1,104 Cities
+      {{ stats.total_attendees|intcomma }}
+      Attendees
+      in {{ stats.cities|intcomma }} Cities
 
-      Across 76 Countries
+      Across {{ stats.countries|intcomma }} Countries
     </div>
   </div>
 

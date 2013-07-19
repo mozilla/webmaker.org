@@ -17,17 +17,19 @@
             <input name="where" type="text" placeholder="Where?" />
             <span class="icon-remove clear-input"></span>
         </span>
-        <span class="ui-input ui-append">
-            <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
-            <input name="when-start"  type="text" placeholder="Start Date" class="datepicker" />
-            <span class="icon-remove clear-input"></span>
-        </span>
-        <span class="ui-input ui-append">
-            <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
-            <input name="when-end"  type="text" placeholder="End Date" class="datepicker" />
-            <span class="icon-remove clear-input"></span>
-        </span>
-        <button type="submit" class="icon-chevron-right"></button>
+        <div class="break-right">
+          <span class="ui-input ui-append">
+              <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+              <input name="when-start"  type="text" placeholder="Start Date" class="datepicker" />
+              <span class="icon-remove clear-input"></span>
+          </span>
+          <span class="ui-input ui-append">
+              <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+              <input name="when-end"  type="text" placeholder="End Date" class="datepicker" />
+              <span class="icon-remove clear-input"></span>
+          </span>
+          <button type="submit" class="icon-chevron-right"></button>
+        </div>
     </form>
 
     <div class="overlay-buttons">
@@ -104,7 +106,7 @@
             </div>
             <input name="_csrf" type="hidden" value="{{ csrf }}" />
 
-            <button type="submit">
+            <button type="submit" data-disable-with="Submitting...">
                 Submit your event
                 <span class="icon-chevron-right"></span>
             </button>

@@ -15,6 +15,15 @@
 @import "map/find";
 
 body#events.map {
+
+    #midbar {
+        background: #fff;
+        max-height: 135px;
+        z-index:    0;
+        overflow:   hidden;
+        margin:     -5px 0px;
+    }
+
     .ui-append {
         display: inline-block;
 
@@ -26,7 +35,8 @@ body#events.map {
     #map-canvas {
         background: @oceanBlue;
         position:   relative;
-        height:     800px;
+        width:      100%;
+        height:     100%;
         z-index:    1;
 
         * { box-sizing: content-box; }

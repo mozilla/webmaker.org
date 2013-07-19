@@ -1,19 +1,27 @@
 @import "mixins";
 @import "events/details";
 @import "events/map";
-@import "events/party";
 @import "events/admin";
 @import "events/metrics";
 
+html,body { height: 100%; }
 body#events {
     * { box-sizing: border-box; }
-    #map-canvas * { box-sizing: content-box; }
+
+    .webmaker-outer-wrapper {
+        height: 100%;
+    }
     main {
-        margin-bottom: 0px;
+        height: 100%;
+        width:  100%;
+        overflow: auto;
     }
     footer,.make-footer {
         z-index: 2;
         margin-top: 0px;
+    }
+    #footer-actions {
+        display: none;
     }
 }
 .clear { clear: both; }

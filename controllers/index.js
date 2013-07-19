@@ -51,6 +51,9 @@ exports.initMiddleware = function(app, app_name, model_name)
                     res.send(code, obj);
                 },
                 csv: function () {
+                    if (isError)
+                        return res.send(code, msg);
+
                     res.setHeader('Content-type', 'text/csv');
                     // Uncomment for 'save-as' vs embedded viewer
                     // res.setHeader('Content-Disposition', 'attachment;filename="events.csv"');

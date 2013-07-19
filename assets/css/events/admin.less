@@ -17,9 +17,30 @@ body#events.admin {
         tbody {
             a { .clickable }
             tr {
+                .actions-overlay {
+                    padding: 1px 4px;
+                    background: rgba(180, 180, 180, 0.6);
+                    border-radius: 8px;
+                    position: absolute;
+                    right: 10px;
+
+                    line-height: 1;
+
+                    display: none;
+                    a {
+                        color: #f3f3f3;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
                 &:hover {
                     background: #eeeeff;
                     .clickable;
+
+                    .actions-overlay {
+                        display: inline;
+                    }
                 }
             }
             button {

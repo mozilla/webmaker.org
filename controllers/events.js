@@ -37,7 +37,7 @@ module.exports = function(init) {
                 return res.reply(400, 'Invalid Event provided');
 
             if (!(event.organizer = req.session.email))
-                return res.reply(401, 'Log in to create Events');
+                return res.reply(401, 'Log in to create events');
 
             if (!(event.organizerId = req.session.username))
                 return res.reply(403, 'Create an account first');
@@ -106,17 +106,28 @@ module.exports = function(init) {
         },
         metrics: function(req, res)
         {
-            var event_stats = {
-                total_events: 2305,
-                upcoming_events: 648,
-                users: 902,
-                total_attendees: 20654,
-                cities: 1104,
-                countries: 76
-            };
-            res.format({
-                html: ['metrics', { stats: event_stats }],
-                json: [200, { stats: event_stats }]
+            Event.all().success(function(events) {
+                var users     = {},
+                    attendees = 0,
+                    upcoming  = events.filter(function(event) {
+                        users[event.organizer] = 1;
+                        attendees += event.attendees;
+                        return event.beginDate >= new Date();
+                    }).length;
+                var event_stats = {
+                    total_events: events.length,
+                    upcoming_events: upcoming,
+                    users: Object.keys(users).length,
+                    total_attendees: 20654,
+                    cities: 1104,
+                    countries: 76
+                };
+                res.format({
+                    html: ['metrics', { stats: event_stats }],
+                    json: [200, { stats: event_stats }]
+                });
+            }).error(function(err) {
+                res.reply(500, err);
             });
         }
     };

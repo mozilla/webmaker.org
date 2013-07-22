@@ -19,8 +19,8 @@ requirejs.config({
   }
 });
 
-require(['jquery','base/carousel', 'base/privacy', 'tabzilla', 'sso-ux'],
-  function ($, carousel, privacy) {
+require(['jquery','base/carousel', 'base/marquee', 'base/privacy', 'tabzilla', 'sso-ux'],
+  function ($, carousel, Marquee, privacy) {
     'use strict';
     var $html = $('html, body');
     var $window = $(window);
@@ -47,7 +47,15 @@ require(['jquery','base/carousel', 'base/privacy', 'tabzilla', 'sso-ux'],
      }
     });
     carousel.attachToCTA();
-    carousel.attachToPartners();
+
+    // Create Partner marquees
+    if ($('ul.sponsors').length) {
+      $('ul.sponsors').each(function () {
+        var marquee = new Marquee(this);
+        marquee.startRotation();
+      });
+    }
+
     privacy.attach();
 
     // Set up page-specific js

@@ -10,6 +10,9 @@ body#events.admin {
             .collapse {
                 display: block;
             }
+            .uncollapse {
+                display: inline-block;
+            }
         }
         .email-address {
             font-family: 'monospace';
@@ -20,18 +23,21 @@ body#events.admin {
             &:nth-child(odd) {
                 background: #eeeeff;
             }
+            td#column-title {
+                position:   relative;
+            }
             .actions-overlay {
                 background: rgba(180, 180, 180, 0.6);
                 display:    none;
                 position:   absolute;
+                top:        10px;
                 right:      10px;
 
                 border-radius: 7px;
-                padding:    2px 4px;
-
-                line-height: 1;
+                padding:    0px 4px;
 
                 a {
+                    line-height: 1;
                     color: #f3f3f3;
                     &:hover {
                         color: #fff;

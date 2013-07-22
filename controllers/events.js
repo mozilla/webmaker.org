@@ -56,7 +56,7 @@ module.exports = function(init) {
         },
         details: function(req, res)
         {
-            fetch_event(req, function(event, isAdmin) {
+            fetch_event(req, function(event) {
                 res.format({
                     html: ['details', { event: event_output_transform(event) }],
                     json: [200, { event: event_output_filter(event) }]
@@ -180,7 +180,7 @@ module.exports = function(init) {
                 return Boolean(event.featured)
             },
         };
-        // pre-process the Date/Time fields
+        // Date/Time field transforms
         ['begin', 'end'].forEach(function(pfx) {
             datetime_transform('Date', function(val) {
                 return val ? new Date(val) : null;
@@ -237,6 +237,8 @@ module.exports = function(init) {
                     break;
                 case 'organizer':
                     evt.organizerHash = md5(event[p]);
+                    evt.organizer = event[p];
+                    break;
                 default:
                     evt[p] = event[p];
             }
@@ -256,10 +258,7 @@ module.exports = function(init) {
     function fetch_event(req, cb, modify) {
         var res = req.res;
 
-        ctx.loginAPI.isAdmin(req.session.username, function(err, isAdmin) {
-            if (err)
-                return res.reply(500, err);
-
+        function _find_event(isAdmin) {
             Event.find(req.params.id).success(function(event) {
                 if (!event)
                     return res.reply(404, 'Event not found');
@@ -271,12 +270,20 @@ module.exports = function(init) {
             }).error(function(err) {
                 res.reply(404, 'Event not found');
             });
-        })
+        }
+
+        if (req.session.username && modify)
+            ctx.loginAPI.isAdmin(req.session.username, function(err, isAdmin) {
+                if (err)
+                    return res.reply(500, err);
+                _find_event(isAdmin);
+            })
+        else _find_event(false);
     }
     function list_events(req, view, requireAdmin) {
         var res = req.res;
 
-        function _reply(body, isAdmin) {
+        function _reply_events(body, isAdmin) {
             var events_safe = body.events.map(event_output_filter),
                 events = body.events.map(event_output_transform);
 
@@ -301,14 +308,7 @@ module.exports = function(init) {
                 }
             })
         }
-
-        ctx.loginAPI.isAdmin(req.session.username, function(err, isAdmin) {
-            if (err)
-                return res.reply(500, err);
-
-            if (requireAdmin && !isAdmin)
-                return res.reply(403, 'Must be an admin user.');
-
+        function _list_events(isAdmin) {
             if (req.query._page || req.query._limit) {
                 // paginate results
                 var page  = Math.abs(parseInt(req.query._page)  || 0),
@@ -317,7 +317,7 @@ module.exports = function(init) {
                 Event.findAll({ offset: page * limit, limit: limit }).success(function(events) {
                     var count = events.length;
 
-                    _reply({
+                    _reply_events({
                         count:      count,
                         page:       page,
                         next:       count ? '/events/?_page='+(page+1) : null,
@@ -327,8 +327,19 @@ module.exports = function(init) {
                     }, isAdmin);
                 });
             } else Event.all().success(function(events) {
-                _reply({ events: events }, isAdmin);
+                _reply_events({ events: events }, isAdmin);
             });
-        })
+        }
+        if (req.session.username || requireAdmin)
+            ctx.loginAPI.isAdmin(req.session.username, function(err, isAdmin) {
+                if (requireAdmin && !isAdmin)
+                    return res.reply(403, 'Must be an admin user. ' + err);
+
+                if (err)
+                    return res.reply(500, err);
+
+                _list_events(isAdmin);
+            })
+        else _list_events(false);
     }
 };

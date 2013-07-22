@@ -73,7 +73,7 @@ module.exports = function () {
         Email:  {
             type:       Sequelize.STRING,
             validate:   { isEmail: true }
-        },
+        }
     });
     return Model;
 };

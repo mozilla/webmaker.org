@@ -21,7 +21,7 @@ module.exports = function (Model, t) {
             allowNull: true,
             defaultValue: null,
         },
-        attendees:                          t.Int,      // (0..5)
+        attendees:                          t.Int,
         beginDate:                          t.Date,
         endDate:                            t.Date,
         beginTime:                          t.Date,

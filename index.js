@@ -14,7 +14,9 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     // Views
     nunjucksEnv.loaders.push(new nunjucks.FileSystemLoader(paths.views));
     nunjucksEnv.addFilter('json', JSON.stringify.bind(JSON));
-    nunjucksEnv.addFilter('markdown', markdown.toHTML.bind(markdown));
+    nunjucksEnv.addFilter('markdown', function(text) {
+        return markdown.toHTML(text || '');
+    });
     nunjucksEnv.addFilter('intcomma', function(val) {
         var oldStr = val.toString(), newStr;
         while (oldStr != newStr) {

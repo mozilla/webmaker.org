@@ -60,7 +60,9 @@ function ($, EventModel, forms) { return function (mapMaker) {
     $.validator.addMethod('afterStartDate', function(val, endElem) {
         var start   = $('#event_beginDate').val(),
             end     = $(endElem).val();
-        return new Date(start) <= new Date(end)
+        if (start && end)
+            return new Date(start) <= new Date(end);
+        else return true;
     }, "End date must be after start date.");
 
     var $createForm = $('form#create-event');

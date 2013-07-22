@@ -195,6 +195,10 @@ module.exports = function(init) {
                     return snum_true
                 return Boolean(event.featured)
             },
+            attendees: function(event) {
+                if (event.attendees)
+                    return parseInt(event.attendees);
+            },
         };
         // Date/Time field transforms
         ['begin', 'end'].forEach(function(pfx) {

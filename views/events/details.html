@@ -116,6 +116,10 @@
           <label for="event_registerLink">Registration Link: </label>
           <input id="event_registerLink" type="text" name="registerLink"
                 placeholder="{{ event.registerLink or "http://example.com/" }}" />
+          <br >
+          <label for="event_attendees"># of Attendees: </label>
+          <input id="event_attendees" type="number" name="attendees"
+                placeholder="~{{ event.attendees or "?" }}" />
         </span>
 
         <div class="clear"></div>

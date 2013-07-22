@@ -1,5 +1,6 @@
 module.exports = function(req, res) {
-  var make = require("../lib/makeapi");
+  var make = require("../lib/makeapi"),
+      querystring = require("querystring");
 
   var DEFAULT_TYPE = "tags",
       DEFAULT_QUERY = "webmaker:featured",
@@ -8,10 +9,15 @@ module.exports = function(req, res) {
         "title",
         "user",
         "description"
+      ],
+      VALID_CONTENT_TYPES = [
+        "application/x-thimble",
+        "application/x-popcorn"
       ];
 
   var type = ( req.query.type || DEFAULT_TYPE ).toString(),
       query = ( req.query.q || DEFAULT_QUERY ).toString(),
+      contentType = ( req.query.contentType || '' ).toString(),
       sortByField = ( req.query.sortByField || "createdAt" ).toString(),
       sortByOrder = ( req.query.order || "desc" ).toString(),
       page = ( req.query.page || 1 ).toString(),
@@ -39,6 +45,13 @@ module.exports = function(req, res) {
       query = query.slice(1);
     }
     options[ type ] = query;
+  }
+
+  if ( contentType ) {
+    var cleanCT = querystring.unescape( contentType );
+    if ( VALID_CONTENT_TYPES.indexOf( contentType ) !== -1 ) {
+      options.contentType = cleanCT;
+    }
   }
 
   var limit = 12;

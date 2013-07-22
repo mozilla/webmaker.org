@@ -61,10 +61,14 @@ if(program.migrate) {
         }
 
         migrator.migrate({ method: 'down' })
+            .success(console.log.bind(console))
+            .error(console.error.bind(console));
       })
     })
   } else {
-    orm.sequelize.migrate()
+    migrator.migrate()
+        .success(console.log.bind(console))
+        .error(console.error.bind(console));
   }
 } else if(program.createMigration) {
   createMigrationsFolder()

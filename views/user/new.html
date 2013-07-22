@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}New User{% endblock %}
+{% block title %}{{ gettext("New User") }}{% endblock %}
 {% block css %}
 <link rel="stylesheet" href="/css/user/newaccount.css">
 {% endblock %}
@@ -8,27 +8,26 @@
 <div class="wm-user-panel">
   <div class="ui-wrapper ui-body">
       <div id="poster" class="ui-section">
-        <img id="claim-image" src="/img/img-Get-Involved-feature.jpg" alt="Get Involved">
+        <img id="claim-image" src="/img/img-Get-Involved-feature.jpg" alt="{{ gettext("Get Involved") }}">
           <div id="claim-message">
-            <h1>Claim your webmaker space</h1>
+            <h1>{{ gettext("Claim your webmaker space") }}</h1>
             <div class="form-wrapper">
             <form id="sso_create" action="{{personaSSO}}/user" method="POST">
-              <div id="claim-label"><input id="claim-input" placeholder="you" type="text" name="username" required> .makes.org</div>
+              <div id="claim-label"><input id="claim-input" placeholder="{{ gettext("you") }}" type="text" name="username" required> .makes.org</div>
 
               <p id="error-container"></p>
 
              <div class="checkboxes">
               <div class="row">
                 <input type="checkbox" name="bsd" id="bsd" class="inline">
-                <label for="bsd" class="inline">Send me email updates about Mozilla Webmaker and other projects</label>
+                <label for="bsd" class="inline">{{ gettext("Send me email updates") }}</label>
               </div>
               <div class="row">
                 <input type="checkbox" name="terms" id="terms" class="inline" required>
-                <label for="terms" class="inline">I agree to your <a href="{{personaSSO}}/terms">terms</a>
-                 and <a href="{{personaSSO}}/privacy">conditions</a></label>
+                <label for="terms" class="inline">{{ gettext("I agree to your terms") | instantiate | safe }}</label>
               </div>
             </div>
-            <p><button type="submit" class="sign-up" class="ui-btn">Sign up</button></p>
+            <p><button type="submit" class="sign-up" class="ui-btn">{{ gettext("Sign up") }}</button></p>
           </form>
           </div>
         </div>
@@ -36,9 +35,7 @@
       </div>
       <div class="ui-section">
         <div class="ui-row">
-          <div class="subtitle">Mozilla Webmaker creates software, projects and events that
-            promote digital literacy through making and sharing. We're an open source project
-            powered by makers, mentors and community leaders. We'd love you to get involved.</div>
+          <div class="subtitle">{{ gettext("9 Ways to get Involved parapgraph") }}</div>
         </div>
       </div>
     </div>

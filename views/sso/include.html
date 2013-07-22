@@ -35,8 +35,8 @@
     </style>
   </head>
   <body>
-    <button id="webmaker-login">{% if not transparent %}Sign in to save <span>Sign up</span>{% endif %}</button>
-    <button id="webmaker-logout">{% if not transparent %}Sign out{% endif %}</button>
+    <button id="webmaker-login">{% if not transparent %}{{ gettext("Sign in to save") }} <span>{{ gettext("Sign up") }}</span>{% endif %}</button>
+    <button id="webmaker-logout">{% if not transparent %}{{ gettext("Sign out") }}{% endif %}</button>
 
     <script src="https://login.persona.org/include.js"></script>
     <script>

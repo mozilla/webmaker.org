@@ -9,7 +9,7 @@
     <div class="g-2 filter hide">
       <div id="search">
         <div class="filter-bar">
-          <label for="search-filter"><span class="icon-th"></span> Filter the gallery</label>
+          <label for="search-filter"><span class="icon-th"></span> {{ gettext("Filter the gallery") }}</label>
           <select id="search-filter">
             {% for option in options %}
               <option value="{{ option.value | safe }}"{% if (option.default) %} selected{% endif %}>{{ option.title | safe }}</option>
@@ -30,7 +30,7 @@
         <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
         <div class="make-info">{{make.title}} by <a class="user-link" data-username="{{make.username}}">@{{make.username}}</a></div>
         <div class="btn-container">
-          <a href="{{make.remixurl}}" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> Remix</a>
+          <a href="{{make.remixurl}}" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix")}}</a>
         </div>
       </a>
     </div>

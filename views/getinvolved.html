@@ -1,96 +1,80 @@
 {% extends "layout.html" %}
-{% block title %}Get Involved{% endblock %}
+{% block title %}{{ gettext("Get Involved") }}{% endblock %}
 {% block body %}
 <div class="ui-wrapper ui-body">
 
   <div class="ui-poster">
-    <img src="/img/img-Get-Involved-feature.jpg" alt="Get Involved">
+    <img src="/img/img-Get-Involved-feature.jpg" alt="{{ gettext("Get Involved") }}">
   </div>
 
   <div class="ui-section">
 
     <div class="ui-row">
-      <h1>9 Ways to Get Involved with Webmaker</h1>
-      <div class="subtitle">Mozilla Webmaker creates software, projects and events that
-        promote digital literacy through making and sharing. We're an open source project
-        powered by makers, mentors and community leaders. We'd love you to get involved.</div>
+      <h1>{{ gettext("9 Ways to Get Involved with Webmaker") }}</h1>
+      <div class="subtitle">{{ gettext("9 Ways to get Involved parapgraph") }}</div>
     </div>
 
     <div class="ui-row">
       <ul class="getinvolved-list">
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="/tools">Make something</a></h3>
-        <p>Making is the basis of everything we do. A great place for you to start with Webmaker
-        is by creating something online using <a href="//popcorn.webmaker.org/">Popcorn Maker</a>
-        or <a href="//thimble.webmaker.org">Thimble</a> and sharing it with the world.</p>
+        <h3><a href="/{{lang}}/tools">{{ gettext("Make something") }}</a></h3>
+        <p>{{ gettext("Make something paragraph") | safe }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="/events">Find or host an event</a></h3>
-        <p>From hack jams to pop ups to the global <a href="/party">Maker Party</a>,
-        there's an event to suit every interest. Search for one near you or host
-        your own — we have <a href="/event-guides">guides</a> to show you how.</p>
+        <h3><a href="/{{lang}}/events">{{ gettext("Find or host an event") }}</a></h3>
+        <p>{{ gettext("Find or host an event paragraph") | instantiate | safe }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="/teach">Teach the web</a></h3>
-        <p>You don’t need to be a wizard to teach the web. We've created
-        <a href="/teach">hackable guides</a> for teaching digital
-        literacy, webmaking, online storytelling and more. </p>
+        <h3><a href="/{{lang}}/teach">{{ gettext("Teach the web") }}</a></h3>
+        <p>{{ gettext("Teach the web paragraph") | instantiate | safe }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="/mentor">Become a mentor</a></h3>
-        <p>Mentoring is a chance to share your knowledge and provide
-        feedback directly to learners of all ages around the world
-        who are hungry for digital skills.</p>
+        <h3><a href="/{{lang}}/mentor">{{ gettext("Become a mentor") }}</a></h3>
+        <p>{{ gettext("Become a mentor paragraph") }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//sendto.mozilla.org/page/contribute/join-mozilla?source=join_link]">Donate to Webmaker</a></h3>
-        <p>As a non-profit organization, we depend on the generosity of people like you to fund our
-        goal of encouraging millions of people around the world to move beyond using the web to making
-        it. Please <a href="//sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">support our work</a>.</p>
+        <h3><a href="//sendto.mozilla.org/page/contribute/join-mozilla?source=join_link]">
+          {{ gettext("Donate to Webmaker") }}</a></h3>
+        <p>{{ gettext("Donate to Webmaker paragraph") }} {{ gettext("support our work") | safe }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//wiki.mozilla.org/Webmaker/Submit_your_project">Contribute a guide or resource</a></h3>
-        <p>Do you have a digital literacy project? We'd love to hear about it and potentially share it on Webmaker.org.</p>
+        <h3><a href="//wiki.mozilla.org/Webmaker/Submit_your_project">
+          {{ gettext("Contribute a guide or resource") }}</a></h3>
+        <p>{{ gettext("Contribute a guide or resource paragraph") }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//wiki.mozilla.org/Webmaker/Testing">Help with beta-testing & quality assurance</a></h3>
-        <p>Be the first to try out new <a href="/tools">Webmaker tools</a> and projects. Participate in user testing,
-        give feedback, or help with QA. Your testing and ideas will make Mozilla Webmaker products better and help shape
-        their future.</p>
+        <h3><a href="//wiki.mozilla.org/Webmaker/Testing">
+          {{ gettext("Help with beta-testing & quality assurance") }}</a></h3>
+        <p>{{ gettext("new Webmaker tools and projects") | instantiate | safe }} 
+          {{ gettext("participate in user testing paragraph") }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//wiki.mozilla.org/Webmaker/Code">Contribute code</a></h3>
-        <p>All Webmaker tools are open source. Contribute ideas, patches, bugs or your own demos
-        and prototypes. Access documentation, issue trackers and more.</p>
+        <h3><a href="//wiki.mozilla.org/Webmaker/Code">{{ gettext("Contribute code") }}</a></h3>
+        <p>{{ gettext("Contribute code paragraph") }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup">Communicate</a></h3>
+        <h3><a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup">
+          {{ gettext("Communicate")}}</a></h3>
         <ul class="communicate">
-          <li><strong>Sign up for the
-            <a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup">Webmaker announcement list</a></strong>.
-          Receive occasional email updates only about the most important stuff &mdash; about once a month.</li>
-          <li><strong>Join the <a href="//mzl.la/Webmaker_Newsgroup">Webmaker newsgroup</a>.</strong>
-          This is a more active daily discussion where you can help shape the direction of the Webmaker project.</li>
-          <li><strong>Connect through social media</strong>
-          and see what people are making, follow events from around the world and check out new Webmaker projects
-          by visiting our <a href="//mozillawebmaker.tumblr.com/">Tumblr</a>, <a href="//twitter.com/webmaker">Twitter</a>,
-          <a href="//www.facebook.com/mozilla">Facebook</a>, <a href="//www.flickr.com/photos/mozilladrumbeat/favorites/">Flickr</a> and
-          <a href="//blog.webmaker.org/">our blog</a>.</li>
-          <li><strong>Say hello on a <a href="//wiki.mozilla.org/Webmakers/Community_Calls">Webmaker Community call</a>.</strong>
-          Join our community calls every Tuesday. All are welcome! Ask questions, meet our community and staff and
-          find the resources you need.</li>
-          <li><strong>Wait, there's more!</strong>
-          We're a big community and we connect in many ways. Visit our <a href="//wiki.mozilla.org/Webmakers/Communications">communications wiki</a>
-          to find even more places you can reach us.</li>
+          <li><strong>{{ gettext("Sign up for Webmaker announcement list") }} 
+            {{ gettext("Receive occasional email paragraph") | safe}}</li>
+          <li><strong>{{ gettext("Join the Webmaker newsgroup") | safe }}</a></strong>
+          {{ gettext("active daily discussion paragraph") }}</li>
+          <li>{{ gettext("Connect through social media") | safe }}</li>
+          <li><strong>{{ gettext("Say hello on a Webmaker cummunity call") | safe }}</strong>
+          {{ gettext("Join our community call") }}</li>
+          <li><strong>{{ gettext("Wait, there's more!") }}</strong>
+          {{ gettext("connect in many ways.") }} 
+          {{ gettext("Visit our communications wiki") | safe }}</li>
         </ul>
         </li>
       </ul>

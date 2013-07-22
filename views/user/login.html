@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}Login{% endblock %}
+{% block title %}{{ gettext("Login") }}{% endblock %}
 {% block css %}
 <link rel="stylesheet" href="/css/user/persona.css">
 {% endblock %}
@@ -9,16 +9,16 @@
   <div class="ui-wrapper ui-body">
       <div id="poster" class="ui-section">
           <div class="ui-row">
-            <div class="g-4"><h1>Sign up for your Webmaker account.</h1></div>
+            <div class="g-4"><h1>{{ gettext("Sign up for your Webmaker account.") }}</h1></div>
             <div class="g-2"><div id="persona-container">
-              <span class="persona-button"><span class="text">Sign in</span><span class="tip"></span><iframe id="persona-iframe" src="{{personaSSO}}/sso/include-transparent.html" allowTransparency="true"></iframe></span>
+              <span class="persona-button"><span class="text">{{ gettext("Sign in") }}</span><span class="tip"></span><iframe id="persona-iframe" src="{{personaSSO}}/sso/include-transparent.html" allowTransparency="true"></iframe></span>
             </div></div>
           </div>
       </div>
       <div class="ui-section ui-section-toppad">
         <div class="ui-row">
-          <div class="subtitle">Webmaker uses Persona, a secure way to sign in. 
-            Learn more about <a href="http://www.mozilla.org/en-US/persona/">Persona.</a></div>
+          <div class="subtitle">{{ gettext("Webmaker uses Persona, a secure way to sign in.") }} 
+            {{ gettext("Learn more about Persona") | safe }}</div>
         </div>
       </div>
     </div>

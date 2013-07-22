@@ -1,120 +1,95 @@
 {% extends "layout.html" %}
-{% block title %}Mentor{% endblock %}
+{% block title %}{{ gettext("Mentor") }}{% endblock %}
 {% block body %}
 <div class="ui-wrapper ui-body">
 
   <div class="ui-poster">
-    <img src="/img/img-Mentor-feature.jpg" alt="Mentor" />
+    <img src="/img/img-Mentor-feature.jpg" alt="{{ gettext("Mentor") }}" />
   </div>
 
   <div class="ui-section">
 
     <div class="ui-row">
-      <h1>Mentor an eager learner</h1>
-      <div class="subtitle">As part of Mozilla’s non-profit <a href="http://www.mozilla.org/en-GB/about/manifesto/">mission</a>,
-	our goal is to spread digital literacy and skills through open collaboration.
-	Mentoring is key to accomplishing this on a global scale.
-	Webmaker mentors help others learn digital skills and share creative
-	new ways for teaching technology.</div>
+      <h1>{{ gettext("Mentor an eager learner") }}</h1>
+      <div class="subtitle">{{ gettext("Mentor an eager learner paragraph") | safe }}</div>
     </div>
 
     <div class="ui-row">
-      <h2>Who are Webmaker mentors?</h2>
-      <p>We're techies, makers, educators, parents and other passionate people who
-      care about creating a more web literate world. We support learners everywhere:
-      in our homes, offices, neighborhoods, classrooms and online. We believe
-      making something you love — online or off — is the best way to learn</p>
+      <h2>{{ gettext("Who are Webmaker mentors?") }}</h2>
+      <p>{{ gettext("We're techies") }}</p>
     </div>
 
-    <h2>Meet some amazing mentors.</h2>
+    <h2>{{ gettext("Meet some amazing mentors.") }}</h2>
     <div class="ui-row the-mentors">
 	<div class="g-2 mentor-profile">
 	  <div class="mentor-header">
-	    <img src="https://twimg0-a.akamaihd.net/profile_images/2729703766/09b21aeb9ae0f92f2deb5e2af8792893.jpeg" class="mentor-img" alt="Emma" />
-	    <h3>Emma</h3>
-	    <span>Video remixing and open source for youth</span>
+	    <img src="https://twimg0-a.akamaihd.net/profile_images/2729703766/09b21aeb9ae0f92f2deb5e2af8792893.jpeg" class="mentor-img" alt="{{ ("Emma") }}" />
+	    <h3>{{ gettext("Emma") }}</h3>
+	    <span>{{ gettext("Video remixing and open source for youth") }}</span>
 	  </div>
-	  <p>Emma ran a hack jam for 10-12 year olds at her local university computer
-	  lab in Victoria, Canada. Now she’s working with other mentors to launch
-	  #GenOpen, one of the world’s first open source projects run by and for youth.</p>
+	  <p>{{ gettext("About Emma") }}</p>
 	</div>
 	<div class="g-2 mentor-profile">
 	  <div class="mentor-header">
-	    <img src="http://content-2011.mozillafestival.org/uploads/2011/09/jonrogers-sm.jpg" class="mentor-img"  alt="Jon" />
-	    <h3>Jon</h3>
-	    <span>Making the web physical</span>
+	    <img src="http://content-2011.mozillafestival.org/uploads/2011/09/jonrogers-sm.jpg" class="mentor-img"  alt="{{ gettext("Jon") }}" />
+	    <h3>{{ gettext("Jon") }}</h3>
+	    <span>{{ gettext("Making the web physical") }}</span>
 	  </div>
-	  <p>Jon organized a 48-hour hack jam in Dundee, Scotland, exploring
-	  everything from a “Twitter bird” made out of paper and wire to hooking
-	  Google Maps up to an arcade joystick.</p>
+	  <p>{{ gettext("About Jon") }}</p>
 	</div>
 	<div class="g-2 mentor-profile">
 	  <div class="mentor-header">
-	    <img src="http://content-2012.mozillafestival.org/uploads/2013/01/unnati.jpg" class="mentor-img"  alt="Unnati" />
-	    <h3>Unnati</h3>
+	    <img src="http://content-2012.mozillafestival.org/uploads/2013/01/unnati.jpg" class="mentor-img" alt="{{ gettext("Unnati") }}" />
+	    <h3>{{ gettext("Unnati") }}</h3>
 	    <span>Youth mentor</span>
 	  </div>
-	  <p>Unnati participated in our Summer Code Party in 2012 where she
-	  learned to remix her own web pages using Thimble and Popcorn. She now
-	  shares her knowledge by teaching her friends, family and classmates basic HTML.</p>
+	  <p>{{ gettext("About Unnati") }}</p>
 	</div>
     </div>
 
     <div class="ui-row">
-      <h2>How to become a mentor</h2>
-      <p>Mentors help others learn  digital skills by providing direct feedback to
-      learners of any age from around the world. There is no formal application
-      or process to become a webmaking mentor. Instead, we invite you to simply get involved by:
+      <h2>{{ gettext("How to become a mentor") }}</h2>
+      <p>{{ gettext("Mentors help others learn") }}
       <ul>
-	<li><a href="/teach">Creating and sharing resources</a> like teaching guides,
-	  kits and activities with other techies and educators.</li>
-	<li><a href="/events">Hosting Webmaker events</a> to share your knowledge 
-		both in-person and online.</li>
-	<li><a href="https://wiki.mozilla.org/Webmakers/Community_Calls">Joining our weekly community calls</a>
-	  to connect with mentoring community.</li>
+		<li>{{ gettext("Creating and sharing resources") | instantiate | safe }}</li>
+		<li>{{ gettext("Hosting Webmaker events") | instantiate | safe }}</li>
+		<li>{{ gettext("Joining our weekly community calls") | safe }}</li>
       </ul></p>
     </div>
 
     <div class="ui-row">
-      <h2>Why become a mentor?</h2>
+      <h2>{{ gettext("Why become a mentor?") }}</h2>
       <ul>
-	<li><strong>Expand your network.</strong> Webmaker's mentor community spans the entire globe.
-	Connect with other techies, educators and mentors to exchange ideas and creative new
-	ways for teaching technology.</li>
-	<li><strong>Grow your reach.</strong> Mozilla's annual <a href="/party">Maker Party</a>
-	and the <a href="http://mozillafestival.org/">Mozilla Festival</a> attract thousands of
-	eager learners, not to mention filmmakers, journalists, politicians, artists and inventors.</li>
-	<li><strong>Get gear.</strong> Webmaker mentors get access to coveted Mozilla gear like stickers,
-	t-shirts and banners to excite learners and make events even more awesome.
-	<a href="mailto:makerparty@mozilla.org">Get in touch</a> to learn more.</li>
-	<li><strong>Shape standards.</strong> A global community that wants to teach the web right
-	is creating a <a href="https://wiki.mozilla.org/Learning/WebLiteracyStandard">Web Literacy Standard</a>.
-	We're trying to build consensus around the skills, competencies and literacies necessary to read, write
-	and participate on the web - now and in the future.</li>
-	<li><strong>Be on the cutting edge.</strong> Webmaker mentors are defining the future of education and
-	technology with innovative new pedagogies and interest-driven, learner-centered content.</li>
+		<li><strong>{{ gettext("Expand your network.") }}</strong> {{ gettext("Webmaker's mentor community") }}</li>
+		<li><strong>{{ gettext("Grow your reach.") }}</strong> {{ gettext("Mozilla's annual Maker Party") | instantiate | safe }}</li>
+		<li><strong>{{ gettext("Get gear.") }}</strong> {{ gettext("Webmaker mentors get access") | safe }}</li>
+		<li><strong>{{ gettext("Shape standards.") }}</strong> {{ gettext("A global community that wants") | safe }}</li>
+		<li><strong>{{ gettext("Be on the cutting edge.") }}</strong> {{ gettext("Webmaker mentors are defining the future") }}</li>
       </ul>
     </div>
 
-    <div class="ui-row">
-      <h2>Connecting with other mentors</h2>
-      <ul class="mentors-connect">
-	<li><i class="icon-angle-right"></i>
-	<h3><a href="https://twitter.com/search?q=%23teachtheweb">Tweet #teachtheweb</a></h3>
-	<p>The fastest way to get help, offer help and connect with other mentors.</p></li>
-	<li><i class="icon-angle-right"></i>
-	<h3><a href="https://plus.google.com/u/0/communities/106022863174952221205">Join our global conversation forum.</a></h3>
-	<p>This is the G+ community for anyone interested in teaching the web. Take part in discussions,
-	 find useful resources, and see what other people are making and learning.</p></li>
-	<li><i class="icon-angle-right"></i>
-	<h3><a href="/getinvolved">Get involved with Webmaker.</a></h3>
-	<p>From newsletters to community calls, there are many ways you can join our community.</p></li>
-	<li><i class="icon-angle-right"></i>
-	<h3><a href="https://sendto.mozilla.org/page/s/mentor-signup">Stay in touch.</a></h3>
-	<p>Join our Webmaker Mentor email list to stay up to date on key news and announcements.</p>
-	</li>
-      </ul>
-    </div>
+	<div class="ui-row">
+	  <h2>{{ gettext("Connecting with other mentors") }}</h2>
+	  <ul class="mentors-connect">
+	    <li><i class="icon-angle-right"></i>
+	      <h3><a href='https://twitter.com/search?q=%23teachtheweb'>{{ gettext("Tweet #teachtheweb") }}</a></h3>
+	      <p>{{ gettext("The fastest way to get help") }}</p>
+	    </li>
+	    <li><i class="icon-angle-right"></i>
+	      <h3><a href='https://plus.google.com/u/0/communities/106022863174952221205'>
+	      				{{ gettext("Join our global conversation forum.") }}</a></h3>
+	      <p>{{ gettext("This is the G+ community") }}</p>
+	    </li>
+	    <li><i class="icon-angle-right"></i>
+	      <h3><a href='/{{lang}}/getinvolved'>{{ gettext("Get involved with Webmaker.") }}</a></h3>
+	      <p>{{ gettext("From newsletters to community calls") }}</p>
+	    </li>
+	    <li><i class="icon-angle-right"></i>
+	      <h3><a href='https://sendto.mozilla.org/page/s/mentor-signup'>{{ gettext("Stay in touch.") }}</a></h3>
+	      <p>{{ gettext("Join our Webmaker Mentor email list") }}</p>
+	    </li>
+	  </ul>
+	</div>
 
   </div>
 </div>

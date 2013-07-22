@@ -10,7 +10,7 @@
 <body class="details-{{tool}}" data-tool="{{tool}}" data-url="{{url}}">
   <div id="content">
     <div id="mobile-warning">
-      <h1>Hey, just so you know, this site isn't fully functional on mobile.</h1>
+      <h1>{{ gettext("mobile unsupport") }}</h1>
     </div>
     {% if remixList %}
       <div class="ui-wrapper">
@@ -20,7 +20,7 @@
 
             <div class="remix-info">
               {% if remixedFromData %}
-              <span class="remixed-from-txt">Remixed from</span>
+              <span class="remixed-from-txt">{{ gettext("Remixed from") }}</span>
               <a target="_blank" href="{{ remixedFromData.url }}"><span class="remixed-user">@{{ remixedFromData.username }}</span></a>
               {% endif %}
               <div class="make-type-{{type}}">
@@ -63,7 +63,7 @@
               </div>
 
               <span class="social-media">
-                <a id="share-btn" class="share ui-btn"><span class="icon-share"></span> Share</a>
+                <a id="share-btn" class="share ui-btn"><span class="icon-share"></span> {{ gettext("Share") }}</a>
                 <span id="share-container" class="hidden">
                   <a target="_blank" id="google-btn"></a>
                   <a target="_blank" id="twitter-btn"></a>
@@ -72,7 +72,7 @@
               </span>
             </div>
 
-            <p class="built-with"><span class="built-with">Built with</span>
+            <p class="built-with"><span class="built-with">{{ gettext("Built with") }}</span>
               <span class="icon-{{tool}}"></span>
               <a target="_blank" href="{{remixurl}}" class="tool-name">{{ tool }}</a>
             </p>

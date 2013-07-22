@@ -1,17 +1,17 @@
 {% extends "layout.html" %}
-{% include 'macros.html' %}
+{% include "macros.html" %}
 
-{% block title %}Editor{% endblock %}
+{% block title %}{{ gettext("Editor") }}{% endblock %}
 {% block css %}<link rel="stylesheet" href="/css/editor.css">{% endblock %}
 {% block midbar %}{% endblock %}
 {% block body %}
 <div class="admin-sidebar">
   <div class="search-type">
-    <label class="active" data-field="user">User</label>
-    <label data-field="title">Title</label>
-    <label data-field="tags">Tags</label>
-    <label data-field="tagPrefix">Prefix</label>
-    <label data-field="id">ID</label>
+    <label class="active" data-field="user">{{ gettext("User") }}</label>
+    <label data-field="title">{{ gettext("Title") }}</label>
+    <label data-field="tags">{{ gettext("Tags") }}</label>
+    <label data-field="tagPrefix">{{ gettext("Prefix") }}</label>
+    <label data-field="id">{{ gettext("ID") }}</label>
   </div>
 
   <div class="sidebar-search">
@@ -21,11 +21,11 @@
     </span>
   </div>
   <div class="search-filter">
-    <label>Sort by</label>
+    <label>{{ gettext("Sort by") }}</label>
     <select id="filter">
-      <option value="createdAt" selected>Created at</option>
-      <option value="updatedAt">Updated at</option>
-      <option value="title">Title</option>
+      <option value="createdAt" selected>{{ gettext("Created at") }}</option>
+      <option value="updatedAt">{{ gettext("Updated at") }}</option>
+      <option value="title">{{ gettext("Title") }}</option>
     </select>
   </div>
   <div class="search-summary"></div>
@@ -37,12 +37,12 @@
   <!-- Admin options and stuff -->
   <div id="layout-header" class="ui-row">
     <div class="g-8">
-      <label>You are displaying the </label>
+      <label>{{ gettext("You are displaying the") }} </label>
       <select id="layout-select">
-        <option value="index"{% if layout == 'index'%} selected{% endif %}>Home page</option>
-        <option value="teach"{% if layout == 'teach'%} selected{% endif %}>Teach page</option>
+        <option value="index"{% if layout == 'index'%} selected{% endif %}>{{ gettext("Home page") }}</option>
+        <option value="teach"{% if layout == 'teach'%} selected{% endif %}>{{ gettext("Teach page") }}</option>
       </select>
-      <label> layout with the prefix </label>
+      <label> {{ gettext("layout with the prefix") }} </label>
       <select id="prefix-select">
         <option value="p"{% if prefix =='p'%} selected{% endif %}>webmaker:p-</option>
         <option value="teach"{% if prefix == 'teach'%} selected{% endif %}>webmaker:teach-</option>

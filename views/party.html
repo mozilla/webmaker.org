@@ -1,52 +1,52 @@
 {% extends "layout.html" %}
-{% block title %}Party{% endblock %}
+{% block title %}{{ gettext("Party") }}{% endblock %}
 {% block body %}
 <div class="ui-wrapper ui-body">
 
   <div class="ui-poster party-banner">
-    <img src="../img/img-Party-feature.jpg" alt="Maker Party" />
+    <img src="../img/img-Party-feature.jpg" alt="{{ gettext("Maker Party") }}" />
   </div>
 
   <div class="ui-section">
     <div class="ui-row">
-      <h1>Make something amazing on the web</h1>
-      <p>From June 15 to September 15, thousands of people around the world are meeting up, making cool stuff and teaching others at the 2013 Maker Party.</p>
+      <h1>{{ gettext("Make something amazing on the web") }}</h1>
+      <p>{{ gettext("From June 15 to September 15") }}</p>
     </div>
 
     <div class="ui-row">
       <div class="g-2">
-        <h3>Make Something</h3>
-        <p>From coding your first line of HTML to building apps that change the world, Maker Party is your chance to connect with a global community of creators. Build something from scratch or remix a project and make it your own.
-        <a href="/tools" class="ui-block">Start Making</a>
+        <h3>{{ gettext("Make Something") }}</h3>
+        <p>{{ gettext("From coding your first line of HTML to building apps") }}
+        <a href="/{{lang}}/tools" class="ui-block">{{ gettext("Start Making") }}</a>
         </p>
       </div>
       <div class="g-2">
-        <h3>Show Off Your Work</h3>
-        <p>Tag your work with #makerparty and inspire others. Share your knowledge, show off your creation and feel the love from the Webmaker community.
-        <a href="https://mozteach.makes.org/thimble/what-i-made-maker-party" class="ui-block">Share Your Project</a>
+        <h3>{{ gettext("Show Off Your Work") }}</h3>
+        <p>{{ gettext("Tag your work with #makerparty") }}
+        <a href="https://mozteach.makes.org/thimble/what-i-made-maker-party" class="ui-block">{{ gettext("Share Your Project") }}</a>
         </p>
       </div>
       <div class="g-2">
-        <h3>Create With Others</h3>
-        <p>The worldwide Maker Party will bring people together at hundreds of events over three months, from workshops, design sprints and code-a-thons to teen tech bashes and father-daughter hack jams. Find a party near you or use our handy event guides to host your own.
-        <br><a href="/events" class="ui-block">View Events</a>
+        <h3>{{ gettext("Create With Others") }}</h3>
+        <p>{{ gettext("The worldwide Maker Party will bring people together") }}
+        <br><a href="/{{lang}}/events" class="ui-block">{{ gettext("View Events") }}</a>
         </p>
       </div>
     </div>
 
     <div class="ui-row">
-      <h3>Need Help?</h3>
+      <h3>{{ gettext("Need Help?") }}</h3>
       <p>
-        Contact <a href="mailto:makerparty@mozilla.org">makerparty@mozilla.org</a> with your questions.
+        {{ gettext("Contact with your questions") | safe }}
       </p>
     </div>
 
     <div id="summer-of-making" class="ui-row">
-      <img src="../img/img-Party-making-summer.png" alt="Summer of Making and Connecting">
+      <img src="../img/img-Party-making-summer.png" alt="{{ gettext("Summer of Making and Connecting") }}">
       <div>
-        <h3>Summer of Making and Connecting</h3>
-        <p>Maker Party is a part of the MacArthur Foundation's Make Summer campaign.<br>
-        <a href="http://www.makesummer.org/">Learn more.</a></p>
+        <h3>{{ gettext("Summer of Making and Connecting") }}</h3>
+        <p>{{ gettext("Maker Party is a part of the MacArthur") }}<br>
+        <a href="http://www.makesummer.org/">{{ gettext("Learn more.") }}</a></p>
       </div>
     </div>
 
@@ -54,11 +54,11 @@
       <div class="g-6">
         <div class="ui-img-box makers-making">
           <figure>
-            <img class="ui-img" src="../img/makersmakingthings.jpg" alt="Makers making things">
+            <img class="ui-img" src="../img/makersmakingthings.jpg" alt="{{ gettext("Makers making things") }}">
           </figure>
         </div>
         <div class="ui-img-box maker-party-logo">
-          <img src="../img/makerpartygif.gif" alt="Maker Party Logo">
+          <img src="../img/makerpartygif.gif" alt="{{ gettext("Maker Party Logo") }}">
         </div>
       </div>
     </div>
@@ -66,23 +66,23 @@
 
   <div class="ui-section">
     <div class="ui-row">
-      <h2>Logos and Partner Stuff</h2>
+      <h2>{{ gettext("Logos and Partner Stuff") }}</h2>
     </div>
 
     <div class="ui-row">
       <div class="g-2">
-        <h3>Downloads</h3>
+        <h3>{{ gettext("Downloads") }}</h3>
         <img src="../img/resource-logo.png">
-        <p><strong>Standard logo</strong>
-        <br><a class="download" href="/img/MakerPartyLogo.eps">EPS</a> &#183; <a class="download" href="/img/MakerPartyLogo.png">PNG</a>
+        <p><strong>{{ gettext("Standard logo") }}</strong>
+        <br><a class="download" href="/img/MakerPartyLogo.eps">{{ gettext("EPS") }}</a> &#183; <a class="download" href="/img/MakerPartyLogo.png">{{ gettext("PNG") }}</a>
         </p>
       </div>
 
       <div class="g-2">
         <h3>&nbsp;</h3>
         <img src="../img/resource-wordmark.png">
-        <p><strong>Wordmark only</strong>
-        <br><a class="download" href="/img/MakerPartyWordmark.eps">EPS</a> &#183; <a class="download" href="/img/MakerPartyWordmark.png">PNG</a>
+        <p><strong>{{ gettext("Wordmark only") }}</strong>
+        <br><a class="download" href="/img/MakerPartyWordmark.eps">{{ gettext("EPS") }}</a> &#183; <a class="download" href="/img/MakerPartyWordmark.png">{{ gettext("PNG") }}</a>
         </p>
       </div>
 
@@ -91,29 +91,29 @@
   <a id="partners"></a>
   <div class="ui-section">
     <div class="ui-row">
-      <h2 class="party-partners">Party Partners</h2>
+      <h2 class="party-partners">{{ gettext("Party Partners") }}</h2>
     </div>
     <div class="party-hosts ui-row">
       <h3>Hosts</h3>
       <div class="g-2">
         <a href="//webmaker.org/">
-          <img src="/img/mozilla.png" alt="Mozilla" />
+          <img src="/img/mozilla.png" alt="{{ gettext("Mozilla") }}" />
         </a>
       </div>
       <div class="g-2">
         <a href="//www.macfound.org/">
-          <img src="/img/macarthur.png" alt="Mozilla" />
+          <img src="/img/macarthur.png" alt="{{ gettext("Mozilla") }}" />
         </a>
       </div>
       <div class="g-2">
         <a href="//www.nwp.org/">
-          <img src="/img/nwp.png" alt="Mozilla" />
+          <img src="/img/nwp.png" alt="{{ gettext("Mozilla") }}" />
         </a>
       </div>
     </div>
 
     <div class="ui-row">
-      <h3>Commitments</h3>
+      <h3>{{ gettext("Commitments") }}</h3>
       <div class="commitment-carousel">
         <div class="commitment-carousel-item">
           <img src="/img/img-party-quotes.png" alt="Party Quotes">
@@ -571,28 +571,28 @@
 {% endblock %}
 {% block CTA %}
   [{
-    "title": "Tools",
-    "desc": "Create an original or a remix using Popcorn Maker and Thimble.",
+    "title": "{{ gettext("Tools") }}",
+    "desc": "{{ gettext("Use our Tools Desc") }}",
     "image": "/img/cta-Tools.jpg",
-    "url": "/tools"
+    "url": "/{{lang}}/tools"
   },
   {
-    "title": "Events",
-    "desc": "Find an event near you or host your own.",
+    "title": "{{ gettext("Events") }}",
+    "desc": "{{ gettext("Events Desc") }}",
     "image": "/img/cta-Party.jpg",
-    "url": "/events"
+    "url": "/{{lang}}/events"
   },
   {
-    "title": "Teach",
-    "desc": "Teach the world digital literacy and webmaking.",
+    "title": "{{ gettext("Teach") }}",
+    "desc": "{{ gettext("Teach Desc") }}",
     "image": "/img/cta-Teach.jpg",
-    "url": "/teach"
+    "url": "/{{lang}}/teach"
   },
   {
-    "title": "About",
-    "desc": "Learn more about who we are and what makes us tick.",
+    "title": "{{ gettext("About Us") }}",
+    "desc": "{{ gettext("About Us Desc") }}",
     "image": "/img/cta-About-us.jpg",
-    "url": "/about"
+    "url": "/{{lang}}/about"
   }];
 {% endblock %}
 {% block require_page %}pages/party{% endblock %}

@@ -108,9 +108,14 @@ module.exports = function(init) {
         {
             Event.all().success(function(events) {
                 var users     = {},
+                    cities    = {},
+                    countries = {},
                     attendees = 0,
                     upcoming  = events.filter(function(event) {
                         users[event.organizer] = 1;
+                        cities[event.city] = 1;
+                        countries[event.country] = 1;
+                        attendees += event.attendees;
                         attendees += event.attendees;
                         return event.beginDate >= new Date();
                     }).length;
@@ -118,9 +123,9 @@ module.exports = function(init) {
                     total_events: events.length,
                     upcoming_events: upcoming,
                     users: Object.keys(users).length,
-                    total_attendees: 20654,
-                    cities: 1104,
-                    countries: 76
+                    total_attendees: attendees,
+                    cities: Object.keys(cities).length,
+                    countries: Object.keys(countries).length
                 };
                 res.format({
                     html: ['metrics', { stats: event_stats }],

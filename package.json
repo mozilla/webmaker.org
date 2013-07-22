@@ -22,6 +22,7 @@
     "uuid": "latest",
     "noxmox": "latest",
     "knox": "latest",
-    "csv": "latest"
+    "csv": "latest",
+    "mapquest": "latest"
   }
 }

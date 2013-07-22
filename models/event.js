@@ -21,6 +21,9 @@ module.exports = function (Model, t) {
             allowNull: true,
             defaultValue: null,
         },
+        city:                               t.String,
+        country:                            t.String,
+
         attendees:                          t.Int,
         beginDate:                          t.Date,
         endDate:                            t.Date,

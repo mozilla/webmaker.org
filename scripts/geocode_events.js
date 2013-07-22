@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 var mapquest = require('mapquest');
-var orm = require('../config/orm')();
-require('../models')(orm);
+var orm = require('../lib/orm');
 
 orm.models.Event.all().success(function(events) {
     events.forEach(function(event) {

@@ -42,16 +42,15 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     app.use(express.static(paths.static));
 
     // Models
-    ctx.orm = require('./config/orm').call(ctx);
-    require('./models').call(ctx);
+    ctx.orm = require('./lib/orm');
 
-    if (!require('./config/fixtures').call(ctx))
+    if (!require('./lib/fixtures').call(ctx))
         ctx.orm.sequelize.sync().error(console.error.bind(console));
 
     util.shortcut(ctx, 'models', ctx.orm);
 
     // S3 Client
-    ctx.s3 = require('./config/s3').call(ctx, app);
+    ctx.s3 = require('./lib/s3').call(ctx, app);
 
     // LoginAPI
     process.nextTick(function() {

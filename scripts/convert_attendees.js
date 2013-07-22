@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-var orm = require('../config/orm')();
-require('../models')(orm);
+var orm = require('../lib/orm');
 
 /* old attendee values
 0> 1-10

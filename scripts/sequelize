@@ -49,7 +49,7 @@ console.log("Using environment '" + environment + "'.")
 
 if(program.migrate) {
 
-  var orm             = require(process.cwd() + '/config/orm')()
+  var orm             = require(process.cwd() + '/lib/orm')
     , migratorOptions = { path: migrationsPath }
     , migrator        = orm.sequelize.getMigrator(migratorOptions)
 

@@ -1,6 +1,3 @@
-var mapquest = require('mapquest');
-var models = require('../models')(require('../config/orm')());
-
 module.exports = {
   up: function(migration, t, done) {
     // add altering commands here, calling 'done' when finished

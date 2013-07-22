@@ -23,12 +23,20 @@ var app = express(),
 nunjucksEnv.addFilter("instantiate", function(input) {
     var tmpl = new nunjucks.Template(input);
     return tmpl.render(this.getVariables());
-});    
+});
+
+if ( !( env.get( "MAKE_ENDPOINT" ) && env.get( "MAKE_PRIVATEKEY" ) && env.get( "MAKE_PUBLICKEY" ) ) ) {
+  throw new Error( "MakeAPI Config setting invalid or missing!" );
+}
 
 // Initialize make client so it is available to other modules
 require("./lib/makeapi")({
   apiURL: env.get( "MAKE_ENDPOINT" ),
-  auth: env.get( "MAKE_AUTH" )
+  hawk: {
+    key: env.get( "MAKE_PRIVATEKEY" ),
+    id: env.get( "MAKE_PUBLICKEY" ),
+    algorithm: "sha256"
+  }
 });
 
 var routes = require("./routes");

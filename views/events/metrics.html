@@ -8,22 +8,22 @@
 <div class="dashboard">
   <div class="metrics">
     <div class="squares">
-      <div class="square blue desaturate">
-        {{ stats.total_events|intcomma }}
+      <div class="square blue">
+        <span class="value">{{ stats.total_events|intcomma }}</span>
         Total Events
-        Submitted by {{ stats.users|intcomma }} users
+        Submitted by
+        <span class="value">{{ stats.users|intcomma }}</span> users
       </div>
       <div class="square gray">
-        {{ stats.upcoming_events|intcomma }}
-        Upcoming Events
+        <span class="value">{{ stats.upcoming_events|intcomma }}</span> Upcoming Events
       </div>
     </div>
     <div class="rectangle">
-      {{ stats.total_attendees|intcomma }}
-      Attendees
-      in {{ stats.cities|intcomma }} Cities
+      <span class="value">{{ stats.total_attendees|intcomma }} </span>
+      <span class="value">Attendees </span>
+      in <span class="value">{{ stats.cities|intcomma }}</span> Cities
 
-      Across {{ stats.countries|intcomma }} Countries
+      Across <span class="value">{{ stats.countries|intcomma }}</span> Countries
     </div>
   </div>
 

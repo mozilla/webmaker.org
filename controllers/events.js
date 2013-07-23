@@ -7,6 +7,7 @@ module.exports = function(init) {
         util  = require('../util'),
         fs    = require('fs'),
         crypto   = require('crypto'),
+        mapquest = require('mapquest'),
         express  = require('express');
 
     function md5(data) {
@@ -48,6 +49,7 @@ module.exports = function(init) {
             var allowed = util.sans(SAFE_FIELDS, ['id', 'featured', 'picture']).concat('organizer');
 
             Event.create(event, allowed).success(picture_handler(picture, function (event) {
+                geocode_filler(event);
                 res.reply(201, 'Event created', { event: event_output_filter(event) },
                                                 { location: event.uri() });
             })).error(function(err) {
@@ -83,6 +85,7 @@ module.exports = function(init) {
                     allowed.push('featured');
 
                 event.updateAttributes(changes, allowed).success(picture_handler(picture, function (event) {
+                    geocode_filler(event);
                     res.reply(200, 'Event modified', { event: event_output_filter(event) })
                 })).error(function(err) {
                     res.reply(400, 'Invalid Event changes', { error: err });
@@ -135,6 +138,18 @@ module.exports = function(init) {
             });
         }
     };
+
+    function geocode_filler(event) {
+        mapquest.reverse({
+            latitude:   event.latitude,
+            longitude:  event.longitude
+        }, function(err, loc) {
+            event.updateAttributes({
+                city:    loc.adminArea5,
+                country: loc.adminArea1
+            });
+        });
+    }
 
     function picture_handler(picture, cb) {
         return function(event) {

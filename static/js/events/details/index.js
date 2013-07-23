@@ -61,8 +61,9 @@ function ($, google, forms) {
         var place = autocomplete.getPlace();
         var loc = { latitude:   place.geometry.location.lat(),
                     longitude:  place.geometry.location.lng() };
-        for (var k in loc)
+        Object.keys(loc).forEach(function(k) {
             $editForm.find('input[name="'+k+'"]').val(loc[k]);
+        });
     });
 
     navigator.idSSO.app.onlogin = function(assert) {

@@ -105,32 +105,6 @@ body#events.metrics {
     }
 
     @media (max-width: 800px) {
-      .squares, .rectangle {
-        width: 90%;
-        margin: 5%;
-
-        .stat {
-          &:first-of-type {
-            padding-top: 0;
-          }
-        }
-
-        .value, em {
-          font-size: 1.4em;
-        }
-      }
-    }
-
-    @media (max-width: 1300px) {
-      .value, em  {
-        font-size: .75em;
-      }
-      .square, .rectangle  {
-        font-size: 2.5em;
-      }
-    }
-
-    @media (max-width: 1000px) {
       .square, .rectangle {
         padding: 30px;
         color: white;
@@ -149,6 +123,33 @@ body#events.metrics {
         margin-bottom: 25px;
         display: block;
         line-height: .75;
+      }
+
+      .squares, .rectangle {
+        width: 90%;
+        margin: 5%;
+
+        .stat {
+          &:first-of-type {
+            padding-top: 0;
+          }
+        }
+
+        .value, em {
+          font-size: 1.4em;
+        }
+      }
+    }
+
+    @media (max-width: 1300px) {
+      em  {
+      font-size: 1em;
+      }
+      .value {
+      font-size: 1.7em;
+      }
+      .square, .rectangle  {
+        font-size: 2.5em;
       }
     }
   }

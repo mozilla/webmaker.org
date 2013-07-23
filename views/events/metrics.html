@@ -5,8 +5,8 @@
 {% block body %}
 {{ super() }}
 
-<div class="dashboard">
-  <div class="metrics">
+<div class="metrics-container">
+  <div class="dashboard">
     <div class="squares">
       <div class="square red">
         <span class="stat">
@@ -25,17 +25,20 @@
       </div>
     </div>
     <div class="rectangle">
-      <span class="stat">
-        <span class="value">{{ stats.total_attendees|intcomma }} </span> <em class="huge">Attendees</em>
-      </span>
-      <span class="stat">
-        in <span class="value inline">{{ stats.cities|intcomma }}</span> <em>Cities</em>
-      </span>
-      Across
-      <span class="stat">
-      <span class="value inline">{{ stats.countries|intcomma }}</span> <em>Countries</em>
+      <span class="rect-content">
+        <span class="stat">
+          <span class="value">{{ stats.total_attendees|intcomma }} </span> <em class="huge">Attendees</em>
+        </span>
+        <span class="stat">
+          in <span class="value inline">{{ stats.cities|intcomma }}</span> <em>Cities</em>
+        </span>
+        Across
+        <span class="stat">
+          <span class="value inline">{{ stats.countries|intcomma }}</span> <em>Countries</em>
+        </span>
       </span>
     </div>
   </div>
+</div>
 
 {% endblock %}

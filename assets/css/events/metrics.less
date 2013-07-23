@@ -8,21 +8,22 @@ body#events.metrics {
     padding: 3% 10%;
   }
 
-  .dashboard {
+  .metrics-container {
     position: relative;
+    height: 100%;
+    bottom: 2%;
   }
-
-  .metrics {
+  .dashboard {
     position: relative;
     font-size: 1em;
     text-shadow: 1px 1px 1px #c9c9c9;
-    height: 100%;
 
     em {
       font-weight: 600;
       font-style: normal;
-      line-height: 1;
       font-size: 1.1em;
+
+      line-height: 1;
 
       &.huge  {
         font-size: 2em;
@@ -49,35 +50,38 @@ body#events.metrics {
     .squares {
       float: left;
       width: 30%;
+      display: inline-block;
 
       .square {
         width: 100%;
         height: 370px;
-        margin-bottom: 20px;
+
+        &:first-of-type {
+          margin-bottom: 20px;
+        }
 
         &.red {
           background: rgba(224, 54, 52, .7);
 
-          .stat {
-            &:first-of-type {
-              padding-top: 5%;
-            }
+          .stat:first-of-type {
+            padding-top: 5%;
           }
         }
 
         &.gray {
-          background: rgba(150, 152, 156, .7);
-
+          background: rgba(150, 156, 160, .71);
         }
       }
     }
 
     .rectangle {
-      postion: relative;
-      width: 66%;
-      height: 760px;
       background: rgba(39, 170, 225, .75);
       display: inline-block;
+      postion: relative;
+
+      width: 66%;
+      height: 760px;
+
       margin-left: 20px;
 
       .value {
@@ -96,6 +100,12 @@ body#events.metrics {
       em {
         vertical-align: middle;
       }
+
+      .rect-content {
+        position: absolute;
+        bottom: 3%;
+        padding: 2%;
+      }
     }
 
     .square, .rectangle {
@@ -103,51 +113,48 @@ body#events.metrics {
       color: white;
       font-size: 2.8em;
     }
+  }
 
-    @media (max-width: 800px) {
+  @media (max-width: 800px) {
+    .dashboard {
+      padding: 5% 0;
+
+      .stat {
+        margin-bottom: 25px;
+        line-height: .75;
+      }
+
+      .squares, .square, .rectangle {
+        width: 100%;
+        float: none;
+        margin: 0;
+
+        .value  { font-size: 1.4em; }
+        em      { font-size: 1.1em; }
+      }
+
       .square, .rectangle {
         padding: 30px;
+        margin: 5% 0;
+
         color: white;
         font-size: 2.5em;
       }
 
-      .squares, .square, .rectangle {
-        margin-bottom: 10px;
-        margin-top: 0;
-        height: 100%;
-        min-height: 500px;
-        float: none;
-      }
-
-      .stat {
-        margin-bottom: 25px;
-        display: block;
-        line-height: .75;
-      }
-
-      .squares, .rectangle {
-        width: 90%;
-        margin: 5%;
-
-        .stat {
-          &:first-of-type {
-            padding-top: 0;
-          }
-        }
-
-        .value, em {
-          font-size: 1.4em;
-        }
+      .rectangle {
+        height: 20ex;
       }
     }
+  }
 
-    @media (max-width: 1300px) {
-      em  {
-      font-size: 1em;
-      }
-      .value {
-      font-size: 1.7em;
-      }
+  @media (max-width: 1300px) {
+    main {
+      padding: 3% 6%;
+    }
+
+    .dashboard {
+      em      { font-size: 1em; }
+      .value  { font-size: 1.7em; }
       .square, .rectangle  {
         font-size: 2.5em;
       }

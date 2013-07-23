@@ -40,7 +40,8 @@ module.exports = function( app ) {
     }, {
       route: "/getinvolved",
       paths: [
-        "/build"
+        "/build",
+        "/get-involved"
       ]
     }, {
       route: "/mentor",

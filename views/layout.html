@@ -101,9 +101,9 @@
     {% endblock %}
     <div class="partnerWrapper">
     <section class="partners">
-      <span class="partners-header">
+      <header class="partners-header">
         {{ gettext("Mozillaian like you") }}
-      </span>
+      </header>
       <ul class="sponsors">
         <li>Chicago Community Trust</li>
         <li>Chicago Instructional Technology Foundation</li>
@@ -131,25 +131,25 @@
         <li><a href="//twitter.com/webmaker"><i class="footer-social icon-twitter"></i> @webmaker</li>
         <li><a href="//plus.google.com/u/2/communities/106022863174952221205"><i class="footer-social icon-google-plus"></i> google+</li>
         <li><a href="http://mozillawebmaker.tumblr.com/"><i class="footer-social icon-tumblr"></i> tumblr</a></li>
+
         <li id="email-li">
-        <div class="newsletter">
-          <form id="privacy-form" action="https://sendto.mozilla.org/page/s/webmaker" method="post">
-            <input type="email" id="email-updates" name="email" placeholder="{{ gettext("Sign up for email updates") }}" required />
-            <button id="email-submit" type="submit">
-              <i class="icon-chevron-right"></i>
-            </button>
-              <div class="privacy-box">
-                <div class="checkbox">
-                  <input id="theCheckbox" name="custom-1216" type="checkbox" required />
-                </div>
+          <div class="newsletter">
+            <form id="privacy-form" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
+              <input type="email" id="email-updates" name="email" autocomplete="off" placeholder="{{ gettext("Sign up for email updates") }}" required data-powertip='
                 <div class="privacy-desc">
-                  {{ gettext("privacy-desc") }}
-                  <a href="/{{lang}}/privacy">{{ gettext("privacy policy") }}</a>.
-                </div>
-              </div>
+                  <div><input type="checkbox" id="newsletter-signup-checkbox-proxy" /></div>
+                  <label for="newsletter-signup-checkbox-proxy">{{ gettext("privacy-desc") }} <a href="/{{lang}}/privacy" target="_blank">{{ gettext("privacy policy") }}</a>.</label>
+                </div>'/>
+
+              <button id="email-submit" type="submit">
+                <i class="icon-chevron-right"></i>
+              </button>
+
+              <input id="newsletter-signup-checkbox" name="custom-1216" type="checkbox" required />
             </form>
           </div>
         </li>
+
       </ul>
       <ul class="links">
         <li><a href="http://blog.webmaker.org">{{ gettext("Blog") }}</a></li>

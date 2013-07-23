@@ -406,6 +406,14 @@
       top: 8px;
       position: relative;
 
+      #privacy-form {
+        overflow: hidden; // Clear floats
+      }
+
+      #newsletter-signup-checkbox {
+        display: none;
+      }
+
       #email-updates {
         float: left;
         border: 0;
@@ -415,6 +423,20 @@
         font-size: 14px;
         border: 1px solid #FFF;
         .border-box;
+        color:#666;
+
+        &:focus {
+          outline: none;
+          border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        &:invalid {
+          box-shadow: none;
+        };
+
+        &.invalid {
+          color: #F7453D;
+        }
       }
 
       #email-submit {
@@ -430,10 +452,19 @@
         background: #27aae1;
         border: 1px solid #FFF;
         .border-box;
+
+        &:hover, &:focus {
+          background: #29BCFA;
+          outline: none;
+        }
+
+        &::-moz-focus-inner {
+          border: 0;
+        }
+
       }
 
-      .privacy-box,
-      .privacy-box-active {
+      .privacy-box {
         z-index: 2;
         margin-top: 10px;
         padding: 0 10px;
@@ -446,33 +477,24 @@
         .border-radius;
         .box-shadow(1px, 1px, 9px, grey);
         .border-box;
-
-      }
-
-      .checkbox {
-        float: left;
-        margin-top: 10px;
-        &:after {
-          font-size: 30px;
-        }
-      }
-
-      .privacy-desc {
-        font-size: 13px;
-        text-align: left;
-        margin-top: 10px;
-        margin-right: 10px;
-        float: right;
-        width: 225px;
-        height: 35px;
-      }
-
-      .privacy-box {
         display: none;
       }
 
       .privacy-box-active {
         display: block;
+      }
+
+      .checkbox {
+        float: left;
+        margin-top: 10px;
+
+        &:after {
+          font-size: 30px;
+        }
+
+        input {
+          box-shadow: none;
+        }
       }
 
     }

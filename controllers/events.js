@@ -116,7 +116,7 @@ module.exports = function(init) {
                         cities[event.city] = 1;
                         countries[event.country] = 1;
                         attendees += event.attendees;
-                        return event.beginDate >= new Date();
+                        return (event.endDate || Infinity) >= new Date();
                     }).length;
                 var event_stats = {
                     total_events: events.length,

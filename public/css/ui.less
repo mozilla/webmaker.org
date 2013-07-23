@@ -61,7 +61,7 @@
   .clearfix;
   display: block;
 
-  hr { 
+  hr {
     margin: 20px 0;
     color: #ededed;
  }
@@ -508,10 +508,17 @@ button i.icon-angle-right {
 * Custom font awesome classes
 */
 
-.icon-title:before, .icon-description:before {
+.icon-title:before {
+  content: "\f00b";
+}
+
+ .icon-description:before {
   content: "\f036";
 }
 
+.icon-all:before {
+  content: "\f00a";
+}
 
 .icon-thimble,
 .icon-popcorn {

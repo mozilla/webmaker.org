@@ -7,8 +7,10 @@ const path      = require("path")
     , moment    = require("moment")
     , _         = Sequelize.Utils._
 
+var here = __dirname;
+
 var environment      = process.env.NODE_ENV || 'development'
-  , migrationsPath   = process.cwd() + '/migrations'
+  , migrationsPath   = here + '/../migrations'
 
 var createMigrationsFolder = function(force) {
   if(force) {
@@ -49,7 +51,7 @@ console.log("Using environment '" + environment + "'.")
 
 if(program.migrate) {
 
-  var orm             = require(process.cwd() + '/lib/orm')
+  var orm             = require(here + '/../lib/orm')
     , migratorOptions = { path: migrationsPath }
     , migrator        = orm.sequelize.getMigrator(migratorOptions)
 

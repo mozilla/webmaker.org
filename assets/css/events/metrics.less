@@ -9,14 +9,33 @@ body#events.metrics {
 
     .metrics {
       position: relative;
-      font-size: .85em;
+      font-size: 1em;
+      text-shadow: 1px 1px 1px #c9c9c9;
+
+      em {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1;
+        font-size: 1.1em;
+      }
+
+      .stat {
+        margin-bottom: 25px;
+        display: block;
+        line-height: .75;
+      }
 
       .value {
         font-weight: bold;
-        font-size: 1.8em;
+        font-size: 2em;
         display: block;
         line-height: 1;
-        margin-top: 10px;
+        text-transform: uppercase;
+      }
+
+      .value.inline {
+        display: inline-block;
       }
 
       .squares {
@@ -29,11 +48,23 @@ body#events.metrics {
           margin-bottom: 20px;
 
           &.blue {
-            background: rgba(39, 170, 225, .9) url(/img/frosted.png);
+            background: rgba(39, 170, 225, .7);
+
+            .stat {
+              &:first-of-type {
+                padding-top: 5%;
+              }
+            }
           }
 
           &.gray {
-            background: rgba(150, 152, 156, .9) url(/img/frosted.png);
+            background: rgba(150, 152, 156, .7);
+
+            .stat {
+              &:first-of-type {
+                padding-top: 30%;
+              }
+            }
           }
         }
       }
@@ -41,21 +72,72 @@ body#events.metrics {
       .rectangle {
         width: 66%;
         height: 760px;
-        background: rgba(224, 54, 52, .8) url(/img/frosted.png);
+        background: rgba(224, 54, 52, .7);
         display: inline-block;
         margin-left: 20px;
+
+        .stat {
+          &:first-of-type {
+            padding-top: 40%;
+          }
+        }
       }
 
       .square, .rectangle {
         padding: 30px;
         color: white;
-        font-size: 3em;
+        font-size: 2.8em;
       }
 
       .squares, .rectangle {
         @media (max-width: 800px) {
           width: 90%;
           margin: 5%;
+
+          .stat {
+            &:first-of-type {
+              padding-top: 0;
+            }
+          }
+
+          .value, em {
+            font-size: 1em;
+          }
+        }
+      }
+
+      .squares, .square, .rectangle {
+        @media (max-width: 1000px) {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+
+      .value, em  {
+        @media (max-width: 1300px) {
+          font-size: .75em;
+        }
+      }
+
+      .square, .rectangle  {
+        @media (max-width: 1300px) {
+          font-size: 2.5em;
+        }
+      }
+
+      .metrics {
+        @media (max-width: 1000px) {
+          .square, .rectangle {
+            padding: 30px;
+            color: white;
+            font-size: .5em;
+          }
+
+          .stat {
+            margin-bottom: 25px;
+            display: block;
+            line-height: .75;
+          }
         }
       }
     }

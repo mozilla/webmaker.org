@@ -14,7 +14,6 @@
         <button type="submit" name="featured" title="featured" value="0" class="{% if not event.featured %}hidden{% endif %}">
           <i class="icon-star"></i>
         </button>
-        <input name="_csrf" value="{{ csrf }}" type="hidden" />
       </form>
     </td>
     <td>{{ event.id }}</td>

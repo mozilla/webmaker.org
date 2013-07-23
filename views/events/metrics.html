@@ -8,7 +8,7 @@
 <div class="dashboard">
   <div class="metrics">
     <div class="squares">
-      <div class="square blue">
+      <div class="square red">
         <span class="stat">
           <span class="value">{{ stats.total_events|intcomma }}</span>
           <em>Total Events</em>
@@ -26,13 +26,14 @@
     </div>
     <div class="rectangle">
       <span class="stat">
-        <span class="value">{{ stats.total_attendees|intcomma }} </span> <em>Attendees</em>
+        <span class="value">{{ stats.total_attendees|intcomma }} </span> <em class="huge">Attendees</em>
       </span>
       <span class="stat">
         in <span class="value inline">{{ stats.cities|intcomma }}</span> <em>Cities</em>
       </span>
+      Across
       <span class="stat">
-        Across <span class="value inline">{{ stats.countries|intcomma }}</span> <em>Countries</em>
+      <span class="value inline">{{ stats.countries|intcomma }}</span> <em>Countries</em>
       </span>
     </div>
   </div>

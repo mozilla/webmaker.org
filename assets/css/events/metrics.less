@@ -13,11 +13,14 @@ body#events.metrics {
       text-shadow: 1px 1px 1px #c9c9c9;
 
       em {
-        text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 600;
         font-style: normal;
         line-height: 1;
         font-size: 1.1em;
+
+        &.huge  {
+          font-size: 2em;
+        }
       }
 
       .stat {
@@ -28,10 +31,9 @@ body#events.metrics {
 
       .value {
         font-weight: bold;
-        font-size: 2em;
+        font-size: 2.2em;
         display: block;
         line-height: 1;
-        text-transform: uppercase;
       }
 
       .value.inline {
@@ -47,8 +49,8 @@ body#events.metrics {
           height: 370px;
           margin-bottom: 20px;
 
-          &.blue {
-            background: rgba(39, 170, 225, .7);
+          &.red {
+            background: rgba(224, 54, 52, .7);
 
             .stat {
               &:first-of-type {
@@ -62,7 +64,7 @@ body#events.metrics {
 
             .stat {
               &:first-of-type {
-                padding-top: 30%;
+                padding-top: 40%;
               }
             }
           }
@@ -72,14 +74,23 @@ body#events.metrics {
       .rectangle {
         width: 66%;
         height: 760px;
-        background: rgba(224, 54, 52, .7);
+        background: rgba(39, 170, 225, .75);
         display: inline-block;
         margin-left: 20px;
 
+        .value {
+          vertical-align: middle;
+        }
         .stat {
           &:first-of-type {
-            padding-top: 40%;
+            padding-top: 36%;
           }
+          &:nth-of-type(2) {
+            margin-bottom: 0px;
+          }
+        }
+        em {
+          vertical-align: middle;
         }
       }
 

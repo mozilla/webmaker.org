@@ -2,154 +2,153 @@ body#events.metrics {
 
   font-size: 14px;
 
-  .dashboard {
-    padding: 3% 10%;
+  main {
     background: url(/img/sample.jpg) no-repeat center bottom;
     background-size: cover;
+    padding: 3% 10%;
+  }
 
-    .metrics {
-      position: relative;
-      font-size: 1em;
-      text-shadow: 1px 1px 1px #c9c9c9;
+  .dashboard {
+    position: relative;
+  }
+
+  .metrics {
+    position: relative;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px #c9c9c9;
+    height: 100%;
+
+    em {
+      font-weight: 600;
+      font-style: normal;
+      line-height: 1;
+      font-size: 1.1em;
+
+      &.huge  {
+        font-size: 2em;
+      }
+    }
+
+    .stat {
+      margin-bottom: 25px;
+      display: block;
+      line-height: .75;
+    }
+
+    .value {
+      font-weight: bold;
+      font-size: 2.2em;
+      display: block;
+      line-height: 1;
+    }
+
+    .value.inline {
+      display: inline-block;
+    }
+
+    .squares {
+      float: left;
+      width: 30%;
+
+      .square {
+        width: 100%;
+        height: 370px;
+        margin-bottom: 20px;
+
+        &.red {
+          background: rgba(224, 54, 52, .7);
+
+          .stat {
+            &:first-of-type {
+              padding-top: 5%;
+            }
+          }
+        }
+
+        &.gray {
+          background: rgba(150, 152, 156, .7);
+
+        }
+      }
+    }
+
+    .rectangle {
+      postion: relative;
+      width: 66%;
+      height: 760px;
+      background: rgba(39, 170, 225, .75);
+      display: inline-block;
+      margin-left: 20px;
+
+      .value {
+        vertical-align: middle;
+      }
+
+      .stat {
+        &:first-of-type {
+          top: 30%;
+        }
+        &:nth-of-type(2) {
+          margin-bottom: 0px;
+        }
+      }
 
       em {
-        font-weight: 600;
-        font-style: normal;
-        line-height: 1;
-        font-size: 1.1em;
+        vertical-align: middle;
+      }
+    }
 
-        &.huge  {
-          font-size: 2em;
+    .square, .rectangle {
+      padding: 30px;
+      color: white;
+      font-size: 2.8em;
+    }
+
+    @media (max-width: 800px) {
+      .squares, .rectangle {
+        width: 90%;
+        margin: 5%;
+
+        .stat {
+          &:first-of-type {
+            padding-top: 0;
+          }
         }
+
+        .value, em {
+          font-size: 1.4em;
+        }
+      }
+    }
+
+    @media (max-width: 1300px) {
+      .value, em  {
+        font-size: .75em;
+      }
+      .square, .rectangle  {
+        font-size: 2.5em;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .square, .rectangle {
+        padding: 30px;
+        color: white;
+        font-size: 2.5em;
+      }
+
+      .squares, .square, .rectangle {
+        margin-bottom: 10px;
+        margin-top: 0;
+        height: 100%;
+        min-height: 500px;
+        float: none;
       }
 
       .stat {
         margin-bottom: 25px;
         display: block;
         line-height: .75;
-      }
-
-      .value {
-        font-weight: bold;
-        font-size: 2.2em;
-        display: block;
-        line-height: 1;
-      }
-
-      .value.inline {
-        display: inline-block;
-      }
-
-      .squares {
-        float: left;
-        width: 30%;
-
-        .square {
-          width: 100%;
-          height: 370px;
-          margin-bottom: 20px;
-
-          &.red {
-            background: rgba(224, 54, 52, .7);
-
-            .stat {
-              &:first-of-type {
-                padding-top: 5%;
-              }
-            }
-          }
-
-          &.gray {
-            background: rgba(150, 152, 156, .7);
-
-            .stat {
-              &:first-of-type {
-                padding-top: 40%;
-              }
-            }
-          }
-        }
-      }
-
-      .rectangle {
-        width: 66%;
-        height: 760px;
-        background: rgba(39, 170, 225, .75);
-        display: inline-block;
-        margin-left: 20px;
-
-        .value {
-          vertical-align: middle;
-        }
-        .stat {
-          &:first-of-type {
-            padding-top: 36%;
-          }
-          &:nth-of-type(2) {
-            margin-bottom: 0px;
-          }
-        }
-        em {
-          vertical-align: middle;
-        }
-      }
-
-      .square, .rectangle {
-        padding: 30px;
-        color: white;
-        font-size: 2.8em;
-      }
-
-      .squares, .rectangle {
-        @media (max-width: 800px) {
-          width: 90%;
-          margin: 5%;
-
-          .stat {
-            &:first-of-type {
-              padding-top: 0;
-            }
-          }
-
-          .value, em {
-            font-size: 1em;
-          }
-        }
-      }
-
-      .squares, .square, .rectangle {
-        @media (max-width: 1000px) {
-          margin-bottom: 0;
-          margin-top: 0;
-        }
-      }
-
-      .value, em  {
-        @media (max-width: 1300px) {
-          font-size: .75em;
-        }
-      }
-
-      .square, .rectangle  {
-        @media (max-width: 1300px) {
-          font-size: 2.5em;
-        }
-      }
-
-      .metrics {
-        @media (max-width: 1000px) {
-          .square, .rectangle {
-            padding: 30px;
-            color: white;
-            font-size: .5em;
-          }
-
-          .stat {
-            margin-bottom: 25px;
-            display: block;
-            line-height: .75;
-          }
-        }
       }
     }
   }

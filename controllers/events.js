@@ -236,6 +236,8 @@ module.exports = function(init) {
             ].join('/');
         }
         function fmtTime(x) {
+            if (x == "Invalid Date")
+                return null;
             var hms = new Date(x).toTimeString().split(' ')[0].split(':');
             var h = hms[0] % 12;
             if (h == 0) h = 12;
@@ -248,7 +250,6 @@ module.exports = function(init) {
                 case 'beginDate':
                 case 'endDate':
                     evt[p] = event[p] ? fmtDate(event[p]) : null;
-                    evt[p] = evt[p] == "Invalid Date" ? null : evt[p];
                     break;
                 case 'beginTime':
                 case 'endTime':

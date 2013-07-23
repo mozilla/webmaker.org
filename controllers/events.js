@@ -94,7 +94,7 @@ module.exports = function(init) {
         },
         destroy: function(req, res)
         {
-            fetch_event(req, function(event, isAdmin) {
+            fetch_event(req, function(event) {
                 var picture = event.picture;
                 event.destroy().success(function() {
                     if (picture)

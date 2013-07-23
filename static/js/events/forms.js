@@ -1,4 +1,4 @@
-define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'responsive', 'domReady!'],
+define(['jquery', '../base/ui', 'bootstrap-markdown', 'jquery.timepicker', 'jquery-ui.custom', 'domReady!'],
 function ($, UI, MapMaker) {
     $('.clear-input').click(function () {
         $(this).prev('input').val('').trigger('change');

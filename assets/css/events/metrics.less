@@ -147,14 +147,18 @@ body#events.metrics {
     }
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1300px) and (min-width: 800px) {
     main {
-      padding: 3% 6%;
+      padding: 3%;
+      overflow: hidden;
     }
 
     .dashboard {
-      em      { font-size: 1em; }
+      height: 100%;
+
       .value  { font-size: 1.7em; }
+      em      { font-size: 1em; }
+
       .square, .rectangle  {
         font-size: 2.5em;
       }

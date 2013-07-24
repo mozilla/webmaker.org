@@ -1,4 +1,4 @@
-define(['jquery', 'google', 'map/map_maker', 'responsive', 'map/forms'],
+define(['jquery', 'google', 'map/map_maker', 'map/forms', 'responsive'],
 function ($, google, MapMaker, EventForms) {
 
     var gm = google.maps;

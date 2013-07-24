@@ -1,0 +1,49 @@
+{% extends "events/layout.html" %}
+
+{% block title %}Event Admin{% endblock %}
+
+{% block body %}
+<table id="event-list">
+{% for event in events %}
+  <tr>
+    <td>
+      <form class="toggle-featured" action="{{ event.uri }}" data-remote="true" method="PATCH">
+        <button type="submit" name="featured" title="featured" value="1" class="{% if event.featured %}hidden{% endif %}">
+          <i class="icon-star-empty"></i>
+        </button>
+        <button type="submit" name="featured" title="featured" value="0" class="{% if not event.featured %}hidden{% endif %}">
+          <i class="icon-star"></i>
+        </button>
+      </form>
+    </td>
+    <td>{{ event.id }}</td>
+    <td class="collapse" id="column-title">
+      <div style="display:inline-block">
+        <div>{{ event.title }}</div>
+        {% if event.beginDate or event.endDate %}
+        <div>{{ event.beginDate or '--/--/----'}}
+           - {{ event.endDate or '--/--/----'}}</div>
+        {% endif %}
+        {% if event.beginTime or event.endTime %}
+        <div>{{ event.beginTime or '-:--'}}
+           - {{ event.endTime or '-:--' }}</div>
+        {% endif %}
+      </div>
+      <span class="actions-overlay">
+          <a class="icon-remove-sign" href="{{ event.uri }}"
+              data-method="DELETE" data-remote="true" data-confirm="Really delete?"></a>
+          <a class="icon-edit-sign" href="{{ event.uri }}#edit"></a>
+          <a class="icon-chevron-sign-right" href="{{ event.uri }}"></a>
+      </span>
+    </td>
+    <td class="collapse">{{ event.address }}</td>
+    <td class="collapse">
+      {{ event.organizerId }}
+      <div class="email-address uncollapse">{{ event.organizer }}</div>
+    </td>
+  </tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+{% block footer %}{% endblock %}

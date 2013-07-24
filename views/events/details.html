@@ -38,23 +38,21 @@
             <input type="text" name="title" placeholder="{{ event.title }}" />
           </span>
         </div>
-        {% if email and event.organizer == email %}
-         <div id="owner-panel">
-           <span class="show">
-             <button id="edit-mode" type="button"   class="owner-btn ui-btn">Edit</button>
-           </span>
-           <span class="edit hidden">
-             <button id="save-edit" class="owner-btn ui-btn"
-                 type="submit" name="_method" value="PATCH">Save</button>
-             <button id="cancel-edit" type="button" class="owner-btn ui-btn">Cancel</button>
-             <button id="delete-event" class="owner-btn ui-btn"
-                 type="submit" name="_method" value="DELETE">Delete</button>
-             <div id="delete-confirm" class="hidden" title="Delete Event">
-                 Are you sure you want to permanently delete this event?
-             </div>
-           </span>
-         </div>
-        {% endif %}
+        <div id="owner-panel hidden">
+          <span class="show">
+            <button id="edit-mode" type="button"   class="owner-btn ui-btn">Edit</button>
+          </span>
+          <span class="edit hidden">
+            <button id="save-edit" class="owner-btn ui-btn"
+                type="submit" name="_method" value="PATCH">Save</button>
+            <button id="cancel-edit" type="button" class="owner-btn ui-btn">Cancel</button>
+            <button id="delete-event" class="owner-btn ui-btn"
+                type="submit" name="_method" value="DELETE">Delete</button>
+            <div id="delete-confirm" class="hidden" title="Delete Event">
+                Are you sure you want to permanently delete this event?
+            </div>
+          </span>
+        </div>
         <div id="event-whenwhere">
           {% if event.beginDate or event.endDate or event.beginTime %}
            <span class="show">
@@ -118,6 +116,10 @@
           <label for="event_registerLink">Registration Link: </label>
           <input id="event_registerLink" type="text" name="registerLink"
                 placeholder="{{ event.registerLink or "http://example.com/" }}" />
+          <br >
+          <label for="event_attendees"># of Attendees: </label>
+          <input id="event_attendees" type="number" name="attendees"
+                placeholder="~{{ event.attendees or "?" }}" />
         </span>
 
         <div class="clear"></div>

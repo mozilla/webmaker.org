@@ -1,0 +1,170 @@
+body#events.metrics {
+  footer {
+    display: none;
+  }
+
+  font-size: 14px;
+
+  main {
+    background: url(/img/sample.jpg) no-repeat center bottom;
+    background-size: cover;
+    padding: 3% 10%;
+  }
+
+  .metrics-container {
+    position: relative;
+    height: 100%;
+    bottom: 2%;
+  }
+  .dashboard {
+    position: relative;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px #c9c9c9;
+
+    em {
+      font-weight: 600;
+      font-style: normal;
+      font-size: 1.1em;
+
+      line-height: 1;
+
+      &.huge  {
+        font-size: 2em;
+      }
+    }
+
+    .stat {
+      margin-bottom: 25px;
+      display: block;
+      line-height: .75;
+    }
+
+    .value {
+      font-weight: bold;
+      font-size: 2.2em;
+      display: block;
+      line-height: 1;
+    }
+
+    .value.inline {
+      display: inline-block;
+    }
+
+    .squares {
+      float: left;
+      width: 30%;
+      display: inline-block;
+
+      .square {
+        width: 100%;
+        height: 370px;
+
+        &:first-of-type {
+          margin-bottom: 20px;
+        }
+
+        &.red {
+          background: rgba(224, 54, 52, .7);
+
+          .stat:first-of-type {
+            padding-top: 5%;
+          }
+        }
+
+        &.gray {
+          background: rgba(150, 156, 160, .71);
+        }
+      }
+    }
+
+    .rectangle {
+      background: rgba(39, 170, 225, .75);
+      display: inline-block;
+      postion: relative;
+
+      width: 66%;
+      height: 760px;
+
+      margin-left: 20px;
+
+      .value {
+        vertical-align: middle;
+      }
+
+      .stat {
+        &:first-of-type {
+          top: 30%;
+        }
+        &:nth-of-type(2) {
+          margin-bottom: 0px;
+        }
+      }
+
+      em {
+        vertical-align: middle;
+      }
+
+      .rect-content {
+        position: absolute;
+        bottom: 3%;
+        padding: 2%;
+      }
+    }
+
+    .square, .rectangle {
+      padding: 30px;
+      color: white;
+      font-size: 2.8em;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .dashboard {
+      padding: 5% 0;
+
+      .stat {
+        margin-bottom: 25px;
+        line-height: .75;
+      }
+
+      .squares, .square, .rectangle {
+        width: 100%;
+        float: none;
+        margin: 0;
+
+        .value  { font-size: 1.4em; }
+        em      { font-size: 1.1em; }
+      }
+
+      .square, .rectangle {
+        padding: 30px;
+        margin: 5% 0;
+
+        color: white;
+        font-size: 2.5em;
+      }
+
+      .rectangle {
+        height: 20ex;
+        padding-left: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) and (min-width: 800px) {
+    main {
+      padding: 3%;
+    }
+
+    .dashboard {
+      height: 100%;
+
+      .value  { font-size: 1.7em; }
+      em      { font-size: 1em; }
+
+      .square, .rectangle  {
+        font-size: 2.5em;
+      }
+    }
+  }
+}

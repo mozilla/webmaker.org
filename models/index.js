@@ -1,12 +1,10 @@
-module.exports = function (ORM) {
+module.exports = function (orm) {
     var models = require("../util").loadSubmodules(__dirname);
     Object.keys(models).forEach(function (m) {
-        models[m](ORM, ORM.types);
+        models[m](orm, orm.types);
     });
-    Object.keys(ORM.models).forEach(function (m) {
-        ORM.models[m].init();
+    Object.keys(orm.models).forEach(function (m) {
+        orm.models[m].init();
     });
-    //ORM.sequelize.drop().error(console.error.bind(console));
-    ORM.sequelize.sync().error(console.error.bind(console));
     return models;
 };

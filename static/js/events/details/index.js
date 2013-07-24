@@ -1,6 +1,7 @@
 define(['jquery', 'google', 'forms', 'domReady!'],
 function ($, google, forms) {
     var $editForm = $('form#edit-event');
+
     $editForm.validate({
         rules: {
             registerLink: 'url'
@@ -10,14 +11,26 @@ function ($, google, forms) {
     function toggleEditMode() {
         $('.show').toggleClass('hidden');
         $('.edit').toggleClass('hidden');
+        location.hash = (location.hash == '#edit') ? '' : '#edit';
     }
-    $editForm.find('button#edit-mode').click(function(ev) {
-        toggleEditMode();
-    });
-    $editForm.find('button#cancel-edit').click(function(ev) {
-        toggleEditMode();
+    function enterEditMode() {
+        $('.show').addClass('hidden');
+        $('.edit').removeClass('hidden');
+        location.hash = '#edit';
+    }
+    function leaveEditMode() {
+        $('.show').removeClass('hidden');
+        $('.edit').addClass('hidden');
+        location.hash = '';
         $editForm[0].reset();
-    });
+    }
+
+    $editForm.find('button#edit-mode').click(enterEditMode);
+    $editForm.find('button#cancel-edit').click(leaveEditMode);
+
+    if (location.hash == '#edit')
+        enterEditMode();
+
     var delete_safety = 1;
     $editForm.find('button#delete-event').click(function(ev) {
         var $deleteSubmit = $(this);
@@ -48,7 +61,16 @@ function ($, google, forms) {
         var place = autocomplete.getPlace();
         var loc = { latitude:   place.geometry.location.lat(),
                     longitude:  place.geometry.location.lng() };
-        for (var k in loc)
+        Object.keys(loc).forEach(function(k) {
             $editForm.find('input[name="'+k+'"]').val(loc[k]);
+        });
     });
+
+    navigator.idSSO.app.onlogin = function(assert) {
+        $('#owner-panel').removeClass('hidden');
+    };
+    navigator.idSSO.app.onlogout = function() {
+        $('#owner-panel').addClass('hidden');
+    };
+
 });

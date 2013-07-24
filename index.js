@@ -14,7 +14,17 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     // Views
     nunjucksEnv.loaders.push(new nunjucks.FileSystemLoader(paths.views));
     nunjucksEnv.addFilter('json', JSON.stringify.bind(JSON));
-    nunjucksEnv.addFilter('markdown', markdown.toHTML.bind(markdown));
+    nunjucksEnv.addFilter('markdown', function(text) {
+        return markdown.toHTML(text || '');
+    });
+    nunjucksEnv.addFilter('intcomma', function(val) {
+        var oldStr = val.toString(), newStr;
+        while (oldStr != newStr) {
+            newStr = oldStr.replace(/^(-?\d+)(\d{3})/, '$1,$2');
+            oldStr = newStr;
+        }
+        return newStr;
+    });
 
     // Assets
     var optimize = process.env.NODE_ENV === 'production';
@@ -32,12 +42,20 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
     app.use(express.static(paths.static));
 
     // Models
-    ctx.orm = require('./config/orm').call(ctx, app);
+    ctx.orm = require('./lib/orm');
+
+    if (!require('./lib/fixtures').call(ctx))
+        ctx.orm.sequelize.sync().error(console.error.bind(console));
+
     util.shortcut(ctx, 'models', ctx.orm);
-    require('./models').call(ctx, ctx.orm);
 
     // S3 Client
-    ctx.s3 = require('./config/s3').call(ctx, app);
+    ctx.s3 = require('./lib/s3').call(ctx, app);
+
+    // LoginAPI
+    process.nextTick(function() {
+        ctx.loginAPI = require(app_root+'/lib/loginapi');
+    });
 
     // Controllers
     ctx.controllers = require('./controllers').call(ctx, app);

@@ -17,17 +17,19 @@
             <input name="where" type="text" placeholder="Where?" />
             <span class="icon-remove clear-input"></span>
         </span>
-        <span class="ui-input ui-append">
-            <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
-            <input name="when-start"  type="text" placeholder="Start Date" class="datepicker" />
-            <span class="icon-remove clear-input"></span>
-        </span>
-        <span class="ui-input ui-append">
-            <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
-            <input name="when-end"  type="text" placeholder="End Date" class="datepicker" />
-            <span class="icon-remove clear-input"></span>
-        </span>
-        <button type="submit" class="icon-chevron-right"></button>
+        <div class="break-right">
+          <span class="ui-input ui-append">
+              <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+              <input name="when-start"  type="text" placeholder="Start Date" class="datepicker" />
+              <span class="icon-remove clear-input"></span>
+          </span>
+          <span class="ui-input ui-append">
+              <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+              <input name="when-end"  type="text" placeholder="End Date" class="datepicker" />
+              <span class="icon-remove clear-input"></span>
+          </span>
+          <button type="submit" class="icon-chevron-right"></button>
+        </div>
     </form>
 
     <div class="overlay-buttons">
@@ -56,14 +58,14 @@
         <fieldset>
             <label for="event_attendees"> How many attendees are you expecting? </label>
             <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
-                <option value=0> 1-10 </option>
-                <option value=1> 10-20 </option>
-                <option value=2> 20-50 </option>
                 <option selected
-                        value=3> 50-100 </option>
-                <option value=4> 100-200 </option>
-                <option value=5> 200-500 </option>
-                <option value=5> 500+ </option>
+                        value='5'> &lt;10 </option>
+                <option value='15'> 10-20 </option>
+                <option value='35'> 20-50 </option>
+                <option value='75'> 50-100 </option>
+                <option value='150'> 100-200 </option>
+                <option value='350'> 200-500 </option>
+                <option value=6> 500+    </option>
             </select></div><br />
 
             <label for="event_address"> Event location </label>
@@ -71,7 +73,7 @@
                 <input id="event_address" name="address" type="text" {{ tabIndex() }} />
             </span>
 
-            <input name="latitude" type="hidden" />
+            <input name="latitude"  type="hidden" />
             <input name="longitude" type="hidden" />
 
             <label for="event_registerLink"> Event Link </label>
@@ -104,7 +106,7 @@
             </div>
             <input name="_csrf" type="hidden" value="{{ csrf }}" />
 
-            <button type="submit">
+            <button type="submit" data-disable-with="Submitting...">
                 Submit your event
                 <span class="icon-chevron-right"></span>
             </button>

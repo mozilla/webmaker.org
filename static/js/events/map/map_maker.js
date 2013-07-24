@@ -49,12 +49,14 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
                 self.addMarker(model, animate);
         })
     };
-    MapMaker.prototype.addMarker = function (model, animate, old) {
+    MapMaker.prototype.addMarker = function (model, animate, dim) {
         animate = animate === undefined ? true  : animate;
-        old     = old     === undefined ? false : old;
+        dim     = dim     === undefined ? false : dim;
 
         var icon = {
-            url: "/img/map/pin-event"+(old?'-dim':'')+".png"   // 43 x 51
+            url: "/img/map/pin-event" + (
+                     model.featured ? "-featured" : ""
+                ) + ".png"   // 43 x 51
         };
 
         var marker = new google.maps.Marker({
@@ -125,7 +127,6 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             // You can set the background color to transparent, and define a class instead
          // backgroundColor: 'transparent',
             borderRadius: 8,
-            arrowSize: 20,
             borderWidth: 1,
             // Now that there is no borderWidth check, you can define
             // a borderColor and it will apply to Just the arrow
@@ -133,12 +134,12 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             hideCloseButton: true,
             arrowPosition: '50%',
             backgroundColor: '#fff',
-            // use the .phoney class to define all styling for your InfoBubble
             backgroundClassName: 'info-container',
             // define a CSS class name for all, this is technically the "inactive" tab class
             tabClassName: 'tabClass',
             // define a CSS class name for active tabs only
             activeTabClassName: 'activeTabClass',
+            arrowSize: 20,
             arrowStyle: 0
         });
 

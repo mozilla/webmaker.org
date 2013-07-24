@@ -26,8 +26,6 @@ function ($, UI, MapMaker) {
         showDuration: true
     });
 
-    setTimeout(scroll.bind(window, 0, 0), 100);
-
     return {
         setupImageUpload: function ($form) {
             var $fileInput = $form.find('input[type="file"]');

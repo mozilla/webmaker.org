@@ -23,7 +23,7 @@ body#events.map form#find-event {
         overflow:   hidden;
         height:     @inputHeight;
         margin-bottom: 2px;
-        margin-right: 2px;
+        margin-left:   2px;
         padding:    0px 10px;
 
         .pointer-icon {
@@ -44,9 +44,14 @@ body#events.map form#find-event {
 
             font-size:  14.5px;
 
-            &[name="when-start"] { .ui-small; }
-            &[name="when-end"] { .ui-small; }
-            &[name="where"] { .ui-medium; }
+            &[name="when-start"]  { .ui-small; }
+            &[name="when-end"]    { .ui-small; }
+            &[name="where"]       { .ui-medium; }
+
+            @media (max-width: 820px) {
+                &[name="where"]       { width: 150px; }
+                &[name="when-start"]  { .ui-smedium; }
+            }
         }
         .icon-remove {
             .clickable;
@@ -64,5 +69,16 @@ body#events.map form#find-event {
         width:      @inputHeight;
 
         font-size:  18px;
+    }
+
+    .break-right {
+        display: inline-block;
+
+        @media (max-width: 820px) {
+            display: block;
+            margin-top: -4px;
+            margin-left: 4px;
+            text-align: right;
+        }
     }
 }

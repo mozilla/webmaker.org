@@ -35,7 +35,13 @@
     <div class="overlay-buttons">
         <a href="/login" class="header loggedout-expand-form-button">
             <span class="icon-plus"></span>
-            <span class="event-button-text">Log in to add an Event</span>
+            <span class="event-button-text">
+              {% if username %}
+                Add an Event
+              {% else %}
+                Log in to add an Event
+              {% endif %}
+            </span>
         </a>
         <a href="/guides" id="event-guides" class="header">
             Event Guides

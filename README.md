@@ -41,33 +41,31 @@ via cpanminus:
 
 Running Database Migrations
 ---------------------------
-Database migrations must be run from within the webmaker.org dir. Assuming
-`webmaker.org` and `webmaker-events` are located in the same parent dir:
+Database migrations must be run from within the webmaker.org dir using foreman:
 
     cd webmaker.org
-    foreman run ../webmaker-events/scripts/sequelize -m
+    foreman run ./node_packages/webmaker-events/scripts/sequelize -m
 
 To undo the latest migrations:
 
-    foreman run ../webmaker-events/scripts/sequelize -mu
+    foreman run ./node_packages/webmaker-events/scripts/sequelize -mu
 
 If you don't have foreman, you can also try:
 
-    . .env
-    ../webmaker-events/scripts/sequelize -m
+    source .env
+    ./node_packages/webmaker-events/scripts/sequelize -m
 
 To fill the city/country fields for Events, you can run the following script:
 
-    foreman run ../webmaker-events/scripts/geocode_events.js
+    foreman run ./node_packages/webmaker-events/scripts/geocode_events.js
 
 To convert the attendee field from the old enum/range format to an average number (this should only be run once):
 
-    foreman run ../webmaker-events/scripts/convert_attendees.js
+    foreman run ./node_packages/webmaker-events/scripts/convert_attendees.js
 
 You can run a basic nodeJs repl with the orm loaded via the 'db_shell.js' script:
 
-    foreman run ../webmaker-events/scripts/db_shell.js
-
+    foreman run ./node_packages/webmaker-events/scripts/db_shell.js
 
 
 Known Bugs

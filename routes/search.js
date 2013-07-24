@@ -94,10 +94,11 @@ module.exports = function(req, res) {
       makes: data || [],
       page: "search",
       pagination: page,
+      totalHits: totalHits,
+      limit: limit,
       query: query,
       searchType: type,
-      searchIcon: setToAll ? "all" : type,
-      showOlder: showOlder
+      searchIcon: setToAll ? "all" : type
     });
   });
 };

@@ -37,7 +37,8 @@ module.exports = function( req, res ) {
       page: "me",
       pagination: page,
       view: app || "webmaker",
-      showOlder: ( totalHits > page * limit ),
+      totalHits: totalHits,
+      limit: limit,
       showPagination: ( totalHits > limit ),
       username: username
     });

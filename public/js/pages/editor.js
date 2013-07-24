@@ -16,7 +16,6 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri"],
       $header = $("header"),
       $sidebar = $(".admin-sidebar "),
       $adminSearch = $("#admin-search-input"),
-      $pagination = $(".pagination"),
       searchResults = document.getElementById("search-results"),
       $searchResults = $(searchResults),
       lastQuery,
@@ -52,62 +51,6 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri"],
     return "https://secure.gravatar.com/avatar/" + hash + "?s="+ DEFAULT_SIZE +"&d=" + DEFAULT_AVATAR;
   }
 
-  function setPagination(page, total) {
-    var $ul = $pagination.find("ul"),
-        $_li = $("<li></li>"),
-        $li,
-        MAX_NUMS = 4,
-        totalPages = total ? Math.ceil(total/LIMIT) : 0,
-        set = Math.floor((page-1)/MAX_NUMS),
-        startPage = set * MAX_NUMS + 1,
-        endPage = Math.min((set * MAX_NUMS) + MAX_NUMS, totalPages);
-
-    if (totalPages > 1) {
-      $pagination.show();
-    } else {
-      $pagination.hide();
-    }
-
-    var $prevBtn = $_li.clone().html("<span class=\"icon-chevron-left\"></span>"),
-        $nextBtn = $_li.clone().html("<span class=\"icon-chevron-right\"></span>");
-
-    function pageSearch(page) {
-      return function() {
-        lastQuery.page = page;
-        doSearch(lastQuery);
-      };
-    }
-
-    $ul.empty();
-
-    // Show previous?
-    if ( page > 1 ) {
-      $ul.append($prevBtn);
-      $prevBtn.click(pageSearch(page - 1));
-    }
-    // Iterate over all pages;
-    for (var i = startPage; i <= endPage; i++) {
-      $li = $_li.clone();
-      $li.text(i);
-      if (i === page ) {
-        $li.addClass("active");
-      }
-      $li.click(pageSearch(i));
-      $ul.append($li);
-    }
-    if (totalPages > endPage) {
-      $li = $_li.clone();
-      $li.text(totalPages);
-      $li.click(pageSearch(totalPages));
-      $ul.append("<li class=\"ellipsis\"></li>");
-      $ul.append($li);
-    }
-    if (page < totalPages) {
-      $ul.append($nextBtn);
-      $nextBtn.click(pageSearch(page + 1));
-    }
-  }
-
   function resultsCallback(err, data, total) {
     var oldMakes = searchResults.querySelectorAll(".make");
     var showingString = total ? ("Showing pg. " + lastQuery.page+ " of " + total ) : "No";
@@ -116,7 +59,10 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri"],
     }
     $loading.hide();
     $(".search-summary").html( showingString + " results for " + lastQuery.field + " = " + lastQuery.value + " on " + "<a href=\"" + makeAPIUrl + "/admin\">" + makeAPIUrlHost + "</a>");
-    setPagination(lastQuery.page, total);
+    UI.pagination(lastQuery.page, total, LIMIT, function( page ) {
+      lastQuery.page = page;
+      doSearch(lastQuery);
+    });
     if (err || !data.length) {
       return;
     }

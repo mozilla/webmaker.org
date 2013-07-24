@@ -1,5 +1,5 @@
-define(["jquery", "uri" ],
-  function ($, URI) {
+define(["jquery", "uri", "base/ui" ],
+  function ($, URI, UI) {
   "use strict";
 
   var query = $(".search-poster").attr( "data-query"),
@@ -9,11 +9,12 @@ define(["jquery", "uri" ],
       $searchFilter = $("#search-type"),
       $forkBtns = $(".make-fork-btn"),
       $userNameLinks = $(".user-link"),
-      $nextBtn = $(".next-page"),
-      $prevBtn = $(".previous-page"),
       $makes = $(".make"),
       mainGallery = $(".main-gallery")[0],
-      packery;
+      totalHits,
+      LIMIT,
+      packery,
+      page;
 
   function onKeyDown() {
     $("html, body").animate({ scrollTop: 0 }, 200 );
@@ -58,24 +59,21 @@ define(["jquery", "uri" ],
     window.location.search = $.param(queryKeys);
   });
 
-  // Pagination
-  $nextBtn.click( function(e) {
-    queryKeys.page = queryKeys.page ? parseInt(queryKeys.page, 10) + 1 : 2;
+  page = queryKeys.page ? parseInt(queryKeys.page, 10) : 1;
 
-    if (queryKeys.q) {
-      queryKeys.q = decodeURIComponent(queryKeys.q);
-    }
+  if ( mainGallery ) {
+    totalHits = mainGallery.getAttribute("data-total-hits");
+    LIMIT = mainGallery.getAttribute("data-limit");
 
-    window.location.search = $.param( queryKeys );
-  });
-  $prevBtn.click( function(e) {
-    queryKeys.page = queryKeys.page > 1 ? parseInt(queryKeys.page, 10) - 1 : 1;
+    UI.pagination( page, totalHits, LIMIT, function( page ) {
+      queryKeys.page = page;
 
-    if (queryKeys.q) {
-      queryKeys.q = decodeURIComponent(queryKeys.q);
-    }
+      if (queryKeys.q) {
+        queryKeys.q = decodeURIComponent(queryKeys.q);
+      }
 
-    window.location.search = $.param( queryKeys );
-  });
+      window.location.search = $.param( queryKeys );
+    });
+  }
 
 });

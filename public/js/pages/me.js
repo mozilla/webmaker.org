@@ -1,17 +1,18 @@
-define(['jquery', 'uri'],
-  function ($, URI) {
+define(['jquery', 'uri', 'base/ui'],
+  function ($, URI, UI) {
   'use strict';
 
   var $body = $("body"),
       $makes = $(".make"),
       $deleteBtn = $(".delete-btn"),
-      $nextBtn = $(".next-page"),
-      $prevBtn = $(".previous-page"),
       mainGallery = $(".main-gallery")[0],
+      totalHits,
+      LIMIT,
       queryKeys = URI.parse( window.location.href ).queryKey,
       BASE_WIDTH = 240,
       GUTTER = 20,
-      packery;
+      packery,
+      page;
 
   // Are we inside thimble or popcorn?
   var inApp = $body.hasClass("popcorn") || $body.hasClass("thimble");
@@ -74,13 +75,15 @@ define(['jquery', 'uri'],
     }
   });
 
-  // Pagination
-  $nextBtn.click( function(e) {
-    queryKeys.page = queryKeys.page ? parseInt(queryKeys.page, 10) + 1 : 2;
-    window.location.search = $.param( queryKeys );
-  });
-  $prevBtn.click( function(e) {
-    queryKeys.page = queryKeys.page > 1 ? parseInt(queryKeys.page, 10) - 1 : 1;
-    window.location.search = $.param( queryKeys );
-  });
+  page = queryKeys.page ? parseInt(queryKeys.page, 10) : 1;
+
+  if ( mainGallery ) {
+    totalHits = mainGallery.getAttribute("data-total-hits");
+    LIMIT = mainGallery.getAttribute("data-limit");
+
+    UI.pagination( page, totalHits, LIMIT, function( page ) {
+      queryKeys.page = page;
+      window.location.search = $.param( queryKeys );
+    });
+  }
 });

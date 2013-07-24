@@ -33,23 +33,14 @@
   <h3 class="search-title"> {{ gettext("Search") }} {{searchType}} / <span class="search-query-word">
   {{ query }}
   </span></h3>
-  <div class="main-gallery search-gallery">
+  <div class="main-gallery search-gallery" data-total-hits="{{totalHits}}" data-limit="{{limit}}">
     <div class="gutter-sizer"></div>
     {{ searchmakes() }}
   </div>
   {% if makes.length == 0%}
   <div class="no-makes">{{ gettext("No makes found.") }}</div>
   {% else %}
-    <div class="ui-row pagination">
-      <ol class="pagination-list">
-        {% if pagination > 1 %}
-        <li class="previous-page"><span class="icon-arrow-left"></span> {{ gettext("Newer")}}</li>
-        {% endif %}
-        {% if showOlder %}
-        <li class="next-page">{{ gettext("Older") }} <span class="icon-arrow-right"></span></li>
-        {% endif %}
-      </ol>
-    </div>
+    <div class="ui-row pagination"><ul></ul></div>
   {% endif %}
 </div>
 {% endblock %}

@@ -21,7 +21,7 @@
   </div>
   {% endif %}
   {% if makes.length == 0%}
-  <div class="no-makes">{{ gettext("noMakes") }}</div>
+  <div class="no-makes">{{ gettext("noMakes") | instantiate }}</div>
   {% else %}
     <div class="ui-row pagination">
       <ol class="pagination-list">

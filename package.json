@@ -16,7 +16,7 @@
     "helmet": "0.0.11",
     "less-middleware": "0.1.12",
     "nunjucks": "git://github.com/jlongster/nunjucks.git#0fc9622f3471d67058e431f765bc45d928d23a61",
-    "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.2",
+    "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.4",
     "moment": "~2.0.0",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.9",
     "newrelic": "0.9.22",

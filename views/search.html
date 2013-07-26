@@ -8,12 +8,11 @@
       <h1 class="main-title">{{ gettext("What are you looking for?") }}</h1>
       <form class="search-wrapper" method="get">
         <div id="search-type" class="search-filter">
-          <input type="hidden" name="type" value="{{ searchIcon }}">
-          <span data-selected><span class="icon-{{ searchIcon }}"></span></span>
+          <input type="hidden" name="type" value="{{ searchType }}">
+          <span data-selected><span class="icon-{{ searchType }}"></span></span>
           <span class="icon-caret-down"></span>
           <div class="filter-list ui-select-menu">
             <ul>
-              <li data-value="all"><span class="icon-all"></span>  {{ gettext("All") }}</li>
               <li data-value="title"><span class="icon-title"></span> {{ gettext("Title") }}</li>
               <li data-value="description"><span class="icon-description"></span> {{ gettext("Description") }}</li>
               <li data-value="tags"><span class="icon-tags"></span> {{ gettext("Tags") }}</li>

@@ -1,0 +1,15 @@
+#browser-warning {
+  display: block;
+  padding: 10px 20px;
+  background: #c00;
+  color: #fff;
+  font-size: 12px;
+  z-index: 999999;
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+}
+  #browser-warning a {
+    color: #fff;
+    text-decoration: underline;
+  }

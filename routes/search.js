@@ -21,9 +21,9 @@ module.exports = function(req, res) {
       sortByField = ( req.query.sortByField || "createdAt" ).toString(),
       sortByOrder = ( req.query.order || "desc" ).toString(),
       page = ( req.query.page || 1 ).toString(),
-      setToAll = !( req.query.type || req.query.q ||
-                    req.query.contentType || req.query.sortByField ||
-                    req.query.order || req.query.page ),
+      setToAll = !( req.query.type || req.query.q
+                    || req.query.contentType || req.query.sortByField
+                    || req.query.order || req.query.page ),
       options = {},
       query,
       hideNamespace = false;
@@ -39,28 +39,28 @@ module.exports = function(req, res) {
     type = DEFAULT_TYPE;
   }
 
-  if ( type === 'all' ) {
-    make.or();
+  switch ( type ) {
+    case 'all':
+      make.or();
       options.title = options.user = options.description = query;
-  }
-
-  if ( type === 'all' || type === 'tags' ) {
-    var tags = query.split(',');
-    options.tags = [];
-    options.tags[0] = tags.map(function( t ) {
-      // check for hashtag, remove
-      t = t.trim();
-      if ( t[0] === '#' ) {
-        return t.slice(1);
+    case 'tags':
+      var tags = query.split(',');
+      options.tags = [];
+      options.tags[0] = tags.map(function( t ) {
+        // check for hashtag, remove
+        t = t.trim();
+        if ( t[0] === '#' ) {
+          return t.slice(1);
+        }
+        return t;
+      });
+      break;
+    default:
+      // check for '@', remove
+      if ( query[0] === '@' ) {
+        query = query.slice(1);
       }
-      return t;
-    });
-  } else {
-    // check for '@', remove
-    if ( query[0] === '@' ) {
-      query = query.slice(1);
-    }
-    options[ type ] = query;
+      options[ type ] = query;
   }
 
   if ( contentType ) {

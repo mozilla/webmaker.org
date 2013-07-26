@@ -18,11 +18,12 @@ exports.init = function (app, nunjucksEnv, lessMiddleware, app_root) {
         return markdown.toHTML(text || '');
     });
     nunjucksEnv.addFilter('intcomma', function(val) {
-        var oldStr = val.toString(), newStr;
-        while (oldStr != newStr) {
-            newStr = oldStr.replace(/^(-?\d+)(\d{3})/, '$1,$2');
-            oldStr = newStr;
-        }
+        var oldStr = val.toString(), newStr = oldStr;
+
+        do {
+            [newStr, oldStr] = [newStr.replace(/^(-?\d+)(\d{3})/, '$1,$2'), newStr];
+        } while (newStr != oldStr);
+
         return newStr;
     });
 

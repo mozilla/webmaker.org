@@ -51,7 +51,8 @@ if ( !!env.get( "FORCE_SSL" ) ) {
 }
 
 app.use( express.compress() );
-app.use( express.static( path.join( __dirname, "public" )));
+app.use( express.static( WWW_ROOT ));
+app.use( "/bower", express.static( path.join(__dirname, "bower_components" )));
 
 // Setup locales with i18n
 app.use( i18n.abide({
@@ -112,7 +113,7 @@ app.use( express.static( tmpDir ) );
 // Nunjucks
 // This just uses nunjucks-dev for now -- middleware to handle compiling templates in progress
 app.use( "/views", express.static(path.join( __dirname, "views" ) ) );
-app.get( "/ext/js/nunjucks.js", function( req, res ) {
+app.get( "/js/lib/nunjucks.js", function( req, res ) {
   res.sendfile( path.resolve( __dirname, "node_modules/nunjucks/browser/nunjucks-dev.js"));
 });
 
@@ -182,9 +183,6 @@ app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 app.get( "/sso/include.html", routes.include() );
 app.get( "/sso/include-transparent.html", routes.include("transparent" ));
 app.get( "/sitemap.xml", routes.sitemap);
-app.get( "/js/make-api.js", function( req, res ) {
-  res.sendfile( path.resolve( __dirname, "node_modules/makeapi-client/src/make-api.js" ) );
-});
 
 /**
  * Legacy Webmaker Redirects

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="/ext/css/font-awesome.css">
+  <link rel="stylesheet" href="/bower/font-awesome/css/font-awesome.css">
   <link media="screen" rel="stylesheet" href="/css/style.css">
   <link media="screen" rel="stylesheet" href="/css/make-details.css">
 </head>
@@ -89,12 +89,13 @@
     </div>
     {% endif %}
   </div>
+  <script src="/bower/requirejs/require.js"></script>
   <script>
     requirejs.config({
       baseUrl: '/js',
       paths: {
-        'jquery': '../ext/js/jquery-1.9.1',
-        'social': '../ext/js/socialmedia'
+        'jquery': '../bower/jquery/jquery',
+        'social': '../js/lib/socialmedia'
       }
     });
     require(['pages/details']);

@@ -1,0 +1,12 @@
+{
+  "name": "webmaker.org",
+  "dependencies": {
+    "font-awesome": "3.2.1",
+    "jquery": "2.0.3",
+    "moment": "2.1.0",
+    "nunjucks": "git://github.com/jlongster/nunjucks.git#0fc9622f3471d67058e431f765bc45d928d23a61",
+    "text": "2.0.9",
+    "requirejs": "2.1.8",
+    "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.4"
+  }
+}

@@ -1,5 +1,5 @@
-define(["jquery", "nunjucks", "base/ui", "moment", "uri"],
-  function ($, nunjucks, UI, moment, URI) {
+define(["jquery", "nunjucks", "base/ui", "moment", "uri", "makeapi"],
+  function ($, nunjucks, UI, moment, URI, Make) {
   "use strict";
 
   var MAKE_VIEW = "make-templates/make-admin-search.html",

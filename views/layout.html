@@ -9,8 +9,7 @@
 
   <title>{% block title %}{% endblock %} - {{ gettext("Mozilla Webmaker") }}</title>
   {% block css %}{% endblock %}
-
-  <link rel="stylesheet" href="/ext/css/font-awesome.css">
+  <link rel="stylesheet" href="/bower/font-awesome/css/font-awesome.css">
   <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ loginAPI }}/css/nav.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -166,6 +165,7 @@
   <div class="mobile"></div>
 </div><!-- webmaker-outer-wrapper -->
 <script>
+
 window.cta = {% block CTA %}
   [{
     "title": "{{ gettext("Tools") }}",
@@ -199,10 +199,9 @@ window.cta = {% block CTA %}
 // in the require config.
 window.__loginAPI = "{{ loginAPI }}";
 </script>
-<script src="/js/make-api.js"></script>
-<script src="/ext/js/packery.js"></script>
+<script src="/js/lib/packery.js"></script>
 
-<script id="require-js" src="/ext/js/require.js"
+<script id="require-js" src="/bower/requirejs/require.js"
   data-main="{% block require_main %}/js/main.js{% endblock %}"
   data-page="{% block require_page %}{% endblock %}">
 </script>

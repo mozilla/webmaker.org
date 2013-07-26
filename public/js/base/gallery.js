@@ -1,5 +1,5 @@
-define(['jquery', 'nunjucks', 'base/ui', 'moment'],
-  function ($, nunjucks, UI, moment) {
+define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
+  function ($, nunjucks, UI, moment, Make) {
     'use strict';
 
     var Gallery = function(options) {

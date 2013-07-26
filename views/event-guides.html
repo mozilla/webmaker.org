@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
 {% include 'macros.html' %}
 
-{% block title %}Event Guides{% endblock %}
+{% block title %}{{ gettext("Event Guides") }}{% endblock %}
 {% block midbar %}
+
+{% set header = gettext("eventHeader") + "<br>" %}
+{% set desc = gettext("eventDesc") %}
+
 <!-- check for search right when page loads -->
-{{ galleryHeader("Want to make the web with others?<br>", "We've got guides to help you plan. What are you in the mood to try?",
-[]) }}
+{{ galleryHeader( header, desc, []) }}
 {% endblock %}
 {% block body %}
 
@@ -15,63 +18,63 @@
 
     <div class="ui-row">
       <div class="guide-columns ui-bg-column">
-	<img src="/img/img-Guides-Kitchen-Party.jpg" alt="Kitchen Party" />
-	<img src="/img/icon-Guides-Kitchen-Party.png" class="logo" alt="Kitchen Party Logo" />
-	<h2>Kitchen Party</h2>
-	<p>A Kitchen Party is a fun way to:
-	<ul>
-	  <li>Spend an hour on a rainy day</li>
-	  <li>Hang out as a family on the computer</li>
-	  <li>Learn to hack with a friend</li>
-	  <li>Make cool things on the web</li>
-	</ul>
-	<h3>Start Planning</h3>
-	<ul>
-	  <li>1-5 friends or family members</li>
-	  <li>15 minutes - 1 hour, No preparation needed</li>
-	  <li>At home, in a cafe or at the library</li>
-	</ul>
+        <img src="/img/img-Guides-Kitchen-Party.jpg" alt="{{ gettext("Kitchen Party") }}" />
+        <img src="/img/icon-Guides-Kitchen-Party.png" class="logo" alt="{{ gettext("Kitchen Party Logo") }}" />
+        <h2>{{ gettext("Kitchen Party") }}</h2>
+        <p>{{ gettext("A Kitchen Party is a fun way to") }}
+        <ul>
+          <li>{{ gettext("Spend an hour on a rainy day") }}</li>
+          <li>{{ gettext("Hang out as a family on the computer") }}</li>
+          <li>{{ gettext("Learn to hack with a friend") }}</li>
+          <li>{{ gettext("Make cool things on the web") }}</li>
+        </ul>
+        <h3>{{ gettext("Start Planning") }}</h3>
+        <ul>
+          <li>{{ gettext("1-5 friends or family members") }}</li>
+          <li>{{ gettext("15 minutes - 1 hour") }}</li>
+          <li>{{ gettext("Home, cafe, library") }}</li>    
+        </ul>
 
-	<a class="ui-blue-btn" href="//webmaker.makes.org/thimble/how-to-host-a-kitchen-party">Kitchen Party Planning Guide<i class="icon-angle-right"></i></a></p>
-      </div>
-      <div class="guide-columns ui-bg-column">
-	<img src="/img/img-Guides-Hack-Jam.jpg" alt="Hack Jam" />
-	<img src="/img/icon-Guides-Hack-Jam.png" class="logo" alt="Hack Jam Logo" />
-	<h2>Hack Jam</h2>
-	<p>A Hack Jam is a great way to:
-	<ul>
-	  <li>Team up people with different skill-sets to explore an interesting challenge</li>
-	  <li>Collaboratively build something new or improve something that already exists</li>
-	  <li>Learn and teach new hacking skills</li>
-	</ul>
-	<h3>Start Planning</h3>
-	<ul>
-	  <li>10 - 50 participants</li>
-	  <li>4 hours or longer, 2 weeks of preparation needed</li>
-	  <li>At a school, library or flexible space</li>
-	</ul>
+        <a class="ui-blue-btn" href="//webmaker.makes.org/thimble/how-to-host-a-kitchen-party">{{ gettext("Kitchen Party Planning Guide") }}<i class="icon-angle-right"></i></a></p>
+            </div>
+            <div class="guide-columns ui-bg-column">
+        <img src="/img/img-Guides-Hack-Jam.jpg" alt="{{ gettext("Hack Jam") }}" />
+        <img src="/img/icon-Guides-Hack-Jam.png" class="logo" alt="{{ gettext("Hack Jam Logo") }}" />
+        <h2>{{ gettext("Hack Jam") }}</h2>
+        <p>{{ gettext("A Hack Jam is a great way to") }}
+        <ul>
+          <li>{{ gettext("Team up to explore") }}</li>
+          <li>{{ gettext("Collaboratively build or improve") }}</li>
+          <li>{{ gettext("Learn and teach new hacking skills") }}</li>
+        </ul>
+        <h3>{{ gettext("Start Planning") }}</h3>
+        <ul>
+          <li>{{ gettext("10 - 50 participants") }}</li>
+          <li>{{ gettext("4 hours, 2 weeks") }}</li>
+          <li>{{ gettext("School, library") }}</li>
+        </ul>
 
-	<a  class="ui-blue-btn" href="//webmaker.makes.org/thimble/host-a-hack-jam">Hack Jam Planning Guide<i class="icon-angle-right"></i></a></p>
-      </div>
-      <div class="guide-columns ui-bg-column">
-	<img src="/img/img-Guides-Hive-Pop-up.jpg" alt="Hive Pop up" />
-	<img src="/img/icon-Guides-Hive-Pop-up.png" class="logo" alt="Hive Pop up Logo" />
-	<h2>Hive Pop-Up</h2>
-	<p>A Hive Pop-Up is fantastic way to:
-	<ul>
-	  <li>Bring together local organizations in a science fair setting</li>
-	  <li>Demonstrate cool web ideas</li>
-	  <li>Provide fun hands-on activities</li>
-	  <li>Introduce your community to hacking</li>
-	</ul>
+        <a class="ui-blue-btn" href="//webmaker.makes.org/thimble/host-a-hack-jam">{{ gettext("Hack Jam Planning Guide") }}<i class="icon-angle-right"></i></a></p>
+            </div>
+            <div class="guide-columns ui-bg-column">
+        <img src="/img/img-Guides-Hive-Pop-up.jpg" alt="{{ gettext("Hive Pop up") }}" />
+        <img src="/img/icon-Guides-Hive-Pop-up.png" class="logo" alt="{{ gettext("Hive Pop up Logo") }}" />
+        <h2>{{ gettext("Hive Pop-Up") }}</h2>
+        <p>{{ gettext("A Hive Pop-Up is fantastic way to:") }}
+        <ul>
+          <li>{{ gettext("Bring together local organizations") }}</li>
+          <li>{{ gettext("Demonstrate cool web ideas") }}</li>
+          <li>{{ gettext("Provide fun hands-on activities") }}</li>
+          <li>{{ gettext("Introduce your community to hacking") }}</li>
+        </ul>
 
-	<h3>Start Planning</h3>
-	<ul>
-	  <li>2-10 participating organizations</li>
-	  <li>4 hours or longer, 2-4 weeks of preparation needed</li>
-	  <li>In an open space like a community center, library or school</li>
-	</ul>
-	<a class="ui-blue-btn" href="//webmaker.makes.org/thimble/host-a-hive-popup">Hive Pop-Up Planning Guide<i class="icon-angle-right"></i></a></p>
+        <h3>{{ gettext("Start Planning") }}</h3>
+        <ul>
+          <li>{{ gettext("2-10 participating organizations") }}</li>
+          <li>{{ gettext("4 hours, 2-4 weeks") }}</li>
+          <li>{{ gettext("Community center, library, school") }}</li>
+        </ul>
+        <a class="ui-blue-btn" href="//webmaker.makes.org/thimble/host-a-hive-popup">{{ gettext("Hive Pop-Up Planning Guide") }}<i class="icon-angle-right"></i></a></p>
       </div>
     </div>
 

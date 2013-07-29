@@ -32,6 +32,7 @@
     "Become a mentor": "Become a mentor",
     "Blog": "Blog",
     "Bring together local organizations": "Bring together local organizations in a science fair setting",
+    "browserUpgradeWarning": "Your browser may lack functionality needed by Webmaker to function properly. Please <a href='http://browsehappy.com/' target='_blank'>upgrade your browser</a> for an improved experience.",
     "Built with": "Built with",
     "by": "by",
     "Claim your Webmaker domain.": "Claim your Webmaker domain.",
@@ -69,7 +70,7 @@
     "Error": "Error",
     "error-404": "404: You found a loose thread!<br>Please try a <a href='/{{lang}}/search'>search</a> or visit our <a href='/{{lang}}'>homepage.</a>",
     "Event Guides": "Event Guides",
-    "eventDesc": "We've got guides to help you plan. What are you in the mood to try?",     
+    "eventDesc": "We've got guides to help you plan. What are you in the mood to try?",
     "eventHeader": "Want to make the web with others?",
     "Events Desc": "Find an event near you or host your own.",
     "Events": "Events",
@@ -267,4 +268,4 @@
     "You can build:": "You can build:",
     "you": "you",
     "Youth mentor": "Youth mentor"
-  }
+}

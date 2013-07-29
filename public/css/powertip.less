@@ -1,0 +1,136 @@
+// Styles used by mailing list signup tooltip
+
+#powerTip {
+	cursor: default;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(255, 255, 255, 0.5) inset, 0 -2px 2px #dcdcdc inset;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(255, 255, 255, 0.5) inset, 0 -2px 2px #dcdcdc inset;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(255, 255, 255, 0.5) inset, 0 -2px 2px #dcdcdc inset;
+	border: 1px solid #acacac;
+	color: #000000;
+	display: none;
+	padding: 10px;
+	position: absolute;
+	z-index: 2147483647;
+	width: 205px;
+	.border-box;
+
+  .privacy-desc {
+	  font-size: 12px;
+	  line-height: 1.33em;
+
+	  div {
+	  	float:left;
+	  	text-align: left;
+	  	width:15%;
+	  	.border-box;
+
+	  	input[type="checkbox"] {
+				border-radius:6px;
+				.transition(box-shadow 400ms ease-in);
+
+				&.invalid {
+					box-shadow: 0 0 7px #F7453D;
+				}
+	  	}
+	  }
+
+	  label {
+	  	display: block;
+	  	float:left;
+	  	width:85%;
+	  	.border-box;
+	  	margin:0;
+	  	padding:0;
+	  	color:#777;
+	  }
+
+	  a {
+	    &:hover, &:focus {
+	      text-decoration: underline;
+	      outline: none;
+	    }
+	  }
+	}
+
+}
+#powerTip:before {
+	content: "";
+	position: absolute;
+}
+#powerTip.n:before, #powerTip.s:before {
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	left: 50%;
+	margin-left: -8px;
+}
+#powerTip.e:before, #powerTip.w:before {
+	border-bottom: 8px solid transparent;
+	border-top: 8px solid transparent;
+	margin-top: -8px;
+	top: 50%;
+}
+#powerTip.n:before {
+	border-top: 10px solid #acacac;
+	border-top: 10px solid rgba(172, 172, 172, 0.8);
+	bottom: -10px;
+}
+#powerTip.e:before {
+	border-right: 10px solid #acacac;
+	border-right: 10px solid rgba(172, 172, 172, 0.8);
+	left: -10px;
+}
+#powerTip.s:before {
+	border-bottom: 10px solid #acacac;
+	border-bottom: 10px solid rgba(172, 172, 172, 0.8);
+	top: -10px;
+}
+#powerTip.w:before {
+	border-left: 10px solid #acacac;
+	border-left: 10px solid rgba(172, 172, 172, 0.8);
+	right: -10px;
+}
+#powerTip.ne:before, #powerTip.se:before {
+	border-right: 10px solid transparent;
+	border-left: 0;
+	left: 10px;
+}
+#powerTip.nw:before, #powerTip.sw:before {
+	border-left: 10px solid transparent;
+	border-right: 0;
+	right: 10px;
+}
+#powerTip.ne:before, #powerTip.nw:before {
+	border-top: 10px solid #acacac;
+	border-top: 10px solid rgba(172, 172, 172, 0.8);
+	bottom: -10px;
+}
+#powerTip.se:before, #powerTip.sw:before {
+	border-bottom: 10px solid #acacac;
+	border-bottom: 10px solid rgba(172, 172, 172, 0.8);
+	top: -10px;
+}
+#powerTip.nw-alt:before, #powerTip.ne-alt:before,
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: 10px solid #acacac;
+	border-top: 10px solid rgba(172, 172, 172, 0.8);
+	bottom: -10px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	left: 10px;
+}
+#powerTip.ne-alt:before {
+	left: auto;
+	right: 10px;
+}
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: none;
+	border-bottom: 10px solid #acacac;
+	border-bottom: 10px solid rgba(172, 172, 172, 0.8);
+	bottom: auto;
+	top: -10px;
+}
+#powerTip.se-alt:before {
+	left: auto;
+	right: 10px;
+}

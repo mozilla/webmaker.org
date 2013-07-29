@@ -4,6 +4,7 @@ requirejs.config({
     'text':             '/ext/js/text',
     'jquery':           '/ext/js/jquery-1.9.1',
     'jquery.carousel':  '/ext/js/jquery.carouFredSel-6.2.1',
+    'jquery.powertip':  '/ext/js/jquery.powertip',
     'moment':           '/ext/js/moment',
     'social':           '/ext/js/socialmedia',
     'uri':              '/ext/js/uri',
@@ -19,7 +20,7 @@ requirejs.config({
   }
 });
 
-require(['jquery','base/carousel', 'base/marquee', 'base/privacy', 'tabzilla', 'sso-ux'],
+require(['jquery','base/carousel', 'base/marquee', 'base/email-signup', 'tabzilla', 'sso-ux'],
   function ($, carousel, Marquee, privacy) {
     'use strict';
     var $html = $('html, body');
@@ -55,8 +56,6 @@ require(['jquery','base/carousel', 'base/marquee', 'base/privacy', 'tabzilla', '
         marquee.startRotation();
       });
     }
-
-    privacy.attach();
 
     // Set up page-specific js
     var pageJS = $('#require-js').data('page');

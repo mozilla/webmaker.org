@@ -23,7 +23,7 @@
     "webmaker-events": "https://github.com/mozilla/webmaker-events/tarball/v0.1.13",
     "sightmap": "0.0.1",
     "async": "0.2.9",
-    "i18n-abide": "0.0.10"
+    "i18n-abide": "git://github.com/humphd/i18n-abide.git#05344a817dca4571a1ae9f502fed1cb118294033"
   },
   "devDependencies": {
     "grunt": "0.4.1",

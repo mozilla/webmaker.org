@@ -4,7 +4,6 @@ module.exports = function( app ) {
     {
       route: "/",
       paths: [
-        "/en-US",
         "/projects",
         "/projects/:id",
         "/support",

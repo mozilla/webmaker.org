@@ -164,35 +164,36 @@
   </footer>
   <div class="mobile"></div>
 </div><!-- webmaker-outer-wrapper -->
-<script>
 
-window.cta = {% block CTA %}
-  [{
-    "title": "{{ gettext("Tools") }}",
-    "desc": "{{ gettext("Use our Tools Desc") }}",
-    "image": "/img/cta-Tools.jpg",
-    "url": "/{{lang}}/tools"
-  },
-  {
-    "title": "{{ gettext("Teach") }}",
-    "desc": "{{ gettext("Teach Desc") }}",
-    "image": "/img/cta-Teach.jpg",
-    "url": "/{{lang}}/teach"
-  },
-  {
-    "title": "{{ gettext("Maker Party") }}",
-    "desc": "{{ gettext("Maker Party Desc") }}",
-    "image": "/img/cta-Party.jpg",
-    "url": "/{{lang}}/party"
-  },
-  {
-    "title": "{{ gettext("About Us") }}",
-    "desc": "{{ gettext("About Us Desc") }}",
-    "image": "/img/cta-About-us.jpg",
-    "url": "/{{lang}}/about"
-  }];
-{% endblock %} ;
+<script type="application/json" id="block-cta">
+  {% block CTA %}
+    [{
+      "title": "{{ gettext("Tools") }}",
+      "desc": "{{ gettext("Use our Tools Desc") }}",
+      "image": "/img/cta-Tools.jpg",
+      "url": "/{{lang}}/tools"
+    },
+    {
+      "title": "{{ gettext("Teach") }}",
+      "desc": "{{ gettext("Teach Desc") }}",
+      "image": "/img/cta-Teach.jpg",
+      "url": "/{{lang}}/teach"
+    },
+    {
+      "title": "{{ gettext("Maker Party") }}",
+      "desc": "{{ gettext("Maker Party Desc") }}",
+      "image": "/img/cta-Party.jpg",
+      "url": "/{{lang}}/party"
+    },
+    {
+      "title": "{{ gettext("About Us") }}",
+      "desc": "{{ gettext("About Us Desc") }}",
+      "image": "/img/cta-About-us.jpg",
+      "url": "/{{lang}}/about"
+    }]
+  {% endblock %}
 </script>
+
 <script src="{{ personaSSO }}/sso/include.js"></script>
 <script>
 // XXX: we need to load this after require loads jquery, but can't hard-code a path

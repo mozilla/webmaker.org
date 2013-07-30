@@ -5,6 +5,7 @@ var async = require("async"),
     return function(req, res) {
       var DEFAULT_PREFIX = "p",
           DEFAULT_LAYOUT = "index",
+          STICKY_LIMIT = 24, // Larger to account for possible duplicates
           LIMIT = 12,
           layouts = {
             index: {
@@ -51,7 +52,7 @@ var async = require("async"),
 
       var stickyOptions = {
         tagPrefix: stickyPrefix,
-        limit: LIMIT,
+        limit: STICKY_LIMIT,
         sortByField: ["createdAt", "desc"]
       };
 
@@ -66,14 +67,17 @@ var async = require("async"),
         var sticky = [],
             warnings = [],
             normal,
-            all = [];
+            all = [],
+            sortByPriorityResults;
 
         if (err) {
           return res.send(err);
         }
 
         if (data[0].length) {
-          sticky = make.sortByPriority(stickyPrefix, data[0]);
+          sortByPriorityResults = make.sortByPriority(stickyPrefix, data[0]);
+          sticky = sortByPriorityResults.results;
+          warnings = warnings.concat(sortByPriorityResults.errors);
         }
 
         // Send warning messages to editor about missing stickies

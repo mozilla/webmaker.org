@@ -58,7 +58,7 @@ app.use( i18n.abide({
   supported_languages: [
     'en-US'
   ],
-  default_lang: "en_US",
+  default_lang: "en-US",
   translation_type: "key-value-json",
   translation_directory: "locale",
   locale_on_url: true

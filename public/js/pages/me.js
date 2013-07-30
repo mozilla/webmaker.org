@@ -54,7 +54,10 @@ define(['jquery', 'uri'],
     var $this = $(this),
         makeID = $this.data("make-id");
     if(confirm("Are you sure you want to delete this make?")) {
-      $.post("/remove", { makeID: makeID }, function(res) {
+      $.post("/remove", {
+        makeID: makeID,
+        _csrf: $("meta[name='X-CSRF-Token']").attr("content")
+      }, function(res) {
         if ( res.deletedAt ) {
           if (!inApp) {
             packery.remove($this.closest(".make")[0]);

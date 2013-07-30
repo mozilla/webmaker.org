@@ -27,14 +27,6 @@ require(['jquery','base/carousel', 'base/marquee', 'base/email-signup', 'tabzill
     var $window = $(window);
     var $backToTop = $('.backToTop');
 
-    // set up CSRF handling
-    var csrfToken = $('meta[name="X-CSRF-Token"]').attr('content');
-    $.ajaxSetup({
-      beforeSend: function(request) {
-       request.setRequestHeader('X-CSRF-Token', csrfToken);
-      }
-    });
-
     //Footer
     $backToTop.on('click', function (e) {
       $html.animate({scrollTop : 0}, 500);

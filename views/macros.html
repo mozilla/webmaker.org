@@ -40,7 +40,7 @@
 {% macro memakes() %}
   {% for make in makes %}
     <div class="make me-make medium make-type-{{make.type}}">
-      <a class="make-link" href="{{make.url}}">
+      <a class="make-link" target="_blank" href="{{make.url}}">
         <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
         <div class="type-label"><span class="make-type">{{make.type}}</span></div>
         <div class="make-info">

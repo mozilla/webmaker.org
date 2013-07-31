@@ -23,6 +23,7 @@ module.exports = function( grunt ) {
         "lib/**/*.js",
         "package.json",
         "public/js/**/*.js",
+        "!public/js/lib/**",
         "routes/**/*.js"
       ]
     }

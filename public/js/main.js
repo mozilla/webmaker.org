@@ -3,7 +3,6 @@ requirejs.config({
   paths: {
     'text':             '/bower/text/text',
     'jquery':           '/bower/jquery/jquery.min',
-    'jquery.carousel':  '/js/lib/jquery.carouFredSel-6.2.1',
     'jquery.powertip':  '/js/lib/jquery.powertip',
     'moment':           '/bower/moment/moment',
     'social':           '/js/lib/socialmedia',
@@ -16,13 +15,12 @@ requirejs.config({
   },
   shim: {
     'tabzilla': ['jquery'],
-    'jquery.carousel': ['jquery'],
     'sso-ux': ['jquery']
   }
 });
 
-require(['jquery','base/carousel', 'base/marquee', 'base/email-signup', 'tabzilla', 'sso-ux'],
-  function ($, carousel, Marquee, privacy) {
+require(['jquery','base/cta', 'base/marquee', 'base/email-signup', 'tabzilla', 'sso-ux'],
+  function ($, cta, Marquee, privacy) {
     'use strict';
     var $html = $('html, body');
     var $window = $(window);
@@ -40,7 +38,8 @@ require(['jquery','base/carousel', 'base/marquee', 'base/email-signup', 'tabzill
        $backToTop.removeClass('addMore');
      }
     });
-    carousel.attachToCTA();
+
+    cta.attachToCTA();
 
     // Create Partner marquees
     if ($('ul.sponsors').length) {

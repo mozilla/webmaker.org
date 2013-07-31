@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}" dir="{{ lang_dir }}">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,6 +19,7 @@
 
   <link rel="icon" type="image/png" href="/img/favicon.ico">
 </head>
+
 <body id="{{ page }}" {% if view %}class="{{ view }}"{% endif %} data-endpoint="{{ makeEndpoint }}">
 
 <div id="browser-warning">
@@ -61,7 +63,6 @@
               </div>
             </div>
           </li>
-          <!-- <li><a {% if page == 'learn' %}class="on"{% endif %} id="nav-learn" href="/learn">Learn</a></li> -->
           <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/{{lang}}/teach">
             {{ gettext("Teach") }}</a></li>
           <li><a {% if page == 'events' %}class="on"{% endif %} id="nav-events" href="/{{lang}}/events">
@@ -85,85 +86,83 @@
       {% endif %}
       <button class="backToTop">{{ gettext("Back to top") }} <span class="icon-angle-up"></span></button>
     </div>
+
     {% block footer %}
     <section class="make-footer">
-      <div class="c-leftarrow cta-arrow hide">
-        <i class="icon-angle-left"></i>
-      </div>
-      <div class="carousel-wrapper">
         <div class="make-wrapper"></div>
-      </div>
-      <div class="c-rightarrow cta-arrow hide">
-        <i class="icon-angle-right"></i>
-      </div>
     </section>
     {% endblock %}
+
     <div class="partnerWrapper">
-    <section class="partners">
-      <header class="partners-header">
-        {{ gettext("Mozillaian like you") }}
-      </header>
-      <ul class="sponsors">
-        <li>Chicago Community Trust</li>
-        <li>Chicago Instructional Technology Foundation</li>
-        <li>City of Chicago</li>
-        <li>Corporation for Public Broadcasting</li>
-        <li>U.S. Department of Energy</li>
-        <li>Ford Foundation</li>
-        <li>Google</li>
-        <li>Intel</li>
-        <li>Knight Foundation</li>
-        <li>MacArthur Foundation</li>
-        <li>National Endowment for the Arts</li>
-        <li>NESTA</li>
-        <li>The Nominet Trust</li>
-        <li>National Science Foundation</li>
-        <li>Ontario Trillium Foundation</li>
-        <li>Social Science Research Council</li>
-        <li>Alfred P. Sloan Foundation</li>
-        <li>Telefonica</li>
-        <li>ZeroDivide</li>
-      </ul>
-      <div class="footerHr"></div>
-      <ul class="social">
-        <li><a href="//twitter.com/mozilla"><i class="footer-social icon-twitter"></i> @mozilla</a></li>
-        <li><a href="//twitter.com/webmaker"><i class="footer-social icon-twitter"></i> @webmaker</li>
-        <li><a href="//plus.google.com/u/2/communities/106022863174952221205"><i class="footer-social icon-google-plus"></i> google+</li>
-        <li><a href="http://mozillawebmaker.tumblr.com/"><i class="footer-social icon-tumblr"></i> tumblr</a></li>
+      <section class="partners">
+        <header class="partners-header">
+          {{ gettext("Mozillaian like you") }}
+        </header>
 
-        <li id="email-li">
-          <div class="newsletter">
-            <form id="privacy-form" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
-              <input type="email" id="email-updates" name="email" autocomplete="off" placeholder="{{ gettext("Sign up for email updates") }}" required data-powertip='
-                <div class="privacy-desc">
-                  <div><input type="checkbox" id="newsletter-signup-checkbox-proxy" /></div>
-                  <label for="newsletter-signup-checkbox-proxy">{{ gettext("privacy-desc") }} <a href="/{{lang}}/privacy" target="_blank">{{ gettext("privacy policy") }}</a>.</label>
-                </div>'/>
+        <ul class="sponsors">
+          <li>Chicago Community Trust</li>
+          <li>Chicago Instructional Technology Foundation</li>
+          <li>City of Chicago</li>
+          <li>Corporation for Public Broadcasting</li>
+          <li>U.S. Department of Energy</li>
+          <li>Ford Foundation</li>
+          <li>Google</li>
+          <li>Intel</li>
+          <li>Knight Foundation</li>
+          <li>MacArthur Foundation</li>
+          <li>National Endowment for the Arts</li>
+          <li>NESTA</li>
+          <li>The Nominet Trust</li>
+          <li>National Science Foundation</li>
+          <li>Ontario Trillium Foundation</li>
+          <li>Social Science Research Council</li>
+          <li>Alfred P. Sloan Foundation</li>
+          <li>Telefonica</li>
+          <li>ZeroDivide</li>
+        </ul>
 
-              <button id="email-submit" type="submit">
-                <i class="icon-chevron-right"></i>
-              </button>
+        <div class="footerHr"></div>
 
-              <input id="newsletter-signup-checkbox" name="custom-1216" type="checkbox" required />
-            </form>
-          </div>
-        </li>
+        <ul class="social">
+          <li><a href="//twitter.com/mozilla"><i class="footer-social icon-twitter"></i> @mozilla</a></li>
+          <li><a href="//twitter.com/webmaker"><i class="footer-social icon-twitter"></i> @webmaker</a></li>
+          <li><a href="//plus.google.com/u/2/communities/106022863174952221205"><i class="footer-social icon-google-plus"></i> google+</a></li>
+          <li><a href="http://mozillawebmaker.tumblr.com/"><i class="footer-social icon-tumblr"></i> tumblr</a></li>
 
-      </ul>
-      <ul class="links">
-        <li><a href="http://blog.webmaker.org">{{ gettext("Blog") }}</a></li>
-        <li><a href="/{{lang}}/about">{{ gettext("About Us") }}</a></li>
-        <li><a href="/{{lang}}/getinvolved">{{ gettext("Get Involved") }}</a></li>
-        <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ gettext("Donate") }}</a></li>
-        <li><a href="mailto:makerparty@mozilla.org">{{ gettext("Contact") }}</a></li>
-        <li><a href="/{{lang}}/privacy">{{ gettext("Privacy") }}</a></li>
-        <li><a href="/{{lang}}/terms">{{ gettext("Legal") }}</a></li>
-      </ul>
-    </section>
-  </div>
+          <li id="email-li">
+            <div class="newsletter">
+              <form id="privacy-form" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
+                <input type="email" id="email-updates" name="email" autocomplete="off" placeholder="{{ gettext("Sign up for email updates") }}" required data-powertip='
+                  <div class="privacy-desc">
+                    <div><input type="checkbox" id="newsletter-signup-checkbox-proxy" /></div>
+                    <label for="newsletter-signup-checkbox-proxy">{{ gettext("privacy-desc") }} <a href="/{{lang}}/privacy" target="_blank">{{ gettext("privacy policy") }}</a>.</label>
+                  </div>'/>
+
+                <button id="email-submit" type="submit">
+                  <i class="icon-chevron-right"></i>
+                </button>
+
+                <input id="newsletter-signup-checkbox" name="custom-1216" type="checkbox" required />
+              </form>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="links">
+          <li><a href="http://blog.webmaker.org">{{ gettext("Blog") }}</a></li>
+          <li><a href="/{{lang}}/about">{{ gettext("About Us") }}</a></li>
+          <li><a href="/{{lang}}/getinvolved">{{ gettext("Get Involved") }}</a></li>
+          <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ gettext("Donate") }}</a></li>
+          <li><a href="mailto:makerparty@mozilla.org">{{ gettext("Contact") }}</a></li>
+          <li><a href="/{{lang}}/privacy">{{ gettext("Privacy") }}</a></li>
+          <li><a href="/{{lang}}/terms">{{ gettext("Legal") }}</a></li>
+        </ul>
+      </section>
+    </div>
   </footer>
+
   <div class="mobile"></div>
-</div><!-- webmaker-outer-wrapper -->
+</div>
 
 <script type="application/json" id="block-cta">
   {% block CTA %}

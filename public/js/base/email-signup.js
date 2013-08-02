@@ -1,12 +1,3 @@
-/*
-
-  Email Signup
-
-  TODO:
-  -
-
-*/
-
 define(['jquery', 'jquery.powertip'], function ($) {
 
   // Element references -------------------------------------------------------

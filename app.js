@@ -219,6 +219,8 @@ app.get( "/mentor", routes.page( "mentor" ) );
 app.get( "/getinvolved", routes.page( "getinvolved" ) );
 app.get( "/event-guides", routes.page( "event-guides" ) );
 app.get( "/search", routes.search );
+app.get( "/feedback", routes.page( "feedback" ) );
+app.get( "/style-guide", routes.page( "style-guide" ) );
 
 app.get( "/details", routes.details );
 // Old

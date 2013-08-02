@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block title %}Feedback{% endblock %}
+{% block body %}
+<div class="ui-wrapper ui-body">
+
+  <div class="ui-poster">
+    <img src="/img/feedback-hero.jpg" alt="" class="hero">
+  </div>
+
+  <div class="ui-section extra-margin">
+    <div class="ui-row">
+      <h1>How are we doing?</h1>
+
+      <div class="subtitle">Receiving your opinions on the Webmaker experience is really important to us. In fact, your feedback is pretty much the first thing we take into account when we plan future impovements to the site. Please take a minute to tell us what you like about the site, what doesn't work how you expected it would and what could be better.</div>
+    </div>
+
+    <div class="ui-row">
+      <ul class="chevron-list">
+        <li><a class="anchor-slide" href="#fill-out-survey">Fill out our survey</a></li>
+        <li><a class="anchor-slide" href="#submit-a-bug">Submit a bug on Bugzilla</a></li>
+        <li><a class="anchor-slide" href="#host-user-testing">Host a user testing session</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="fill-out-survey" class="ui-section green colored">
+    <h3 class="step-number">1</h3>
+
+    <h2>Fill out our survey</h2>
+
+    <p>We've put together a detailed <a href="http://mzl.la/survey-summer2013" target="_blank">survey</a> so you can let us know why you're happy, confused or even...(gulp)...angry with our site. This survey will take about 20 minutes to complete but  we'll send you a free Webmaker t-shirt when you're done! Everyone is welcome to complete the survey – even if you're brand new to Webmaker.</p>
+
+    <div class="img-and-button">
+      <img src="/img/feedback-checks.svg">
+      <a href="http://mzl.la/survey-summer2013" target="_blank" class="big-button white">Start the survey now</a>
+    </div>
+  </div>
+
+  <div id="submit-a-bug" class="ui-section dark-grey colored">
+    <h3 class="step-number">2</h3>
+
+    <h2>Submit a “bug” on Bugzilla</h2>
+
+    <p>Our team uses an issue tracker called Bugzilla for filing bugs and monitoring fixes. Anyone can submit a bug. <strong>And just because it’s called a “bug” doesn’t necessarily mean there’s something wrong</strong>; it can be an idea you have for a feature, a note about how much you like something or a non-technical suggestion for improvments.</p>
+    <p>When you file your bug, be sure to put <strong>“Feedback”</strong> in the Status Whiteboard field so we can find it. If you don’t see the Whiteboard option, make sure the advanced options are showing.</p>
+
+    <div class="status-whiteboard">
+      <div class="bugzilla">
+        <div class="status">Status<br> Whiteboard:</div>
+        <div class="feedback">Feedback</div>
+      </div>
+      <div class="subheader">If you don’t see the Whiteboard field, make sure the advanced options are showing.</div>
+    </div>
+
+    <div class="quick-links">
+      <div class="ql-header">Quick links:</div>
+
+      <ul>
+        <li><a href="https://blog.webmaker.org/bugzilla-for-webmaker" target="_blank">Getting Started with Bugzilla</a></li>
+        <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webmaker&component=webmaker.org" target="_blank">Submit a bug for Webmaker.org</a></li>
+        <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webmaker&component=Popcorn%20Maker" target="_blank">Submit a bug for Popcorn Maker</a></li>
+        <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webmaker&component=Thimble" target="_blank">Submit a bug for Thimble</a></li>
+      </ul>
+    </div>
+
+    <a href="https://bugzilla.mozilla.org/enter_bug.cgi" target="_blank" class="big-button white">Submit a bug now</a>
+  </div>
+
+  <div id="host-user-testing" class="ui-section blue colored">
+    <h3 class="step-number">3</h3>
+
+    <h2>Host a user testing session</h2>
+
+    <p>A user testing session is when you sit down with a user, have them explore the site and then fill out a survey with their responses. These sessions are extremely  helpful to us because users can concentrate on exploring the site while you take care of accurately reporting on their experience.</p>
+
+    <div class="ol-and-circle-wrapper">
+      <div class="wrapper">
+        <ol class="ol-circled white">
+          <li><span class="number">1</span> <span class="text"><strong>Familiarize yourself with our <a href="http://mzl.la/survey-summer2013" target="_blank">survey</a>.</strong></span></li>
+          <li><span class="number">2</span> <span class="text"><strong>Find a willing volunteer</strong> and walk them through our survey. Let them drive, but ask them to speak their thoughts aloud so you can write them in the form.</span></li>
+          <li><span class="number">3</span> <span class="text"><strong>Shower your volunteer with love and Mozilla gear</strong>. Big thanks to them (and you) for helping us make Webmaker better for everyone.</span></li>
+        </ol>
+
+        <p class="sub-header"><span class="optional">Optional</span> <span class="details"><span><strong>File follow-up bugs</strong> on Bugzilla!<span> <span>See how <a href="#submit-a-bug">above</a>.</span></span></p>
+      </div>
+
+      <div class="circle-feature">
+        <img src="/img/jbuck.jpg" class="circle-matte">
+        <div class="subheader">We are always thrilled to hear from users! Here’s a long list of bugs captured at a Mozilla workshop.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block CTA %}
+  []
+{% endblock %}

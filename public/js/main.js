@@ -19,18 +19,15 @@ requirejs.config({
   }
 });
 
-require(['jquery','base/cta', 'base/marquee', 'base/email-signup', 'tabzilla', 'sso-ux'],
-  function ($, cta, Marquee, privacy) {
+require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor-slide', 'tabzilla', 'sso-ux'],
+  function ($, cta, Marquee, privacy, AnchorSlide) {
     'use strict';
+
     var $html = $('html, body');
     var $window = $(window);
-    var $backToTop = $('.backToTop');
+    var $backToTop = $('.back-to-top');
 
-    //Footer
-    $backToTop.on('click', function (e) {
-      $html.animate({scrollTop : 0}, 500);
-      return false;
-    });
+    // Show and hide "Back To Top" trigger
     $window.scroll(function() {
      if ($window.scrollTop() > 100) {
        $backToTop.addClass('addMore');
@@ -39,18 +36,23 @@ require(['jquery','base/cta', 'base/marquee', 'base/email-signup', 'tabzilla', '
      }
     });
 
+    // Generate CTA bar in footer
     cta.attachToCTA();
 
+    // Create Anchor Sliders
+    $('a.anchor-slide').each(function () {
+      var anchorSlide = new AnchorSlide(this);
+    });
+
     // Create Partner marquees
-    if ($('ul.sponsors').length) {
-      $('ul.sponsors').each(function () {
-        var marquee = new Marquee(this);
-        marquee.startRotation();
-      });
-    }
+    $('ul.sponsors').each(function () {
+      var marquee = new Marquee(this);
+      marquee.startRotation();
+    });
 
     // Set up page-specific js
     var pageJS = $('#require-js').data('page');
+
     if (pageJS) {
       require([pageJS]);
     }

@@ -1,12 +1,3 @@
-/*
-
-    Marquee
-
-    TODO:
-    - dynamically zero out margin on rightmost item (?)
-
-*/
-
 define(['jquery'], function ($) {
 
   /**

@@ -82,9 +82,9 @@
   <footer class="footer">
     <div id="footer-actions">
       {% if page == 'index' or page == 'teach' %}
-      <button class="load-more">{{ gettext("Load more") }} <span class="icon-angle-down"></span></button>
+      <a class="load-more">{{ gettext("Load more") }} <span class="icon-angle-down"></span></a>
       {% endif %}
-      <button class="backToTop">{{ gettext("Back to top") }} <span class="icon-angle-up"></span></button>
+      <a class="back-to-top anchor-slide" href="#">{{ gettext("Back to top") }} <span class="icon-angle-up"></span></a>
     </div>
 
     {% block footer %}
@@ -156,6 +156,7 @@
           <li><a href="mailto:makerparty@mozilla.org">{{ gettext("Contact") }}</a></li>
           <li><a href="/{{lang}}/privacy">{{ gettext("Privacy") }}</a></li>
           <li><a href="/{{lang}}/terms">{{ gettext("Legal") }}</a></li>
+          <li><a href="/{{lang}}/feedback">{{ gettext("Feedback") }}</a></li>
         </ul>
       </section>
     </div>

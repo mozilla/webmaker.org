@@ -6,7 +6,7 @@ define(['jquery', 'base/ui', 'base/gallery'],
     banner: '#banner-teach',
     makeView: 'make-teach.html',
     stickyPrefix: 'webmaker:teach-',
-    defaultSearch: 'guide'
+    defaultSearch: { tags: [ 'webmaker:recommended', 'guide' ] }
   });
 
 });

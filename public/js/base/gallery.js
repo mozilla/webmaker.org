@@ -30,6 +30,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
         isLastPage = false,
         searchOptions = {
           limit: options.limit,
+          tags: options.defaultSearch,
           sortByField: ['createdAt', 'desc'],
           page: 1
         };

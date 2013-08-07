@@ -48,12 +48,7 @@ module.exports = function(req, res) {
     var tags = query.split(',');
     options.tags = [];
     options.tags[0] = tags.map(function( t ) {
-      // check for hashtag, remove
-      t = t.trim();
-      if ( t[0] === '#' ) {
-        return t.slice(1);
-      }
-      return t;
+      return t.trim();
     });
   } else {
     // check for '@', remove

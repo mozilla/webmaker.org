@@ -3,6 +3,8 @@ if ( process.env.NEW_RELIC_HOME ) {
 }
 
 var express = require( "express" ),
+    domain = require( "domain" ),
+    cluster = require( "cluster" ),
     habitat = require( "habitat" ),
     helmet = require( "helmet" ),
     nunjucks = require( "nunjucks" ),
@@ -18,7 +20,8 @@ var app = express(),
       autoescape: true
     }),
     NODE_ENV = env.get( "NODE_ENV" ),
-    WWW_ROOT = path.resolve( __dirname, "public" );
+    WWW_ROOT = path.resolve( __dirname, "public" ),
+    server;
 
 nunjucksEnv.addFilter("instantiate", function(input) {
     var tmpl = new nunjucks.Template(input);
@@ -49,6 +52,64 @@ if ( !!env.get( "FORCE_SSL" ) ) {
   app.use( helmet.hsts() );
   app.enable( "trust proxy" );
 }
+
+/**
+ * Crash isolation and error handling, logging
+ */
+if ( env.get( "GRAYLOG_HOST" ) ) {
+  require( 'graylog' );
+  GLOBAL.graylogHost = env.get( "GRAYLOG_HOST" );
+  GLOBAL.graylogFacility = "webmaker.org";
+}
+function reportError( error, isFatal ) {
+  if ( !graylogHost ) {
+    return;
+  }
+  log( "[" + ( isFatal ? "CRASH" : "ERROR" ) + "] webmaker.org error",
+    err.message,
+    {
+      level: isFatal ? LOG_CRIT : LOG_ERR,
+      stack: err.stack,
+      _serverVersion: require( './package.json' ).version,
+      _fullStack: err.stack
+    }
+  );
+}
+app.use( function( req, res, next ) {
+  var guard = domain.create();
+  guard.add( req );
+  guard.add( res );
+
+  guard.on( 'error', function( err ) {
+    console.error( 'Error:', err.stack );
+    try {
+      // make sure we close down within 30 seconds
+      var killtimer = setTimeout( function() {
+        process.exit( 1 );
+      }, 30000);
+      // But don't keep the process open just for that!
+      killtimer.unref();
+
+      reportError( err, true );
+
+      server.close();
+      if ( cluster.worker ) {
+        cluster.worker.disconnect();
+      }
+
+      res.statusCode = 500;
+      res.render( 'error.html', { message: err.message, code: err.status });
+
+      guard.dispose();
+      process.exit( 1 );
+    } catch( err2 ) {
+      console.error( 'Error: unable to send 500', err2.stack );
+    }
+  });
+
+  guard.run( next );
+});
+
 
 app.use( express.compress() );
 app.use( express.static( WWW_ROOT ));
@@ -122,6 +183,7 @@ app.use( function( err, req, res, next) {
   if ( !err.status ) {
     err.status = 500;
   }
+  reportError( err, false );
   res.status( err.status );
   res.render( 'error.html', { message: err.message, code: err.status });
 });
@@ -189,6 +251,6 @@ app.get( "/sitemap.xml", routes.sitemap);
  */
 require( "./routes/redirect" )( app );
 
-app.listen( env.get( "PORT" ), function() {
+server = app.listen( env.get( "PORT" ), function() {
   console.log( "Server listening ( http://localhost:%d )", env.get( "PORT" ));
 });

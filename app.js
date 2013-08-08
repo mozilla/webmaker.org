@@ -65,13 +65,13 @@ function reportError( error, isFatal ) {
   if ( !graylogHost ) {
     return;
   }
-  log( "[" + ( isFatal ? "CRASH" : "ERROR" ) + "] webmaker.org error",
-    err.message,
+  log( "[" + ( isFatal ? "CRASH" : "ERROR" ) + "] webmaker.org failure.",
+    error.message,
     {
       level: isFatal ? LOG_CRIT : LOG_ERR,
-      stack: err.stack,
+      stack: error.stack,
       _serverVersion: require( './package.json' ).version,
-      _fullStack: err.stack
+      _fullStack: error.stack
     }
   );
 }

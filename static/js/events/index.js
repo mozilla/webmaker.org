@@ -26,6 +26,7 @@
         'markdown':             '/ext/js/markdown',
         'to-markdown':          '/ext/js/to-markdown',
         'bootstrap-markdown':   '/ext/js/bootstrap-markdown',
+        'localized':            '../../bower/webmaker-i18n/localized',
 
     },
     shim: {

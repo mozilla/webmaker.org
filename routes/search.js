@@ -4,6 +4,7 @@ module.exports = function(req, res) {
 
   var DEFAULT_TYPE = "tags",
       DEFAULT_QUERY = "webmaker:featured",
+      DEFAULT_SORT = "createdAt",
       VALID_TYPES = [
         "all",
         "tags",
@@ -66,19 +67,18 @@ module.exports = function(req, res) {
   }
 
   var limit = 12;
-
   make.find( options )
   .limit( limit )
   .sortByField( sortByField, sortByOrder )
   .page( page )
-  .process( function( err, data, totalHits ) {
+  .process(function( err, data, totalHits ) {
     if( err ) {
       return res.send(err);
     }
     // query can be an array of tags sometimes,
     // so force a string so that it's autoescaped
-    var query = type === "all" ? options.title.toString() : options[type].toString();
-    var showOlder = ( totalHits > page * limit );
+    var query = type === "all" ? options.title.toString() : options[type].toString(),
+        showOlder = ( totalHits > page * limit );
 
     if ( hideNamespace ) {
       query = "featured";

@@ -3,7 +3,21 @@
     <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
     <div class="type-label"><span class="make-type">{{make.type}}</span></div>
     <div class="make-info">
-      <div class="updatedAt">Updated {{make.updatedAt}}</div>
+      <p class="updatedAt">
+        Updated {{make.updatedAt}},
+        <span class="like-count">{{ make.likes.length }}</span>
+        <span class="like-text">
+          {% if make.likes.length %}
+            {% if make.likes.length == 1 %}
+              Like
+            {% else %}
+              Likes
+            {% endif %}
+          {% else %}
+            likes =(
+          {% endif %}
+        </span>
+      </p>
       <p class="title">{{make.title}}</p>
     </div>
     <div class="btn-container">

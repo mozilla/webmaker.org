@@ -150,6 +150,7 @@ app.use(function( req, res, next ) {
   res.locals({
     email: req.session.email || '',
     username: req.session.username|| '',
+    makerID: req.session.id || '',
     csrf: req.session._csrf
   });
   next();
@@ -236,6 +237,8 @@ app.get( "/me", routes.me );
 // Old
 app.get( "/myprojects", routes.me );
 app.post( "/remove", routes.remove );
+app.post( "/like", routes.like.like );
+app.post( "/unlike", routes.like.unlike );
 
 // Account
 app.get( "/login", routes.user.login );

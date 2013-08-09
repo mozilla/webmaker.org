@@ -1,5 +1,5 @@
-define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
-  function ($, nunjucks, UI, moment, Make) {
+define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
+  function ($, nunjucks, UI, moment, Make, localized) {
     'use strict';
 
     var DEFAULT_LIMIT = 12;
@@ -78,10 +78,50 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
         return "https://secure.gravatar.com/avatar/" + hash + "?s=" + DEFAULT_SIZE + "&d=" + DEFAULT_AVATAR;
       }
 
+      function likeClickCallback(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var $this = $(e.target),
+              makeID = $this.data("make-id"),
+              method;
+
+          if ( $this.hasClass("icon-heart") ) {
+            method = "/unlike";
+          } else {
+            method = "/like";
+          }
+          $.post(method, {
+            makeID: makeID,
+            _csrf: $("meta[name='X-CSRF-Token']").attr("content")
+          }, function(res) {
+            var newLen = res.likes.length,
+                $count = $this.parent().parent().find(".like-count"),
+                $text = $this.parent().parent().find(".like-text");
+
+            $this.toggleClass("icon-heart icon-heart-empty");
+            $count.html(newLen);
+            if (newLen === 0) {
+              $text.html(localized.get("Like-0"));
+            } else if ( newLen === 1) {
+              $text.html(localized.get("Like-1"));
+            } else {
+              $text.html(localized.get("Like-n"));
+            }
+          }).fail( function(res) {
+            if ( res.status === 401 ) {
+              window.location.replace( window.location.protocol + "//" + window.location.host + "/login" );
+            } else {
+              // already like/unliked, update UI to reflect.
+              $this.toggleClass("icon-heart icon-heart-empty");
+            }
+          });
+        }
+
       function resultsCallback(err, data, total) {
         var isStickySearch = (searchOptions.tagPrefix === options.stickyPrefix),
             itemString = '',
             frag = document.createElement('div'),
+            makerID = $("meta[name='maker-id']").attr("content"),
             allItems,
             i,
             l;
@@ -100,6 +140,10 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
           isLastPage = false; //We always want to load more for stickies.
         }
 
+        function hasUserLikedCheck( like ) {
+          return like.userId === +makerID;
+        }
+
         for (i = 0, l = data.length; i < l; i++) {
           if (data[i]) {
             if (data[i].taggedWithAny('guide')) {
@@ -113,7 +157,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
             data[i].updatedAt = moment(data[i].updatedAt).fromNow();
             data[i].createdAt = moment(data[i].createdAt).fromNow();
             data[i].remixurl = data[i].url + '/remix';
-            data[i].toolurl = toolURL[data[i].contentType];
+            data[i].hasBeenLiked = data[i].likes.some( hasUserLikedCheck );
             if (isStickySearch && FRONTPAGE_LARGE.indexOf(i) > -1) {
               data[i].size = "large";
             }
@@ -124,6 +168,10 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
         }
         frag.innerHTML = itemString;
         allItems = frag.querySelectorAll(options.itemSelector);
+        $(allItems)
+        .find(".make-like-toggle")
+        .off("click")
+        .on("click", likeClickCallback );
         $mainGallery.append(allItems);
         packery.appended(allItems);
         packery.layout();
@@ -152,6 +200,12 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
         packery.stamp(banner);
       }
       packery.layout();
+
+      localized.ready(function() {
+        $(".make-like-toggle")
+        .off("click")
+        .on("click", likeClickCallback );
+      });
 
       // Set up load more
       $loadMore.click(function() {

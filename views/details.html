@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="X-CSRF-Token" content="{{ csrf }}">
   <link rel="stylesheet" href="/bower/font-awesome/css/font-awesome.css">
   <link media="screen" rel="stylesheet" href="/css/style.css">
   <link media="screen" rel="stylesheet" href="/css/make-details.css">
@@ -75,6 +76,26 @@
             <p class="built-with"><span class="built-with">{{ gettext("Built with") }}</span>
               <span class="icon-{{tool}}"></span>
               <a target="_blank" href="{{remixurl}}" class="tool-name">{{ tool }}</a>
+              <span data-make-id="{{ id }}" class="make-like-toggle details-page-icon make-like-details
+                {% if hasBeenLiked %}
+                  icon-heart
+                {% else %}
+                  icon-heart-empty
+                {% endif %}" >
+                <span class="not-logged-in hide">{{ gettext("Log in to like") }}</span>
+              </span>
+              <span class="like-count">{{ likes.length }}</span>
+              <span class="like-text">
+                {% if likes.length %}
+                  {% if likes.length == 1 %}
+                    Like
+                  {% else %}
+                    Likes
+                  {% endif %}
+                {% else %}
+                  likes =(
+                {% endif %}
+              </span>
             </p>
 
             <p class="make-desc">{{ description }}</p>
@@ -95,7 +116,8 @@
       baseUrl: '/js',
       paths: {
         'jquery': '../bower/jquery/jquery',
-        'social': '../js/lib/socialmedia'
+        'social': '../js/lib/socialmedia',
+        'localized': '../bower/webmaker-i18n/localized'
       }
     });
     require(['pages/details']);

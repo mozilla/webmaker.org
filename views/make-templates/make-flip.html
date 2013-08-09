@@ -7,13 +7,27 @@
         <div class="desc">
           <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
           <p class="author-date"><img class="make-avatar" src="{{make.avatar}}">
-          <a class="tool-url" href="{{make.toolurl}}"><span class="type">{{make.type}}</span> make</a> by
-          {% if make.username %}
-            <a class="author" href="/u/{{make.username}}">@{{make.username}}</a>
-          {% else %}
-            <span class="author">Anonymous</span>
-          {% endif %}
-          created <span class="date">{{make.createdAt}}</span></p>
+            <a class="tool-url" href="{{make.toolurl}}"><span class="type">{{make.type}}</span> make</a> by
+            {% if make.username %}
+              <a class="author" href="/u/{{make.username}}">@{{make.username}}</a>
+            {% else %}
+              <span class="author">Anonymous</span>
+            {% endif %}
+            created <span class="date">{{make.createdAt}}</span>
+            ,
+            <span class="like-count">{{ make.likes.length }}</span>
+            <span class="like-text">
+              {% if make.likes.length %}
+                {% if make.likes.length == 1 %}
+                  Like
+                {% else %}
+                  Likes
+                {% endif %}
+              {% else %}
+                likes =(
+              {% endif %}
+            </span>
+          </p>
           <p class="description">{{make.description}}</p>
           {% if (make.size == 'large') %}
             {{ makeTags() }}
@@ -22,6 +36,11 @@
         <div class="btn-container">
           <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> Remix</a>
           <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}"> Details</a>
+          {% if make.hasBeenLiked %}
+            <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart"></span>
+          {% else %}
+            <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart-empty"></span>
+          {% endif %}
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ var async = require("async"),
           .process( function( err, data, totalHits ) {
             totalHitCount.push(totalHits);
             callback(err, data);
-          });
+          }, req.session.id || '');
       }
 
       var stickyOptions = {

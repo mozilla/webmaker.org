@@ -66,6 +66,6 @@ module.exports = function(req, res) {
         res.render( "details.html", makeData );
       }
      });
-  });
+  }, req.session.id || '');
 };
 

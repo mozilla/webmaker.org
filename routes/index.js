@@ -25,6 +25,7 @@ module.exports = {
     return require("./page")(view);
   },
   remove: require("./remove"),
+  like: require("./like")(),
   search: require("./search"),
   sitemap: require("./sitemap"),
   tag: function( req, res ) {

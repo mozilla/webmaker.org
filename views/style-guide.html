@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+{% block title %}Style Guide{% endblock %}
+{% block body %}
+<style>
+  h1.style-guide {
+    font-size: 2em;
+    margin-bottom: 1em;
+    border-bottom: 1px dotted #999;
+    line-height: 2em;
+  }
+  h2.style-guide {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+  }
+  section.style-guide section {
+    margin-bottom: 2em;
+  }
+  ul.colors {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+    ul.colors li {
+      padding: 20px 10px;
+    }
+</style>
+
+<div class="ui-wrapper ui-body">
+<div class="ui-section">
+
+  <section class="style-guide">
+
+    <h1 class="style-guide">Typography</h1>
+
+    <section>
+      <h1>H1 Header</h1>
+      <h2>H2 Header</h2>
+      <h3>H3 Header</h3>
+      <h4>H4 Header</h4>
+      <h5>H5 Header</h5>
+      <h6>H6 Header</h6>
+    </section>
+
+    <p>Standard Paragraph with <a href="#">Inline Link</a>. Some <strong>strong text</strong>. Some <em>emphasized text</em>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, nobis, exercitationem, perspiciatis praesentium soluta nulla facilis eaque eos ducimus delectus ipsam nisi nemo esse fugiat quibusdam provident aliquid minima nostrum.</p>
+
+  </section>
+
+  <section class="style-guide">
+    <h1 class="style-guide">Palette</h1>
+
+    <ul class="colors">
+      <li style="background-color:#ffcd36;">@yellow</li>
+      <li style="background-color:#fff2cc;">@lightyellow</li>
+      <li style="background-color:#3fb58e;">@green</li>
+      <li style="background-color:#328f70;">@darkgreen</li>
+      <li style="background-color:#27aae1;">@blue</li>
+      <li style="background-color:#c13832;">@red</li>
+      <li style="background-color:#4d4e53;color:#fff;">@grey</li>
+      <li style="background-color:#e3eaee;">@lightgrey</li>
+      <li style="background-color:#ddd;">@midgrey</li>
+      <li style="background-color:#fff;">@white</li>
+    </ul>
+  </section>
+
+  <section class="style-guide">
+    <h1 class="style-guide">Primitives</h1>
+
+    <section>
+      <h2 class="style-guide">Big Button</h2>
+
+      <a href="#" class="big-button">Click me</a>
+  </section>
+
+  <section class="style-guide">
+    <h1 class="style-guide">Components</h1>
+
+    <section>
+      <h2 class="style-guide">Chevron List</h2>
+
+      <ul class="chevron-list">
+        <li><a href="#NEED_URL">Fill out our survey</a></li>
+        <li><a href="#NEED_URL">Submit a bug on Bugzilla</a></li>
+        <li><a href="#NEED_URL">Host a user testing session</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="style-guide">Ordered List w. Circles</h2>
+
+      <ol class="ol-circled">
+        <li><span class="number">1</span> <span class="text">Familiarize yourself with our survey.</span></li>
+        <li><span class="number">2</span> <span class="text">Find a willing volunteer and walk  them through our survey. Let them drive, but ask them to speak their thoughts aloud so you can write them in the form.</span></li>
+        <li><span class="number">3</span> <span class="text">Shower your volunteer with love and Mozilla gear. Big thanks to them (and you) for helping us make Webmaker better for everyone.</span></li>
+      </ol>
+    </section>
+  </section>
+
+  <section class="style-guide">
+
+    <h1 class="style-guide">Form Elements</h1>
+
+    <section>
+      <h2 class="style-guide">Text Input</h2>
+      <input type="text">
+    </section>
+
+    <section>
+      <h2 class="style-guide">Button</h2>
+      <button>Button</button>
+    </section>
+
+    <section>
+      <h2 class="style-guide">Text Area</h2>
+      <textarea></textarea>
+    </section>
+
+    <section>
+      <h2 class="style-guide">Select</h2>
+
+      <select>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+      </select>
+    </section>
+
+    <section>
+      <h2 class="style-guide">Submit</h2>
+      <input type="submit">
+    </section>
+
+    <section>
+      <h2 class="style-guide">Radio Button</h2>
+
+      <input type="radio" name="fpo">
+      <input type="radio" name="fpo">
+      <input type="radio" name="fpo">
+    </section>
+
+    <section>
+      <h2 class="style-guide">Checkbox</h2>
+
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+    </section>
+
+  </section>
+
+</div>
+</div>
+
+{% endblock %}

@@ -2,15 +2,8 @@
 * UI
 */
 
-@blue: #27aae1;
-@red: #E03634;
-@green: #3FB58E;
-@yellow: #FFCD36;
-@darkyellow: #EAB514;
-@orange: #EE8950;
-@grey: #555;
-@lightgrey: #F4F5F5;
-@midgrey: #DDD;
+@import "colors";
+@import "breakpoints";
 
 @uiFontSize: 13px;
 @uiHeight: 30px;
@@ -64,11 +57,14 @@
   .clearfix;
   display: block;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   hr {
     margin: 20px 0;
     color: #ededed;
- }
-
+  }
 }
 .ui-row > div {
   float: left;
@@ -151,6 +147,87 @@
   padding-top: @gutter * 2 * @unit;
   .padleft(1);
   .padright(1);
+  position: relative;
+
+  .step-number {
+    background-image: url('/img/ribbon.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: 50% 0;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #000;
+    padding: 10px 20px 20px 20px;
+    font-size: 1.4em;
+    font-weight: 700;
+
+    @media (max-width: @width-medium) {
+      font-size: 1em;
+      padding: 5px 15px 15px 15px;
+    }
+  }
+
+  &.colored {
+    color: @white;
+    padding-bottom: @gutter * 2 * @unit;
+    overflow: hidden;
+
+    @media (max-width: @width-medium) {
+      padding: 60px 20px 20px 20px;
+    }
+
+    h2 {
+      color: @white;
+      font-size: 3.6em;
+      font-family: 'Open Sans Light';
+
+      @media (max-width: @width-medium) {
+        font-size: 1.5em;
+      }
+    }
+
+    p {
+      font-size: 1.5714em;
+      font-weight: 400;
+
+      @media (max-width: @width-medium) {
+        font-size: 1em;
+      }
+
+      a {
+        color: @white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.green {
+    background: @green;
+    .step-number {
+      color: @green;
+    }
+  }
+  &.dark-grey {
+    background: @grey;
+    .step-number {
+      color: @grey;
+    }
+  }
+  &.blue {
+    background: @blue;
+    .step-number {
+      color: @blue;
+    }
+  }
+
+  &.extra-margin {
+    @media (min-width: @width-medium) {
+      .ui-row {
+        margin-bottom: 40px;
+      }
+    }
+  }
 }
 
 .ui-section-toppad {
@@ -222,6 +299,10 @@
   .subtitle {
     font-weight: 200;
     font-size: 1.2em;
+
+    @media (max-width: @width-medium) {
+      font-size: 1em;
+    }
   }
 
   .ui-ul {
@@ -251,6 +332,14 @@
 /*********************************************************
 * Images and cool stuff
 */
+
+img.hero {
+  max-width: 100%; // Responsive
+}
+
+img.circle-matte {
+  border-radius: 50%;
+}
 
 .ui-poster {
   display: block;
@@ -314,6 +403,8 @@ figure {
     }
   }
 }
+
+
 
 /*********************************************************
 * Sizes
@@ -379,6 +470,44 @@ button i.icon-angle-right {
   font-size: 26px;
   vertical-align:middle;
   padding-left: 5px;
+}
+
+.big-button(@color) {
+  border: 2px solid @color;
+  color: @color;
+  padding: 5px 20px;
+  font-size: 2.3em;
+  font-weight: 100;
+  font-family: 'Open Sans Light';
+
+  &:hover {
+    text-decoration: none;
+
+    // Dim on hover
+    color: @color * 0.8;
+    border-color: @color * 0.8;
+  }
+
+  &::after {
+    margin-left: 10px;
+    font-family: FontAwesome;
+    content: "\f054"; // Chevron
+    font-size: 0.66em;
+  }
+
+  @media (max-width: @width-medium) {
+    display: block;
+    text-align: center;
+    font-size: 1.66em;
+  }
+}
+
+.big-button {
+  .big-button(@blue);
+}
+
+.big-button.white {
+  .big-button(@white);
 }
 
 /*********************************************************

@@ -1,0 +1,32 @@
+.chevron-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 1.2em;
+
+    @media (max-width: @width-medium) {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+
+    a:hover {
+      color: #347F9E;
+      text-decoration: none;
+    }
+
+    a::after {
+      margin-left: 10px;
+      font-family: FontAwesome;
+      content: "\f054"; // Chevron
+      font-size: 0.8em;
+    }
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+}

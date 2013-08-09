@@ -1,0 +1,54 @@
+.ol-circled(@color) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  color: @color;
+
+  li {
+    margin-bottom: 1em;
+    .display-flex;
+
+    .number {
+      font-size: 0.8em;
+      border-radius: 50%;
+      border: 2px solid @color;
+      width: 2em;
+      height: 2em;
+      display: block;
+      text-align: center;
+      line-height: 2em;
+      margin-right: 1.5em;
+
+      @media (max-width: @width-medium) {
+        font-size: 0.75em;
+        margin-right: 0.75em;
+      }
+    }
+
+    .text {
+      .flex(1);
+      display: block;
+      position: relative;
+      top: 1px;
+
+      @media (max-width: @width-medium) {
+        font-size: 0.9em;
+        top: 2px;
+      }
+    }
+
+    a {
+      color: @color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.ol-circled {
+  .ol-circled(@grey);
+}
+
+.ol-circled.white {
+  .ol-circled(@white);
+}

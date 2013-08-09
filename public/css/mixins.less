@@ -84,3 +84,32 @@
   -ms-transition:     @transition;
   -o-transition:      @transition;
 }
+
+// Flexbox
+// http://css-tricks.com/using-flexbox/
+
+.display-flex {
+  display: -webkit-box;      // OLD - iOS 6-, Safari 3.1-6
+  display: -moz-box;         // OLD - Firefox 19- (buggy but mostly works)
+  display: -ms-flexbox;      // TWEENER - IE 10
+  display: -webkit-flex;     // NEW - Chrome
+  display: flex;
+}
+
+.flex (@amount) {
+  -webkit-box-flex: @amount;      // OLD - iOS 6-, Safari 3.1-6
+  -moz-box-flex: @amount;         // OLD - Firefox 19-
+  -webkit-flex: @amount;          // Chrome
+  -ms-flex: @amount;              // IE 10
+  flex: @amount;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+.align-items(@align: stretch) {
+  -webkit-align-items: @align;
+  -moz-align-items: @align;
+  -ms-align-items: @align;
+  align-items: @align;
+}

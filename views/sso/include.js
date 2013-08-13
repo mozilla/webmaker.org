@@ -113,7 +113,13 @@ var personaObserver = {
      start listening for post messages
     */
     window.addEventListener("message", function(event) {
-      var payload = JSON.parse(event.data);
+      try {
+        var payload = JSON.parse(event.data);
+      } catch (ex) {
+        // We only care about JSON data
+        return;
+      }
+
       var fn = personaObserver[payload.type];
       if(fn) {
         switch(payload.type) {

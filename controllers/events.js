@@ -8,7 +8,11 @@ module.exports = function(init) {
         fs    = require('fs'),
         crypto   = require('crypto'),
         mapquest = require('mapquest'),
-        express  = require('express');
+        express  = require('express'),
+        emailer = require("webmaker-postalservice")({
+          key: process.env.AWS_ACCESS_KEY,
+          secret: process.env.AWS_SECRET_KEY
+        });
 
     function md5(data) {
         return crypto.createHash('md5').update(data).digest("hex");
@@ -52,6 +56,19 @@ module.exports = function(init) {
                 geocode_filler(event);
                 res.reply(201, 'Event created', { event: event_output_filter(event) },
                                                 { location: event.uri() });
+
+                if (process.env.ALLOW_SEND_EVENT_CREATE_EMAIL === 'true') {
+                  emailer.sendCreateEventEmail({
+                    to: event.organizer,
+                    fullName: event.organizerId
+                  }, function(emailErr, email) {
+                    if (emailErr) {
+                      return console.error(emailErr);
+                    }
+
+                    console.log("Sent create event email with id %s", email.MessageId);
+                  });
+                }
             })).error(function(err) {
                 res.reply(400, 'Invalid Event provided', { error: err })
             })

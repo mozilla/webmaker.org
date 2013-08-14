@@ -23,7 +23,7 @@ var async = require("async"),
             },
             teach: {
               template: "make-teach.html",
-              tags: ['webmaker:recommended','guide']
+              tags: ['webmaker:teach']
             }
           };
 

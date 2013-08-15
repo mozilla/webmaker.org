@@ -90,9 +90,12 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
         }
 
         for (i = 0, l = data.length; i < l; i++) {
+          console.log(data[i]);
           if (data[i]) {
-            if (data[i].tags.guide) {
+            if (data[i].taggedWithAny('guide')) {
               data[i].type = 'guide';
+            } else if (data[i].taggedWithAny('webmaker:template')) {
+              data[i].type = 'template';
             } else {
               data[i].type = data[i].contentType.replace(/application\/x\-/g, '');
             }

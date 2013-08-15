@@ -424,6 +424,30 @@ img {
   background-repeat: no-repeat;
 }
 
+.make-type-template {
+  .front {
+    overflow: hidden;
+  }
+  .front:after {
+    content: "Starter Make";
+    font-size: 15px;
+    display: block;
+    font-family: "Open Sans Light", "Open Sans", sans-serif;
+    background: #D93B3B;
+    color: #FFF;
+    padding: 15px 10px;
+    text-align: left;
+    .rotate(-35deg);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    transform-origin: center center;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    top: 10px;
+    left: -80px;
+  }
+}
 .make-type-x-ray-goggles {
   .type-icon {
     background-image: url(../img/icon-make-x-ray-goggles.png);
@@ -609,7 +633,8 @@ img {
   background: url("../img/cat.gif") center no-repeat;
 }
 
-.make-teach {
+.make-teach,
+.make-starter-make {
   position: relative;
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
   height: auto;
@@ -617,7 +642,7 @@ img {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 62.5%;
+    padding-bottom: 100%;
   }
   background: #FFF;
   .make-back .title {
@@ -646,7 +671,23 @@ img {
     left: auto;
   }
 }
-
+.make-starter-make {
+  .tag-container {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+  }
+  .tag {
+    &:after {
+      content: ",";
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+  .btn-container {
+    text-align: right;
+  }
+}
 #banner-teach {
   float: right;
   margin-bottom: @gutter * @unit;

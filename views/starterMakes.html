@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% include 'macros.html' %}
+
+{% block title %}{{ gettext("Starter Makes") }}{% endblock %}
+{% block midbar %}
+
+{% set header = gettext("starterMakesHeader") %}
+{% set desc = gettext("starterMakesDesc") %}
+
+{{ galleryHeader(header, desc) }}
+
+{% endblock %}
+{% block body %}
+<div class="ui-wrapper">
+  {% include "gallery.html" %}
+</div>
+{% endblock %}
+{% block CTA %}
+  [{
+    "title": "{{ gettext("Become a Mentor") }}",
+    "desc": "{{ gettext("Become a Mentor Desc") }}",
+    "image": "/img/cta-Mentor.jpg",
+    "url": "/{{lang}}/mentor"
+  },
+  {
+    "title": "{{ gettext("Maker Party")}}",
+    "desc": "{{ gettext("Maker Party Desc") }}",
+    "image": "/img/cta-Party.jpg",
+    "url": "/{{lang}}/party"
+  },
+  {
+    "title": "{{ gettext("Get Involved")}}",
+    "desc": "{{ gettext("Get Involved Desc") }}",
+    "image": "/img/cta-Get-Involved.jpg",
+    "url": "/{{lang}}/getinvolved"
+  },
+  {
+    "title": "{{ gettext("Use our Tools") }}",
+    "desc": "{{ gettext("Use our Tools Desc") }}",
+    "image": "/img/cta-Tools.jpg",
+    "url": "/{{lang}}/tools"
+  }]
+{% endblock %}
+{% block require_page %}pages/teach{% endblock %}

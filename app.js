@@ -213,6 +213,10 @@ app.get( "/teach", routes.gallery({
   layout: "teach",
   prefix: "teach"
 }));
+app.get( "/starter-makes", routes.gallery({
+  layout: "starterMakes",
+  prefix: "template"
+}));
 app.get( "/party", routes.page( "party" ) );
 app.get( "/tools", routes.page( "tools" ) );
 app.get( "/mentor", routes.page( "mentor" ) );

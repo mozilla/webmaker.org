@@ -24,6 +24,10 @@ var async = require("async"),
             teach: {
               template: "make-teach.html",
               tags: ['webmaker:teach']
+            },
+            starterMakes: {
+              template: "make-starter-make.html",
+              tags: ["webmaker:template"]
             }
           };
 
@@ -89,6 +93,7 @@ var async = require("async"),
 
         normal = data[1];
         all = sticky.concat(normal);
+
 
         // Is there a special processing function for this layout?
         if (layout.process) {

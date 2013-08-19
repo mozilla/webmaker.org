@@ -482,7 +482,7 @@ img {
     text-align: center;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
-     &:before {
+    &:before {
       font-family: FontAwesome;
       content: "\f0b1";
     }
@@ -611,16 +611,14 @@ img {
 
 }
 
- .joinBorder {
-    width: 100%;
-    height: 5px;
-    background: url("/img/bkg-pat-wave.png") repeat-x;
-    transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    margin-top: -5px;
-  }
+.joinBorder {
+  width: 100%;
+  height: 5px;
+  background: url("/img/bkg-pat-wave.png") repeat-x;
+  transform: rotate(180deg);
+  .rotate(180deg);
+  margin-top: -5px;
+}
 
 .no-makes-found {
   display: none;
@@ -1082,14 +1080,17 @@ img {
     float: left;
     margin-right: 20px;
     padding: 30px 20px 0 20px;
-    height: 525px;
-    width: 48%;
+    height: 725px;
+    width: 320px;
     .border-box;
+
+    p {
+      margin-top: 24px;
+    }
 
     header {
       margin: 0 auto;
       position: relative;
-      padding-left: 50px;
       display: block;
       height: auto;
       img {
@@ -1097,9 +1098,11 @@ img {
         margin-right: 30px;
         height: 75px;
       }
-
-      p {
-        margin-top: 20px;
+      #img-xray {
+        height: 65px;
+      }
+      #img-popcorn {
+        height: 75px;
       }
 
       .popcorn {
@@ -1107,13 +1110,15 @@ img {
         top: -3px;
       }
       h2 {
-        font-size: 38px;
+        font-size: 28px;
         margin: 0;
       }
 
       h3 {
         font-size: 20px;
         font-weight: 300;
+        line-height: 1.2;
+        margin-top: 10px;
       }
     }
     .or {
@@ -1138,16 +1143,21 @@ img {
 
     .tools-action {
       position: absolute;
-      bottom: 10px;
-      left: 10px;
+      top: 583px;
+      left: 20px;
       width: 100%;
 
       .btn-container {
         display: inline-block;
         position: static;
 
+        &:first-of-type > a {
+          margin-top: 0;
+        }
+
         .ui-btn {
           width: 205px;
+          margin-top: 10px;
         }
 
         .remix-btn {
@@ -1226,8 +1236,8 @@ img {
 }
 
 /*********************************************************
-* ERROR
-*/
+ * ERROR
+ */
 
 
 .error-container {

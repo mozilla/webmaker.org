@@ -252,15 +252,6 @@ app.get( "/sso/include.html", routes.include() );
 app.get( "/sso/include-transparent.html", routes.include("transparent" ));
 app.get( "/sitemap.xml", routes.sitemap);
 
-/**
- * Legacy Webmaker Redirects
- */
-require( "./routes/redirect" )( app );
-
-server = app.listen( env.get( "PORT" ), function() {
-  console.log( "Server listening ( http://localhost:%d )", env.get( "PORT" ));
-});
-
 // XXX: Testing crash handlers
 app.get( '/fatal-crash', function( req, res ) {
   // Domain bound crash
@@ -274,4 +265,13 @@ app.get( '/nonfatal-crash', function( req, res ) {
   // Localized crash
   var o = {};
   o.nothere();
+});
+
+/**
+ * Legacy Webmaker Redirects
+ */
+require( "./routes/redirect" )( app );
+
+server = app.listen( env.get( "PORT" ), function() {
+  console.log( "Server listening ( http://localhost:%d )", env.get( "PORT" ));
 });

@@ -261,7 +261,7 @@ server = app.listen( env.get( "PORT" ), function() {
   console.log( "Server listening ( http://localhost:%d )", env.get( "PORT" ));
 });
 
-+// XXX: Testing crash handlers
+// XXX: Testing crash handlers
 app.get( '/fatal-crash', function( req, res ) {
   // Domain bound crash
   var fs = require('fs');

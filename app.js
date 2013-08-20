@@ -260,3 +260,18 @@ require( "./routes/redirect" )( app );
 server = app.listen( env.get( "PORT" ), function() {
   console.log( "Server listening ( http://localhost:%d )", env.get( "PORT" ));
 });
+
++// XXX: Testing crash handlers
+app.get( '/fatal-crash', function( req, res ) {
+  // Domain bound crash
+  var fs = require('fs');
+  fs.readFile('somefile.txt', function (err, data) {
+    if (err) throw err;
+    res.send( 200, 'Worked');
+  });
+});
+app.get( '/nonfatal-crash', function( req, res ) {
+  // Localized crash
+  var o = {};
+  o.nothere();
+});

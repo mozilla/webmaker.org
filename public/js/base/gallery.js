@@ -22,6 +22,12 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
           $loading = $('.loading-cat'),
           $emptyMessage = $('.no-makes-found');
 
+      var toolURL = {
+        "application/x-popcorn": "https://popcorn.webmaker.org",
+        "application/x-thimble": "https://thimble.webmaker.org",
+        "application/x-x-ray-goggles": "https://goggles.webmaker.org"
+      };
+
       // MakeAPI
 
       var make = new Make({
@@ -90,7 +96,6 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
         }
 
         for (i = 0, l = data.length; i < l; i++) {
-          console.log(data[i]);
           if (data[i]) {
             if (data[i].taggedWithAny('guide')) {
               data[i].type = 'guide';
@@ -103,6 +108,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
             data[i].updatedAt = moment(data[i].updatedAt).fromNow();
             data[i].createdAt = moment(data[i].createdAt).fromNow();
             data[i].remixurl = data[i].url + '/remix';
+            data[i].toolurl = toolURL[data[i].contentType];
             if (isStickySearch && FRONTPAGE_LARGE.indexOf(i) > -1) {
               data[i].size = "large";
             }

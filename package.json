@@ -25,7 +25,8 @@
     "newrelic": "0.9.22",
     "nunjucks": "git://github.com/jlongster/nunjucks.git#0fc9622f3471d67058e431f765bc45d928d23a61",
     "sightmap": "0.0.1",
-    "webmaker-events": "https://github.com/mozilla/webmaker-events/tarball/v0.1.16",
+    "webmaker-events": "git://github.com/igoryen/webmaker-events.git#14f8b33d79ef7679b70be29c4f092d502c54ed51",
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",  
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.9"
   },
   "devDependencies": {

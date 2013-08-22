@@ -5,8 +5,8 @@ var async = require("async"),
     return function(req, res) {
       var DEFAULT_PREFIX = "p",
           DEFAULT_LAYOUT = "index",
-          STICKY_LIMIT = 24, // Larger to account for possible duplicates
-          LIMIT = 12,
+          DEFAULT_STICKY_LIMIT = 24, // Larger to account for possible duplicates
+          DEFAULT_LIMIT = 12,
           layouts = {
             index: {
               template: "make-flip.html",
@@ -46,24 +46,30 @@ var async = require("async"),
       // page: This is for rendering the view.
       var page = options.page || layoutName;
 
+      // limit
+      var limit = options.limit || DEFAULT_LIMIT;
+      var stickyLimit = options.limit ? options.limit * 2 : DEFAULT_STICKY_LIMIT;
+      var totalHitCount = [];
+
       function getMakes(options, callback) {
         make
           .find(options)
           .process( function( err, data, totalHits ) {
+            totalHitCount.push(totalHits);
             callback(err, data);
           });
       }
 
       var stickyOptions = {
         tagPrefix: stickyPrefix,
-        limit: STICKY_LIMIT,
+        limit: stickyLimit,
         sortByField: ["createdAt", "desc"]
       };
 
       var normalOptions = {
         tagPrefix: [stickyPrefix, true], // true = NOT search
         tags: { tags: layout.tags },
-        limit: LIMIT,
+        limit: limit,
         sortByField: ["createdAt", "desc"]
       };
 
@@ -72,7 +78,8 @@ var async = require("async"),
             warnings = [],
             normal,
             all = [],
-            sortByPriorityResults;
+            sortByPriorityResults,
+            totalNormalHits;
 
         if (err) {
           return res.send(err);
@@ -85,15 +92,15 @@ var async = require("async"),
         }
 
         // Send warning messages to editor about missing stickies
-        for(i=0; i<LIMIT; i++) {
+        for(i=0; i<limit; i++) {
           if(!sticky[i]) {
             warnings.push("No sticky set for " + stickyPrefix + (i+1));
           }
         }
 
+        totalNormalHits = totalHitCount[1]; // We stored totals for sticky and normal
         normal = data[1];
         all = sticky.concat(normal);
-
 
         // Is there a special processing function for this layout?
         if (layout.process) {
@@ -102,6 +109,8 @@ var async = require("async"),
 
         res.render( page + ".html", {
           makes: all,
+          totalHits: totalNormalHits,
+          limit: limit,
           warnings: warnings,
           page: page,
           prefix: prefix,

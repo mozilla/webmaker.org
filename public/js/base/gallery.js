@@ -2,7 +2,11 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
   function ($, nunjucks, UI, moment, Make) {
     'use strict';
 
+    var DEFAULT_LIMIT = 12;
+
     var Gallery = function(options) {
+      var self = this;
+
       options = options || {};
       options.mainGallery = options.mainGallery || '.main-gallery';
       options.itemSelector = options.itemSelector || 'div.make';
@@ -11,9 +15,6 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
       options.makeView = options.makeView || 'make-teach.html';
       options.makeUrl = options.makeUrl || $('body').data('endpoint') || 'https://makeapi.webmaker.org';
       options.defaultSearch = options.defaultSearch || 'webmaker:recommended';
-      options.limit = options.limit || 12;
-
-      var self = this;
 
       var banner = document.querySelector(options.banner),
           mainGallery = document.querySelector(options.mainGallery),
@@ -21,6 +22,10 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
           $loadMore = $('.load-more'),
           $loading = $('.loading-cat'),
           $emptyMessage = $('.no-makes-found');
+
+      var limit = $mainGallery.data('limit') || DEFAULT_LIMIT;
+      var totalHits = $mainGallery.data('total-hits');
+      var isLastPage = totalHits <= limit;
 
       var toolURL = {
         "application/x-popcorn": "https://popcorn.webmaker.org",
@@ -33,9 +38,8 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
       var make = new Make({
           apiURL: options.makeUrl
         }),
-        isLastPage = false,
         searchOptions = {
-          limit: options.limit,
+          limit: limit,
           tags: options.defaultSearch,
           sortByField: ['createdAt', 'desc'],
           page: 1
@@ -59,6 +63,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi'],
         packery.off('layoutComplete', onLoadUI);
         $loading.fadeOut();
         $('.' + options.hiddenClass).removeClass(options.hiddenClass);
+
         if (isLastPage) {
           $loadMore.hide();
         } else {

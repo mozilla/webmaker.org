@@ -1,6 +1,6 @@
 {
   "name": "webmaker-events",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "engines": [
     "node >= 0.8.0"
   ],
@@ -12,7 +12,7 @@
   "license": "MPL-2.0",
   "dependencies": {
     "express": "3.2.0",
-    "nunjucks": "0.1.9",
+    "nunjucks": "git://github.com/jlongster/nunjucks.git#0fc9622f3471d67058e431f765bc45d928d23a61", 
     "mysql": "2.0.x",
     "sequelize": "2.0.x",
     "markdown": "0.4.x",

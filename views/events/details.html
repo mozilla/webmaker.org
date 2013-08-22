@@ -19,14 +19,14 @@
           <div class="upload">
               <input type="file" accept="image/*" />
               <input name="picture" type="hidden" />
-              <div id="image-upload">Change Event Picture</div>
+              <div id="image-upload">{{ gettext("Change Event Picture") }}</div>
           </div>
         </span>
         {% if event.registerLink %}
          <span class="show">
            <div id="event-registration">
-             <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
-             <p>This link will take you to an external event registration service, such as Eventbrite.</p>
+             <a id="registerLink" href="{{ event.registerLink }}">{{ gettext("Sign up for the event") }}<span class="icon-chevron-right"></span></a>
+             <p>{{ gettext("EEVR warning") }}</p>
            </div>
          </span>
         {% endif %}
@@ -40,16 +40,16 @@
         </div>
         <div id="owner-panel hidden">
           <span class="show">
-            <button id="edit-mode" type="button"   class="owner-btn ui-btn">Edit</button>
+            <button id="edit-mode" type="button"   class="owner-btn ui-btn">{{ gettext("Edit") }}</button>
           </span>
           <span class="edit hidden">
             <button id="save-edit" class="owner-btn ui-btn"
-                type="submit" name="_method" value="PATCH">Save</button>
-            <button id="cancel-edit" type="button" class="owner-btn ui-btn">Cancel</button>
+                type="submit" name="_method" value="PATCH">{{ gettext("Save") }}</button>
+            <button id="cancel-edit" type="button" class="owner-btn ui-btn">{{ gettext("Cancel") }}</button>
             <button id="delete-event" class="owner-btn ui-btn"
-                type="submit" name="_method" value="DELETE">Delete</button>
-            <div id="delete-confirm" class="hidden" title="Delete Event">
-                Are you sure you want to permanently delete this event?
+                type="submit" name="_method" value="DELETE">{{ gettext("Delete") }}</button>
+            <div id="delete-confirm" class="hidden" title="{{ gettext("Delete Event") }}">
+                {{ gettext("Confirm event deletion") }}
             </div>
           </span>
         </div>
@@ -107,17 +107,17 @@
         </div>
         <div id="event-organizer">
           <img src="https://secure.gravatar.com/avatar/{{ event.organizerHash }}" />
-          <span class="organized-by">Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
+          <span class="organized-by">{{ gettext("Organized by") }} <strong class="organizer">{{ event.organizerId }}</strong></span>
         </div>
         <br />
         <span id="description-body" class="show">{{ event.description|markdown|safe }}</span>
         <span class="edit hidden">
           <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
-          <label for="event_registerLink">Registration Link: </label>
+          <label for="event_registerLink">{{ gettext("Registration Link") }}</label>
           <input id="event_registerLink" type="text" name="registerLink"
                 placeholder="{{ event.registerLink or "http://example.com/" }}" />
           <br >
-          <label for="event_attendees"># of Attendees: </label>
+          <label for="event_attendees">{{ gettext("Num of Attendees") }}</label>
           <input id="event_attendees" type="number" name="attendees"
                 placeholder="~{{ event.attendees or "?" }}" />
         </span>

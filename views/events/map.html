@@ -1,31 +1,31 @@
 {% extends "events/layout.html" %}
 
-{% block title %}Event Map{% endblock %}
+{% block title %}{{ gettext("Event Map") }}{% endblock %}
 
 {% block midbar %}
-<a href="/party"><img src="/img/party-banner.png"></a>
+<a href="/{{ lang }}/party"><img src="/img/party-banner.png"></a>
 {% endblock %}
 
 {% block body %}
 
 <div class="map-overlay">
     <form id="find-event" action="/events" method="GET">
-        <h2 class="header"><span class="icon-search"></span> Find an Event</h2>
+        <h2 class="header"><span class="icon-search"></span>{{ gettext("Find an Event") }}</h2>
         <input name="_csrf" type="hidden" value="{{ csrf }}" />
         <span class="ui-input ui-append">
             <img class="pointer-icon"  src="/img/map/pin-event-dim.png">
-            <input name="where" type="text" placeholder="Where?" />
+            <input name="where" type="text" placeholder="{{ gettext("Where?") }}" />
             <span class="icon-remove clear-input"></span>
         </span>
         <div class="break-right">
           <span class="ui-input ui-append">
               <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
-              <input name="when-start"  type="text" placeholder="Start Date" class="datepicker" />
+              <input name="when-start"  type="text" placeholder="{{ gettext("Start Date") }}" class="datepicker" />
               <span class="icon-remove clear-input"></span>
           </span>
           <span class="ui-input ui-append">
               <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
-              <input name="when-end"  type="text" placeholder="End Date" class="datepicker" />
+              <input name="when-end"  type="text" placeholder="{{ gettext("End Date") }}" class="datepicker" />
               <span class="icon-remove clear-input"></span>
           </span>
           <button type="submit" class="icon-chevron-right"></button>
@@ -37,33 +37,33 @@
             <span class="icon-plus"></span>
             <span class="event-button-text">
               {% if username %}
-                Add an Event
+                {{ gettext("Add an Event") }}
               {% else %}
-                Log in to add an Event
+                {{ gettext("Log in to add an Event")}}
               {% endif %}
             </span>
         </a>
-        <a href="/event-guides" id="event-guides" class="header">
-            Event Guides
+        <a href="/{{ lang }}/guides" id="event-guides" class="header">
+            {{ gettext("Event Guides") }}
             <span class="icon-chevron-right"></span>
         </a>
     </div>
 
     <form id="create-event" class="hidden" action="/events" method="POST">
-        <a class="header expand-form-button"><span class="icon-remove"></span> Add an Event</a><br />
+        <a class="header expand-form-button"><span class="icon-remove"></span>{{ gettext("Add an Event") }}</a><br />
         <span class="create-event-form">
             <fieldset>
-                <label for="event_title"> Name your event </label>
+                <label for="event_title">{{ gettext("Name your event") }}</label>
                 <span class="ui-input ui-append">
                     <input id="event_title" name="title" {{ tabIndex() }}
-                        placeholder="Use an awesome title so people will come!" /></span>
+                        placeholder="{{ gettext("Engage by title") }}" /></span>
 
-                <label for="event_description"> Describe your event </label>
+                <label for="event_description">{{ gettext("Describe your event") }}</label>
                 <textarea id="event_description" name="description" data-provide="markdown" {{ tabIndex() }}
-                    placeholder="Tell people a few more details about your event. What can they expect?"></textarea><br />
+                    placeholder="{{ gettext("Advertize your event") }}" ></textarea><br />
             </fieldset>
             <fieldset>
-                <label for="event_attendees"> How many attendees are you expecting? </label>
+                <label for="event_attendees">{{ gettext("Num of Attendees expected") }}</label>
                 <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
                     <option selected
                             value='5'> &lt;10 </option>
@@ -75,21 +75,25 @@
                     <option value=6> 500+    </option>
                 </select></div><br />
 
-                <label for="event_address"> Event location </label>
+                <label for="event_address">{{ gettext("Event location") }}</label>
                 <span class="cell ui-input ui-append">
-                    <input id="event_address" name="address" type="text" {{ tabIndex() }} />
+                    <input id="event_address" name="address" type="text" {{ tabIndex() }} placeholder="{{ gettext("Enter a location") }}" autocomplete="off"></input>
                 </span>
 
                 <input name="latitude"  type="hidden" />
                 <input name="longitude" type="hidden" />
 
-                <label for="event_registerLink"> Event Link </label>
+                <label for="event_registerLink">{{ gettext("Event Link") }}</label>
                 <span class="registerLink cell ui-input ui-append">
                     <input id="event_registerLink" name="registerLink" type="url" {{ tabIndex() }}
-                            placeholder="Link to registration page" /> </span>
+                            placeholder="{{ gettext("Link to registration page") }}" /> </span>
 
                 {% for i in ['begin','end'] %}
-                <label for="event_{{i}}Date"> Event {{i}}s </label>
+                {% if i == "begin" %}
+                <label for="event_{{i}}Date"> {{ gettext("Event begins") }} </label>
+                {% else %}
+                <label for="event_{{i}}Date"> {{ gettext("Event ends") }} </label>
+                {% endif %}
                 <div class='datetime'>
                     <span class="ui-append ui-select ui-input select-date">
                         <span class="icon-calendar"></span>
@@ -109,20 +113,20 @@
                 <div class="upload">
                     <input type="file" accept="image/*" />
                     <input name="picture" type="hidden" />
-                    <div id="image-upload">Upload an image</div>
+                    <div id="image-upload">{{ gettext("Upload an image") }}</div>
                 </div>
                 <input name="_csrf" type="hidden" value="{{ csrf }}" />
 
-                <button type="submit" data-disable-with="Submitting...">
-                    Submit your event
+                <button type="submit" data-disable-with="{{ gettext('Submitting...') }}">
+                    {{ gettext("Submit your event") }}
                     <span class="icon-chevron-right"></span>
                 </button>
             </fieldset>
         </span>
         <span class="create-event-confirmation hidden">
-            <div class="confirmation-message">Thank you! Your event has been added.</div>
-            <div class="confirmation-link">Check out your page: <a href=""></a></div>
-            <div class="confirmation-info">Looking for help on next steps? Check out our handy <a href="/event-guides">event guides</a>.</div>
+            <div class="confirmation-message">{{ gettext("Event added") }}</div>
+            <div class="confirmation-link">{{ gettext("Check out your page") }} <a></a></div>
+            <div class="confirmation-info">{{ gettext("Next step help")}} <a href="/{{ lang }}/event-guides">{{ gettext("event guides") }}</a>.</div>
         </span>
     </form>
 </div>

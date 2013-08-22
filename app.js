@@ -10,7 +10,7 @@ var express = require( "express" ),
     nunjucks = require( "nunjucks" ),
     path = require( "path" ),
     lessMiddleWare = require( "less-middleware" ),
-    i18n = require( "i18n-abide" );
+    i18n = require( "webmaker-i18n" );
 
 habitat.load();
 
@@ -116,14 +116,12 @@ app.use( express.static( WWW_ROOT ));
 app.use( "/bower", express.static( path.join(__dirname, "bower_components" )));
 
 // Setup locales with i18n
-app.use( i18n.abide({
+app.use( i18n.middleware({
   supported_languages: [
     'en-US'
   ],
   default_lang: "en-US",
-  translation_type: "key-value-json",
-  translation_directory: "locale",
-  locale_on_url: true
+  translation_directory: path.resolve( __dirname, "locale" )
 }));
 
 app.use( express.bodyParser() );
@@ -252,6 +250,9 @@ app.get( "/sso/include.html", routes.include() );
 app.get( "/sso/include-transparent.html", routes.include("transparent" ));
 app.get( "/sitemap.xml", routes.sitemap);
 
+// Localized Strings
+app.get( "/strings/:lang?", i18n.stringsRoute( "en-US" ) );
+ 
 /**
  * Legacy Webmaker Redirects
  */

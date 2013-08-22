@@ -1,6 +1,6 @@
 {
   "name": "webmaker.org",
-  "version": "0.0.133",
+  "version": "0.0.134",
   "private": true,
   "scripts": {
     "test": "grunt",
@@ -26,7 +26,7 @@
     "nunjucks": "git://github.com/jlongster/nunjucks.git#0fc9622f3471d67058e431f765bc45d928d23a61",
     "sightmap": "0.0.1",
     "webmaker-events": "https://github.com/mozilla/webmaker-events/tarball/v0.1.17",
-    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",  
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.9"
   },
   "devDependencies": {

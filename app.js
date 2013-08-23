@@ -253,7 +253,10 @@ app.get( "/sitemap.xml", routes.sitemap);
 
 // Localized Strings
 app.get( "/strings/:lang?", i18n.stringsRoute( "en-US" ) );
- 
+
+// BrowserID SSO realm file
+app.get( "/.well-known/browserid-realm", routes.browserid( env.get( "SSO_DOMAINS" )));
+
 /**
  * Legacy Webmaker Redirects
  */

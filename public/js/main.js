@@ -11,7 +11,8 @@ requirejs.config({
     // XXX: window.__loginAPI gets templated in server-side in layout.html
     'sso-ux':            window.__loginAPI + '/js/sso-ux',
     'nunjucks':         '/js/lib/nunjucks',
-    'makeapi':          '/bower/makeapi-client/src/make-api'
+    'makeapi':          '/bower/makeapi-client/src/make-api',
+    'localized':        '/bower/webmaker-i18n/localized'
   },
   shim: {
     'tabzilla': ['jquery'],

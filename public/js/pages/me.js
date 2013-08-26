@@ -1,5 +1,5 @@
-define(['jquery', 'uri', 'base/ui'],
-  function ($, URI, UI) {
+define(['jquery', 'uri', 'base/ui', 'localized'],
+  function ($, URI, UI, localized) {
   'use strict';
 
   var $body = $("body"),
@@ -54,25 +54,27 @@ define(['jquery', 'uri', 'base/ui'],
     e.preventDefault();
     var $this = $(this),
         makeID = $this.data("make-id");
-    if(confirm("Are you sure you want to delete this make?")) {
-      $.post("/remove", {
-        makeID: makeID,
-        _csrf: $("meta[name='X-CSRF-Token']").attr("content")
-      }, function(res) {
-        if ( res.deletedAt ) {
-          if (!inApp) {
-            packery.remove($this.closest(".make")[0]);
-            packery.layout();
+    localized.ready(function(){
+      if(confirm(localized.get("Are you sure you want to delete this make?"))) {
+        $.post("/remove", {
+          makeID: makeID,
+          _csrf: $("meta[name='X-CSRF-Token']").attr("content")
+        }, function(res) {
+          if ( res.deletedAt ) {
+            if (!inApp) {
+              packery.remove($this.closest(".make")[0]);
+              packery.layout();
+            } else {
+              $this.closest(".make").remove();
+            }
           } else {
-            $this.closest(".make").remove();
+            console.log(res);
           }
-        } else {
-          console.log(res);
-        }
-      }).fail( function(res) {
-        console.log(res.responseText);
-      });
-    }
+        }).fail( function(res) {
+          console.log(res.responseText);
+        });
+      }
+    });
   });
 
   page = queryKeys.page ? parseInt(queryKeys.page, 10) : 1;

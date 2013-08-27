@@ -24,6 +24,6 @@
     "moment": "2.1.x",
     "csv": "0.3.x",
     "mapquest": "0.0.1",
-    "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.2"
+    "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.3"
   }
 }

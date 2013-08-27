@@ -1,3 +1,5 @@
+{% include "make-templates/macros.html" %}
+
 <div class="make make-flip make-type-{{make.type}} {{make.size or 'medium'}} packery-hide">
   <div class="flipContainer">
     <div class="back">
@@ -13,6 +15,9 @@
           {% endif %}
           created <span class="date">{{make.createdAt}}</span></p>
           <p class="description">{{make.description}}</p>
+          {% if (make.size == 'large') %}
+            {{ makeTags() }}
+          {% endif %}
         </div>
         <div class="btn-container">
           <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> Remix</a>

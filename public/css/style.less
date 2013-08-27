@@ -297,7 +297,7 @@ img {
   .title {
     color: inherit;
     &:hover {
-      color: @green;
+      color: @blue;
     }
   }
   .author-date{
@@ -311,7 +311,7 @@ img {
   }
   .author-date a {
     &:hover {
-      color: @green;
+      color: @blue;
     }
   }
   .description {
@@ -631,6 +631,21 @@ img {
   background: url("../img/cat.gif") center no-repeat;
 }
 
+
+.tag-container {
+  font-size: 0.9em;
+  margin: 0.5em 0 0 0;
+}
+
+.tag {
+  &:after {
+    content: ",";
+  }
+  &:last-child:after {
+    content: "";
+  }
+}
+
 .make-teach,
 .make-starter-make {
   position: relative;
@@ -643,9 +658,6 @@ img {
     padding-bottom: 100%;
   }
   background: #FFF;
-  .make-back .title {
-    color: @green;
-  }
   .make-thumbnail {
     opacity: 1;
   }
@@ -670,18 +682,6 @@ img {
   }
 }
 .make-starter-make {
-  .tag-container {
-    font-size: 0.9em;
-    margin-top: 0.5em;
-  }
-  .tag {
-    &:after {
-      content: ",";
-    }
-    &:last-child:after {
-      content: "";
-    }
-  }
   .btn-container {
     text-align: right;
   }

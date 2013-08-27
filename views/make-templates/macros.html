@@ -1,0 +1,11 @@
+{% macro makeTags() %}
+  {% if make.rawTags.length %}
+  <div class="tag-container">
+    {% for tag in make.rawTags %}
+      {%- if loop.index <= 10 %}
+      <a class="tag" href="/t/{{tag}}">#{{tag}}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endmacro %}

@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-{% include "macros.html" %}
 {% block title %}{{ gettext("Me") }}{% endblock %}
 {% block midbar %}
   <div class="ui-wrapper">
@@ -17,7 +16,11 @@
   {% if username %}
   <div class="main-gallery search-gallery" data-total-hits="{{totalHits}}" data-limit="{{limit}}">
     <div class="gutter-sizer"></div>
-    {{ memakes() }}
+    {% for make in makes %}
+      {% if make %}
+        {% include ("make-templates/make-me.html") %}
+      {% endif %}
+    {% endfor %}
   </div>
   {% endif %}
   {% if makes.length == 0%}

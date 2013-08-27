@@ -35,7 +35,11 @@
   </span></h3>
   <div class="main-gallery search-gallery" data-total-hits="{{totalHits}}" data-limit="{{limit}}">
     <div class="gutter-sizer"></div>
-    {{ searchmakes() }}
+    {% for make in makes %}
+      {% if make %}
+        {% include ("make-templates/make-search.html") %}
+      {% endif %}
+    {% endfor %}
   </div>
   {% if makes.length == 0%}
   <div class="no-makes">{{ gettext("No makes found.") }}</div>

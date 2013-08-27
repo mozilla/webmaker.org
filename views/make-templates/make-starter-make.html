@@ -1,3 +1,5 @@
+{% include "make-templates/macros.html" %}
+
 <div class="make make-starter-make medium packery-hide">
   <a href="{{make.url}}">
     <div class="make-thumbnail thumbnail" style="background-image: url({{make.thumbnail}});"></div>
@@ -6,12 +8,7 @@
         <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
         <p class="description">{{make.description}}</p>
       </div>
-      <p class="tag-container">
-        More:
-        {% for tag in make.rawTags %}
-        <a class="tag" href="/t/{{tag}}">#{{tag}}</a>
-        {% endfor %}
-      </p>
+      {{ makeTags() }}
       <div class="btn-container">
         <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> Remix</a>
       </div>

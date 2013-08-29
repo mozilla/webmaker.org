@@ -35,7 +35,14 @@
     </style>
   </head>
   <body>
-    <button id="webmaker-login">{% if not transparent %}{{ gettext("Sign in to save") }} <span>{{ gettext("Sign up") }}</span>{% endif %}</button>
+      {% if not transparent %}
+        <div id="webmaker-login" class="persona-button">
+          <span class="text">{{ gettext("Sign in") }}</span><span class="tip"></span></span>
+        </div>
+      {% else %}
+        <button id="webmaker-login"></button>
+      {% endif %}
+    </button>
     <button id="webmaker-logout">{% if not transparent %}{{ gettext("Sign out") }}{% endif %}</button>
 
     <script src="https://login.persona.org/include.js"></script>
@@ -93,7 +100,7 @@
           if (!loginButton || !logoutButton ) {
             return;
           }
-          loginButton.style.display = "block";
+          loginButton.style.display = "inline-block";
           logoutButton.style.display = "none";
         }
 
@@ -102,7 +109,7 @@
             return;
           }
           loginButton.style.display = "none";
-          logoutButton.style.display = "block";
+          logoutButton.style.display = "inline-block";
         }
 
         if (payload.type === "sso_watch") {

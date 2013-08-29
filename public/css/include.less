@@ -1,37 +1,24 @@
 @import "webfonts";
+@import "../../bower_components/persona-btn/persona-btn";
+@personaBtnPath: "/bower/persona-btn";
 
 body {
-  height: 30px;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
-button {
+#webmaker-logout {
   border: none;
-  padding: 0 10px;
-  background: transparent;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  background: none;
+  font-family: "Open Sans";
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
   font-size: 13px;
-  line-height: 1;
-  color: #27AAE1;
-  cursor: pointer;
-}
-
-button span {
-  background: #27AAE1;
-  color: #fff;
-  padding: 0.44em;
-  margin-left: 24px;
-  position: relative;
-}
-
-button span:before {
-  content: "";
-  border-right: 14px solid #27AAE1;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: -14px;
+  color: #555;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }

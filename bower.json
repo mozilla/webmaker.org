@@ -8,6 +8,7 @@
     "text": "2.0.9",
     "requirejs": "2.1.8",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.4",
-    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz"
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",
+    "persona-btn": "~0.0.6"
   }
 }

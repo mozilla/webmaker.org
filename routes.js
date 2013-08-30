@@ -1,3 +1,20 @@
+function loadUserFromLoginAPI(loginAPI) {
+  return function(req, res, next) {
+    loginAPI.getUser(req.session.email, function(err, user) {
+      if (err) {
+        return next(err);
+      }
+
+      if (!user) {
+        return next();
+      }
+
+      res.locals.user = user;
+      next();
+    });
+  };
+}
+
 module.exports = function (C, app) {
     function route(method, path, action) {
         app[method.toLowerCase()](path + '.:_format?', action);
@@ -9,7 +26,7 @@ module.exports = function (C, app) {
 
     route( 'GET',    '/events',           C.Events.index   );
     route( 'GET',    '/events/:id',       C.Events.details );
-    route( 'POST',   '/events',           C.Events.create  );
+    route( 'POST',   '/events',           [loadUserFromLoginAPI(this.loginAPI), C.Events.create]);
     route( 'PATCH',  '/events/:id',       C.Events.change  );
     //route( 'PUT',    '/events/:id',       C.Events.update  );
     route( 'DELETE', '/events/:id',       C.Events.destroy );

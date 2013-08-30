@@ -16,7 +16,7 @@
         background: transparent;
         overflow: hidden;
       }
-      button {
+      span {
         background: transparent;
         border: none;
         display: block;
@@ -40,9 +40,9 @@
         <span class="text">{{ gettext("Sign in") }}</span><span class="tip"></span>
       </div>
     {% else %}
-      <button id="webmaker-login"></button>
+      <span id="webmaker-login"></span>
     {% endif %}
-    <button id="webmaker-logout">{% if not transparent %}{{ gettext("Sign out") }}{% endif %}</button>
+    <span id="webmaker-logout">{% if not transparent %}{{ gettext("Sign out") }}{% endif %}</span>
 
     <script src="https://login.persona.org/include.js"></script>
     <script>

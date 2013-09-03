@@ -1,0 +1,194 @@
+@profileImgSize: 35px;
+
+body#events.details {
+    background: #e7edf0;
+
+    #details-pane {
+
+        #event-title {
+            display: inline-block;
+
+            h1 {
+                margin-top:   6px;
+                margin-left:  4px;
+            }
+        }
+        #owner-panel {
+            display:    inline-block;
+            position:   relative;
+            left:       20px;
+
+            line-height:    35px;
+            vertical-align: bottom;
+
+            .owner-btn {
+                vertical-align: 85%;
+
+                &:hover {
+                    background: darken(#fff, 4%);
+                }
+                .clickable;
+            }
+        }
+        .temporal-local {
+            position:   relative;
+            left:       16px;
+            display:    inline-block;
+            margin:     4px;
+
+            .datetime-range,.address {
+                display: inline-block;
+                margin: 0px 4px;
+                font-size: 14px;
+
+                vertical-align: top;
+            }
+            img.calendar-icon {
+                margin-left: 3px;
+                vertical-align: middle;
+            }
+            img.pin-icon {
+                vertical-align: top;
+            }
+        }
+        @galleryWidth:  350px;
+        .gallery-sidebar {
+            background: rgba(127, 127, 127, 0.25);
+            margin:     05px 30px 10px 2px;
+            float:      left;
+            z-index: 1;
+            position: relative;
+        }
+        #event-picture {
+            background: #444;
+            max-width:  (@galleryWidth - 20px);
+            margin:     10px;
+            .box-shadow(0px, 2px, 8px, rgba(0, 0, 0, 0.2));
+
+            vertical-align: top;
+        }
+        #event-registration {
+            min-width:  (@galleryWidth - 20px);
+            padding-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+
+            text-align: center;
+
+            #registerLink {
+                @height:        50px;
+                background:     #3fb58e;
+                display:        inline-block;
+                height:         @height;
+                margin:         20px auto;
+                padding:        0px 20px;
+
+                color:          #fcfcfc;
+                font-size:      16px;
+                line-height:    @height;
+
+                .icon-chevron-right {
+                    position:   relative;
+                    left:       1px;
+                    font-size:  13px;
+                }
+
+                .clickable;
+                &:hover {
+                    background: #60c7a5;
+                }
+                &:active {
+                    background: darken(#60c7a5, 5%);
+                }
+            }
+            p {
+                width:  320px;
+                margin: 0px auto;
+
+                font-family: 'Open Sans Light';
+                font-size:  17px;
+                color:  #666;
+                line-height: 1.6;
+            }
+        }
+        #event-description {
+            padding:    15px;
+
+            #description-body {
+                color:      #787878;
+                font-size:  15px;
+                line-height: 1.6;
+            }
+            #event-organizer {
+                display:    inline-block;
+                margin-top: 8px;
+                margin-left: 18px;
+                line-height: @profileImgSize;
+
+                color:      #888;
+
+                img {
+                    height: @profileImgSize;
+                    width:  @profileImgSize;
+                    border-radius: @profileImgSize + 10px;
+                }
+                .organized-by {
+                    .clickable;
+                    display:        inline-block;
+                    padding-left:   5px;
+
+                    font-size:      14px;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+    form#edit-event {
+        input {
+            border: 1px solid #ccc;
+            padding-left: 4px;
+        }
+        input[name="title"] {
+            padding-left: 10px;
+
+            font-weight: 300;
+            font-size:   35px;
+        }
+        input[name="address"] {
+            width: 21em;
+        }
+        .upload {
+            display: inline-block;
+            margin:  10px 10px 0px;
+
+            #image-upload {
+                display:    table-cell;
+                width:      125px;
+                height:     100px;
+                border:     2px #aaa dashed;
+                border-radius: 6px;
+                padding:    6px 6px 0px;
+
+                font-size:  15px;
+                text-align: center;
+                vertical-align: middle;
+                .clickable;
+
+                img {
+                    max-width:  120px;
+                }
+            }
+        }
+        input[type="file"] { .hidden; }
+
+        input[name="registerLink"] {
+            width: 24em;
+            margin: 20px 10px;
+        }
+        input[name="attendees"] {
+            width: 5em;
+            margin: 0px 10px;
+        }
+    }
+}

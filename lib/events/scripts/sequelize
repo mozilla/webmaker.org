@@ -1,0 +1,99 @@
+#!/usr/bin/env node
+
+const path      = require("path")
+    , fs        = require("fs")
+    , program   = require("commander")
+    , Sequelize = require('sequelize')
+    , moment    = require("moment")
+    , _         = Sequelize.Utils._
+
+var here = __dirname;
+
+var environment      = process.env.NODE_ENV || 'development'
+  , migrationsPath   = here + '/../migrations'
+
+var createMigrationsFolder = function(force) {
+  if(force) {
+    console.log('Deleting the migrations folder.')
+    try {
+      fs.readdirSync(migrationsPath).forEach(function(filename) {
+        fs.unlinkSync(migrationsPath + '/' + filename)
+      })
+    } catch(e) {}
+    try {
+      fs.rmdirSync(migrationsPath)
+      console.log('Successfully deleted the migrations folder.')
+    } catch(e) {}
+  }
+
+  console.log('Creating migrations folder.')
+  try {
+    fs.mkdirSync(migrationsPath)
+    console.log('Successfully create migrations folder.')
+  } catch(e) {
+    console.log('Migrations folder already exist.')
+  }
+}
+
+program
+  .version('2.0.0-alpha2')
+  .option('-e, --env <environment>', 'Specify the environment.')
+  .option('-m, --migrate', 'Run pending migrations.')
+  .option('-u, --undo', 'Undo the last migration.')
+  .option('-f, --force', 'Forces the action to be done.')
+  .option('-c, --create-migration [migration-name]', 'Creates a new migration.')
+  .parse(process.argv)
+
+if(typeof program.env === 'string') {
+  environment = program.env
+}
+console.log("Using environment '" + environment + "'.")
+
+if(program.migrate) {
+
+  var orm             = require(here + '/../lib/orm')
+    , migratorOptions = { path: migrationsPath }
+    , migrator        = orm.sequelize.getMigrator(migratorOptions)
+
+  if(program.undo) {
+    orm.sequelize.migrator.findOrCreateSequelizeMetaDAO().success(function(Meta) {
+      Meta.find({ order: 'id DESC' }).success(function(meta) {
+        if(meta) {
+          migrator = orm.sequelize.getMigrator(_.extend(migratorOptions, meta), true)
+        }
+
+        migrator.migrate({ method: 'down' })
+            .success(console.log.bind(console))
+            .error(console.error.bind(console));
+      })
+    })
+  } else {
+    migrator.migrate()
+        .success(console.log.bind(console))
+        .error(console.error.bind(console));
+  }
+} else if(program.createMigration) {
+  createMigrationsFolder()
+
+  var migrationName = [
+    moment().format('YYYYMMDDHHmmss'),
+    (typeof program.createMigration === 'string') ? program.createMigration : 'unnamed-migration'
+  ].join('-') + '.js'
+
+  var migrationContent = [
+    "module.exports = {",
+    "  up: function(migration, DataTypes, done) {",
+    "    // add altering commands here, calling 'done' when finished",
+    "    done()",
+    "  },",
+    "  down: function(migration, DataTypes, done) {",
+    "    // add reverting commands here, calling 'done' when finished",
+    "    done()",
+    "  }",
+    "}"
+  ].join('\n')
+
+  fs.writeFileSync(migrationsPath + '/' + migrationName, migrationContent)
+} else {
+  console.log('Try "sequelize --help" for usage information.')
+}

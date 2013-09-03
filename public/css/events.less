@@ -1,0 +1,91 @@
+@import "mixins";
+@import "events/details";
+@import "events/map";
+@import "events/admin";
+@import "events/metrics";
+
+html,body { height: 100%; }
+body#events {
+    * { box-sizing: border-box; }
+
+    .webmaker-outer-wrapper {
+        height: 100%;
+    }
+    main {
+        height: 100%;
+        width:  100%;
+        overflow: auto;
+    }
+}
+.clear { clear: both; }
+.hidden { display: none; }
+.clickable {
+    cursor: pointer; cursor: hand;
+    text-decoration: none;
+
+    &:hover {
+        text-shadow: #ccc 0px 0px 1px;
+    }
+    .disable-selection;
+}
+.clickthrough {
+    pointer-events: none;
+    background:     transparent;
+
+    * { pointer-events: auto; }
+}
+.disable-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ui-datepicker {
+    border:     1px solid #ddd;
+    margin-left: -34.5px;
+    margin-top:  11px;
+}
+.md-editor {
+    background:     #222;
+    margin-left:    -1px;
+    padding:        4px;
+    padding-top:    0px;
+    clear: left;
+
+    textarea {
+        height:  34ex;
+        padding: 8px 10px;
+
+        font-family: inherit;
+        font-size:   14px;
+    }
+    .md-preview {
+        min-height: 5ex;
+        padding:    8px 10px;
+
+        color:  #333;
+    }
+    .md-header {
+        background: #222;
+    }
+    .btn-group {
+        display: inline-block;
+    }
+    button {
+        .ui-btn;
+        .clickable;
+        background: inherit;
+        border:     0px;
+        border-radius:  1px;
+        padding:    4px 8px;
+
+        color: #eee;
+        &:hover {
+            background:  #fafafa;
+            text-shadow: none;
+            color: #222;
+        }
+    }
+}

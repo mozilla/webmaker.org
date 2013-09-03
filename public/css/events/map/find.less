@@ -1,0 +1,84 @@
+@formHeight:  45px;
+@inputHeight: 34px;
+
+body#events.map form#find-event {
+    display:    inline-block;
+    clear:      both;
+    padding-right:  6px;
+
+    line-height:    @formHeight;
+    white-space:    nowrap;
+
+    .header {
+        display:    inline-block;
+        color:      #fff;
+
+        .icon-search {
+            color: #888;
+            margin-left: -1px;
+            margin-right: 2px;
+        }
+    }
+    .ui-input {
+        overflow:   hidden;
+        height:     @inputHeight;
+        margin-bottom: 2px;
+        margin-left:   2px;
+        padding:    0px 10px;
+
+        .pointer-icon {
+            position: relative;
+            top:    4px;
+            left:   1px;
+            width:  21px;
+            vertical-align: top;
+        }
+        .calendar-icon {
+            position: relative;
+            top:    10px;
+            width:  16px;
+            vertical-align: top;
+        }
+        input {
+            padding:    0px 0px 0px 6px;
+
+            font-size:  14.5px;
+
+            &[name="when-start"]  { .ui-small; }
+            &[name="when-end"]    { .ui-small; }
+            &[name="where"]       { .ui-medium; }
+
+            @media (max-width: 475px) {
+                &[name="where"]       { width: 150px; }
+                &[name="when-start"]  { .ui-smedium; }
+            }
+        }
+        .icon-remove {
+            .clickable;
+            color:          rgba(0, 0, 0, 0.07);
+            font-size:      18px;
+            line-height:    @inputHeight;
+        }
+    }
+    button[type="submit"].icon-chevron-right {
+        position:   relative;   // hack, for vertical alignment
+        top:        -1px;
+        vertical-align: middle; // (needed for ^^hack)
+
+        height:     @inputHeight;
+        width:      @inputHeight;
+
+        font-size:  18px;
+    }
+
+    .break-right {
+        display: inline-block;
+
+        @media (max-width: 820px) {
+            display: block;
+            margin-top: -4px;
+            margin-left: 4px;
+            text-align: right;
+        }
+    }
+}

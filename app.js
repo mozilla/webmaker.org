@@ -154,7 +154,7 @@ app.use(function( req, res, next ) {
   next();
 });
 
-require( "webmaker-events" ).init( app, nunjucksEnv, lessMiddleWare, __dirname );
+require( "./lib/events" ).init( app, nunjucksEnv, __dirname );
 
 var optimize = NODE_ENV !== "development",
     tmpDir = path.join( require( "os" ).tmpDir(), "mozilla.webmaker.org" );

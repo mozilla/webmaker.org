@@ -1,0 +1,150 @@
+// variables
+@blueButtonColor: #27aae1;
+.blueButton {
+    background: @blueButtonColor;
+    &:hover  { background: lighten(@blueButtonColor, 10%); }
+    &:active { background: darken(@blueButtonColor, 5%); }
+    border:     0px;
+    color:      #fcfcfc;
+    .clickable;
+}
+@oceanBlue: #a5bfdd;
+
+@import "map/marker_info_window";
+@import "map/create";
+@import "map/find";
+
+body#events.map {
+
+    #midbar {
+        background: #fff;
+        max-height: 135px;
+        z-index:    0;
+        overflow:   hidden;
+        margin:     -5px 0px;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+    footer {
+        display: none;
+    }
+
+    .ui-append {
+        display: inline-block;
+
+        &>.icon {
+            right: -1px;
+        }
+    }
+
+    #map-canvas {
+        background: @oceanBlue;
+        position:   relative;
+        width:      100%;
+        height:     100%;
+        z-index:    1;
+
+        * { box-sizing: content-box; }
+    }
+
+    .map-overlay {
+        .clickthrough;
+        position:   absolute;
+        display:    inline-block;
+        margin:     10px;
+        z-index:    2;
+
+        color:      #fafafa;
+    }
+    .header {
+        display:        inline-block;
+        margin:         0px;
+        padding:        0px 15px;
+        line-height:    45px;
+        white-space:    nowrap;
+
+        font-size:      20px;
+        font-weight:    300;
+        color:          #fff;
+    }
+    .overlay-buttons {
+        .clickthrough;
+        .header {
+            .blueButton;
+            height:     45px;
+            margin:     10px 5px 0px 0px;
+
+            color:      #fff;
+        }
+        #event-guides .icon-chevron-right {
+            font-size:      16px;
+            margin-left:    3px;
+        }
+    }
+
+    .expand-form-button {
+        .clickable;
+        border:     0px;
+        font-size:  20px;
+
+        .icon-plus {
+            margin-right:   3px;
+
+            font-size:      18px;
+        }
+        .icon-remove {
+            margin-right:   3px;
+
+            font-size:      18px;
+            vertical-align: 1px;
+        }
+    }
+
+    .cell {
+        display: block;
+        overflow: hidden;
+    }
+    .ui-select-menu {
+        z-index: 3;
+    }
+    .ui-select {
+        box-sizing: content-box;
+        margin:     4px;
+    }
+    .datetime > *[class^="ui-"] {
+        margin-left: 0px;
+
+        vertical-align: top;
+
+        input {
+            .ui-small;
+            padding:    0px 10px;
+        }
+        .icon-calendar {
+            padding-right: 6px;
+            vertical-align: middle;
+        }
+        &.select-time {
+            padding: 0px;
+            input {
+                .ui-small;
+                margin-left: 1em;
+            }
+        }
+    }
+    input {
+        background: white;
+        outline:    0px;
+        border:     0px;
+    }
+    form {
+        background: rgba(32,32,32,.8);
+        button[type="submit"] { .blueButton; }
+    }
+    a {
+        .clickable;
+        text-decoration: none;
+    }
+}

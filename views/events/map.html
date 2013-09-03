@@ -1,0 +1,127 @@
+{% extends "events/layout.html" %}
+
+{% block title %}Event Map{% endblock %}
+
+{% block midbar %}
+<a href="/party"><img src="/img/party-banner.png"></a>
+{% endblock %}
+
+{% block body %}
+
+<div class="map-overlay">
+    <form id="find-event" action="/events" method="GET">
+        <h2 class="header"><span class="icon-search"></span> Find an Event</h2>
+        <input name="_csrf" type="hidden" value="{{ csrf }}" />
+        <span class="ui-input ui-append">
+            <img class="pointer-icon"  src="/img/map/pin-event-dim.png">
+            <input name="where" type="text" placeholder="Where?" />
+            <span class="icon-remove clear-input"></span>
+        </span>
+        <div class="break-right">
+          <span class="ui-input ui-append">
+              <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+              <input name="when-start"  type="text" placeholder="Start Date" class="datepicker" />
+              <span class="icon-remove clear-input"></span>
+          </span>
+          <span class="ui-input ui-append">
+              <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+              <input name="when-end"  type="text" placeholder="End Date" class="datepicker" />
+              <span class="icon-remove clear-input"></span>
+          </span>
+          <button type="submit" class="icon-chevron-right"></button>
+        </div>
+    </form>
+
+    <div class="overlay-buttons">
+        <a href="/login" class="header loggedout-expand-form-button">
+            <span class="icon-plus"></span>
+            <span class="event-button-text">
+              {% if username %}
+                Add an Event
+              {% else %}
+                Log in to add an Event
+              {% endif %}
+            </span>
+        </a>
+        <a href="/guides" id="event-guides" class="header">
+            Event Guides
+            <span class="icon-chevron-right"></span>
+        </a>
+    </div>
+
+    <form id="create-event" class="hidden" action="/events" method="POST">
+        <a class="header expand-form-button"><span class="icon-remove"></span> Add an Event</a><br />
+        <fieldset>
+            <label for="event_title"> Name your event </label>
+            <span class="ui-input ui-append">
+                <input id="event_title" name="title" {{ tabIndex() }}
+                    placeholder="Use an awesome title so people will come!" /></span>
+
+            <label for="event_description"> Describe your event </label>
+            <textarea id="event_description" name="description" data-provide="markdown" {{ tabIndex() }}
+                placeholder="Tell people a few more details about your event. What can they expect?"></textarea><br />
+        </fieldset>
+        <fieldset>
+            <label for="event_attendees"> How many attendees are you expecting? </label>
+            <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
+                <option selected
+                        value='5'> &lt;10 </option>
+                <option value='15'> 10-20 </option>
+                <option value='35'> 20-50 </option>
+                <option value='75'> 50-100 </option>
+                <option value='150'> 100-200 </option>
+                <option value='350'> 200-500 </option>
+                <option value=6> 500+    </option>
+            </select></div><br />
+
+            <label for="event_address"> Event location </label>
+            <span class="cell ui-input ui-append">
+                <input id="event_address" name="address" type="text" {{ tabIndex() }} />
+            </span>
+
+            <input name="latitude"  type="hidden" />
+            <input name="longitude" type="hidden" />
+
+            <label for="event_registerLink"> Event Link </label>
+            <span class="registerLink cell ui-input ui-append">
+                <input id="event_registerLink" name="registerLink" type="url" {{ tabIndex() }}
+                        placeholder="Link to registration page" /> </span>
+
+            {% for i in ['begin','end'] %}
+            <label for="event_{{i}}Date"> Event {{i}}s </label>
+            <div class='datetime'>
+                <span class="ui-append ui-select ui-input select-date">
+                    <span class="icon-calendar"></span>
+                    <input id="event_{{i}}Date" name="{{i}}Date" type="text" class="datepicker" {{ tabIndex() }}
+                            placeholder="--/--/--" />
+                    <a class="icon icon-chevron-down"></a>
+                </span>
+                <label class="switch"></label>
+                <span class="ui-append ui-select ui-input select-time">
+                    <input name="{{i}}Time" type="text" class="timepicker" {{ tabIndex() }}
+                            placeholder="--:--  --" />
+                    <a class="icon icon-chevron-down"></a>
+                </span>
+            </div>
+            {% endfor %}
+
+            <div class="upload">
+                <input type="file" accept="image/*" />
+                <input name="picture" type="hidden" />
+                <div id="image-upload">Upload an image</div>
+            </div>
+            <input name="_csrf" type="hidden" value="{{ csrf }}" />
+
+            <button type="submit" data-disable-with="Submitting...">
+                Submit your event
+                <span class="icon-chevron-right"></span>
+            </button>
+        </fieldset>
+    </form>
+</div>
+
+<div id="map-canvas"></div>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

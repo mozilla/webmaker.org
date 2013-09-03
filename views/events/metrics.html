@@ -1,0 +1,44 @@
+{% extends "events/layout.html" %}
+
+{% block title %}Event Metrics{% endblock %}
+
+{% block body %}
+{{ super() }}
+
+<div class="metrics-container">
+  <div class="dashboard">
+    <div class="squares">
+      <div class="square red">
+        <span class="stat">
+          <span class="value">{{ stats.total_events|intcomma }}</span>
+          <em>Total Events</em>
+        </span>
+          Submitted by
+        <span class="stat">
+          <span class="value inline">{{ stats.users|intcomma }}</span> <em>Users</em>
+        </span>
+      </div>
+      <div class="square gray">
+      <span class="stat">
+        <span class="value">{{ stats.upcoming_events|intcomma }}</span> <em>Upcoming<br />Events</em>
+      </span>
+      </div>
+    </div>
+    <div class="rectangle">
+      <span class="rect-content">
+        <span class="stat">
+          <span class="value">{{ stats.total_attendees|intcomma }} </span> <em class="huge">Attendees</em>
+        </span>
+        <span class="stat">
+          in <span class="value inline">{{ stats.cities|intcomma }}</span> <em>Cities</em>
+        </span>
+        Across
+        <span class="stat">
+          <span class="value inline">{{ stats.countries|intcomma }}</span> <em>Countries</em>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

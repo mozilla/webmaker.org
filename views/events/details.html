@@ -1,0 +1,130 @@
+{% extends "events/layout.html" %}
+
+{% block title %}{{ event.title }}{% endblock %}
+
+{% block body %}
+{{ super() }}
+<form id="edit-event" action="/events/{{ event.id }}" method="POST">
+  <input name="_csrf"   value="{{ csrf }}" type="hidden">
+
+  <div class="ui-wrapper ui-body">
+    <div id="details-pane" class="ui-section">
+      <div class="gallery-sidebar">
+        {% if event.picture %}
+         <span class="show">
+           <img id="event-picture" src="{{ event.picture }}" onerror="this.style.display='none'" />
+         </span>
+        {% endif %}
+        <span class="edit hidden">
+          <div class="upload">
+              <input type="file" accept="image/*" />
+              <input name="picture" type="hidden" />
+              <div id="image-upload">Change Event Picture</div>
+          </div>
+        </span>
+        {% if event.registerLink %}
+         <span class="show">
+           <div id="event-registration">
+             <a id="registerLink" href="{{ event.registerLink }}">Sign up for the event <span class="icon-chevron-right"></span></a>
+             <p>This link will take you to an external event registration service, such as Eventbrite.</p>
+           </div>
+         </span>
+        {% endif %}
+      </div>
+      <span id="event-description">
+        <div id="event-title">
+          <h1 class="show">{{ event.title }}</h1>
+          <span class="edit hidden">
+            <input type="text" name="title" placeholder="{{ event.title }}" />
+          </span>
+        </div>
+        <div id="owner-panel hidden">
+          <span class="show">
+            <button id="edit-mode" type="button"   class="owner-btn ui-btn">Edit</button>
+          </span>
+          <span class="edit hidden">
+            <button id="save-edit" class="owner-btn ui-btn"
+                type="submit" name="_method" value="PATCH">Save</button>
+            <button id="cancel-edit" type="button" class="owner-btn ui-btn">Cancel</button>
+            <button id="delete-event" class="owner-btn ui-btn"
+                type="submit" name="_method" value="DELETE">Delete</button>
+            <div id="delete-confirm" class="hidden" title="Delete Event">
+                Are you sure you want to permanently delete this event?
+            </div>
+          </span>
+        </div>
+        <div id="event-whenwhere">
+          {% if event.beginDate or event.endDate or event.beginTime %}
+           <span class="show">
+             <div class="temporal-local">
+               <img class="calendar-icon" src="/img/event-detail-icon-calendar.png" />
+               <div class="datetime-range">
+                 <div>
+                   {{ event.beginDate }}
+                     {% if event.beginDate and event.endDate %} - {% endif %}
+                   {{ event.endDate }}
+                 </div>
+                 <div>
+                   {{ event.beginTime }}
+                     {% if event.beginTime and event.endTime %} - {% endif %}
+                   {{ event.endTime }}
+                 </div>
+               </div>
+             </div>
+           </span>
+          {% endif %}
+          <span class="edit hidden">
+            <div class="temporal-local">
+              <img class="calendar-icon" src="/img/event-detail-icon-calendar.png" />
+              <div class="datetime-range">
+                <div> <input type="text" name="beginDate" class="datepicker"
+                        placeholder="{{ event.beginDate or "--/--/----" }}" />
+                    - <input type="text" name="endDate"   class="datepicker"
+                        placeholder="{{ event.endDate   or "--/--/----" }}" />
+                </div>
+                <div> <input type="text" name="beginTime" class="timepicker"
+                        placeholder="{{ event.beginTime or "-- : --  --" }}" />
+                    - <input type="text" name="endTime"   class="timepicker"
+                        placeholder="{{ event.endTime   or "-- : --  --" }}" />
+                </div>
+              </div>
+            </div>
+          </span>
+          <div class="temporal-local">
+            {% if event.address %}
+             <span class="show">
+               <img class="pin-icon" src="/img/event-detail-icon-pointer.png" />
+               <div class="address">{{ event.address }}</div>
+             </span>
+            {% endif %}
+            <span class="edit hidden">
+              <img class="pin-icon" src="/img/event-detail-icon-pointer.png" />
+              <input type="text" name="address" class="address" placeholder="{{ event.address }}" />
+              <input name="latitude"  type="hidden" />
+              <input name="longitude" type="hidden" />
+            </span>
+          </div>
+        </div>
+        <div id="event-organizer">
+          <img src="https://secure.gravatar.com/avatar/{{ event.organizerHash }}" />
+          <span class="organized-by">Organized by <strong class="organizer">{{ event.organizerId }}</strong></span>
+        </div>
+        <br />
+        <span id="description-body" class="show">{{ event.description|markdown|safe }}</span>
+        <span class="edit hidden">
+          <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
+          <label for="event_registerLink">Registration Link: </label>
+          <input id="event_registerLink" type="text" name="registerLink"
+                placeholder="{{ event.registerLink or "http://example.com/" }}" />
+          <br >
+          <label for="event_attendees"># of Attendees: </label>
+          <input id="event_attendees" type="number" name="attendees"
+                placeholder="~{{ event.attendees or "?" }}" />
+        </span>
+
+        <div class="clear"></div>
+      </span>
+    </div>
+  </div>
+</form>
+{% endblock %}

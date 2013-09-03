@@ -1,0 +1,105 @@
+// variables
+@userImageWidth: 35px;
+@iconWidth: 16px;
+@grayTextColor: gray;
+@blackTextColor: black;
+
+@grayButtonColor: rgba(200,200,200,1);
+
+.info-container {
+}
+.info-content {
+    position:   relative;
+    padding:    12px 12px 32px;
+}
+#bottom-row {
+    width:          100%;
+    margin-bottom:  40px;
+    vertical-align: bottom;
+
+    #event-details-link {
+        .blueButton;
+
+        @btnSize:   38px;
+        background: @grayButtonColor;
+        height:     @btnSize;
+        width:      @btnSize;
+        line-height: @btnSize;
+        float:      right;
+        margin-top: 5px;
+
+        font-size:  18px;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.info-title {
+    margin-bottom: 6px;
+
+    text-align: center;
+    font-size:  26px;
+    color:      #808080;
+}
+
+.info-when-where {
+  // this hack added to get the floating divs to resize the container to the correct height
+    overflow: hidden;
+    width: 100%;
+    line-height: 1;
+
+    .info-date {
+        display:        inline-block;
+        margin-bottom:  4px;
+
+        font-size:  13px;
+        color:      @grayTextColor;
+        vertical-align: middle;
+    }
+
+    .info-address {
+        color: @grayTextColor;
+        display: inline-block;
+        font-size: 13px;
+    }
+
+    .icon-img {
+        margin: 0px 6px 4px;
+        width:  @iconWidth;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.info-description {
+  color: @blackTextColor;
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  line-height:  1.5;
+  text-align:   left;
+  font-size:    14px;
+}
+
+.organizer-img {
+    background: transparent;
+    height:     @userImageWidth;
+    width:      @userImageWidth;
+    border:     2px solid white;
+    border-radius:  @userImageWidth / 2;
+    margin-right:   4px;
+    float:      left;
+}
+
+.info-organizer {
+    color:  @blackTextColor;
+
+    .title {
+        color:  @grayTextColor;
+    }
+
+    vertical-align: bottom;
+    float:          left;
+    font-size:      16px;
+}
+

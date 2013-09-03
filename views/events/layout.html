@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% include 'macros.html' %}
+
+{% block css %}
+  <meta name="csrf-token" content="{{ csrf }}">
+  {{ super() }}
+  <link rel="stylesheet" href="/ext/css/jquery-ui.custom/jquery-ui-1.10.3.custom.css" />
+  <link rel="stylesheet" href="/ext/css/jquery.timepicker.css">
+  <link rel="stylesheet" href="/ext/css/bootstrap-markdown.css">
+  <link rel="stylesheet" href="/css/events.css">
+{% endblock %}
+
+{% block require_main %}/js/events/index{% endblock %}
+
+{% set j=0 %}
+{% macro tabIndex() %}tabIndex="{{ ++j }}"{% endmacro %}

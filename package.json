@@ -30,7 +30,7 @@
     "mysql": "2.0.x",
     "newrelic": "0.9.22",
     "noxmox": "0.2.x",
-    "nunjucks": "git://github.com/jlongster/nunjucks.git#0fc9622f3471d67058e431f765bc45d928d23a61",
+    "nunjucks": "0.1.10",
     "sequelize": "2.0.x",
     "sightmap": "0.0.1",
     "sqlite3": "2.1.7",

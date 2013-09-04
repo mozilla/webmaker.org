@@ -58,10 +58,11 @@ if ( !!env.get( "FORCE_SSL" ) ) {
  */
 if ( env.get( "GRAYLOG_HOST" ) ) {
   require( 'graylog' );
-  GLOBAL.graylogHost = env.get( "GRAYLOG_HOST" );
-  GLOBAL.graylogFacility = "webmaker.org";
+  var graylogHost = env.get( "GRAYLOG_HOST" );
+  var graylogFacility = "webmaker.org";
 }
 function reportError( error, isFatal ) {
+  console.error( error.stack );
   if ( !graylogHost ) {
     return;
   }

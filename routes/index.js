@@ -27,7 +27,6 @@ module.exports = {
   remove: require("./remove"),
   like: require("./like")(),
   search: require("./search"),
-  sitemap: require("./sitemap"),
   tag: function( req, res ) {
     res.redirect( "/" + req.lang + "/search?type=tags&q=" + req.params.tag );
   },

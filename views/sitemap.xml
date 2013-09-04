@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:xhtml="http://www.w3.org/TR/xhtml11/xhtml11_schema.html">
+  <url>
+    <loc>https://webmaker.org/</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/about</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/about"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/about"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/getinvolved</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/getinvolved"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/getinvolved"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/event-guides</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/event-guides"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/event-guides"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/mentor</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/mentor"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/mentor"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/party</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/party"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/party"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/privacy</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/privacy"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/privacy"/>
+    {% endfor %}
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/search</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/search"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/search"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/teach</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/teach"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/teach"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/terms</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/terms"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/terms"/>
+    {% endfor %}
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/tools</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/tools"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/tools"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/feedback</loc>
+      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/feedback"/>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/feedback"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  {% for locale in supportedLanguages %}
+  <url>
+    <loc>https://webmaker.org/{{locale}}</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/about</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/about"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/getinvolved</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/getinvolved"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/event-guides</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/event-guides"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/mentor</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/mentor"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/party</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/party"/>
+    {% endfor %}
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/privacy</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/privacy"/>
+    {% endfor %}
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/search</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/search"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/teach</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/teach"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/terms</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/terms"/>
+    {% endfor %}
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/tools</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/tools"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://webmaker.org/{{locale}}/feedback</loc>
+    {% for locale in supportedLanguages %}
+      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/feedback"/>
+    {% endfor %}
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  {% endfor %}
+</urlset>

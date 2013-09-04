@@ -116,11 +116,12 @@ app.use( express.compress() );
 app.use( express.static( WWW_ROOT ));
 app.use( "/bower", express.static( path.join(__dirname, "bower_components" )));
 
+// List of supported languages - Please add them here in an alphabetical order
+var supportedLanguages = [ "en-US" ];
+
 // Setup locales with i18n
 app.use( i18n.middleware({
-  supported_languages: [
-    'en-US'
-  ],
+  supportedLanguages: supportedLanguages,
   default_lang: "en-US",
   translation_directory: path.resolve( __dirname, "locale" )
 }));
@@ -143,7 +144,8 @@ app.locals({
   personaSSO: env.get( "AUDIENCE" ),
   loginAPI: env.get( "LOGIN" ),
   ga_account: env.get( "GA_ACCOUNT" ),
-  ga_domain: env.get( "GA_DOMAIN" )
+  ga_domain: env.get( "GA_DOMAIN" ),
+  supportedLanguages: supportedLanguages
 });
 
 app.use(function( req, res, next ) {
@@ -253,7 +255,10 @@ app.get( "/privacy", routes.page( "privacy" ) );
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
 app.get( "/sso/include.html", routes.include() );
 app.get( "/sso/include-transparent.html", routes.include("transparent" ));
-app.get( "/sitemap.xml", routes.sitemap);
+app.get( "/sitemap.xml", function(req, res){
+  res.type( "xml" );
+  res.render("sitemap.xml");
+});
 
 // Localized Strings
 app.get( "/strings/:lang?", i18n.stringsRoute( "en-US" ) );

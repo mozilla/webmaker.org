@@ -32,7 +32,6 @@
     "noxmox": "0.2.x",
     "nunjucks": "0.1.10",
     "sequelize": "2.0.x",
-    "sightmap": "0.0.1",
     "sqlite3": "2.1.7",
     "uuid": "1.4.x",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",

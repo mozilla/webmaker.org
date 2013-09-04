@@ -4,7 +4,6 @@ module.exports = function(req, res) {
 
   var DEFAULT_TYPE = "tags",
       DEFAULT_QUERY = "webmaker:featured",
-      DEFAULT_SORT = "createdAt",
       VALID_TYPES = [
         "all",
         "tags",

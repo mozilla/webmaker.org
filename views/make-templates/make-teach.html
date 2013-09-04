@@ -1,4 +1,5 @@
 {% include "make-templates/macros.html" %}
+{% include "macros.html" %}
 
 <div class="make make-teach medium packery-hide">
   <a href="{{make.url}}">
@@ -15,18 +16,8 @@
           created <span class="date">{{make.createdAt}}</span>
           ,
           <span class="like-count">{{ make.likes.length }}</span>
-          <span class="like-text">
-            {% if make.likes.length %}
-              {% if make.likes.length == 1 %}
-                Like
-              {% else %}
-                Likes
-              {% endif %}
-            {% else %}
-              likes =(
-            {% endif %}
-          </span>
-          </p>
+          {{ likeText( make.likes ) }}
+        </p>
         <p class="description">{{make.description}}</p>
         {{ makeTags() }}
       </div>

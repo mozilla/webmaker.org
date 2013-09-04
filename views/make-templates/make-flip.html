@@ -1,4 +1,5 @@
 {% include "make-templates/macros.html" %}
+{% include "macros.html" %}
 
 <div class="make make-flip make-type-{{make.type}} {{make.size or 'medium'}} packery-hide">
   <div class="flipContainer">
@@ -16,17 +17,7 @@
             created <span class="date">{{make.createdAt}}</span>
             ,
             <span class="like-count">{{ make.likes.length }}</span>
-            <span class="like-text">
-              {% if make.likes.length %}
-                {% if make.likes.length == 1 %}
-                  Like
-                {% else %}
-                  Likes
-                {% endif %}
-              {% else %}
-                likes =(
-              {% endif %}
-            </span>
+            {{ likeText( make.likes ) }}
           </p>
           <p class="description">{{make.description}}</p>
           {% if (make.size == 'large') %}
@@ -36,11 +27,7 @@
         <div class="btn-container">
           <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> Remix</a>
           <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}"> Details</a>
-          {% if make.hasBeenLiked %}
-            <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart"></span>
-          {% else %}
-            <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart-empty"></span>
-          {% endif %}
+          <span data-make-id="{{ make.id }}" class="make-like-toggle {{ 'icon-heart' if make.hasBeenLiked else 'icon-heart-empty' }} "></span>
         </div>
       </div>
     </div>

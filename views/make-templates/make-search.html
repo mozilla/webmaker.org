@@ -1,4 +1,5 @@
 {% include "make-templates/macros.html" %}
+{% include "macros.html" %}
 
 <div class="make make-type-{{make.type}}">
   <a class="make-link" href="{{make.url}}">
@@ -11,15 +12,7 @@
       {% endif %}
       <span class="like-count">
         , {{ make.likes.length }}
-        {% if make.likes.length %}
-          {% if make.likes.length == 1 %}
-            Like
-          {% else %}
-            Likes
-          {% endif %}
-        {% else %}
-          likes =(
-        {% endif %}
+        {{ likeText( make.likes ) }}
       </span>
     </div>
     <div class="btn-container">

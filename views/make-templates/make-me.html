@@ -1,3 +1,5 @@
+{% include "macros.html" %}
+
 <div class="make me-make medium make-type-{{make.type}}">
   <a class="make-link" target="_blank" href="{{make.url}}">
     <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
@@ -7,15 +9,7 @@
         Updated {{make.updatedAt}},
         <span class="like-count">{{ make.likes.length }}</span>
         <span class="like-text">
-          {% if make.likes.length %}
-            {% if make.likes.length == 1 %}
-              Like
-            {% else %}
-              Likes
-            {% endif %}
-          {% else %}
-            likes =(
-          {% endif %}
+          {{ likeText( make.likes ) }}
         </span>
       </p>
       <p class="title">{{make.title}}</p>

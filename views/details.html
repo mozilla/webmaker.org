@@ -76,24 +76,16 @@
             <p class="built-with"><span class="built-with">{{ gettext("Built with") }}</span>
               <span class="icon-{{tool}}"></span>
               <a target="_blank" href="{{remixurl}}" class="tool-name">{{ tool }}</a>
-              <span data-make-id="{{ id }}" class="make-like-toggle details-page-icon make-like-details
-                {% if hasBeenLiked %}
-                  icon-heart
-                {% else %}
-                  icon-heart-empty
-                {% endif %}" >
+              <span data-make-id="{{ id }}"
+                    class="make-like-toggle details-page-icon make-like-details {{ 'icon-heart' if hasBeenLiked else 'icon-heart-empty' }}" >
                 <span class="not-logged-in hide">{{ gettext("Log in to like") }}</span>
               </span>
               <span class="like-count">{{ likes.length }}</span>
               <span class="like-text">
                 {% if likes.length %}
-                  {% if likes.length == 1 %}
-                    Like
-                  {% else %}
-                    Likes
-                  {% endif %}
+                  {{ gettext("Like-1") if likes.length == 1 else gettext("Like-n") }}
                 {% else %}
-                  likes =(
+                  {{ gettext("Like-0") }}
                 {% endif %}
               </span>
             </p>

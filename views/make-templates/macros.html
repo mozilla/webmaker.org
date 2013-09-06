@@ -9,3 +9,13 @@
   </div>
   {% endif %}
 {% endmacro %}
+
+{% macro likeText(likes) %}
+  <span class="like-text">
+    {% if likes.length %}
+      {{ gettext("Like-1") if likes.length == 1 else gettext("Like-n") }}
+    {% else %}
+      {{ gettext("Like-0") }}
+    {% endif %}
+  </span>
+{% endmacro %}

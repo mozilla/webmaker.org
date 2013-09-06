@@ -222,6 +222,7 @@ app.get( "/starter-makes", routes.gallery({
 }));
 app.get( "/party", routes.page( "party" ) );
 app.get( "/tools", routes.page( "tools" ) );
+app.get( "/teach-templates", routes.page( "teach-templates") );
 app.get( "/mentor", routes.page( "mentor" ) );
 app.get( "/getinvolved", routes.page( "getinvolved" ) );
 app.get( "/event-guides", routes.page( "event-guides" ) );

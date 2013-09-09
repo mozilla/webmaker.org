@@ -126,7 +126,8 @@ app.use( i18n.middleware({
   translation_directory: path.resolve( __dirname, "locale" )
 }));
 
-app.use( express.bodyParser() );
+app.use( express.json() );
+app.use( express.urlencoded() );
 app.use( express.cookieParser() );
 app.use( express.cookieSession({
   key: "webmaker.sid",

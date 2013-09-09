@@ -3,8 +3,6 @@ if ( process.env.NEW_RELIC_HOME ) {
 }
 
 var express = require( "express" ),
-    domain = require( "domain" ),
-    cluster = require( "cluster" ),
     habitat = require( "habitat" ),
     helmet = require( "helmet" ),
     nunjucks = require( "nunjucks" ),
@@ -47,71 +45,23 @@ var routes = require("./routes");
 nunjucksEnv.express( app );
 app.disable( "x-powered-by" );
 
+// Setup butler, with host (graylog2 host) and facility (e.g., app name in loggins)
+var butler = require( "webmaker-butler" )({
+  host: env.get( "GRAYLOG_HOST" ) || "dev-no-host",
+  facility: env.get( "GRAYLOG_FACILITY" ) || "webmaker.org",
+  onCrash: function( err, req, res ) {
+    server.close();
+    res.statusCode = 500;
+    res.render( 'error.html', { message: err.message, code: err.status });
+  }
+});
+app.use( butler.middleware );
+
 app.use( express.logger( NODE_ENV === "development" ? "dev" : "" ) );
 if ( !!env.get( "FORCE_SSL" ) ) {
   app.use( helmet.hsts() );
   app.enable( "trust proxy" );
 }
-
-/**
- * Crash isolation and error handling, logging
- */
-if ( env.get( "GRAYLOG_HOST" ) ) {
-  require( 'graylog' );
-  var graylogHost = env.get( "GRAYLOG_HOST" );
-  var graylogFacility = "webmaker.org";
-}
-function reportError( error, isFatal ) {
-  console.error( error.stack );
-  if ( !graylogHost ) {
-    return;
-  }
-  log( "[" + ( isFatal ? "CRASH" : "ERROR" ) + "] webmaker.org failure.",
-    error.message,
-    {
-      level: isFatal ? LOG_CRIT : LOG_ERR,
-      stack: error.stack,
-      _serverVersion: require( './package.json' ).version,
-      _fullStack: error.stack
-    }
-  );
-}
-app.use( function( req, res, next ) {
-  var guard = domain.create();
-  guard.add( req );
-  guard.add( res );
-
-  guard.on( 'error', function( err ) {
-    console.error( 'Error:', err.stack );
-    try {
-      // make sure we close down within 30 seconds
-      var killtimer = setTimeout( function() {
-        process.exit( 1 );
-      }, 30000);
-      // But don't keep the process open just for that!
-      killtimer.unref();
-
-      reportError( err, true );
-
-      server.close();
-      if ( cluster.worker ) {
-        cluster.worker.disconnect();
-      }
-
-      res.statusCode = 500;
-      res.render( 'error.html', { message: err.message, code: err.status });
-
-      guard.dispose();
-      process.exit( 1 );
-    } catch( err2 ) {
-      console.error( 'Error: unable to send 500', err2.stack );
-    }
-  });
-
-  guard.run( next );
-});
-
-
 app.use( express.compress() );
 app.use( express.static( WWW_ROOT ));
 app.use( "/bower", express.static( path.join(__dirname, "bower_components" )));
@@ -185,7 +135,7 @@ app.use( function( err, req, res, next) {
   if ( !err.status ) {
     err.status = 500;
   }
-  reportError( err, false );
+  butler.reportError( err );
   res.status( err.status );
   res.render( 'error.html', { message: err.message, code: err.status });
 });

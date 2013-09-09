@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "test": "grunt",
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "./node_modules/.bin/bower install",
+    "start": "./node_modules/.bin/butler"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "sequelize": "2.0.x",
     "sqlite3": "2.1.7",
     "uuid": "1.4.x",
+    "webmaker-butler": "https://github.com/mozilla/node-webmaker-butler/archive/v0.0.3.tar.gz",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.10"
   },

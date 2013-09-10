@@ -6,11 +6,13 @@
     <div class="make-back">
       <div class="desc">
         <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
+        <p class="author-date">{{ likeText() }}</p>
         <p class="description">{{make.description}}</p>
       </div>
       {{ makeTags() }}
       <div class="btn-container">
         <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> Remix</a>
+        {{ likeIcon() }}
       </div>
     </div>
   </a>

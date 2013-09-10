@@ -10,12 +10,22 @@
   {% endif %}
 {% endmacro %}
 
-{% macro likeText(likes) %}
+{% macro likeText() %}
+  <span class="like-count">{{ make.likes.length }}</span>
   <span class="like-text">
-    {% if likes.length %}
-      {{ gettext("Like-1") if likes.length == 1 else gettext("Like-n") }}
+    {% if make.likes.length %}
+      {# TODO: replace with gettext("Like-1"), gettext("Like-n") {{ gettext("Like-0")  #}
+      {{ "Like" if make.likes.length == 1 else "Likes" }}
     {% else %}
-      {{ gettext("Like-0") }}
+      {{ "Likes :(" }}
     {% endif %}
   </span>
+{% endmacro %}
+
+{% macro likeIcon() %}
+  {% if make.hasBeenLiked %}
+    <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart"></span>
+  {% else %}
+    <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart-empty"></span>
+  {% endif %}
 {% endmacro %}

@@ -6,11 +6,7 @@
     <div class="type-label"><span class="make-type">{{make.type}}</span></div>
     <div class="make-info">
       <p class="updatedAt">
-        Updated {{make.updatedAt}},
-        <span class="like-count">{{ make.likes.length }}</span>
-        <span class="like-text">
-          {{ likeText( make.likes ) }}
-        </span>
+        Updated {{make.updatedAt}}, {{ likeText() }}
       </p>
       <p class="title">{{make.title}}</p>
     </div>

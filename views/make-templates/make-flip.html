@@ -15,8 +15,7 @@
             {% endif %}
             created <span class="date">{{make.createdAt}}</span>
             ,
-            <span class="like-count">{{ make.likes.length }}</span>
-            {{ likeText( make.likes ) }}
+            {{ likeText() }}
           </p>
           <p class="description">{{make.description}}</p>
           {% if (make.size == 'large') %}

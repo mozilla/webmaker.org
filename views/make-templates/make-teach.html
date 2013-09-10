@@ -14,8 +14,7 @@
           {% endif %}
           created <span class="date">{{make.createdAt}}</span>
           ,
-          <span class="like-count">{{ make.likes.length }}</span>
-          {{ likeText( make.likes ) }}
+          {{ likeText() }}
         </p>
         <p class="description">{{make.description}}</p>
         {{ makeTags() }}
@@ -23,11 +22,7 @@
       <div class="btn-container">
         <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> Remix</a>
         <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}">Details</a>
-        {% if make.hasBeenLiked %}
-          <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart"></span>
-        {% else %}
-          <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart-empty"></span>
-        {% endif %}
+        {{ likeIcon() }}
       </div>
     </div>
   </a>

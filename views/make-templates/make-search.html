@@ -9,10 +9,7 @@
       {% else %}
         <span>Anonymous</span>
       {% endif %}
-      <span class="like-count">
-        , {{ make.likes.length }}
-        {{ likeText( make.likes ) }}
-      </span>
+        , {{ likeText() }}
     </div>
     <div class="btn-container">
       <a href="{{make.remixurl}}" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix")}}</a>

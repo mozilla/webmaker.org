@@ -10,7 +10,7 @@ requirejs.config({
     'tabzilla':         'https://www.mozilla.org/tabzilla/media/js/tabzilla',
     // XXX: window.__loginAPI gets templated in server-side in layout.html
     'sso-ux':            window.__loginAPI + '/js/sso-ux',
-    'nunjucks':         '/js/lib/nunjucks',
+    'nunjucks':         '/bower/nunjucks/browser/nunjucks-dev',
     'makeapi':          '/bower/makeapi-client/src/make-api',
     'localized':        '/bower/webmaker-i18n/localized'
   },

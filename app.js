@@ -126,9 +126,6 @@ app.use( express.static( tmpDir ) );
 // Nunjucks
 // This just uses nunjucks-dev for now -- middleware to handle compiling templates in progress
 app.use( "/views", express.static(path.join( __dirname, "views" ) ) );
-app.get( "/js/lib/nunjucks.js", function( req, res ) {
-  res.sendfile( path.resolve( __dirname, "node_modules/nunjucks/browser/nunjucks-dev.js"));
-});
 
 app.use( app.router );
 app.use( function( err, req, res, next) {

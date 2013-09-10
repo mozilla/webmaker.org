@@ -64,6 +64,10 @@ function InfoBubble(opt_options) {
       arrowStyle:         this.ARROW_STYLE_
   });
 
+  if(options['pixelOffset'] === undefined) {
+    options['pixelOffset'] = this.PIXEL_OFFSET_;
+  }
+
   this.buildDom_();
 
   this.setValues(options);
@@ -92,6 +96,12 @@ InfoBubble.prototype.ARROW_SIZE_ = 15;
  */
 InfoBubble.prototype.ARROW_STYLE_ = 0;
 
+/**
+ * CUSTOM BY DALE KARP
+ * NECESSARY TO SOLVE INFOBUBBLE
+ * OVERLAPPING MARKERS
+ */
+InfoBubble.prototype.PIXEL_OFFSET_ = [0.0];
 
 /**
  * Default shadow style
@@ -897,6 +907,12 @@ InfoBubble.prototype.draw = function() {
   }
 
   var left = pos.x - (width * arrowPosition);
+  
+  // PIXEL_OFFSET_
+  this.bubble_.style['top'] = this.px(top);
+  this.bubble_.style['left'] = this.px(left);
+  top -= this.get('pixelOffset')[1]; // y offset
+  left -= this.get('pixelOffset')[0]; // x offset
 
   this.bubble_.style['top'] = this.px(top);
   this.bubble_.style['left'] = this.px(left);

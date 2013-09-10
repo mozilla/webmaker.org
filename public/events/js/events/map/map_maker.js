@@ -103,6 +103,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
     };
     MapMaker.prototype.showInfoWindow = function(marker) {
         latLng = marker.position;
+        var self = this;
 
         // close info window if clicking on already shown info window
         if (this.infoWindow) {
@@ -114,6 +115,9 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
 
         this.closeInfoWindow();
 
+        // WARNING! InfoBubble.js has been modified to support pixelOffset,
+        // which for some reason isn't supported (although it is supported by
+        // the parent class of InfoBubble, InfoWindow
         this.infoWindow = new InfoBubble({ // TODO: move styling into less/css file
             position: latLng,
             minWidth: 330,
@@ -123,28 +127,29 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
             shadowStyle: 1,
             padding: 0,
             // Padding around the tabs, now set separately from the InfoBubble padding
-            tabPadding: 12,
-            // You can set the background color to transparent, and define a class instead
-         // backgroundColor: 'transparent',
             borderRadius: 8,
             borderWidth: 1,
             // Now that there is no borderWidth check, you can define
             // a borderColor and it will apply to Just the arrow
             disableAutoPan: false,
             hideCloseButton: true,
-            arrowPosition: '50%',
             backgroundColor: '#fff',
             backgroundClassName: 'info-container',
-            // define a CSS class name for all, this is technically the "inactive" tab class
-            tabClassName: 'tabClass',
-            // define a CSS class name for active tabs only
-            activeTabClassName: 'activeTabClass',
             arrowSize: 20,
+            pixelOffset: [-5, 60],
             arrowStyle: 0
         });
 
         this.infoWindow.setContent(marker.get('infoContent'));
         this.infoWindow.open(this.google_map, marker);
+        $('.gm-style').removeClass(); // remove new styling introduces in GM 3.1
+
+        // close details window on click
+        // ref. to actual details div is held in this.infowindow.bubble_
+        $(this.infoWindow.bubble_).on('click', function(e) {
+          self.closeInfoWindow();
+          return;
+        });
     };
     MapMaker.prototype.setupAutocomplete = function (input, cityLevel, cb) {
         var options = { types: cityLevel ? ['(regions)'] : ['geocode', 'establishment'] }; // [] is all

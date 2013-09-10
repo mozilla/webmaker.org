@@ -29,7 +29,7 @@
     "markdown": "0.4.x",
     "moment": "2.0.0",
     "mysql": "2.0.x",
-    "newrelic": "0.9.22",
+    "newrelic": "0.10.3",
     "noxmox": "0.2.x",
     "nunjucks": "0.1.10",
     "sequelize": "2.0.x",

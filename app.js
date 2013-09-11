@@ -57,24 +57,28 @@ if ( !!env.get( "FORCE_SSL" ) ) {
  * Crash isolation and error handling, logging
  */
 if ( env.get( "GRAYLOG_HOST" ) ) {
-  require( 'graylog' );
-  var graylogHost = env.get( "GRAYLOG_HOST" );
-  var graylogFacility = "webmaker.org";
+  GLOBAL.graylogHost = env.get( "GRAYLOG_HOST" );
+  GLOBAL.graylogFacility = env.get( "GRAYLOG_FACILITY" );
+  require( "graylog" );
 }
 function reportError( error, isFatal ) {
-  console.error( error.stack );
-  if ( !graylogHost ) {
-    return;
-  }
-  log( "[" + ( isFatal ? "CRASH" : "ERROR" ) + "] webmaker.org failure.",
-    error.message,
-    {
-      level: isFatal ? LOG_CRIT : LOG_ERR,
-      stack: error.stack,
-      _serverVersion: require( './package.json' ).version,
-      _fullStack: error.stack
+  try {
+    console.error( error.stack );
+    if ( !GLOBAL.graylogHost ) {
+      return;
     }
-  );
+    log( "[" + ( isFatal ? "CRASH" : "ERROR" ) + "] webmaker.org failure.",
+      error.message,
+      {
+        level: isFatal ? LOG_CRIT : LOG_ERR,
+        stack: error.stack,
+        _serverVersion: require( './package.json' ).version,
+        _fullStack: error.stack
+      }
+    );
+  } catch( err ) {
+    console.error( "Internal Error: unable to report error to graylog, err=" + err );
+  }
 }
 app.use( function( req, res, next ) {
   var guard = domain.create();

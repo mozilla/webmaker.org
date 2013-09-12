@@ -108,6 +108,9 @@ var async = require("async"),
         }
 
         res.render( page + ".html", {
+          noLike: req.gettext("Like-0"),
+          oneLike: req.gettext("Like-1"),
+          moreLikes: req.gettext("Like-n"),
           makes: all,
           totalHits: totalNormalHits,
           limit: limit,

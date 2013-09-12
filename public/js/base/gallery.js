@@ -161,7 +161,10 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
               data[i].size = "large";
             }
             itemString += nunjucks.env.render(makeView, {
-              make: data[i]
+              make: data[i],
+              noLike: localized.get("Like-0"),
+              oneLike: localized.get("Like-1"),
+              moreLikes: localized.get("Like-n")
             });
           }
         }

@@ -84,6 +84,9 @@ module.exports = function(req, res) {
     }
 
     res.render( "search.html", {
+      noLike: req.gettext("Like-0"),
+      oneLike: req.gettext("Like-1"),
+      moreLikes: req.gettext("Like-n"),
       hasQuery: !!req.query.q,
       makes: data || [],
       page: "search",

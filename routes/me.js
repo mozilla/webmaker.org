@@ -33,6 +33,9 @@ module.exports = function( req, res ) {
     }
 
     res.render( "me.html", {
+      noLike: req.gettext("Like-0"),
+      oneLike: req.gettext("Like-1"),
+      moreLikes: req.gettext("Like-n"),
       makes: data || [],
       page: "me",
       pagination: page,

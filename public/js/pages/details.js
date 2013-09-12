@@ -15,9 +15,10 @@ define(['jquery', 'social', 'localized'],
         tool = $body.data("tool"),
         url = $body.data("url");
 
+    var socialMessage = localized.get('DetailsShareTwitterMsg');
     social = new SocialMedia({
-      message: "Tweet this awesome "+ tool +" project: ",
-      via: "#webmaker"
+      message: socialMessage,
+      via: "webmaker"
     });
 
     function shareOnClick() {

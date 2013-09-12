@@ -305,7 +305,7 @@
     "Teach the web": "Teach the web",
     "Teach": "Teach",
     "teachBanner": "<strong>Join us! </strong><a href='https://mozteach.makes.org/thimble/how-to-become-a-webmaker-mentor'>Become a Mozilla Webmaker Mentor</a> and help learners around the world level up their skills. It’s all part of our <a href='http://webmaker.org/mentor'>non-profit mission</a> to spread web skills and digital creativity for all.",
-    "teachDesc": "<strong>We've got creative ways to help <em>anyone</em> teach <a href='https://wiki.mozilla.org/Learning/WebLiteracies'>web literacy</a>, digital skills and making</strong>. Use our free <a href='https://webmaker.org/tools'>tools</a>, activities and lesson plans. Or make your own &ndash; with help from our <a href='https://plus.google.com/communities/106022863174952221205'>global community</a> of educators, techies and mentors like you.",
+    "teachDesc": "<strong>We've got creative ways to help <em>anyone</em> teach <a href='https://wiki.mozilla.org/Learning/WebLiteracies'>web literacy</a>, digital skills and making</strong>. Use our free <a href='https://webmaker.org/tools'>tools</a>, activities and lesson plans. <a href='/teach-templates'>Or make your own</a> &ndash; with help from our <a href='https://plus.google.com/communities/106022863174952221205'>global community</a> of educators, techies and mentors like you.",
     "teachHeader": "Let's teach the web!<br>",
     "teachingkit": "Teaching Kit",
     "teachtemplateActivityDesc": "Create a smaller, bite-sized activity",

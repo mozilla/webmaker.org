@@ -61,7 +61,8 @@ define(['resource_model', 'markdown'], function (ResourceModel) {
                + this.descriptionHTML()
                + '<div id="bottom-row">'
                  + this.organizerHTML()
-                 + '<a id="event-details-link" href="' + this._uri + '" class="icon-chevron-right"></a>'
+                 + '<a id="event-details-link" href="' + this._uri + '">'
+                 + '<i class="icon-chevron-right"></i></a>'
                  + '<span class="clear"></span>'
                + '</div>'
              + '</div>';

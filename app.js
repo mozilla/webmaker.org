@@ -63,16 +63,16 @@ if ( env.get( "GRAYLOG_HOST" ) ) {
 }
 function reportError( error, isFatal ) {
   try {
-    console.error( error.stack );
+    var severity = isFatal ? "CRASH" : "ERROR";
+    console.error( severity + ": " + error.stack );
     if ( !GLOBAL.graylogHost ) {
       return;
     }
-    log( "[" + ( isFatal ? "CRASH" : "ERROR" ) + "] webmaker.org failure.",
+    log( "[" + severity + "] webmaker.org failure.",
       error.message,
       {
         level: isFatal ? LOG_CRIT : LOG_ERR,
         stack: error.stack,
-        _serverVersion: require( './package.json' ).version,
         _fullStack: error.stack
       }
     );
@@ -85,31 +85,47 @@ app.use( function( req, res, next ) {
   guard.add( req );
   guard.add( res );
 
-  guard.on( 'error', function( err ) {
-    console.error( 'Error:', err.stack );
+  // Safely run a function in error isolation
+  function isolate( fn ) {
     try {
-      // make sure we close down within 30 seconds
+      fn();
+    } catch( e ) {
+      console.error( 'Internal error isolating shutdown sequence: ' + e );
+    }
+  };
+
+  guard.on( 'error', function( err ) {
+    try {
+      // Make sure we close down within 15 seconds
       var killtimer = setTimeout( function() {
         process.exit( 1 );
-      }, 30000);
+      }, 15000);
       // But don't keep the process open just for that!
       killtimer.unref();
 
+      // Try and report this crash to graylog
       reportError( err, true );
 
-      server.close();
-      if ( cluster.worker ) {
-        cluster.worker.disconnect();
-      }
+      // Try and shutdown the server, cluster worker
+      isolate(function() {
+        server.close();
+        if ( cluster.worker ) {
+          cluster.worker.disconnect();
+        }
+      });
 
-      res.statusCode = 500;
-      res.render( 'error.html', { message: err.message, code: err.status });
+      // Try sending a pretty 500 to the user
+      isolate(function() {
+        res.statusCode = 500;
+        res.render( 'error.html', { message: err.message, code: err.status });
+      });
 
       guard.dispose();
-      process.exit( 1 );
     } catch( err2 ) {
-      console.error( 'Error: unable to send 500', err2.stack );
+      console.error( 'Internal error shutting down domain: ', err2.stack );
     }
+
+    process.exit( 1 );
   });
 
   guard.run( next );
@@ -183,17 +199,17 @@ app.use( express.static( tmpDir ) );
 app.use( "/views", express.static(path.join( __dirname, "views" ) ) );
 
 app.use( app.router );
-app.use( function( err, req, res, next) {
-  if ( !err.status ) {
-    err.status = 500;
-  }
-  reportError( err, false );
-  res.status( err.status );
-  res.render( 'error.html', { message: err.message, code: err.status });
-});
+// We've run out of known routes, 404
 app.use( function( req, res, next ) {
   res.status( 404 );
   res.render( 'error.html', { code: 404 });
+});
+// Final error-handling middleware
+app.use( function( err, req, res, next) {
+  err.status = err.status || 500;
+  reportError( err );
+  res.status( err.status );
+  res.render( 'error.html', { message: err.message, code: err.status });
 });
 
 require( "./lib/loginapi" )( app, {

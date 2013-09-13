@@ -92,7 +92,7 @@ app.use( function( req, res, next ) {
     } catch( e ) {
       console.error( 'Internal error isolating shutdown sequence: ' + e );
     }
-  };
+  }
 
   guard.on( 'error', function( err ) {
     try {

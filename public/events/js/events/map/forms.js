@@ -65,7 +65,9 @@ function ($, EventModel, forms) { return function (mapMaker) {
         else return true;
     }, "End date must be after start date.");
 
-    var $createForm = $('form#create-event');
+    var $createForm = $('form#create-event'),
+        $createFormArea = $('form#create-event .create-event-form'),
+        $eventConfirmation = $('form#create-event .create-event-confirmation');
     $createForm.validate({
         rules: {
             title: 'required',
@@ -88,7 +90,6 @@ function ($, EventModel, forms) { return function (mapMaker) {
             });
             $.post($createForm.attr('action'), data, function (data) {
                 if (data.event) {
-                    toggleCreateForm();
                     scroll(0, 0);
                     var evt = new EventModel(data.event);
                     $where.val('');
@@ -96,6 +97,7 @@ function ($, EventModel, forms) { return function (mapMaker) {
                         new google.maps.LatLng(evt.latitude, evt.longitude)
                     );
                     mapMaker.addMarker(evt);
+                    openEventConfirmation(evt);
                 }
             }, 'json').error(function (res) {
                 switch (res.status) {
@@ -139,10 +141,24 @@ function ($, EventModel, forms) { return function (mapMaker) {
     forms.setupImageUpload($createForm);
     forms.setupSelectUI($createForm);
 
+    function openEventConfirmation( event ) {
+        var href = '/events/' + event.id;
+        $createFormArea.toggleClass('hidden');
+        $eventConfirmation.toggleClass('hidden');
+        $('.confirmation-link a')
+        .attr('href', href)
+        .text(window.location.protocol + "//" + window.location.host  + href);
+        $('#map-canvas').bind( 'click', function clickCallback() {
+            toggleCreateForm();
+            $('#map-canvas').unbind( 'click', clickCallback );
+        });
+    }
     // setup form toggle button
     function toggleCreateForm() {
         $createForm[0].reset();
         $createForm.toggleClass('hidden');
+        $createFormArea.removeClass('hidden');
+        $eventConfirmation.addClass('hidden');
         $(".overlay-buttons").toggleClass('hidden');
     }
     $(".expand-form-button").click(function(ev) {

@@ -4,12 +4,8 @@
   <a class="make-link" href="{{make.url}}">
     <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
     <div class="make-info">{{make.title}} by
-      {% if make.username %}
-        <a class="user-link" href="/u/{{make.username}}" data-username="{{make.username}}">@{{make.username}}</a>
-      {% else %}
-        <span>Anonymous</span>
-      {% endif %}
-        , {{ likeText() }}
+        <a class="user-link" href="/u/{{make.username}}" data-username="{{make.username}}">@{{make.username}}</a>, {{ likeText() }}
+        {{ makeTags() }}
     </div>
     <div class="btn-container">
       <a href="{{make.remixurl}}" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix")}}</a>

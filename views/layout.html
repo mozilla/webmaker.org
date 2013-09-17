@@ -33,6 +33,13 @@
       <div class="user-nav-container">
         <a id="logo" href="/{{lang}}/"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
         <ul class="webmaker-nav user-info">
+          <li class="lang-picker">
+            <select id="lang-picker">
+            {% for language in supportedLanguages %}
+              <option {% if lang == language %} selected="selected" {% endif %} value="{{language}}">{{ languageNameFor(language) }}</option>
+            {% endfor %}
+            </select>
+          </li>
           <li class="user">
             {{ gettext("Hi") }} <span id="identity" class="user-name-container"></span>
           </li>

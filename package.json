@@ -20,7 +20,6 @@
     "graylog": "0.1.3",
     "habitat": "0.4.1",
     "helmet": "0.0.11",
-    "i18n-abide": "git://github.com/humphd/i18n-abide.git#05344a817dca4571a1ae9f502fed1cb118294033",
     "knox": "0.8.x",
     "less-middleware": "0.1.12",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.8",
@@ -34,7 +33,7 @@
     "sequelize": "2.0.x",
     "sqlite3": "2.1.7",
     "uuid": "1.4.x",
-    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.1.2.tar.gz",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.11",
     "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.4"
   },

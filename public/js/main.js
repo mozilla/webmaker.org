@@ -20,8 +20,8 @@ requirejs.config({
   }
 });
 
-require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor-slide', 'tabzilla', 'sso-ux'],
-  function ($, cta, Marquee, privacy, AnchorSlide) {
+require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor-slide', 'base/ui', 'tabzilla', 'sso-ux'],
+  function ($, cta, Marquee, privacy, AnchorSlide, UI) {
     'use strict';
 
     var $html = $('html, body');
@@ -49,6 +49,13 @@ require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor
     $('ul.sponsors').each(function () {
       var marquee = new Marquee(this);
       marquee.startRotation();
+    });
+
+    // URL redirector for language picker
+    UI.select('#lang-picker', function(val) {
+      var href = document.location.pathname,
+        url = href.substr(href.lastIndexOf('/') + 0);
+      window.location = "/"+val+url;
     });
 
     // Set up page-specific js

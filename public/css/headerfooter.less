@@ -1,4 +1,6 @@
 @import "mixins";
+@import "../../bower_components/font-awesome/less/font-awesome";
+@FontAwesomePath: "/bower/font-awesome/font";
 
 /*********************************************************
 * HEADER
@@ -148,6 +150,55 @@
     }
   }
 }
+
+li.lang-picker:first-child {
+  border-right: none;
+}
+
+#lang-picker {
+  margin: -7px 15px 0 0;
+  border-color: transparent;
+  &:hover {
+    border-color: #CCC;
+  }
+  ul {
+    background: white;
+    display: inline-block;
+    li {
+      display: block;
+    }
+  }
+
+  .ui-select-menu {
+    width: auto;
+    border-color: #CCC;
+    ul {
+      width: auto;
+    }
+  }
+
+  .ui-selected::before {
+    .icon(@globe);
+    margin-right: 5px;
+  }
+  .ui-smedium {
+    width: auto;
+  }
+  > .icon {
+    background: none;
+    color: #555;
+    padding: 0 10px 0 0;
+    &::before {
+      .icon(@caret-down);
+    }
+    &:hover {
+      background: none;
+      color: #555;
+    }
+  }
+}
+
+
 
 /*********************************************************
 * Filter

@@ -145,7 +145,7 @@ var supportedLanguages = [ "en-US" ];
 
 // Setup locales with i18n
 app.use( i18n.middleware({
-  supportedLanguages: supportedLanguages,
+  supported_languages: supportedLanguages,
   default_lang: "en-US",
   translation_directory: path.resolve( __dirname, "locale" )
 }));

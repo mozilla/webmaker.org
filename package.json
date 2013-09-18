@@ -36,7 +36,7 @@
     "uuid": "1.4.x",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.0.8.tar.gz",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.11",
-    "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.3"
+    "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.4"
   },
   "devDependencies": {
     "grunt": "0.4.1",

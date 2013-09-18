@@ -116,6 +116,10 @@ app.use( function( req, res, next ) {
 
       // Try sending a pretty 500 to the user
       isolate(function() {
+        if (res._headerSent || res.finished) {
+          return;
+        }
+
         res.statusCode = 500;
         res.render( 'error.html', { message: err.message, code: err.status });
       });

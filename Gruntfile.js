@@ -8,6 +8,7 @@ module.exports = function( grunt ) {
           noIDs: false,
           noOverqualifying: false,
           noUniversalSelectors: false,
+          zeroUnits: false,
           strictPropertyOrder: false
         },
         src: [

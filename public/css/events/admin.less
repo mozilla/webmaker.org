@@ -27,27 +27,34 @@ body#events.admin {
             &:nth-child(odd) {
                 background: #eeeeff;
             }
-            td#column-title {
+            td.column-title {
                 position:   relative;
                 display:    block;
-            }
-            .actions-overlay {
-                background: rgba(180, 180, 180, 0.6);
-                display:    none;
-                position:   absolute;
-                top:        10px;
-                right:      10px;
+                .actions-overlay {
+                    background: rgba(180, 180, 180, 0.6);
+                    display:    none;
+                    position:   absolute;
+                    top:        10px;
+                    right:      10px;
 
-                border-radius: 7px;
-                padding:    0px 4px;
+                    border-radius: 7px;
+                    padding:    0px 4px;
 
-                a {
-                    line-height: 1;
-                    color: #f3f3f3;
-                    &:hover {
-                        color: #fff;
+                    a {
+                        line-height: 1;
+                        color: #f3f3f3;
+                        &:hover {
+                            color: #fff;
+                        }
                     }
                 }
+            }
+            .column-datetime {
+                white-space: nowrap;
+            }
+
+            &:nth-child(odd) {
+                background: #eeeeff;
             }
             &:hover {
                 background: #dfdfdf;

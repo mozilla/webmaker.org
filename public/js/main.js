@@ -66,7 +66,7 @@ require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor
         window.location = val+href;
       }
       else if(href.indexOf('/') < 0){
-        href = href.substr(href.indexOf('/') + 0)
+        href = href.substr(href.indexOf('/') + 0);
         window.location = '/'+val+href;
       }
     });

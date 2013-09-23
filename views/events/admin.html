@@ -8,10 +8,10 @@
   <tr>
     <td>
       <form class="toggle-featured" action="{{ event.uri }}" data-remote="true" method="PATCH">
-        <button type="submit" name="featured" title="featured" value="1" class="{% if event.featured %}hidden{% endif %}">
+        <button type="submit" name="featured" title="featured?" value="1" class="{% if event.featured %}hidden{% endif %}">
           <i class="icon-star-empty"></i>
         </button>
-        <button type="submit" name="featured" title="featured" value="0" class="{% if not event.featured %}hidden{% endif %}">
+        <button type="submit" name="featured" title="featured?" value="0" class="{% if not event.featured %}hidden{% endif %}">
           <i class="icon-star"></i>
         </button>
       </form>
@@ -39,6 +39,7 @@
       {{ event.organizerId }}
       <div class="email-address uncollapse">{{ event.organizer }}</div>
     </td>
+    <td title="attendees">{{ event.attendees }}</td>
   </tr>
 {% endfor %}
 </table>

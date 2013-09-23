@@ -97,6 +97,7 @@ function reportError( error, isFatal ) {
     console.error( "Internal Error: unable to report error to graylog, err=" + err );
   }
 }
+
 app.use( function( req, res, next ) {
   var guard = domain.create();
   guard.add( req );
@@ -273,6 +274,10 @@ app.get( "/getinvolved", routes.page( "getinvolved" ) );
 app.get( "/event-guides", routes.page( "event-guides" ) );
 app.get( "/search", routes.search );
 app.get( "/feedback", routes.page( "feedback" ) );
+app.get( "/standard", routes.page( "standard" ) );
+app.get( "/standard/exploring", routes.page( "standard-exploring" ) );
+app.get( "/standard/building", routes.page( "standard-building" ) );
+app.get( "/standard/connecting", routes.page( "standard-connecting" ) );
 app.get( "/style-guide", routes.page( "style-guide" ) );
 
 app.get( "/details", routes.details );

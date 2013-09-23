@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% include "macros.html" %}
+{% block title %}{{ gettext('StandardConnecting') }}{% endblock %}
+{% block body %}
+<div class="ui-wrapper ui-body">
+  <div class="ui-section">
+    <span class="breadcrumb"><a href="/{{localeInfo.lang}}/standard">{{ gettext('WebLiteracyStandard') }}</a> / {{ gettext('StandardConnecting') }}</span>
+    <p class="comp-description">{{ gettext('StandardCompDescConnect') | instantiate | safe }}</p>
+    <h1 class="main-header">{{ gettext('StandardConnecting') }}</h1>
+    <p class="standard-description">{{ gettext('StandardConnectingDesc') }}</p>
+    <div class="standard-list">
+      <ul>
+	<li>
+	  <a id="sharing"></a>
+	  <span class="hover-anchor"><a href="#sharing"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardConnectingSharing') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardConnectingSharingDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardConnectingSharingPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingSharingPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingSharingPoint3')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingSharingPoint4')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingSharingPoint5')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingSharingPoint6')}}</span></li>
+	  </ul>
+	</li>
+	<li>
+	  <a id="community"></a>
+	  <span class="hover-anchor"><a href="#community"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardConnectingCommunity') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardConnectingCommunityDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardConnectingCommunityPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingCommunityPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingCommunityPoint3')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingCommunityPoint4')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingCommunityPoint5')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingCommunityPoint6')}}</span></li>
+	  </ul>
+	</li>
+	<li>
+	  <a id="privacy"></a>
+	  <span class="hover-anchor"><a href="#privacy"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardConnectingPrivacy') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardConnectingPrivacyDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardConnectingPrivacyPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingPrivacyPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingPrivacyPoint3')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingPrivacyPoint4')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingPrivacyPoint5')}}</span></li>
+	  </ul>
+	</li>
+	<li>
+	  <a id="open"></a>
+	  <span class="hover-anchor"><a href="#open"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardConnectingOpen') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardConnectingOpenDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardConnectingOpenPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingOpenPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingOpenPoint3')}}</span></li>
+	    <li><span>{{ gettext('StandardConnectingOpenPoint4')}}</span></li>
+	  </ul>
+	</li>
+      </ul>
+    </div>
+  </div>
+  {{ webLiteracyFooter() }}
+</div>
+{% endblock %}

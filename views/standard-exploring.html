@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% include "macros.html" %}
+{% block title %}{{ gettext('StandardExploring') }}{% endblock %}
+{% block body %}
+<div class="ui-wrapper ui-body">
+  <div class="ui-section">
+    <span class="breadcrumb"><a href="/standard">{{ gettext('WebLiteracyStandard') }}</a> / {{ gettext('StandardExploring') }}</span>
+    <p class="comp-description">{{ gettext('StandardCompDescExplore') | instantiate | safe }}</p>
+    <h1 class="main-header">{{ gettext('StandardExploring') }}</h1>
+    <p class="standard-description">{{ gettext('StandardExploringDesc') }}</p>
+    <div class="standard-list">
+      <ul>
+	<li>
+	  <a id="navigation"></a>
+	  <span class="hover-anchor"><a href="#navigation"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardExploringNav') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardExploringNavDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardExploringNavPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringNavPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringNavPoint3')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringNavPoint4')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringNavPoint5')}}</span></li>
+	  </ul>
+	</li>
+	<li>
+	  <a id="web-mechanics"></a>
+	  <span class="hover-anchor"><a href="#web-mechanics"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardExploringWM') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardExploringWMDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardExploringWMPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringWMPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringWMPoint3')}}</span></li>
+	  </ul>
+	</li>
+	<li>
+	  <a id="search"></a>
+	  <span class="hover-anchor"><a href="#search"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardExploringSearch') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardExploringSearchDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardExploringSearchPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringSearchPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringSearchPoint3')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringSearchPoint4')}}</span></li>
+	  </ul>
+	</li>
+	<li>
+	  <a id="credibility"></a>
+	  <span class="hover-anchor"><a href="#credibility"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardExploringCredibility') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardExploringCredibilityDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardExploringCredibilityPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringCredibilityPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringCredibilityPoint3')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringCredibilityPoint4')}}</span></li>
+	  </ul>
+	</li>
+	<li>
+	  <a id="security"></a>
+	  <span class="hover-anchor"><a href="#security"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardExploringSecurity') }}</span></span>
+	  <span class="comp-desc">{{ gettext('StandardExploringSecurityDesc') }}</span>
+	  <ul>
+	    <li><span>{{ gettext('StandardExploringSecurityPoint1')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringSecurityPoint2')}}</span></li>
+	    <li><span>{{ gettext('StandardExploringSecurityPoint3')}}</span></li>
+	  </ul>
+	</li>
+      </ul>
+    </div>
+  </div>
+  {{ webLiteracyFooter() }}
+</div>
+{% endblock %}

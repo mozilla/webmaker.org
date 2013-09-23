@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% include "macros.html" %}
+{% block title %}{{ gettext('StandardBuilding') }}{% endblock %}
+{% block body %}
+<div class="ui-wrapper ui-body">
+  <div class="ui-section">
+  <span class="breadcrumb"><a href="/{{localeInfo.lang}}/standard">{{ gettext('WebLiteracyStandard') }}</a> / {{ gettext('StandardBuilding') }}</span>
+    <p class="comp-description">{{ gettext('StandardCompDescBuild') | instantiate | safe }}</p>
+    <h1 class="main-header">{{ gettext('StandardBuilding') }}</h1>
+    <p class="standard-description">{{ gettext('StandardBuildingDesc') }}</p>
+    <div class="standard-list">
+      <ul>
+	<li>
+	<a id="composing"></a>
+	<span class="hover-anchor"><a href="#composing"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardBuildingComposing') }}</span></span>
+	<span class="comp-desc">{{ gettext('StandardBuildingComposingDesc') }}</span>
+	<ul>
+	  <li><span>{{ gettext('StandardBuildingComposingPoint1')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingComposingPoint2')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingComposingPoint3')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingComposingPoint4')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingComposingPoint5')}}</span></li>
+	</ul>
+      </li>
+      <li>
+	<a id="remixing"></a>
+	<span class="hover-anchor"><a href="#remixing"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardBuildingRemixing') }}</span></span>
+	<span class="comp-desc">{{ gettext('StandardBuildingRemixingDesc') }}</span>
+	<ul>
+	  <li><span>{{ gettext('StandardBuildingRemixingPoint1')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingRemixingPoint2')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingRemixingPoint3')}}</span></li>
+	</ul>
+      </li>
+      <li>
+	<a id="design"></a>
+	<span class="hover-anchor"><a href="#design"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardBuildingDesign') }}</span></span>
+	<span class="comp-desc">{{ gettext('StandardBuildingDesignDesc') }}</span>
+	<ul>
+	  <li><span>{{ gettext('StandardBuildingDesignPoint1')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingDesignPoint2')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingDesignPoint3')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingDesignPoint4')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingDesignPoint5')}}</span></li>
+	</ul>
+      </li>
+      <li>
+	<a id="coding"></a>
+	<span class="hover-anchor"><a href="#coding"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardBuildingCoding') }}</span></span>
+	<span class="comp-desc">{{ gettext('StandardBuildingCodingDesc') }}</span>
+	<ul>
+	  <li><span>{{ gettext('StandardBuildingCodingPoint1')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingCodingPoint2')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingCodingPoint3')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingCodingPoint4')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingCodingPoint5')}}</span></li>
+	</ul>
+      </li>
+      <li>
+	<a id="infrastructure"></a>
+	<span class="hover-anchor"><a href="#infrastructure"><i class="icon-link icon-large"></i></a><span class="comp-title">{{ gettext('StandardBuildingInfra') }}</span></span>
+	<span class="comp-desc">{{ gettext('StandardBuildingInfraDesc') }}</span>
+	<ul>
+	  <li><span>{{ gettext('StandardBuildingInfraPoint1')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingInfraPoint2')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingInfraPoint3')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingInfraPoint4')}}</span></li>
+	  <li><span>{{ gettext('StandardBuildingInfraPoint5')}}</span></li>
+	</ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+  {{ webLiteracyFooter() }}
+</div>
+{% endblock %}

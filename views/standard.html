@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% include "macros.html" %}
+{% block title %}{{ gettext('WebLiteracyStandard') }}{% endblock %}
+{% block body %}
+<div class="ui-wrapper ui-body">
+
+  <div class="ui-section">
+    <div class="ui-row">
+      <h1 class="main-header">{{ gettext('StandardMainHeader') | safe }}</h1>
+      <p class="standard-description">{{ gettext('StandardMainDesc') }}</p>
+      <p class="standard-description">{{ gettext('StandardMainDescInProgress') | safe }}</p>
+    </div>
+
+    <div class="ui-row">
+      <div class="g-2 standard-list">
+	<h2 class="sub-header"><a href="/{{localeInfo.lang}}/standard/exploring">{{ gettext('StandardExploring') }}</a></h2>
+	<ul class="standard-list">
+	  <li><a href="/{{localeInfo.lang}}/standard/exploring#navigation">{{ gettext('StandardExploringNav') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/exploring#web-mechanics">{{ gettext('StandardExploringWM') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/exploring#search">{{ gettext('StandardExploringSearch') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/exploring#credibility">{{ gettext('StandardExploringCredibility') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/exploring#security">{{ gettext('StandardExploringSecurity') }}</a></li>
+	</ul>
+      </div>
+
+      <div class="g-2 standard-list">
+	<h2 class="sub-header"><a href="/{{localeInfo.lang}}/standard/building">{{ gettext('StandardBuilding') }}</a></h2>
+	<ul class="standard-list">
+	  <li><a href="/{{localeInfo.lang}}/standard/building#composing">{{ gettext('StandardBuildingComposing') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/building#remixing">{{ gettext('StandardBuildingRemixing') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/building#design">{{ gettext('StandardBuildingDesign') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/building#coding">{{ gettext('StandardBuildingCoding') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/building#infrastructure">{{ gettext('StandardBuildingInfra') }}</a></li>
+	</ul>
+      </div>
+
+      <div class="g-2 standard-list">
+	<h2 class="sub-header"><a href="/{{localeInfo.lang}}/standard/connecting">{{ gettext('StandardConnecting') }}</a></h2>
+	<ul class="standard-list">
+	  <li><a href="/{{localeInfo.lang}}/standard/connecting#sharing">{{ gettext('StandardConnectingSharing') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/connecting#community">{{ gettext('StandardConnectingCommunity') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/connecting#privacy">{{ gettext('StandardConnectingPrivacy') }}</a></li>
+	  <li><a href="/{{localeInfo.lang}}/standard/connecting#open">{{ gettext('StandardConnectingOpen') }}</a></li>
+	</ul>
+      </div>
+    </div>
+  </div>
+
+  {{ webLiteracyFooter() }}
+
+</div>
+{% endblock %}

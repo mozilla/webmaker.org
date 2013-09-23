@@ -22,3 +22,17 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro webLiteracyFooter() %}
+<div class="ui-poster-footer">
+  <div class="ui-row">
+    <div class="g-4 right-align">
+      <img src="/img/weblit-footer-graphic.png" alt="" />
+    </div>
+    <div class="g-3">
+      <h2>{{ gettext('StandardFooterTranslate') }}</h2>
+      <a class="literacy-button" href="https://support.mozilla.org/en-US/kb/translate-webmaker" target="_blank"><span>{{ gettext('StandardFooterButton') }} <i class="icon-circle-arrow-right"></i></span></a>
+    </div>
+  </div>
+</div>
+{% endmacro %}

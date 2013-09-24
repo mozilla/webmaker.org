@@ -1,5 +1,5 @@
-define(['jquery', 'sso-ux'],
-  function($) {
+define(['jquery', 'base/ui', 'sso-ux'],
+  function($, UI) {
   "use strict";
   navigator.idSSO.app.onlogin = function(user) {
     if( document.referrer.indexOf( 'events' ) !== -1 ){
@@ -12,4 +12,6 @@ define(['jquery', 'sso-ux'],
   navigator.idSSO.app.onnewuser = function(){
     window.location = "/new";
   };
+  // URL redirector for language picker
+  UI.langPicker('#lang-picker');
 });

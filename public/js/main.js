@@ -52,24 +52,7 @@ require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor
     });
 
     // URL redirector for language picker
-    UI.select('#lang-picker', function(val) {
-      var href = document.location.pathname,
-        lang = $('html').attr('lang');
-      if(val === lang){
-        window.location = href;
-      }
-      else if(href.indexOf(lang) >= 0){
-        href = href.replace(lang, val);
-        window.location = href;
-      }
-      else if(href.indexOf('/') >= 0){
-        window.location = val+href;
-      }
-      else if(href.indexOf('/') < 0){
-        href = href.substr(href.indexOf('/') + 0);
-        window.location = '/'+val+href;
-      }
-    });
+    UI.langPicker('#lang-picker');
 
     // Set up page-specific js
     var pageJS = $('#require-js').data('page');

@@ -4,6 +4,28 @@ define( ["jquery", "text!html/ui-fragments.html" ], function( $, _fragments ) {
   var UI = {},
       $fragments = $( document.createElement( "div" ) ).html( _fragments );
 
+  // URL redirector for language picker
+  UI.langPicker = function( elem ) {
+    UI.select( elem, function(selectedLang) {
+      var href = document.location.pathname,
+        lang = $('html').attr('lang');
+      if(selectedLang === lang) {
+        return;
+      }
+      else if(href.indexOf(lang) !== -1) {
+        href = href.replace(lang, selectedLang);
+        window.location = href;
+      }
+      else if(href.indexOf('/') !== -1) {
+        window.location = '/'+selectedLang+href;
+      }
+      else {
+        href = href.substr(href.indexOf('/') + 0);
+        window.location = '/'+selectedLang+href;
+      }
+    });
+  };
+
   UI.select = function( select, fn ) {
     
     $(".filter").removeClass("hide");
@@ -115,6 +137,8 @@ define( ["jquery", "text!html/ui-fragments.html" ], function( $, _fragments ) {
       $nextBtn.click(pageSearch(page + 1));
     }
   };
+
+
 
   return UI;
 

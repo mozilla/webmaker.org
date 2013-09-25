@@ -1,5 +1,5 @@
-define(['jquery', 'base/ui', 'sso-ux'],
-  function($, UI) {
+define(['jquery', '/bower/webmaker-ui/ui.js', 'sso-ux'],
+  function($, WebmakerUI) {
   "use strict";
   navigator.idSSO.app.onlogin = function(user) {
     if( document.referrer.indexOf( 'events' ) !== -1 ){
@@ -12,6 +12,8 @@ define(['jquery', 'base/ui', 'sso-ux'],
   navigator.idSSO.app.onnewuser = function(){
     window.location = "/new";
   };
+
+  var langSelector = document.querySelector("#lang-picker")
   // URL redirector for language picker
-  UI.langPicker('#lang-picker');
+  WebmakerUI.langPicker(langSelector);
 });

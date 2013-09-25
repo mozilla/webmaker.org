@@ -20,13 +20,14 @@ requirejs.config({
   }
 });
 
-require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor-slide', 'base/ui', 'tabzilla', 'sso-ux'],
-  function ($, cta, Marquee, privacy, AnchorSlide, UI) {
+require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor-slide', '/bower/webmaker-ui/ui.js', 'tabzilla', 'sso-ux'],
+  function ($, cta, Marquee, privacy, AnchorSlide, WebmakerUI) {
     'use strict';
 
     var $html = $('html, body');
     var $window = $(window);
     var $backToTop = $('.back-to-top');
+    var langSelector = document.querySelector("#lang-picker")
 
     // Show and hide "Back To Top" trigger
     $window.scroll(function() {
@@ -52,7 +53,7 @@ require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor
     });
 
     // URL redirector for language picker
-    UI.langPicker('#lang-picker');
+    WebmakerUI.langPicker(langSelector);
 
     // Set up page-specific js
     var pageJS = $('#require-js').data('page');

@@ -141,12 +141,20 @@ app.use( express.static( WWW_ROOT ));
 app.use( "/bower", express.static( path.join(__dirname, "bower_components" )));
 
 // List of supported languages - Please add them here in an alphabetical order
-var supportedLanguages = [ "en-US" ];
+var listDropdownLang = [ "en-US", "ru-RU", "th-TH" ],
+    // We create another array based on listDropdownLang to use it in the i18n.middleware
+    // supported_language which will be modified from the i18n mapping function
+    supportedLanguages = listDropdownLang.slice(0);
 
 // Setup locales with i18n
 app.use( i18n.middleware({
   supported_languages: supportedLanguages,
   default_lang: "en-US",
+  mappings: {
+    'en': 'en-US',
+    'ru': 'ru-RU',
+    'th': 'th-TH'
+  },
   translation_directory: path.resolve( __dirname, "locale" )
 }));
 
@@ -170,7 +178,8 @@ app.locals({
   loginAPI: env.get( "LOGIN" ),
   ga_account: env.get( "GA_ACCOUNT" ),
   ga_domain: env.get( "GA_DOMAIN" ),
-  supportedLanguages: supportedLanguages
+  supportedLanguages: supportedLanguages,
+  listDropdownLang: listDropdownLang
 });
 
 app.use(function( req, res, next ) {

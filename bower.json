@@ -9,7 +9,7 @@
     "persona-btn": "~0.0.6",
     "requirejs": "2.1.8",
     "text": "2.0.9",
-    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.1.2.tar.gz",
-    "webmaker-ui": "0.0.7"
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.1.6.tar.gz",
+    "webmaker-ui": "0.0.8"
   }
 }

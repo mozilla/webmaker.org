@@ -27,7 +27,7 @@ require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor
     var $html = $('html, body');
     var $window = $(window);
     var $backToTop = $('.back-to-top');
-    var langSelector = document.querySelector("#lang-picker")
+    var langSelector = document.querySelector("#lang-picker");
 
     // Show and hide "Back To Top" trigger
     $window.scroll(function() {

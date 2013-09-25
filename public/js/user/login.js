@@ -13,7 +13,7 @@ define(['jquery', '/bower/webmaker-ui/ui.js', 'sso-ux'],
     window.location = "/new";
   };
 
-  var langSelector = document.querySelector("#lang-picker")
+  var langSelector = document.querySelector("#lang-picker");
   // URL redirector for language picker
   WebmakerUI.langPicker(langSelector);
 });

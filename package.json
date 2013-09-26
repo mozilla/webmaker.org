@@ -31,7 +31,7 @@
     "noxmox": "0.2.x",
     "nunjucks": "0.1.10",
     "sequelize": "2.0.x",
-    "sqlite3": "2.1.7",
+    "sqlite3": "2.1.17",
     "uuid": "1.4.x",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.1.6.tar.gz",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.11",

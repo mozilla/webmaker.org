@@ -17,7 +17,7 @@
       <div class="g-2">
         <h3>{{ gettext("Make something") }}</h3>
         <p>{{ gettext("From coding your first line of HTML to building apps") }}
-        <a href="/{{lang}}/events" class="ui-block">{{ gettext("Start Making") }}</a>
+        <a href="/{{localeInfo.lang}}/events" class="ui-block">{{ gettext("Start Making") }}</a>
         </p>
       </div>
       <div class="g-2">
@@ -29,7 +29,7 @@
       <div class="g-2">
         <h3>{{ gettext("Create With Others") }}</h3>
         <p>{{ gettext("The worldwide Maker Party will bring people together") }}
-        <br><a href="/{{lang}}/starter-makes" class="ui-block">{{ gettext("View Events") }}</a>
+        <br><a href="/{{localeInfo.lang}}/starter-makes" class="ui-block">{{ gettext("View Events") }}</a>
         </p>
       </div>
     </div>
@@ -618,25 +618,25 @@
     "title": "{{ gettext("Tools") }}",
     "desc": "{{ gettext("Use our Tools Desc") }}",
     "image": "/img/cta-Tools.jpg",
-    "url": "/{{lang}}/tools"
+    "url": "/{{localeInfo.lang}}/tools"
   },
   {
     "title": "{{ gettext("Events") }}",
     "desc": "{{ gettext("Events Desc") }}",
     "image": "/img/cta-Party.jpg",
-    "url": "/{{lang}}/events"
+    "url": "/{{localeInfo.lang}}/events"
   },
   {
     "title": "{{ gettext("Teach") }}",
     "desc": "{{ gettext("Teach Desc") }}",
     "image": "/img/cta-Teach.jpg",
-    "url": "/{{lang}}/teach"
+    "url": "/{{localeInfo.lang}}/teach"
   },
   {
     "title": "{{ gettext("About Us") }}",
     "desc": "{{ gettext("About Us Desc") }}",
     "image": "/img/cta-About-us.jpg",
-    "url": "/{{lang}}/about"
+    "url": "/{{localeInfo.lang}}/about"
   }]
 {% endblock %}
 {% block require_page %}pages/party{% endblock %}

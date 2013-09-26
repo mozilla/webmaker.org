@@ -3,7 +3,7 @@
 {% block title %}{{ gettext("Event Map") }}{% endblock %}
 
 {% block midbar %}
-<a href="/{{ lang }}/party"><img src="/img/party-banner.png"></a>
+<a href="/{{ localeInfo.lang }}/party"><img src="/img/party-banner.png"></a>
 {% endblock %}
 
 {% block body %}
@@ -43,7 +43,7 @@
               {% endif %}
             </span>
         </a>
-        <a href="/{{ lang }}/event-guides" id="event-guides" class="header">
+        <a href="/{{ localeInfo.lang }}/event-guides" id="event-guides" class="header">
             {{ gettext("Event Guides") }}
             <span class="icon-chevron-right"></span>
         </a>
@@ -126,7 +126,7 @@
         <span class="create-event-confirmation hidden">
             <div class="confirmation-message">{{ gettext("Event added") }}</div>
             <div class="confirmation-link">{{ gettext("Check out your page") }} <a></a></div>
-            <div class="confirmation-info">{{ gettext("Next step help")}} <a href="/{{ lang }}/event-guides">{{ gettext("event guides") }}</a>.</div>
+            <div class="confirmation-info">{{ gettext("Next step help")}} <a href="/{{ localeInfo.lang }}/event-guides">{{ gettext("event guides") }}</a>.</div>
         </span>
     </form>
 </div>

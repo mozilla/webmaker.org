@@ -4,7 +4,7 @@ requirejs.config({
     'text':             '/bower/text/text',
     'jquery':           '/bower/jquery/jquery.min',
     'jquery.powertip':  '/js/lib/jquery.powertip',
-    'moment':           '/bower/moment/moment',
+    'moment':           '/bower/moment/min/moment+langs.min',
     'social':           '/js/lib/socialmedia',
     'uri':              '/js/lib/uri',
     'tabzilla':         'https://www.mozilla.org/tabzilla/media/js/tabzilla',

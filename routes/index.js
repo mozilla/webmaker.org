@@ -28,10 +28,10 @@ module.exports = {
   like: require("./like")(),
   search: require("./search"),
   tag: function( req, res ) {
-    res.redirect( "/" + req.lang + "/search?type=tags&q=" + req.params.tag );
+    res.redirect( "/" + req.localeInfo.lang + "/search?type=tags&q=" + req.params.tag );
   },
   user: require("./user"),
   usersearch: function( req, res ) {
-    res.redirect( "/" + req.lang + "/search?type=user&q=" + req.params.user );
+    res.redirect( "/" + req.localeInfo.lang + "/search?type=user&q=" + req.params.user );
   }
 };

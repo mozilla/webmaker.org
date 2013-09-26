@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}" dir="{{ lang_dir }}">
+<html lang="{{ localeInfo.lang }}" dir="{{ localeInfo.direction }}">
 
 <head>
   <meta charset="utf-8">
@@ -31,28 +31,28 @@
   <header id="webmaker-nav">
     <nav class="webmaker-nav-container">
       <div class="user-nav-container">
-        <a id="logo" href="/{{lang}}/"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
+        <a id="logo" href="/{{localeInfo.lang}}/"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
         <ul class="webmaker-nav user-info">
           <li class="lang-picker">
             <select id="lang-picker">
             {% for language in listDropdownLang %}
-              <option {% if languageNameFor(lang) == languageNameFor(language) %} selected="selected" {% endif %} value="{{language}}">{{ languageNameFor(language) }}</option>
+              <option {% if languageNameFor(localeInfo.lang) == languageNameFor(language) %} selected="selected" {% endif %} value="{{language}}">{{ languageNameFor(language) }}</option>
             {% endfor %}
             </select>
           </li>
           <li class="user">
             {{ gettext("Hi") }} <span id="identity" class="user-name-container"></span>
           </li>
-          <li class="makes"><a href="/me">{{ gettext("My makes") }}</a></li>
+          <li class="makes"><a href="/{{localeInfo.lang}}/me">{{ gettext("My makes") }}</a></li>
           <li>
-            <iframe src="{{audience}}/sso/include.html" class="include-frame"></iframe>
+            <iframe src="{{audience}}/{{localeInfo.lang}}/sso/include.html" class="include-frame"></iframe>
           </li>
         </ul>
         <ul class="nav-list">
           <li>
-            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/">{{ gettext("Make") }}</a>
+            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/{{localeInfo.lang}}">{{ gettext("Make") }}</a>
             <div class="makenav-hover">
-              <a href="/starter-makes" class="makenav-hover-item">
+              <a href="/{{localeInfo.lang}}/starter-makes" class="makenav-hover-item">
                 <img src="/img/icon-make-template.png" alt="{{ gettext("From starter make") }}" />
                 <span>{{ gettext("From starter make") }}</span>
               </a>
@@ -70,15 +70,15 @@
               </a>
               <div class="help">
                 <i class="icon-info-sign"></i><span>{{ gettext("Not sure what to make?") }}
-                <a href="/{{lang}}/tools">{{ gettext("Let us help.") }}</a></span>
+                <a href="/{{localeInfo.lang}}/tools">{{ gettext("Let us help.") }}</a></span>
               </div>
             </div>
           </li>
-          <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/{{lang}}/teach">
+          <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/{{localeInfo.lang}}/teach">
             {{ gettext("Teach") }}</a></li>
-          <li><a {% if page == 'events' %}class="on"{% endif %} id="nav-events" href="/{{lang}}/events">
+          <li><a {% if page == 'events' %}class="on"{% endif %} id="nav-events" href="/{{localeInfo.lang}}/events">
             {{ gettext("Events")}}</a></li>
-          <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/{{lang}}/search">
+          <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/{{localeInfo.lang}}/search">
             <span class="icon-search"></span></a></li>
         </ul>
       </div>
@@ -146,7 +146,7 @@
                 <input type="email" id="email-updates" name="email" autocomplete="off" placeholder="{{ gettext("Sign up for email updates") }}" required data-powertip='
                   <div class="privacy-desc">
                     <div><input type="checkbox" id="newsletter-signup-checkbox-proxy" /></div>
-                    <label for="newsletter-signup-checkbox-proxy">{{ gettext("privacy-desc") }} <a href="/{{lang}}/privacy" target="_blank">{{ gettext("privacy policy") }}</a>.</label>
+                    <label for="newsletter-signup-checkbox-proxy">{{ gettext("privacy-desc") }} <a href="/{{localeInfo.lang}}/privacy" target="_blank">{{ gettext("privacy policy") }}</a>.</label>
                   </div>'/>
 
                 <button id="email-submit" type="submit">
@@ -161,13 +161,13 @@
 
         <ul class="links">
           <li><a href="http://blog.webmaker.org">{{ gettext("Blog") }}</a></li>
-          <li><a href="/{{lang}}/about">{{ gettext("About Us") }}</a></li>
-          <li><a href="/{{lang}}/getinvolved">{{ gettext("Get Involved") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/about">{{ gettext("About Us") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/getinvolved">{{ gettext("Get Involved") }}</a></li>
           <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ gettext("Donate") }}</a></li>
           <li><a href="mailto:makerparty@mozilla.org">{{ gettext("Contact") }}</a></li>
-          <li><a href="/{{lang}}/privacy">{{ gettext("Privacy") }}</a></li>
-          <li><a href="/{{lang}}/terms">{{ gettext("Legal") }}</a></li>
-          <li><a href="/{{lang}}/feedback">{{ gettext("Feedback") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/privacy">{{ gettext("Privacy") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/terms">{{ gettext("Legal") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/feedback">{{ gettext("Feedback") }}</a></li>
           <li><a href="https://support.mozilla.org/products/webmaker">{{ gettext("Help") }}</a></li>
         </ul>
       </section>
@@ -183,25 +183,25 @@
       "title": "{{ gettext("Tools") }}",
       "desc": "{{ gettext("Use our Tools Desc") }}",
       "image": "/img/cta-Tools.jpg",
-      "url": "/{{lang}}/tools"
+      "url": "/{{localeInfo.lang}}/tools"
     },
     {
       "title": "{{ gettext("Teach") }}",
       "desc": "{{ gettext("Teach Desc") }}",
       "image": "/img/cta-Teach.jpg",
-      "url": "/{{lang}}/teach"
+      "url": "/{{localeInfo.lang}}/teach"
     },
     {
       "title": "{{ gettext("Maker Party") }}",
       "desc": "{{ gettext("Maker Party Desc") }}",
       "image": "/img/cta-Party.jpg",
-      "url": "/{{lang}}/party"
+      "url": "/{{localeInfo.lang}}/party"
     },
     {
       "title": "{{ gettext("About Us") }}",
       "desc": "{{ gettext("About Us Desc") }}",
       "image": "/img/cta-About-us.jpg",
-      "url": "/{{lang}}/about"
+      "url": "/{{localeInfo.lang}}/about"
     }]
   {% endblock %}
 </script>

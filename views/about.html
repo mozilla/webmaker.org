@@ -23,19 +23,19 @@
 
     <div class="ui-row">
       <div class="g-2">
-        <h3><a href="/{{lang}}/tools">{{ gettext("Tools") }}</a></h3>
+        <h3><a href="/{{localeInfo.lang}}/tools">{{ gettext("Tools") }}</a></h3>
         <p>
           {{ gettext("Creating the web is the heart of our work") | safe }}
         </p>
       </div>
       <div class="g-2">
-        <h3><a href='/{{lang}}/teach'>{{ gettext("Teach &amp; Learning") | safe }}</a></h3>
+        <h3><a href='/{{localeInfo.lang}}/teach'>{{ gettext("Teach &amp; Learning") | safe }}</a></h3>
         <p>
           {{ gettext("Learning through making") }} {{ gettext("We provide starter projects") | instantiate | safe }} {{ gettext("We consider digital literacy") | safe }} {{ gettext("when we understand the building blocks") }}
         </p>
       </div>
       <div class="g-2">
-        <h3><a href='/{{lang}}/getinvolved'>{{ gettext("Community") }}</a></h3>
+        <h3><a href='/{{localeInfo.lang}}/getinvolved'>{{ gettext("Community") }}</a></h3>
         <p>
         {{ gettext("We recognize that innovation can come from anyone") | safe }}
         </p>
@@ -52,24 +52,24 @@
     "title": "{{ gettext("Tools") }}",
     "desc": "{{ gettext("Use our Tools Desc") }}",
     "image": "/img/cta-Tools.jpg",
-    "url": "/{{lang}}/tools"
+    "url": "/{{localeInfo.lang}}/tools"
   },
   {
     "title": "{{ gettext("Teach") }}",
     "desc": "{{ gettext("Teach Desc") }}",
     "image": "/img/cta-Teach.jpg",
-    "url": "/{{lang}}/teach"
+    "url": "/{{localeInfo.lang}}/teach"
   },
   {
     "title": "{{ gettext("Maker Party") }}",
     "desc": "{{ gettext("Maker Party Desc") }}",
     "image": "/img/cta-Party.jpg",
-    "url": "/{{lang}}/party"
+    "url": "/{{localeInfo.lang}}/party"
   },
   {
     "title": "{{ gettext("Get Involved") }}",
     "desc": "{{ gettext("Get Involved Desc") }}",
     "image": "/img/cta-Get-Involved.jpg",
-    "url": "/{{lang}}/getinvolved"
+    "url": "/{{localeInfo.lang}}/getinvolved"
   }]
 {% endblock %}

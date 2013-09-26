@@ -2,7 +2,8 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
   function ($, nunjucks, UI, moment, Make, localized) {
 
     var DEFAULT_LIMIT = 12;
-
+    var lang = $('html').attr('lang');
+    moment.lang(localized.langToMomentJSLang(lang));
     var Gallery = function(options) {
       var self = this;
 
@@ -164,7 +165,14 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
               make: data[i],
               noLike: localized.get("Like-0"),
               oneLike: localized.get("Like-1"),
-              moreLikes: localized.get("Like-n")
+              moreLikes: localized.get("Like-n"),
+              CreatedBy: localized.get("Created By"),
+              makeWord: localized.get("make"),
+              by: localized.get("by"),
+              created: localized.get("created"),
+              Remix: localized.get("Remix"),
+              Details: localized.get("Details"),
+              Anonymous: localized.get("Anonymous")
             });
           }
         }

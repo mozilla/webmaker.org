@@ -3,12 +3,12 @@
 <div class="make make-type-{{make.type}}">
   <a class="make-link" href="{{make.url}}">
     <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
-    <div class="make-info">{{make.title}} by
+    <div class="make-info">{{make.title}} {{ gettext("by") }}
         <a class="user-link" href="/u/{{make.username}}" data-username="{{make.username}}">@{{make.username}}</a>, {{ likeText() }}
         {{ makeTags() }}
     </div>
     <div class="btn-container">
-      <a href="{{make.remixurl}}" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix")}}</a>
+      <a href="{{make.remixurl}}" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix") }}</a>
     </div>
   </a>
 </div>

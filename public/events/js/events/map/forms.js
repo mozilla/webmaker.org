@@ -73,7 +73,8 @@ function ($, EventModel, forms, localized) { return function (mapMaker) {
             title: 'required',
             registerLink: 'url',
             address: 'required',
-            endDate: 'afterStartDate',
+            beginDate: 'required',
+            endDate: 'required afterStartDate',
         },
         submitHandler: function() {
             var form_fields = $createForm.serializeArray();

@@ -23,6 +23,7 @@ module.exports = function( req, res ) {
     options.contentType = "application/x-" + app;
   }
 
+  make.setLang(req.localeInfo.momentLang);
   make.find( options )
   .limit( limit )
   .sortByField( "updatedAt", "desc" )
@@ -36,6 +37,7 @@ module.exports = function( req, res ) {
       noLike: req.gettext("Like-0"),
       oneLike: req.gettext("Like-1"),
       moreLikes: req.gettext("Like-n"),
+      Updated: req.gettext("Updated"),
       makes: data || [],
       page: "me",
       pagination: page,

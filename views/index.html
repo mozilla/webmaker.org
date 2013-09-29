@@ -8,11 +8,12 @@
 {% set header = gettext("indexHeader") %}
 {% set desc = gettext("indexDesc") %}
 {% set filterprojectby = gettext("Filter projects by...") %}
+{% set featured = gettext("Featured") %}
 
 <!-- check for search right when page loads -->
 {{ galleryHeader(header, desc,
       [ {'title': filterprojectby, 'value': 'dummy', 'default': true },
-       { 'title': 'Featured', 'value': 'featured' },
+       { 'title': featured, 'value': 'featured' },
        { 'title': 'Popcorn', 'value': 'popcorn' },
        { 'title': 'Thimble', 'value': 'thimble' } ]) }}
 {% endblock %}

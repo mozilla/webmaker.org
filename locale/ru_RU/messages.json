@@ -172,6 +172,7 @@
     "Kitchen Party Logo": "Логотип кухонной вечеринки",
     "Make cool things on the web": "Сделать классные вещи в интернете",
     "You are displaying the": "Вы показываете",
+    "Featured": "Представлено",
     "Become a mentor": "Станьте наставником",
     "OFOShareDesc": "Во время Вашего мероприятия попросите участников поделиться тем, что они делают, используя <a href='https://mozteach.makes.org/thimble/what-i-made-maker-party'>этот шаблон</a>.",
     "error-404": "404: Вы нашли висящую нитку!<br>Попробуйте <a href='/{{localeInfo.lang}}/search'>поиск</a> или посетите нашу <a href='/{{localeInfo.lang}}'>главную страницу.</a>",

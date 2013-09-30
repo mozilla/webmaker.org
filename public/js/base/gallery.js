@@ -109,7 +109,8 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
           }
         }).fail(function(res) {
           if (res.status === 401) {
-            window.location.replace(window.location.protocol + "//" + window.location.host + "/login");
+            window.location.replace(window.location.protocol + "//" + window.location.host +
+            "/" + localized.getCurrentLang() + "/login");
           } else {
             // already like/unliked, update UI to reflect.
             $this.toggleClass("icon-heart icon-heart-empty");

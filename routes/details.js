@@ -19,6 +19,7 @@ module.exports = function(req, res) {
     return renderError("No URL or ID was passed");
   }
 
+  make.setLang(req.localeInfo.momentLang);
   make.find(searchOptions).process( function( err, data ) {
     if ( err ) {
       return renderError("Looks like there is a problem with the make API");

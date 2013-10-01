@@ -10,7 +10,8 @@ var express = require( "express" ),
     nunjucks = require( "nunjucks" ),
     path = require( "path" ),
     lessMiddleWare = require( "less-middleware" ),
-    i18n = require( "webmaker-i18n" );
+    i18n = require( "webmaker-i18n" ),
+    navigation = require( "./navigation" );
 
 habitat.load();
 
@@ -26,6 +27,22 @@ var app = express(),
 nunjucksEnv.addFilter("instantiate", function(input) {
     var tmpl = new nunjucks.Template(input);
     return tmpl.render(this.getVariables());
+});
+
+// For navigation
+nunjucksEnv.addFilter("getSection", function (pageId) {
+  var section;
+  var page;
+  for (var i in navigation) {
+    section = navigation[i];
+    for (var j in section.pages) {
+      page = section.pages[j];
+      if (page.id === pageId) {
+        return section.id;
+      }
+    }
+  }
+  return "";
 });
 
 if ( !( env.get( "MAKE_ENDPOINT" ) && env.get( "MAKE_PRIVATEKEY" ) && env.get( "MAKE_PUBLICKEY" ) ) ) {
@@ -187,7 +204,8 @@ app.use(function( req, res, next ) {
     email: req.session.email || '',
     username: req.session.username|| '',
     makerID: req.session.id || '',
-    csrf: req.session._csrf
+    csrf: req.session._csrf,
+    navigation: navigation
   });
   next();
 });

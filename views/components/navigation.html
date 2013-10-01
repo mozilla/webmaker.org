@@ -1,0 +1,62 @@
+{% set currentPage = page %}
+{% set currentSection = page|getSection %}
+<section id="main-navigation-container" data-current-section="{{currentSection}}" data-current-page="{{currentPage}}">
+
+  <nav id="navigation-primary" class="navigation-container">
+      <ul class="navigation-list navigation-wrapper">
+        {% for section in navigation %}
+          <li><a href="/{{localeInfo.lang}}/{{section.pages[0].url}}"
+          {% if section.id == currentSection %}class="active"{% endif %} data-section="{{section.id}}">
+            <span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a>
+          </li>
+        {% endfor %}
+        <li><a href="#" class="navigation-more"><span class="icon-reorder"></span></a></li>
+        <li>
+          <span id="nav-search">
+            <input id="nav-search-input" placeholder="{{gettext("Search makes")}}">
+            <button id="nav-search-trigger"><span class="icon-search"></span></button>
+          </span>
+        </li>
+      </ul>
+  </nav>
+
+  <nav id="navigation-secondary" class="navigation-container">
+    {% for section in navigation %}
+      <ul data-section="{{section.id}}" class="navigation-list navigation-wrapper{% if section.id == currentSection %} active{% endif %}">
+        <li>
+          <a data-section="{{section.id}}"><span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a>
+          <a href="#" class="navigation-more"><span class="icon-reorder"></span></a>
+        </li>
+        {% for page in section.pages %}
+        <li><a
+              data-page="{{page.id}}" {% if page.id == currentPage %}
+              class="active"{% endif %}
+              href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{page.url}}"{% if page.external %} target="_blank"{% endif %}>
+              {{gettext(page.title)}}
+            </a>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+  </nav>
+
+  <nav id="expanded-navigation">
+    <div class="navigation-wrapper">
+    {% for section in navigation %}
+      <ul class="navigation-list">
+        <li><a><span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a></li>
+        {% if section%}{% for page in section.pages %}
+          <li>
+            <a href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{page.url}}"{% if page.external %} target="_blank"{% endif %}>
+              {{gettext(page.title)}}
+            </a>
+          </li>
+        {% endfor %}{% endif %}
+      </ul>
+    {% endfor %}
+    </div>
+    <button id="navigation-expanded-close" class="navigation-more"><span class="icon-remove"></span></button>
+  </nav>
+
+</section>

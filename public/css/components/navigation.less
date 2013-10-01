@@ -1,0 +1,278 @@
+@lightnavy: lighten(@navy, 6%);
+
+.navigation-container {
+  font-size: 14px;
+}
+.navigation-wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  @media (min-width: @medium) {
+    margin: 0 auto;
+    left: -1.5em;
+    .border-box;
+    .width(8);
+  }
+  @media (min-width: 1540px) {
+    .width(12);
+  }
+}
+
+.navigation-list {
+  .border-box;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  color: @white;
+
+  li {
+    display: inline;
+  }
+  a {
+    display: inline-block;
+    padding: 14px 18px;
+    color: inherit;
+    @media (min-width: @medium) {
+      line-height: 32px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Icons
+.navigation-list .icon {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 2px;
+  box-shadow: inset 0 0 0 2px fade(@white, 20%);
+  color: @white;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+
+  // Hack: this icon looks off, needs a slight adjustment.
+  &.icon-random:before {
+    position: relative;
+    left: 0.1em;
+    top: 0.1em;
+  }
+
+}
+
+.navigation-list .active .icon,
+.on .icon {
+  display: inline-block;
+}
+
+.navigation-list .active .icon,
+.navigation-list a:hover .icon,
+.on .icon {
+    box-shadow: none;
+   // Section colours
+   &.icon-random {
+     background: #F5A906;
+   }
+   &.icon-hand-up {
+     background: @blue;
+   }
+   &.icon-book {
+     background: #03845C;
+   }
+   &.icon-map-marker {
+     background: #E5352D;
+   }
+   &.icon-info {
+     background: #945361;
+   }
+}
+
+#navigation-primary {
+  background: @navy;
+  a:hover,
+  .active {
+    background: @lightnavy;
+  }
+
+  // Don't show on mobile
+  display: none;
+
+  @media (min-width: @medium) {
+    display: block;
+  }
+
+}
+
+#navigation-secondary {
+  font-size: 13px;
+  background: @lightnavy;
+
+  .navigation-list {
+    .clearfix;
+     display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  li {
+    position: relative;
+    float: left;
+    width: 50%;
+    color: fade(@white, 60%);
+    display: inline-block;
+    &:hover,
+    .active {
+      color: @white;
+    }
+    @media (min-width: @medium) {
+      width: auto;
+    }
+
+  }
+
+  li:first-child {
+    display: block;
+    color: @white;
+    font-size: 16px;
+    width: 100%;
+    background: @navy;
+    .icon {
+      display: inline-block;
+    }
+    .navigation-more {
+      float: right;
+      line-height: 30px;
+    }
+    @media (min-width: @medium) {
+      background: none;
+      display: none;
+    }
+  }
+
+  @media (min-width: @medium) {
+    a {
+     position: relative;
+    }
+
+    a.active:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid @lightnavy;
+      margin-left: -10px;
+    }
+  }
+}
+
+#expanded-navigation {
+  .clearfix;
+  position: relative;
+  background: @lightnavy;
+  display: none;
+  padding: 20px;
+  @media (min-width: @medium) {
+    padding: 20px 0;
+  }
+  &.on {
+    display: block;
+  }
+
+  .navigation-wrapper {
+    left: 0;
+  }
+
+  .navigation-list {
+    margin: 0 0 20px 0;
+    @media (min-width: @medium) {
+      float: left;
+      // Grid calculation for 5 colums with 4% gutter
+      width: ((100% - (4 * 4%)) / 5);
+      margin: 0 4% 0 0;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      padding: 0;
+      line-height: 1.2;
+    }
+
+
+    li {
+      display: block;
+      color: fade(@white, 80%);
+      margin-bottom: 1em;
+      &:hover {
+        color: @white;
+      }
+
+      // Section titles
+      &:first-child {
+        color: @white;
+        font-size: 18px;
+        //margin-left: -8px;
+      }
+    }
+
+    .icon {
+      display: none;
+    }
+
+
+  }
+
+  #navigation-expanded-close {
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 15px;
+    background: darken(@navy, 2%);
+    border: none;
+    display: block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: @white;
+  }
+}
+
+#nav-search {
+  float: right;
+  padding: 5px;
+  input {
+    .border-box;
+    border-radius: 2px;
+    color: @navy;
+    background: @white;
+    font-family: inherit;
+    font-size: 13px;
+    width: 150px;
+    padding: 10px 15px;
+    border: none;
+    transition: width 0.2s, background-color 0.2s;
+    &:focus {
+      background-color: @white;
+      width: 250px;
+      outline: none;
+    }
+  }
+  #nav-search-trigger {
+    padding: 10px;
+    color: @white;
+    font-size: 16px;
+    background: none;
+    cursor: pointer;
+    border: none;
+  }
+}

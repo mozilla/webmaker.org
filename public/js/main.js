@@ -20,8 +20,17 @@ requirejs.config({
   }
 });
 
-require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor-slide', '/bower/webmaker-ui/ui.js', 'tabzilla', 'sso-ux'],
-  function ($, cta, Marquee, privacy, AnchorSlide, WebmakerUI) {
+require([
+  'jquery',
+  'base/cta',
+  'base/marquee',
+  'base/email-signup',
+  'base/anchor-slide',
+  '/bower/webmaker-ui/ui.js',
+  'base/navigation',
+  'tabzilla',
+  'sso-ux'
+], function ($, cta, Marquee, privacy, AnchorSlide, WebmakerUI, navigation) {
     'use strict';
 
     var $html = $('html, body');
@@ -37,6 +46,9 @@ require(['jquery', 'base/cta', 'base/marquee', 'base/email-signup', 'base/anchor
        $backToTop.removeClass('addMore');
      }
     });
+
+    // Attach navigation UI
+    navigation();
 
     // Generate CTA bar in footer
     cta.attachToCTA();

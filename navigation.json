@@ -1,0 +1,106 @@
+[
+  {
+    "id": "explore",
+    "title": "Explore",
+    "icon": "icon-random",
+    "pages": [
+      {
+        "id": "index",
+        "title": "Gallery",
+        "url": ""
+      },
+      {
+        "id": "tools",
+        "title": "Tools",
+        "url": "tools"
+      }
+    ]
+  },
+  {
+    "id": "make",
+    "title": "Make",
+    "icon": "icon-hand-up",
+    "pages": [
+      {
+        "id": "starterMakes",
+        "title": "Starter Makes",
+        "url": "starter-makes"
+      },
+      {
+        "id": "popcorn",
+        "title": "Videos with Popcorn",
+        "url": "https://popcorn.webmaker.org",
+        "external": "true"
+      },
+      {
+        "id": "thimble",
+        "title": "Webpages with Thimble",
+        "url": "https://thimble.webmaker.org",
+        "external": "true"
+      },
+      {
+        "id": "xray",
+        "title": "Remixes with X-Ray Goggles",
+        "url": "https://goggles.webmaker.org",
+        "external": "true"
+      }
+    ]
+  },
+  {
+    "id": "teach",
+    "title": "Teach",
+    "icon": "icon-book",
+    "pages": [
+      {
+        "id": "teach",
+        "title": "Resources",
+        "url": "teach"
+      },
+      {
+        "id": "teach-templates",
+        "title": "Resource Templates",
+        "url": "teach-templates"
+      }
+    ]
+  },
+  {
+    "id": "events",
+    "title": "Events",
+    "icon": "icon-map-marker",
+    "pages": [
+      {
+        "id": "events",
+        "title": "Events",
+        "url": "events"
+      },
+      {
+        "id": "party",
+        "title": "Maker Party",
+        "url": "party"
+      }
+    ]
+  },
+  {
+    "id": "info",
+    "title":  "Info",
+    "icon": "icon-info",
+    "pages": [
+      {
+        "id": "about",
+        "title": "About Us",
+        "url": "about"
+      },
+      {
+        "id": "getinvolved",
+        "title": "Get Involved",
+        "url": "getinvolved"
+      },
+      {
+        "id": "help",
+        "title": "Help",
+        "url": "https://support.mozilla.org/en-US/products/webmaker",
+        "external": "true"
+      }
+    ]
+  }
+]

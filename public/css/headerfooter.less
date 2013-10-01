@@ -16,6 +16,10 @@
   z-index: 4;
 }
 
+.user-info {
+  margin-top: 20px;
+}
+
 #tabzilla {
   position: absolute;
   top: 0;
@@ -24,6 +28,7 @@
 
 #logo {
   margin-top: 10px;
+  margin-left: -18px;
 }
 
 // Contains SSO and main navigation
@@ -31,124 +36,6 @@
   position: relative;
   height: 100%;
   margin-right: 150px;
-}
-
-.nav-list {
-  position: absolute;
-  z-index: 3;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  list-style: none;
-  font-size: 1.5em;
-
-  li {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    padding: 0.5em 1em;
-    border: 1px solid transparent;
-    .border-box;
-    &:last-of-type {
-      padding-right: 0;
-    }
-
-    &:hover .makenav-hover {
-      display: block;
-    }
-
-    &:first-child:hover {
-      color: #55575c;
-      background: url(../img/bkgFooter.jpg);
-      border: 1px solid #fff;
-      border-bottom: none;
-      box-shadow: 0 3px 3px #888888;
-    }
-
-    .makenav-hover {
-      display: none;
-      position: absolute;
-      left: -1px;
-      border: 1px solid #fff;
-      border-top: none;
-      width: 365px;
-      padding-top: 15px;
-      font-size: 13px;
-      color: #55575c;
-      .border-box;
-      background: url(../img/bkgFooter.jpg);
-      box-shadow: 0 3px 3px #888888;
-
-      #template:hover {
-        span {
-          color: #27aae1;
-        }
-      }
-
-      .makenav-hover-item {
-        cursor: pointer;
-        text-align: center;
-        height: 110px;
-        display: inline-block;
-        padding-left: 15px;
-        width: 50px;
-        margin: 5px 15px 0 0;
-
-        img {
-          display: inline-block;
-          margin-bottom: 5px;
-        }
-
-        span {
-          float: left;
-          margin-right: 15px;
-          width: 100%;
-        }
-      } // makenav-hover-item
-
-      .help {
-        width: 100%;
-        height: 40px;
-        text-align: left;
-        line-height: 40px;
-        background-color: #FFF;
-        .border-box;
-        a {
-          color: #000;
-          text-decoration: underline;
-          display: inline;
-        }
-        height: 40px;
-        line-height: 40px;
-        padding-left: 15px;
-        background-color: #FFF;
-        i {
-          font-size: 20px;
-        }
-        span {
-          vertical-align: 1px;
-          padding-left: 5px;
-          a {
-            vertical-align: 1px;
-          }
-        }
-      }
-    }
-
-    a {
-      display: block;
-      color: @grey;
-      text-decoration: none;
-      font-weight: normal;
-      &:hover {
-        color: #27aae1;
-      }
-    }
-
-    .on {
-      color: #b6b7b9;
-    }
-  }
 }
 
 li.lang-picker:first-child {
@@ -670,13 +557,18 @@ footer {
 
   header {
     .webmaker-nav-container {
-      height: auto;
+      height: 65px;
     }
     .user-info {
       display: none;
     }
     #logo {
-      float: none;
+      width: 150px;
+      margin-left: 0;
+      display: inline-block;
+      img {
+        width: 100%;
+      }
     }
     .user-nav-container {
       margin: 0;
@@ -807,27 +699,10 @@ footer {
 * MOBILE (320px wide, retina)
 */
 @media only screen and (max-width: 320px) {
-  header {
-    .webmaker-nav-container {
-      height: 140px;
 
-      #logo {
-        text-align: center;
-      }
-
-      #tabzilla {
-        display: none;
-      }
-    }
-    .nav-list {
-      li {
-        width: 25%;
-        border: none;
-        float: left;
-      }
-    }
+  #tabzilla {
+    display: none;
   }
-
   #footer-actions {
     left: 0;
   }

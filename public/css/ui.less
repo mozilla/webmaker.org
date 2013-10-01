@@ -109,6 +109,18 @@
 * Wrappers, main secitons
 */
 
+.ui-grid-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  @media (min-width: @width-large) {
+    .width(8)
+  }
+  @media (min-width: @width-xlarge) {
+    .width(12)
+  }
+}
+
 .ui-wrapper {
   display: block;
   position: relative;

@@ -30,60 +30,32 @@
   {% block header %}
   <header id="webmaker-nav">
     <nav class="webmaker-nav-container">
-      <div class="user-nav-container">
-        <a id="logo" href="/{{localeInfo.lang}}/"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
-        <ul class="webmaker-nav user-info">
-          <li class="lang-picker">
-            <select id="lang-picker" data-supported="{{supportedLanguages}}">
-            {% for language in listDropdownLang %}
-              <option {% if languageNameFor(localeInfo.lang) == languageNameFor(language) %} selected="selected" {% endif %} value="{{language}}">{{ languageNameFor(language) }}</option>
-            {% endfor %}
-            </select>
-          </li>
-          <li class="user">
-            {{ gettext("Hi") }} <span id="identity" class="user-name-container"></span>
-          </li>
-          <li class="makes"><a href="/{{localeInfo.lang}}/me">{{ gettext("My makes") }}</a></li>
-          <li>
-            <iframe src="{{audience}}/{{localeInfo.lang}}/sso/include.html" class="include-frame"></iframe>
-          </li>
-        </ul>
-        <ul class="nav-list">
-          <li>
-            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/{{localeInfo.lang}}">{{ gettext("Make") }}</a>
-            <div class="makenav-hover">
-              <a href="/{{localeInfo.lang}}/starter-makes" class="makenav-hover-item">
-                <img src="/img/icon-make-template.png" alt="{{ gettext("From starter make") }}" />
-                <span>{{ gettext("From starter make") }}</span>
-              </a>
-              <a href="https://goggles.webmaker.org/{{localeInfo.lang}}" class="makenav-hover-item">
-                <img src="/img/icon-make-xray.png" alt="{{ gettext("X-Ray Goggles") }}" />
-                <span>{{ gettext("X-Ray Goggles") }}</span>
-              </a>
-              <a href="https://thimble.webmaker.org/{{localeInfo.lang}}" class="makenav-hover-item">
-                <img src="/img/icon-make-thimble.png" alt="{{ gettext("Thimble") }}" />
-                <span>{{ gettext("Thimble") }}</span>
-              </a>
-              <a href="https://popcorn.webmaker.org/{{localeInfo.lang}}/editor/" class="makenav-hover-item">
-                <img src="/img/icon-make-popcorn.png" alt="{{ gettext("Popcorn Maker") }}" />
-                <span>{{ gettext("Popcorn Maker") }}</span>
-              </a>
-              <div class="help">
-                <i class="icon-info-sign"></i><span>{{ gettext("Not sure what to make?") }}
-                <a href="/{{localeInfo.lang}}/tools">{{ gettext("Let us help.") }}</a></span>
-              </div>
-            </div>
-          </li>
-          <li><a {% if page == 'teach' %}class="on"{% endif %} id="nav-teach" href="/{{localeInfo.lang}}/teach">
-            {{ gettext("Teach") }}</a></li>
-          <li><a {% if page == 'events' %}class="on"{% endif %} id="nav-events" href="/{{localeInfo.lang}}/events">
-            {{ gettext("Events") }}</a></li>
-          <li><a class="search-trigger{% if page == 'search' %} on{% endif %}" id="nav-search" href="/{{localeInfo.lang}}/search">
-            <span class="icon-search"></span></a></li>
-        </ul>
+      <div class="ui-grid-wrapper">
+        <div class="user-nav-container">
+          <a id="logo" href="/{{localeInfo.lang}}/"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
+          <ul class="webmaker-nav user-info">
+            <li class="lang-picker">
+              <select id="lang-picker" data-supported="{{supportedLanguages}}">
+              {% for language in listDropdownLang %}
+                <option {% if languageNameFor(localeInfo.lang) == languageNameFor(language) %} selected="selected" {% endif %} value="{{language}}">{{ languageNameFor(language) }}</option>
+              {% endfor %}
+              </select>
+            </li>
+            <li class="user">
+              {{ gettext("Hi") }} <span id="identity" class="user-name-container"></span>
+            </li>
+            <li class="makes"><a href="/{{localeInfo.lang}}/me">{{ gettext("My makes") }}</a></li>
+            <li>
+              <iframe src="{{audience}}/{{localeInfo.lang}}/sso/include.html" class="include-frame"></iframe>
+            </li>
+          </ul>
+        </div>
+        <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
       </div>
-      <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
     </nav>
+
+    {% include "components/navigation.html" %}
+
   </header>
   {% endblock %}
   <div id="midbar">{% block midbar %}{% endblock %}</div>

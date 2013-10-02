@@ -10,39 +10,26 @@
   <div class="ui-section">
     <div class="ui-row">
       <h1>{{ gettext("Make something amazing on the web") }}</h1>
-      <p>{{ gettext("From June 15 to September 15") }}</p>
+      <p>{{ gettext("From June 15 to September 15") | safe }}</p>
     </div>
+  </div>
 
+  <img class="makerparty-img" src="https://blog.webmaker.org/wp-content/uploads/2013/09/makerparty-heatmap.png">
+
+  <div class="ui-section">
     <div class="ui-row">
-      <div class="g-2">
+      <div class="g-3">
         <h3>{{ gettext("Make something") }}</h3>
         <p>{{ gettext("From coding your first line of HTML to building apps") }}
         <a href="/{{localeInfo.lang}}/events" class="ui-block">{{ gettext("Start Making") }}</a>
         </p>
       </div>
-      <div class="g-2">
+      <div class="g-3">
         <h3>{{ gettext("Show Off Your Work") }}</h3>
-        <p>{{ gettext("Tag your work with #makerparty") }}
+        <p>{{ gettext("Tag your work with #makerparty") | safe }}
         <a href="/event-guides" class="ui-block">{{ gettext("Share Your Project") }}</a>
         </p>
       </div>
-      <div class="g-2">
-        <h3>{{ gettext("Create With Others") }}</h3>
-        <p>{{ gettext("The worldwide Maker Party will bring people together") }}
-        <br><a href="/{{localeInfo.lang}}/starter-makes" class="ui-block">{{ gettext("View Events") }}</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="ui-row">
-      <h3>{{ gettext("PartyDontForgetHeader") }}</h3>
-      <p>
-        {{ gettext("PartyDontForgetDesc") | safe }}
-        <ul class="list-edge">
-          <li><a href="https://twitter.com/search?q=%23makerparty&src=typd">{{ gettext("PartyDontForgetShareProject") }}</a></li>
-          <li><a href="https://wiki.mozilla.org/Maker_Party/Makes#Show_Off_Your_Work">{{ gettext("PartyDontForgetLearn2Tag") }}</a></li>
-        </ul>
-      </p>
     </div>
 
     <div class="ui-row">

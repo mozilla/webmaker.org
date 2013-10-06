@@ -1,0 +1,13 @@
+<article class="{{make.tool}} {% if make.level %}{{make.level}}{% else %}beginner{% endif %}">
+    <img class="thumbnail" src="{{make.thumbnail}}">
+    <div class="details">
+      <h3>{{make.title}}</h3>
+      <p>{{make.description}}</p>
+      {% if make.level %}
+        <p class="level">{{gettext(make.level)}}</a></p>
+      {% endif %}
+      <p class="author">{{gettext("Created by")}} @{{make.username}}</a>
+    </div>
+    <a href="{{make.remixurl}}"><div class="make-now"></div></a>
+  </a>
+</article>

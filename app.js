@@ -254,12 +254,33 @@ require( "./lib/loginapi" )( app, {
 
 var middleware = require( "./lib/middleware" );
 
+// ROUTES
+var useNewHomePage = env.get("NEW_HOME_PAGE");
+var teachTheWebRoute;
+
 app.get( "/healthcheck", routes.api.healthcheck );
 
-app.get( "/", routes.gallery({
+if ( useNewHomePage ) {
+  teachTheWebRoute = "/";
+} else {
+  teachTheWebRoute = "/teachtheweb";
+  app.get( "/", routes.gallery({
+    layout: "index",
+    prefix: "p"
+  }));
+}
+
+app.get( "/gallery", routes.gallery({
   layout: "index",
   prefix: "p"
 }));
+
+app.get( teachTheWebRoute, routes.gallery({
+  layout: "teachtheweb",
+  prefix: "frontpage",
+  limit: 10
+}));
+
 app.get( "/editor", middleware.checkAdmin, routes.gallery({
   page: "editor"
 }));
@@ -273,6 +294,8 @@ app.get( "/starter-makes", routes.gallery({
   prefix: "template",
   limit: 20
 }));
+
+
 app.get( "/party", routes.page( "party" ) );
 app.get( "/tools", routes.page( "tools" ) );
 app.get( "/teach-templates", routes.page( "teach-templates") );

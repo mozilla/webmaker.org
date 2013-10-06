@@ -28,6 +28,9 @@ var async = require("async"),
             starterMakes: {
               template: "make-starter-make.html",
               tags: ["webmaker:template"]
+            },
+            teachtheweb: {
+              tags: ["webmaker:frontpage"]
             }
           };
 

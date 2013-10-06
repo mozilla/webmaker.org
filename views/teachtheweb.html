@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block title %}{{ gettext("Teach the web") }}{% endblock %}
+{% block body %}
+
+<section class="hero-section">
+  <article class="wrapped">
+    <div class="illustration">
+      <img class="cat-off" src="/img/cat-off.png">
+      <img class="browser-off" src="/img/browser-off.png">
+      <img class="browser-on hidden-scroll" src="/img/browser-on.png">
+      <img class="cat-on hidden-scroll" src="/img/cat.gif">
+    </div>
+    <div class="text">
+      <h1>{{gettext("We teach the web")}}</h1>
+      <h2>{{gettext("front-page-description") | safe}}</h2>
+      <p>
+        <a href="/{{localeInfo.lang}}/login" class="green-button">{{gettext("Join us")}}</a>
+        <button id="make-something" class="white-button">{{gettext("Start making")}}</button>
+      </p>
+    </div>
+  </article>
+</section>
+
+<section class="mentor-stories">
+
+  <div class="poster-image-container">
+    <div id="poster-mit"></div>
+    <div id="poster-india"></div>
+    <div id="poster-amy"></div>
+    <div id="poster-manilla"></div>
+    <div id="poster-brooklyn" class="active"></div>
+    <div id="poster-yoe"></div>
+    <div id="poster-translate"></div>
+  </div>
+
+  <div class="wrapped">
+    <div class="white-panel mentor-story-nav">
+      <a data-id="brooklyn" class="active"></a>
+      <a data-id="india"></a>
+      <a data-id="manilla"></a>
+      <a data-id="mit"></a>
+      <a data-id="amy"></a>
+      <a data-id="yoe"></a>
+      <a data-id="translate"></a>
+    </div>
+
+    <div class="story-container">
+      <article id="story-brooklyn" class="active">
+        <quote>“{{gettext("maker-story-brooklyn") | safe}}”</quote>
+        <cite>{{gettext("Hive NYC Storymakers, Brooklyn Public Library")}}</cite>
+        <cite>{{gettext("New York")}}</cite>
+      </article>
+      <article id="story-india">
+        <quote>“{{gettext("maker-story-india") | safe}}”</quote>
+        <cite>{{gettext("Mahboob ur Rahman, Webmaker Mentor")}}</cite>
+        <cite>{{gettext("Ansar Orphanage, India")}}</cite>
+      </article>
+      <article id="story-manilla">
+      <quote>“{{gettext("maker-story-manilla") | safe}}”</quote>
+        <cite>{{gettext("J Faye Tandog")}}</cite>
+        <cite>{{gettext("Manilla, Phillipines")}}</cite>
+      </article>
+      <article id="story-mit">
+        <quote>“{{gettext("maker-story-mit") | safe}}”</quote>
+        <cite>{{gettext("Maker Party")}}, {{gettext("MIT Media Lab")}}</cite>
+        <cite>{{gettext("Boston, USA")}}</cite>
+      </article>
+      <article id="story-amy">
+        <quote>“{{gettext("maker-story-amy") | safe}}”</quote>
+        <cite>{{gettext("Amy Burvall")}}</cite>
+      </article>
+      <article id="story-yoe">
+        <quote>“{{gettext("maker-story-yoe") | safe}}”</quote>
+        <cite> {{gettext("Yoe One, Mozilla Rep")}} </cite>
+        <cite>{{gettext("Surabaya, Indonesia")}}</cite>
+      </article>
+      <article id="story-translate">
+        <quote>Willkommen! Bienvenido! 歡迎光臨! {{gettext("maker-story-translate") | safe}}</quote>
+        <p><a class="green-button" href="https://support.mozilla.org/en-US/kb/translate-webmaker">{{gettext("Translate Webmaker")}}</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="main-ctas">
+  <div class="wrapped block-container">
+    <div class="block teach">
+      <div class="illustration left">
+       <a href="/{{localeInfo.lang}}/teach"><img src="/img/front-page/teach-cta.png"></a>
+      </div>
+      <article class="right">
+        <h2><a href="/{{localeInfo.lang}}/teach">{{gettext("Teach")}}</a></h2>
+        <p>{{gettext("teach-cta") | safe}}</p>
+      </article>
+    </div>
+    <div class="block learn">
+      <div class="illustration left">
+       <a href="/{{localeInfo.lang}}/starter-makes"><img src="/img/front-page/learn-cta.png"></a>
+      </div>
+      <article class="right">
+        <h2><a href="/{{localeInfo.lang}}/starter-makes">{{gettext("Make and Learn")}}</a></h2>
+        <p>{{gettext("learn-cta") | safe}}</p>
+      </article>
+    </div>
+    <div class="block get-together">
+      <div class="illustration left">
+        <a href="/{{localeInfo.lang}}/events"><img src="/img/front-page/get-together-cta.png"></a>
+      </div>
+      <article class="right">
+        <h2><a href="/{{localeInfo.lang}}/events">{{gettext("Get Together")}}</a></h2>
+        <p>{{gettext("join-cta") | safe}}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="make-something-now">
+  <div class="wrapped">
+    <h1>{{gettext("Start making")}}</h1>
+    <h2>{{gettext("start-making-desc")}}.</h2>
+    <div class="make-now-templates">
+      <div class="gutter-make-now"></div>
+      {% for make in makes %}
+        {% if make %}
+          {% include ("make-templates/make-front-page.html") %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block require_page %}pages/teachtheweb{% endblock %}

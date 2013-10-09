@@ -33,7 +33,7 @@
     "sequelize": "2.0.x",
     "sqlite3": "2.1.17",
     "uuid": "1.4.x",
-    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.2.3.tar.gz",
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.2.4.tar.gz",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.11",
     "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.5"
   },

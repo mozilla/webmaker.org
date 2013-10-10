@@ -19,7 +19,7 @@
         <li>
         <i class="icon-angle-right"></i>
         <h3><a href="/{{localeInfo.lang}}/tools">{{ gettext("Make something") }}</a></h3>
-        <p>{{ gettext("Make something paragraph") | safe }}</p>
+        <p>{{ gettext("Make something paragraph") | instantiate | safe }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
@@ -38,31 +38,31 @@
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//sendto.mozilla.org/page/contribute/join-mozilla?source=join_link]">
+        <h3><a target='_blank' href="//sendto.mozilla.org/page/contribute/join-mozilla?source=join_link]">
           {{ gettext("Donate to Webmaker") }}</a></h3>
         <p>{{ gettext("Donate to Webmaker paragraph") }} {{ gettext("support our work") | safe }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//wiki.mozilla.org/Webmaker/Submit_your_project">
+        <h3><a target='_blank' href="https://support.mozilla.org/kb/top-tips-creating-great-teaching-kits">
           {{ gettext("Contribute a guide or resource") }}</a></h3>
         <p>{{ gettext("Contribute a guide or resource paragraph") }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//wiki.mozilla.org/Webmaker/Testing">
+        <h3><a href="/{{localeInfo.lang}}/feedback">
           {{ gettext("Help with beta-testing & quality assurance") }}</a></h3>
         <p>{{ gettext("new Webmaker tools and projects") | instantiate | safe }} 
           {{ gettext("participate in user testing paragraph") }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//wiki.mozilla.org/Webmaker/Code">{{ gettext("Contribute code") }}</a></h3>
+        <h3><a target='_blank' href="https://support.mozilla.org/kb/contribute-webmaker-code">{{ gettext("Contribute code") }}</a></h3>
         <p>{{ gettext("Contribute code paragraph") }}</p>
         </li>
         <li>
         <i class="icon-angle-right"></i>
-        <h3><a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup">
+        <h3><a target='_blank' href="//sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup">
           {{ gettext("Communicate") }}</a></h3>
         <ul class="communicate">
           <li><strong>{{ gettext("Sign up for Webmaker announcement list") | safe }} 

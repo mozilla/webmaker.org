@@ -158,7 +158,7 @@ app.use( express.static( WWW_ROOT ));
 app.use( "/bower", express.static( path.join(__dirname, "bower_components" )));
 
 // List of supported languages - Please add them here in an alphabetical order
-var listDropdownLang = [ "en-US", "fr", "ru-RU", "th-TH" ],
+var listDropdownLang = env.get( "SUPPORTED_LANGS" ),
     // We create another array based on listDropdownLang to use it in the i18n.middleware
     // supported_language which will be modified from the i18n mapping function
     supportedLanguages = listDropdownLang.slice(0);
@@ -167,13 +167,7 @@ var listDropdownLang = [ "en-US", "fr", "ru-RU", "th-TH" ],
 app.use( i18n.middleware({
   supported_languages: supportedLanguages,
   default_lang: "en-US",
-  mappings: {
-    'en': 'en-US',
-    'fr-CA': 'fr',
-    'fr-FR': 'fr',
-    'ru': 'ru-RU',
-    'th': 'th-TH'
-  },
+  mappings: env.get( "LANG_MAPPINGS" ),
   translation_directory: path.resolve( __dirname, "locale" )
 }));
 

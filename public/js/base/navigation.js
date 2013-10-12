@@ -4,6 +4,7 @@ define(['jquery'], function ($) {
     var $mainNavContainer = $('#main-navigation-container');
     var currentPage = $mainNavContainer.data('current-page');
     var currentSection = $mainNavContainer.data('current-section');
+    var lang = $('html').attr('lang') || 'en-US';
 
     var $expandedNavTriggers = $('.navigation-more');
     var $expandedNav = $('#expanded-navigation');
@@ -24,7 +25,7 @@ define(['jquery'], function ($) {
         .removeClass('icon-search')
         .addClass('icon-spinner')
         .addClass('icon-spin');
-      window.location = '/search/?type=all&q=' + encodeURIComponent($searchInput.val());
+      window.location = '/' + lang + '/search/?type=all&q=' + encodeURIComponent($searchInput.val());
     }
 
     $expandedNavTriggers.on('click', toggleExpandedMenu);

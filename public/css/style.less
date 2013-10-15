@@ -271,13 +271,11 @@ img {
 
 .medium {
   font-size: 1em;
-  .width(2);
-  .height(2);
-}
-
-.small {
-  .width(1);
-  .height(1);
+  width: 100%;
+  @media (min-width: @width-twoblocks) {
+    .width(2);
+    .height(2);
+  }
 }
 
 // This is the details stuff
@@ -714,8 +712,9 @@ img {
   }
 }
 #banner-teach {
-  float: right;
-  margin-bottom: @gutter * @unit;
+  position: absolute;
+  min-height: 540px;
+  right: 0;
   a {
     color: inherit;
     text-decoration: underline;
@@ -733,19 +732,22 @@ img {
     padding: 16px;
     text-align: center;
   }
+  @media (min-width: @width-medium) {
+    .width(4);
+  }
 }
 
 .mobile {
   display: none;
 }
 
-@media (max-device-width: 640px) {
+@media (max-device-width: @width-medium) {
   .mobile {
     display: block;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: @width-small) {
   .make.medium,
   .make.large,
   #banner-join {
@@ -778,7 +780,7 @@ img {
  * TEACH-TEMPLATES
  */
 #teach-templates {
-  @media (max-width: 640px) {
+  @media (max-width: @width-medium) {
     .banner {
       display: none;
     }
@@ -1176,7 +1178,7 @@ img {
 #teach {
   .header {
     width: 80%;
-    @media (max-width: 640px) {
+    @media (max-width: @width-medium) {
       width: 100%;
     }
   }

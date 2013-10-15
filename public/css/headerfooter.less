@@ -9,33 +9,63 @@
 .webmaker-nav-container {
   border-top: 1px solid @lightgrey;
   position: relative;
-  height: 90px;
+  height: 65px;
   background: #FFF;
   overflow: visible;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   z-index: 4;
+  @media only screen and (min-width: @width-large) {
+    height: 90px;
+  }
 }
 
 .user-info {
-  margin-top: 20px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  @media only screen and (min-width: @width-large) {
+    position: relative;
+    margin-top: 20px;
+  }
 }
 
 #tabzilla {
   position: absolute;
   top: 0;
   right: 5px;
+  display: none;
+  @media(min-width: @width-large) {
+    display: block;
+  }
 }
 
 #logo {
+  width: 46px;
+  height: 46px;
+  margin-left: 0;
   margin-top: 10px;
-  margin-left: -18px;
+  display: inline-block;
+  overflow: hidden;
+  img {
+    height: 100%;
+  }
+  @media(min-width: @width-twoblocks) {
+    width: auto;
+  }
+  @media(min-width: @width-large) {
+    height: auto;
+    margin-left: -18px;
+  }
 }
 
 // Contains SSO and main navigation
 .user-nav-container {
   position: relative;
   height: 100%;
-  margin-right: 150px;
+  margin: 0;
+  @media(min-width: @width-large) {
+    margin-right: 150px;
+  }
 }
 
 li.lang-picker:first-child {
@@ -96,6 +126,18 @@ li.lang-picker:first-child {
     -webkit-font-smoothing: antialiased;
     margin-right: @gutter * @unit;
 
+    @media (min-width: @width-twoblocks) {
+      .width(4);
+    }
+    @media (min-width: @width-large) {
+      .width(6);
+    }
+
+    padding: 0 20px;
+    @media (min-width: @width-twoblocks) {
+      padding: 0;
+    }
+
     h1, p {
       display: inline;
       margin-right: 10px;
@@ -136,6 +178,12 @@ li.lang-picker:first-child {
   z-index: 3;
   padding: 0.5em 1em 1em;
   .border-box;
+  .width(2);
+
+  display: none;
+  @media(min-width: @width-threeblocks) {
+    display: block;
+  }
 
   label {
     color: #FFF;
@@ -547,54 +595,13 @@ footer {
 }
 
 /*********************************************************
-* MOBILE (640px wide, retina)
+* MOBILE / TABLET
 */
-@media only screen and (max-width: 640px) {
+
+@media only screen and (max-width: @width-large) {
   body {
     overflow-x: hidden;
     width: 100%;
-  }
-
-  header {
-    .webmaker-nav-container {
-      height: 65px;
-    }
-    .user-info {
-      display: none;
-    }
-    #logo {
-      width: 150px;
-      margin-left: 0;
-      display: inline-block;
-      img {
-        width: 100%;
-      }
-    }
-    .user-nav-container {
-      margin: 0;
-    }
-    .nav-list {
-      padding: 0;
-      position: relative;
-      right: auto;
-      left: auto;
-      text-align: center;
-      .border-box;
-      width: 100%;
-
-      li {
-        font-size: 1em;
-        &:first-child:hover {
-          background: none;
-          color: @blue;
-          box-shadow: none;
-          .makenav-hover {
-            display: none;
-          }
-        }
-      }
-    }
-
   }
 
   .gallery-header .header h1 {
@@ -694,15 +701,17 @@ footer {
   .border-box;
 }
 
-
-/*********************************************************
-* MOBILE (320px wide, retina)
-*/
-@media only screen and (max-width: 320px) {
-
-  #tabzilla {
+@media only screen and (max-width: @width-small) {
+  #webmaker-nav iframe.include-frame {
     display: none;
   }
+}
+
+/*********************************************************
+* MOBILE
+*/
+@media only screen and (max-width: @width-medium) {
+
   #footer-actions {
     left: 0;
   }

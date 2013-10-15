@@ -6,15 +6,16 @@
 .navigation-wrapper {
   position: relative;
   margin: 0;
-  padding: 0;
-  @media (min-width: @medium) {
+  @media (min-width: @width-medium) {
     margin: 0 auto;
-    left: -1.5em;
     .border-box;
-    .width(8);
+    width: @width-threeblocks;
   }
-  @media (min-width: 1540px) {
-    .width(12);
+  @media (min-width: @width-large) {
+    width: @width-large;
+  }
+  @media (min-width: @width-xlarge) {
+    width: @width-xlarge;
   }
 }
 
@@ -32,7 +33,7 @@
     display: inline-block;
     padding: 14px 18px;
     color: inherit;
-    @media (min-width: @medium) {
+    @media (min-width: @width-medium) {
       line-height: 32px;
     }
     &:hover {
@@ -100,7 +101,7 @@
   // Don't show on mobile
   display: none;
 
-  @media (min-width: @medium) {
+  @media (min-width: @width-medium) {
     display: block;
   }
 
@@ -128,7 +129,7 @@
     .active {
       color: @white;
     }
-    @media (min-width: @medium) {
+    @media (min-width: @width-medium) {
       width: auto;
     }
 
@@ -147,13 +148,13 @@
       float: right;
       line-height: 30px;
     }
-    @media (min-width: @medium) {
+    @media (min-width: @width-medium) {
       background: none;
       display: none;
     }
   }
 
-  @media (min-width: @medium) {
+  @media (min-width: @width-medium) {
     a {
      position: relative;
     }
@@ -180,7 +181,7 @@
   background: @lightnavy;
   display: none;
   padding: 20px;
-  @media (min-width: @medium) {
+  @media (min-width: @width-medium) {
     padding: 20px 0;
   }
   &.on {
@@ -193,7 +194,7 @@
 
   .navigation-list {
     margin: 0 0 20px 0;
-    @media (min-width: @medium) {
+    @media (min-width: @width-medium) {
       float: left;
       // Grid calculation for 5 colums with 4% gutter
       width: ((100% - (4 * 4%)) / 5);
@@ -265,6 +266,10 @@
       background-color: @white;
       width: 250px;
       outline: none;
+    }
+    display: none;
+    @media (min-width: @width-large) {
+      display: inline;
     }
   }
   #nav-search-trigger {

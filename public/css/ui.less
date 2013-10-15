@@ -34,6 +34,7 @@
 .width( @cols:1 ) {
   width: ( @cols * ( @column + @gutter ) - @gutter ) * @unit;
 }
+
 .padleft( @cols:1 ) {
   padding-left: ( @cols * ( @column + @gutter ) - @gutter ) + @gutter * @unit;
 }
@@ -80,30 +81,33 @@
   }
 }
 
-.g-1 { .width( 1 ); }
-.g-2 { .width( 2 ); }
-.g-3 { .width( 3 ); }
-.g-4 { .width( 4 ); }
-.g-5 { .width( 5 ); }
-.g-6 { .width( 6 ); }
-.g-7 { .width( 7 ); }
-.g-8 { .width( 8 ); }
-
-@media (max-width: 640px) {
-  .g-1,
-  .g-2,
-  .g-3,
-  .g-4,
-  .g-5,
-  .g-6,
-  .g-7,
-  .g-8,
-  .g-fl {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: @gutter * @unit;
-  }
+.g-1,
+.g-2,
+.g-3,
+.g-4,
+.g-5,
+.g-6,
+.g-7,
+.g-8,
+.g-fl {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: @gutter * @unit;
 }
+
+@media (min-width: @width-large) {
+  .g-1 { .width( 1 ); }
+  .g-2 { .width( 2 ); }
+  .g-3 { .width( 3 ); }
+  .g-4 { .width( 4 ); }
+  .g-5 { .width( 5 ); }
+  .g-6 { .width( 6 ); }
+  .g-7 { .width( 7 ); }
+  .g-8 { .width( 8 ); }
+}
+
+
+
 
 /*********************************************************
 * Wrappers, main secitons
@@ -114,10 +118,10 @@
   margin: 0 auto;
   width: 100%;
   @media (min-width: @width-large) {
-    .width(8)
+    width: @width-large;
   }
   @media (min-width: @width-xlarge) {
-    .width(12)
+    width: @width-xlarge;
   }
 }
 
@@ -127,30 +131,34 @@
   margin: @gutter * 2 * @unit auto 0 auto;
   padding: 0;
   .border-box;
-  .width(8);
-}
-
-
-@media (max-width: 640px) {
-  .ui-wrapper {
-    width: 100%;
-    padding: 0 @gutter * 2 * @unit;
+  width: 100%;
+  @media (min-width: @width-medium) {
+    width: @width-threeblocks;
+  }
+  @media (min-width: @width-large) {
+    width: @width-large;
   }
 }
+
 
 // Galleries only
 #index,
 #teach,
 #search,
-#me.webmaker {
-  @media (min-width: 1540px) { // 12 cols
-    .ui-wrapper {
-      width: 1540px;
+#me.webmaker,
+#starterMakes {
+  .ui-wrapper {
+    @media (min-width: @width-twoblocks) { // Two columns
+      width: @width-twoblocks;
     }
-  }
-  @media (min-width: 641px) and (max-width: 1539px) { // 12 cols
-    .ui-wrapper {
-      width: 1020px;
+    @media (min-width: @width-medium) {
+      width: @width-threeblocks;
+    }
+    @media (min-width: @width-large) {
+      width: @width-large;
+    }
+    @media (min-width: @width-xlarge) {
+      width: @width-xlarge;
     }
   }
 }
@@ -251,7 +259,7 @@
   padding-bottom: @gutter * 2 * @unit;
 }
 
-@media (max-width: 640px) {
+@media (max-width: @width-small) {
   .ui-wrapper {
     width: 100%;
   }

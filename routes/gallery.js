@@ -2,7 +2,7 @@ var async = require("async"),
     make = require("../lib/makeapi");
 
   module.exports = function(options) {
-    return function(req, res) {
+    return function(req, res, next) {
       var DEFAULT_PREFIX = "p",
           DEFAULT_LAYOUT = "index",
           DEFAULT_STICKY_LIMIT = 24, // Larger to account for possible duplicates
@@ -83,7 +83,7 @@ var async = require("async"),
             totalNormalHits;
 
         if (err) {
-          return res.send(err);
+          return next(err);
         }
 
         if (data[0].length) {

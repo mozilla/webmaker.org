@@ -14,9 +14,9 @@
   <span class="like-count">{{ make.likes.length }}</span>
   <span class="like-text">
     {% if make.likes.length %}
-      {{ oneLike if make.likes.length == 1 else moreLikes }}
+      {{ "Like-1" | gettext if make.likes.length == 1 else "Like-n" | gettext }}
     {% else %}
-      {{ noLike }}
+      {{ "Like-0" | gettext }}
     {% endif %}
   </span>
 {% endmacro %}

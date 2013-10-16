@@ -109,16 +109,6 @@ var async = require("async"),
         }
 
         res.render( page + ".html", {
-          noLike: req.gettext("Like-0"),
-          oneLike: req.gettext("Like-1"),
-          moreLikes: req.gettext("Like-n"),
-          CreatedBy: req.gettext("Created By"),
-          makeWord: req.gettext("make"),
-          by: req.gettext("by"),
-          created: req.gettext("created"),
-          Remix: req.gettext("Remix"),
-          Details: req.gettext("Details"),
-          Anonymous: req.gettext("Anonymous"),
           makes: all,
           totalHits: totalNormalHits,
           limit: limit,

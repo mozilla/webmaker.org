@@ -59,6 +59,14 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       var makeView = 'make-templates/' + options.makeView;
       nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader('/views', true));
 
+      // Making a custom filter to use it for the client-side l10n
+      // Using this filter will help reduce the number of adding
+      // variables to the global nunjucks variable.
+      // The usage will be "{{ "some string" | gettext }}"
+      nunjucks.env.addFilter('gettext', function (data) {
+        return localized.get(data);
+      });
+
       function onLoadUI() {
         packery.off('layoutComplete', onLoadUI);
         $loading.fadeOut();
@@ -163,17 +171,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
               data[i].size = "large";
             }
             itemString += nunjucks.env.render(makeView, {
-              make: data[i],
-              noLike: localized.get("Like-0"),
-              oneLike: localized.get("Like-1"),
-              moreLikes: localized.get("Like-n"),
-              CreatedBy: localized.get("Created By"),
-              makeWord: localized.get("make"),
-              by: localized.get("by"),
-              created: localized.get("created"),
-              Remix: localized.get("Remix"),
-              Details: localized.get("Details"),
-              Anonymous: localized.get("Anonymous")
+              make: data[i]
             });
           }
         }

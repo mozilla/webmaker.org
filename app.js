@@ -29,6 +29,11 @@ nunjucksEnv.addFilter("instantiate", function(input) {
     return tmpl.render(this.getVariables());
 });
 
+// Make the client-side gettext possible!!
+nunjucksEnv.addFilter("gettext", function(string) {
+  return this.lookup('gettext')(string);
+});
+
 // For navigation
 nunjucksEnv.addFilter("getSection", function (pageId) {
   var section;
@@ -202,7 +207,8 @@ app.use(function( req, res, next ) {
     username: req.session.username|| '',
     makerID: req.session.id || '',
     csrf: req.session._csrf,
-    navigation: navigation
+    navigation: navigation,
+    gettext: req.gettext
   });
   next();
 });

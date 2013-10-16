@@ -7,13 +7,13 @@
         <div class="desc">
           <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
           <p class="author-date"><img class="make-avatar" src="{{make.avatar}}">
-            <a class="tool-url" href="{{make.toolurl}}"><span class="type">{{make.type}}</span> {{makeWord}}</a> {{by}}
+            <a class="tool-url" href="{{make.toolurl}}"><span class="type">{{make.type}}</span> {{ "make" | gettext }}</a> {{ "by" | gettext }}
             {% if make.username %}
               <a class="author" href="/u/{{make.username}}">@{{make.username}}</a>
             {% else %}
-              <span class="author">{{Anonymous}}</span>
+              <span class="author">{{ "Anonymous" | gettext }}</span>
             {% endif %}
-            {{created}} <span class="date">{{make.createdAt}}</span>
+            {{ "created" | gettext }} <span class="date">{{make.createdAt}}</span>
             ,
             {{ likeText() }}
           </p>
@@ -23,8 +23,8 @@
           {% endif %}
         </div>
         <div class="btn-container">
-          <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> {{Remix}}</a>
-          <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}"> {{Details}}</a>
+          <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> {{ "Remix" | gettext }}</a>
+          <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}"> {{ "Details" | gettext }}</a>
           <span data-make-id="{{ make.id }}" class="make-like-toggle {{ 'icon-heart' if make.hasBeenLiked else 'icon-heart-empty' }} "></span>
         </div>
       </div>

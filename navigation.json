@@ -60,6 +60,11 @@
         "id": "teach-templates",
         "title": "Resource Templates",
         "url": "teach-templates"
+      },
+      {
+        "id": "standard",
+        "title": "Web Literacy Standard",
+        "url": "standard"
       }
     ]
   },

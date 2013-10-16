@@ -5,8 +5,9 @@
 {% block title %}{{ gettext("Teach") }}{% endblock %}
 {% block midbar %}
 
-{% set header = gettext("teachHeader") %}
-{% set desc = gettext("teachDesc") %}
+{% set header = gettext("teachHeader")  %}
+{% set desc = gettext("teachDesc")  %}
+{% set desc = desc + "<a href='/{{localeInfo.lang}}/standard'><button class='ui-blue-btn'><i class='icon-file'></i>{{ gettext('TeachWebLitButton') }}</button></a>" %}
 
 {{ galleryHeader(header, desc) }}
 {% endblock %}

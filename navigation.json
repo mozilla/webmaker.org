@@ -29,19 +29,19 @@
       {
         "id": "popcorn",
         "title": "Multimedia with Popcorn",
-        "url": "https://popcorn.webmaker.org",
+        "url": "https://popcorn.webmaker.org/{{localeInfo.lang}}",
         "external": "true"
       },
       {
         "id": "thimble",
         "title": "Webpages with Thimble",
-        "url": "https://thimble.webmaker.org",
+        "url": "https://thimble.webmaker.org/{{localeInfo.lang}}",
         "external": "true"
       },
       {
         "id": "xray",
         "title": "Remixes with X-Ray Goggles",
-        "url": "https://goggles.webmaker.org",
+        "url": "https://goggles.webmaker.org/{{localeInfo.lang}}",
         "external": "true"
       }
     ]

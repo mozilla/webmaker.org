@@ -31,7 +31,7 @@
         <li><a
               data-page="{{page.id}}" {% if page.id == currentPage %}
               class="active"{% endif %}
-              href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{page.url}}"{% if page.external %} target="_blank"{% endif %}>
+              href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}>
               {{gettext(page.title)}}
             </a>
         </li>
@@ -48,7 +48,7 @@
         <li><a><span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a></li>
         {% if section%}{% for page in section.pages %}
           <li>
-            <a href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{page.url}}"{% if page.external %} target="_blank"{% endif %}>
+            <a href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}>
               {{gettext(page.title)}}
             </a>
           </li>

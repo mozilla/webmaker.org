@@ -248,7 +248,8 @@ app.use( function( err, req, res, next) {
 
 require( "./lib/loginapi" )( app, {
   loginURL: env.get( "LOGINAPI" ),
-  audience: env.get( "AUDIENCE" )
+  audience: env.get( "AUDIENCE" ),
+  verifierURI: env.get( "PERSONA_VERIFIER_URI" )
 });
 
 var middleware = require( "./lib/middleware" );
@@ -309,9 +310,16 @@ app.get( "/u/:user", routes.usersearch );
 app.get( "/terms", routes.page( "terms" ) );
 app.get( "/privacy", routes.page( "privacy" ) );
 
+var personaHostname = env.get( "PERSONA_HOSTNAME", "https://login.persona.org" );
+
 app.get( "/sso/include.js", routes.includejs( env.get( "HOSTNAME" ) ) );
-app.get( "/sso/include.html", routes.include() );
-app.get( "/sso/include-transparent.html", routes.include("transparent" ));
+app.get( "/sso/include.html", routes.include({
+  personaHostname: personaHostname
+}));
+app.get( "/sso/include-transparent.html", routes.include({
+  personaHostname: personaHostname,
+  transparent: "transparent"
+}));
 app.get( "/sitemap.xml", function(req, res){
   res.type( "xml" );
   res.render("sitemap.xml");

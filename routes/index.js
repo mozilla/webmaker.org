@@ -5,11 +5,9 @@ module.exports = {
   browserid: require("./browserid"),
   details: require("./details"),
   gallery: require("./gallery"),
-  include: function( transparent ) {
+  include: function( options ) {
     return function( req, res ) {
-      res.render( "sso/include.html", {
-        transparent: transparent
-      });
+      res.render( "sso/include.html", options);
     };
   },
   includejs: function( hostname ) {

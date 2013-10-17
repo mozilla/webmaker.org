@@ -29,7 +29,11 @@
         </div>
       </div>
     </div>
-    <div class="front make-thumbnail thumbnail" style="background-image: url({{make.thumbnail}});"></div>
+    <div class="front make-thumbnail thumbnail" style="background-image: url({{make.thumbnail}});">
+      {% if make.type == "template" %}
+        <div class="template-banner">{{ "Starter Make" | gettext }}</div>
+      {% endif %}
+    </div>
   </div>
   {% if isAdmin %}
   <div class="admin-top">

@@ -112,6 +112,8 @@ img {
 }
 
 .make-flip {
+  overflow: hidden;
+
   .flipContainer { //card
     display: block;
     position: relative;
@@ -428,29 +430,24 @@ img {
   background-repeat: no-repeat;
 }
 
-.make-type-template {
-  .front {
-    overflow: hidden;
-  }
-  .front:after {
-    content: "Starter Make";
-    font-size: 15px;
-    display: block;
-    font-family: "Open Sans Light", "Open Sans", sans-serif;
-    background: #D93B3B;
-    color: #FFF;
-    padding: 15px 10px;
-    text-align: left;
-    .rotate(-35deg);
-    -webkit-transform-origin: center center;
-    -moz-transform-origin: center center;
-    transform-origin: center center;
-    position: absolute;
-    text-align: center;
-    width: 250px;
-    top: 10px;
-    left: -80px;
-  }
+.template-banner {
+  font-size: 15px;
+  display: block;
+  font-family: "Open Sans Light", "Open Sans", sans-serif;
+  background: #D93B3B;
+  color: #FFF;
+  padding: 15px 10px;
+  text-align: left;
+  .rotate(-35deg);
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  transform-origin: center center;
+  position: absolute;
+  text-align: center;
+  width: 250px;
+  top: 10px;
+  left: -80px;
+  z-index: 1;
 }
 .make-type-x-ray-goggles {
   .type-icon {

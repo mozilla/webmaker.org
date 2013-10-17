@@ -44,7 +44,7 @@
     {% endif %}
     <span id="webmaker-logout">{% if not transparent %}{{ gettext("Sign out") }}{% endif %}</span>
 
-    <script src="https://login.persona.org/include.js"></script>
+    <script src="{{ personaHostname }}/include.js"></script>
     <script>
 
       function proxyPersona(source, type) {

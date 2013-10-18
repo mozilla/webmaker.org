@@ -1,6 +1,6 @@
 {
   "name": "webmaker.org",
-  "version": "0.0.170",
+  "version": "0.0.171",
   "private": true,
   "scripts": {
     "test": "grunt",

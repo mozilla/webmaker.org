@@ -6,7 +6,7 @@
       {% if make.level %}
         <p class="level">{{gettext(make.level)}}</a></p>
       {% endif %}
-      <p class="author">{{gettext("Created by")}} @{{make.username}}</a>
+      <p class="author">{{ gettext("Created by @username") | localVar(make) }}</a>
     </div>
     <a href="{{make.remixurl}}"><div class="make-now"></div></a>
   </a>

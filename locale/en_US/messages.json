@@ -77,6 +77,7 @@
   "Create With Others": "Make something",
   "Created at": "Created at",
   "Created by": "Created by",
+  "Created by @username": "Created by @{{username}}",
   "created": "created",
   "Creating and sharing resources": "<a href='/{{localeInfo.lang}}/teach'>Creating and sharing resources</a> like teaching guides, kits and activities with other techies and educators.",
   "Creating the web is the heart of our work": "Creating the web is the heart of our work. We build tools like <a href='//thimble.webmaker.org'>Thimble</a>, <a href='//goggles.webmaker.org'>X-Ray Goggles</a> and <a href='//popcorn.webmaker.org'>Popcorn Maker</a> that allow people to create amazing content while  peeking under the hood of the internet, getting familiar with all the moving parts and getting their hands dirty with foundational elements like HTML, CSS and JavaScript.",

@@ -25,8 +25,19 @@ var app = express(),
     server;
 
 nunjucksEnv.addFilter("instantiate", function(input) {
-    var tmpl = new nunjucks.Template(input);
-    return tmpl.render(this.getVariables());
+  var tmpl = new nunjucks.Template(input);
+  return tmpl.render(this.getVariables());
+});
+
+// `localVar` filter accepting two parameters
+// one is the input from 'gettext()' and another is the function itself
+// the use case is {{ gettext("some input") | localVar(object) }}
+// if the key name is "some input": "My name is {{name}}"
+// tmpl.render(localVar) will try to render it with the available variable from the
+// `localVar` object and return something like `My name is Ali`
+nunjucksEnv.addFilter("localVar", function(input, localVar) {
+  var tmpl = new nunjucks.Template(input);
+  return tmpl.render(localVar);
 });
 
 // Make the client-side gettext possible!!

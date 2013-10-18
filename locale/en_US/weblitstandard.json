@@ -1,7 +1,4 @@
 {
-  "WebLiteracyStandard": "Web Literacy Standard",
-  "StandardFooterTranslate": "Translate the Web Literacy Standard into your language.",
-  "StandardFooterButton": "Get involved!",
   "StandardBuilding": "Building",
   "StandardBuildingCoding": "Coding/scripting",
   "StandardBuildingCodingDesc": "Creating interactive experiences on the web",
@@ -38,6 +35,9 @@
   "StandardBuildingRemixingPoint1": "Identifying and using openly-licensed work",
   "StandardBuildingRemixingPoint2": "Combining multimedia resources",
   "StandardBuildingRemixingPoint3": "Creating something new on the web using existing resources",
+  "StandardCompDescBuild": "The Web Literacy Standard is made up of three strands: <a href='/{{localeInfo.lang}}/standard/exploring'>Exploring</a>, Building and <a href='/{{localeInfo.lang}}/standard/connecting'>Connecting</a>. In turn, each strand is made up of several competencies. Each competency is comprised of a number of skills.",
+  "StandardCompDescConnect": "The Web Literacy Standard is made up of three strands: <a href='/{{localeInfo.lang}}/standard/exploring'>Exploring</a>, <a href='/{{localeInfo.lang}}/standard/building'>Building</a> and Connecting. In turn, each strand is made up of several competencies. Each competency is comprised of a number of skills.",
+  "StandardCompDescExplore": "The Web Literacy Standard is made up of three strands: Exploring, <a href='/{{localeInfo.lang}}/standard/building'>Building</a> and <a href='/{{localeInfo.lang}}/standard/connecting'>Connecting</a>. In turn, each strand is made up of several competencies. Each competency is comprised of a number of skills.",
   "StandardConnecting": "Connecting",
   "StandardConnectingCommunity": "Community Participation",
   "StandardConnectingCommunity:": "Community Participation:",
@@ -101,10 +101,10 @@
   "StandardExploringWMPoint1": "Using and understanding the differences between URLs, IP addresses and search terms",
   "StandardExploringWMPoint2": "Managing information from various sources on the web",
   "StandardExploringWMPoint3": "Demonstrating the difference between the results of varying search strategies",
+  "StandardFooterButton": "Get involved!",
+  "StandardFooterTranslate": "Translate the Web Literacy Standard into your language.",
   "StandardMainDesc": "The Web Literacy Standard is a map of competencies and skills that Mozilla and our community of stakeholders believe are important to pay attention to when getting better at reading, writing and participating on the web.",
   "StandardMainDescInProgress": "Keep up to date with the latest changes to the Web Literacy Standard on the <a target='_blank' href='http://mzl.la/weblitstd'>wiki</a>.",
-  "StandardCompDescBuild": "The Web Literacy Standard is made up of three strands: <a href='/{{localeInfo.lang}}/standard/exploring'>Exploring</a>, Building and <a href='/{{localeInfo.lang}}/standard/connecting'>Connecting</a>. In turn, each strand is made up of several competencies. Each competency is comprised of a number of skills.",
-  "StandardCompDescConnect": "The Web Literacy Standard is made up of three strands: <a href='/{{localeInfo.lang}}/standard/exploring'>Exploring</a>, <a href='/{{localeInfo.lang}}/standard/building'>Building</a> and Connecting. In turn, each strand is made up of several competencies. Each competency is comprised of a number of skills.",
-  "StandardCompDescExplore": "The Web Literacy Standard is made up of three strands: Exploring, <a href='/{{localeInfo.lang}}/standard/building'>Building</a> and <a href='/{{localeInfo.lang}}/standard/connecting'>Connecting</a>. In turn, each strand is made up of several competencies. Each competency is comprised of a number of skills.",
-  "StandardMainHeader": "The Web Literacy Standard <span class='weblit-spec'>(specification)</span>"
+  "StandardMainHeader": "The Web Literacy Standard <span class='weblit-spec'>(specification)</span>",
+  "WebLiteracyStandard": "Web Literacy Standard"
 }

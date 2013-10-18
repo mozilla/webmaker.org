@@ -3,6 +3,7 @@
     "id": "explore",
     "title": "Explore",
     "icon": "icon-random",
+    "defaultUrl": "",
     "pages": [
       {
         "id": "index",
@@ -20,6 +21,7 @@
     "id": "make",
     "title": "Make",
     "icon": "icon-hand-up",
+    "defaultUrl": "starter-makes",
     "pages": [
       {
         "id": "starterMakes",
@@ -50,6 +52,7 @@
     "id": "teach",
     "title": "Teach",
     "icon": "icon-book",
+    "defaultUrl": "teach",
     "pages": [
       {
         "id": "teach",
@@ -72,6 +75,7 @@
     "id": "events",
     "title": "Events",
     "icon": "icon-map-marker",
+    "defaultUrl": "events",
     "pages": [
       {
         "id": "events",
@@ -89,7 +93,14 @@
     "id": "info",
     "title":  "Info",
     "icon": "icon-info",
+    "defaultUrl": "about",
     "pages": [
+      {
+        "id": "blog",
+        "title": "Blog",
+        "url": "https://blog.webmaker.org",
+        "external": "true"
+      },
       {
         "id": "about",
         "title": "About Us",

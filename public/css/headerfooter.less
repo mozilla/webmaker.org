@@ -27,6 +27,25 @@
     position: relative;
     margin-top: 20px;
   }
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  li {
+    border: none;
+    margin: 0;
+  }
+}
+
+#webmaker-nav iframe.include-frame {
+  top: 0;
+}
+
+.webmaker-nav .user img {
+  top: 2px;
+  left: 6px;
 }
 
 #tabzilla {
@@ -73,7 +92,6 @@ li.lang-picker:first-child {
 }
 
 #lang-picker {
-  margin: -7px 15px 0 0;
   border-color: transparent;
   &:hover {
     border-color: #CCC;
@@ -229,9 +247,22 @@ li.lang-picker:first-child {
   border-radius: 50em;
 }
 
-.user {
+.webmaker-nav .user {
   margin: 0;
-  font-weight: bold;
+  display: inline;
+  border: 1px solid transparent;
+  &:hover {
+    border-color: #CCC;
+  }
+  .ui-selected {
+    min-width: 100px;
+    padding-right: 20px;
+    .icon {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+    }
+  }
 }
 
 .arrow {

@@ -541,7 +541,7 @@ button i.icon-angle-right {
   padding: 0 0 0 1em;
   background: #FFF;
   &:hover {
-    border-color: @blue;
+    border-color: #CCC;
     box-shadow: 0 2px 4px -2px rgba( 0, 0, 0, 0.1 );
   }
 }
@@ -549,7 +549,6 @@ button i.icon-angle-right {
 .ui-append > .icon {
   border: none;
   padding: 0 10px;
-  margin: 0 0 0 12px;
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -584,10 +583,18 @@ button i.icon-angle-right {
   cursor: pointer;
   text-align: left;
   border: 1px solid @midgrey;
+  &.ui-select-hover {
+    &:hover {
+      .ui-select-menu {
+        display: block;
+      }
+    }
+  }
 }
 
 .ui-selected {
   display: inline-block;
+  padding: 0 10px;
 }
 
 .ui-select-menu {
@@ -597,7 +604,7 @@ button i.icon-angle-right {
   border: 1px solid @midgrey;
   z-index: 100;
   &:hover {
-    border-color: @blue;
+    border-color: #CCC;
   }
   top: 100%;
   width: 100%;
@@ -610,6 +617,10 @@ button i.icon-angle-right {
       padding: 0 1em;
       background: #FFF;
       border-bottom: 1px solid @midgrey;
+      .icon {
+        margin-right: 8px;
+        display: inline-block;
+      }
       &:last-child {
         border-bottom: none;
       }

@@ -209,7 +209,8 @@ app.locals({
   ga_account: env.get( "GA_ACCOUNT" ),
   ga_domain: env.get( "GA_DOMAIN" ),
   supportedLanguages: supportedLanguages,
-  listDropdownLang: listDropdownLang
+  listDropdownLang: listDropdownLang,
+  PROFILE_URL: env.get( "PROFILE_URL" )
 });
 
 app.use(function( req, res, next ) {

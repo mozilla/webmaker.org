@@ -61,7 +61,9 @@
                   <a target="_blank" class="make-username" href="/u/{{ username }}">@{{ username }}</a>
                   <span class="make-relative-date">{{ createdAt }}</span>
                   <span class="social-media">
-                    <a id="share-btn" class="share ui-btn"><span class="icon-share"></span> {{ gettext("Share") }}</a>
+                  {% set tweetText = gettext("TweetText") %}
+                     <a href="https://plus.google.com/share?url={{url}}" id="share-gplus" target="_blank" class="btn"><span class="icon-google-plus icon">{{ gettext("Share") }}</span></a>
+                     <a id="share-twitter" href="https://twitter.com/intent/tweet?text={{tweetText }}{{url}}&hashtags=Webmaker&related=webmaker&url={{url}}" target="_blank" class="share btn"><span class="icon-twitter icon"> {{ gettext("Share") }}</span></a>
                     <span id="share-container" class="hidden">
                       <a target="_blank" id="google-btn"></a>
                       <a target="_blank" id="twitter-btn"></a>

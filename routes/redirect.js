@@ -52,7 +52,12 @@ module.exports = function( app ) {
       paths: [
         "/guides"
       ]
-    }    
+    }, {
+      route: "https://www.transifex.com/projects/p/webmaker/",
+      paths: [
+        "/translate"
+      ]
+    }
   ];
 
   redirectMap.forEach(function( redirect ) {

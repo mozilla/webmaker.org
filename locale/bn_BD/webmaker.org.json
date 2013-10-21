@@ -24,7 +24,7 @@
     "these are your makes:": "আপনার তৈরী এখানে:",
     "We provide starter projects": "আমরা প্রদান করি<a href='/{{localeInfo.lang}}/starter-makes'> স্টার্টার প্রকল্পে </a>, <a href='/{{localeInfo.lang}}/teach'>টেমপ্লেট</a>এবং <a href='/{{localeInfo.lang}}/guides'> ইভেন্ট সহায়িকা </ a> ওয়েবে তৈরি ও অন্যদের সঙ্গে তাদের জ্ঞান ভাগ করে প্রতিটি স্তরে শিক্ষক ও শিক্ষার্থীদের উদ্বুদ্ধ করা।",
     "Get involved with Webmaker.": "ওয়েবমেকার এর সাথে যুক্ত হন।",
-    "Created by @username": "তৈরি করেছেন @{{ব্যবহাকারীর নাম}}",
+    "Created by @username": "তৈরি করেছেন @{{username}}",
     "Get Involved Desc": "ওয়েবমেকার সম্প্রদায়ের মাধ্যমে সাহায্য নিন এবং সংযুক্ত হন।",
     "Created at": "তৈরী হয়েছে",
     "Teach page": "শিক্ষণ পাতা",

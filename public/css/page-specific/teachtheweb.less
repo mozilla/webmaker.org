@@ -2,6 +2,7 @@
 /*********************************************************
 * Front page
 */
+@_gutter: 2%;
 
 #teachtheweb {
   footer {
@@ -56,6 +57,7 @@
   padding: 16px 35px;
   font-family: inherit;
   font-size: 16px;
+  line-height: 16px;
   cursor: pointer;
   display: block;
   width: 100%;
@@ -387,7 +389,7 @@
   background: white;
   padding: 20px 0;
   @media (min-width: @width-medium) {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   line-height: 24px;
   font-size: 16px;
@@ -400,6 +402,7 @@
   h2 {
     font-weight: normal;
     font-size: 1.5em;
+    margin: 0;
   }
   p {
     margin-bottom: 25px;
@@ -525,7 +528,7 @@ ul.white-panel {
 }
 
 .make-now-templates {
-  padding: 4% 0;
+  padding: @_gutter 0;
 }
 
 .make-something-now {
@@ -543,11 +546,11 @@ ul.white-panel {
   }
 
   .gutter-make-now {
-    width: 4%;
+    width: @_gutter;
   }
 
   padding: 20px;
-  @media (min-width: @width-medium) {
+  @media (min-width: @width-large) {
     padding: 30px 0 60px 0;
     h2 {
       font-size: 1.6em;
@@ -557,11 +560,12 @@ ul.white-panel {
   article {
     position: relative;
     width: 100%;
+    width: (100% - @_gutter) / 2;
     @media (min-width: @width-twoblocks) {
-      width: (100% - (4% * 2)) / 3;
+      width: (100% - (@_gutter * 2)) / 3;
     }
     @media (min-width: @width-medium) {
-      width: (100% - (4% * 3)) / 4;
+      width: (100% - (@_gutter * 3)) / 4;
     }
     float: left;
     background: white;
@@ -596,75 +600,36 @@ ul.white-panel {
       font-style: italic;
     }
 
-    &.thimble {
-      border-top: 15px solid #CCC;
-      &::after {
-        display: block;
-        font-size: 20px;
-        font-weight: bold;
-        content: '...';
-        line-height: 1;
-        position: absolute;
-        height: 0px;
-        left: 3px;
-        top: -23px;
-        color: fade(black, 10%);
-      }
-      &::before {
-        display: block;
-        content: '';
-        font-size: 20px;
-        position: absolute;
-        left: 40px;
-        right: 20px;
-        top: -10px;
-        height: 5px;
-        border-radius: 2px;
-        background: fade(white, 90%);
-      }
+
+    border-top: 15px solid #CCC;
+    &::after {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      content: '...';
+      line-height: 1;
+      position: absolute;
+      height: 0px;
+      left: 3px;
+      top: -23px;
+      color: fade(black, 10%);
+    }
+    &::before {
+      display: block;
+      content: '';
+      font-size: 20px;
+      position: absolute;
+      left: 40px;
+      right: 20px;
+      top: -10px;
+      height: 5px;
+      border-radius: 2px;
+      background: fade(white, 90%);
     }
 
-    &.popcorn {
-
-      .thumbnail {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: cover;
-      }
-
-      .thumbnail,
-      h3,
-      p {
-        transition: opacity 0.2s ease-in-out;
-      }
-
-      h3,
-      p {
-        color: #FFF;
-        opacity: 0;
-      }
-
-      .level {
-        opacity: 0.8;
-      }
-
-      &:hover {
-        .thumbnail {
-          opacity: 0.5;
-        }
-        h3,
-        p {
-          opacity: 1;
-        }
-
-      }
-      .details {
-        position: relative;
-        z-index: 1;
-      }
-
-      border-bottom: 20px solid #FFF;
+    &.popcorn .thumbnail-container {
+      border-bottom: 20px solid #DDD;
+      position: relative;
       &::after {
         display: block;
         font-size: 10px;
@@ -738,11 +703,13 @@ ul.white-panel {
       opacity: 1;
     }
 
+
   }
 
   .thumbnail {
     width: 100%;
     height: 100%;
+    display: block;
   }
 }
 

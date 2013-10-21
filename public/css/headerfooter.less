@@ -9,23 +9,23 @@
 .webmaker-nav-container {
   border-top: 1px solid @lightgrey;
   position: relative;
-  height: 65px;
   background: #FFF;
   overflow: visible;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   z-index: 4;
+  .clearfix;
+  display: block;
   @media only screen and (min-width: @width-large) {
     height: 90px;
   }
 }
 
 .user-info {
-  position: absolute;
-  right: 0;
-  top: 10px;
+  float: right;
+  margin-top: 10px;
   @media only screen and (min-width: @width-large) {
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   a {
     color: inherit;
@@ -41,6 +41,9 @@
 
 #webmaker-nav iframe.include-frame {
   top: 0;
+  @media(max-width: @width-small) {
+    display: none;
+  }
 }
 
 // The login page shouldn't have two iframes visible.
@@ -59,6 +62,8 @@
   top: 0;
   right: 5px;
   display: none;
+  background: url(/img/tab.png) top left no-repeat;
+  background-size: 150px;
   @media(min-width: @width-large) {
     display: block;
   }
@@ -68,16 +73,24 @@
   width: 46px;
   height: 46px;
   margin-left: 0;
-  margin-top: 10px;
+  margin-top: 2px;
   display: inline-block;
   overflow: hidden;
   img {
-    height: 100%;
+    height: 46px;
   }
   @media(min-width: @width-twoblocks) {
-    width: auto;
+    img {
+      height: 46px;
+    }
+    width: 225px;
   }
   @media(min-width: @width-large) {
+    margin-top: 10px;
+    img {
+      width: 100%;
+      height: auto;
+    }
     height: auto;
     margin-left: -18px;
   }
@@ -88,6 +101,8 @@
   position: relative;
   height: 100%;
   margin: 0;
+  .clearfix;
+  display: block;
   @media(min-width: @width-large) {
     margin-right: 150px;
   }
@@ -99,6 +114,7 @@ li.lang-picker:first-child {
 
 #lang-picker {
   border-color: transparent;
+  padding: 0 0 0 1em;
   &:hover {
     border-color: #CCC;
   }
@@ -736,12 +752,6 @@ footer {
   text-align: center;
   padding-left: 7px;
   .border-box;
-}
-
-@media only screen and (max-width: @width-small) {
-  #webmaker-nav iframe.include-frame {
-    display: none;
-  }
 }
 
 /*********************************************************

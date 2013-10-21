@@ -6,9 +6,14 @@
     "defaultUrl": "",
     "pages": [
       {
+        "id": "teachtheweb",
+        "title": "Home",
+        "url": ""
+      },
+      {
         "id": "index",
         "title": "Gallery",
-        "url": ""
+        "url": "gallery"
       },
       {
         "id": "tools",

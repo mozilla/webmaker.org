@@ -43,6 +43,12 @@
   top: 0;
 }
 
+// The login page shouldn't have two iframes visible.
+// TODO: Fix SSO so that two login buttons are possible
+#login #webmaker-nav iframe.include-frame {
+  display: none;
+}
+
 .webmaker-nav .user img {
   top: 2px;
   left: 6px;

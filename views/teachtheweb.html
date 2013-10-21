@@ -23,6 +23,9 @@
 
 <section class="mentor-stories">
 
+  <div class="story-nav-button go-back"><span class="icon-arrow-left"></span></div>
+  <div class="story-nav-button go-forward"><span class="icon-arrow-right"></span></div>
+
   <div class="poster-image-container">
     <div id="poster-mit"></div>
     <div id="poster-india"></div>
@@ -34,17 +37,18 @@
   </div>
 
   <div class="wrapped">
-    <div class="white-panel mentor-story-nav">
-      <a data-id="brooklyn" class="active"></a>
-      <a data-id="india"></a>
-      <a data-id="manilla"></a>
-      <a data-id="mit"></a>
-      <a data-id="amy"></a>
-      <a data-id="yoe"></a>
-      <a data-id="translate"></a>
-    </div>
 
     <div class="story-container">
+      <div class="white-panel mentor-story-nav">
+        <a data-id="brooklyn" class="active"></a>
+        <a data-id="india"></a>
+        <a data-id="manilla"></a>
+        <a data-id="mit"></a>
+        <a data-id="amy"></a>
+        <a data-id="yoe"></a>
+        <a data-id="translate"></a>
+      </div>
+
       <article id="story-brooklyn" class="active">
         <quote>“{{gettext("maker-story-brooklyn") | safe}}”</quote>
         <cite>{{gettext("Hive NYC Storymakers, Brooklyn Public Library")}}</cite>

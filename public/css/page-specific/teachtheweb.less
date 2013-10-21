@@ -30,11 +30,18 @@
   h2 {
     font-family: "Open Sans Light";
     font-weight: normal;
-    line-height: 1.2;
+
   }
 
   h1 {
     font-size: 40px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 25px;
   }
 
 }
@@ -120,11 +127,6 @@
     }
     margin-bottom: 20px;
     font-family: "Open Sans Light", sans-serif;
-  }
-  h2 {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 25px;
   }
 
   .illustration,
@@ -248,7 +250,7 @@
     text-align: center;
     @media (min-width: @width-medium) {
       position: absolute;
-      left: -10px;
+      left: 367px;
       top: 20px;
       border-radius: 5px;
     }
@@ -265,6 +267,9 @@
       border-radius: 20px;
       display: inline-block;
       margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
       @media (min-width: @width-medium) {
         display: block;
         width: 6px;
@@ -285,6 +290,10 @@
       }
 
     }
+  }
+
+  .story-container {
+    position: relative;
   }
 
   article {
@@ -330,6 +339,49 @@
   }
 }
 
+// Go forward/back
+.story-nav-button {
+  position: absolute;
+  color: #FFF;
+  text-align: center;
+  z-index: 1;
+
+  top: 0;
+  height: 44px;
+  width: 44px;
+  line-height: 44px;
+
+  cursor: pointer;
+
+  &.go-forward {
+    right: 0;
+  }
+  &.go-back {
+    left: 0;
+    display: none;
+  }
+
+  @media (min-width: @width-medium) {
+    background: fade(#243242, 80%);
+    &:hover {
+      background: #243242;
+    }
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 60px;
+
+    &.go-forward {
+      right: 20px;
+    }
+    &.go-back {
+      left: 20px;
+    }
+  }
+
+}
+
 .main-ctas {
   color: #555;
   background: white;
@@ -359,8 +411,9 @@
   }
 
   .block {
-    padding: 20px;
+    padding: 0 20px;
     @media (min-width: @width-medium) {
+      padding: 20px;
       float: left;
       width: 32%;
       margin-right: 2%;
@@ -476,8 +529,8 @@ ul.white-panel {
 }
 
 .make-something-now {
-  padding: 30px 0 60px 0;
   text-align: center;
+  .border-box;
   .clearfix;
   display: block;
 
@@ -491,6 +544,14 @@ ul.white-panel {
 
   .gutter-make-now {
     width: 4%;
+  }
+
+  padding: 20px;
+  @media (min-width: @width-medium) {
+    padding: 30px 0 60px 0;
+    h2 {
+      font-size: 1.6em;
+    }
   }
 
   article {

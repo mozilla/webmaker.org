@@ -6,12 +6,9 @@
 .navigation-wrapper {
   position: relative;
   margin: 0;
-  @media (min-width: @width-medium) {
+  @media (min-width: @width-large) {
     margin: 0 auto;
     .border-box;
-    width: @width-threeblocks;
-  }
-  @media (min-width: @width-large) {
     width: @width-large;
   }
   @media (min-width: @width-xlarge) {
@@ -110,6 +107,10 @@
 #navigation-secondary {
   font-size: 13px;
   background: @lightnavy;
+  display: none;
+  @media (min-width: @width-medium) {
+    display: block;
+  }
 
   .navigation-list {
     .clearfix;
@@ -122,56 +123,30 @@
   li {
     position: relative;
     float: left;
-    width: 50%;
     color: fade(@white, 60%);
     display: inline-block;
     &:hover,
     .active {
       color: @white;
     }
-    @media (min-width: @width-medium) {
-      width: auto;
-    }
-
   }
 
-  li:first-child {
+  li a {
+   position: relative;
+  }
+
+  li a.active:after {
+    content: "";
     display: block;
-    color: @white;
-    font-size: 16px;
-    width: 100%;
-    background: @navy;
-    .icon {
-      display: inline-block;
-    }
-    .navigation-more {
-      float: right;
-      line-height: 30px;
-    }
-    @media (min-width: @width-medium) {
-      background: none;
-      display: none;
-    }
-  }
-
-  @media (min-width: @width-medium) {
-    li a {
-     position: relative;
-    }
-
-    li a.active:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid @lightnavy;
-      margin-left: -10px;
-    }
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid @lightnavy;
+    margin-left: -10px;
   }
 }
 

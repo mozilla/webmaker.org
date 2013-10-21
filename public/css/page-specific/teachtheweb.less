@@ -114,6 +114,10 @@
   color: #555;
   background: #FFF;
   border-bottom: 4px solid lighten(@green, 30%);
+  &:hover {
+    color: #000;
+    border-color: lighten(@green, 35%);
+  }
 }
 
 .hero-section {
@@ -142,11 +146,15 @@
     font-weight: normal;
   }
   h1 {
-    font-size: 40px;
+    font-size: 32px;
+    margin-bottom: 0.6em;
+    @media (min-width: @width-twoblocks) {
+      font-size: 40px;
+    }
     @media (min-width: @width-medium) {
       font-size: 60px;
     }
-    margin-bottom: 20px;
+    margin-bottom: 0.3em;
     font-family: "Open Sans Light", sans-serif;
   }
 

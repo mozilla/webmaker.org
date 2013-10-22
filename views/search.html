@@ -2,7 +2,7 @@
 {% include "macros.html" %}
 {% block title %}{{ gettext("Search") }}{% endblock %}
 {% block midbar %}
-<div class="search-poster{% if hasQuery %} focus{% endif %}" data-query="{{query}}">
+<div class="search-poster focus {% if hasQuery %} focus{% endif %}" data-query="{{query}}">
   <div class="ui-wrapper">
     <div class="giant-search-container">
       <h1 class="main-title">{{ gettext("What are you looking for?") }}</h1>

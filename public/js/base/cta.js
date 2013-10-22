@@ -38,10 +38,10 @@ define(['jquery'], function ($) {
     $a.attr('href', url);
 
     var $title_span = $('<span class="make-footer-item-title">');
-    $title_span.text(title);
+    $title_span.html(title);
 
     var $desc_span = $('<span class="make-footer-item-desc">');
-    $desc_span.text(desc);
+    $desc_span.html(desc);
 
     $div.append($title_span);
     $div.append($desc_span);

@@ -23,6 +23,25 @@
   margin: 0 auto;
   position: relative;
   width: 100%;
+
+  .mobile-link {
+    display: block;
+  }
+
+  .desktop-link {
+    display: none;
+  }
+
+  @media screen and (min-device-width : @width-large) {
+    .mobile-link {
+      display: none;
+    }
+
+    .desktop-link {
+      display: block;
+    }
+  }
+
   @media (min-width: @width-large) {
     width: 1020px;
   }

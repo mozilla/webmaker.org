@@ -80,4 +80,7 @@ define(['jquery'],
     changeStory(storyId);
   });
 
+  var randomStoryIndex = Math.floor( Math.random() * totalStories ) - 1;
+
+  changeStory(getStoryByNumber(randomStoryIndex));
 });

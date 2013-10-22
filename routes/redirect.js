@@ -53,7 +53,7 @@ module.exports = function( app ) {
         "/guides"
       ]
     }, {
-      route: "https://www.transifex.com/projects/p/webmaker/",
+      route: "https://support.mozilla.org/kb/translate-webmaker",
       paths: [
         "/translate"
       ]

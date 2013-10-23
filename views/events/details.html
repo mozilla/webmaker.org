@@ -107,17 +107,17 @@
         </div>
         <div id="event-organizer">
           <img src="https://secure.gravatar.com/avatar/{{ event.organizerHash }}" />
-          <span class="organized-by">{{ gettext("Organized by") }} <strong class="organizer">{{ event.organizerId }}</strong></span>
+          <span class="organized-by">{{ gettext("Organized by") | safe }} <strong class="organizer">{{ event.organizerId }}</strong></span>
         </div>
         <br />
         <span id="description-body" class="show">{{ event.description|markdown|safe }}</span>
         <span class="edit hidden">
           <textarea name="description" data-provide="markdown">{{ event.description }}</textarea>
-          <label for="event_registerLink">{{ gettext("Registration Link") }}</label>
+          <label for="event_registerLink">{{ gettext("Registration Link") | safe }}</label>
           <input id="event_registerLink" type="text" name="registerLink"
                 placeholder="{{ event.registerLink or "http://example.com/" }}" />
           <br >
-          <label for="event_attendees">{{ gettext("Num of Attendees") }}</label>
+          <label for="event_attendees">{{ gettext("Num of Attendees") | safe }}</label>
           <input id="event_attendees" type="number" name="attendees"
                 placeholder="~{{ event.attendees or "?" }}" />
         </span>

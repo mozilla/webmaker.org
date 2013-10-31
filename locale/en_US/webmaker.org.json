@@ -405,7 +405,7 @@
   "teach-cta-bullet-3": "Explore Mozilla's new <a href=\"/{{localeInfo.lang}}/standard\">Web Literacy Standard.</a>",
   "teach-cta-bullet-4": "<a href=\"/{{localeInfo.lang}}/new\">Join our global community</a> of mentors, educators and makers.",
   "teachBanner": "<strong>Join us! </strong><a href='https://mozteach.makes.org/thimble/become-a-webmaker-mentor'>Become a Mozilla Webmaker Mentor</a> and help learners around the world level up their skills. It’s all part of our <a href='http://webmaker.org/{{localeInfo.lang}}/mentor'>non-profit mission</a> to spread web skills and digital creativity for all.",
-  "teachDesc": "We've got creative ways to help <em>anyone</em> teach <a href='/{{localeInfo.lang}}/standard'>web literacy</a>, digital skills and making. Use our free <a href='/{{localeInfo.lang}}/tools'>tools</a>, activities and lesson plans. <a href='/{{localeInfo.lang}}/teach-templates'>Or make your own</a> &ndash; with help from our <a href='https://plus.google.com/communities/106022863174952221205'>global community</a> of educators, techies and mentors like you.",
+  "teachDesc": "We've got creative ways to help <em>anyone</em> teach <a href='/{{localeInfo.lang}}/standard'>web literacy</a>, digital skills and making. Use our free <a href='/{{localeInfo.lang}}/tools'>tools</a>, activities and lesson plans. <a href='/{{localeInfo.lang}}/teach-templates'>Or make your own</a> &ndash; with help from our <a href='https://plus.google.com/communities/106022863174952221205'>global community</a> of educators, techies and mentors like you.<br>",
   "teachHeader": "Let's teach the web!",
   "teachingkit": "Teaching Kit",
   "teachtemplateActivityDesc": "Create a smaller, bite-sized activity",

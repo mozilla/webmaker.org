@@ -1,4 +1,4 @@
-@lightblue: #4AAFBE;
+@lightblue: @blue;
 
 body#standard-building,
 body#standard-exploring,
@@ -43,7 +43,7 @@ body#standard-connecting {
 
   .ui-poster-footer {
     height: 220px;
-    background-color: #7CD0DD;
+    background-color: lighten(@blue, 10%);
 
     .right-align {
       text-align: right;
@@ -54,8 +54,8 @@ body#standard-connecting {
       padding: 30px 0;
 
       h2 {
-	color: #FFF;
-	margin-bottom: 25px;
+        color: #FFF;
+        margin-bottom: 25px;
       }
     }
   }
@@ -84,62 +84,62 @@ body#standard-connecting {
       list-style: none;
       padding-left: 0;
       &:first-of-type {
-	margin-top: 0;
+        margin-top: 0;
       }
 
       > li {
-	padding: 15px 0;
-	width: 100%;
+        padding: 15px 0;
+        width: 100%;
 
-	.comp-title {
-	  font-weight: bold;
-	  font-size: 18px;
-	  padding-left: 2px;
-	}
+        .comp-title {
+          font-weight: bold;
+          font-size: 18px;
+          padding-left: 2px;
+        }
 
-	.comp-desc {
-	  display: block;
-	  font-style: italic;
-	}
+        .comp-desc {
+          display: block;
+          font-style: italic;
+        }
 
-	.hover-anchor {
-	  position: relative;
-	  left: -20px;
-	  &:hover {
-	    a:hover {
-	      text-decoration: none;
-	    }
-	    i {
-	      visibility: visible;
-	      &:hover {
-		cursor: pointer;
-	      }
-	    }
-	  }
-	  i {
-	    visibility: hidden;
-	  }
-	}
+        .hover-anchor {
+          position: relative;
+          left: -20px;
+          &:hover {
+            a:hover {
+              text-decoration: none;
+            }
+            i {
+              visibility: visible;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+          i {
+            visibility: hidden;
+          }
+        }
 
-	ul {
-	  padding-left: 0;
-	  margin-top: 10px;
-	  margin-left: -21px;
-	}
+        ul {
+          padding-left: 0;
+          margin-top: 10px;
+          margin-left: -21px;
+        }
 
-	li {
-	  list-style: none;
-	  span {
-	    position: relative;
-	    left: 21px;
-	  }
-	  &:before {
-	    content: '\2022';
-	    color: #999;
-	    margin-right: 15px;
-	    position: absolute;
-	  }
-	}
+        li {
+          list-style: none;
+          span {
+            position: relative;
+            left: 21px;
+          }
+          &:before {
+            content: '\2022';
+            color: #999;
+            margin-right: 15px;
+            position: absolute;
+          }
+        }
       }
     }
 
@@ -188,7 +188,7 @@ body#standard {
 
   .ui-poster-footer {
     height: 220px;
-    background-color: #7CD0DD;
+    background-color: lighten(@blue, 10%);
 
     .right-align {
       text-align: right;

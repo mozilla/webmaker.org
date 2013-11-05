@@ -71,15 +71,38 @@ module.exports = function (grunt) {
         src: nodeJS,
         options: nodeJSHint
       }
+    },
+    imagemin: {
+      options: {
+        optimizationLevel: 7,
+        pngquant: false
+      },
+      primary: {
+        files: [{
+          expand: true,
+          cwd: "public/img/",
+          src: ["**/*.{png,jpg,gif}"],
+          dest: "public/img/"
+        }]
+      },
+      events: {
+        files: [{
+          expand: true,
+          cwd: "public/events/img/",
+          src: ["**/*.{png,jpg,gif}"],
+          dest: "public/events/img/"
+        }]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['recess', 'jsbeautifier:modify', 'jshint']);
+  grunt.registerTask('default', ['recess', 'jsbeautifier:modify', 'jshint', 'imagemin']);
 
   // Verify code (Read only)
   grunt.registerTask('validate', ['recess', 'jsbeautifier:verify', 'jshint']);

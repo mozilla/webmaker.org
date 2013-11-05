@@ -3,7 +3,6 @@
   <div class="gutter-sizer"></div>
   <div class="no-makes-found">{{ gettext("No makes were found!") }}</div>
   <div class="loading-cat g-4"></div>
-
   <!-- STICKY BANNERS -->
   {% if layout=='index' %}
   <div id="banner-join" class="gallery-hide stamp" >
@@ -29,3 +28,8 @@
   {% endfor %}
 
 </div>
+<noscript>
+  <h2>
+    {{ gettext("nojs")  | safe }}
+  </h2>
+</noscript>

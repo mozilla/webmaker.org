@@ -1,5 +1,5 @@
-define(["jquery", "nunjucks", "base/ui", "moment", "uri", "makeapi"],
-  function ($, nunjucks, UI, moment, URI, Make) {
+define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"],
+  function ($, localized, nunjucks, UI, moment, URI, Make) {
   "use strict";
 
   var MAKE_VIEW = "make-templates/make-admin-search.html",
@@ -21,9 +21,20 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri", "makeapi"],
       lastQuery,
       makeAPIUrl = $("body").data("endpoint"),
       makeAPIUrlHost = URI.parse(makeAPIUrl).host,
-      queryKeys = URI.parse( window.location.href ).queryKey;
+      queryKeys = URI.parse( window.location.href ).queryKey,
+      lang = $('html').attr('lang');
+
+  moment.lang(localized.langToMomentJSLang(lang));
 
   nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader("/views", true));
+
+  // Making a custom filter to use it for the client-side l10n
+  // Using this filter will help reduce the number of adding
+  // variables to the global nunjucks variable.
+  // The usage will be "{{ "some string" | gettext }}"
+  nunjucks.env.addFilter('gettext', function (data) {
+    return localized.get(data);
+  });
 
   // Set up packery
   var packery = new Packery(mainGallery, {
@@ -114,7 +125,9 @@ define(["jquery", "nunjucks", "base/ui", "moment", "uri", "makeapi"],
     };
 
     searchQuery[options.field] = options.value;
-    make.find(searchQuery).then(resultsCallback);
+    localized.ready(function(){
+      make.find(searchQuery).then(resultsCallback);
+    });
   }
 
   //Choosing field

@@ -3,13 +3,13 @@
   <div class="make-back">
     <div class="desc">
       <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
-      <p class="author-date"><a><span class="type">guide</span> make</a> by
+      <p class="author-date"><a><span class="type">{{ "guide" | gettext }}</span> {{ "make" | gettext }}</a> {{ "by" | gettext }}
         {% if make.username %}
           <a class="author" href="/u/{{make.username}}">@{{make.username}}</a>
         {% else %}
-          <span class="author">Anonymous</span>
+          <span class="author">{{ "Anonymous" | gettext }}</span>
         {% endif %}
-        created <span class="date">{{make.createdAt}}</span>  updated <span class="date">{{make.updatedAt}}</span></p>
+        {{ "created" | gettext }} <span class="date">{{make.createdAt}}</span>  {{ "updated" | gettext }} <span class="date">{{make.updatedAt}}</span></p>
       <p class="description">{{make.description}}</p>
     </div>
   </div>

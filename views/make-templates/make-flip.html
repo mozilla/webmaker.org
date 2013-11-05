@@ -38,8 +38,8 @@
   {% if isAdmin %}
   <div class="admin-top">
     {%if make.index %}<div class="admin-make-index">webmaker:{{prefix}}-{{make.index}}</div>{% endif %}
-    <div class="admin-make-title">Title: {{make.title}}</div>
-    <div class="admin-make-tags">Tags: {% for tag in make.tags %}<span class="admin-make-tag">{{tag}}</span> {% endfor %}</div>
+    <div class="admin-make-title">{{ "Title" | gettext }}: {{make.title}}</div>
+    <div class="admin-make-tags">{{ "Tags" | gettext }}: {% for tag in make.tags %}<span class="admin-make-tag">{{tag}}</span> {% endfor %}</div>
   </div>
   {% endif %}
 </div>

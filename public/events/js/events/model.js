@@ -1,4 +1,4 @@
-define(['resource_model', 'markdown'], function (ResourceModel) {
+define(['resource_model', 'localized', 'markdown'], function (ResourceModel, localized) {
 
     var EventModel = new ResourceModel({
         name:   'event',
@@ -6,6 +6,7 @@ define(['resource_model', 'markdown'], function (ResourceModel) {
             'attendees', 'beginDate', 'beginTime', 'endDate', 'endTime',
             'registerLink', 'picture', 'organizerId', 'organizerHash', 'featured' ],
     });
+    var lang = $('html').attr('lang');
 
     EventModel.prototype.datetimeHTML = function() {
         var bD = this.beginDate, eD = this.endDate,
@@ -35,8 +36,9 @@ define(['resource_model', 'markdown'], function (ResourceModel) {
             }).join("\n") + '</div></div>';
     };
     EventModel.prototype.organizerHTML = function() {
+      localized.ready(function(){});
         return '<img src="https://secure.gravatar.com/avatar/' + this.organizerHash + '" class="organizer-img" />'
-            + '<div class="info-organizer"><span class="title">Organized by</span><br/>'
+            + '<div class="info-organizer"><span class="title">' + localized.get("Organized by") + '</span><br/>'
             + this.organizerId + '</div>'
     };
     EventModel.prototype.descriptionHTML = function() {
@@ -61,7 +63,7 @@ define(['resource_model', 'markdown'], function (ResourceModel) {
                + this.descriptionHTML()
                + '<div id="bottom-row">'
                  + this.organizerHTML()
-                 + '<a id="event-details-link" href="' + this._uri + '">'
+                 + '<a id="event-details-link" href="/' + lang + this._uri + '">'
                  + '<i class="icon-chevron-right"></i></a>'
                  + '<span class="clear"></span>'
                + '</div>'

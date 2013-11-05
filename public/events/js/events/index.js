@@ -18,6 +18,8 @@
         'jquery.css3finalize':  '/ext/js/jquery.css3finalize-v3.x.min',
         'rails':                '/ext/js/rails',
 
+        'localized':            '/bower/localized/localized',
+
         'oms':                  '/ext/js/oms',
         'infobubble':           '/ext/js/infobubble',
         'google':               'map/google',

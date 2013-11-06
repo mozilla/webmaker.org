@@ -1,5 +1,5 @@
 /* ===================================================
- * bootstrap-markdown.js v1.0.0
+ * bootstrap-markdown.js v2.1.0
  * http://github.com/toopay/bootstrap-markdown
  * ===================================================
  * Copyright 2013 Taufan Aditya
@@ -30,7 +30,6 @@
     this.$ns          = 'bootstrap-markdown'
     this.$element     = $(element)
     this.$editable    = {el:null, type:null,attrKeys:[], attrValues:[], content:null}
-    this.$cloneEditor = {el:null, type:null,attrKeys:[], attrValues:[], content:null}
     this.$options     = $.extend(true, {}, $.fn.markdown.defaults, options)
     this.$oldContent  = null
     this.$isPreview   = false
@@ -83,22 +82,32 @@
 
           for (z=0;z<buttons.length;z++) {
             var button = buttons[z],
+		buttonToggle = '',
                 buttonHandler = ns+'-'+button.name,
                 btnText = button.btnText ? button.btnText : '',
-                btnClass = button.btnClass ? button.btnClass : 'btn'
+		btnClass = button.btnClass ? button.btnClass : 'btn',
+		tabIndex = button.tabIndex ? button.tabIndex : '-1'
+
+	    if (button.toggle == true) {
+	      buttonToggle = ' data-toggle="button"'
+	    }
 
             // Attach the button object
             btnGroupContainer.append('<button class="'
                                     +btnClass
-                                    +' btn-small" title="'
+				    +' btn-default btn-sm" title="'
                                     +button.title
+				    +'" tabindex="'
+				    +tabIndex
                                     +'" data-provider="'
                                     +ns
                                     +'" data-handler="'
                                     +buttonHandler
-                                    +'"><i class="'
+				    +'"'
+				    +buttonToggle
+				    +'><span class="'
                                     +button.icon
-                                    +'"></i> '
+				    +'"></span> '
                                     +btnText
                                     +'</button>')
 
@@ -180,7 +189,7 @@
       if (this.$editor == null) {
         // Create the panel
         var editorHeader = $('<div/>', {
-                            'class': 'md-header'
+			    'class': 'md-header btn-toolbar'
                             })
 
         // Build the main buttons
@@ -289,26 +298,14 @@
       var options = this.$options,
           callbackContent = options.onPreview(this), // Try to get the content from callback
           container = this.$textarea,
+	  afterContainer = container.next(),
           replacementContainer = $('<div/>',{'class':'md-preview','data-provider':'markdown-preview'}),
-          cloneEditor = this.$cloneEditor,
           content
 
       // Give flag that tell the editor enter preview mode
       this.$isPreview = true
       // Disable all buttons
       this.disableButtons('all').enableButtons('cmdPreview')
-
-      // Save the editor
-      cloneEditor.el = container
-      cloneEditor.type = container.prop('tagName').toLowerCase()
-      cloneEditor.content = container.val()
-
-      $(container[0].attributes).each(function(){
-        cloneEditor.attrKeys.push(this.nodeName)
-        cloneEditor.attrValues.push(this.nodeValue)
-      })
-
-      this.$cloneEditor = cloneEditor
 
       if (typeof callbackContent == 'string') {
         // Set the content based by callback content
@@ -318,9 +315,19 @@
         content = (typeof markdown == 'object') ? markdown.toHTML(container.val()) : container.val()
       }
 
-      // Build preview element and replace the editor temporarily
+      // Build preview element
       replacementContainer.html(content)
-      container.replaceWith(replacementContainer)
+
+      if (afterContainer && afterContainer.attr('class') == 'md-footer') {
+	// If there is footer element, insert the preview container before it
+	replacementContainer.insertBefore(afterContainer)
+      } else {
+	// Otherwise, just append it after textarea
+	container.parent().append(replacementContainer)
+      }
+
+      // Hide the last-active textarea
+      container.hide()
 
       // Attach the editor instances
       replacementContainer.data('markdown',this)
@@ -332,26 +339,17 @@
       // Give flag that tell the editor quit preview mode
       this.$isPreview = false
 
-      // Build the original element
-      var container = this.$editor.find('div[data-provider="markdown-preview"]'),
-          cloneEditor = this.$cloneEditor,
-          oldElement = $('<'+cloneEditor.type+'/>')
+      // Obtain the preview container
+      var container = this.$editor.find('div[data-provider="markdown-preview"]')
 
-      $(cloneEditor.attrKeys).each(function(k,v) {
-        oldElement.attr(cloneEditor.attrKeys[k],cloneEditor.attrValues[k])
-      })
-
-      // Set the editor content
-      oldElement.val(cloneEditor.content)
-
-      // Set the editor data
-      container.replaceWith(oldElement)
+      // Remove the preview container
+      container.remove()
 
       // Enable all buttons
       this.enableButtons('all')
 
       // Back to the editor
-      this.$textarea = oldElement
+      this.$textarea.show()
       this.__setListener()
 
       return this
@@ -362,7 +360,7 @@
     }
 
   , getContent: function() {
-      return (this.$isPreview) ? this.$cloneEditor.content : this.$textarea.val()
+      return this.$textarea.val()
     }
 
   , setContent: function(content) {
@@ -538,7 +536,6 @@
           break
 
         case 9: // tab
-          break // hike@amoeba: use tab to switch input fields
           var nextTab
           if (nextTab = this.getNextTab(),nextTab != null) {
             // Get the nextTab if exists
@@ -546,12 +543,25 @@
             setTimeout(function(){
               that.setSelection(nextTab.start,nextTab.end)
             },500)
+
+	    blocked = true
           } else {
-            // Put the cursor to the end
-            this.setSelection(this.getContent().length,this.getContent().length)
+	    // The next tab memory contains nothing...
+	    // check the cursor position to determine tab action
+	    var cursor = this.getSelection()
+
+	    if (cursor.start == cursor.end && cursor.end == this.getContent().length) {
+	      // The cursor already reach the end of the content
+	      blocked = false
+
+	    } else {
+	      // Put the cursor to the end
+	      this.setSelection(this.getContent().length,this.getContent().length)
+
+	      blocked = true
+	    }
           }
 
-          blocked = true
           break
 
         case 13: // enter
@@ -600,11 +610,6 @@
           isHideable = options.hideable,
           editor = this.$editor,
           editable = this.$editable
-
-      // Force to quit preview mode
-      if (this.$isPreview) {
-        this.hidePreview()
-      }
 
       if (editor.hasClass('active') || this.$element.parent().length == 0) {
         editor.removeClass('active')
@@ -670,7 +675,7 @@
         data: [{
           name: 'cmdBold',
           title: 'Bold',
-          icon: 'icon icon-bold',
+	  icon: 'glyphicon glyphicon-bold',
           callback: function(e){
             // Give/remove ** surround the selection
             var chunk, cursor, selected = e.getSelection(), content = e.getContent()
@@ -699,7 +704,7 @@
         },{
           name: 'cmdItalic',
           title: 'Italic',
-          icon: 'icon icon-italic',
+	  icon: 'glyphicon glyphicon-italic',
           callback: function(e){
             // Give/remove * surround the selection
             var chunk, cursor, selected = e.getSelection(), content = e.getContent()
@@ -728,7 +733,7 @@
         },{
           name: 'cmdHeading',
           title: 'Heading',
-          icon: 'icon icon-font',
+	  icon: 'glyphicon glyphicon-font',
           callback: function(e){
             // Append/remove ### surround the selection
             var chunk, cursor, selected = e.getSelection(), content = e.getContent(), pointer, prevChar
@@ -764,7 +769,7 @@
         data: [{
           name: 'cmdUrl',
           title: 'URL/Link',
-          icon: 'icon icon-globe',
+	  icon: 'glyphicon glyphicon-globe',
           callback: function(e){
             // Give [] surround the selection and prepend the link
             var chunk, cursor, selected = e.getSelection(), content = e.getContent(), link
@@ -790,7 +795,7 @@
         },{
           name: 'cmdImage',
           title: 'Image',
-          icon: 'icon icon-picture',
+	  icon: 'glyphicon glyphicon-picture',
           callback: function(e){
             // Give ![] surround the selection and prepend the image link
             var chunk, cursor, selected = e.getSelection(), content = e.getContent(), link
@@ -822,7 +827,7 @@
         data: [{
           name: 'cmdList',
           title: 'List',
-          icon: 'icon icon-list',
+	  icon: 'glyphicon glyphicon-list',
           callback: function(e){
             // Prepend/Give - surround the selection
             var chunk, cursor, selected = e.getSelection(), content = e.getContent()
@@ -871,10 +876,11 @@
         name: 'groupUtil',
         data: [{
           name: 'cmdPreview',
+	  toggle: true,
           title: 'Preview',
           btnText: 'Preview',
-          btnClass: 'btn btn-inverse',
-          icon: 'icon icon-white icon-search',
+	  btnClass: 'btn btn-primary btn-sm',
+	  icon: 'glyphicon glyphicon-search',
           callback: function(e){
             // Check the preview mode and toggle based on this flag
             var isPreview = e.$isPreview,content

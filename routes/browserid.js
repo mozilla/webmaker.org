@@ -1,4 +1,4 @@
-module.exports = function(domains) {
+module.exports = function (domains) {
   var realmResponse;
 
   if (domains) {
@@ -7,7 +7,7 @@ module.exports = function(domains) {
     };
   }
 
-  return function(req, res, next) {
+  return function (req, res, next) {
     if (!realmResponse) {
       return res.send(404);
     }

@@ -4,7 +4,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
     var DEFAULT_LIMIT = 12;
     var lang = $('html').attr('lang');
     moment.lang(localized.langToMomentJSLang(lang));
-    var Gallery = function(options) {
+    var Gallery = function (options) {
       var self = this;
 
       options = options || {};
@@ -17,11 +17,11 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       options.defaultSearch = options.defaultSearch || 'webmaker:recommended';
 
       var banner = document.querySelector(options.banner),
-          mainGallery = document.querySelector(options.mainGallery),
-          $mainGallery = $(mainGallery),
-          $loadMore = $('.load-more'),
-          $loading = $('.loading-cat'),
-          $emptyMessage = $('.no-makes-found');
+        mainGallery = document.querySelector(options.mainGallery),
+        $mainGallery = $(mainGallery),
+        $loadMore = $('.load-more'),
+        $loading = $('.loading-cat'),
+        $emptyMessage = $('.no-makes-found');
 
       var limit = $mainGallery.data('limit') || DEFAULT_LIMIT;
       var totalHits = $mainGallery.data('total-hits');
@@ -36,8 +36,8 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       // MakeAPI
 
       var make = new Make({
-          apiURL: options.makeUrl
-        }),
+        apiURL: options.makeUrl
+      }),
         searchOptions = {
           limit: limit,
           tags: options.defaultSearch,
@@ -52,7 +52,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       });
 
       // Which items are large on the front page?
-      var FRONTPAGE_LARGE = [2,3];
+      var FRONTPAGE_LARGE = [2, 3];
 
       // Nunjucks
       // Todo - nunjucks middleware
@@ -90,8 +90,8 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
         e.preventDefault();
         e.stopPropagation();
         var $this = $(this),
-            makeID = $this.data("make-id"),
-            method;
+          makeID = $this.data("make-id"),
+          method;
 
         if ($this.hasClass("icon-heart")) {
           method = "/unlike";
@@ -101,10 +101,10 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
         $.post(method, {
           makeID: makeID,
           _csrf: $("meta[name='X-CSRF-Token']").attr("content")
-        }, function(res) {
+        }, function (res) {
           var newLen = res.likes.length,
-              $count = $this.parent().parent().find(".like-count"),
-              $text = $this.parent().parent().find(".like-text");
+            $count = $this.parent().parent().find(".like-count"),
+            $text = $this.parent().parent().find(".like-text");
 
           $this.toggleClass("icon-heart icon-heart-empty");
           $count.html(newLen);
@@ -115,10 +115,10 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
           } else {
             $text.html(localized.get("Like-n"));
           }
-        }).fail(function(res) {
+        }).fail(function (res) {
           if (res.status === 401) {
             window.location.replace(window.location.protocol + "//" + window.location.host +
-            "/" + localized.getCurrentLang() + "/login");
+              "/" + localized.getCurrentLang() + "/login");
           } else {
             // already like/unliked, update UI to reflect.
             $this.toggleClass("icon-heart icon-heart-empty");
@@ -128,12 +128,12 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
 
       function resultsCallback(err, data, total) {
         var isStickySearch = (searchOptions.tagPrefix === options.stickyPrefix),
-            itemString = '',
-            frag = document.createElement('div'),
-            makerID = $("meta[name='maker-id']").attr("content"),
-            allItems,
-            i,
-            l;
+          itemString = '',
+          frag = document.createElement('div'),
+          makerID = $("meta[name='maker-id']").attr("content"),
+          allItems,
+          i,
+          l;
 
         $loading.hide();
 
@@ -178,9 +178,9 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
         frag.innerHTML = itemString;
         allItems = frag.querySelectorAll(options.itemSelector);
         $(allItems)
-        .find(".make-like-toggle")
-        .off("click")
-        .on("click", likeClickCallback);
+          .find(".make-like-toggle")
+          .off("click")
+          .on("click", likeClickCallback);
         $mainGallery.append(allItems);
         packery.appended(allItems);
         packery.layout();
@@ -191,7 +191,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       self.searchOptions = searchOptions;
       self.packery = packery;
       self.make = make;
-      self.search = function(opts) {
+      self.search = function (opts) {
         opts = opts || {};
         if (opts.sticky) {
           searchOptions.tagPrefix = options.stickyPrefix;
@@ -210,14 +210,14 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       }
       packery.layout();
 
-      localized.ready(function() {
+      localized.ready(function () {
         $(".make-like-toggle")
-        .off("click")
-        .on("click", likeClickCallback);
+          .off("click")
+          .on("click", likeClickCallback);
       });
 
       // Set up load more
-      $loadMore.click(function() {
+      $loadMore.click(function () {
         searchOptions.page++;
         $loading.show();
         self.search({

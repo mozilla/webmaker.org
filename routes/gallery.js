@@ -98,7 +98,7 @@ module.exports = function (options) {
       }
 
       // Send warning messages to editor about missing stickies
-      for (i = 0; i < limit; i++) {
+      for (var i = 0; i < limit; i++) {
         if (!sticky[i]) {
           warnings.push("No sticky set for " + stickyPrefix + (i + 1));
         }

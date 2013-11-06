@@ -1,13 +1,34 @@
 module.exports = function (grunt) {
-  var jsPatterns = [
+  // Node and client side JS have slightly different JSHint directives
+  // We'll create 2 versions with .jshintrc as a baseline
+  var browserJSHint = grunt.file.readJSON('.jshintrc');
+  var nodeJSHint = {};
+
+  // Create a copy of browserJSHint
+  for (var prop in browserJSHint) {
+    nodeJSHint[prop] = browserJSHint[prop];
+  }
+
+  // Don't throw errors for expected Node globals
+  nodeJSHint.node = true;
+
+  // Don't throw errors for expected browser globals
+  browserJSHint.browser = true;
+
+  var clientSideJS = [
+    'public/js/**/*.js',
+    '!public/js/lib/**'
+  ];
+
+  var nodeJS = [
     'Gruntfile.js',
     'app.js',
     'lib/**/*.js',
-    'public/js/**/*.js',
-    '!public/js/lib/**',
     '!lib/events/**',
     'routes/**/*.js'
   ];
+
+  var allJS = clientSideJS.concat(nodeJS);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -28,13 +49,13 @@ module.exports = function (grunt) {
     },
     jsbeautifier: {
       modify: {
-        src: jsPatterns,
+        src: allJS,
         options: {
           config: '.jsbeautifyrc'
         }
       },
       verify: {
-        src: jsPatterns,
+        src: allJS,
         options: {
           mode: 'VERIFY_ONLY',
           config: '.jsbeautifyrc'
@@ -42,9 +63,13 @@ module.exports = function (grunt) {
       }
     },
     jshint: {
-      all: jsPatterns,
-      options: {
-        jshintrc: '.jshintrc'
+      browser: {
+        src: clientSideJS,
+        options: browserJSHint
+      },
+      node: {
+        src: nodeJS,
+        options: nodeJSHint
       }
     }
   });
@@ -53,5 +78,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['recess', 'jshint']);
+  // Verify code
+  grunt.registerTask('default', ['recess', 'jsbeautifier:verify', 'jshint']);
+
+  // Clean code (Run before commit)
+  grunt.registerTask('clean', ['jsbeautifier:modify', 'jshint']);
+
 };

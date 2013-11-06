@@ -55,7 +55,7 @@ define(['jquery', 'uri', 'base/ui', 'localized'],
         e.preventDefault();
         var $this = $(this),
           makeID = $this.data("make-id");
-        if (confirm(localized.get("Are you sure you want to delete this make?"))) {
+        if (window.confirm(localized.get("Are you sure you want to delete this make?"))) {
           $.post("/remove", {
             makeID: makeID,
             _csrf: $("meta[name='X-CSRF-Token']").attr("content")
@@ -67,11 +67,7 @@ define(['jquery', 'uri', 'base/ui', 'localized'],
               } else {
                 $this.closest(".make").remove();
               }
-            } else {
-              console.log(res);
             }
-          }).fail(function (res) {
-            console.log(res.responseText);
           });
         }
       });

@@ -160,7 +160,7 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
 
     $adminSearch.bind("keypress", function (e) {
       var code = (e.keyCode ? e.keyCode : e.which);
-      if (code == 13) { //Enter keycode
+      if (code === 13) { //Enter keycode
         doSearch();
       }
     });

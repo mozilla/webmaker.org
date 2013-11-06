@@ -1,7 +1,16 @@
-module.exports = function( grunt ) {
-  grunt.initConfig({
-    pkg: grunt.file.readJSON( "package.json" ),
+module.exports = function (grunt) {
+  var jsPatterns = [
+    'Gruntfile.js',
+    'app.js',
+    'lib/**/*.js',
+    'public/js/**/*.js',
+    '!public/js/lib/**',
+    '!lib/events/**',
+    'routes/**/*.js'
+  ];
 
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     recess: {
       dist: {
         options: {
@@ -12,27 +21,37 @@ module.exports = function( grunt ) {
           strictPropertyOrder: false
         },
         src: [
-          "public/css/style.less",
-          "public/css/make-details.less"
+          'public/css/style.less',
+          'public/css/make-details.less'
         ]
       }
     },
+    jsbeautifier: {
+      modify: {
+        src: jsPatterns,
+        options: {
+          config: '.jsbeautifyrc'
+        }
+      },
+      verify: {
+        src: jsPatterns,
+        options: {
+          mode: 'VERIFY_ONLY',
+          config: '.jsbeautifyrc'
+        }
+      }
+    },
     jshint: {
-      files: [
-        "Gruntfile.js",
-        "app.js",
-        "lib/**/*.js",
-        "package.json",
-        "public/js/**/*.js",
-        "!public/js/lib/**",
-        "!lib/events/**",
-        "routes/**/*.js"
-      ]
+      all: jsPatterns,
+      options: {
+        jshintrc: '.jshintrc'
+      }
     }
   });
 
-  grunt.loadNpmTasks( "grunt-recess" );
-  grunt.loadNpmTasks( "grunt-contrib-jshint" );
+  grunt.loadNpmTasks('grunt-recess');
+  grunt.loadNpmTasks('grunt-jsbeautifier');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask( "default", [ "recess", "jshint" ]);
+  grunt.registerTask('default', ['recess', 'jshint']);
 };

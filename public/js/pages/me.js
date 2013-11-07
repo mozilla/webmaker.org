@@ -1,5 +1,5 @@
-define(['jquery', 'uri', 'base/ui', 'localized'],
-  function ($, URI, UI, localized) {
+define(['jquery', 'uri', 'base/ui', 'localized', 'masonry'],
+  function ($, URI, UI, localized, Masonry) {
     'use strict';
 
     localized.ready(function () {
@@ -12,7 +12,7 @@ define(['jquery', 'uri', 'base/ui', 'localized'],
         queryKeys = URI.parse(window.location.href).queryKey,
         BASE_WIDTH = 240,
         GUTTER = 20,
-        packery,
+        masonry,
         page;
 
       // Are we inside thimble or popcorn?
@@ -41,9 +41,9 @@ define(['jquery', 'uri', 'base/ui', 'localized'],
         $("html").css("overflow-y", "hidden");
       }
 
-      // Or, set up packery if we are on webmaker.org
+      // Or, set up masonry if we are on webmaker.org
       if (!inApp) {
-        packery = new Packery(mainGallery, {
+        masonry = new Masonry(mainGallery, {
           itemSelector: 'div.make',
           gutter: '.gutter-sizer',
           transitionDuration: '0.2'
@@ -62,8 +62,8 @@ define(['jquery', 'uri', 'base/ui', 'localized'],
           }, function (res) {
             if (res.deletedAt) {
               if (!inApp) {
-                packery.remove($this.closest(".make")[0]);
-                packery.layout();
+                masonry.remove($this.closest(".make")[0]);
+                masonry.layout();
               } else {
                 $this.closest(".make").remove();
               }

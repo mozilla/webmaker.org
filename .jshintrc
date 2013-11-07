@@ -3,8 +3,7 @@
     "module": true,
     "define": true,
     "requirejs": true,
-    "require": true,
-    "Packery": true
+    "require": true
   },
   "bitwise": true,
   "curly": true,

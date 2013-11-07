@@ -1,5 +1,5 @@
-define(["jquery", "uri", "base/ui"],
-  function ($, URI, UI) {
+define(["jquery", "uri", "base/ui", "masonry"],
+  function ($, URI, UI, Masonry) {
     "use strict";
 
     var query = $(".search-poster").attr("data-query"),
@@ -13,7 +13,7 @@ define(["jquery", "uri", "base/ui"],
       mainGallery = $(".main-gallery")[0],
       totalHits,
       LIMIT,
-      packery,
+      masonry,
       page;
 
     function onKeyDown() {
@@ -32,8 +32,8 @@ define(["jquery", "uri", "base/ui"],
       $searchField.on("keydown", onKeyDown);
     }
 
-    // Setup packery
-    packery = new Packery(mainGallery, {
+    // Setup masonry
+    masonry = new Masonry(mainGallery, {
       itemSelector: "div.make",
       gutter: ".gutter-sizer",
       transitionDuration: "0.2"

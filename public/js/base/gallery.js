@@ -1,5 +1,5 @@
-define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
-  function ($, nunjucks, UI, moment, Make, localized) {
+define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'masonry'],
+  function ($, nunjucks, UI, moment, Make, localized, Masonry) {
 
     var DEFAULT_LIMIT = 12;
     var lang = $('html').attr('lang');
@@ -11,7 +11,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       options.mainGallery = options.mainGallery || '.main-gallery';
       options.itemSelector = options.itemSelector || 'div.make';
       options.gutterSize = options.gutterSize || '.gutter-sizer';
-      options.hiddenClass = options.hiddenClass || 'packery-hide';
+      options.hiddenClass = options.hiddenClass || 'gallery-hide';
       options.makeView = options.makeView || 'make-teach.html';
       options.makeUrl = options.makeUrl || $('body').data('endpoint') || 'https://makeapi.webmaker.org';
       options.defaultSearch = options.defaultSearch || 'webmaker:recommended';
@@ -45,8 +45,8 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
           page: 1
         };
 
-      // Packery
-      var packery = new Packery(mainGallery, {
+      // Masonry
+      var masonry = new Masonry(mainGallery, {
         itemSelector: options.itemSelector,
         gutter: options.gutterSize
       });
@@ -68,7 +68,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       });
 
       function onLoadUI() {
-        packery.off('layoutComplete', onLoadUI);
+        masonry.off('layoutComplete', onLoadUI);
         $loading.fadeOut();
         $('.' + options.hiddenClass).removeClass(options.hiddenClass);
 
@@ -127,6 +127,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
       }
 
       function resultsCallback(err, data, total) {
+
         var isStickySearch = (searchOptions.tagPrefix === options.stickyPrefix),
           itemString = '',
           frag = document.createElement('div'),
@@ -182,14 +183,14 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
           .off("click")
           .on("click", likeClickCallback);
         $mainGallery.append(allItems);
-        packery.appended(allItems);
-        packery.layout();
+        masonry.appended(allItems);
+        masonry.layout();
         onLoadUI();
       }
 
       // Export
       self.searchOptions = searchOptions;
-      self.packery = packery;
+      self.masonry = masonry;
       self.make = make;
       self.search = function (opts) {
         opts = opts || {};
@@ -202,13 +203,13 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized'],
         make.find(searchOptions).then(resultsCallback);
       };
 
-      // Set up packery initially
+      // Set up masonry initially
 
-      packery.on('layoutComplete', onLoadUI);
+      masonry.on('layoutComplete', onLoadUI);
       if (banner) {
-        packery.stamp(banner);
+        masonry.stamp(banner);
       }
-      packery.layout();
+      masonry.layout();
 
       localized.ready(function () {
         $(".make-like-toggle")

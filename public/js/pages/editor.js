@@ -1,5 +1,5 @@
-define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"],
-  function ($, localized, nunjucks, UI, moment, URI, Make) {
+define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi", "masonry"],
+  function ($, localized, nunjucks, UI, moment, URI, Make, Masonry) {
     "use strict";
 
     var MAKE_VIEW = "make-templates/make-admin-search.html",
@@ -36,17 +36,17 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
       return localized.get(data);
     });
 
-    // Set up packery
-    var packery = new Packery(mainGallery, {
+    // Set up masonry
+    var masonry = new Masonry(mainGallery, {
       itemSelector: "div.make",
       gutter: ".gutter-sizer"
     });
 
-    packery.on("layoutComplete", function () {
-      $(".packery-hide", $mainGallery).removeClass("packery-hide");
+    masonry.on("layoutComplete", function () {
+      $(".gallery-hide", $mainGallery).removeClass("gallery-hide");
     });
 
-    var searchPackery = new Packery(searchResults, {
+    var searchMasonry = new Masonry(searchResults, {
       itemSelector: "div.make",
       gutter: 10
     });
@@ -67,7 +67,7 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
       var oldMakes = searchResults.querySelectorAll(".make");
       var showingString = total ? ("Showing pg. " + lastQuery.page + " of " + total) : "No";
       if (oldMakes.length) {
-        searchPackery.remove(oldMakes);
+        searchMasonry.remove(oldMakes);
       }
       $loading.hide();
       $(".search-summary").html(showingString + " results for " + lastQuery.field + " = " + lastQuery.value + " on " + "<a href=\"" + makeAPIUrl + "/admin\">" + makeAPIUrlHost + "</a>");
@@ -88,15 +88,15 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
             make: data[i]
           }))[0]);
           $searchResults.prepend($item);
-          searchPackery.appended($item[0]);
+          searchMasonry.appended($item[0]);
         }
       }
-      searchPackery.layout();
+      searchMasonry.layout();
     }
 
     if (stampBanner) {
-      packery.stamp(stampBanner);
-      packery.layout();
+      masonry.stamp(stampBanner);
+      masonry.layout();
     }
 
     var scrollTop = $sidebar.offset().top;

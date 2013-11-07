@@ -9,17 +9,8 @@ module.exports = function (options) {
       DEFAULT_LIMIT = 12,
       layouts = {
         index: {
-          template: "make-flip.html",
-          tags: ['webmaker:recommended'],
-          process: function (makes) {
-            if (makes[2]) {
-              makes[2].size = "large";
-            }
-            if (makes[3]) {
-              makes[3].size = "large";
-            }
-            return makes;
-          }
+          template: "make-teach.html",
+          tags: ['webmaker:recommended']
         },
         teach: {
           template: "make-teach.html",

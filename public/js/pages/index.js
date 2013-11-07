@@ -4,7 +4,7 @@ require(['jquery', 'base/ui', 'base/gallery'],
 
     var gallery = new Gallery({
       banner: '#banner-join',
-      makeView: 'make-flip.html',
+      makeView: 'make-teach.html',
       stickyPrefix: 'webmaker:p',
       defaultSearch: 'webmaker:recommended'
     });
@@ -12,7 +12,7 @@ require(['jquery', 'base/ui', 'base/gallery'],
     // Hide the banner if the user already exists
     navigator.idSSO.app.onlogin = function (loggedInUser, displayName) {
       $('#banner-join').hide();
-      gallery.packery.layout();
+      gallery.masonry.layout();
     };
 
     UI.select('#search-filter', function (val) {
@@ -49,7 +49,7 @@ require(['jquery', 'base/ui', 'base/gallery'],
       gallery.searchOptions.page = 1;
 
       if (makes.length) {
-        gallery.packery.remove(makes);
+        gallery.masonry.remove(makes);
       }
 
       gallery.search();

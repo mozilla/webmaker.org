@@ -12,7 +12,15 @@ requirejs.config({
     'sso-ux': window.__loginAPI + '/js/sso-ux',
     'nunjucks': '/bower/nunjucks/browser/nunjucks-dev',
     'makeapi': '/bower/makeapi-client/src/make-api',
-    'localized': '/bower/webmaker-i18n/localized'
+    'localized': '/bower/webmaker-i18n/localized',
+    'masonry': '/bower/masonry/masonry',
+    'outlayer': '/bower/outlayer',
+    'get-size': '/bower/get-size',
+    'get-style-property': '/bower/get-style-property',
+    'eventie': '/bower/eventie',
+    'doc-ready': '/bower/doc-ready',
+    'eventEmitter': '/bower/eventEmitter',
+    'matches-selector': '/bower/matches-selector'
   },
   shim: {
     'tabzilla': ['jquery'],

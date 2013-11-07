@@ -1,5 +1,5 @@
-define(['jquery'],
-  function ($) {
+define(['jquery', 'masonry'],
+  function ($, Masonry) {
 
     var $window = $(window);
     var $toggleButtonContainer = $('.mentor-story-nav');
@@ -60,7 +60,7 @@ define(['jquery'],
       }, 1000);
     });
 
-    var packery = new Packery(gallery, {
+    var masonry = new Masonry(gallery, {
       itemSelector: '.make-now-templates > article',
       gutter: '.gutter-make-now'
     });

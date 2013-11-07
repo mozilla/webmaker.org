@@ -78,10 +78,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  // Verify code
-  grunt.registerTask('default', ['recess', 'jsbeautifier:verify', 'jshint']);
+  // Clean & verify code (Run before commit)
+  grunt.registerTask('default', ['recess', 'jsbeautifier:modify', 'jshint']);
 
-  // Clean code (Run before commit)
-  grunt.registerTask('clean', ['jsbeautifier:modify', 'jshint']);
+  // Verify code (Read only)
+  grunt.registerTask('validate', ['recess', 'jsbeautifier:verify', 'jshint']);
 
 };

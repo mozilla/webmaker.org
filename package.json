@@ -3,7 +3,7 @@
   "version": "0.0.182",
   "private": true,
   "scripts": {
-    "test": "grunt",
+    "test": "grunt validate",
     "postinstall": "./node_modules/.bin/bower install"
   },
   "repository": {

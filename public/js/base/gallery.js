@@ -27,12 +27,6 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
       var totalHits = $mainGallery.data('total-hits');
       var isLastPage = totalHits <= limit;
 
-      var toolURL = {
-        "application/x-popcorn": "https://popcorn.webmaker.org",
-        "application/x-thimble": "https://thimble.webmaker.org",
-        "application/x-x-ray-goggles": "https://goggles.webmaker.org"
-      };
-
       // MakeAPI
 
       var make = new Make({

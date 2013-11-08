@@ -4,14 +4,11 @@ define(['jquery', 'jquery.powertip'], function ($) {
 
   var $input = $('#email-updates');
   var $submit = $('#email-submit');
-  var $privacy = $('.privacy-box');
   var $checkbox = $('#newsletter-signup-checkbox').prop('checked', false);
   var $form = $('#privacy-form');
-  var $newsletter = $('.newsletter');
 
   // Properties ---------------------------------------------------------------
 
-  var timeOut = false;
   var tipVisible = false;
   var privacyPolicyChecked = false;
 
@@ -71,14 +68,6 @@ define(['jquery', 'jquery.powertip'], function ($) {
     var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return emailRegex.test(email);
-  }
-
-  function validateCheckbox() {
-    if ($checkbox.prop('checked')) {
-      return true;
-    } else {
-      return false;
-    }
   }
 
   function showTip() {

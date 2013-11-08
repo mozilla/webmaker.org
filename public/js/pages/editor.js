@@ -5,15 +5,10 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
     var MAKE_VIEW = "make-templates/make-admin-search.html",
       MAKE_URL = $("body").data("endpoint"),
       LIMIT = 12,
-      STICKY_PREFIX = "webmaker:teach-",
-
-      $loadMore = $(".load-more"),
       $loading = $(".loading-cat"),
-      $emptyMessage = $(".no-makes-found"),
       stampBanner = document.querySelector(".stamp"),
       mainGallery = document.querySelector(".main-gallery"),
       $mainGallery = $(mainGallery),
-      $header = $("header"),
       $sidebar = $(".admin-sidebar "),
       $adminSearch = $("#admin-search-input"),
       searchResults = document.getElementById("search-results"),
@@ -100,7 +95,7 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
     }
 
     var scrollTop = $sidebar.offset().top;
-    $(window).scroll(function (e) {
+    $(window).scroll(function () {
       var windowTop = $(window).scrollTop();
       if (windowTop > scrollTop) {
         $sidebar.css("top", "0");
@@ -134,7 +129,7 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
     }
 
     //Choosing field
-    $(".search-type label").click(function (e) {
+    $(".search-type label").click(function () {
       $(".search-type label.active").removeClass("active");
       $(this).addClass("active");
       doSearch({

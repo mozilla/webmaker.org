@@ -1,15 +1,10 @@
 define(['jquery'], function ($) {
   'use strict';
 
-  var $body = $('body'),
-    cta;
-
   // Pull page specific JSON from script block in DOM
-  cta = JSON.parse($('#block-cta').text());
+  var cta = JSON.parse($('#block-cta').text());
 
   function attachToCTA() {
-    var frag = document.createDocumentFragment();
-
     for (var i = 0; i < cta.length; ++i) {
       var item = createCTA({
         "title": cta[i].title,

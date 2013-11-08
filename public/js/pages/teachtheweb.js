@@ -1,6 +1,6 @@
 define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel'],
   function ($, Masonry, lazyLoader, Carousel) {
-    var carousel = new Carousel($('.mentor-stories'));
+    new Carousel($('.mentor-stories'));
     var $hiddenScroll = $('.hidden-scroll');
     var gallery = document.querySelector('.make-now-templates');
     var hideScrollTimeout;
@@ -25,7 +25,7 @@ define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel'],
       }, 1000);
     });
 
-    var masonry = new Masonry(gallery, {
+    new Masonry(gallery, {
       itemSelector: '.make-now-templates > article',
       gutter: '.gutter-make-now'
     });

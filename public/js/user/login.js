@@ -1,5 +1,5 @@
 define(['jquery', '/bower/webmaker-ui/ui.js', 'sso-ux'],
-  function ($, WebmakerUI, localized) {
+  function ($, WebmakerUI) {
     "use strict";
     var lang = $('html').attr('lang');
 

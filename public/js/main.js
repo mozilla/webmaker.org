@@ -41,7 +41,6 @@ require([
 ], function ($, cta, Marquee, privacy, AnchorSlide, WebmakerUI, navigation) {
   'use strict';
 
-  var $html = $('html, body');
   var $window = $(window);
   var $backToTop = $('.back-to-top');
   var langSelector = document.querySelector("#lang-picker");
@@ -63,7 +62,7 @@ require([
 
   // Create Anchor Sliders
   $('a.anchor-slide').each(function () {
-    var anchorSlide = new AnchorSlide(this);
+    new AnchorSlide(this);
   });
 
   // Create Partner marquees

@@ -1,5 +1,3 @@
-/* global log, LOG_CRIT, LOG_ERR */
-
 if (process.env.NEW_RELIC_HOME) {
   require('newrelic');
 }

@@ -6,15 +6,14 @@
     <div class="make-back">
       <div class="desc">
         <h3><a class="title" href="{{make.url}}">{{make.title}}</a></h3>
-        <p class="author-date"><img class="make-avatar" src="{{make.avatar}}">{{ "Created by" | gettext }}
-          {% if make.username %}
-            <a class="author" href="/u/{{make.username}}">@{{make.username}}</a>
-          {% else %}
-            <span class="author">{{ "Anonymous" | gettext }}</span>
-          {% endif %}
-          {{ "created" | gettext }} <span class="date">{{make.createdAt}}</span>,
-          {{ likeText() }}
-        </p>
+        <div class="meta-data">
+          <img class="meta-data-avatar" src="{{make.avatar}}">
+          <div class="meta-data-text">
+            {{ "Created by" | gettext }} <a class="author" href="/u/{{make.username}}">@{{make.username}}</a>
+            <span class="date">{{make.createdAt}}</span>,
+            {{ likeText() }}
+          </div>
+        </div>
         <p class="description">{{make.description}}</p>
         {{ makeTags() }}
       </div>

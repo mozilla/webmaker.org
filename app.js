@@ -179,15 +179,9 @@ app.use(express.compress());
 app.use(express.static(WWW_ROOT));
 app.use("/bower", express.static(path.join(__dirname, "bower_components")));
 
-// List of supported languages - Please add them here in an alphabetical order
-var listDropdownLang = env.get("SUPPORTED_LANGS"),
-  // We create another array based on listDropdownLang to use it in the i18n.middleware
-  // supported_language which will be modified from the i18n mapping function
-  supportedLanguages = listDropdownLang.slice(0);
-
 // Setup locales with i18n
 app.use(i18n.middleware({
-  supported_languages: supportedLanguages,
+  supported_languages: env.get("SUPPORTED_LANGS"),
   default_lang: "en-US",
   mappings: env.get("LANG_MAPPINGS"),
   translation_directory: path.resolve(__dirname, "locale")
@@ -213,8 +207,8 @@ app.locals({
   loginAPI: env.get("LOGIN"),
   ga_account: env.get("GA_ACCOUNT"),
   ga_domain: env.get("GA_DOMAIN"),
-  supportedLanguages: supportedLanguages,
-  listDropdownLang: listDropdownLang,
+  supportedLanguages: i18n.getLanguages(),
+  listDropdownLang: env.get("SUPPORTED_LANGS"),
   PROFILE_URL: env.get("PROFILE_URL")
 });
 

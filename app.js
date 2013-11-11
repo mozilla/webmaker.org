@@ -24,7 +24,9 @@ var app = express(),
   }),
   NODE_ENV = env.get("NODE_ENV"),
   WWW_ROOT = path.resolve(__dirname, "public"),
-  server;
+  server,
+  messina,
+  logger;
 
 nunjucksEnv.addFilter("instantiate", function (input) {
   var tmpl = new nunjucks.Template(input);
@@ -82,38 +84,18 @@ var routes = require("./routes");
 nunjucksEnv.express(app);
 app.disable("x-powered-by");
 
-app.use(express.logger(NODE_ENV === "development" ? "dev" : ""));
+if (env.get("ENABLE_GELF_LOGS")) {
+  messina = require("messina");
+  logger = messina("webmaker.org-" + env.get("NODE_ENV") || "development");
+  logger.init();
+  app.use(logger.middleware());
+} else {
+  app.use(express.logger());
+}
+
 if ( !! env.get("FORCE_SSL")) {
   app.use(helmet.hsts());
   app.enable("trust proxy");
-}
-
-/**
- * Crash isolation and error handling, logging
- */
-if (env.get("GRAYLOG_HOST")) {
-  GLOBAL.graylogHost = env.get("GRAYLOG_HOST");
-  GLOBAL.graylogFacility = env.get("GRAYLOG_FACILITY");
-  require("graylog");
-}
-
-function reportError(error, isFatal) {
-  try {
-    var severity = isFatal ? "CRASH" : "ERROR";
-    console.error(severity + ": " + error.stack);
-    if (!GLOBAL.graylogHost) {
-      return;
-    }
-    log("[" + severity + "] webmaker.org failure.",
-      error.message, {
-        level: isFatal ? LOG_CRIT : LOG_ERR,
-        stack: error.stack,
-        _fullStack: error.stack
-      }
-    );
-  } catch (err) {
-    console.error("Internal Error: unable to report error to graylog, err=" + err);
-  }
 }
 
 app.use(function (req, res, next) {
@@ -140,8 +122,8 @@ app.use(function (req, res, next) {
       // But don't keep the process open just for that!
       killtimer.unref();
 
-      // Try and report this crash to graylog
-      reportError(err, true);
+      // report this crash
+      console.error(err);
 
       // Try and shutdown the server, cluster worker
       isolate(function () {
@@ -166,7 +148,7 @@ app.use(function (req, res, next) {
 
       guard.dispose();
     } catch (err2) {
-      console.error('Internal error shutting down domain: ', err2.stack);
+      logger.error('Internal error shutting down domain: ', err2.stack);
     }
 
     process.exit(1);
@@ -254,7 +236,7 @@ app.use(function (req, res, next) {
 // Final error-handling middleware
 app.use(function (err, req, res, next) {
   err.status = err.status || 500;
-  reportError(err);
+  console.error(err);
   res.status(err.status);
   res.render('error.html', {
     message: err.message,

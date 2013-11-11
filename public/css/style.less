@@ -120,29 +120,6 @@ img {
   left: 2px;
 }
 
-.front {
-  overflow: hidden;
-  .share-icon {
-    width: 25px;
-    height: 25px;
-    z-index: 3;
-    position: absolute;
-    bottom: 2px;
-    left: 2px;
-  }
-}
-
-.front-title {
-  font-size: 16px;
-  display: none;
-  line-height: 1.2;
-  background: fade( #FFF, 96% );
-  color: @grey;
-  padding: 1em;
-  opacity: 1;
-  transition: opacity 0.1s;
-}
-
 .large {
   font-size: 1.4em;
   .width(4);
@@ -286,14 +263,6 @@ img {
 .type {
   text-transform: capitalize;
 }
-.type-icon {
-  display: inline-block;
-  height: 44px;
-  width: 44px;
-  .make:hover & {
-    display: none;
-  }
-}
 
 .meta-data-avatar {
   float: left;
@@ -337,32 +306,22 @@ img {
   z-index: 1;
 }
 .make-type-x-ray-goggles {
-  .type-icon {
-    background-image: url(../img/icon-make-x-ray-goggles.png);
-  }
   .make-thumbnail {
     background: @yellow url(../img/thumbs/x-ray-goggles-grey.png) center no-repeat;
   }
 }
 .make-type-thimble {
-  .type-icon {
-    background-image: url(../img/icon-make-thimble.png);
-  }
   .make-thumbnail {
     background: @orange url(../img/thumbs/thimble-grey.png) center no-repeat;
   }
 }
 .make-type-popcorn {
-  .type-icon {
-    background-image: url(../img/icon-make-popcorn.png);
-  }
   .make-thumbnail {
     background: @green url(../img/thumbs/popcorn-grey.png) center no-repeat;
   }
 }
 
 .make-type-guide {
-  .type-icon,
   .make-thumbnail {
     background-image: none;
     background-color: #FF7430;
@@ -374,14 +333,6 @@ img {
       font-family: FontAwesome;
       content: "\f0b1";
     }
-  }
-  .type-icon {
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    border-radius: 35px;
-    font-size: 18px;
-    border: 2px solid #FFF;
   }
   .make-thumbnail:before {
     width: 1em;
@@ -576,9 +527,6 @@ img {
     .make-thumbnail {
       opacity: 0.75
     }
-  }
-  .type-icon {
-    display: none;
   }
   .desc {
     height: auto;

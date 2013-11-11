@@ -53,6 +53,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
         animate = animate === undefined ? true  : animate;
         dim     = dim     === undefined ? false : dim;
 
+        // pin-event.png or pin-event-featured.png
         var icon = {
             url: "/img/map/pin-event" + (
                      model.featured ? "-featured" : ""

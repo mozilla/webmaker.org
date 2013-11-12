@@ -27,20 +27,36 @@
   <div class="story-nav-button go-forward"><span class="icon-arrow-right"></span></div>
 
   <div class="poster-image-container">
-    <div id="poster-mit"></div>
-    <div id="poster-india"></div>
-    <div id="poster-amy"></div>
-    <div id="poster-manilla"></div>
-    <div id="poster-brooklyn" class="active"></div>
-    <div id="poster-yoe"></div>
-    <div id="poster-translate"></div>
+    <div id="poster-mit">
+      <img data-src="/img/front-page/mit-story.jpg">
+    </div>
+    <div id="poster-india">
+      <img data-src="/img/front-page/india-story.jpg">
+    </div>
+    <div id="poster-amy">
+      <img data-src="/img/front-page/amy-story.jpg">
+    </div>
+    <div id="poster-manilla">
+      <img data-src="/img/front-page/manilla-story.jpg">
+    </div>
+    <div id="poster-brooklyn">
+      <img data-src="/img/front-page/brooklyn-story.jpg">
+    </div>
+    <div id="poster-yoe">
+      <img data-src="/img/front-page/indonesia-story.jpg">
+    </div>
+    <div id="poster-translate">
+      <img data-src="/img/front-page/translate-story.jpg">
+    </div>
+
+    <b class="spinner"></b>
   </div>
 
   <div class="wrapped">
 
     <div class="story-container">
       <div class="white-panel mentor-story-nav">
-        <a data-id="brooklyn" class="active"></a>
+        <a data-id="brooklyn"></a>
         <a data-id="india"></a>
         <a data-id="manilla"></a>
         <a data-id="mit"></a>
@@ -49,7 +65,7 @@
         <a data-id="translate"></a>
       </div>
 
-      <article id="story-brooklyn" class="active">
+      <article id="story-brooklyn">
         <quote>“{{gettext("maker-story-brooklyn") | safe}}”</quote>
         <cite>{{gettext("Hive NYC Storymakers, Brooklyn Public Library")}}</cite>
         <cite>{{gettext("New York")}}</cite>

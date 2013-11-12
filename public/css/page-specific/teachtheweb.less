@@ -23,6 +23,7 @@
   margin: 0 auto;
   position: relative;
   width: 100%;
+  z-index: 3;
 
   .mobile-link {
     display: block;
@@ -212,8 +213,11 @@
 }
 
 .mentor-stories {
+  min-height: 300px;
+
   @media (min-width: @width-medium) {
     height: 750px;
+    overflow: hidden;
   }
   position: relative;
 
@@ -225,33 +229,50 @@
     bottom: 0;
     background-color: #333;
 
+    .spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -30px;
+      margin-left: -30px;
+      z-index: 1;
+      display: none;
+      visibility: hidden;
+
+      @media (min-width: @width-medium) {
+        visibility: visible;
+        display: block;
+      }
+    }
+
+    img {
+      width: 1400px;
+      position: absolute;
+      left: 50%;
+      margin-left: -700px;
+      z-index: 2;
+    }
+
     #poster-mit {
       background-color: #928483;
-      background-image: url(/img/front-page/mit-story.jpg);
     }
     #poster-india {
       background-color: #745B62;
-      background-image: url(/img/front-page/india-story.jpg);
     }
     #poster-amy {
       background-color: #010042;
-      background-image: url(/img/front-page/amy-story.jpg);
     }
     #poster-manilla {
       background-color: #F4CA8F;
-      background-image: url(/img/front-page/manilla-story.jpg);
     }
     #poster-brooklyn {
       background-color: #DF9071;
-      background-image: url(/img/front-page/brooklyn-story.jpg);
     }
     #poster-yoe {
       background-color: #004D76;
-      background-image: url(/img/front-page/indonesia-story.jpg);
     }
     #poster-translate {
       background-color: #E2C3AE;
-      background-image: url(/img/front-page/translate-story.jpg);
     }
 
     > div {
@@ -263,9 +284,13 @@
       background-position: center;
       background-size: cover;
       opacity: 0;
+      overflow: hidden;
+      transition: opacity 400ms linear;
+
       &.active {
         opacity: 1;
       }
+
       @media (min-width: @width-medium) {
         background-size: 1400px;
       }
@@ -296,6 +321,7 @@
       border-radius: 20px;
       display: inline-block;
       margin-right: 10px;
+      transition: background-color 600ms ease-out;
       &:last-child {
         margin-right: 0;
       }
@@ -373,7 +399,7 @@
   position: absolute;
   color: #FFF;
   text-align: center;
-  z-index: 1;
+  z-index: 10;
 
   top: 0;
   height: 44px;
@@ -396,6 +422,7 @@
       background: #243242;
     }
     top: 50%;
+    margin-top: -30px;
     width: 60px;
     height: 60px;
     line-height: 60px;

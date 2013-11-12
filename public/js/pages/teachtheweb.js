@@ -1,44 +1,9 @@
-define(['jquery', 'masonry', 'base/lazy-loader'],
-  function ($, Masonry, lazyLoader) {
-
-    var $window = $(window);
-    var $toggleButtonContainer = $('.mentor-story-nav');
-    var $toggleButtons = $('.mentor-story-nav a');
-    var totalStories = $('.mentor-story-nav a').length;
-    var $nextButton = $('.go-forward');
-    var $backButton = $('.go-back');
-    var $articles = $('.mentor-stories article');
-    var $posters = $('.poster-image-container > div');
+define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel'],
+  function ($, Masonry, lazyLoader, Carousel) {
+    var carousel = new Carousel($('.mentor-stories'));
     var $hiddenScroll = $('.hidden-scroll');
     var gallery = document.querySelector('.make-now-templates');
     var hideScrollTimeout;
-
-    function changeStory(storyId) {
-      $toggleButtons.removeClass('active');
-      $('.mentor-story-nav a[data-id="' + storyId + '"]').addClass('active');
-      $('.mentor-stories article.active').removeClass('active');
-      $('.poster-image-container > div.active').removeClass('active');
-      $('#story-' + storyId).addClass('active');
-      $('#poster-' + storyId).addClass('active');
-
-      var currentIndex = $('.mentor-story-nav a').index($('.mentor-story-nav a.active'));
-      if (currentIndex === 0) {
-        $backButton.hide();
-      } else {
-        $backButton.show();
-      }
-      if (currentIndex >= totalStories - 1) {
-        $nextButton.hide();
-      } else {
-        $nextButton.show();
-      }
-    }
-
-    function getStoryByNumber(n) {
-      // Convert 0 index > selector nth-child, which starts with one
-      n = n + 1;
-      return $toggleButtonContainer.find('a:nth-child(' + n + ')').attr('data-id');
-    }
 
     function hideScroll() {
       $hiddenScroll.addClass('hidden-scroll');
@@ -52,7 +17,7 @@ define(['jquery', 'masonry', 'base/lazy-loader'],
       hideScrollTimeout = setTimeout(hideScroll, 1000);
     }
 
-    $window.on('scroll', onScroll);
+    $(window).on('scroll', onScroll);
 
     $('#make-something').click(function () {
       $('html, body').animate({
@@ -64,27 +29,6 @@ define(['jquery', 'masonry', 'base/lazy-loader'],
       itemSelector: '.make-now-templates > article',
       gutter: '.gutter-make-now'
     });
-
-    $toggleButtons.on('click', function () {
-      var storyId = this.getAttribute('data-id');
-      changeStory(storyId);
-    });
-
-    $nextButton.on('click', function () {
-      var currentIndex = $('.mentor-story-nav a').index($('.mentor-story-nav a.active'));
-      var storyId = getStoryByNumber(currentIndex + 1);
-      changeStory(storyId);
-    });
-
-    $backButton.on('click', function () {
-      var currentIndex = $('.mentor-story-nav a').index($('.mentor-story-nav a.active'));
-      var storyId = getStoryByNumber(currentIndex - 1);
-      changeStory(storyId);
-    });
-
-    var randomStoryIndex = Math.floor(Math.random() * totalStories) - 1;
-
-    changeStory(getStoryByNumber(randomStoryIndex));
 
     // Wait until starter make thumbs are in view before loading imgs
     lazyLoader.init($('.make-something-now img')).loadVisibleImages();

@@ -28,7 +28,7 @@
     "moment": "2.2.1",
     "mox-server": "https://github.com/Pomax/mox-server/archive/master.tar.gz",
     "mysql": "2.0.x",
-    "newrelic": "0.11.4",
+    "newrelic": "1.1.1",
     "noxmox": "0.2.x",
     "nunjucks": "0.1.10",
     "sequelize": "2.0.x",

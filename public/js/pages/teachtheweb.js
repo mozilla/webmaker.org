@@ -1,5 +1,5 @@
-define(['jquery', 'masonry'],
-  function ($, Masonry) {
+define(['jquery', 'masonry', 'base/lazy-loader'],
+  function ($, Masonry, lazyLoader) {
 
     var $window = $(window);
     var $toggleButtonContainer = $('.mentor-story-nav');
@@ -85,4 +85,7 @@ define(['jquery', 'masonry'],
     var randomStoryIndex = Math.floor(Math.random() * totalStories) - 1;
 
     changeStory(getStoryByNumber(randomStoryIndex));
+
+    // Wait until starter make thumbs are in view before loading imgs
+    lazyLoader.init($('.make-something-now img')).loadVisibleImages();
   });

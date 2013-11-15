@@ -100,7 +100,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
         }
         $.post(method, {
           makeID: makeID,
-          _csrf: $("meta[name='X-CSRF-Token']").attr("content")
+          _csrf: $("meta[name='csrf-token']").attr("content")
         }, function (res) {
           var newLen = res.likes.length,
             $count = $this.parent().parent().find(".like-count"),

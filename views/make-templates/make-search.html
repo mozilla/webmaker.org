@@ -4,7 +4,11 @@
   <a class="make-link" href="{{make.url}}">
     <div class="make-thumbnail{% if make.thumbnail %} thumbnail" style="background-image:url({{make.thumbnail}});{% endif %}"></div>
     <div class="make-info">{{make.title}} {{ gettext("by") }}
+      {% if make.username %}
         <a class="user-link" href="/u/{{make.username}}" data-username="{{make.username}}">@{{make.username}}</a>, {{ likeText() }}
+      {% else %}
+        <span>{{ gettext("Anonymous") }}</span>
+      {% endif %}
         {{ makeTags() }}
     </div>
     <div class="btn-container">

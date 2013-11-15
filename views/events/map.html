@@ -46,42 +46,46 @@
     </div>
 
     <form id="create-event" class="hidden" action="/events" method="POST">
-        <a class="header expand-form-button"><span class="icon-remove"></span>{{ gettext("Add an Event") }}</a><br />
-        <span class="create-event-form">
-            <fieldset>
-                <label for="event_title">{{ gettext("Name your event") }}</label>
-                <span class="ui-input ui-append">
-                    <input id="event_title" name="title" {{ tabIndex() }}
-                        placeholder="{{ gettext("Engage by title") }}" /></span>
+      <a class="header expand-form-button"><span class="icon-remove"></span>{{ gettext("Add an Event") }}</a><br />
+      <span class="create-event-form">
+        <fieldset>
+          <label for="event_title">{{ gettext("Name your event") }}</label>
+          <span class="ui-input ui-append">
+            <input id="event_title" name="title" {{ tabIndex() }}
+            placeholder="{{ gettext("Engage by title") }}" /></span>
 
-                <label for="event_description">{{ gettext("Describe your event") }}</label>
-                <textarea id="event_description" name="description" data-provide="markdown" {{ tabIndex() }}
-                    placeholder="{{ gettext("Advertize your event") }}" ></textarea><br />
-            </fieldset>
-            <fieldset>
-                <label for="event_attendees">{{ gettext("Num of Attendees expected") }}</label>
-                <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
-		    <option selected value='5'>&lt; 10</option>
-		    <option value='15'>10 - 20</option>
-		    <option value='35'>20 - 50</option>
-		    <option value='75'>50 - 100</option>
-		    <option value='150'>100 - 200</option>
-		    <option value='350'>200 - 500</option>
-		    <option value=6>500 +</option>
-                </select></div><br />
+          <label for="event_description">{{ gettext("Describe your event") }}</label>
+          <textarea id="event_description" name="description" data-provide="markdown" {{ tabIndex() }}
+            placeholder="{{ gettext("Advertize your event") }}" ></textarea><br />
+        </fieldset>
+        <fieldset>
+          <label for="event_attendees">{{ gettext("Num of Attendees expected") }}</label>
+          <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
+              <option selected value='5'>&lt; 10</option>
+              <option value='15'>10 - 20</option>
+              <option value='35'>20 - 50</option>
+              <option value='75'>50 - 100</option>
+              <option value='150'>100 - 200</option>
+              <option value='350'>200 - 500</option>
+              <option value=6>500 +</option>
+          </select></div><br />
 
-                <label for="event_address">{{ gettext("Event location") }}</label>
-                <span class="cell ui-input ui-append">
-                    <input id="event_address" name="address" type="text" {{ tabIndex() }} placeholder="{{ gettext("Enter a location") }}" autocomplete="off"></input>
-                </span><br />
+          <div>
+            <label for="event_address">{{ gettext("Event location") }}</label>
+            <span class="cell ui-input ui-append">
+              <input id="event_address" name="address" type="text" {{ tabIndex() }} placeholder="{{ gettext("Enter a location") }}" autocomplete="off"></input>
+            </span>
+          </div>
 
-                <input name="latitude"  type="hidden" />
-                <input name="longitude" type="hidden" />
+          <input name="latitude"  type="hidden" />
+          <input name="longitude" type="hidden" />
 
-                <label for="event_registerLink">{{ gettext("Event Link") }}</label>
-                <span class="registerLink cell ui-input ui-append">
-                    <input id="event_registerLink" name="registerLink" type="url" {{ tabIndex() }}
-                            placeholder="{{ gettext("Link to registration page") }}" /> </span>
+          <div>
+            <label for="event_registerLink">{{ gettext("Event Link") }}</label>
+            <span class="registerLink cell ui-input ui-append">
+              <input id="event_registerLink" name="registerLink" type="url" {{ tabIndex() }}
+              placeholder="{{ gettext("Link to registration page") }}" /> </span>
+          </div>
 
                 {% for i in ['begin','end'] %}
                 {% if i == "begin" %}

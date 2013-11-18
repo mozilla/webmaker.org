@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "test": "grunt validate",
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,6 @@
   "license": "MPL-2.0",
   "dependencies": {
     "async": "0.2.9",
-    "bower": "1.0.0",
     "commander": "2.0.x",
     "csv": "0.3.x",
     "express": "3.2.0",
@@ -39,6 +38,7 @@
     "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.6"
   },
   "devDependencies": {
+    "bower": "1.2.7",
     "grunt": "0.4.1",
     "grunt-recess": "0.3.3",
     "grunt-contrib-jshint": "0.7.1",

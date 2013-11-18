@@ -61,14 +61,13 @@
             <fieldset>
                 <label for="event_attendees">{{ gettext("Num of Attendees expected") }}</label>
                 <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
-                    <option selected
-                            value='5'> &lt;10 </option>
-                    <option value='15'> 10-20 </option>
-                    <option value='35'> 20-50 </option>
-                    <option value='75'> 50-100 </option>
-                    <option value='150'> 100-200 </option>
-                    <option value='350'> 200-500 </option>
-                    <option value=6> 500+    </option>
+		    <option selected value='5'>&lt; 10</option>
+		    <option value='15'>10 - 20</option>
+		    <option value='35'>20 - 50</option>
+		    <option value='75'>50 - 100</option>
+		    <option value='150'>100 - 200</option>
+		    <option value='350'>200 - 500</option>
+		    <option value=6>500 +</option>
                 </select></div><br />
 
                 <label for="event_address">{{ gettext("Event location") }}</label>

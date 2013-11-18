@@ -23,7 +23,7 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
 
     $options.each(function (i, option) {
       var val = $(option).val(),
-        html = $(option).html(),
+	html = $(option).text(),
         $newLi = $li.clone();
       $newLi.attr("data-value", val);
       $newLi.html(html);

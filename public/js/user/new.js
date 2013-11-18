@@ -5,7 +5,7 @@ define(['jquery', 'sso-ux'],
     var $mailSignUp = $('#bsd');
     var $usernameInput = $("#claim-input");
     var $errorContainer = $("#error-container");
-    var csrf = $("meta[name='X-CSRF-Token']").attr("content");
+    var csrf = $("meta[name='csrf-token']").attr("content");
     var email = $("meta[name='persona-email']").attr("content");
     var AUDIENCE = $("meta[name='audience']").attr("content");
     var loginURL = $("meta[name='login-url']").attr("content");
@@ -40,7 +40,7 @@ define(['jquery', 'sso-ux'],
         type: "POST",
         url: loginURL + "/user",
         headers: {
-          "X-CSRF-Token": csrf
+          "X-CSRF-Token": csrf // express.js uses a non-standard name for csrf-token
         },
         dataType: "json",
         data: {

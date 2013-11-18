@@ -54,7 +54,7 @@
     // Make sure that every Ajax request sends the CSRF token
     CSRFProtection: function(xhr) {
       var token = $('meta[name="csrf-token"]').attr('content');
-      if (token) xhr.setRequestHeader('X-CSRF-Token', token);
+      if (token) xhr.setRequestHeader('X-CSRF-Token', token); // express.js uses a non-standard name for csrf-token
     },
 
     // Triggers an event on an element and returns false if the event result is false

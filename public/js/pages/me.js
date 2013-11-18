@@ -58,7 +58,7 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry'],
         if (window.confirm(localized.get("Are you sure you want to delete this make?"))) {
           $.post("/remove", {
             makeID: makeID,
-            _csrf: $("meta[name='X-CSRF-Token']").attr("content")
+            _csrf: $("meta[name='csrf-token']").attr("content")
           }, function (res) {
             if (res.deletedAt) {
               if (!inApp) {

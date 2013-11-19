@@ -18,6 +18,15 @@
   <!--[if lte IE 9]><link rel="stylesheet" href="/css/warning.css"><![endif]-->
 
   <link rel="icon" type="image/png" href="/img/favicon.ico">
+
+  <!-- For JS error tracking purposes -->
+  <script type="text/javascript">
+    (function() {
+      window.onerror = function (message, url, linenumber) {
+        window.jsErrorDetected = true;
+      }
+    })();
+  </script>
 </head>
 
 <body id="{{ page }}" {% if view %}class="{{ view }}"{% endif %} data-endpoint="{{ makeEndpoint }}">

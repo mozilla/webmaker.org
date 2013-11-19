@@ -43,6 +43,7 @@
     "grunt-recess": "0.3.3",
     "grunt-contrib-jshint": "0.7.1",
     "grunt-jsbeautifier": "0.2.2",
-    "grunt-contrib-imagemin": "0.3.0"
+    "grunt-contrib-imagemin": "0.3.0",
+    "grunt-casperjs": "1.4.0"
   }
 }

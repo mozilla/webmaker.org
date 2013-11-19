@@ -2,12 +2,7 @@ module.exports = function (grunt) {
   // Node and client side JS have slightly different JSHint directives
   // We'll create 2 versions with .jshintrc as a baseline
   var browserJSHint = grunt.file.readJSON('.jshintrc');
-  var nodeJSHint = {};
-
-  // Create a copy of browserJSHint
-  for (var prop in browserJSHint) {
-    nodeJSHint[prop] = browserJSHint[prop];
-  }
+  var nodeJSHint = grunt.file.readJSON('.jshintrc');
 
   // Don't throw errors for expected Node globals
   nodeJSHint.node = true;
@@ -25,7 +20,8 @@ module.exports = function (grunt) {
     'app.js',
     'lib/**/*.js',
     '!lib/events/**',
-    'routes/**/*.js'
+    'routes/**/*.js',
+    'test/casperjs/**/*.js'
   ];
 
   var allJS = clientSideJS.concat(nodeJS);
@@ -93,9 +89,14 @@ module.exports = function (grunt) {
           dest: "public/events/img/"
         }]
       }
+    },
+    casperjs: {
+      options: {},
+      files: ['test/casperjs/**/*.js']
     }
   });
 
+  grunt.loadNpmTasks('grunt-casperjs');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');

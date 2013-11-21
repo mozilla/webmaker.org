@@ -44,6 +44,6 @@
     "grunt-contrib-jshint": "0.7.1",
     "grunt-jsbeautifier": "0.2.2",
     "grunt-contrib-imagemin": "0.3.0",
-    "grunt-casperjs": "1.4.0"
+    "grunt-casperjs": "https://github.com/gvn/grunt-casperjs/archive/1.4.1.tar.gz"
   }
 }

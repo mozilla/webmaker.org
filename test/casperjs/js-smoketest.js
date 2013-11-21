@@ -1,3 +1,5 @@
+/*global window: false */
+
 var casper = require('casper').create();
 var baseURL = 'http://localhost:7777';
 var routes = [

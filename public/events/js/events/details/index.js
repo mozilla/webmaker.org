@@ -57,8 +57,8 @@ function ($, google, forms) {
 
     var ac = new google.maps.places.Autocomplete(
             $editForm.find('input[name="address"]')[0], { types: ['geocode'] });
-    google.maps.event.addListener(ac, 'place_changed', function() {
-        var place = autocomplete.getPlace();
+    google.maps.event.addListener(ac, 'place_changed', function() {        
+        var place = ac.getPlace();
         var loc = { latitude:   place.geometry.location.lat(),
                     longitude:  place.geometry.location.lng() };
         Object.keys(loc).forEach(function(k) {

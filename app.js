@@ -217,7 +217,8 @@ app.use(lessMiddleWare({
   src: WWW_ROOT,
   compress: optimize,
   yuicompress: optimize,
-  optimization: optimize ? 0 : 2
+  optimization: optimize ? 0 : 2,
+  sourceMap: !optimize
 }));
 app.use(express.static(tmpDir));
 

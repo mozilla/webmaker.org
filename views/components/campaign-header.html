@@ -1,0 +1,31 @@
+<div class="webmaker-campaign-header">
+  <div class="campaign-inner">
+    <div class="flex-row">
+      <div class="quote-container">
+        <div class="quote-img-container">
+        <img src="/img/eoy/eoy-{{campaignHeader}}.jpg">
+        </div>
+        <div class="quote-text">
+          {{ ("eoy-quote-" + campaignHeader) | gettext }}
+          <div class="quote-citation">&mdash; {{ ("eoy-name-" + campaignHeader) | gettext }}</div>
+        </div>
+      </div>
+
+      <form class="donate-form" method="GET" action="https://sendto.mozilla.org/page/contribute/eoyfr-webmaker-test">
+        <h3>
+          {{ gettext("eoy-donate") }}
+          <div class="campaign-close-button">
+            <span class="icon-remove"></span>
+          </div>
+        </h3>
+        <button name="amount" value="10">$10</button>
+        <button name="amount" value="25">$25</button>
+        <button name="amount" value="50">$50</button>
+        <button name="amount" value="100">$100</button>
+      </form>
+    </div>
+
+    <p class="campaign-copy">{{ gettext("eoy-desc") | safe }}</p>
+
+  </div>
+</div>

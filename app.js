@@ -202,7 +202,8 @@ app.use(function (req, res, next) {
     makerID: req.session.id || '',
     csrf: req.csrfToken(),
     navigation: navigation,
-    gettext: req.gettext
+    gettext: req.gettext,
+    campaignHeader: app.locals.flags.campaign ? "" + (Math.floor(Math.random() * +app.locals.flags.campaign)) : 0
   });
   next();
 });
@@ -258,15 +259,15 @@ var middleware = require("./lib/middleware");
 
 app.get("/healthcheck", routes.api.healthcheck);
 
-app.get("/gallery", routes.gallery({
-  layout: "index",
-  prefix: "p"
-}));
-
 app.get("/", routes.gallery({
   layout: "teachtheweb",
   prefix: "frontpage",
   limit: 10
+}));
+
+app.get("/gallery", routes.gallery({
+  layout: "index",
+  prefix: "p"
 }));
 
 app.get("/editor", middleware.checkAdmin, routes.gallery({

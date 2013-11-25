@@ -1,6 +1,7 @@
 requirejs.config({
   baseDir: '/js',
   paths: {
+    'cookie': '/bower/cookie-js/cookie',
     'text': '/bower/text/text',
     'jquery': '/bower/jquery/jquery.min',
     'jquery.powertip': '/js/lib/jquery.powertip',
@@ -36,14 +37,15 @@ require([
   'base/anchor-slide',
   '/bower/webmaker-ui/ui.js',
   'base/navigation',
+  'base/webmaker-campaign',
   'tabzilla',
   'sso-ux'
-], function ($, cta, Marquee, privacy, AnchorSlide, WebmakerUI, navigation) {
+], function ($, cta, Marquee, privacy, AnchorSlide, WebmakerUI, navigation, webmakerCampaign) {
   'use strict';
 
   var $window = $(window);
   var $backToTop = $('.back-to-top');
-  var langSelector = document.querySelector("#lang-picker");
+  var langSelector = document.querySelector('#lang-picker');
 
   // Show and hide "Back To Top" trigger
   $window.scroll(function () {
@@ -59,6 +61,12 @@ require([
 
   // Generate CTA bar in footer
   cta.attachToCTA();
+
+  // Campaign
+  webmakerCampaign({
+    element: '.webmaker-campaign-header',
+    campaignName: 'eoy-fundraising'
+  });
 
   // Create Anchor Sliders
   $('a.anchor-slide').each(function () {

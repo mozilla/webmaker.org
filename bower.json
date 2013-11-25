@@ -1,6 +1,7 @@
 {
   "name": "webmaker.org",
   "dependencies": {
+    "cookie-js": "https://github.com/js-coder/cookie.js.git#d2906194f6b33063b8c2fd6718178afb33585ead",
     "font-awesome": "3.2.1",
     "jquery": "2.0.3",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.12",

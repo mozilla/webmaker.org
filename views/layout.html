@@ -36,6 +36,11 @@
 </div>
 
 <div class="webmaker-outer-wrapper">
+
+  {% if flags.campaign %}
+    {% include "components/campaign-header.html" %}
+  {% endif %}
+
   {% block header %}
   <header id="webmaker-nav">
     <nav class="webmaker-nav-container">

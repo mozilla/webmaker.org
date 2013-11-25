@@ -9,6 +9,9 @@
 
   <div class="ui-wrapper ui-body">
     <div id="details-pane" class="ui-section">
+      <div id="back-to-events">
+        <a class="{% if localeInfo.direction == 'rtl' %}RTL{% endif %}" href="/{{localeInfo.lang}}/events">{{ gettext("EventsDetailsBackToEvents") }}</a>
+      </div>
       <div class="gallery-sidebar">
         {% if event.picture %}
          <span class="show">

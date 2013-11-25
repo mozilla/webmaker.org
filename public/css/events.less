@@ -89,3 +89,17 @@ body#events {
         }
     }
 }
+
+#back-to-events a {
+  &:before {
+    content: '◀ ';
+  }
+  &.RTL {
+    &:before {
+      content: '';
+    }
+    &:after {
+      content: ' ▶';
+    }
+  }
+}

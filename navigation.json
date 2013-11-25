@@ -19,6 +19,11 @@
         "id": "tools",
         "title": "Tools",
         "url": "tools"
+      },
+      {
+        "id": "search",
+        "title": "Search",
+        "url": "search"
       }
     ]
   },
@@ -115,11 +120,6 @@
         "id": "getinvolved",
         "title": "Get Involved",
         "url": "getinvolved"
-      },
-      {
-	"id": "search",
-	"title": "Search",
-	"url": "search"
       },
       {
         "id": "help",

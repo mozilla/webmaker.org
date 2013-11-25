@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     'lib/**/*.js',
     '!lib/events/**',
     'routes/**/*.js',
-    'test/casperjs/**/*.js'
+    'test/**/*.js'
   ];
 
   var allJS = clientSideJS.concat(nodeJS);
@@ -90,13 +90,18 @@ module.exports = function (grunt) {
         }]
       }
     },
-    casperjs: {
-      options: {},
-      files: ['test/casperjs/**/*.js']
+    shell: {
+      smokeTest: {
+        options: {
+          stdout: true,
+          failOnError: true
+        },
+        command: 'phantomjs test/phantomjs/psmoke.js'
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-casperjs');
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -107,5 +112,9 @@ module.exports = function (grunt) {
 
   // Verify code (Read only)
   grunt.registerTask('validate', ['recess', 'jsbeautifier:verify', 'jshint']);
+
+  // Run through all pages and test for JS errors
+  // * Requires global install of PhantomJS *
+  grunt.registerTask('smoke', 'shell:smokeTest');
 
 };

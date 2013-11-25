@@ -38,12 +38,13 @@
     "webmaker-postalservice": "https://github.com/mozilla/node-webmaker-postalservice/tarball/v0.2.6"
   },
   "devDependencies": {
+    "colors": "0.6.2",
     "bower": "1.2.7",
     "grunt": "0.4.1",
     "grunt-recess": "0.3.3",
     "grunt-contrib-jshint": "0.7.1",
     "grunt-jsbeautifier": "0.2.2",
     "grunt-contrib-imagemin": "0.3.0",
-    "grunt-casperjs": "https://github.com/gvn/grunt-casperjs/archive/1.4.1.tar.gz"
+    "grunt-shell": "0.6.1"
   }
 }

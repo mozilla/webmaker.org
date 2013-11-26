@@ -18,7 +18,7 @@ module.exports = function (req, res) {
 
   var type = (req.query.type || DEFAULT_TYPE).toString(),
     contentType = (req.query.contentType || '').toString(),
-    sortByField = (req.query.sortByField || "createdAt").toString(),
+    sortByField = (req.query.sortByField || "updatedAt").toString(),
     sortByOrder = (req.query.order || "desc").toString(),
     page = (req.query.page || 1).toString(),
     setToAll = !(req.query.type || req.query.q ||

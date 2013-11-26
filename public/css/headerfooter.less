@@ -15,6 +15,7 @@
   z-index: 4;
   .clearfix;
   display: block;
+  height: 52px;
   @media only screen and (min-width: @width-large) {
     height: 90px;
   }
@@ -83,8 +84,9 @@
 }
 
 #logo {
+  position: absolute;
   height: 46px;
-  width: 46px;
+  width: 157px;
   margin-left: 0;
   margin-top: 2px;
   overflow: hidden;
@@ -120,18 +122,10 @@
   }
 }
 
-li.lang-picker:first-child {
-  border-right: none;
-}
 
 #lang-picker {
-  @media(min-width: @width-twoblocks) {
-    border-color: transparent;
-  }
-  padding: 0 0 0 1em;
-  &:hover {
-    border-color: #CCC;
-  }
+  padding: 0 0 0 0.75em;
+
   ul {
     background: white;
     display: inline-block;
@@ -143,6 +137,8 @@ li.lang-picker:first-child {
   .ui-select-menu {
     width: auto;
     border-color: #CCC;
+    top: auto;
+    bottom: 100%;
     ul {
       width: auto;
     }

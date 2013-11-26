@@ -34,13 +34,6 @@
         <div class="user-nav-container">
           <a id="logo" href="/{{localeInfo.lang}}/"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
           <ul class="webmaker-nav user-info">
-            <li class="lang-picker">
-              <select id="lang-picker" data-supported="{{supportedLanguages}}">
-              {% for language in listDropdownLang %}
-                <option {% if languageNameFor(localeInfo.lang) == languageNameFor(language) %} selected="selected" {% endif %} value="{{language}}">{{ languageNameFor(language) }}</option>
-              {% endfor %}
-              </select>
-            </li>
 
             <li class="new-user">
               <div class="ui-append ui-select ui-select-hover user">
@@ -126,6 +119,13 @@
         <div class="footerHr"></div>
 
         <ul class="social">
+          <li>
+            <select id="lang-picker" data-supported="{{supportedLanguages}}">
+            {% for language in listDropdownLang %}
+              <option {% if languageNameFor(localeInfo.lang) == languageNameFor(language) %} selected="selected" {% endif %} value="{{language}}">{{ languageNameFor(language) }}</option>
+            {% endfor %}
+            </select>
+          </li>
           <li><a href="//twitter.com/mozilla"><i class="footer-social icon-twitter"></i> @mozilla</a></li>
           <li><a href="//twitter.com/webmaker"><i class="footer-social icon-twitter"></i> @webmaker</a></li>
           <li><a href="//plus.google.com/u/2/communities/106022863174952221205"><i class="footer-social icon-google-plus"></i> google+</a></li>

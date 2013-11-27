@@ -3,27 +3,77 @@ function ($, UI, MapMaker) {
     $('.clear-input').click(function () {
         $(this).prev('input').val('').trigger('change');
     });
+
     $('.datepicker').datepicker().each(function(i, elem) {
-        $(elem).next('.icon').click(function () { $(elem).focus() });
+      var $elem = $(elem);
+      $elem.click(function () {
+        $('.timepicker').removeClass('timepickIsOpen');
+        if ( $elem.hasClass('datepickIsOpen') ) {
+          $elem.datepicker('hide');
+          $elem.removeClass('datepickIsOpen');
+        } else {
+          // reset all datepicker open status before continuing
+          $('.datepicker').removeClass('datepickIsOpen');
+          $elem.datepicker('show');
+          $elem.addClass('datepickIsOpen');
+        }
+      });
+      $elem.next('.icon').click(function () {
+        $('.timepicker').removeClass('timepickIsOpen');
+        if ( $elem.hasClass('datepickIsOpen') ) {
+          $elem.datepicker('hide');
+          $elem.removeClass('datepickIsOpen');
+        } else {
+          // reset all datepicker open status before continuing
+          $('.datepicker').removeClass('datepickIsOpen');
+          $elem.datepicker('show');
+          $elem.addClass('datepickIsOpen');
+        }
+      });
     });
+
     $('.timepicker').timepicker({
-        scrollDefaultTime: "10:00",
+      scrollDefaultTime: "10:00"
     }).each(function(i, elem) {
-        $(elem).next('.icon').click(function () { $(elem).focus() });
+      var isOpen = false;
+      var $elem = $(elem);
+      $elem.click(function () {
+        $('.datepicker').removeClass('datepickIsOpen');
+        if ( $elem.hasClass('timepickIsOpen') ) {
+          $elem.timepicker('hide');
+          $elem.removeClass('timepickIsOpen');
+        } else {
+          $('.timepicker').removeClass('timepickIsOpen');
+          $elem.timepicker('show');
+          $elem.addClass('timepickIsOpen');
+        }
+      });
+      $elem.next('.icon').click(function () {
+        $('.datepicker').removeClass('datepickIsOpen');
+        if ( $elem.hasClass('timepickIsOpen') ) {
+          $elem.timepicker('hide');
+          $elem.removeClass('timepickIsOpen');
+        } else {
+          $('.timepicker').removeClass('timepickIsOpen');
+          $elem.timepicker('show');
+          $elem.addClass('timepickIsOpen');
+        }
+      });
     }).on('showTimepicker', function () {
-        var $parent = $(this).parent();
-        $parent.find('.ui-timepicker-wrapper')
-            .css('width', $parent.css('width'))
-            .css('left', '0px');
+      var $parent = $(this).parent();
+      $parent.find('.ui-timepicker-wrapper')
+      .css('width', $parent.css('width'))
+      .css('left', '0px');
     });
+
     var $beginTime = $('[name="beginTime"]'),
-        $endTime   = $('[name="endTime"]');
+    $endTime   = $('[name="endTime"]');
     $endTime.timepicker('option', {
-        durationTime: function () {
-            var beginTime = $beginTime.timepicker('getTime');
-            return beginTime ? beginTime : '0:00am';
-        },
-        showDuration: true
+      durationTime: function () {
+        var beginTime = $beginTime.timepicker('getTime');
+        return beginTime ? beginTime : '0:00am';
+      },
+      showDuration: true
     });
 
     return {

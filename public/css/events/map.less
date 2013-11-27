@@ -111,8 +111,9 @@ body#events.map {
     .ui-select-menu {
         z-index: 3;
     }
-    .ui-select {
-        box-sizing: content-box;
+    .ui-select:not(.user) {
+      box-sizing: content-box;
+      margin: 4px;
     }
     .datetime > *[class^="ui-"] {
         margin-left: 0px;
@@ -124,8 +125,9 @@ body#events.map {
             padding:    0px 10px;
         }
         .icon-calendar {
-            padding-right: 6px;
-            vertical-align: middle;
+          padding-left: 6px;
+          padding-right: 6px;
+          vertical-align: middle;
         }
         &.select-time {
             padding: 0px;

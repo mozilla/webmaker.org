@@ -190,7 +190,7 @@ app.locals({
   ga_account: env.get("GA_ACCOUNT"),
   ga_domain: env.get("GA_DOMAIN"),
   supportedLanguages: i18n.getLanguages(),
-  listDropdownLang: env.get("SUPPORTED_LANGS"),
+  listDropdownLang: i18n.getSupportLanguages(),
   PROFILE_URL: env.get("PROFILE_URL")
 });
 

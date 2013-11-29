@@ -17,7 +17,15 @@ function ($, EventModel, forms, localized) { return function (mapMaker) {
             $findForm.submit();
         }
     });
-    $when_start.datepicker('setDate', new Date());
+
+    $when_start.datepicker('setDate', new Date())
+    // when start box is closed, if a date was selected, open end box
+    .datepicker('option', 'onClose', function(dateText, inst) {
+      if (dateText) {
+        $(inst).datepicker('hide');
+        $when_end.datepicker('show');
+      }
+    });
 
     var first_pindrop = true; // animate only the first time
     $findForm.on("submit", function(ev) {

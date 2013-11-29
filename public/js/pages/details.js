@@ -8,7 +8,12 @@ define(['jquery', 'social', 'localized'],
         $likeBtn = $(".make-like-toggle"),
         $likeCount = $(".like-count"),
         $likeText = $(".like-text"),
-        $notLoggedInMsg = $(".not-logged-in"),
+        $likeNotLoggedInMsg = $("#like-not-logged-in"),
+        $reportButton = $("#make-report-toggle"),
+        $reportedText = $("#make-reported-text"),
+        $reportNotLoggedInMsg = $("#report-not-logged-in"),
+        $reportError = $("#make-report-error"),
+        $makeReportedMsg = $("#make-reported-message"),
         googleBtn = document.getElementById("google-btn"),
         twitterBtn = document.getElementById("twitter-btn"),
         fbBtn = document.getElementById("fb-btn"),
@@ -33,9 +38,32 @@ define(['jquery', 'social', 'localized'],
         window.open("/login", "Log In");
       }
 
-      $shareBtn.on("click", shareOnClick);
+      function displayTooltip($tooltipElem, delay) {
+        var timer;
 
-      $notLoggedInMsg.on("click", openLogInWindow);
+        function hideTooltip(e) {
+          window.removeEventListener("click", clickCallback, false);
+          window.clearTimeout(timer);
+          $tooltipElem.addClass("hide");
+        }
+
+        function clickCallback(e) {
+          if (e.target === $tooltipElem.find("a")[0]) {
+            return true;
+          }
+          hideTooltip();
+        }
+
+        $tooltipElem.removeClass("hide");
+        timer = window.setTimeout(hideTooltip, delay);
+        window.addEventListener("click", clickCallback, false);
+      }
+
+      $likeNotLoggedInMsg.on("click", openLogInWindow);
+      $reportNotLoggedInMsg.on("click", openLogInWindow);
+
+      $shareBtn.on("click", shareOnClick);
+      $shareBtn.on("click", shareOnClick);
 
       $likeBtn.on("click", function (e) {
         if (e.target !== $likeBtn[0]) {
@@ -68,26 +96,44 @@ define(['jquery', 'social', 'localized'],
             $likeText.html(localized.get("Like-n"));
           }
         }).fail(function (res) {
-          var timer;
-
-          function removeLogInMsg() {
-            window.removeEventListener("click", removeLogInMsg, false);
-            window.clearTimeout(timer);
-            $notLoggedInMsg.addClass("hide");
-          }
-
           if (res.status === 401) {
-            $notLoggedInMsg.removeClass("hide");
-            timer = window.setTimeout(removeLogInMsg, 5000);
-            window.addEventListener("click", function (e) {
-              if (e.target === $notLoggedInMsg.find("a")[0]) {
-                return true;
-              }
-              removeLogInMsg();
-            }, false);
+            displayTooltip($likeNotLoggedInMsg, 5000);
+          }
+        });
+      });
+
+      $reportButton.on("click", function (e) {
+        if (e.target !== $reportButton[0]) {
+          return;
+        }
+
+        e.preventDefault();
+
+        var makeID = $reportButton.data("make-id"),
+          method;
+
+        if ($reportButton.hasClass("icon-flag")) {
+          method = "/cancelReport";
+        } else {
+          method = "/report";
+        }
+
+        $.post(method, {
+          makeID: makeID,
+          _csrf: $("meta[name='csrf-token']").attr("content")
+        }, function (res) {
+          $reportButton.toggleClass("icon-flag icon-flag-alt");
+          $reportedText.toggleClass("hide");
+          if (method === "/report") {
+            displayTooltip($makeReportedMsg, 10000);
+          }
+        }).fail(function (res) {
+          if (res.status === 401) {
+            displayTooltip($reportNotLoggedInMsg, 5000);
+          } else {
+            displayTooltip($reportError, 5000);
           }
         });
       });
     });
   });
-//blue

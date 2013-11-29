@@ -51,6 +51,12 @@ module.exports = function (req, res) {
         makeData.remixCount = totalHits + " remixes";
       }
 
+      if (req.session.id && makeData.reports && makeData.reports.length) {
+        makeData.userReported = makeData.reports.some(function (report) {
+          return report.userId === +req.session.id;
+        });
+      }
+
       // Prep original source
       if (makeData.remixedFrom) {
         make[searchCriteria](makeData.remixedFrom).then(function (err, remixedFromData) {

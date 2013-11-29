@@ -123,7 +123,6 @@ app.use(function (req, res, next) {
       // But don't keep the process open just for that!
       killtimer.unref();
 
-      // report this crash
       console.error(err);
 
       // Try and shutdown the server, cluster worker
@@ -309,6 +308,9 @@ app.get("/myprojects", routes.me);
 app.post("/remove", routes.remove);
 app.post("/like", routes.like.like);
 app.post("/unlike", routes.like.unlike);
+
+app.post("/report", routes.report.report);
+app.post("/cancelReport", routes.report.cancelReport);
 
 // Account
 app.get("/login", routes.user.login);

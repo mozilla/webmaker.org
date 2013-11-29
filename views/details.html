@@ -60,17 +60,25 @@
                   {{ gettext("Made by") }}
                   <a target="_blank" class="make-username" href="/u/{{ username }}">@{{ username }}</a>
                   <span class="make-relative-date">{{ createdAt }}</span>
+                  <span class="social-media">
+                    <a id="share-btn" class="share ui-btn"><span class="icon-share"></span> {{ gettext("Share") }}</a>
+                    <span id="share-container" class="hidden">
+                      <a target="_blank" id="google-btn"></a>
+                      <a target="_blank" id="twitter-btn"></a>
+                      <a target="_blank" id="fb-btn"></a>
+                    </span>
+                  </span>
+                  <span data-make-id="{{ id }}"
+                        title="Report Inappropriate Make"
+                        id="make-report-toggle"
+                        class="{{ 'icon-flag' if userReported else 'icon-flag-alt' }}">
+                    <span id="report-not-logged-in" class="tooltip hide">{{ gettext("Log in to report") }}</span>
+                    <span id="make-reported-message" class="tooltip hide">{{ gettext("Make successfully reported") | safe }}</span>
+                    <span id="make-report-error" class="tooltip hide">{{ gettext("Reporting error") | safe }}</span>
+                  </span>
+                  <span id="make-reported-text" class="{{ '' if userReported else 'hide' }}">{{ gettext("Reported") }}</span>
                 </span>
               </div>
-
-              <span class="social-media">
-                <a id="share-btn" class="share ui-btn"><span class="icon-share"></span> {{ gettext("Share") }}</a>
-                <span id="share-container" class="hidden">
-                  <a target="_blank" id="google-btn"></a>
-                  <a target="_blank" id="twitter-btn"></a>
-                  <a target="_blank" id="fb-btn"></a>
-                </span>
-              </span>
             </div>
 
             <p class="built-with"><span class="built-with">{{ gettext("Built with") }}</span>
@@ -78,7 +86,7 @@
               <a target="_blank" href="{{remixurl}}" class="tool-name">{{ tool }}</a>
               <span data-make-id="{{ id }}"
                     class="make-like-toggle details-page-icon make-like-details {{ 'icon-heart' if hasBeenLiked else 'icon-heart-empty' }}" >
-                <span class="not-logged-in hide">{{ gettext("Log in to like") }}</span>
+                <span id="like-not-logged-in" class="tooltip hide">{{ gettext("Log in to like") }}</span>
               </span>
               <span class="like-count">{{ likes.length }} </span>
               <span class="like-text">

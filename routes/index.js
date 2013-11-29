@@ -23,6 +23,7 @@ module.exports = {
   },
   remove: require("./remove"),
   like: require("./like")(),
+  report: require("./report")(),
   search: require("./search"),
   tag: function (req, res) {
     res.redirect("/" + req.localeInfo.lang + "/search?type=tags&q=" + req.params.tag);

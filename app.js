@@ -199,7 +199,7 @@ app.use(function (req, res, next) {
     email: req.session.email || '',
     username: req.session.username || '',
     makerID: req.session.id || '',
-    csrf: req.session._csrf,
+    csrf: req.csrfToken(),
     navigation: navigation,
     gettext: req.gettext
   });

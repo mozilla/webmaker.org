@@ -2,39 +2,63 @@ define(['jquery', 'google', 'infobubble', 'oms', 'markerclusterer'],
 function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
 
     function MapMaker(map_canvas, mapOptions, mcOptions, omsOptions) {
+        var self = this;
         this.map_canvas = map_canvas;
         this.google_map = new google.maps.Map(map_canvas, mapOptions);
         this.geocoder = new google.maps.Geocoder();
         this.markerManager = new MarkerClusterer(this.google_map, [], mcOptions);
-        this.infoWindow = undefined;
+        this.infoWindow = new InfoBubble({ // TODO: move styling into less/css file
+          minWidth: 330,
+          maxWidth: 330,
+          minHeight: 130,
+          maxHeight: 710,
+          shadowStyle: 1,
+          padding: 0,
+          // Padding around the tabs, now set separately from the InfoBubble padding
+          borderRadius: 8,
+          borderWidth: 1,
+          // Now that there is no borderWidth check, you can define
+          // a borderColor and it will apply to Just the arrow
+          disableAutoPan: false,
+          hideCloseButton: false,
+          backgroundColor: '#fff',
+          backgroundClassName: 'info-container',
+          arrowSize: 20,
+          pixelOffset: [-5, 60],
+          arrowStyle: 0
+        });
 
-        var self = this;
         // this handles multiple markers at the same location
         this.oms = new OverlappingMarkerSpiderfier(this.google_map, omsOptions);
+
         this.oms.addListener('click', function(marker, evt) {
-            self.showInfoWindow(marker);
+          self.infoWindow.setContent(marker.get('infoContent'));
+          self.infoWindow.open(self.google_map, marker);
+          $('.gm-style').removeClass(); // remove new styling introduces in GM 3.1
         });
+
         google.maps.event.addListener(this.google_map, 'zoom_changed', function(ev) {
             setTimeout(function () {
                 if (self.google_map.getZoom() <= 15) return;
                 var markers = self.oms.markersNearAnyOtherMarker();
                 var seen = {};
-                var clusters = [];
                 var ID = '__gm_id';
+                var theMarker = null;
                 markers.forEach(function (m) {
                     if (m[ID] in seen) return;
                     self.oms.markersNearMarker(m).forEach(function (nm) {
                         seen[nm[ID]] = true;
                     });
-                    clusters.push(m);
+                    theMarker = m;
                     seen[m[ID]] = true;
                 });
-                clusters.forEach(function (m) {
-                    google.maps.event.trigger(m, 'click');
-                });
+                if (theMarker) {
+                  google.maps.event.trigger(theMarker , 'click');
+                }
             }, 400);
         });
     }
+
     MapMaker.prototype.dropPins = function (models, animate, filter) {
         animate = (animate === undefined) ? true : animate;
 
@@ -99,58 +123,7 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
     MapMaker.prototype.closeInfoWindow = function () {
         if (this.infoWindow) {
             this.infoWindow.setMap(null);
-            this.infoWindow = undefined;
         }
-    };
-    MapMaker.prototype.showInfoWindow = function(marker) {
-        latLng = marker.position;
-        var self = this;
-
-        // close info window if clicking on already shown info window
-        if (this.infoWindow) {
-            if (latLng.equals(this.infoWindow.get('position'))) {
-                this.closeInfoWindow();
-                return;
-            }
-        }
-
-        this.closeInfoWindow();
-
-        // WARNING! InfoBubble.js has been modified to support pixelOffset,
-        // which for some reason isn't supported (although it is supported by
-        // the parent class of InfoBubble, InfoWindow
-        this.infoWindow = new InfoBubble({ // TODO: move styling into less/css file
-            position: latLng,
-            minWidth: 330,
-            maxWidth: 330,
-            minHeight: 130,
-            maxHeight: 710,
-            shadowStyle: 1,
-            padding: 0,
-            // Padding around the tabs, now set separately from the InfoBubble padding
-            borderRadius: 8,
-            borderWidth: 1,
-            // Now that there is no borderWidth check, you can define
-            // a borderColor and it will apply to Just the arrow
-            disableAutoPan: false,
-            hideCloseButton: true,
-            backgroundColor: '#fff',
-            backgroundClassName: 'info-container',
-            arrowSize: 20,
-            pixelOffset: [-5, 60],
-            arrowStyle: 0
-        });
-
-        this.infoWindow.setContent(marker.get('infoContent'));
-        this.infoWindow.open(this.google_map, marker);
-        $('.gm-style').removeClass(); // remove new styling introduces in GM 3.1
-
-        // close details window on click
-        // ref. to actual details div is held in this.infowindow.bubble_
-        $(this.infoWindow.bubble_).on('click', function(e) {
-          self.closeInfoWindow();
-          return;
-        });
     };
 
     // queries the Google Maps Places API for a 'PlacesResult' object,

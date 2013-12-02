@@ -2,7 +2,6 @@ module.exports = {
   api: {
     healthcheck: require("./api/healthcheck")
   },
-  browserid: require("./browserid"),
   details: require("./details"),
   gallery: require("./gallery"),
   include: function (options) {

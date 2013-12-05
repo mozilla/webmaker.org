@@ -42,9 +42,9 @@ function ($, EventModel, forms, localized) { return function (mapMaker) {
                 var start = model.beginDate ? new Date(model.beginDate) : -Infinity,
                     end   = model.endDate   ? new Date(model.endDate)   : Infinity;
 
-                return (start >= earliest && start <= latest)
-                    || (end   >= earliest && end   <= latest)
-                    || (start <= earliest && end   >= latest)
+                // ensure event start/end date take place within earliest/latest
+                // search parameters
+                return (start >= earliest && start <= latest) && (end >= earliest && end <= latest);
             });
             first_pindrop = false;
         });

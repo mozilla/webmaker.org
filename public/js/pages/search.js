@@ -23,6 +23,10 @@ define(["jquery", "uri", "base/ui", "masonry"],
       $searchField.off("keydown", onKeyDown);
     }
 
+    $searchField.click(function () {
+      $searchField.select();
+    });
+
     // Show the big green UI
     if ($searchPoster.hasClass("focus") && query) {
       $searchField.val(query.replace(/,/g, ", "));

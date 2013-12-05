@@ -10,7 +10,7 @@ require(['jquery', 'base/ui', 'base/gallery'],
     });
 
     // Hide the banner if the user already exists
-    navigator.idSSO.app.onlogin = function (loggedInUser, displayName) {
+    navigator.idSSO.app.onlogin = function () {
       $('#banner-join').hide();
       gallery.masonry.layout();
     };

@@ -12,7 +12,6 @@ define(['jquery', 'social', 'localized'],
         googleBtn = document.getElementById("google-btn"),
         twitterBtn = document.getElementById("twitter-btn"),
         fbBtn = document.getElementById("fb-btn"),
-        tool = $body.data("tool"),
         url = $body.data("url");
 
       var socialMessage = localized.get('DetailsShareTwitterMsg');
@@ -46,7 +45,6 @@ define(['jquery', 'social', 'localized'],
         e.preventDefault();
 
         var makeID = $likeBtn.data("make-id"),
-          count,
           method;
 
         if ($likeBtn.hasClass("icon-heart")) {
@@ -72,7 +70,7 @@ define(['jquery', 'social', 'localized'],
         }).fail(function (res) {
           var timer;
 
-          function removeLogInMsg(e) {
+          function removeLogInMsg() {
             window.removeEventListener("click", removeLogInMsg, false);
             window.clearTimeout(timer);
             $notLoggedInMsg.addClass("hide");

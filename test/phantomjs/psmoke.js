@@ -1,8 +1,8 @@
 /*jshint node: true, browser: true */
 /*global phantom: false */
 
+require('colors');
 var webpage = require('webpage');
-var colors = require('colors');
 var baseURL = 'http://localhost:7777';
 var routes = [
   '/',

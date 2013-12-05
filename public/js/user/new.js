@@ -7,18 +7,17 @@ define(['jquery', 'sso-ux'],
     var $errorContainer = $("#error-container");
     var csrf = $("meta[name='csrf-token']").attr("content");
     var email = $("meta[name='persona-email']").attr("content");
-    var AUDIENCE = $("meta[name='audience']").attr("content");
     var loginURL = $("meta[name='login-url']").attr("content");
 
     // Redirect if the user has an account;
-    navigator.idSSO.app.onlogin = function (user) {
+    navigator.idSSO.app.onlogin = function () {
       window.location = "/";
     };
 
     // Prevent default dropdown
     navigator.idSSO.app.onnewuser = function () {};
 
-    $formFrag.submit(function (data) {
+    $formFrag.submit(function () {
       if ($mailSignUp.is(':checked')) {
         $.ajax({
           type: 'POST',
@@ -27,10 +26,10 @@ define(['jquery', 'sso-ux'],
             email: $usernameInput.val(),
             'custom-1216': 1
           },
-          success: function (resp) {
+          success: function () {
             return true;
           },
-          error: function (resp) {
+          error: function () {
             return false;
           }
         });
@@ -48,7 +47,7 @@ define(['jquery', 'sso-ux'],
           "email": email,
           "username": $usernameInput.val()
         },
-        success: function (resp) {
+        success: function () {
           window.location = "/";
         },
         error: function (resp) {

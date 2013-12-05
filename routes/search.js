@@ -76,8 +76,7 @@ module.exports = function (req, res) {
       }
       // query can be an array of tags sometimes,
       // so force a string so that it's autoescaped
-      var query = type === "all" ? options.title.toString() : options[type].toString(),
-        showOlder = (totalHits > page * limit);
+      var query = type === "all" ? options.title.toString() : options[type].toString();
 
       if (hideNamespace) {
         query = "featured";

@@ -32,23 +32,20 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
         $selectedEl.html(html);
       }
       $newLi.click(function () {
-        var $this = $(this);
-
         $menu.find("[data-selected]").removeAttr("data-selected");
         $(this).attr("data-selected", true);
         $selectedEl.text(html);
         $menuContainer.hide();
         fn(val);
         $select.val(val);
-
       });
       $menu.append($newLi);
     });
 
-    $selectedEl.click(function (e) {
+    $selectedEl.click(function () {
       $menuContainer.toggle();
     });
-    $toggleBtn.click(function (e) {
+    $toggleBtn.click(function () {
       $menuContainer.toggle();
     });
 

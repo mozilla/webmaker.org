@@ -14,7 +14,7 @@
   "latedef": true,
   "newcap": true,
   "noempty": true,
-  "nonew": true,
   "trailing": true,
-  "undef": true
+  "undef": true,
+  "unused": "vars"
 }

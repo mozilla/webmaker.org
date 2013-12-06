@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro likeText() %}
-  <span class="like-count">{{ make.likes.length }}</span>
+  <span class="like-count">{{ make.likes.length }} </span>
   <span class="like-text">
     {% if make.likes.length %}
       {{ "Like-1" | gettext if make.likes.length == 1 else "Like-n" | gettext }}

@@ -80,7 +80,7 @@
                     class="make-like-toggle details-page-icon make-like-details {{ 'icon-heart' if hasBeenLiked else 'icon-heart-empty' }}" >
                 <span class="not-logged-in hide">{{ gettext("Log in to like") }}</span>
               </span>
-              <span class="like-count">{{ likes.length }}</span>
+              <span class="like-count">{{ likes.length }} </span>
               <span class="like-text">
                 {% if likes.length %}
                   {{ gettext("Like-1") if likes.length == 1 else gettext("Like-n") }}

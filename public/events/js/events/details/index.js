@@ -3,6 +3,16 @@ function ($, google, forms, localized) {
   localized.ready(function(){});
     var $editForm = $('form#edit-event');
 
+    $('#back-to-events a').click(function(e) {
+      e.preventDefault();
+      if (document.referrer) {
+        window.location = document.referrer;
+      }
+      else {
+        window.location = '/' + localized.getCurrentLang() + '/events/';
+      }
+    });
+
     $editForm.validate({
         rules: {
             registerLink: 'url'

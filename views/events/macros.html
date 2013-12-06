@@ -1,0 +1,137 @@
+{% macro eventsOverlay(actionURL) %}
+<div class="map-overlay">
+  <form id="find-event" action="{{actionURL}}" method="GET">
+    <h2 class="header"><span class="icon-search"></span>{{ gettext("Find an Event") }}</h2>
+    <input name="_csrf" type="hidden" value="{{ csrf }}" />
+    <span class="ui-input ui-append">
+      <img class="pointer-icon"  src="/img/map/pin-event-dim.png">
+      <input name="where" type="text" placeholder="{{ gettext("Where?") }}" />
+      <span class="icon-remove clear-input"></span>
+    </span>
+    <div class="break-right">
+      <span class="ui-input ui-append">
+        <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+        <input name="when-start"  type="text" placeholder="{{ gettext("Start Date") }}" class="datepicker" />
+        <span class="icon-remove clear-input"></span>
+      </span>
+      <span class="ui-input ui-append">
+        <img class="calendar-icon" src="/img/events-icon-calendar-bw.png">
+        <input name="when-end"  type="text" placeholder="{{ gettext("End Date") }}" class="datepicker" />
+        <span class="icon-remove clear-input"></span>
+      </span>
+      <button type="submit" class="icon-chevron-right"></button>
+    </div>
+  </form>
+
+  <div class="overlay-buttons">
+    {% if actionURL == '/events/list' %}
+    <a href="/{{localeInfo.lang}}/events" class="header toggleListView">
+      <span class="icon-map-marker"></span> {{ gettext("ToMapView") }}
+    </a>
+    {% endif %}
+    {% if actionURL == '/events' %}
+    <a href="/{{localeInfo.lang}}/events/list" class="header toggleListView">
+      <span class="icon-list-alt"></span> {{ gettext("ToListView") }}
+    </a>
+    {% endif %}
+    <a href="/{{ localeInfo.lang }}/login" class="header loggedout-expand-form-button">
+      <span class="icon-plus"></span>
+      <span class="event-button-text">
+        {% if username %}
+        {{ gettext("Add an Event") }}
+        {% else %}
+        {{ gettext("Log in to add an Event") }}
+        {% endif %}
+      </span>
+    </a>
+    <a href="/{{ localeInfo.lang }}/event-guides" id="event-guides" class="header">
+      {{ gettext("Event Guides") }}
+      <span class="icon-chevron-right"></span>
+    </a>
+  </div>
+
+  <form id="create-event" class="hidden" action="{{actionURL}}" method="POST">
+    <a class="header expand-form-button"><span class="icon-remove"></span>{{ gettext("Add an Event") }}</a><br />
+    <span class="create-event-form">
+      <fieldset>
+        <label for="event_title">{{ gettext("Name your event") }}</label>
+        <span class="ui-input ui-append">
+          <input id="event_title" name="title" {{ tabIndex() }}
+          placeholder="{{ gettext("Engage by title") }}" /></span>
+
+        <label for="event_description">{{ gettext("Describe your event") }}</label>
+        <textarea id="event_description" name="description" data-provide="markdown" {{ tabIndex() }}
+          placeholder="{{ gettext("Advertize your event") }}" ></textarea><br />
+      </fieldset>
+      <fieldset>
+        <label for="event_attendees">{{ gettext("Num of Attendees expected") }}</label>
+        <div><select id="event_attendees" name="attendees" {{ tabIndex() }}>
+            <option selected value='5'>&lt; 10</option>
+            <option value='15'>10 - 20</option>
+            <option value='35'>20 - 50</option>
+            <option value='75'>50 - 100</option>
+            <option value='150'>100 - 200</option>
+            <option value='350'>200 - 500</option>
+            <option value=6>500 +</option>
+        </select></div><br />
+
+        <div>
+          <label for="event_address">{{ gettext("Event location") }}</label>
+          <span class="cell ui-input ui-append">
+            <input id="event_address" name="address" type="text" {{ tabIndex() }} placeholder="{{ gettext("Enter a location") }}" autocomplete="off"></input>
+          </span>
+        </div>
+
+        <input name="latitude"  type="hidden" />
+        <input name="longitude" type="hidden" />
+
+        <div>
+          <label for="event_registerLink">{{ gettext("Event Link") }}</label>
+          <span class="registerLink cell ui-input ui-append">
+            <input id="event_registerLink" name="registerLink" type="url" {{ tabIndex() }}
+            placeholder="{{ gettext("Link to registration page") }}" /> </span>
+        </div>
+
+        {% for i in ['begin','end'] %}
+        {% if i == "begin" %}
+        <label for="event_{{i}}Date"> {{ gettext("Event begins") }} </label>
+        {% else %}
+        <label for="event_{{i}}Date"> {{ gettext("Event ends") }} </label>
+        {% endif %}
+        <div class='datetime'>
+          <span class="ui-append ui-select ui-input select-date">
+            <span class="icon-calendar"></span>
+            <input id="event_{{i}}Date" name="{{i}}Date" type="text" class="datepicker" {{ tabIndex() }}
+            placeholder="--/--/--" />
+            <a class="icon icon-chevron-down"></a>
+          </span>
+          <label class="switch"></label>
+          <span class="ui-append ui-select ui-input select-time">
+            <input name="{{i}}Time" type="text" class="timepicker" {{ tabIndex() }}
+            placeholder="--:--  --" />
+            <a class="icon icon-chevron-down"></a>
+          </span>
+        </div>
+        {% endfor %}
+
+        <div class="upload">
+          <input type="file" accept="image/*" />
+          <input name="picture" type="hidden" />
+          <div id="image-upload">{{ gettext("Upload an image") }}</div>
+        </div>
+        <input name="_csrf" type="hidden" value="{{ csrf }}" />
+
+        <button type="submit" data-disable-with="{{ gettext('Submitting...') }}">
+          {{ gettext("Submit your event") }}
+          <span class="icon-chevron-right"></span>
+        </button>
+      </fieldset>
+    </span>
+    <span class="create-event-confirmation hidden">
+      <div class="confirmation-message">{{ gettext("Event added") }}</div>
+      <div class="confirmation-link">{{ gettext("Check out your page") }} <a></a></div>
+      <div class="confirmation-info">{{ gettext("Next step help") }} <a href="/{{ localeInfo.lang }}/event-guides">{{ gettext("event guides") }}</a>.</div>
+    </span>
+  </form>
+</div>
+{% endmacro %}

@@ -1,12 +1,13 @@
 {% extends "events/layout.html" %}
 {% include "events/macros.html" %}
 
-{% block title %}{{ gettext("Event Map") }}{% endblock %}
+{% block title %}{{ gettext("Event List") }}{% endblock %}
 
 {% block body %}
 
-{{ eventsOverlay("/events") }}
-<div id="map-canvas"></div>
+{{ eventsOverlay("/events/list") }}
+<div id="list">
+</div>
 
 {% endblock %}
 

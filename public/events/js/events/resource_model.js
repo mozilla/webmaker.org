@@ -50,8 +50,8 @@ define(['jquery'], function ($) {
             }, 'json');
         };
 
-        Model.getEventsBetweenDates = function (start, end, cb) {
-            $.get(this._uri, {startRange: start, endRange: end}, function (data, textStatus, jqXHR) {
+        Model.getEventsBetweenDates = function (start, end, where, uri, cb) {
+            $.get(uri, {startRange: start, endRange: end, whereAt: where}, function (data, textStatus, jqXHR) {
                 var plural = Model._plural;
                 if (!data[plural]) data[plural] = [];
                 var collection = data[plural].map(function (event) {

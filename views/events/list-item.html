@@ -1,0 +1,18 @@
+{% if events.length > 0 %}
+{% for item in events %}
+<a href="{{localeInfo.lang}}/events/{{item.id}}">
+  <div class="eventlist-item">
+    <div class="date">
+      {{ item.datetimeListHTML() }}
+    </div>
+    <div class="info">
+      <h3 class="title">{{ item.title }}</h3>
+      <span class="description">{{ item.description }}</span>
+      <span class="address">{{ item.address }}</span>
+    </div>
+  </div>
+</a>
+{% endfor %}
+{% else %}
+<h1>{{ "NoEventsFound" | gettext }}</h1>
+{% endif  %}

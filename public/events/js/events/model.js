@@ -1,5 +1,4 @@
-define(['resource_model', 'localized', 'markdown'], function (ResourceModel, localized) {
-
+define(['resource_model', 'localized', 'moment', 'markdown'], function (ResourceModel, localized, moment) {
     var EventModel = new ResourceModel({
         name:   'event',
         fields: [ 'id', 'title', 'description', 'address', 'latitude', 'longitude',
@@ -22,6 +21,28 @@ define(['resource_model', 'localized', 'markdown'], function (ResourceModel, loc
               + fmtRange(bD, eD)
               + fmtRange(bT, eT)
             + '</div></div>';
+    };
+
+    EventModel.prototype.datetimeListHTML = function() {
+      moment.lang(localized.langToMomentJSLang(lang));
+      var bD = this.beginDate, eD = this.endDate,
+          momentBD = moment(bD).format('ll'),
+          momentED = moment(eD).format('ll');
+
+
+        if (!bD && !eD) return '';
+        var html = '<div>'
+          + momentBD
+          + '</div>';
+
+        if (eD && bD !== eD) {
+          html += '<div class="divider">&nbsp;&ndash;</div>'
+          + '<div class="endDate">'
+          + momentED
+          + '</div>';
+        }
+
+        return html;
     };
 
     EventModel.prototype.addressHTML = function() {

@@ -1,5 +1,5 @@
-define(['jquery', 'model', 'forms', 'localized', 'bootstrap-markdown', 'domReady!'],
-function ($, EventModel, forms, localized) { return function (mapMaker) {
+define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'bootstrap-markdown', 'domReady!'],
+function ($, EventModel, forms, localized, nunjucks) { return function (mapMaker) {
 
     var $findForm   = $('form#find-event');
     $findForm.find('button[type="submit"]').click(function (ev) {
@@ -37,7 +37,7 @@ function ($, EventModel, forms, localized) { return function (mapMaker) {
         var earliest = target_start ? new Date(target_start) : null,
         latest   = target_end   ? new Date(target_end)   : null;
 
-        EventModel.getEventsBetweenDates(earliest, latest, function (models) {
+        EventModel.getEventsBetweenDates(earliest, latest, null, '/events', function (models) {
 
             mapMaker.clearMarkers().dropPins(models, first_pindrop, function (model) {
                 return true;
@@ -158,6 +158,7 @@ function ($, EventModel, forms, localized) { return function (mapMaker) {
             $('#map-canvas').unbind( 'click', clickCallback );
         });
     }
+
     // setup form toggle button
     function toggleCreateForm() {
         $createForm[0].reset();

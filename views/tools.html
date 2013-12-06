@@ -2,8 +2,14 @@
 {% include 'macros.html' %}
 {% block title %}{{ gettext("Tools") }}{% endblock %}
 {% block midbar %}
-{% set header = gettext("toolsHeader") %}
-{{ galleryHeader(header, "", []) }}
+
+{% if flags.hourofcode and localeInfo.lang == 'en-US' %}
+  {% include 'hourofcode.html' %}
+{% else %}
+  {% set header = gettext("toolsHeader") %}
+  {{ galleryHeader(header, "", []) }}
+{% endif %}
+
 {% endblock %}
 {% block body %}
 <div class="ui-wrapper ui-body-nobg">

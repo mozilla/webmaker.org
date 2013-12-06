@@ -191,7 +191,8 @@ app.locals({
   ga_domain: env.get("GA_DOMAIN"),
   supportedLanguages: i18n.getLanguages(),
   listDropdownLang: i18n.getSupportLanguages(),
-  PROFILE_URL: env.get("PROFILE_URL")
+  PROFILE_URL: env.get("PROFILE_URL"),
+  flags: env.get("FLAGS") || {}
 });
 
 app.use(function (req, res, next) {

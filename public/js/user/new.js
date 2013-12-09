@@ -7,7 +7,9 @@ define(['jquery', 'sso-ux'],
     var $errorContainer = $("#error-container");
     var csrf = $("meta[name='csrf-token']").attr("content");
     var email = $("meta[name='persona-email']").attr("content");
-    var loginURL = $("meta[name='login-url']").attr("content");
+
+    // custom relation, see http://wiki.whatwg.org/wiki/RelExtensions
+    var loginURL = $("link[rel='login']").attr("content");
 
     // Redirect if the user has an account;
     navigator.idSSO.app.onlogin = function () {

@@ -6,3 +6,6 @@ bower_components/
 webmaker.sqlite
 *~
 public/events/uploads/
+locale/
+!locale/en_US/*
+!locale/localeinfo.json

@@ -8,7 +8,7 @@
 {% set header = gettext("starterMakesHeader") %}
 {% set desc = gettext("starterMakesDesc") %}
 
-{% if flags.hourofcode and localeInfo.lang == 'en-US' %}
+{% if flags.hourofcode and (localeInfo.lang == 'en-US' or localeInfo.lang == 'en-GB' or localeInfo.lang == 'en-CA')  %}
   {% include 'hourofcode.html' %}
 {% else %}
   {{ galleryHeader(header, desc) }}

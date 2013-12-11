@@ -3,7 +3,7 @@
 {% block title %}{{ gettext("Tools") }}{% endblock %}
 {% block midbar %}
 
-{% if flags.hourofcode and localeInfo.lang == 'en-US' %}
+{% if flags.hourofcode and (localeInfo.lang == 'en-US' or localeInfo.lang == 'en-GB' or localeInfo.lang == 'en-CA')  %}
   {% include 'hourofcode.html' %}
 {% else %}
   {% set header = gettext("toolsHeader") %}

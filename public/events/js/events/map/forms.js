@@ -31,20 +31,16 @@ function ($, EventModel, forms, localized) { return function (mapMaker) {
     $findForm.on("submit", function(ev) {
         ev.preventDefault();
 
-        EventModel.all(function (models) {
-            var target_start = $when_start[0].value,
-                target_end   = $when_end[0].value;
+        var target_start = $when_start[0].value,
+        target_end   = $when_end[0].value;
 
-            var earliest = target_start ? new Date(target_start) : -Infinity,
-                latest   = target_end   ? new Date(target_end)   : Infinity;
+        var earliest = target_start ? new Date(target_start) : null,
+        latest   = target_end   ? new Date(target_end)   : null;
+
+        EventModel.getEventsBetweenDates(earliest, latest, function (models) {
 
             mapMaker.clearMarkers().dropPins(models, first_pindrop, function (model) {
-                var start = model.beginDate ? new Date(model.beginDate) : -Infinity,
-                    end   = model.endDate   ? new Date(model.endDate)   : Infinity;
-
-                // ensure event start/end date take place within earliest/latest
-                // search parameters
-                return (start >= earliest && start <= latest) && (end >= earliest && end <= latest);
+                return true;
             });
             first_pindrop = false;
         });

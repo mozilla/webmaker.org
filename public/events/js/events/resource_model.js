@@ -50,6 +50,17 @@ define(['jquery'], function ($) {
             }, 'json');
         };
 
+        Model.getEventsBetweenDates = function (start, end, cb) {
+            $.get(this._uri, {startRange: start, endRange: end}, function (data, textStatus, jqXHR) {
+                var plural = Model._plural;
+                if (!data[plural]) data[plural] = [];
+                var collection = data[plural].map(function (event) {
+                    return new Model(event);
+                });
+                if (cb) cb(collection, textStatus, jqXHR);
+            }, 'json');
+        };
+
         return Model;
     }
 

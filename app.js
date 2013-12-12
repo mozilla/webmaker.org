@@ -165,7 +165,7 @@ app.use("/bower", express.static(path.join(__dirname, "bower_components")));
 app.use(i18n.middleware({
   supported_languages: env.get("SUPPORTED_LANGS"),
   default_lang: "en-US",
-  mappings: env.get("LANG_MAPPINGS"),
+  mappings: require("webmaker-locale-mapping"),
   translation_directory: path.resolve(__dirname, "locale")
 }));
 

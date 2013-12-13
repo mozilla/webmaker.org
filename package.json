@@ -1,11 +1,11 @@
 {
   "name": "webmaker.org",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "private": true,
   "scripts": {
     "test": "grunt validate",
     "postinstall": "bower install",
-    "download-locales":  "webmaker-download-locales webmaker"
+    "download-locales": "webmaker-download-locales webmaker"
   },
   "repository": {
     "type": "git",

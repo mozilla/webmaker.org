@@ -28,6 +28,26 @@ define(['jquery'], function ($) {
       window.location = '/' + lang + '/search/?type=all&q=' + encodeURIComponent($searchInput.val());
     }
 
+    // Nav Accordion (For mobile)
+
+    var $linkGroupHeaders = $expandedNav.find('.navigation-list li:first-child');
+    var linkGroups = [];
+    var $activeGroup;
+
+    $expandedNav.find('.navigation-list').each(function () {
+      $(this).addClass('collapsed');
+      linkGroups.push($(this).find('li:not(:first-child)'));
+    });
+
+    $linkGroupHeaders.on('click', function () {
+      if ($activeGroup) {
+        $activeGroup.addClass('collapsed');
+      }
+
+      $(this).parent().toggleClass('collapsed');
+      $activeGroup = $(this).parent();
+    });
+
     $expandedNavTriggers.on('click', toggleExpandedMenu);
 
     $searchTrigger.on('click', doSearch);

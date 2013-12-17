@@ -10,7 +10,7 @@
   "a custom homepage for the New York Times": "a custom homepage for the New York Times",
   "a documentary with dynamic links": "a documentary with dynamic links",
   "a funny remix of your best friend's favourite site": "a funny remix of your best friend's favourite site",
-  "A global community that wants": "A global community that wants to teach the web right is creating a <a href='https://wiki.mozilla.org/Learning/WebLiteracyStandard'>Web Literacy Standard</a>. We're trying to build consensus around the skills, competencies and literacies necessary to read, write and participate on the web - now and in the future.",
+  "A global community that wants": "A global community that wants to teach the web right is creating a <a href='/{{localeInfo.lang}}/standard'>Web Literacy Standard</a>. We're trying to build consensus around the skills, competencies and literacies necessary to read, write and participate on the web - now and in the future.",
   "A Hack Jam is a great way to": "A Hack Jam is a great way to:",
   "a hilarious meme": "a hilarious meme",
   "A Hive Pop-Up is fantastic way to:": "A Hive Pop-Up is fantastic way to:",

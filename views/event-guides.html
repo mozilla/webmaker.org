@@ -98,9 +98,9 @@
         <li>
           <i class="icon-angle-right"></i>
           <h3>
-            <a href="/events">{{ gettext("OFOAddEvent") }}</a>
+            <a href="/{{localeInfo.lang}}/events">{{ gettext("OFOAddEvent") }}</a>
           </h3>
-          <p>{{ gettext("OFOAddEventDesc") | safe }}</p>
+          <p>{{ gettext("OFOAddEventDesc") | instantiate | safe }}</p>
         </li>
         <li>
           <i class="icon-angle-right"></i>

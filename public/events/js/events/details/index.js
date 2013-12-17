@@ -1,5 +1,6 @@
-define(['jquery', 'google', 'forms', 'domReady!'],
-function ($, google, forms) {
+define(['jquery', 'google', 'forms', 'localized', 'domReady!'],
+function ($, google, forms, localized) {
+  localized.ready(function(){});
     var $editForm = $('form#edit-event');
 
     $editForm.validate({
@@ -39,16 +40,22 @@ function ($, google, forms) {
                 resizable:  false,
                 height:     160,
                 modal:      true,
-                buttons: {
-                    'Do It!': function() {
-                        delete_safety = 0;
-                        $(this).dialog('close');
-                        $deleteSubmit.click();
-                    },
-                    Cancel: function() {
-                        $(this).dialog('close');
+                buttons: [
+                  {
+                    text: localized.get('Confirm'),
+                    click: function() {
+                      delete_safety = 0;
+                      $(this).dialog('close');
+                      $deleteSubmit.click();
                     }
-                }
+                  },
+                  {
+                    text: localized.get('Cancel'),
+                    click: function() {
+                      $(this).dialog('close');
+                    }
+                  }
+                ]
             });
             return false;
         }
@@ -57,7 +64,7 @@ function ($, google, forms) {
 
     var ac = new google.maps.places.Autocomplete(
             $editForm.find('input[name="address"]')[0], { types: ['geocode'] });
-    google.maps.event.addListener(ac, 'place_changed', function() {        
+    google.maps.event.addListener(ac, 'place_changed', function() {
         var place = ac.getPlace();
         var loc = { latitude:   place.geometry.location.lat(),
                     longitude:  place.geometry.location.lng() };

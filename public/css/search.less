@@ -15,10 +15,21 @@ span.icon-caret-down {
     padding: 0;
   }
   .search-poster {
-    //display: none; // XXX: disable for now
     background: @green;
     position: relative;
     font-size: 3em;
+    @media only screen
+    and (min-width: @width-small)
+    and (max-width: @width-medium){
+    font-size: 1.5em;
+    text-align:center;
+    }
+    @media only screen
+    and (min-width: @width-medium)
+    and (max-width: @width-large){
+    font-size: 2em;
+    text-align:left;
+    }
     color: #FFF;
     padding: 2em 0 2.6em 0;
     text-align: center;
@@ -63,9 +74,19 @@ span.icon-caret-down {
         border: 1px solid darken( #E0EBEE, 5% );
         color: @grey;
         background: #FFF;
-        padding: 0 1em;
+        padding-left: 1em;
         .border-box;
         .width( 3 );
+         @media only screen
+         and (min-width: @width-small)
+         and (max-width: @width-medium){
+        .width(1);
+        }
+         @media only screen
+         and (min-width: @width-medium)
+         and (max-width: @width-large){
+        .width(5);
+        }
         &:focus {
           border: 1px solid darken( #E0EBEE, 15% );
           &+.search-btn {
@@ -82,6 +103,24 @@ span.icon-caret-down {
     font-weight: normal;
     padding-bottom: @gutter * @unit;
     font-size: 1.5em;
+    @media only screen
+    and (min-width: @width-small)
+    and (max-width: @width-medium){
+    font-size: 1em;
+    display: block;
+    text-align:center;
+    line-height: 1;
+    margin-top: 0;
+    }
+    @media only screen
+    and (min-width: @width-medium)
+    and (max-width: @width-large){
+    font-size: 2em;
+    display: block;
+    text-align:center;
+    line-height: 1;
+    margin-top: 0;
+    }
   }
   .giant-search,
   .search-btn,
@@ -100,6 +139,20 @@ span.icon-caret-down {
     background: none;
     color: inherit;
     cursor: pointer;
+    @media only screen
+    and (min-width: @width-small)
+    and (max-width: @width-medium){
+    float:right;
+    font-size:1em;
+    padding:0px;
+    }
+    @media only screen
+    and (min-width: @width-medium)
+    and (max-width: @width-large){
+    float:right;
+    font-size:1em;
+    padding:0px;
+    }
   }
   .search-filter {
     position: relative;
@@ -157,6 +210,19 @@ span.icon-caret-down {
       transition: background-color 0.3s ease;
       outline: none;
       background: lighten( @green, 5% );
+    }
+    @media only screen
+    and (min-width: @width-small)
+    and (max-width: @width-medium){
+    text-align:left;
+    width:140px;
+    }
+    @media only screen
+    and (min-width: @width-medium)
+    and (max-width: @width-large){
+    text-align:left;
+    width:600px;
+    
     }
   }
   .search-title {
@@ -220,15 +286,15 @@ span.icon-caret-down {
   background: url("../img/cat.gif") center no-repeat;
 }
 
-.gallery-hide {
-    opacity: 0; // Fade in on 'layoutComplete'
+.packery-hide {
+    opacity: 0; // Fade in on Packery's 'layoutComplete'
   }
 
 .search-gallery {
   transition: opacity 0.5s ease-out;
   /*********************************************************
-  * MAKES
-  */
+* MAKES
+*/
   .make {
     position: relative;
     border-radius: 0;
@@ -253,10 +319,13 @@ span.icon-caret-down {
       .width( 4 );
       .height( 3 );
     }
+    .fork-btn-label {
+        border: 1px solid #FFF;
+    }
   }
   /*********************************************************
-  * Make elements
-  */
+* Make elements
+*/
   .btn-container {
     opacity: 0;
     transition: opacity 0.2s ease;
@@ -286,8 +355,8 @@ span.icon-caret-down {
     }
   }
   /*********************************************************
-  * Hover
-  */
+* Hover
+*/
   .make:hover {
     box-shadow: 0 6px 4px -4px rgba( 0, 0, 0, 0.6 );
     .btn-container {
@@ -299,8 +368,8 @@ span.icon-caret-down {
   }
 
   /*********************************************************
-  * Mobile
-  */
+* Mobile
+*/
   @media (max-width: @width-small) {
     .make {
       width: 100%;
@@ -308,4 +377,3 @@ span.icon-caret-down {
     }
   }
 }
-

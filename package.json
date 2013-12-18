@@ -34,7 +34,7 @@
     "sequelize": "2.0.x",
     "sqlite3": "2.1.17",
     "uuid": "1.4.x",
-    "webmaker-download-locales": "0.0.6",
+    "webmaker-download-locales": "0.1.0",
     "webmaker-locale-mapping": "latest",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.2.tar.gz",
     "webmaker-loginapi": "https://github.com/mozilla/node-webmaker-loginapi/tarball/v0.1.18",

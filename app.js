@@ -7,6 +7,7 @@ var express = require("express"),
   cluster = require("cluster"),
   habitat = require("habitat"),
   helmet = require("helmet"),
+  http = require("http"),
   nunjucks = require("nunjucks"),
   path = require("path"),
   lessMiddleWare = require("less-middleware"),
@@ -238,13 +239,19 @@ app.use(function (req, res, next) {
 });
 // Final error-handling middleware
 app.use(function (err, req, res, next) {
-  err.status = err.status || 500;
+  if (typeof err === "string") {
+    console.error("You're passing a string into next(). Go fix this: %s", err);
+  }
+
+  var error = {
+    message: err.toString(),
+    code: http.STATUS_CODES[err.status] ? err.status : 500
+  };
+
   console.error(err);
-  res.status(err.status);
-  res.render('error.html', {
-    message: err.message,
-    code: err.status
-  });
+
+  res.status(error.status);
+  res.render('error.html', error);
 });
 
 require("./lib/loginapi")(app, {

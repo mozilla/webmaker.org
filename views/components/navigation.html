@@ -24,10 +24,16 @@
     {% for section in navigation %}
       <ul data-section="{{section.id}}" class="navigation-list navigation-wrapper{% if section.id == currentSection %} active{% endif %}">
         {% for page in section.pages %}
-        <li><a
+        <li {% if page.icon %}style="padding-left: 10px;"{% endif %}>
+
+            <a
               data-page="{{page.id}}" {% if page.id == currentPage %}
               class="active"{% endif %}
-              href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}>
+              href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}
+              >
+              {% if page.icon %}
+              <img src="{{page.icon}}" style="width: 28px;height: 28px;position: absolute;left: -15px;"/>
+              {% endif %}
               {{gettext(page.title)}}
             </a>
         </li>

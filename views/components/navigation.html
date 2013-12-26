@@ -24,7 +24,7 @@
     {% for section in navigation %}
       <ul data-section="{{section.id}}" class="navigation-list navigation-wrapper{% if section.id == currentSection %} active{% endif %}">
         {% for page in section.pages %}
-        <li {% if page.icon %}style="padding-left: 10px;"{% endif %}>
+        <li {% if page.icon %}style="padding-left: 12px; padding-right: 4px;"{% endif %}>
 
             <a
               data-page="{{page.id}}" {% if page.id == currentPage %}
@@ -32,7 +32,7 @@
               href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}
               >
               {% if page.icon %}
-              <img src="{{page.icon}}" style="width: 28px;height: 28px;position: absolute;left: -15px;"/>
+              <img src="/img/empty.png" class="{{page.icon}}"/>
               {% endif %}
               {{gettext(page.title)}}
             </a>

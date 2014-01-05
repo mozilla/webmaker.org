@@ -1,6 +1,18 @@
 @profileImgSize: 35px;
 
 body#events.details {
+    @media only screen and (max-width: 640px) {
+      #event-description {
+        padding: 0 !important;
+
+        div {
+          padding-left: 0 !important;
+          margin-left: 0 !important;
+          left: 0 !important;
+        }
+      }
+    }
+
     background: #e7edf0;
 
     #details-pane {
@@ -18,7 +30,6 @@ body#events.details {
             position:   relative;
             left:       20px;
 
-            line-height:    35px;
             vertical-align: bottom;
 
             .owner-btn {
@@ -36,12 +47,16 @@ body#events.details {
             display:    inline-block;
             margin:     4px;
 
-            .datetime-range,.address {
+            .datetime-range {
                 display: inline-block;
                 margin: 0px 4px;
                 font-size: 14px;
-
                 vertical-align: top;
+            }
+            .address {
+                display: inline;
+                margin: 0px 4px;
+                font-size: 14px;
             }
             img.calendar-icon {
                 margin-left: 3px;

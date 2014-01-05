@@ -76,6 +76,20 @@ function ($, UI, MapMaker) {
       showDuration: true
     });
 
+    $('#create-event .hasDatepicker').on('change', function(e) {
+      var begin = $('#event_beginDate').val();
+      var end = $('#event_endDate').val();
+      if (begin !== end) {
+        $endTime.timepicker('option', {
+          showDuration: false
+        });
+      } else {
+        $endTime.timepicker('option', {
+          showDuration: true
+        });
+      }
+    });
+
     return {
         setupImageUpload: function ($form) {
             var $fileInput = $form.find('input[type="file"]');

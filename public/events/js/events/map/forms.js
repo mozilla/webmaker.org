@@ -45,6 +45,7 @@ function ($, EventModel, forms, localized, nunjucks) { return function (mapMaker
             first_pindrop = false;
         });
     });
+
     $findForm.submit();
     mapMaker.setupAutocomplete($where[0], true, function (place) {
         mapMaker.closeInfoWindow();
@@ -60,6 +61,20 @@ function ($, EventModel, forms, localized, nunjucks) { return function (mapMaker
             this.updateLocation();
         }
     });
+
+    // check for query string search
+    // code taken from https://developer.mozilla.org/en-US/docs/Web/API/window.location
+    var oGetVars = {};
+    if (window.location.search.length > 1) {
+      for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&"); nKeyId < aCouples.length; nKeyId++) {
+        aItKey = aCouples[nKeyId].split("=");
+        oGetVars[unescape(aItKey[0])] = aItKey.length > 1 ? unescape(aItKey[1]) : "";
+      }
+    }
+    if (oGetVars.place) {
+      $where.val(unescape(oGetVars.place)); // make sure we escape chars
+      $where.trigger('blur'); // google maps search trigger
+    }
 
     $.validator.addMethod('afterStartDate', function(val, endElem) {
         var start   = $('#event_beginDate').val(),

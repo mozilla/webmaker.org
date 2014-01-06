@@ -35,6 +35,9 @@ function ($, google, InfoBubble, OverlappingMarkerSpiderfier, MarkerClusterer) {
           self.infoWindow.setContent(marker.get('infoContent'));
           self.infoWindow.open(self.google_map, marker);
           $('.gm-style').removeClass(); // remove new styling introduces in GM 3.1
+          setTimeout(function() { // wait a little, then center info bubble, not marker
+            self.google_map.panBy(0, -150);
+          }, 400);
         });
 
         google.maps.event.addListener(this.google_map, 'zoom_changed', function(ev) {

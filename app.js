@@ -250,7 +250,7 @@ app.use(function (err, req, res, next) {
 
   console.error(err);
 
-  res.status(error.status);
+  res.status(error.code);
   res.render('error.html', error);
 });
 

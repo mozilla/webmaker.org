@@ -8,7 +8,7 @@ requirejs.config({
     'moment': '/bower/moment/min/moment+langs.min',
     'social': '/js/lib/socialmedia',
     'uri': '/js/lib/uri',
-    'tabzilla': 'https://www.mozilla.org/tabzilla/media/js/tabzilla',
+    'tabzilla': 'https://mozorg.cdn.mozilla.net/tabzilla/tabzilla',
     // XXX: window.__loginAPI gets templated in server-side in layout.html
     'sso-ux': window.__loginAPI + '/js/sso-ux',
     'nunjucks': '/bower/nunjucks/browser/nunjucks-dev',

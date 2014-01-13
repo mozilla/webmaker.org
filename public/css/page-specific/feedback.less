@@ -224,12 +224,6 @@ body#feedback {
 
 // Custom Icons
 
-#fill-out-survey {
-  h2::before {
-    content: "\F0CA"; // list
-  }
-}
-
 #submit-a-bug {
   h2::before {
     content: "\F188"; // bug
@@ -239,37 +233,5 @@ body#feedback {
 #host-user-testing {
   h2::before {
     content: "\F0C0"; // group
-  }
-}
-
-.img-and-button {
-  .display-flex;
-  .align-items(center);
-
-  img {
-    flex: 1;
-    max-width: 100%;
-    vertical-align: middle;
-  }
-
-  a {
-    margin-left: 40px;
-    flex: 1;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  @media (max-width: @width-medium) {
-    display: block;
-    text-align: center;
-
-    img {
-      margin-bottom: 20px;
-      max-width: 90%;
-    }
-
-    a {
-      margin-left: 0;
-    }
   }
 }

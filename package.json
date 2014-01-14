@@ -31,7 +31,7 @@
     "newrelic": "1.2.0",
     "noxmox": "0.2.x",
     "nunjucks": "0.1.10",
-    "sequelize": "2.0.x",
+    "sequelize": "1.7.0-rc1",
     "sqlite3": "2.1.17",
     "uuid": "1.4.x",
     "webmaker-download-locales": "0.1.0",

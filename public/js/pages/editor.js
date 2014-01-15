@@ -78,7 +78,6 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
           data[i].avatar = generateGravatar(data[i].emailHash);
           data[i].updatedAt = moment(data[i].updatedAt).fromNow();
           data[i].createdAt = moment(data[i].createdAt).fromNow();
-          data[i].remixurl = data[i].url + "/remix";
           var $item = $($.parseHTML(nunjucks.env.render(MAKE_VIEW, {
             make: data[i]
           }))[0]);

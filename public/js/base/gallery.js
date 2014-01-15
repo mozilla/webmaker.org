@@ -160,7 +160,6 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
             data[i].avatar = generateGravatar(data[i].emailHash);
             data[i].updatedAt = moment(data[i].updatedAt).fromNow();
             data[i].createdAt = moment(data[i].createdAt).fromNow();
-            data[i].remixurl = data[i].url + '/remix';
             data[i].hasBeenLiked = data[i].likes.some(hasUserLikedCheck);
             if (isStickySearch && FRONTPAGE_LARGE.indexOf(i) > -1) {
               data[i].size = "large";

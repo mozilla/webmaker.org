@@ -211,7 +211,7 @@ InfoBubble.prototype.buildDom_ = function() {
   close.style['border'] = 0;
   close.style['zIndex'] = this.baseZIndex_ + 1;
   close.style['cursor'] = 'pointer';
-  close.src = 'http://maps.gstatic.com/intl/en_us/mapfiles/iw_close.gif';
+  close.src = 'https://maps.gstatic.com/intl/en_us/mapfiles/iw_close.gif';
 
   var that = this;
   google.maps.event.addDomListener(close, 'click', function() {
@@ -907,7 +907,7 @@ InfoBubble.prototype.draw = function() {
   }
 
   var left = pos.x - (width * arrowPosition);
-  
+
   // PIXEL_OFFSET_
   this.bubble_.style['top'] = this.px(top);
   this.bubble_.style['left'] = this.px(left);

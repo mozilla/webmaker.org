@@ -4,6 +4,11 @@ requirejs.config({
     'cookie': '/bower/cookie-js/cookie',
     'text': '/bower/text/text',
     'jquery': '/bower/jquery/jquery.min',
+    'jquery-ui': '/bower/jquery-ui/ui/minified/jquery.ui.core.min',
+    'jquery-ui.widget': '/bower/jquery-ui/ui/minified/jquery.ui.widget.min',
+    'jquery-ui.position': '/bower/jquery-ui/ui/minified/jquery.ui.position.min',
+    'jquery-ui.menu': '/bower/jquery-ui/ui/minified/jquery.ui.menu.min',
+    'jquery-ui.autocomplete': '/bower/jquery-ui/ui/minified/jquery.ui.autocomplete.min',
     'jquery.powertip': '/js/lib/jquery.powertip',
     'moment': '/bower/moment/min/moment+langs.min',
     'social': '/js/lib/socialmedia',
@@ -25,7 +30,12 @@ requirejs.config({
   },
   shim: {
     'tabzilla': ['jquery'],
-    'sso-ux': ['jquery']
+    'sso-ux': ['jquery'],
+    'jquery-ui': ['jquery'],
+    'jquery-ui.widget': ['jquery-ui'],
+    'jquery-ui.position': ['jquery-ui'],
+    'jquery-ui.menu': ['jquery-ui'],
+    'jquery-ui.autocomplete': ['jquery-ui', 'jquery-ui.widget', 'jquery-ui.position', 'jquery-ui.menu'],
   }
 });
 

@@ -1,4 +1,4 @@
-define(["jquery", "uri", "base/ui", "masonry"],
+define(["jquery", "uri", "base/ui", "masonry", "jquery-ui.autocomplete"],
   function ($, URI, UI, Masonry) {
     "use strict";
 
@@ -10,6 +10,7 @@ define(["jquery", "uri", "base/ui", "masonry"],
       $forkBtns = $(".make-fork-btn"),
       $userNameLinks = $(".user-link"),
       mainGallery = $(".main-gallery")[0],
+      tagSuggestionEnabled = false,
       totalHits,
       LIMIT,
       masonry,
@@ -35,6 +36,42 @@ define(["jquery", "uri", "base/ui", "masonry"],
       $searchField.on("keydown", onKeyDown);
     }
 
+    $searchField.autocomplete({
+      source: function (request, response) {
+        var term = request.term;
+        if (term === "#") {
+          return response();
+        }
+        $.getJSON($("meta[name='make-endpoint']").attr("content") + "/api/20130724/make/tags?t=" + term.replace(/(^#)/, ""), function (data) {
+          response(data.tags.map(function (item) {
+            return item.term;
+          }));
+        });
+      },
+      minLength: 1,
+      delay: 200,
+      select: function (e, ui) {
+        $searchField.val(ui.item.value);
+        $(".search-wrapper").submit();
+      }
+    });
+
+    function enableTagSuggestion() {
+      $searchField.autocomplete("enable");
+      tagSuggestionEnabled = true;
+    }
+
+    function disableTagSuggestion() {
+      $searchField.autocomplete("disable");
+      tagSuggestionEnabled = false;
+    }
+
+    if ($searchFilter.find("[name=type]").val() === "tags") {
+      enableTagSuggestion();
+    } else {
+      disableTagSuggestion();
+    }
+
     // Setup masonry
     masonry = new Masonry(mainGallery, {
       itemSelector: "div.make",
@@ -50,6 +87,11 @@ define(["jquery", "uri", "base/ui", "masonry"],
       $searchFilter.find("[data-selected] > span").attr("class", "icon-" + type);
       $searchFilter.find(".ui-on").removeClass("ui-on");
       $this.addClass("ui-on");
+      if (!tagSuggestionEnabled && type === "tags") {
+        enableTagSuggestion();
+      } else if (tagSuggestionEnabled) {
+        disableTagSuggestion();
+      }
     });
 
     $forkBtns.click(function (e) {

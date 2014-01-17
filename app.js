@@ -94,6 +94,7 @@ if (env.get("ENABLE_GELF_LOGS")) {
 
 app.use(helmet.iexss());
 app.use(helmet.contentTypeOptions());
+app.use(helmet.xframe());
 
 if ( !! env.get("FORCE_SSL")) {
   app.use(helmet.hsts());
@@ -305,9 +306,9 @@ app.get("/standard/building", routes.page("standard-building"));
 app.get("/standard/connecting", routes.page("standard-connecting"));
 app.get("/style-guide", routes.page("style-guide"));
 
-app.get("/details", routes.details);
+app.get("/details", middleware.removeXFrameOptions, routes.details);
 // Old
-app.get("/details/:id", function (req, res) {
+app.get("/details/:id", middleware.removeXFrameOptions, function (req, res) {
   res.redirect("/details?id=" + req.params.id);
 });
 
@@ -334,10 +335,10 @@ app.get("/privacy", routes.page("privacy"));
 var personaHostname = env.get("PERSONA_HOSTNAME", "https://login.persona.org");
 
 app.get("/sso/include.js", routes.includejs(env.get("HOSTNAME")));
-app.get("/sso/include.html", routes.include({
+app.get("/sso/include.html", middleware.removeXFrameOptions, routes.include({
   personaHostname: personaHostname
 }));
-app.get("/sso/include-transparent.html", routes.include({
+app.get("/sso/include-transparent.html", middleware.removeXFrameOptions, routes.include({
   personaHostname: personaHostname,
   transparent: "transparent"
 }));

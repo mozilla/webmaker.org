@@ -291,6 +291,11 @@ app.get("/starter-makes", routes.gallery({
   prefix: "template",
   limit: 20
 }));
+app.get("/privacy-makes", routes.gallery({
+  layout: "privacy-makes",
+  prefix: "privacy",
+  limit: 20
+}));
 
 app.get("/party", routes.page("party"));
 app.get("/tools", routes.page("tools"));

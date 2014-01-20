@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% include 'macros.html' %}
+
+{% block title %}{{ gettext("Privacy") }}{% endblock %}
+{% block midbar %}
+
+{% set header = "Learn about Privacy" %}
+{% set desc = "This is a collection of our best teaching resources and content around privacy and security on the web." %}
+
+{{ galleryHeader(header, desc) }}
+
+
+{% endblock %}
+{% block body %}
+<div class="ui-wrapper">
+  {% include "gallery.html" %}
+</div>
+{% endblock %}
+{% block CTA %}
+  [{
+    "title": "{{ gettext("Become a Mentor") }}",
+    "desc": "{{ gettext("Become a Mentor Desc") }}",
+    "image": "/img/cta-Mentor.jpg",
+    "url": "/{{localeInfo.lang}}/mentor"
+  },
+  {
+    "title": "{{ gettext("Maker Party") }}",
+    "desc": "{{ gettext("Maker Party Desc") }}",
+    "image": "/img/cta-Party.jpg",
+    "url": "/{{localeInfo.lang}}/party"
+  },
+  {
+    "title": "{{ gettext("Get Involved") }}",
+    "desc": "{{ gettext("Get Involved Desc") }}",
+    "image": "/img/cta-Get-Involved.jpg",
+    "url": "/{{localeInfo.lang}}/getinvolved"
+  },
+  {
+    "title": "{{ gettext("Use our Tools") }}",
+    "desc": "{{ gettext("Use our Tools Desc") }}",
+    "image": "/img/cta-Tools.jpg",
+    "url": "/{{localeInfo.lang}}/tools"
+  }]
+{% endblock %}
+{% block require_page %}pages/privacy-makes{% endblock %}

@@ -22,6 +22,10 @@ module.exports = function (options) {
         },
         teachtheweb: {
           tags: ["webmaker:frontpage"]
+        },
+        "privacy-makes": {
+          template: "make-starter-make.html",
+          tags: ["webmaker:privacy"]
         }
       };
 

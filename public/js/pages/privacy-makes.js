@@ -4,9 +4,9 @@ define(['jquery', 'base/gallery'],
 
     new Gallery({
       makeView: 'make-starter-make.html',
-      stickyPrefix: 'webmaker:template-',
+      stickyPrefix: 'webmaker:privacy-',
       defaultSearch: {
-        tags: ['webmaker:template']
+        tags: ['webmaker:privacy']
       }
     });
 

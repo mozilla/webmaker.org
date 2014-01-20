@@ -18,9 +18,7 @@
         {{ makeTags() }}
       </div>
       <div class="btn-container">
-        {% if make.remixurl %}
-          <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> {{ "Remix" | gettext }}</a>
-        {% endif %}
+        <a class="ui-btn fork-btn fork-btn-label" href="{{make.remixurl}}"><span class="icon-code-fork"></span> {{ "Remix" | gettext }}</a>
         <a class="ui-btn details-btn fork-btn-label" href="{{make.url}}">{{ "Details" | gettext }}</a>
         {{ likeIcon() }}
       </div>

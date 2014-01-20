@@ -10,9 +10,7 @@
       {% endif %}
       <p class="author">{{ gettext("Created by @username") | localVar(make) }}</a>
     </div>
-    {% if make.remixurl %}
-      <a href="{{make.remixurl}}" class="desktop-link"><div class="make-now"></div></a>
-    {% endif %}
+    <a href="{{make.remixurl}}" class="desktop-link"><div class="make-now"></div></a>
     <a href="{{make.url}}" class="mobile-link"><div class="make-now"></div></a>
   </a>
 </article>

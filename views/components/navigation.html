@@ -24,7 +24,7 @@
     {% for section in navigation %}
       <ul data-section="{{section.id}}" class="navigation-list navigation-wrapper{% if section.id == currentSection %} active{% endif %}">
         {% for page in section.pages %}
-        <li {% if page.icon %}style="padding-left: 12px; padding-right: 4px;"{% endif %}>
+        <li{% if page.icon %} class="nav-item-with-icon"{% endif %}>
 
             <a
               data-page="{{page.id}}" {% if page.id == currentPage %}

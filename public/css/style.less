@@ -43,6 +43,10 @@ img {
   border: none;
 }
 
+.webmaker-outer-wrapper {
+  overflow: hidden; // This is so the box-shadow on the header doesn't look bad with Tabzilla
+}
+
 .fl {
   float: left;
 }
@@ -1185,14 +1189,43 @@ img {
   .ui-section {
     padding: 0;
   }
-  .column-tools {
+ .column-tools {
     display: inline-block;
     position: relative;
     float: left;
     margin-right: 20px;
     padding: 30px 20px 0 20px;
-    height: 725px;
+    height: auto;
+    min-height: 725px;
     width: 320px;
+    font-size:13px;
+
+   @media (min-width: @width-small) {
+      width: 330px;
+      min-height: 700px;
+      padding: 60px 20px 0 20px;
+      margin-top:30px;
+      font-size: 12px;
+    }
+
+   @media only screen and (min-width: @width-medium) {
+      min-height: 725px;
+      padding: 40px 20px 0px;
+      margin-right: 80px;
+      margin-top: 15px;
+      margin:20px;
+    }
+
+    @media only screen and (min-width: @width-large) {
+      margin-right: 20px;
+      padding: 30px 20px 0 20px;
+      min-height: 725px;
+      width: 320px;
+      font-size:13px;
+      margin: 10px;
+    }
+
+
     .border-box;
 
     p {
@@ -1269,6 +1302,10 @@ img {
         .ui-btn {
           width: 205px;
           margin-top: 10px;
+
+          @media only screen and (min-width: @width-small) {
+            margin-top:3px;
+          }         
         }
 
         .remix-btn {

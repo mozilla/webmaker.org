@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/mozilla/webmaker.org.png)](https://travis-ci.org/mozilla/webmaker.org)
 [![Dependency Status](https://gemnasium.com/mozilla/webmaker.org.png)](https://gemnasium.com/mozilla/webmaker.org)
-
+[![Code Climate](https://codeclimate.com/github/mozilla/webmaker.org.png)](https://codeclimate.com/github/mozilla/webmaker.org)
 
 # webmaker.org
 

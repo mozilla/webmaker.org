@@ -82,6 +82,10 @@ module.exports = function (req, res) {
         query = "featured";
       }
 
+      data = data.filter(function (make) {
+        return make.published;
+      });
+
       res.render("search.html", {
         hasQuery: !! req.query.q,
         makes: data || [],

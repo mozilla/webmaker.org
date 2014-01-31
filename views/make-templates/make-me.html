@@ -6,7 +6,10 @@
     <div class="type-label"><span class="make-type">{{make.type}}</span></div>
     <div class="make-info">
       <p class="updatedAt">
-        {{ "Updated" | gettext }} {{make.updatedAt}}, {{ likeText() }}
+        {{ "Updated" | gettext }} {{make.updatedAt}}, {{ likeText() }},
+        {% if make.published == false %}
+          {{ "unpublished" | gettext }}
+        {% endif %}
       </p>
       <p class="title">{{make.title}}</p>
     </div>

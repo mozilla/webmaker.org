@@ -25,7 +25,9 @@ define(['resource_model', 'localized', 'moment', 'markdown'], function (Resource
 
     EventModel.prototype.datetimeListHTML = function() {
       moment.lang(localized.langToMomentJSLang(lang));
-      var bD = this.beginDate, eD = this.endDate,
+      var bD = this.beginDate,
+          // Deal with missing endDates, and assume it ends on the same day.
+          eD = this.endDate || this.beginDate,
           momentBD = moment(bD).format('ll'),
           momentED = moment(eD).format('ll');
 

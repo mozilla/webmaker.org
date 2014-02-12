@@ -1,5 +1,5 @@
-define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel', 'base/login'],
-  function ($, Masonry, lazyLoader, Carousel, webmakerAuth) {
+define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel', 'base/login', 'analytics'],
+  function ($, Masonry, lazyLoader, Carousel, webmakerAuth, analytics) {
     new Carousel($('.mentor-stories'));
     var $hiddenScroll = $('.hidden-scroll');
     var gallery = document.querySelector('.make-now-templates');
@@ -19,7 +19,12 @@ define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel', 'base/lo
 
     $(window).on('scroll', onScroll);
 
+    $('#join-us').click(function() {
+      analytics.event('Join Us Clicked');
+    });
+
     $('#make-something').click(function () {
+      analytics.event('Start Making Clicked');
       $('html, body').animate({
         scrollTop: $('.make-something-now').offset().top
       }, 1000);

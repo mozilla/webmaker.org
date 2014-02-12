@@ -25,7 +25,8 @@ requirejs.config({
     'doc-ready': '/bower/doc-ready',
     'eventEmitter': '/bower/eventEmitter',
     'matches-selector': '/bower/matches-selector',
-    'webmaker-auth-client': '/bower/webmaker-auth-client'
+    'webmaker-auth-client': '/bower/webmaker-auth-client',
+    'analytics': '/bower/webmaker-analytics/analytics'
   },
   shim: {
     'tabzilla': ['jquery'],

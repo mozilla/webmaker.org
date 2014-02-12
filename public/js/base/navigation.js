@@ -1,4 +1,4 @@
-define(['jquery'], function ($) {
+define(['jquery', 'analytics'], function ($, analytics) {
   return function navigation() {
 
     var $mainNavContainer = $('#main-navigation-container');
@@ -18,15 +18,29 @@ define(['jquery'], function ($) {
       $expandedNav.toggleClass('on');
       $activeNavItems.toggleClass('active');
       $expandedNavTriggers.toggleClass('active');
+      analytics.event('Expand Menu', {
+        label: $expandedNav.hasClass('on') ? "Expand" : "Collapse"
+      });
     }
 
     function doSearch() {
+      var searchInputVal = encodeURIComponent($searchInput.val());
+      analytics.event('Search all Clicked', {
+        label: searchInputVal
+      });
       $searchTrigger.find('.icon-search')
         .removeClass('icon-search')
         .addClass('icon-spinner')
         .addClass('icon-spin');
-      window.location = '/' + lang + '/search/?type=all&q=' + encodeURIComponent($searchInput.val());
+      window.location = '/' + lang + '/search/?type=all&q=' + searchInputVal;
     }
+
+    $mainNavContainer.find('.navigation-list li a').on('click', function() {
+      var name = this.textContent.trim();
+      analytics.event('Menu Navigation Clicked', {
+        label: name
+      });
+    });
 
     // Nav Accordion (For mobile)
 

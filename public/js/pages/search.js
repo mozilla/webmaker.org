@@ -1,16 +1,18 @@
-define(["jquery", "uri", "base/ui", "masonry", "base/login", "jquery-ui.autocomplete"],
-  function ($, URI, UI, Masonry, webmakerAuth) {
+define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "jquery-ui.autocomplete"],
+  function ($, URI, UI, Masonry, webmakerAuth, analytics) {
     "use strict";
 
     var query = $(".search-poster").attr("data-query"),
       queryKeys = URI.parse(window.location.href).queryKey,
       $searchPoster = $(".search-poster"),
+      $searchButton = $(".search-btn"),
       $searchField = $("#search-field"),
       $searchFilter = $("#search-type"),
       $forkBtns = $(".make-fork-btn"),
       $userNameLinks = $(".user-link"),
       mainGallery = $(".main-gallery")[0],
       tagSuggestionEnabled = false,
+      searchType = "all",
       totalHits,
       LIMIT,
       masonry,
@@ -26,6 +28,13 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "jquery-ui.autocomp
 
     $searchField.click(function () {
       $searchField.select();
+    });
+
+    $searchButton.click(function() {
+      var searchInputVal = encodeURIComponent($searchField.val());
+      analytics.event("Search " + searchType + " Clicked", {
+        label: searchInputVal
+      });
     });
 
     // Show the big green UI
@@ -81,10 +90,11 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "jquery-ui.autocomp
 
     // Change what kind of search
     $searchFilter.find("li").click(function () {
-      var $this = $(this),
-        type = $this.attr("data-value");
-      $searchFilter.find("[name=type]").val(type);
-      $searchFilter.find("[data-selected] > span").attr("class", "icon-" + type);
+      var $this = $(this);
+      searchType = $this.attr("data-value");
+
+      $searchFilter.find("[name=type]").val(searchType);
+      $searchFilter.find("[data-selected] > span").attr("class", "icon-" + searchType);
       $searchFilter.find(".ui-on").removeClass("ui-on");
       $this.addClass("ui-on");
       if (!tagSuggestionEnabled && type === "tags") {

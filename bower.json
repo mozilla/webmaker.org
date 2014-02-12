@@ -15,6 +15,7 @@
     "text": "2.0.9",
     "webmaker-auth-client": "0.0.13",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.8.tar.gz",
+    "webmaker-analytics": "0.0.5",
     "webmaker-ui": "0.0.12"
   }
 }

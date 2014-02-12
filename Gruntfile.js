@@ -53,6 +53,13 @@ module.exports = function (grunt) {
         options: nodeJSHint
       }
     },
+    gettext_finder: {
+      files: ["views/*.html", "views/**/*.html"],
+      options: {
+        pathToJSON: ["locale/en_US/*.json"],
+        ignoreKeys: grunt.file.readJSON("gtf-ignored-keys.json")
+      },
+    },
     imagemin: {
       options: {
         optimizationLevel: 7,
@@ -87,6 +94,7 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-gettext-finder');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -95,7 +103,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'imagemin']);
 
   // Verify code (Read only)
-  grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint']);
+  grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint', 'gettext_finder']);
 
   // Run through all pages and test for JS errors
   // * Requires global install of PhantomJS *

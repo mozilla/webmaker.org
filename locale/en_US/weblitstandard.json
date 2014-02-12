@@ -40,7 +40,6 @@
   "StandardCompDescExplore": "The Web Literacy Map is made up of three strands: Exploring, <a href='/{{localeInfo.lang}}/literacy/building'>Building</a> and <a href='/{{localeInfo.lang}}/literacy/connecting'>Connecting</a>. In turn, each strand is made up of several competencies. Each competency is comprised of a number of skills.",
   "StandardConnecting": "Connecting",
   "StandardConnectingCommunity": "Community Participation",
-  "StandardConnectingCommunity:": "Community Participation:",
   "StandardConnectingCommunityDesc": "Getting involved in web communities and understanding their practices",
   "StandardConnectingCommunityPoint1": "Encouraging participation in web communities",
   "StandardConnectingCommunityPoint2": "Using constructive criticism in a group or community setting",

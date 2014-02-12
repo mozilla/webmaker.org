@@ -35,7 +35,7 @@ define(['jquery', 'analytics'], function ($, analytics) {
       window.location = '/' + lang + '/search/?type=all&q=' + searchInputVal;
     }
 
-    $mainNavContainer.find('.navigation-list li a').on('click', function() {
+    $mainNavContainer.find('.navigation-list li a').on('click', function () {
       var name = this.textContent.trim();
       analytics.event('Menu Navigation Clicked', {
         label: name

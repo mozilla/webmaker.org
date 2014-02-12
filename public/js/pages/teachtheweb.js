@@ -19,7 +19,7 @@ define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel', 'base/lo
 
     $(window).on('scroll', onScroll);
 
-    $('#join-us').click(function() {
+    $('#join-us').click(function () {
       analytics.event('Join Us Clicked');
     });
 

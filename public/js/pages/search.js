@@ -30,7 +30,7 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "jquer
       $searchField.select();
     });
 
-    $searchButton.click(function() {
+    $searchButton.click(function () {
       var searchInputVal = encodeURIComponent($searchField.val());
       analytics.event("Search " + searchType + " Clicked", {
         label: searchInputVal
@@ -97,7 +97,7 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "jquer
       $searchFilter.find("[data-selected] > span").attr("class", "icon-" + searchType);
       $searchFilter.find(".ui-on").removeClass("ui-on");
       $this.addClass("ui-on");
-      if (!tagSuggestionEnabled && type === "tags") {
+      if (!tagSuggestionEnabled && searchType === "tags") {
         enableTagSuggestion();
       } else if (tagSuggestionEnabled) {
         disableTagSuggestion();

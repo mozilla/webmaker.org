@@ -13,7 +13,7 @@ module.exports = function (req, res) {
 
     var username = data[0].username;
 
-    if (username === req.session.username) {
+    if (req.session.user && username === req.session.user.username) {
       make.remove(id, function (err, data) {
         if (err) {
           res.send(err);
@@ -22,7 +22,9 @@ module.exports = function (req, res) {
         }
       });
     } else {
-      res.send("Sorry, looks like you don't have permission to delete this make :(");
+      res.json({
+        error: "You do not have permission to delete this make"
+      });
     }
   });
 };

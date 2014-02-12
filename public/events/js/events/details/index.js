@@ -1,5 +1,5 @@
-define(['jquery', 'google', 'forms', 'localized', 'domReady!'],
-function ($, google, forms, localized) {
+define(['jquery', 'google', 'forms', 'localized', 'base/login', 'domReady!'],
+function ($, google, forms, localized, webmakerAuth) {
   localized.ready(function(){});
     var $editForm = $('form#edit-event');
 
@@ -83,11 +83,22 @@ function ($, google, forms, localized) {
         });
     });
 
-    navigator.idSSO.app.onlogin = function(assert) {
+    function onLogin() {
         $('#owner-panel').removeClass('hidden');
-    };
-    navigator.idSSO.app.onlogout = function() {
-        $('#owner-panel').addClass('hidden');
-    };
+    }
 
+    function onLogout() {
+        $('#owner-panel').addClass('hidden');
+    }
+
+    webmakerAuth.on('login', onLogin);
+    webmakerAuth.on('logout', onLogout);
+    webmakerAuth.on('verified', function(user) {
+        if ( user ) {
+            return onLogin();
+        }
+        onLogout();
+    });
+
+    webmakerAuth.verify();
 });

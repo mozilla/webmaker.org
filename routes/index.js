@@ -28,7 +28,6 @@ module.exports = {
   tag: function (req, res) {
     res.redirect("/" + req.localeInfo.lang + "/search?type=tags&q=" + req.params.tag);
   },
-  user: require("./user"),
   usersearch: function (req, res) {
     res.redirect("/" + req.localeInfo.lang + "/search?type=user&q=" + req.params.user);
   }

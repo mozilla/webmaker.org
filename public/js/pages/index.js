@@ -1,5 +1,5 @@
-require(['jquery', 'base/ui', 'base/gallery'],
-  function ($, UI, Gallery) {
+require(['jquery', 'base/ui', 'base/gallery', 'base/login'],
+  function ($, UI, Gallery, webmakerAuth) {
     'use strict';
 
     var gallery = new Gallery({
@@ -9,11 +9,25 @@ require(['jquery', 'base/ui', 'base/gallery'],
       defaultSearch: 'webmaker:recommended'
     });
 
-    // Hide the banner if the user already exists
-    navigator.idSSO.app.onlogin = function () {
+    $('.btn-signin').click(webmakerAuth.login);
+
+    webmakerAuth.on('verified', function (user) {
+      // show the banner if not signed in
+      if (!user) {
+        $('#banner-join').show();
+        gallery.masonry.layout();
+      }
+    });
+
+    webmakerAuth.on('login', function () {
       $('#banner-join').hide();
       gallery.masonry.layout();
-    };
+    });
+
+    webmakerAuth.on('logout', function () {
+      $('#banner-join').show();
+      gallery.masonry.layout();
+    });
 
     UI.select('#search-filter', function (val) {
 
@@ -56,4 +70,5 @@ require(['jquery', 'base/ui', 'base/gallery'],
 
     });
 
+    webmakerAuth.verify();
   });

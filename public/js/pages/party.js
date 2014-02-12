@@ -1,5 +1,5 @@
-define(["jquery"],
-  function ($) {
+define(["jquery", "base/login"],
+  function ($, webmakerAuth) {
     "use strict";
     var $carouselContainer = $(".commitment-carousel-items"),
       $carouselItems = $(".commitment-carousel-item", $carouselContainer),
@@ -24,4 +24,6 @@ define(["jquery"],
     }
 
     setInterval(rotateCarousel, 5000);
+
+    webmakerAuth.verify();
   });

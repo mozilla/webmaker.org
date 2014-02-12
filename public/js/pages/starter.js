@@ -1,5 +1,5 @@
-define(['jquery', 'base/gallery'],
-  function ($, Gallery) {
+define(['jquery', 'base/gallery', 'base/login'],
+  function ($, Gallery, webmakerAuth) {
     'use strict';
 
     new Gallery({
@@ -10,4 +10,5 @@ define(['jquery', 'base/gallery'],
       }
     });
 
+    webmakerAuth.verify();
   });

@@ -1,5 +1,5 @@
-define(['jquery', 'rails', 'responsive', 'domReady!'],
-function ($) {
+define(['jquery', 'base/login', 'rails', 'responsive', 'domReady!'],
+function ($, webmakerAuth) {
     $('.toggle-featured').on('ajax:beforeSend', function(ev, xhr, status) {
         console.log(xhr);
     }).on('ajax:success', function(ev, xhr, status) {
@@ -17,4 +17,6 @@ function ($) {
         if ($(ev.target).is('td'))
             location = $(this).find('a.icon-chevron-sign-right').prop('href');
     });
+
+    webmakerAuth.verify();
 });

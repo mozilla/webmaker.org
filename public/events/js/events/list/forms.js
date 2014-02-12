@@ -1,9 +1,8 @@
-define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'bootstrap-markdown', 'domReady!'],
-  function ($, EventModel, forms, localized, nunjucks) {
+define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'base/login', 'bootstrap-markdown', 'domReady!'],
+  function ($, EventModel, forms, localized, nunjucks, webmakerAuth) {
     return function (mapMaker) {
       // instantiate nunjucks
       nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader('/views', true));
-      localized.ready(function() {});
       nunjucks.env.addFilter('gettext', function (data) {
        return localized.get(data);
       });
@@ -93,14 +92,7 @@ define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'bootstrap-markdown
              // XXX: add event to list
              openEventConfirmation(evt);
            }
-         }, 'json').error(function (res) {
-           switch (res.status) {
-             case 401:
-               navigator.idSSO.request();
-             break;
-             default:
-           }
-         });
+         }, 'json');
        },
        errorPlacement: function ($errors, $elem) {
          $elem.prop('placeholder', $errors.first().text());
@@ -151,40 +143,44 @@ define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'bootstrap-markdown
 
       // setup form toggle button
       function toggleCreateForm() {
-       $createForm[0].reset();
-       $createForm.toggleClass('hidden');
-       $createFormArea.removeClass('hidden');
-       $eventConfirmation.addClass('hidden');
-       $(".overlay-buttons").toggleClass('hidden');
+        $createForm[0].reset();
+        $createForm.toggleClass('hidden');
+        $createFormArea.removeClass('hidden');
+        $eventConfirmation.addClass('hidden');
+        $(".overlay-buttons").toggleClass('hidden');
       }
-      $(".expand-form-button").click(function(ev) {
-       ev.preventDefault();
-       toggleCreateForm();
-      });
+      $(".expand-form-button").click(toggleCreateForm);
+
+      $(".loggedout-expand-form-button").on('click', webmakerAuth.login);
 
       localized.ready(function(){
-       navigator.idSSO.app.onlogin = function( assert ){
-         var $button = $('.loggedout-expand-form-button')
-         .removeClass('loggedout-expand-form-button')
-         .addClass('expand-form-button')
-         .click(function(ev) {
-           ev.preventDefault();
-           toggleCreateForm();
-         }
-               );
-               $('.event-button-text', $button).text( localized.get("Add an Event") );
-               if( document.referrer.indexOf( 'login' ) !== -1 ){
-                 toggleCreateForm();
-                 $( '#event_title' ).focus();
-               }
-       };
-       navigator.idSSO.app.onlogout = function(){
-         var $button = $('.expand-form-button')
-         .addClass('loggedout-expand-form-button')
-         .removeClass('expand-form-button')
-         .unbind('click');
-         $('.event-button-text', $button).text( localized.get("Log in to add an Event") );
-       };
+        function onLogin(){
+          var $button = $('.loggedout-expand-form-button')
+              .removeClass('loggedout-expand-form-button')
+              .addClass('expand-form-button')
+              .on('click', toggleCreateForm)
+              .off('click', webmakerAuth.login);
+          $('.event-button-text', $button).text( localized.get("Add an Event") );
+        }
+
+        function onLogout(){
+          var $button = $('.expand-form-button')
+              .addClass('loggedout-expand-form-button')
+              .removeClass('expand-form-button')
+              .off('click', toggleCreateForm)
+              .on('click', webmakerAuth.login);
+          $('.event-button-text', $button).text( localized.get("Log in to add an Event") );
+        }
+
+        webmakerAuth.on('login', onLogin);
+        webmakerAuth.on('logout', onLogout);
+        webmakerAuth.on('verified', function(user) {
+          if ( user ) {
+            return onLogin();
+          }
+          onLogout();
+        });
+        webmakerAuth.verify();
       });
   }}
 );

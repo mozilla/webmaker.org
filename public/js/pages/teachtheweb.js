@@ -1,5 +1,5 @@
-define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel'],
-  function ($, Masonry, lazyLoader, Carousel) {
+define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel', 'base/login'],
+  function ($, Masonry, lazyLoader, Carousel, webmakerAuth) {
     new Carousel($('.mentor-stories'));
     var $hiddenScroll = $('.hidden-scroll');
     var gallery = document.querySelector('.make-now-templates');
@@ -25,6 +25,22 @@ define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel'],
       }, 1000);
     });
 
+    $('#join-us').click(webmakerAuth.login).show();
+
+    webmakerAuth.on('login', function () {
+      $('#join-us').hide();
+    });
+
+    webmakerAuth.on('logout', function () {
+      $('#join-us').show();
+    });
+
+    webmakerAuth.on('verified', function (user) {
+      if (user) {
+        $('#join-us').hide();
+      }
+    });
+
     new Masonry(gallery, {
       itemSelector: '.make-now-templates > article',
       gutter: '.gutter-make-now'
@@ -32,4 +48,6 @@ define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel'],
 
     // Wait until starter make thumbs are in view before loading imgs
     lazyLoader.init($('.make-something-now img')).loadVisibleImages();
+
+    webmakerAuth.verify();
   });

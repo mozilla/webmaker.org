@@ -1,6 +1,8 @@
 @import "mixins";
 @import "../../bower_components/font-awesome/less/font-awesome";
+@import "../../bower_components/persona-btn/persona-btn";
 @FontAwesomePath: "/bower/font-awesome/font";
+@personaBtnPath: "/bower/persona-btn";
 
 /*********************************************************
 * HEADER
@@ -54,19 +56,6 @@
       display: none;
     }
   }
-}
-
-#webmaker-nav iframe.include-frame {
-  top: 0;
-  @media(max-width: @width-small) {
-    display: none;
-  }
-}
-
-// The login page shouldn't have two iframes visible.
-// TODO: Fix SSO so that two login buttons are possible
-#login #webmaker-nav iframe.include-frame {
-  display: none;
 }
 
 .webmaker-nav .user img {
@@ -124,6 +113,22 @@
     margin-right: 150px;
   }
 }
+
+.webmaker-logout {
+  border: none;
+  background: none;
+  font-family: "Open Sans";
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  font-size: 13px;
+  color: #555;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 
 
 #lang-picker {

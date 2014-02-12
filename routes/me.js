@@ -1,6 +1,6 @@
 module.exports = function (req, res) {
   var make = require("../lib/makeapi"),
-    username = req.session.username,
+    username = req.session.user ? req.session.user.username : "",
     page = req.query.page || 1,
     app = req.query.app,
     options = {},

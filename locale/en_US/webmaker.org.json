@@ -181,7 +181,7 @@
   "I agree to your terms": "I agree to your <a href='/{{localeInfo.lang}}/terms'>terms</a> and <a href='/{{localeInfo.lang}}/privacy'>conditions</a>",
   "ID": "ID",
   "If you don’t see the Whiteboard field": "If you don’t see the Whiteboard field, make sure the advanced options are showing.",
-  "indexDesc": "We're a global community that creates the web by making, teaching and remixing. Check out this week's most inspiring Makes and <a href='/{{localeInfo.lang}}/login'>sign up</a> to create your own.",
+  "indexDesc": "We're a global community that creates the web by making, teaching and remixing. Check out this week's most inspiring Makes and sign up to create your own.",
   "indexHeader": "Make Something with Webmaker.",
   "Info": "Info",
   "intermediate": "intermediate",

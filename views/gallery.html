@@ -5,9 +5,9 @@
   <div class="loading-cat g-4"></div>
   <!-- STICKY BANNERS -->
   {% if layout=='index' %}
-  <div id="banner-join" class="gallery-hide stamp" >
+  <div id="banner-join" class="gallery-hide stamp" style="display: none;" >
     <div class="rotator">
-      <h2 style="display: block;">{{ gettext("The web is still open.") }}<br> {{ gettext("Hack it.") }}</h2></div><div class="join-border"></div><div class="join-signin"><span class="join-claim">{{ gettext("Claim your Webmaker domain.") }}</span><span class="btn-join-container"><a href="/{{localeInfo.lang}}/login" class="ui-blue-btn btn-signin">{{ gettext("Sign in") }}<i class="icon-angle-right"></i></a></span>
+      <h2 style="display: block;">{{ gettext("The web is still open.") }}<br> {{ gettext("Hack it.") }}</h2></div><div class="join-border"></div><div class="join-signin"><span class="join-claim">{{ gettext("Claim your Webmaker domain.") }}</span><span class="btn-join-container"><a class="ui-blue-btn btn-signin">{{ gettext("Sign in") }}<i class="icon-angle-right"></i></a></span>
     </div>
   </div>
   {% endif %}

@@ -1,5 +1,5 @@
-define(["jquery", "uri", "base/ui", "masonry", "jquery-ui.autocomplete"],
-  function ($, URI, UI, Masonry) {
+define(["jquery", "uri", "base/ui", "masonry", "base/login", "jquery-ui.autocomplete"],
+  function ($, URI, UI, Masonry, webmakerAuth) {
     "use strict";
 
     var query = $(".search-poster").attr("data-query"),
@@ -122,5 +122,7 @@ define(["jquery", "uri", "base/ui", "masonry", "jquery-ui.autocomplete"],
         window.location.search = $.param(queryKeys);
       });
     }
+
+    webmakerAuth.verify();
 
   });

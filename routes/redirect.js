@@ -9,7 +9,9 @@ module.exports = function (app) {
       "/videos",
       "/hall-of-fame",
       "/ITU",
-      "/ITU/*"
+      "/ITU/*",
+      "/new",
+      "/login"
     ]
   }, {
     route: "/tools",

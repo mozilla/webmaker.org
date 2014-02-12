@@ -19,6 +19,7 @@
   <!--[if lte IE 9]><link rel="stylesheet" href="/css/warning.css"><![endif]-->
 
   <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <script src="{{ personaHostname }}/include.js"></script>
   <script src="https://cdn.optimizely.com/js/206878104.js"></script>
   <!-- For JS error tracking purposes -->
   <script type="text/javascript">
@@ -35,6 +36,8 @@
 <div id="browser-warning">
   <p>{{ gettext("browserUpgradeWarning") | safe }}</p>
 </div>
+
+{% include "webmaker-auth-client/create-user/create-user-form.html" %}
 
 <div class="webmaker-outer-wrapper">
 
@@ -72,7 +75,10 @@
               </div>
             </li>
             <li>
-              <iframe src="{{audience}}/{{localeInfo.lang}}/sso/include.html" class="include-frame"></iframe>
+              <div class="webmaker-login persona-button" style="display: none;">
+                <span class="text">{{ gettext("Sign in") }}</span><span class="tip"></span>
+              </div>
+              <span class="webmaker-logout" style="display: none;">{{ gettext("Sign out") }}</span>
             </li>
             <li class="more-btn"><a href="#" class="navigation-more"><span class="icon-reorder"></span></a></li>
           </ul>
@@ -211,20 +217,12 @@
     }]
   {% endblock %}
 </script>
-
-<script src="{{ personaSSO }}/sso/include.js"></script>
-<script>
-// XXX: we need to load this after require loads jquery, but can't hard-code a path
-// in the require config.
-window.__loginAPI = "{{ loginAPI }}";
-</script>
 <script id="require-js" src="/bower/requirejs/require.js"
   data-main="{% block require_main %}/js/main.js{% endblock %}"
-  data-page="{% block require_page %}{% endblock %}">
+  data-page="{% block require_page %}pages/verify{% endblock %}">
 </script>
 
 {% block scripts %}{% endblock %}
-
 {% if ga_account %}
 <script id="google-analytics-js" src="/js/lib/google-analytics.js"
   data-ga-account="{{ ga_account }}"

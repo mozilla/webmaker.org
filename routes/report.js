@@ -3,9 +3,9 @@ module.exports = function () {
   return {
     report: function (req, res) {
       var id = req.body.makeID,
-        maker = req.session.username;
+        maker = req.session.user;
       if (maker) {
-        make.report(id, maker, function (err, data) {
+        make.report(id, maker.username, function (err, data) {
           if (err || !data) {
             return res.json(400, err || "An unknown error occured :(");
           }
@@ -17,10 +17,10 @@ module.exports = function () {
     },
     cancelReport: function (req, res) {
       var id = req.body.makeID,
-        maker = req.session.username;
+        maker = req.session.user;
 
       if (maker) {
-        make.cancelReport(id, maker, function (err, data) {
+        make.cancelReport(id, maker.username, function (err, data) {
           if (err || !data) {
             return res.json(400, err || "An unknown error occured :(");
           }

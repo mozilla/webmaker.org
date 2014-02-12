@@ -12,13 +12,17 @@ var express = require("express"),
   path = require("path"),
   lessMiddleWare = require("less-middleware"),
   i18n = require("webmaker-i18n"),
+  WebmakerAuth = require("webmaker-auth"),
   navigation = require("./navigation");
 
 habitat.load();
 
 var app = express(),
   env = new habitat(),
-  nunjucksEnv = new nunjucks.Environment(new nunjucks.FileSystemLoader(path.join(__dirname, 'views')), {
+  nunjucksEnv = new nunjucks.Environment([
+    new nunjucks.FileSystemLoader(path.join(__dirname, 'views')),
+    new nunjucks.FileSystemLoader(path.join(__dirname, 'bower_components'))
+  ], {
     autoescape: true
   }),
   NODE_ENV = env.get("NODE_ENV"),
@@ -76,6 +80,13 @@ require("./lib/makeapi")({
     id: env.get("MAKE_PUBLICKEY"),
     algorithm: "sha256"
   }
+});
+
+var webmakerAuth = new WebmakerAuth({
+  loginURL: env.get("LOGINAPI"),
+  secretKey: env.get("SESSION_SECRET"),
+  forceSSL: env.get("FORCE_SSL"),
+  domain: env.get("COOKIE_DOMAIN")
 });
 
 var routes = require("./routes");
@@ -171,18 +182,18 @@ app.use(i18n.middleware({
   translation_directory: path.resolve(__dirname, "locale")
 }));
 
+// Adding an external JSON file to our existing one for the specified locale
+var authLocaleJSON = require("./bower_components/webmaker-auth-client/locale/en_US/create-user-form.json");
+i18n.addLocaleObject({
+  "en-US": authLocaleJSON
+}, function (result) {});
+
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.cookieParser());
-app.use(express.cookieSession({
-  key: "webmaker.sid",
-  secret: env.get("SESSION_SECRET"),
-  cookie: {
-    maxAge: 2678400000, // 31 days. Persona saves session data for 1 month
-    secure: !! env.get("FORCE_SSL")
-  },
-  proxy: true
-}));
+
+app.use(webmakerAuth.cookieParser());
+app.use(webmakerAuth.cookieSession());
+
 app.use(express.csrf());
 
 app.locals({
@@ -194,7 +205,8 @@ app.locals({
   supportedLanguages: i18n.getLanguages(),
   listDropdownLang: i18n.getSupportLanguages(),
   PROFILE_URL: env.get("PROFILE_URL"),
-  flags: env.get("FLAGS") || {}
+  flags: env.get("FLAGS") || {},
+  personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org")
 });
 
 app.use(function (req, res, next) {
@@ -264,6 +276,12 @@ require("./lib/loginapi")(app, {
 var middleware = require("./lib/middleware");
 
 // ROUTES
+
+app.post('/verify', webmakerAuth.handlers.verify);
+app.post('/authenticate', webmakerAuth.handlers.authenticate);
+app.post('/create', webmakerAuth.handlers.create);
+app.post('/logout', webmakerAuth.handlers.logout);
+app.post('/check-username', webmakerAuth.handlers.exists);
 
 app.get("/healthcheck", routes.api.healthcheck);
 
@@ -337,24 +355,15 @@ app.post("/unlike", routes.like.unlike);
 app.post("/report", routes.report.report);
 app.post("/cancelReport", routes.report.cancelReport);
 
-// Account
-app.get("/login", routes.user.login);
-app.get("/new", routes.user.newaccount);
-
 app.get("/t/:tag", routes.tag);
 app.get("/u/:user", routes.usersearch);
 
 app.get("/terms", routes.page("terms"));
 app.get("/privacy", routes.page("privacy"));
 
-var personaHostname = env.get("PERSONA_HOSTNAME", "https://login.persona.org");
-
 app.get("/sso/include.js", routes.includejs(env.get("HOSTNAME")));
-app.get("/sso/include.html", middleware.removeXFrameOptions, routes.include({
-  personaHostname: personaHostname
-}));
+app.get("/sso/include.html", middleware.removeXFrameOptions, routes.include());
 app.get("/sso/include-transparent.html", middleware.removeXFrameOptions, routes.include({
-  personaHostname: personaHostname,
   transparent: "transparent"
 }));
 app.get("/sitemap.xml", function (req, res) {

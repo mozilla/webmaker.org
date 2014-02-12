@@ -1,5 +1,5 @@
-define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi", "masonry"],
-  function ($, localized, nunjucks, UI, moment, URI, Make, Masonry) {
+define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi", "masonry", "base/login"],
+  function ($, localized, nunjucks, UI, moment, URI, Make, Masonry, webmakerAuth) {
     "use strict";
 
     var MAKE_VIEW = "make-templates/make-admin-search.html",
@@ -162,4 +162,5 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
 
     doSearch();
 
+    webmakerAuth.verify();
   });

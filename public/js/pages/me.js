@@ -1,5 +1,5 @@
-define(['jquery', 'uri', 'base/ui', 'localized', 'masonry'],
-  function ($, URI, UI, localized, Masonry) {
+define(['jquery', 'uri', 'base/ui', 'localized', 'masonry', 'base/login'],
+  function ($, URI, UI, localized, Masonry, webmakerAuth) {
     'use strict';
 
     localized.ready(function () {
@@ -23,11 +23,9 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry'],
       // This properly generates server side project data
       // for apps using my makes.
       if (inApp && !$("meta[name='persona-email']").attr("content")) {
-        navigator.idSSO.app = {
-          onlogin: function () {
-            window.location.replace(window.location);
-          }
-        };
+        webmakerAuth.on('login', function () {
+          window.location.replace(window.location);
+        });
       }
 
       // Do we have any makes?
@@ -83,5 +81,6 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry'],
           window.location.search = $.param(queryKeys);
         });
       }
+      webmakerAuth.verify();
     });
   });

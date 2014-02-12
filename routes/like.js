@@ -3,10 +3,10 @@ module.exports = function () {
   return {
     like: function (req, res) {
       var id = req.body.makeID,
-        maker = req.session.username;
+        maker = req.session.user;
 
       if (maker) {
-        make.like(id, maker, function (err, data) {
+        make.like(id, maker.username, function (err, data) {
           if (err || !data) {
             return res.send(400, err || "Something went wrong.");
           }
@@ -18,10 +18,10 @@ module.exports = function () {
     },
     unlike: function (req, res) {
       var id = req.body.makeID,
-        maker = req.session.username;
+        maker = req.session.user;
 
       if (maker) {
-        make.unlike(id, maker, function (err, data) {
+        make.unlike(id, maker.username, function (err, data) {
           if (err || !data) {
             return res.send(400, err || "something went wrong");
           }

@@ -1,6 +1,5 @@
-define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'bootstrap-markdown', 'domReady!'],
-function ($, EventModel, forms, localized, nunjucks) { return function (mapMaker) {
-
+define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'base/login', 'bootstrap-markdown', 'domReady!'],
+function ($, EventModel, forms, localized, nunjucks, webmakerAuth) { return function (mapMaker) {
     var $findForm   = $('form#find-event');
     $findForm.find('button[type="submit"]').click(function (ev) {
         ev.preventDefault();
@@ -119,14 +118,7 @@ function ($, EventModel, forms, localized, nunjucks) { return function (mapMaker
                     mapMaker.addMarker(evt);
                     openEventConfirmation(evt);
                 }
-            }, 'json').error(function (res) {
-                switch (res.status) {
-                    case 401:
-                        navigator.idSSO.request();
-                        break;
-                    default:
-                }
-            });
+            }, 'json');
         },
         errorPlacement: function ($errors, $elem) {
             $elem.prop('placeholder', $errors.first().text());
@@ -182,33 +174,37 @@ function ($, EventModel, forms, localized, nunjucks) { return function (mapMaker
         $eventConfirmation.addClass('hidden');
         $(".overlay-buttons").toggleClass('hidden');
     }
-    $(".expand-form-button").click(function(ev) {
-        ev.preventDefault();
-        toggleCreateForm();
-    });
+
+    $(".expand-form-button").click(toggleCreateForm);
+    $(".loggedout-expand-form-button").on('click', webmakerAuth.login);
 
     localized.ready(function(){
-      navigator.idSSO.app.onlogin = function( assert ){
-        var $button = $('.loggedout-expand-form-button')
-        .removeClass('loggedout-expand-form-button')
-        .addClass('expand-form-button')
-        .click(function(ev) {
-          ev.preventDefault();
-          toggleCreateForm();
+        function onLogin(){
+            var $button = $('.loggedout-expand-form-button')
+                .removeClass('loggedout-expand-form-button')
+                .addClass('expand-form-button')
+                .on('click', toggleCreateForm)
+                .off('click', webmakerAuth.login);
+            $('.event-button-text', $button).text( localized.get("Add an Event") );
         }
-      );
-      $('.event-button-text', $button).text( localized.get("Add an Event") );
-      if( document.referrer.indexOf( 'login' ) !== -1 ){
-        toggleCreateForm();
-        $( '#event_title' ).focus();
-      }
-    };
-    navigator.idSSO.app.onlogout = function(){
-      var $button = $('.expand-form-button')
-      .addClass('loggedout-expand-form-button')
-      .removeClass('expand-form-button')
-      .unbind('click');
-      $('.event-button-text', $button).text( localized.get("Log in to add an Event") );
-    };
-  });
+
+        function onLogout(){
+            var $button = $('.expand-form-button')
+                .addClass('loggedout-expand-form-button')
+                .removeClass('expand-form-button')
+                .off('click', toggleCreateForm)
+                .on('click', webmakerAuth.login);
+            $('.event-button-text', $button).text( localized.get("Log in to add an Event") );
+        }
+
+        webmakerAuth.on('login', onLogin);
+        webmakerAuth.on('logout', onLogout);
+        webmakerAuth.on('verified', function(user) {
+            if ( user ) {
+                return onLogin();
+            }
+            onLogout();
+        });
+        webmakerAuth.verify();
+    });
 }});

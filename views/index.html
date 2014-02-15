@@ -23,12 +23,3 @@
 </div>
 {% endblock %}
 {% block require_page %}pages/index{% endblock %}
-{% block scripts %}
-<script type="text/javascript">
-var hash = window.location.hash;
-if( hash.length > 0 ) {
-  var tag = hash.slice(1);
-  window.location = window.location.origin + '/t/' + tag;
-}
-</script>
-{% endblock %}

@@ -112,17 +112,6 @@
     </div>
     {% endif %}
   </div>
-  <script src="/bower/requirejs/require.js"></script>
-  <script>
-    requirejs.config({
-      baseUrl: '/js',
-      paths: {
-        'jquery': '../bower/jquery/jquery',
-        'social': '../js/lib/socialmedia',
-        'localized': '../bower/webmaker-i18n/localized'
-      }
-    });
-    require(['pages/details']);
-  </script>
+  <script src="/bower/requirejs/require.js" data-main="/js/pages/details"></script>
 </body>
 </html>

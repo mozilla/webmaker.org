@@ -305,10 +305,20 @@ app.get("/getinvolved", routes.page("getinvolved"));
 app.get("/event-guides", routes.page("event-guides"));
 app.get("/search", routes.search);
 app.get("/feedback", routes.page("feedback"));
-app.get("/standard", routes.page("standard"));
-app.get("/standard/exploring", routes.page("standard-exploring"));
-app.get("/standard/building", routes.page("standard-building"));
-app.get("/standard/connecting", routes.page("standard-connecting"));
+
+// Old route - turned into a 301 (perm. redirect) on 2014-02-11.
+// This route should not be removed until sufficient time
+// has passed for search engines to index the new URL.
+var literacyRedirect = function (req, res) {
+  res.redirect(301, req.path.replace("standard", "literacy"));
+};
+app.get("/standard", literacyRedirect);
+app.get("/standard/*", literacyRedirect);
+
+app.get("/literacy", routes.page("literacy"));
+app.get("/literacy/exploring", routes.page("literacy-exploring"));
+app.get("/literacy/building", routes.page("literacy-building"));
+app.get("/literacy/connecting", routes.page("literacy-connecting"));
 app.get("/style-guide", routes.page("style-guide"));
 
 app.get("/details", middleware.removeXFrameOptions, routes.details);

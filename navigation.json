@@ -78,9 +78,9 @@
         "url": "teach-templates"
       },
       {
-        "id": "standard",
-        "title": "WebLiteracyStandard",
-        "url": "standard"
+        "id": "literacy",
+        "title": "WebLiteracyMap",
+        "url": "literacy"
       }
     ]
   },

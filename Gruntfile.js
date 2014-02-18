@@ -28,21 +28,6 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    recess: {
-      dist: {
-        options: {
-          noIDs: false,
-          noOverqualifying: false,
-          noUniversalSelectors: false,
-          zeroUnits: false,
-          strictPropertyOrder: false
-        },
-        src: [
-          'public/css/style.less',
-          'public/css/make-details.less'
-        ]
-      }
-    },
     jsbeautifier: {
       modify: {
         src: allJS,
@@ -102,16 +87,15 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['recess', 'jsbeautifier:modify', 'jshint', 'imagemin']);
+  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'imagemin']);
 
   // Verify code (Read only)
-  grunt.registerTask('validate', ['recess', 'jsbeautifier:verify', 'jshint']);
+  grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint']);
 
   // Run through all pages and test for JS errors
   // * Requires global install of PhantomJS *

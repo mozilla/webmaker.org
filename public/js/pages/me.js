@@ -3,50 +3,39 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry', 'base/login'],
     'use strict';
 
     localized.ready(function () {
-      var $body = $("body"),
-        $makes = $(".make"),
+      var $makes = $(".make"),
         $deleteBtn = $(".delete-btn"),
         mainGallery = $(".main-gallery")[0],
         totalHits,
         LIMIT,
         queryKeys = URI.parse(window.location.href).queryKey,
-        BASE_WIDTH = 240,
-        GUTTER = 20,
         masonry,
         page;
 
-      // Are we inside thimble or popcorn?
-      var inApp = $body.hasClass("popcorn") || $body.hasClass("thimble");
-
-      // If the user is not logged in yet,
-      // refresh the page once they are.
-      // This properly generates server side project data
-      // for apps using my makes.
-      if (inApp && !$("meta[name='persona-email']").attr("content")) {
-        webmakerAuth.on('login', function () {
-          window.location.replace(window.location);
-        });
+      function reload() {
+        window.location.replace(window.location);
       }
+
+      if (!$("meta[name='persona-email']").attr("content")) {
+        webmakerAuth.on('login', reload);
+      }
+      webmakerAuth.on('logout', function () {
+        // the auth client deletes localstorage async, and reloading immediately causes issues..
+        window.setTimeout(reload, 500);
+      });
+
+      webmakerAuth.verify();
 
       // Do we have any makes?
       if (!$makes.length) {
         return;
       }
 
-      // Set up scrollable container
-      if (inApp) {
-        $(".webmaker-outer-wrapper").css("width", ((BASE_WIDTH + GUTTER) * $makes.length + GUTTER * 2) + "px");
-        $("html").css("overflow-y", "hidden");
-      }
-
-      // Or, set up masonry if we are on webmaker.org
-      if (!inApp) {
-        masonry = new Masonry(mainGallery, {
-          itemSelector: 'div.make',
-          gutter: '.gutter-sizer',
-          transitionDuration: '0.2'
-        });
-      }
+      masonry = new Masonry(mainGallery, {
+        itemSelector: 'div.make',
+        gutter: '.gutter-sizer',
+        transitionDuration: '0.2'
+      });
 
       // Set up the delete buttons
       $deleteBtn.on("click", function (e) {
@@ -59,12 +48,8 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry', 'base/login'],
             _csrf: $("meta[name='csrf-token']").attr("content")
           }, function (res) {
             if (res.deletedAt) {
-              if (!inApp) {
-                masonry.remove($this.closest(".make")[0]);
-                masonry.layout();
-              } else {
-                $this.closest(".make").remove();
-              }
+              masonry.remove($this.closest(".make")[0]);
+              masonry.layout();
             }
           });
         }
@@ -81,6 +66,5 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry', 'base/login'],
           window.location.search = $.param(queryKeys);
         });
       }
-      webmakerAuth.verify();
     });
   });

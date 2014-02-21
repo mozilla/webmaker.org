@@ -35,7 +35,7 @@
           <li>{{ gettext("Home, cafe, library") }}</li>
         </ul>
 
-        <a class="ui-blue-btn" href="https://webmaker.makes.org/thimble/how-to-host-a-kitchen-party">{{ gettext("Kitchen Party Planning Guide") }}<i class="icon-angle-right"></i></a></p>
+        <a class="ui-blue-btn" href="https://webmaker.makes.org/thimble/how-to-host-a-kitchen-party">{{ gettext("Kitchen Party Planning Guide") }}<i class="icon-angle-{{direction}}"></i></a></p>
             </div>
             <div class="guide-columns ui-bg-column">
         <img src="/img/img-Guides-Hack-Jam.jpg" alt="{{ gettext("Hack Jam") }}" />
@@ -54,7 +54,7 @@
           <li>{{ gettext("School, library") }}</li>
         </ul>
 
-        <a class="ui-blue-btn" href="https://webmaker.makes.org/thimble/host-a-hackjam">{{ gettext("Hack Jam Planning Guide") }}<i class="icon-angle-right"></i></a></p>
+        <a class="ui-blue-btn" href="https://webmaker.makes.org/thimble/host-a-hackjam">{{ gettext("Hack Jam Planning Guide") }}<i class="icon-angle-{{direction}}"></i></a></p>
             </div>
             <div class="guide-columns ui-bg-column">
         <img src="/img/img-Guides-Hive-Pop-up.jpg" alt="{{ gettext("Hive Pop up") }}" />
@@ -74,7 +74,7 @@
           <li>{{ gettext("4 hours, 2-4 weeks") }}</li>
           <li>{{ gettext("Community center, library, school") }}</li>
         </ul>
-        <a class="ui-blue-btn" href="https://webmaker.makes.org/thimble/host-a-hive-popup">{{ gettext("Hive Pop-Up Planning Guide") }}<i class="icon-angle-right"></i></a></p>
+        <a class="ui-blue-btn" href="https://webmaker.makes.org/thimble/host-a-hive-popup">{{ gettext("Hive Pop-Up Planning Guide") }}<i class="icon-angle-{{direction}}"></i></a></p>
       </div>
     </div>
 
@@ -89,56 +89,56 @@
       <h2>{{ gettext("OverviewForOrganizers") }}</h2>
       <ul class="angle-list">
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="https://wiki.mozilla.org/Maker_Party/Get_involved">{{ gettext("OFOStartHere") }}</a>
           </h3>
           <p>{{ gettext("OFOStartHereDesc") | safe }}</p>
         </li>
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="/{{localeInfo.lang}}/events">{{ gettext("OFOAddEvent") }}</a>
           </h3>
           <p>{{ gettext("OFOAddEventDesc") | instantiate | safe }}</p>
         </li>
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="https://intlstore.mozilla.org/makerparty/">{{ gettext("OFOOrder") }}</a>
           </h3>
           <p>{{ gettext("OFOOrderDesc") | safe }}</p>
         </li>
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="https://mozteach.makes.org/thimble/what-i-made-maker-party">{{ gettext("OFOShare") }}</a>
           </h3>
           <p>{{ gettext("OFOShareDesc") | safe }}</p>
         </li>
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="mailto:makerparty@mozilla.org">{{ gettext("OFOPhoto") }}</a>
           </h3>
           <p>{{ gettext("OFOPhotoDesc") | safe }}</p>
         </li>
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="https://mozteach.makes.org/thimble/maker-party-report">{{ gettext("OFOReport") }}</a>
           </h3>
           <p>{{ gettext("OFOReportDesc") | safe }}</p>
         </li>
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="https://wiki.mozilla.org/Maker_Party/FAQs">{{ gettext("OFOFAQ") }}</a>
           </h3>
           <p>{{ gettext("OFOFAQDesc") | safe }}</p>
         </li>
         <li>
-          <i class="icon-angle-right"></i>
+          <i class="icon-angle-{{direction}}"></i>
           <h3>
             <a href="mailto:makerparty@mozilla.org">{{ gettext("OFOContact") }}</a>
           </h3>

@@ -13,8 +13,7 @@
   <title>{% block title %}{% endblock %} - {{ gettext("Mozilla Webmaker") }}</title>
   {% block css %}{% endblock %}
   <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/bower/nav-global/nav.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.{{ localeInfo.direction }}.css">
 
   <!--[if lte IE 9]><link rel="stylesheet" href="/css/warning.css"><![endif]-->
 
@@ -76,7 +75,7 @@
             </li>
             <li>
               <div class="webmaker-login persona-button" style="display: none;">
-                <span class="text">{{ gettext("Sign in") }}</span><span class="tip"></span>
+                <span dir="{{localeInfo.direction}}" class="text">{{ gettext("Sign in") }}</span><span dir="{{localeInfo.direction}}" class="tip"></span>
               </div>
               <span class="webmaker-logout" style="display: none;">{{ gettext("Sign out") }}</span>
             </li>

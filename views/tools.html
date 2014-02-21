@@ -12,6 +12,7 @@
 
 {% endblock %}
 {% block body %}
+
 <div class="ui-wrapper ui-body-nobg">
 
   <div class="ui-bg-column column-tools">
@@ -32,7 +33,7 @@
       <h3>{{ gettext("Get started") }}</h3>
       <div class="btn-container">
         <a href="https://goggles.webmaker.org/{{localeInfo.lang}}" class="ui-btn fork-btn fork-btn-label remix-btn">
-          {{ gettext("Try the Goggles") }} <span class="icon-angle-right"></span></a>
+          {{ gettext("Try the Goggles") }} <span class="icon-angle-{{direction}}"></span></a>
       </div>
     </div>
   </div>
@@ -54,7 +55,7 @@
       <h3>{{ gettext("Get started") }}</h3>
       <div class="btn-container">
         <a href="https://thimble.webmaker.org/{{localeInfo.lang}}" class="ui-btn fork-btn fork-btn-label remix-btn">
-          {{ gettext("Start from scratch") }} <span class="icon-angle-right"></span></a>
+          {{ gettext("Start from scratch") }} <span class="icon-angle-{{direction}}"></span></a>
       </div>
       <div class="btn-container">
         <a href="/{{localeInfo.lang}}/starter-makes" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix a project") }}</a>
@@ -79,7 +80,7 @@
       <h3>{{ gettext("Get started") }}</h3>
       <div class="btn-container">
         <a href="https://popcorn.webmaker.org/{{localeInfo.lang}}/editor/" class="ui-btn fork-btn fork-btn-label remix-btn">
-          {{ gettext("Start from scratch") }} <span class="icon-angle-right"></span></a>
+          {{ gettext("Start from scratch") }} <span class="icon-angle-{{direction}}"></span></a>
       </div>
       <div class="btn-container">
         <a href="/{{localeInfo.lang}}/starter-makes" class="ui-btn fork-btn fork-btn-label">

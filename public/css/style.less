@@ -2,6 +2,8 @@
 @import "../../bower_components/font-awesome/less/font-awesome";
 @FontAwesomePath: "/bower/font-awesome/font";
 
+@import "../../bower_components/nav-global/nav.less";
+
 @import "breakpoints";
 @import "mixins";
 @import "webfonts";
@@ -723,6 +725,11 @@ img {
     margin-top: 16px;
   }
 
+  .banner[dir="rtl"] {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
   .banner {
     position: absolute;
     top: 30px;
@@ -730,9 +737,9 @@ img {
     width: 200px;
     left: -60px;
     padding: 5px;
-    font-size: 18px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    font-size: 18px;
     z-index: 2;
   }
   .teachkit {

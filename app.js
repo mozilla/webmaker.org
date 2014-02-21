@@ -226,8 +226,9 @@ app.use(function (req, res, next) {
 require("./lib/events").init(app, nunjucksEnv, __dirname);
 
 var optimize = NODE_ENV !== "development",
-  tmpDir = path.join(require("os").tmpDir(), "mozilla.webmaker.org");
-app.use(lessMiddleWare({
+  tmpDir = path.join(require("os").tmpDir(), "mozilla.webmaker.org"),
+  rtltrForLess = require("rtltr-for-less");
+app.use(lessMiddleWare(rtltrForLess({
   once: optimize,
   debug: !optimize,
   dest: tmpDir,
@@ -236,7 +237,7 @@ app.use(lessMiddleWare({
   yuicompress: optimize,
   optimization: optimize ? 0 : 2,
   sourceMap: !optimize
-}));
+})));
 app.use(express.static(tmpDir));
 
 // Nunjucks

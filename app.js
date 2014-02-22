@@ -15,6 +15,7 @@ var express = require("express"),
   habitat = require("habitat"),
   helmet = require("helmet"),
   http = require("http"),
+  middleware = require("./lib/middleware"),
   nunjucks = require("nunjucks"),
   path = require("path"),
   lessMiddleWare = require("less-middleware"),
@@ -256,6 +257,9 @@ if (env.get('FLAGS_EXPLORE')) {
 // Nunjucks
 // This just uses nunjucks-dev for now -- middleware to handle compiling templates in progress
 app.use("/views", express.static(path.join(__dirname, "views")));
+
+//adding Content Security Policy (CSP) to webmaker.org
+app.use(middleware.addCSP());
 
 app.use(app.router);
 // We've run out of known routes, 404

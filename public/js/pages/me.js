@@ -18,11 +18,9 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry', 'base/login'],
 
       if (!$("meta[name='persona-email']").attr("content")) {
         webmakerAuth.on('login', reload);
+      } else {
+        webmakerAuth.on('logout', reload);
       }
-      webmakerAuth.on('logout', function () {
-        // the auth client deletes localstorage async, and reloading immediately causes issues..
-        window.setTimeout(reload, 500);
-      });
 
       webmakerAuth.verify();
 

@@ -24,7 +24,6 @@ define(['jquery', 'webmaker-auth-client/webmaker-auth-client'], function ($, Web
   }
 
   function onLogin(user) {
-    auth.off('verified', onVerified);
     $('#webmaker-nav').addClass('loggedin');
     toggleUserData(user);
     loginEl.hide();
@@ -32,24 +31,15 @@ define(['jquery', 'webmaker-auth-client/webmaker-auth-client'], function ($, Web
   }
 
   function onLogout() {
-    auth.off('verified', onVerified);
     $('#webmaker-nav').removeClass('loggedin');
     toggleUserData();
     loginEl.show();
     logoutEl.hide();
   }
 
-  function onVerified(user) {
-    if (user) {
-      onLogin(user);
-    } else {
-      onLogout();
-    }
-  }
-
   auth.on('login', onLogin);
   auth.on('logout', onLogout);
-  auth.on('verified', onVerified);
+
   auth.on('error', function (err) {
     window.console.log(err);
   });

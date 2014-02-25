@@ -199,12 +199,7 @@ function ($, EventModel, forms, localized, nunjucks, webmakerAuth) { return func
 
         webmakerAuth.on('login', onLogin);
         webmakerAuth.on('logout', onLogout);
-        webmakerAuth.on('verified', function(user) {
-            if ( user ) {
-                return onLogin();
-            }
-            onLogout();
-        });
+
         webmakerAuth.verify();
     });
 }});

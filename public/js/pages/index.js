@@ -11,14 +11,6 @@ require(['jquery', 'base/ui', 'base/gallery', 'base/login'],
 
     $('.btn-signin').click(webmakerAuth.login);
 
-    webmakerAuth.on('verified', function (user) {
-      // show the banner if not signed in
-      if (!user) {
-        $('#banner-join').show();
-        gallery.masonry.layout();
-      }
-    });
-
     webmakerAuth.on('login', function () {
       $('#banner-join').hide();
       gallery.masonry.layout();

@@ -174,12 +174,7 @@ define(['jquery', 'model', 'forms', 'localized', 'nunjucks', 'base/login', 'boot
 
         webmakerAuth.on('login', onLogin);
         webmakerAuth.on('logout', onLogout);
-        webmakerAuth.on('verified', function(user) {
-          if ( user ) {
-            return onLogin();
-          }
-          onLogout();
-        });
+
         webmakerAuth.verify();
       });
   }}

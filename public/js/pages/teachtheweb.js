@@ -40,12 +40,6 @@ define(['jquery', 'masonry', 'base/lazy-loader', 'pages/home-carousel', 'base/lo
       $('#join-us').show();
     });
 
-    webmakerAuth.on('verified', function (user) {
-      if (user) {
-        $('#join-us').hide();
-      }
-    });
-
     new Masonry(gallery, {
       itemSelector: '.make-now-templates > article',
       gutter: '.gutter-make-now'

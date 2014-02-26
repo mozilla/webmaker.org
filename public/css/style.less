@@ -625,6 +625,46 @@ img {
  * PARTY
  */
 
+#party {
+  .party-banner {
+    min-height: auto;
+    border-radius: 50px;
+  }
+
+  #save-the-date-header {
+    h1 {
+      font-family: "Open Sans Light", sans-serif;
+      font-size: 60px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      font-size: 35px;
+    }
+    .btn-container {
+      position: relative;
+      text-align: center;
+      margin-top: 50px;
+      width: 100%;
+      .text-muted{
+        color: #999;
+        margin-bottom: 10px;
+      }
+    }
+    a.btn {
+      text-decoration: none;
+      span {
+        margin-right: 10px;
+      }
+    }
+    a.btn:hover {
+      color: #fff;
+    }
+  }
+}
+
+
+
 /*********************************************************
  * TEACH-TEMPLATES
  */
@@ -810,186 +850,7 @@ img {
   }
 }
 
-.party-banner {
-  min-height: auto;
-  .border-top-radius(25px);
-  border-radius: 50px;
-}
 
-.party-partners {
-  display: inline-block;
-  padding-right: 50px;
-}
-
-.party-up-to-date {
-  width: 230px;
-  height: 200px;
-  background-color: @blue;
-  position: relative;
-  ul {
-    list-style: none;
-    position: relative;
-    top: 25px;
-    left: 10px;
-    li {
-      line-height: 45px;
-      a {
-        font-family: 'Open Sans Light';
-        font-size: 20px;
-        color: #FFF;
-      }
-    }
-  }
-}
-
-.party-hosts {
-  text-align: center;
-
-  h3 {
-    text-align: left;
-  }
-
-  img {
-    width: 50%;
-  }
-}
-
-#party {
-  h1, h2{
-    color: @green;
-  }
-
-  .makerparty-img {
-    width: 100%;
-  }
-
-  .partners-desc {
-    margin-top: 0;
-  }
-
-  h3 {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.2;
-  }
-
-  .list-edge {
-    padding-left: 15px;
-  }
-
-  #content {
-    #summer-of-making {
-      background-color: #f7f9f9;
-      padding: 16px 0;
-      width: 820px;
-      .border-box;
-
-      img {
-        float: left;
-        margin: 0 20px 0 20px;
-      }
-
-      div {
-        margin-top: 15px;
-
-        p {
-          margin: 0;
-        }
-      }
-    }
-
-    .commitment-carousel {
-      background-color: @lightgrey;
-      padding: 1em;
-      width: 100%;
-      .border-box;
-
-      img {
-        border-radius: 50em;
-        width: 87px;
-        float: left;
-        margin-right: 10px;
-      }
-
-      p {
-        font-size: 1.3em;
-        line-height: 1.2;
-        margin: 0 0 0.3em 0;
-      }
-
-      h4 {
-        margin: 0;
-      }
-
-      a {
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-        &:before {
-          content: "\2013";
-          margin-right: 3px;
-        }
-      }
-    }
-    .commitment-carousel-items {
-      position: relative;
-      padding: 10px 0 0 110px;
-      .commitment-carousel-item {
-        display: none;
-        &:first-child {
-          display: block;
-        }
-      }
-    }
-
-    .commitment-list-column {
-      ul {
-        padding-left: 20px;
-        margin: 0;
-        font-size: 0.6em;
-        font-family: 'Open Sans Light';
-        list-style: square;
-
-        h4 {
-          margin: 0;
-        }
-
-        a {
-          vertical-align: middle;
-          font-size: 1.5em;
-          text-decoration: none;
-          font-weight: normal;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-    a {
-      text-decoration: underline;
-    }
-    .download {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-
-.makers-making {
-  width: 500px;
-}
-
-.maker-party-logo {
-  width: 160px;
-
-  img {
-    width: auto;
-  }
-}
 
 /*********************************************************
  * ABOUT

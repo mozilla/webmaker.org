@@ -3,11 +3,13 @@ requirejs.config({
   paths: {
     'jquery': '../bower/jquery/jquery',
     'social': '../js/lib/socialmedia',
-    'localized': '../bower/webmaker-i18n/localized'
+    'localized': '../bower/webmaker-i18n/localized',
+    'eventEmitter': '../bower/eventEmitter',
+    'webmaker-auth-client': '../bower/webmaker-auth-client',
   }
 });
-define(['jquery', 'social', 'localized'],
-  function ($, SocialMedia, localized) {
+define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-client'],
+  function ($, SocialMedia, localized, WebmakerAuth) {
     localized.ready(function () {
       var social,
         $body = $("body"),
@@ -25,7 +27,12 @@ define(['jquery', 'social', 'localized'],
         googleBtn = document.getElementById("google-btn"),
         twitterBtn = document.getElementById("twitter-btn"),
         fbBtn = document.getElementById("fb-btn"),
-        url = $body.data("url");
+        url = $body.data("url"),
+        csrfToken = $("meta[name='csrf-token']").attr("content"),
+        webmakerAuth = new WebmakerAuth({
+          csrfToken: csrfToken,
+          handleNewUserUI: false
+        });
 
       var socialMessage = localized.get('DetailsShareTwitterMsg');
       social = new SocialMedia({
@@ -43,7 +50,7 @@ define(['jquery', 'social', 'localized'],
       }
 
       function openLogInWindow() {
-        window.open("/login", "Log In");
+        webmakerAuth.login();
       }
 
       function displayTooltip($tooltipElem, delay) {
@@ -65,6 +72,28 @@ define(['jquery', 'social', 'localized'],
         $tooltipElem.removeClass("hide");
         timer = window.setTimeout(hideTooltip, delay);
         window.addEventListener("click", clickCallback, false);
+      }
+
+      function updateLikes(newLen) {
+        $likeBtn.toggleClass("icon-heart icon-heart-empty");
+        if (typeof newLen === "undefined") {
+          return;
+        } else if (newLen === 0) {
+          $likeText.html(localized.get("Like-0"));
+        } else if (newLen === 1) {
+          $likeText.html(localized.get("Like-1"));
+        } else {
+          $likeText.html(localized.get("Like-n"));
+        }
+        $likeCount.html(newLen);
+      }
+
+      function updateReport(method) {
+        $reportButton.toggleClass("icon-flag icon-flag-alt");
+        $reportedText.toggleClass("hide");
+        if (method === "/report") {
+          displayTooltip($makeReportedMsg, 10000);
+        }
       }
 
       $likeNotLoggedInMsg.on("click", openLogInWindow);
@@ -91,21 +120,16 @@ define(['jquery', 'social', 'localized'],
 
         $.post(method, {
           makeID: makeID,
-          _csrf: $("meta[name='csrf-token']").attr("content")
+          _csrf: csrfToken
         }, function (res) {
-          var newLen = res.likes.length;
-          $likeBtn.toggleClass("icon-heart icon-heart-empty");
-          $likeCount.html(newLen);
-          if (newLen === 0) {
-            $likeText.html(localized.get("Like-0"));
-          } else if (newLen === 1) {
-            $likeText.html(localized.get("Like-1"));
-          } else {
-            $likeText.html(localized.get("Like-n"));
-          }
+          updateLikes(res.likes.length);
+
         }).fail(function (res) {
           if (res.status === 401) {
             displayTooltip($likeNotLoggedInMsg, 5000);
+          } else if (res.status === 400) {
+            // user already likes/unliked
+            updateLikes();
           }
         });
       });
@@ -128,20 +152,21 @@ define(['jquery', 'social', 'localized'],
 
         $.post(method, {
           makeID: makeID,
-          _csrf: $("meta[name='csrf-token']").attr("content")
+          _csrf: csrfToken
         }, function (res) {
-          $reportButton.toggleClass("icon-flag icon-flag-alt");
-          $reportedText.toggleClass("hide");
-          if (method === "/report") {
-            displayTooltip($makeReportedMsg, 10000);
-          }
+          updateReport(method);
         }).fail(function (res) {
           if (res.status === 401) {
             displayTooltip($reportNotLoggedInMsg, 5000);
+          } else if (res.status === 400) {
+            // already reported/cancelled
+            updateReport(method);
           } else {
             displayTooltip($reportError, 5000);
           }
         });
       });
+
+      webmakerAuth.verify();
     });
   });

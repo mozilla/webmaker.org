@@ -212,9 +212,9 @@ app.locals({
 app.use(function (req, res, next) {
   var user = req.session.user;
   res.locals({
-    email: user.email || '',
-    username: user.username || '',
-    makerID: user.id || '',
+    email: user ? user.email : '',
+    username: user ? user.username : '',
+    makerID: user ? user.id : '',
     csrf: req.csrfToken(),
     navigation: navigation,
     gettext: req.gettext,

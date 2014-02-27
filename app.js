@@ -210,10 +210,11 @@ app.locals({
 });
 
 app.use(function (req, res, next) {
+  var user = req.session.user;
   res.locals({
-    email: req.session.email || '',
-    username: req.session.username || '',
-    makerID: req.session.id || '',
+    email: user.email || '',
+    username: user.username || '',
+    makerID: user.id || '',
     csrf: req.csrfToken(),
     navigation: navigation,
     gettext: req.gettext,

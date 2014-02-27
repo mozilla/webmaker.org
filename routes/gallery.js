@@ -56,7 +56,7 @@ module.exports = function (options) {
         .process(function (err, data, totalHits) {
           totalHitCount.push(totalHits);
           callback(err, data);
-        }, req.session.id || '');
+        }, req.session.user ? req.session.user.id : '');
     }
 
     var stickyOptions = {

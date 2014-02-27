@@ -51,9 +51,9 @@ module.exports = function (req, res) {
         makeData.remixCount = totalHits + " remixes";
       }
 
-      if (req.session.id && makeData.reports && makeData.reports.length) {
+      if (req.session.user && makeData.reports && makeData.reports.length) {
         makeData.userReported = makeData.reports.some(function (report) {
-          return report.userId === +req.session.id;
+          return report.userId === +req.session.user.id;
         });
       }
 
@@ -75,5 +75,5 @@ module.exports = function (req, res) {
         res.render("details.html", makeData);
       }
     });
-  }, req.session.id || '');
+  }, req.session.user ? req.session.user.id : '');
 };

@@ -49,7 +49,21 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-cli
         $shareBtn.off("click", shareOnClick);
       }
 
-      function openLogInWindow() {
+      $shareBtn.on("click", shareOnClick);
+
+      function openLogInWindow(actionCallback) {
+        function onLogin() {
+          webmakerAuth.off("login", onLogin);
+          webmakerAuth.off("error", onError);
+          actionCallback();
+        }
+
+        function onError() {
+          webmakerAuth.off("login", onLogin);
+          webmakerAuth.off("error", onError);
+        }
+        webmakerAuth.on("login", onLogin);
+        webmakerAuth.on("error", onError);
         webmakerAuth.login();
       }
 
@@ -74,41 +88,9 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-cli
         window.addEventListener("click", clickCallback, false);
       }
 
-      function updateLikes(newLen) {
-        $likeBtn.toggleClass("icon-heart icon-heart-empty");
-        if (typeof newLen === "undefined") {
-          return;
-        } else if (newLen === 0) {
-          $likeText.html(localized.get("Like-0"));
-        } else if (newLen === 1) {
-          $likeText.html(localized.get("Like-1"));
-        } else {
-          $likeText.html(localized.get("Like-n"));
-        }
-        $likeCount.html(newLen);
-      }
+      // Like event handlers
 
-      function updateReport(method) {
-        $reportButton.toggleClass("icon-flag icon-flag-alt");
-        $reportedText.toggleClass("hide");
-        if (method === "/report") {
-          displayTooltip($makeReportedMsg, 10000);
-        }
-      }
-
-      $likeNotLoggedInMsg.on("click", openLogInWindow);
-      $reportNotLoggedInMsg.on("click", openLogInWindow);
-
-      $shareBtn.on("click", shareOnClick);
-      $shareBtn.on("click", shareOnClick);
-
-      $likeBtn.on("click", function (e) {
-        if (e.target !== $likeBtn[0]) {
-          return;
-        }
-
-        e.preventDefault();
-
+      function likeRequest() {
         var makeID = $likeBtn.data("make-id"),
           method;
 
@@ -132,15 +114,37 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-cli
             updateLikes();
           }
         });
-      });
+      }
 
-      $reportButton.on("click", function (e) {
-        if (e.target !== $reportButton[0]) {
+      function updateLikes(newLen) {
+        $likeBtn.toggleClass("icon-heart icon-heart-empty");
+        if (typeof newLen === "undefined") {
+          return;
+        } else if (newLen === 0) {
+          $likeText.html(localized.get("Like-0"));
+        } else if (newLen === 1) {
+          $likeText.html(localized.get("Like-1"));
+        } else {
+          $likeText.html(localized.get("Like-n"));
+        }
+        $likeCount.html(newLen);
+      }
+
+      $likeBtn.on("click", function (e) {
+        if (e.target !== $likeBtn[0]) {
           return;
         }
-
         e.preventDefault();
+        likeRequest();
+      });
 
+      $likeNotLoggedInMsg.on("click", function () {
+        openLogInWindow(likeRequest);
+      });
+
+      // Report Event Handlers
+
+      function reportRequest() {
         var makeID = $reportButton.data("make-id"),
           method;
 
@@ -165,6 +169,26 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-cli
             displayTooltip($reportError, 5000);
           }
         });
+      }
+
+      function updateReport(method) {
+        $reportButton.toggleClass("icon-flag icon-flag-alt");
+        $reportedText.toggleClass("hide");
+        if (method === "/report") {
+          displayTooltip($makeReportedMsg, 10000);
+        }
+      }
+
+      $reportButton.on("click", function (e) {
+        if (e.target !== $reportButton[0]) {
+          return;
+        }
+        e.preventDefault();
+        reportRequest();
+      });
+
+      $reportNotLoggedInMsg.on("click", function () {
+        openLogInWindow(reportRequest);
       });
 
       webmakerAuth.verify();

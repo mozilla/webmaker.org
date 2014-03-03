@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}{{ gettext("Languages") }}{% endblock %}
+{% block body %}
+<div class="ui-wrapper ui-section" id="language">
+  {% include "webmaker-language-picker/template/languages.html" %}
+</div>
+{% endblock %}

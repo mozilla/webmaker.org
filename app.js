@@ -202,8 +202,7 @@ app.locals({
   loginAPI: env.get("LOGIN"),
   ga_account: env.get("GA_ACCOUNT"),
   ga_domain: env.get("GA_DOMAIN"),
-  supportedLanguages: i18n.getLanguages(),
-  listDropdownLang: i18n.getSupportLanguages(),
+  languages: i18n.getSupportLanguages(),
   PROFILE_URL: env.get("PROFILE_URL"),
   flags: env.get("FLAGS") || {},
   personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org")
@@ -212,6 +211,8 @@ app.locals({
 app.use(function (req, res, next) {
   var user = req.session.user;
   res.locals({
+    currentPath: req.path,
+    returnPath: req.param('page'),
     email: user ? user.email : '',
     username: user ? user.username : '',
     makerID: user ? user.id : '',
@@ -362,6 +363,7 @@ app.get("/u/:user", routes.usersearch);
 
 app.get("/terms", routes.page("terms"));
 app.get("/privacy", routes.page("privacy"));
+app.get("/languages", routes.page("languages"));
 
 app.get("/sso/include.js", routes.includejs(env.get("HOSTNAME")));
 app.get("/sso/include.html", middleware.removeXFrameOptions, routes.include());

@@ -17,6 +17,9 @@ requirejs.config({
     'nunjucks': '/bower/nunjucks/browser/nunjucks-dev',
     'makeapi': '/bower/makeapi-client/src/make-api',
     'localized': '/bower/webmaker-i18n/localized',
+    'languages': '/bower/webmaker-language-picker/js/languages',
+    'list': '/bower/listjs/dist/list.min',
+    'fuzzySearch': '/bower/list.fuzzysearch.js/dist/list.fuzzysearch.min',
     'masonry': '/bower/masonry/masonry',
     'outlayer': '/bower/outlayer',
     'get-size': '/bower/get-size',
@@ -45,17 +48,16 @@ require([
   'base/marquee',
   'base/email-signup',
   'base/anchor-slide',
-  '/bower/webmaker-ui/ui.js',
   'base/navigation',
   'base/webmaker-campaign',
+  'languages',
   'base/login',
   'tabzilla',
-], function ($, cta, Marquee, privacy, AnchorSlide, WebmakerUI, navigation, webmakerCampaign) {
+], function ($, cta, Marquee, privacy, AnchorSlide, navigation, webmakerCampaign, languages) {
   'use strict';
 
   var $window = $(window);
   var $backToTop = $('.back-to-top');
-  var langSelector = document.querySelector('#lang-picker');
 
   // Show and hide "Back To Top" trigger
   $window.scroll(function () {
@@ -64,6 +66,12 @@ require([
     } else {
       $backToTop.removeClass('addMore');
     }
+  });
+
+  // Call this when the element is ready
+  languages.ready({
+    position: "top",
+    arrow: "left"
   });
 
   // Attach navigation UI
@@ -88,9 +96,6 @@ require([
     var marquee = new Marquee(this);
     marquee.startRotation();
   });
-
-  // URL redirector for language picker
-  WebmakerUI.langPicker(langSelector);
 
   // Set up page-specific js
   var pageJS = $('#require-js').data('page');

@@ -631,6 +631,9 @@ img {
   .party-banner {
     min-height: auto;
     border-radius: 50px;
+    img {
+      box-shadow: 1px 1px 5px #ccc;
+    }
   }
 
   #save-the-date-header {
@@ -645,6 +648,7 @@ img {
     }
     .btn-container {
       position: relative;
+      left: 0;
       text-align: center;
       margin-top: 50px;
       width: 100%;
@@ -663,6 +667,16 @@ img {
       color: #fff;
     }
   }
+
+  @media (max-width: @width-small) {
+    #save-the-date-header h1 {
+      font-size: 35px;
+    }
+    #save-the-date-header h2 {
+      font-size: 18px;
+    }
+  }
+
 }
 
 

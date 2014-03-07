@@ -4,19 +4,6 @@ module.exports = {
   },
   details: require("./details"),
   gallery: require("./gallery"),
-  include: function (options) {
-    return function (req, res) {
-      res.render("sso/include.html", options);
-    };
-  },
-  includejs: function (hostname) {
-    return function (req, res) {
-      res.set("Content-Type", "application/javascript;charset=utf-8");
-      res.render("sso/include.js", {
-        HOSTNAME: hostname
-      });
-    };
-  },
   me: require("./me"),
   page: function (view) {
     return require("./page")(view);

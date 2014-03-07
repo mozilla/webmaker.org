@@ -365,11 +365,6 @@ app.get("/terms", routes.page("terms"));
 app.get("/privacy", routes.page("privacy"));
 app.get("/languages", routes.page("languages"));
 
-app.get("/sso/include.js", routes.includejs(env.get("HOSTNAME")));
-app.get("/sso/include.html", middleware.removeXFrameOptions, routes.include());
-app.get("/sso/include-transparent.html", middleware.removeXFrameOptions, routes.include({
-  transparent: "transparent"
-}));
 app.get("/sitemap.xml", function (req, res) {
   res.type("xml");
   res.render("sitemap.xml");

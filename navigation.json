@@ -88,19 +88,8 @@
     "id": "events",
     "title": "Events",
     "icon": "icon-map-marker",
-    "defaultUrl": "events",
-    "pages": [
-      {
-        "id": "events",
-        "title": "Events",
-        "url": "events"
-      },
-      {
-        "id": "party",
-        "title": "Maker Party",
-        "url": "party"
-      }
-    ]
+    "defaultUrl": "{{EVENTS_URL}}",
+    "instantiate": true
   },
   {
     "id": "info",

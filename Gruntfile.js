@@ -19,7 +19,6 @@ module.exports = function (grunt) {
     'Gruntfile.js',
     'app.js',
     'lib/**/*.js',
-    '!lib/events/**',
     'routes/**/*.js',
     'test/**/*.js'
   ];
@@ -71,14 +70,6 @@ module.exports = function (grunt) {
           cwd: "public/img/",
           src: ["**/*.{png,jpg,gif}"],
           dest: "public/img/"
-        }]
-      },
-      events: {
-        files: [{
-          expand: true,
-          cwd: "public/events/img/",
-          src: ["**/*.{png,jpg,gif}"],
-          dest: "public/events/img/"
         }]
       }
     },

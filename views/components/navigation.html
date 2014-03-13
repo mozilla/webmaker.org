@@ -5,7 +5,7 @@
   <nav id="navigation-primary" class="navigation-container">
       <ul class="navigation-list navigation-wrapper">
         {% for section in navigation %}
-          <li><a href="/{{localeInfo.lang}}/{{section.defaultUrl}}"
+          <li><a href="{% if section.instantiate %}{{section.defaultUrl | instantiate}}{% else %}/{{localeInfo.lang}}/{{section.defaultUrl}}{% endif %}"
           {% if section.id == currentSection %}class="active"{% endif %} data-section="{{section.id}}">
             <span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a>
           </li>

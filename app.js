@@ -204,6 +204,7 @@ app.locals({
   ga_domain: env.get("GA_DOMAIN"),
   languages: i18n.getSupportLanguages(),
   PROFILE_URL: env.get("PROFILE_URL"),
+  EVENTS_URL: env.get("EVENTS_URL"),
   flags: env.get("FLAGS") || {},
   personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org")
 });
@@ -223,8 +224,6 @@ app.use(function (req, res, next) {
   });
   next();
 });
-
-require("./lib/events").init(app, nunjucksEnv, __dirname);
 
 var optimize = NODE_ENV !== "development",
   tmpDir = path.join(require("os").tmpDir(), "mozilla.webmaker.org"),
@@ -268,12 +267,6 @@ app.use(function (err, req, res, next) {
 
   res.status(error.code);
   res.render('error.html', error);
-});
-
-require("./lib/loginapi")(app, {
-  loginURL: env.get("LOGINAPI"),
-  audience: env.get("AUDIENCE"),
-  verifierURI: env.get("PERSONA_VERIFIER_URI")
 });
 
 var middleware = require("./lib/middleware");

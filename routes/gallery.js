@@ -117,7 +117,7 @@ module.exports = function (options) {
         prefix: prefix,
         layout: layout.name,
         template: layout.template,
-        isAdmin: req.isAdmin || false
+        isAdmin: req.session.user ? req.session.user.isAdmin : false
       });
     });
   };

@@ -2,7 +2,7 @@
 <html lang="{{ localeInfo.lang }}" dir="{{ localeInfo.direction }}">
 <head>
   <meta charset="utf-8">
-  {{ newrelic.getBrowserTimingHeader() }}
+  {{ newrelic.getBrowserTimingHeader() | safe }}
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="csrf-token" content="{{ csrf }}">
   <meta name="persona-email" content="{{ email }}">

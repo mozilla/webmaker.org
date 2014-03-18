@@ -3,7 +3,9 @@ if (process.env.NEW_RELIC_HOME) {
   newrelic = require('newrelic');
 } else {
   newrelic = {
-    getBrowserTimingHeader: function () {}
+    getBrowserTimingHeader: function () {
+      return "<!-- New Relic RUM disabled -->";
+    }
   };
 }
 

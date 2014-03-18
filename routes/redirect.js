@@ -58,6 +58,12 @@ module.exports = function (app) {
     paths: [
       "/translate"
     ]
+  }, {
+    route: app.locals.EVENTS_URL,
+    paths: [
+      "/events",
+      "/events/*"
+    ]
   }];
 
   redirectMap.forEach(function (redirect) {

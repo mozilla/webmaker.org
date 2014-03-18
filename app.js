@@ -1,5 +1,10 @@
+var newrelic;
 if (process.env.NEW_RELIC_HOME) {
-  require('newrelic');
+  newrelic = require('newrelic');
+} else {
+  newrelic = {
+    getBrowserTimingHeader: function () {}
+  };
 }
 
 var express = require("express"),
@@ -198,6 +203,7 @@ app.use(express.csrf());
 
 app.locals({
   makeEndpoint: env.get("MAKE_ENDPOINT"),
+  newrelic: newrelic,
   personaSSO: env.get("AUDIENCE"),
   loginAPI: env.get("LOGIN"),
   ga_account: env.get("GA_ACCOUNT"),

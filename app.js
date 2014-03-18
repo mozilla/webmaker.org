@@ -20,7 +20,8 @@ var express = require("express"),
   lessMiddleWare = require("less-middleware"),
   i18n = require("webmaker-i18n"),
   WebmakerAuth = require("webmaker-auth"),
-  navigation = require("./navigation");
+  navigation = require("./navigation"),
+  rtltrForLess = require("rtltr-for-less");
 
 habitat.load();
 
@@ -177,9 +178,23 @@ app.use(function (req, res, next) {
   guard.run(next);
 });
 
+var optimize = NODE_ENV !== "development";
+
+app.use(lessMiddleWare(rtltrForLess({
+  once: optimize,
+  debug: !optimize,
+  dest: '/css',
+  src: '../less',
+  root: WWW_ROOT,
+  compress: optimize,
+  yuicompress: optimize,
+  optimization: optimize ? 0 : 2,
+  sourceMap: !optimize
+})));
+
 app.use(express.compress());
 app.use(express.static(WWW_ROOT));
-app.use("/bower", express.static(path.join(__dirname, "bower_components")));
+app.use("/bower_components", express.static(path.join(__dirname, "bower_components")));
 
 // Setup locales with i18n
 app.use(i18n.middleware({
@@ -233,20 +248,10 @@ app.use(function (req, res, next) {
   next();
 });
 
-var optimize = NODE_ENV !== "development",
-  tmpDir = path.join(require("os").tmpDir(), "mozilla.webmaker.org"),
-  rtltrForLess = require("rtltr-for-less");
-app.use(lessMiddleWare(rtltrForLess({
-  once: optimize,
-  debug: !optimize,
-  dest: tmpDir,
-  src: WWW_ROOT,
-  compress: optimize,
-  yuicompress: optimize,
-  optimization: optimize ? 0 : 2,
-  sourceMap: !optimize
-})));
-app.use(express.static(tmpDir));
+// Angular
+if (env.get('FLAGS_EXPLORE')) {
+  app.use('/explore', express.static(path.join(__dirname, 'public_angular')));
+}
 
 // Nunjucks
 // This just uses nunjucks-dev for now -- middleware to handle compiling templates in progress
@@ -373,6 +378,22 @@ app.get("/sitemap.xml", function (req, res) {
 
 // Localized Strings
 app.get("/strings/:lang?", i18n.stringsRoute("en-US"));
+
+// Angular config
+var angularConfig = {
+  accountSettingsUrl: env.get('LOGIN') + '/account',
+};
+
+app.get('/angular-config.js', function (req, res) {
+  angularConfig.lang = req.localeInfo.lang;
+  angularConfig.direction = req.localeInfo.direction;
+  angularConfig.defaultLang = 'en-US';
+  angularConfig.supported_languages = i18n.getSupportLanguages();
+  angularConfig.csrf = req.csrfToken();
+
+  res.setHeader('Content-type', 'text/javascript');
+  res.send('window.angularConfig = ' + JSON.stringify(angularConfig));
+});
 
 /**
  * Legacy Webmaker Redirects

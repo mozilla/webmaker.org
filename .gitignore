@@ -9,3 +9,4 @@ public/events/uploads/
 locale/
 !locale/en_US/*
 !locale/localeinfo.json
+public/css/*

@@ -1,10 +1,10 @@
 requirejs.config({
   baseUrl: '/js',
   paths: {
-    'jquery': '../bower/jquery/jquery',
+    'jquery': '../bower_components/jquery/jquery',
     'social': '../js/lib/socialmedia',
-    'localized': '../bower/webmaker-i18n/localized',
-    'eventEmitter': '../bower/eventEmitter',
+    'localized': '../bower_components/webmaker-i18n/localized',
+    'eventEmitter': '../bower_components/eventEmitter',
     'webmaker-auth-client': '../bower/webmaker-auth-client',
   }
 });

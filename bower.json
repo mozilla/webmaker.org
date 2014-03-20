@@ -14,7 +14,7 @@
     "requirejs": "2.1.8",
     "text": "2.0.9",
     "webmaker-analytics": "0.0.5",
-    "webmaker-auth-client": "0.0.25",
+    "webmaker-auth-client": "0.0.26",
     "webmaker-language-picker": "0.0.16",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",
     "angular": "1.0.7",

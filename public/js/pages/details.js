@@ -5,7 +5,7 @@ requirejs.config({
     'social': '../js/lib/socialmedia',
     'localized': '../bower_components/webmaker-i18n/localized',
     'eventEmitter': '../bower_components/eventEmitter',
-    'webmaker-auth-client': '../bower/webmaker-auth-client',
+    'webmaker-auth-client': '../bower_components/webmaker-auth-client',
   }
 });
 define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-client'],

@@ -7,6 +7,10 @@
     "message": "Web Literacy Map",
     "description": "Heading for sidebar"
   },
+  "Become a mentor": {
+    "message": "Become a mentor",
+    "description": "Button in mentors section on literacy pages"
+  },
   "Add your own": {
     "message": "Add your own",
     "description": "Add your own menu title"

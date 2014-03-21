@@ -32,8 +32,6 @@ angular
 
     $scope.mentors = SITE.mentors;
 
-    console.log(makeapi);
-
     makeapi
       .tags($scope.skill.tags)
       .then(function(data) {

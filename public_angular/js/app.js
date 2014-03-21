@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('exploreApp', ['ngRoute', 'slugifier', 'ui.bootstrap', 'exploreApp.services', 'webmakerAngular.login'])
+angular.module('exploreApp', ['ngRoute', 'slugifier', 'ui.bootstrap', 'exploreApp.services', 'webmakerAngular.login', 'localization'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -27,6 +27,16 @@ angular.module('exploreApp', ['ngRoute', 'slugifier', 'ui.bootstrap', 'exploreAp
         if (ngView) {
           ngView.scrollTop = 0;
         }
+
+        // Set locale information
+        if (CONFIG.supported_languages.indexOf(CONFIG.lang) > 0) {
+          $rootScope.lang = CONFIG.lang;
+        } else {
+          $rootScope.lang = CONFIG.defaultLang;
+        }
+        $rootScope.direction = CONFIG.direction;
+        $rootScope.arrowDir = CONFIG.direction === 'rtl' ? "left" : "right";
+
       });
     }
   ]);

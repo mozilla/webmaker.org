@@ -19,6 +19,7 @@
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",
     "angular": "1.0.7",
     "angular-resource": "1.0.7",
+    "angular-sanitize": "1.2.14",
     "makerstrap": "0.1.2",
     "angular-ui": "0.4.0",
     "angular-bootstrap": "0.10.0",

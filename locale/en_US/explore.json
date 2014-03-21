@@ -1,0 +1,58 @@
+{
+  "Explore the World of Webmaker": {
+    "message": "Explore the World of Webmaker",
+    "description": "Heading for Explore page"
+  },
+  "Web Literacy Map": {
+    "message": "Web Literacy Map",
+    "description": "Heading for sidebar"
+  },
+  "Add your own": {
+    "message": "Add your own",
+    "description": "Add your own menu title"
+  },
+  "Add a kit": {
+    "message": "Add a kit",
+    "description": "Add a kit button"
+  },
+  "Most endorsed": {
+    "message": "Most endorsed",
+    "description": "Tab title Most endorsed"
+  },
+  "Staff picks": {
+    "message": "Staff picks",
+    "description": "Tab title Staff picks"
+  },
+  "Kits": {
+    "message": "Kits",
+    "description": "Title for teaching kits"
+  },
+  "noStaffPick": {
+    "message": "There are no staff picks yet. <a href=\"#\">submit some</a>!",
+    "description": "No item in the list picked by staff and there is a submit link."
+  },
+  "Endorsement": {
+    "message": "Endorsement",
+    "description": "Endorsement"
+  },
+  "Endorsements": {
+    "message": "Endorsements",
+    "description": "Plural Endorsements"
+  },
+  "Featured mentors": {
+    "message": "Featured mentors",
+    "description": "Featured mentors"
+  },
+  "Nominate": {
+    "message": "Nominate",
+    "description": "Nominate"
+  },
+  "What do you care about": {
+    "message": "What do you care about",
+    "description": "What do you care about message on adding more kits request"
+  },
+  "Tell us": {
+    "message": "Tell us",
+    "description": "Tell us message from adding kits request page."
+  }
+}

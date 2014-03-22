@@ -22,7 +22,7 @@ You should also have these Webmaker stack applications running:
 1. Clone webmaker.org and enter the directory: `git clone https://github.com/mozilla/webmaker.org && cd webmaker.org`
 2. Install webmaker.org's Node and Bower dependencies: `npm install`
 3. Copy the configuration template to its expected location: `cp env.dist .env`
-4. Open `.env` in your favourite text editor and ensure that your `PORT`, `HOSTNAME`, `MAKE_ENDPOINT`, `LOGIN` and `LOGINAPI` environment variables are set to the correct values. `PORT` can be any available port. `HOSTNAME` is the local address. `MAKE_ENDPOINT`, `LOGIN` and `LOGINAPI` should point to the URL of your running MakeAPI and Webmaker Login service instances.
+4. Open `.env` in your favourite text editor and ensure that your `PORT`, `MAKE_ENDPOINT`, `LOGIN` and `LOGINAPI` environment variables are set to the correct values. `PORT` can be any available port. `MAKE_ENDPOINT`, `LOGIN` and `LOGINAPI` should point to the URL of your running MakeAPI and Webmaker Login service instances.
 5. Run `node app.js`, and open up `http://localhost:7777/` in your favourite web browser!
 
 ## Grunt Tasks

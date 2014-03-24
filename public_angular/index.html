@@ -79,10 +79,10 @@
             <a href="#/">{{ 'Web Literacy Map' | i18n }}</a>
           </li>
           <li
-            ng-repeat="skill in skills"
-            ng-class="{ active : isActive(skill.name) }"
-            style="background-color: {{ skill.colour }}">
-            <a href="#/competencies/{{ skill.name | slugify }}">{{ skill.name }}</a>
+            ng-repeat="skill in literacies"
+            ng-class="{ active : isActive(skill.term) }"
+            style="background-color: {{ skill.color }}">
+            <a href="#/competencies/{{ skill.term | slugify }}">{{ skill.tag | i18n }}</a>
           </li>
           <li
             ng-class="{ active : isActive('/add') }"
@@ -100,6 +100,7 @@
   <script src="../angular-config.js"></script>
   <script src="https://login.persona.org/include.js"></script>
   <script src="/bower_components/jquery/jquery.js"></script>
+  <script src="/bower_components/web-literacy-client/dist/web-literacy-client.with-langs.js"></script>
   <script src="/bower_components/makeapi-client/src/make-api.js"></script>
   <script src="/bower_components/webmaker-auth-client/dist/webmaker-auth-client.min.js"></script>
   <script src="/bower_components/masonry/dist/masonry.pkgd.js"></script>

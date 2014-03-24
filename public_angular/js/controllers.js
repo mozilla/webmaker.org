@@ -4,7 +4,6 @@ angular
   .module('exploreApp')
   .controller('navigationController', function ($scope, $location, $routeParams, Slug, SITE) {
     $scope.isCollapsed = true;
-    $scope.skills = SITE.skills;
 
     $scope.isActive = function (name) {
       if (name[0] === '/') {
@@ -20,12 +19,12 @@ angular
   .controller('mainController', function ($scope) {
     //
   })
-  .controller('competencyController', function ($scope, $location, $routeParams, Slug, makeapi, SITE) {
+  .controller('competencyController', function ($rootScope, $scope, $location, $routeParams, Slug, makeapi, SITE) {
 
     $scope.slug = $routeParams.id;
 
-    $scope.skill = SITE.skills.filter(function (item) {
-      return Slug.slugify(item.name) === $scope.slug;
+    $scope.skill = $rootScope.literacies.filter(function (item) {
+      return Slug.slugify(item.term) === $scope.slug;
     })[0];
 
     $scope.kits = SITE.kits[$scope.slug];
@@ -33,7 +32,7 @@ angular
     $scope.mentors = SITE.mentors;
 
     makeapi
-      .tags($scope.skill.tags)
+      .tags($scope.skill.tag)
       .then(function(data) {
         $scope.makes = data;
       });

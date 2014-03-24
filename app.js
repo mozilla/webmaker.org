@@ -207,9 +207,22 @@ app.use(i18n.middleware({
 
 // Adding an external JSON file to our existing one for the specified locale
 var authLocaleJSON = require("./bower_components/webmaker-auth-client/locale/en_US/create-user-form.json");
+var weblitLocaleJSON = require("./node_modules/web-literacy-client/dist/weblitmap.json");
+
 i18n.addLocaleObject({
   "en-US": authLocaleJSON
-}, function (result) {});
+}, function (err, res) {
+  if(err) {
+    console.error(err);
+  }
+});
+i18n.addLocaleObject({
+  "en-US": weblitLocaleJSON
+}, function (err, res) {
+  if(err) {
+    console.error(err);
+  }
+});
 
 app.use(express.json());
 app.use(express.urlencoded());

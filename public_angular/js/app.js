@@ -19,8 +19,8 @@ angular.module('exploreApp', ['ngRoute', 'slugifier', 'ui.bootstrap', 'exploreAp
         redirectTo: '/'
       });
   })
-  .run(['$rootScope', '$http', 'CONFIG',
-    function($rootScope, $http, CONFIG) {
+  .run(['$rootScope', '$http', 'CONFIG', 'weblit',
+    function($rootScope, $http, CONFIG, weblit) {
       $http.defaults.headers.common['X-CSRF-Token'] = CONFIG.csrf;
       $rootScope.$on('$locationChangeSuccess', function(event) {
         var ngView = document.querySelector('[ng-view]');
@@ -36,6 +36,10 @@ angular.module('exploreApp', ['ngRoute', 'slugifier', 'ui.bootstrap', 'exploreAp
         }
         $rootScope.direction = CONFIG.direction;
         $rootScope.arrowDir = CONFIG.direction === 'rtl' ? "left" : "right";
+
+        // Set up Web Literacy to rootScope
+        var wlc = new weblit();
+        $rootScope.literacies = wlc.all()
 
       });
     }

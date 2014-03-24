@@ -24,7 +24,8 @@
     "angular-ui": "0.4.0",
     "angular-bootstrap": "0.10.0",
     "angular-route": "1.2.10",
-    "angular-slugify": "1.0.0"
+    "angular-slugify": "1.0.0",
+    "web-literacy-client": "https://github.com/mozilla/web-literacy-client/tarball/v1.0.2"
   },
   "resolutions": {
     "angular": "1.2.10"

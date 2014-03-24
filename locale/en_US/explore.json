@@ -51,12 +51,32 @@
     "message": "Nominate",
     "description": "Nominate"
   },
-  "What do you care about": {
-    "message": "What do you care about",
-    "description": "What do you care about message on adding more kits request"
+  "What is a URL?": {
+    "message": "What is a URL?",
+    "description": "Title for teaching kit"
   },
-  "Tell us": {
-    "message": "Tell us",
-    "description": "Tell us message from adding kits request page."
+  "Finding and using links": {
+    "message": "Finding and using links",
+    "description": "Title for teaching kit"
+  },
+  "What is a URL?_desc": {
+    "message": "An introduction to the structure of URLs and finding resources on the well",
+    "description": "Description for teaching kit"
+  },
+  "Finding and using links_desc": {
+    "message": "Find links on a web page using Watson and learn how to evaluate them",
+    "description": "Description for teaching kit"
+  },
+  "Director of Webmaker, Filmmaker": {
+    "message": "Director of Webmaker, Filmmaker",
+    "description": "Title for Brett Gaylor"
+  },
+  "Curriculum Lead, Webmaker": {
+    "message": "Curriculum Lead, Webmaker",
+    "description": "Title for Laura Hilliger"
+  },
+  "Code dude": {
+    "message": "Code dude",
+    "description": "Title for Gavin Suntop"
   }
 }

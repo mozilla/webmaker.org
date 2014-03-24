@@ -1,7 +1,7 @@
 <div class="jumbotron" style="background: {{skill.colour}}">
   <div class="container">
-    <h1>{{ skill.name }}</h1>
-    <p>{{ skill.description }}</p>
+    <h1>{{ skill.tag | i18n }}</h1>
+    <p>{{ skill.tag+'_desc' | i18n }}</p>
   </div>
 </div>
 
@@ -25,14 +25,14 @@
             </div>
             <div class="col-xs-10">
               <div class="caption">
-                <h3>{{kit.title}}</h3>
+                <h3>{{ kit.title | i18n }}</h3>
                 <p class="text-muted">
                   <span class="badge"
                     ng-repeat="tag in kit.tags">
                     #{{tag | decodeURI}}
                   </span>
                 </p>
-                <p class="text-muted">{{kit.description}}</p>
+                <p class="text-muted">{{ kit.title + '_desc' | i18n }}</p>
                 <p ng-show="kit.likes.length" class="text-primary">
                   <span class="fa fa-check"></span> {{kit.likes.length}}
                   <span ng-show="kit.likes.length === 1">{{ 'Endorsement' | i18n }}</span>
@@ -50,14 +50,14 @@
           </div>
           <div class="col-xs-10">
             <div class="caption">
-              <h3>{{kit.title}}</h3>
+              <h3>{{ kit.title | i18n }}</h3>
               <p class="text-muted">
                 <span class="badge"
                   ng-repeat="tag in kit.tags">
                   #{{tag | decodeURI}}
                 </span>
               </p>
-              <p class="text-muted">{{kit.description}}</p>
+              <p class="text-muted">{{ kit.title + '_desc' | i18n }}</p>
               <p ng-show="kit.likes.length" class="text-primary">
                 <span class="fa fa-check"></span> {{kit.likes.length}}
                 <span ng-show="kit.likes.length === 1">{{ 'Endorsement' | i18n }}</span>
@@ -91,7 +91,7 @@
           </ex-avatar>
 
           <p>{{mentor.name}}<br>
-          <span class="text-muted">{{mentor.title}}</span></p>
+          <span class="text-muted">{{ mentor.title | i18n }}</span></p>
         </div>
 
         <div class="col-xs-4 col-sm-3">

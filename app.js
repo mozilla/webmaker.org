@@ -333,7 +333,6 @@ app.get("/tools", routes.page("tools"));
 app.get("/teach-templates", routes.page("teach-templates"));
 app.get("/mentor", routes.page("mentor"));
 app.get("/getinvolved", routes.page("getinvolved"));
-app.get("/event-guides", routes.page("event-guides"));
 app.get("/search", routes.search);
 app.get("/feedback", routes.page("feedback"));
 

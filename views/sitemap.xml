@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://webmaker.org/</loc>
@@ -24,15 +24,6 @@
       <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/getinvolved"/>
     {% for locale in supportedLanguages %}
       <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/getinvolved"/>
-    {% endfor %}
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://webmaker.org/event-guides</loc>
-      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/event-guides"/>
-    {% for locale in supportedLanguages %}
-      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/event-guides"/>
     {% endfor %}
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -130,14 +121,6 @@
     <loc>https://webmaker.org/{{locale}}/getinvolved</loc>
     {% for locale in supportedLanguages %}
       <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/getinvolved"/>
-    {% endfor %}
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://webmaker.org/{{locale}}/event-guides</loc>
-    {% for locale in supportedLanguages %}
-      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/event-guides"/>
     {% endfor %}
     <changefreq>weekly</changefreq>
     <priority>1</priority>

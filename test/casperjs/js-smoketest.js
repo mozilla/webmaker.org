@@ -5,7 +5,6 @@ var baseURL = 'http://localhost:7777';
 var routes = [
   '/',
   '/about',
-  '/event-guides',
   '/feedback',
   '/gallery',
   '/getinvolved',

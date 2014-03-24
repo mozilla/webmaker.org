@@ -10,7 +10,7 @@
       {% else %}
         <span>{{ gettext("Anonymous") }}</span>
       {% endif %}
-        {{ makeTags() }}
+        <span class="tags-on-hover">{{ makeTags() }}</span>
     </div>
     <div class="btn-container">
       {% if make.type != "x-ray-goggles" %}<a href="{{make.remixurl}}" class="ui-btn fork-btn fork-btn-label"><span class="icon-code-fork"></span> {{ gettext("Remix") }}</a>{% endif %}

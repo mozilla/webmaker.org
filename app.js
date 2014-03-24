@@ -212,14 +212,14 @@ var weblitLocaleJSON = require("./node_modules/web-literacy-client/dist/weblitma
 i18n.addLocaleObject({
   "en-US": authLocaleJSON
 }, function (err, res) {
-  if(err) {
+  if (err) {
     console.error(err);
   }
 });
 i18n.addLocaleObject({
   "en-US": weblitLocaleJSON
 }, function (err, res) {
-  if(err) {
+  if (err) {
     console.error(err);
   }
 });

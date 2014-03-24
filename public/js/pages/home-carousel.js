@@ -52,7 +52,7 @@ define(['jquery'], function ($) {
     var $posterImg = $('img', $posterWrapper);
 
     function showStory() {
-      $('#poster-' + storyId).addClass('active');
+      $posterWrapper.css('background-image', 'url(' + $posterImg.data('src') + ')').addClass('active');
       self.imageLoading = false;
     }
 

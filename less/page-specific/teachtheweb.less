@@ -240,7 +240,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #333;
+    background-size: cover;
+
+    img {
+      visibility: hidden;
+    }
 
     .spinner {
       position: absolute;
@@ -256,36 +260,6 @@
         visibility: visible;
         display: block;
       }
-    }
-
-    img {
-      width: 1400px;
-      position: absolute;
-      left: 50%;
-      margin-left: -700px;
-      z-index: 2;
-    }
-
-    #poster-mit {
-      background-color: #928483;
-    }
-    #poster-india {
-      background-color: #745B62;
-    }
-    #poster-amy {
-      background-color: #010042;
-    }
-    #poster-manilla {
-      background-color: #F4CA8F;
-    }
-    #poster-brooklyn {
-      background-color: #DF9071;
-    }
-    #poster-yoe {
-      background-color: #004D76;
-    }
-    #poster-translate {
-      background-color: #E2C3AE;
     }
 
     > div {
@@ -304,9 +278,6 @@
         opacity: 1;
       }
 
-      @media (min-width: @width-medium) {
-        background-size: 1400px;
-      }
       background-repeat: no-repeat;
     }
 

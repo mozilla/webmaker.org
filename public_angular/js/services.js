@@ -3,7 +3,6 @@
 angular
   .module('exploreApp.services', [])
   .constant('CONFIG', window.angularConfig)
-  .constant('weblit', window.WebLiteracyClient)
   .constant('SITE', {
     kits: {
       'navigation': [{
@@ -45,6 +44,13 @@ angular
       return decodeURIComponent(input);
     };
   })
+  .factory('weblit', [
+    '$window',
+    function($window) {
+      var weblit = new $window.WebLiteracyClient();
+      return weblit;
+    }
+  ])
   .factory('makeapi', ['$q',
     function($q) {
 

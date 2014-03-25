@@ -2,32 +2,30 @@
 
 angular
   .module('exploreApp')
-  .controller('navigationController', function ($scope, $location, $routeParams, Slug, SITE) {
+  .controller('mainController', function ($scope) {
+    // Home
+  })
+  .controller('navigationController', function ($scope, $location, $routeParams, weblit) {
     $scope.isCollapsed = true;
 
-    $scope.isActive = function (name) {
-      if (name[0] === '/') {
-        return name === $location.path();
+    $scope.isActive = function (tag) {
+      if (tag[0] === '/') {
+        return tag === $location.path();
       }
-      return Slug.slugify(name) === $routeParams.id;
+      return tag === $routeParams.id;
     };
 
     $scope.isUnselected = function () {
       return window.location.hash === '#/';
     };
   })
-  .controller('mainController', function ($scope) {
-    //
-  })
-  .controller('competencyController', function ($rootScope, $scope, $location, $routeParams, Slug, makeapi, SITE) {
+  .controller('competencyController', function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, SITE) {
 
-    $scope.slug = $routeParams.id;
-
-    $scope.skill = $rootScope.literacies.filter(function (item) {
-      return Slug.slugify(item.term) === $scope.slug;
+    $scope.skill = weblit.all().filter(function (item) {
+      return item.tag === $routeParams.id;
     })[0];
 
-    $scope.kits = SITE.kits[$scope.slug];
+    $scope.kits = SITE.kits[$scope.skill.tag];
 
     $scope.mentors = SITE.mentors;
 

@@ -1,11 +1,18 @@
 {
   "name": "webmaker.org",
   "dependencies": {
+    "angular": "1.0.7",
+    "angular-bootstrap": "0.10.0",
+    "angular-resource": "1.0.7",
+    "angular-route": "1.2.10",
+    "angular-sanitize": "1.2.14",
+    "angular-ui": "0.4.0",
     "cookie-js": "https://github.com/js-coder/cookie.js.git#d2906194f6b33063b8c2fd6718178afb33585ead",
     "font-awesome": "3.2.1",
     "jquery": "2.0.3",
     "jquery-ui": "1.10.3",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.16",
+    "makerstrap": "0.1.2",
     "masonry": "3.1.5",
     "moment": "2.2.1",
     "nav-global": "https://github.com/mozilla/nav-global/archive/v0.1.4.tar.gz",
@@ -13,19 +20,11 @@
     "persona-btn": "~0.0.12",
     "requirejs": "2.1.8",
     "text": "2.0.9",
+    "web-literacy-client": "https://github.com/mozilla/web-literacy-client/tarball/v1.0.5",
     "webmaker-analytics": "0.0.5",
     "webmaker-auth-client": "0.0.26",
-    "webmaker-language-picker": "0.0.16",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",
-    "angular": "1.0.7",
-    "angular-resource": "1.0.7",
-    "angular-sanitize": "1.2.14",
-    "makerstrap": "0.1.2",
-    "angular-ui": "0.4.0",
-    "angular-bootstrap": "0.10.0",
-    "angular-route": "1.2.10",
-    "angular-slugify": "1.0.0",
-    "web-literacy-client": "https://github.com/mozilla/web-literacy-client/tarball/v1.0.2"
+    "webmaker-language-picker": "0.0.16"
   },
   "resolutions": {
     "angular": "1.2.10"

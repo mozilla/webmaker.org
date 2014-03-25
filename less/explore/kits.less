@@ -1,0 +1,66 @@
+/*********************************************************
+* Kits!
+*/
+
+// Base
+
+.thumbnail {
+  padding: 30px;
+  background: @kit-background;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow:
+    inset 5px 0 0 @thumbnail-border,
+    2px 2px 0 #FFF,
+    3px 3px 0 fade(#000, 10%),
+    5px 5px 0 #FFF,
+    6px 6px 0 fade(#000, 10%),
+    8px 10px 6px -3px rgba(0, 0, 0, 0.1);
+  &:hover {
+    text-decoration: none;
+    box-shadow:
+      inset 5px 0 0 @brand-info,
+      4px 4px 0 #FFF,
+      5px 5px 0 @brand-info,
+      9px 9px 0 #FFF,
+      10px 10px 0 @brand-info,
+      12px 15px 6px -3px rgba(0, 0, 0, 0.1);
+    h3 {
+      color: @brand-info;
+    }
+  }
+  .badge {
+    font-weight: normal;
+    background: @brand-primary;
+    margin-right: 3px;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .caption {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    background: #FFF;
+    border: 1px solid @kit-caption-border;
+    width: 100%;
+    @media screen and (min-width: @screen-sm) {
+      width: auto;
+    }
+  }
+  h3 {
+    font-size: @kit-title-size;
+    font-weight: 200;
+  }
+}
+
+// Staff picks
+.thumbnail-staff-pick {
+  @media screen and (min-width: @screen-sm) {
+    height: @kit-height;
+  }
+}
+

@@ -51,22 +51,6 @@
     "message": "Nominate",
     "description": "Nominate"
   },
-  "What is a URL?": {
-    "message": "What is a URL?",
-    "description": "Title for teaching kit"
-  },
-  "Finding and using links": {
-    "message": "Finding and using links",
-    "description": "Title for teaching kit"
-  },
-  "What is a URL?_desc": {
-    "message": "An introduction to the structure of URLs and finding resources on the well",
-    "description": "Description for teaching kit"
-  },
-  "Finding and using links_desc": {
-    "message": "Find links on a web page using Watson and learn how to evaluate them",
-    "description": "Description for teaching kit"
-  },
   "Director of Webmaker, Filmmaker": {
     "message": "Director of Webmaker, Filmmaker",
     "description": "Title for Brett Gaylor"

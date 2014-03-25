@@ -1,6 +1,14 @@
 @import "../../bower_components/makerstrap/less/makerstrap";
 @makerstrap-bower-path: "../../bower_components";
 
+
+/*********************************************************
+* Sections
+*/
+@import 'variables';
+@import 'kits';
+
+
 /*********************************************************
 * To be merged in makerstrap
 */
@@ -152,38 +160,6 @@ img {
     }
   }
 }
-
-// Gallery
-@thumbnail-border: #DDD;
-
-.thumbnail {
-  .badge {
-    font-weight: normal;
-    background: @brand-primary;
-    margin-right: 3px;
-    opacity: 0.5;
-    cursor: pointer;
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-.thumbnail-horizontal {
-  @media screen and (min-width: @screen-xs) {
-    padding: @grid-gutter-width;
-  }
-  .icon {
-    float: left;
-    color: #DDD;
-    font-size: 20px;
-    margin-top: 10px;
-    @media screen and (min-width: @screen-xs) {
-      font-size: 60px;
-      margin-top: 0;
-    }
-  }
-}
-
 
 /*********************************************************
 * Base

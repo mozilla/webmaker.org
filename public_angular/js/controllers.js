@@ -21,11 +21,13 @@ angular
   })
   .controller('competencyController', function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, SITE) {
 
+    $scope.tag = $routeParams.id;
+
     $scope.skill = weblit.all().filter(function (item) {
-      return item.tag === $routeParams.id;
+      return item.tag === $scope.tag;
     })[0];
 
-    $scope.kits = SITE.kits[$scope.skill.tag];
+    $scope.kits = $rootScope.kits[$scope.tag];
 
     $scope.mentors = SITE.mentors;
 

@@ -80,9 +80,9 @@
           </li>
           <li
             ng-repeat="skill in literacies"
-            ng-class="{ active : isActive(skill.term) }"
+            ng-class="{ active : isActive(skill.tag) }"
             style="background-color: {{ skill.color }}">
-            <a href="#/competencies/{{ skill.term | slugify }}">{{ skill.tag | i18n }}</a>
+            <a href="#/competencies/{{ skill.tag }}">{{ skill.term }}</a>
           </li>
           <li
             ng-class="{ active : isActive('/add') }"

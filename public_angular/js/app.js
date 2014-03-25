@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('exploreApp', ['ngRoute', 'slugifier', 'ui.bootstrap', 'exploreApp.services', 'webmakerAngular.login', 'localization'])
+angular.module('exploreApp', ['ngRoute', 'ui.bootstrap', 'exploreApp.services', 'webmakerAngular.login', 'localization'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -38,9 +38,8 @@ angular.module('exploreApp', ['ngRoute', 'slugifier', 'ui.bootstrap', 'exploreAp
         $rootScope.arrowDir = CONFIG.direction === 'rtl' ? "left" : "right";
 
         // Set up Web Literacy to rootScope
-        var wlc = new weblit();
-        $rootScope.literacies = wlc.all()
-
+        weblit.lang(CONFIG.lang);
+        $rootScope.literacies = weblit.all();
       });
     }
   ]);

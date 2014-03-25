@@ -1,5 +1,5 @@
 module.exports = function (req, res) {
-  var make = require("../lib/makeapi");
+  var make = require("../lib/makeapi").authenticated;
   var id = req.body.makeID;
 
   make.id(id).then(function (err, data) {

@@ -1,5 +1,5 @@
 var async = require("async"),
-  make = require("../lib/makeapi");
+  make = require("../lib/makeapi").readOnly;
 
 module.exports = function (options) {
   return function (req, res, next) {

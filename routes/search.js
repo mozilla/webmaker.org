@@ -1,5 +1,5 @@
 module.exports = function (req, res) {
-  var make = require("../lib/makeapi"),
+  var make = require("../lib/makeapi").readOnly,
     querystring = require("querystring");
 
   var DEFAULT_TYPE = "tags",

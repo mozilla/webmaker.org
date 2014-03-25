@@ -83,7 +83,8 @@ if (!(env.get("MAKE_ENDPOINT") && env.get("MAKE_PRIVATEKEY") && env.get("MAKE_PU
 
 // Initialize make client so it is available to other modules
 require("./lib/makeapi")({
-  apiURL: env.get("MAKE_ENDPOINT"),
+  readOnlyURL: env.get("MAKE_ENDPOINT_READONLY") || env.get("MAKE_ENDPOINT"),
+  authenticatedURL: env.get("MAKE_ENDPOINT"),
   hawk: {
     key: env.get("MAKE_PRIVATEKEY"),
     id: env.get("MAKE_PUBLICKEY"),

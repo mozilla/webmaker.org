@@ -1,6 +1,6 @@
 module.exports = function (req, res) {
   var MAX_REMIXES = 5;
-  var make = require("../lib/makeapi");
+  var make = require("../lib/makeapi").authenticated;
 
   function renderError(message) {
     return res.render("details.html", {

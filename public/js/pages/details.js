@@ -85,7 +85,7 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-cli
 
         $tooltipElem.removeClass("hide");
         timer = window.setTimeout(hideTooltip, delay);
-        window.addEventListener("click", clickCallback, false);
+        window.addEventListener("click", clickCallback);
       }
 
       // Like event handlers

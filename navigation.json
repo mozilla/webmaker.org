@@ -31,12 +31,12 @@
     "id": "make",
     "title": "Make",
     "icon": "icon-hand-up",
-    "defaultUrl": "starter-makes",
+    "defaultUrl": "resources",
     "pages": [
       {
         "id": "starterMakes",
-        "title": "Starter Makes",
-        "url": "starter-makes"
+        "title": "Resources",
+        "url": "resources"
       },
       {
         "id": "popcorn",

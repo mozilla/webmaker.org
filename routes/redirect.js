@@ -70,6 +70,11 @@ module.exports = function (app) {
     paths: [
       "/community"
     ]
+  }, {
+    route: "/resources",
+    paths: [
+      "/starter-makes"
+    ]
   }];
 
   redirectMap.forEach(function (redirect) {

@@ -330,7 +330,7 @@ app.get("/teach", routes.gallery({
   layout: "teach",
   prefix: "teach"
 }));
-app.get("/starter-makes", routes.gallery({
+app.get("/resources", routes.gallery({
   layout: "starterMakes",
   prefix: "template",
   limit: 20

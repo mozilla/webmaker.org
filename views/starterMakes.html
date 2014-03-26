@@ -2,11 +2,11 @@
 
 {% include 'macros.html' %}
 
-{% block title %}{{ gettext("Starter Makes") }}{% endblock %}
+{% block title %}{{ gettext("Resources") }}{% endblock %}
 {% block midbar %}
 
-{% set header = gettext("starterMakesHeader") %}
-{% set desc = gettext("starterMakesDesc") %}
+{% set header = gettext("resourcesHeader") %}
+{% set desc = gettext("resourcesDesc") %}
 
 {% if flags.hourofcode and (localeInfo.lang == 'en-US' or localeInfo.lang == 'en-GB' or localeInfo.lang == 'en-CA')  %}
   {% include 'hourofcode.html' %}

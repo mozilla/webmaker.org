@@ -65,6 +65,11 @@ module.exports = function (app) {
       "/events",
       "/events/*"
     ]
+  }, {
+    route: "/mentor",
+    paths: [
+      "/community"
+    ]
   }];
 
   redirectMap.forEach(function (redirect) {

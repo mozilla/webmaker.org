@@ -378,12 +378,22 @@ img {
     z-index: 1;
 
     &.laurel-left {
-      left: 0;
+      html[dir="ltr"] & {
+        left: 0;
+      }
+      html[dir="rtl"] & {
+        right: 0;
+      }
       -webkit-transform: rotate(90deg);
       -webkit-transform-origin: 100% 50%;
     }
     &.laurel-right {
-      right: 0;
+      html[dir="ltr"] & {
+        right: 0;
+      }
+      html[dir="rtl"] & {
+        left: 0;
+      }
       -webkit-transform: rotate(-90deg);
       -webkit-transform-origin: 0 50%;
     }
@@ -409,11 +419,21 @@ img {
       -webkit-transform: rotate(0);
       opacity: 1;
     }
-    .laurel-left {
-      left: -15px;
+    html[dir="ltr"] & {
+      .laurel-left {
+        left: -15px;
+      }
+      .laurel-right {
+        right: -15px;
+      }
     }
-    .laurel-right {
-      right: -15px;
+    html[dir="rtl"] & {
+      .laurel-left {
+        right: -15px;
+      }
+      .laurel-right {
+        left: -15px;
+      }
     }
     .img-mentor-avatar {
       -webkit-transform: scale(1);

@@ -7,7 +7,7 @@
     "angular-route": "1.2.10",
     "angular-sanitize": "1.2.14",
     "angular-ui": "0.4.0",
-    "cookie-js": "https://github.com/js-coder/cookie.js.git#d2906194f6b33063b8c2fd6718178afb33585ead",
+    "cookie-js": "0.0.1",
     "font-awesome": "3.2.1",
     "jquery": "2.0.3",
     "jquery-ui": "1.10.3",

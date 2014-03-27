@@ -1,11 +1,13 @@
-define(['jquery', 'cookie'], function ($, cookie) {
+define(['jquery', 'cookie-js/cookie'], function ($, cookiejs) {
   'use strict';
 
   // Campaign
 
   return function (options) {
 
-    cookie.expiresMultiplier = 60 * 60; // In hours
+    var cookieOpts = {
+      expires: new Date((Date.now() + 60 * 1000 * 60 * 4)) // four hours
+    };
 
     var forceCampaignString = 'forceCampaignBanner';
     var slideSpeed = 100;
@@ -13,7 +15,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
     var $campaignHeader = $(options.element);
     var cookieName = options.campaignName + '-closed';
 
-    var isCampaignClosed = cookie.get(cookieName);
+    var isCampaignClosed = cookiejs.parse(document.cookie)[cookieName];
     var isForced = window.location.search.match(forceCampaignString);
 
     if (!isCampaignClosed || isForced) {
@@ -22,11 +24,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
 
     $campaignHeader.find('.campaign-close-button').on('click', function () {
       $campaignHeader.slideUp(slideSpeed);
-      cookie.set(cookieName, true, {
-        expires: 4
-      });
+      document.cookie = cookiejs.serialize(cookieName, true, cookieOpts);
     });
-
   };
-
 });

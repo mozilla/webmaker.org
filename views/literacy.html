@@ -1,52 +1,38 @@
 {% extends "layout.html" %}
 {% include "macros.html" %}
-{% block title %}{{ gettext('WebLiteracyMap') }}{% endblock %}
+{% block title %}{{ wlc.title() }} - {{ wlc.version }}{% endblock %}
 {% block body %}
-<div class="ui-wrapper ui-body">
 
-  <div class="ui-section">
-    <div class="ui-row">
-      <h1 class="main-header">{{ gettext('StandardMainHeader') | safe }}</h1>
-      <p class="standard-description">{{ gettext('StandardMainDesc') }}</p>
-      <p class="standard-description">{{ gettext('StandardMainDescInProgress') | safe }}</p>
-    </div>
+<div class="container">
+  <h1>{{ wlc.title() }} ({{ wlc.version }})</h1>
+  <p class="lead">{{ gettext('StandardMainDesc') }}</p>
+  <p class="lead">{{ gettext('StandardMainDescInProgress') | safe }}</p>
+  <ul class="list-hanging list-unstyled">
+  {% for strand, literacies in wlc.allByStrand() %}
+    <li>
+      <h3 class="strand" id="{{ strand }}"><a href="#{{ strand }}">{{ strand }}</a></h3>
+      <ul class="list-unstyled">
+        {% for literacy in literacies %}
+        <li>
+          <h4 class="competency" id="{{ literacy.term }}"><a href="#{{ literacy.term }}">{{ literacy.term }}</a></h4>
+          <p class="description">{{ literacy.description }}</p>
+          <ul>
+            {% for point in wlcPoints[literacy.tag] %}
+            <li>{{ gettext(point) }}</li>
+          {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+  </ul>
 
-    <div class="ui-row">
-      <div class="g-2 standard-list">
-	<h2 class="sub-header"><a href="/{{localeInfo.lang}}/literacy/exploring">{{ gettext('StandardExploring') }}</a></h2>
-	<ul class="standard-list">
-	  <li><a href="/{{localeInfo.lang}}/literacy/exploring#navigation">{{ gettext('StandardExploringNav') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/exploring#web-mechanics">{{ gettext('StandardExploringWM') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/exploring#search">{{ gettext('StandardExploringSearch') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/exploring#credibility">{{ gettext('StandardExploringCredibility') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/exploring#security">{{ gettext('StandardExploringSecurity') }}</a></li>
-	</ul>
-      </div>
-
-      <div class="g-2 standard-list">
-	<h2 class="sub-header"><a href="/{{localeInfo.lang}}/literacy/building">{{ gettext('StandardBuilding') }}</a></h2>
-	<ul class="standard-list">
-	  <li><a href="/{{localeInfo.lang}}/literacy/building#composing">{{ gettext('StandardBuildingComposing') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/building#remixing">{{ gettext('StandardBuildingRemixing') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/building#design">{{ gettext('StandardBuildingDesign') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/building#coding">{{ gettext('StandardBuildingCoding') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/building#infrastructure">{{ gettext('StandardBuildingInfra') }}</a></li>
-	</ul>
-      </div>
-
-      <div class="g-2 standard-list">
-	<h2 class="sub-header"><a href="/{{localeInfo.lang}}/literacy/connecting">{{ gettext('StandardConnecting') }}</a></h2>
-	<ul class="standard-list">
-	  <li><a href="/{{localeInfo.lang}}/literacy/connecting#sharing">{{ gettext('StandardConnectingSharing') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/connecting#community">{{ gettext('StandardConnectingCommunity') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/connecting#privacy">{{ gettext('StandardConnectingPrivacy') }}</a></li>
-	  <li><a href="/{{localeInfo.lang}}/literacy/connecting#open">{{ gettext('StandardConnectingOpen') }}</a></li>
-	</ul>
-      </div>
+  </div>
+  <div class="well well-web-literacy">
+    <h3>{{ gettext('StandardFooterTranslate') }}</h3>
+    <a class="literacy-button" href="https://support.mozilla.org/{{localeInfo.lang}}/kb/translate-webmaker" target="_blank"><span>{{ gettext('StandardFooterButton') }} <i class="icon-circle-arrow-right"></i></span></a>
     </div>
   </div>
 
-  {{ webLiteracyFooter() }}
-
-</div>
 {% endblock %}

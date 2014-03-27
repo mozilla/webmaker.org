@@ -10,6 +10,7 @@ module.exports = {
   },
   remove: require("./remove"),
   like: require("./like")(),
+  literacy: require("./literacy"),
   report: require("./report")(),
   search: require("./search"),
   tag: function (req, res) {

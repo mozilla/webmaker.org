@@ -20,7 +20,7 @@
     "persona-btn": "~0.0.12",
     "requirejs": "2.1.8",
     "text": "2.0.9",
-    "web-literacy-client": "https://github.com/mozilla/web-literacy-client/tarball/v1.0.5",
+    "web-literacy-client": "1.1.1",
     "webmaker-analytics": "0.0.5",
     "webmaker-auth-client": "0.0.26",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",

@@ -29,7 +29,9 @@ define(['jquery', 'analytics'], function ($, analytics) {
       var storyId = this.getAttribute('data-id');
 
       self.changeStory(storyId);
-      analytics.event("Click Homepage Carousel", {label: "Toggle Index"});
+      analytics.event("Click Homepage Carousel", {
+        label: "Toggle Index"
+      });
     });
 
     self.$nextButton.on('click', function () {
@@ -37,7 +39,9 @@ define(['jquery', 'analytics'], function ($, analytics) {
       var storyId = self.getStoryByNumber(currentIndex + 1);
 
       self.changeStory(storyId);
-      analytics.event("Click Homepage Carousel", {label: "Next"});
+      analytics.event("Click Homepage Carousel", {
+        label: "Next"
+      });
     });
 
     self.$backButton.on('click', function () {
@@ -45,7 +49,9 @@ define(['jquery', 'analytics'], function ($, analytics) {
       var storyId = self.getStoryByNumber(currentIndex - 1);
 
       self.changeStory(storyId);
-      analytics.event("Click Homepage Carousel", {label: "Back"});
+      analytics.event("Click Homepage Carousel", {
+        label: "Back"
+      });
     });
   };
 

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('exploreApp', ['ngRoute', 'ui.bootstrap', 'exploreApp.services', 'webmakerAngular.login', 'localization'])
-  .config(function($routeProvider) {
+  .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -18,7 +18,7 @@ angular.module('exploreApp', ['ngRoute', 'ui.bootstrap', 'exploreApp.services', 
       .otherwise({
         redirectTo: '/'
       });
-  })
+  }])
   .run(['$rootScope', '$http', 'CONFIG', 'weblit',
     function($rootScope, $http, CONFIG, weblit) {
 

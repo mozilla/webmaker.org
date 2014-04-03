@@ -2,24 +2,29 @@
 
 angular
   .module('exploreApp')
-  .controller('mainController', function ($scope) {
-    // Home
-  })
-  .controller('navigationController', function ($scope, $location, $routeParams, weblit) {
-    $scope.isCollapsed = true;
+  .controller('mainController', ['$scope',
+    function ($scope) {
+      // Home
+    }
+  ])
+  .controller('navigationController', ['$scope', '$location', '$routeParams', 'weblit',
+    function ($scope, $location, $routeParams, weblit) {
+      $scope.isCollapsed = true;
 
-    $scope.isActive = function (tag) {
-      if (tag[0] === '/') {
-        return tag === $location.path();
-      }
-      return tag === $routeParams.id;
-    };
+      $scope.isActive = function (tag) {
+        if (tag[0] === '/') {
+          return tag === $location.path();
+        }
+        return tag === $routeParams.id;
+      };
 
-    $scope.isUnselected = function () {
-      return window.location.hash === '#/';
-    };
-  })
-  .controller('competencyController', function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, SITE) {
+      $scope.isUnselected = function () {
+        return window.location.hash === '#/';
+      };
+    }
+  ])
+  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'makeapi', 'SITE',
+    function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, SITE) {
 
     $scope.tag = $routeParams.id;
 
@@ -37,7 +42,7 @@ angular
         $scope.makes = data;
       });
 
-  })
-  .controller('addController', function ($scope) {
+  }])
+  .controller('addController', ['$scope', function ($scope) {
     //blah
-  });
+  }]);

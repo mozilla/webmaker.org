@@ -2,7 +2,7 @@
   {% if make.rawTags.length %}
   <div class="tag-container">
     <span class="icon-tags" title="tags"></span>
-    {% for tag in make.rawTags %}
+    {% for tag in make.prettyTags %}
       {%- if loop.index <= 10 %}
       <a class="tag" href="/t/{{tag}}">{{tag}}</a>
       {% endif %}

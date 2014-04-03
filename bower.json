@@ -28,5 +28,6 @@
   },
   "resolutions": {
     "angular": "1.2.10"
-  }
+  },
+  "version": "1.0.67"
 }

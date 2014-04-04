@@ -13,7 +13,10 @@ body {
 
 .ui-wrapper {
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 20px;
+  @media (min-width: @width-medium) {
+    padding: 40px 0;
+  }
 }
 
 /*********************************************************
@@ -23,16 +26,35 @@ body {
 .remixed-from {
   font-size: 0.9em;
 }
+
+.remixed-from-wrapper {
+  margin-right: 0.5em;
+}
+
 .remix-info {
-  background: #E3EAED;
-  padding: 0.5em;
-  border-radius: 3px;
-  margin-bottom: 1em;
+  display: inline-block;
+  @media (min-width: @width-large) {
+    display: block;
+    background: #E3EAED;
+    margin-right: 0;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+}
+.remixed-by {
+  display: inline-block;
+  @media (min-width: @width-large) {
+    display: block;
+  }
 }
 
 .make-thumbnail {
   position: relative;
-  height: 150px;
+  display: none;
+  @media (min-width: @width-large) {
+    display: block;
+    height: 150px;
+  }
   &.thumbnail {
     // Has a thumbnail image
     background-size: cover;
@@ -60,8 +82,20 @@ body {
 /*********************************************************
 * Right column
 */
+
+.social-media {
+  display: block;
+  @media (min-width: @width-medium) {
+    display: inline-block;
+    margin-left: 2em;
+    a {
+      margin-right: 0.5em;
+    }
+  }
+}
+
 .make-title {
-  font-size: 1.7em;
+  font-size: 1.5em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -69,12 +103,7 @@ body {
   font-family: "Open Sans Light", sans-serif;
   font-weight: normal;
 }
-.make-url {
-  font-family: "Open Sans Light", sans-serif;
-  font-weight: normal;
-  font-size: 1.2em;
-  word-wrap: break-word;
-}
+
 .make-user-gravatar {
   vertical-align: middle;
   height: 40px;
@@ -87,12 +116,6 @@ body {
   font-size: 0.8em;
   vertical-align: baseline;
   color: #999;
-}
-
-.social-media {
-  margin-left: 1em;
-  height: 1em;
-  display: inline-block;
 }
 
 span.built-with {
@@ -192,50 +215,3 @@ a {
 /*********************************************************
 * Mobile
 */
-
-#mobile-warning {
-  display: none;
-  background: @blue;
-  color: #FFF;
-  h1 {
-    font-size: 1.4em;
-    margin: 0;
-    padding: 1em;
-  }
-}
-#url {
-  display: none;
-}
-
-@media (max-width: @width-small) {
-  .ui-row > div {
-    float: none;
-    width: 100%;
-    display: block;
-  }
-  .make-relative-date {
-    display: none;
-  }
-  #mobile-warning {
-    display: block;
-  }
-  #url {
-    display: block;
-  }
-  .ui-wrapper {
-    padding: 1em;
-  }
-  .make-thumbnail {
-    height: 0;
-    padding-bottom: 100%;
-  }
-  .social-media {
-    display: none;
-  }
-}
-
-.make-like-toggle {
-  margin-left: 20px;
-  display: inline-block;
-  position: relative;
-}

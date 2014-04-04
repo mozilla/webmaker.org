@@ -10,9 +10,6 @@
 </head>
 <body class="details-{{tool}}" data-tool="{{tool}}" data-url="{{url}}">
   <div id="content">
-    <div id="mobile-warning">
-      <h1>{{ gettext("mobile unsupport") }}</h1>
-    </div>
     {% if remixList %}
       <div class="ui-wrapper">
         <div class="ui-row">
@@ -21,8 +18,10 @@
 
             <div class="remix-info">
               {% if remixedFromData %}
-              <span class="remixed-from-txt">{{ gettext("Remixed from") }}</span>
-              <a target="_blank" href="{{ remixedFromData.url }}"><span class="remixed-user">@{{ remixedFromData.username }}</span></a>
+              <div class="remixed-from-wrapper">
+                <span class="remixed-from-txt">{{ gettext("Remixed from") }}</span>
+                <a target="_blank" href="{{ remixedFromData.url }}"><span class="remixed-user">@{{ remixedFromData.username }}</span></a>
+              </div>
               {% endif %}
               <div class="make-type-{{type}}">
                 <div class="make-thumbnail{% if thumbnail %} thumbnail" style="background-image:url({{ thumbnail }}){% endif %}"></div>
@@ -49,27 +48,13 @@
               <h1 class="make-title">{{ title }}</h1>
             </div>
 
-            <div id="url" class="ui-row">
-              <a target="_blank" href="{{url}}" class="make-url">{{url}}</a>
-            </div>
-
             <div class="ui-row">
-              <div class="user-info">
+              <div class="make-details">
                 <img class="make-user-gravatar" src="https://secure.gravatar.com/avatar/{{ emailHash }}?s=40d=https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png" alt="{{ username}}">
                 <span class="made-by">
                   {{ gettext("Made by") }}
                   <a target="_blank" class="make-username" href="/u/{{ username }}">@{{ username }}</a>
                   <span class="make-relative-date">{{ createdAt }}</span>
-                  <span class="social-media">
-                  {% set tweetText = gettext("TweetText") %}
-                     <a href="https://plus.google.com/share?url={{url}}" id="share-gplus" target="_blank" class="btn"><span class="icon-google-plus icon">{{ gettext("Share") }}</span></a>
-                     <a id="share-twitter" href="https://twitter.com/intent/tweet?text={{tweetText }}{{url}}&hashtags=Webmaker&related=webmaker&url={{url}}" target="_blank" class="share btn"><span class="icon-twitter icon"> {{ gettext("Share") }}</span></a>
-                    <span id="share-container" class="hidden">
-                      <a target="_blank" id="google-btn"></a>
-                      <a target="_blank" id="twitter-btn"></a>
-                      <a target="_blank" id="fb-btn"></a>
-                    </span>
-                  </span>
                   <span data-make-id="{{ id }}"
                         title="Report Inappropriate Make"
                         id="make-report-toggle"
@@ -80,8 +65,20 @@
                   </span>
                   <span id="make-reported-text" class="{{ '' if userReported else 'hide' }}">{{ gettext("Reported") }}</span>
                 </span>
+
+                <span class="social-media">
+                {% set tweetText = gettext("TweetText") %}
+                   <a href="https://plus.google.com/share?url={{url}}" id="share-gplus" target="_blank" class="btn"><span class="icon-google-plus icon"></span> {{ gettext("Share") }}</a>
+                   <a id="share-twitter" href="https://twitter.com/intent/tweet?text={{tweetText }}{{url}}&hashtags=Webmaker&related=webmaker&url={{url}}" target="_blank" class="share btn"><span class="icon-twitter icon"></span> {{ gettext("Share") }}</a>
+                  <span id="share-container" class="hidden">
+                    <a target="_blank" id="google-btn"></a>
+                    <a target="_blank" id="twitter-btn"></a>
+                    <a target="_blank" id="fb-btn"></a>
+                  </span>
+                </span>
               </div>
             </div>
+
 
             <p class="built-with"><span class="built-with">{{ gettext("Built with") }}</span>
               <span class="icon-{{tool}}"></span>

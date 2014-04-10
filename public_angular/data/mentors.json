@@ -1,0 +1,329 @@
+[
+  {
+    "name": "Dorine Flies",
+    "bio": "Train youth to teach the web with Minecraft, digital and physical tools",
+    "username": "EPIK",
+    "photo": "img/mentors/dorine.jpg",
+    "competencies": [
+      "weblit-Navigation", "weblit-Search", "weblit-Composing", "weblit-Remixing", "weblit-DesignAccessibility", "weblit-Sharing", "weblit-Collaborating", "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Ankit Gadgil",
+    "bio": "Web Dev | Mozilla Rep | Open Source Evangelist | Crazy Dancer",
+    "username": "ankitgadgil",
+    "photo": "img/mentors/ankit.jpg",
+    "competencies": [
+      "weblit-Navigation",
+      "weblit-Search",
+      "weblit-Remixing",
+      "weblit-DesignAccessibility",
+      "weblit-CodingScripting",
+      "weblit-Sharing",
+      "weblit-Collaborating"
+    ]
+  },
+  {
+    "name": "Chad Sansing",
+    "bio": "Teacher, tinkerer, gamer",
+    "username": "chadsansing",
+    "photo": "img/mentors/chad.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Ashley Jane Lewis",
+    "bio": "Toronto Maker & Youth Tech Educator",
+    "username": "ashleyjanelewis",
+    "photo": "img/mentors/ashley.jpg",
+      "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-DesignAccessibility",
+      "weblit-CodingScripting",
+      "weblit-Sharing",
+      "weblit-Collaborating",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Coragem",
+    "bio": "I like to learn when I hack, and I like to teach others about the hacking I do",
+    "username": "coragem",
+    "photo": "img/mentors/coragem.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-Sharing"
+    ]
+  },
+  {
+    "name": "Dumitru Gherman",
+    "bio": "Passionate about teaching and developing Webmaker curriculum",
+    "username": "dumitru",
+    "photo": "img/mentors/dumitru.jpg",
+    "competencies": [
+      "weblit-Security",
+      "weblit-Privacy",
+      "weblit-Infrastructure"
+    ]
+  },
+  {
+    "name": "Guillermo Movia",
+    "bio": "I am mozillian trying to tech the Web to everyone",
+    "username": "deimidis",
+    "photo": "img/mentors/deimidis.jpg",
+    "competencies": [
+      "weblit-Navigation",
+      "weblit-Composing",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Meredith Summs",
+    "bio": "Learning Designer @MOUSE",
+    "username": "mousemeredith",
+    "photo": "img/mentors/mousemeredith.jpg",
+    "competencies": [
+      "weblit-WebMechanics",
+      "weblit-Remixing",
+      "weblit-DesignAccessibility"
+    ]
+  },
+  {
+    "name": "Amy Burvall",
+    "bio": "Creator, remixer, learner, educator, idea gal",
+    "username": "amyburvall",
+    "photo": "img/mentors/amyburvall.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-Sharing",
+      "weblit-Collaborating",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Kim Wilkens",
+    "bio": "Tech-Girls founder, Webmaker",
+    "username": "TechKim",
+    "photo": "img/mentors/techkim.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-Sharing"
+    ]
+  },
+  {
+    "name": "Lawrence Kisuuki",
+    "bio": "Community Manager Mozilla Uganda",
+    "username": "lawk",
+    "photo": "img/mentors/lawk.jpg",
+    "competencies": [
+      "weblit-Security",
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-CodingScripting",
+      "weblit-Sharing",
+      "weblit-Collaborating",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Sayak Sarkar",
+    "bio": "I'm a web ninja and open source evangelist who likes to help shape the web for the future",
+    "username": "sayak",
+    "photo": "img/mentors/sayak.jpg",
+    "competencies": [
+      "weblit-WebMechanics",
+      "weblit-Composing",
+      "weblit-DesignAccessibility",
+      "weblit-CodingScripting",
+      "weblit-Sharing",
+      "weblit-Collaborating",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Joe Dytrych",
+    "bio": "I'm making a game that teaches code",
+    "username": "somehats",
+    "photo": "img/mentors/somehats.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-CodingScripting"
+    ]
+  },
+  {
+    "name": "Nikos Roussos",
+    "bio": "Teaching Webmaking. WebDev Ninja",
+    "username": "comzeradd",
+    "photo": "img/mentors/comzeradd.jpg",
+    "competencies": [
+      "weblit-CodingScripting",
+      "weblit-Privacy"
+    ]
+  },
+  {
+    "name": "Emma Irwin",
+    "bio": "Developer Community Manager, Mozilla Rep",
+    "username": "tiptoes",
+    "photo": "img/mentors/tiptoes.jpg",
+    "competencies": [
+      "weblit-CodingScripting",
+      "weblit-Infrastructure",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Faye Tandog",
+    "bio": "Mozilla Rep from the Philippines",
+    "username": "fayetandog",
+    "photo": "img/mentors/fayetandong.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-Sharing",
+      "weblit-Collaborating",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Jeannie Crowley",
+    "bio": "Informal & Non-Formal Learning Facilitator",
+    "username": "jeannie",
+    "photo": "img/mentors/jeannie.jpg",
+    "competencies": [
+      "weblit-Remixing",
+      "weblit-Sharing",
+      "weblit-Collaborating"
+    ]
+  },
+  {
+    "name": "Åke Nygren",
+    "bio": "Making digital social things for the library community",
+    "username": "akenyg",
+    "photo": "img/mentors/akenyg.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Sharing",
+      "weblit-Collaborating"
+    ]
+  },
+  {
+    "name": "Ganesh",
+    "bio": "Mozilla Reps, Webmaker Mentor, attended the 2013 Athens Training Days, Follow the SuperMentor track",
+    "username": "mauritius",
+    "photo": "img/mentors/mauritius.jpg",
+    "competencies": [
+      "weblit-Remixing",
+      "weblit-CodingScripting",
+      "weblit-Collaborating"
+    ]
+  },
+  {
+    "name": "Raj",
+    "bio": "I #teachtheweb",
+    "username": "mozraj",
+    "photo": "img/mentors/mozraj.jpg",
+    "competencies": [
+      "weblit-Sharing",
+      "weblit-Collaborating",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Vineel Reddy Pindi",
+    "bio": "Community Builder. Currently Helping build Hive India",
+    "username": "Vineel",
+    "photo": "img/mentors/vineel.jpg",
+    "competencies": [
+      "weblit-Remixing",
+      "weblit-Sharing",
+      "weblit-Collaborating"
+    ]
+  },
+  {
+    "name": "San Emmanuel James",
+    "bio": "Super Webmaker reps mentor",
+    "username": "JSAN4CHRIST",
+    "photo": "img/mentors/jsan4christ.jpg",
+    "competencies": [
+      "weblit-Remixing",
+      "weblit-DesignAccessibility",
+      "weblit-CodingScripting"
+    ]
+  },
+  {
+    "name": "Karen Louise Smith",
+    "bio": "Researcher and educator",
+    "username": "karenlouisesmith",
+    "photo": "img/mentors/ksmith.jpg",
+    "competencies": [
+      "weblit-Collaborating",
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-Privacy",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Regnard Raquedan",
+    "bio": "I'm a Mozilla volunteer based in Toronto; I design apps for a living and I do improv.",
+    "username": "regnard",
+    "photo": "img/mentors/regnard.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-DesignAccessibility"
+    ]
+  },
+  {
+    "name": "Max Capacity",
+    "bio": "I'm a lo-fi digital artist",
+    "username": "maxcapacity",
+    "photo": "img/mentors/maxcapacity.jpg",
+    "competencies": [
+      "weblit-Composing",
+      "weblit-Remixing",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "ginger coons",
+    "bio": "Reader, writer, teacher, builder, F/LOSSer",
+    "username": "gingercoons",
+    "photo": "img/mentors/gingercoons.jpg",
+    "competencies": [
+      "weblit-Credibility",
+      "weblit-DesignAccessibility",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Thomas Salmon",
+    "bio": "Teacher, user, geek making things open :)",
+    "username": "tomsalmon",
+    "photo": "img/mentors/tomsalmon.jpg",
+    "competencies": [
+      "weblit-Remixing",
+      "weblit-Collaborating",
+      "weblit-OpenPractices"
+    ]
+  },
+  {
+    "name": "Irvin",
+    "bio": "Help people to become Mozillians",
+    "username": "irvinfly",
+    "photo": "img/mentors/irvinfly.jpg",
+    "competencies": [
+      "weblit-DesignAccessibility",
+      "weblit-Sharing",
+      "weblit-OpenPractices"
+    ]
+  }
+]

@@ -52,5 +52,10 @@ angular.module('exploreApp', ['ngRoute', 'ui.bootstrap', 'exploreApp.services', 
         .success(function (data) {
           $rootScope.kits = data;
         });
+      $http
+        .get('data/mentors.json')
+        .success(function (data) {
+          $rootScope.mentors = data;
+        });
     }
   ]);

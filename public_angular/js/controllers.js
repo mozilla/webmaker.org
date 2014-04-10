@@ -23,8 +23,8 @@ angular
       };
     }
   ])
-  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'makeapi', 'SITE', 'CONFIG',
-    function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, SITE, CONFIG) {
+  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'makeapi', 'CONFIG',
+    function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, CONFIG) {
 
     $scope.tag = $routeParams.id;
 
@@ -34,7 +34,11 @@ angular
 
     $scope.kits = $rootScope.kits[$scope.tag];
 
-    $scope.mentors = SITE.mentors;
+    $scope.skillMentors = $rootScope.mentors.filter(function (mentor) {
+      return mentor.competencies.filter(function (competency) {
+        return competency === $scope.tag;
+      }).length
+    });
 
     $scope.wlcPoints = CONFIG.wlcPoints;
 

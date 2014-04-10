@@ -14,7 +14,7 @@
       <li ng-repeat="point in wlcPoints[skill.tag]">{{point | i18n }}</li>
     </ul>
 
-    <h2 class="page-header">{{ 'Featured Teaching Resources' | i18n }}</h2>
+    <h2 class="page-header">{{ 'Featured Teaching Resources' | i18n }} <a href="/{{lang}}/search?type=tags&q={{skill.tag}}" class="pull-right btn btn-default">{{ 'More Resources' | i18n }}</a></h2>
 
     <div ng-hide="kits.length" class="well well-create-kit text-center">
       <button class="btn btn-default btn-create-kit"><span class="fa fa-plus"></span></button>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="row">
-      <div ng-repeat="kit in kits" class="col-md-6 col-lg-4">
+      <div ng-repeat="kit in kits" class="col-sm-6 col-lg-4">
         <a target="_blank" class="thumbnail thumbnail-staff-pick" href="{{kit.url}}">
           <div class="caption">
             <h3>{{ kit.title }}</h3>
@@ -32,37 +32,29 @@
       </div>
     </div>
 
-    <p>
-      <a href="/{{lang}}/search?type=tags&q={{skill.tag}}" class="pull-right btn btn-default">{{ 'More Resources' | i18n }}</a>
-    </p>
-
   </div>
 
   <div class="container">
 
     <div class="peoples">
-      <h2 class="page-header">{{ 'Featured mentors' | i18n }}</h2>
+      <h2 class="page-header">{{ 'Featured mentors' | i18n }} <a href="/{{lang}}/mentor" class="btn btn-default pull-right">{{ 'Become a mentor' | i18n }}</a></h2>
 
       <div class="row text-center">
 
-        <div ng-repeat="mentor in mentors" class="col-xs-4 col-sm-3">
-          <ex-avatar class="mentor">
-            <img class="laurel laurel-left" src="/img/explore/laurel-leaves-left.svg">
-            <img class="laurel laurel-right" src="/img/explore/laurel-leaves-right.svg">
-            <img ng-src="{{mentor.avatar}}" alt="{{mentor.name}}" class="img-circle img-mentor-avatar">
-            <div class="mentor-gif" style="background-image:url({{mentor.gif}})"></div>
-          </ex-avatar>
+        <div ng-repeat="mentor in skillMentors" class="col-xs-4 col-sm-3">
+          <a class="mentor-container" href="https://{{mentor.username}}.makes.org" target="_blank">
+            <ex-avatar class="mentor">
+              <img class="laurel laurel-left" src="/img/explore/laurel-leaves-left.svg">
+              <img class="laurel laurel-right" src="/img/explore/laurel-leaves-right.svg">
+              <img ng-src="{{mentor.photo}}" alt="{{mentor.name}}" class="img-circle img-mentor-avatar">
+              <div ng-show="mentor.gif" class="mentor-gif" style="background-image:url({{mentor.gif}})"></div>
+            </ex-avatar>
 
-          <p>{{mentor.name}}<br>
-          <span class="text-muted">{{ mentor.title | i18n }}</span></p>
-        </div>
-
-        <div class="col-xs-4 col-sm-3">
-          <a targe="_blank" href="https://mozteach.makes.org/thimble/become-a-webmaker-mentor" class="mentor-circle-btn">
-            <span>{{ 'Become a mentor' | i18n }}</span>
-            <img src="/img/explore/brett.jpg">
+            <p>{{mentor.name}}<br>
+            <span class="text-muted">{{ mentor.bio }}</span></p>
           </a>
         </div>
+
       </div>
 
     </div>

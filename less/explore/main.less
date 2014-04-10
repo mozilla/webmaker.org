@@ -118,9 +118,9 @@
 
 }
 
-.page-header {
-  border-bottom: none;
-}
+// .page-header {
+//   border-bottom: none;
+// }
 
 /*********************************************************
 * Resets
@@ -282,6 +282,23 @@ img {
 /*********************************************************
 * Competency pages
 */
+
+.mentor-container {
+  display: block;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  height: 300px;
+  @media (min-width: @screen-lg-min) {
+    height: 350px;
+  }
+  @media (min-width: @screen-xl-min) {
+    height: 400px;
+  }
+}
 
 .mentor-circle-btn {
   display: block;

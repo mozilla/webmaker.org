@@ -62,5 +62,9 @@
   "Code dude": {
     "message": "Code dude",
     "description": "Title for Gavin Suntop"
+  },
+  "Skills": {
+    "message": "Skills",
+    "description": "Title for list of web literacy skills"
   }
 }

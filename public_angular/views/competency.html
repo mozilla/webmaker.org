@@ -9,6 +9,11 @@
 
   <div class="container">
 
+    <h2 class="page-header">{{ 'Skills' | i18n }}</h2>
+    <ul class="list list-web-literacy-points">
+      <li ng-repeat="point in wlcPoints[skill.tag]">{{point | i18n }}</li>
+    </ul>
+
     <h2 class="page-header">{{ 'Kits' | i18n }}</h2>
 
     <tabset>
@@ -29,7 +34,7 @@
             </a>
           </div>
         </div>
-<!-- 
+      <!--
         <a target="_blank" href="{{kit.url}}" ng-repeat="kit in kits" class="thumbnail thumbnail-horizonal">
           <div class="icon">
             <span class="fa fa-sitemap"></span>

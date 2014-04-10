@@ -250,6 +250,7 @@ app.locals({
 app.use(function (req, res, next) {
   var user = req.session.user;
   res.locals({
+    wlcPoints: require("./lib/web-literacy-points.json"),
     currentPath: req.path,
     returnPath: req.param('page'),
     email: user ? user.email : '',
@@ -408,6 +409,7 @@ app.get('/angular-config.js', function (req, res) {
   angularConfig.defaultLang = 'en-US';
   angularConfig.supported_languages = i18n.getSupportLanguages();
   angularConfig.csrf = req.csrfToken();
+  angularConfig.wlcPoints = res.locals.wlcPoints;
 
   res.setHeader('Content-type', 'text/javascript');
   res.send('window.angularConfig = ' + JSON.stringify(angularConfig));

@@ -65,16 +65,14 @@
   transition: transform @time;
 }
 
-.clearfix {
-  display: inline-block;
-
+.clearfix() {
+  &:before,
   &:after {
-    content: '.';
-    display: block;
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
     clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
   }
 }
 

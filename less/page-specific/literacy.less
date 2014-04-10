@@ -19,6 +19,9 @@
     @media (min-width: @screen-lg-min) {
       width: @container-lg - 200px;
     }
+    @media print {
+      width: 100%;
+    }
   }
 
   h1 {
@@ -34,6 +37,10 @@
   h3.strand {
     font-weight: normal;
     font-size: 2em;
+    @media print {
+      font-size: 1.5em;
+      margin-top: 0;
+    }
   }
 
   h4.competency {
@@ -59,17 +66,21 @@
     ol {
       padding-left: 0;
     }
+    @media print {
+      margin-left: 0;
+    }
     @media (min-width: @screen-sm-min) {
       margin-left: -1em;
     }
-
     a {
       color: inherit;
     }
   }
 
   .well {
-    padding: 60px;
+    @media screen {
+      padding: 60px;
+    }
     background: #E3EAEE;
   }
 

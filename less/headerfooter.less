@@ -11,6 +11,12 @@
 // Special campaign styles
 @import 'components/hour-of-code';
 
+header {
+  @media print {
+    display: none;
+  }
+}
+
 .webmaker-nav-container {
   border-top: 1px solid @lightgrey;
   position: relative;
@@ -580,6 +586,9 @@
 }
 
 footer {
+  @media print {
+    display: none;
+  }
   margin-top: 20px;
   position: relative;
 }

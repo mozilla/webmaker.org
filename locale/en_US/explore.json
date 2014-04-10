@@ -15,21 +15,13 @@
     "message": "Add your own",
     "description": "Add your own menu title"
   },
-  "Add a kit": {
-    "message": "Add a kit",
-    "description": "Add a kit button"
+  "More Resources": {
+    "message": "More resources",
+    "description": "See more kits in a search"
   },
-  "Most endorsed": {
-    "message": "Most endorsed",
-    "description": "Tab title Most endorsed"
-  },
-  "Staff picks": {
-    "message": "Staff picks",
-    "description": "Tab title Staff picks"
-  },
-  "Kits": {
-    "message": "Kits",
-    "description": "Title for teaching kits"
+  "Featured Teaching Resources": {
+    "message": "Featured Teaching Resources",
+    "description": "Title for teaching resources in competency page"
   },
   "noStaffPick": {
     "message": "There are no staff picks yet. <a href=\"#\">submit some</a>!",
@@ -66,5 +58,9 @@
   "Skills": {
     "message": "Skills",
     "description": "Title for list of web literacy skills"
+  },
+  "By": {
+    "message": "By",
+    "description": "The byline for featured kits"
   }
 }

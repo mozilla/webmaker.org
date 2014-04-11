@@ -33,8 +33,8 @@ The setup portion of this README assumes you have the following installed:
 
 You should also have these Webmaker stack applications running:
 
-* MakeAPI: [https://github.com/mozilla/MakeAPI]()
-* Webmaker Login: [https://github.com/mozilla/login.webmaker.org]()
+* MakeAPI: [https://github.com/mozilla/MakeAPI](https://github.com/mozilla/MakeAPI)
+* Webmaker Login: [https://github.com/mozilla/login.webmaker.org](https://github.com/mozilla/login.webmaker.org)
 
 ### Project Setup
 

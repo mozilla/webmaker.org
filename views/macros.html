@@ -12,7 +12,7 @@
           <label for="search-filter"><span class="icon-th"></span> {{ gettext("Filter the gallery") }}</label>
           <select id="search-filter">
             {% for option in options %}
-              <option value="{{ option.value | safe }}"{% if (option.default) %} selected{% endif %}>{{ option.title | safe }}</option>
+              <option value="{{ option.value | safe }}"{% if (option.default) %} selected{% endif %} title="{{ option.title | safe }}">{{ option.title | safe }}</option>
             {% endfor %}
           </select>
         </div>

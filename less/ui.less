@@ -594,7 +594,10 @@ button i.icon-angle-right {
 
 .ui-selected {
   display: inline-block;
+  overflow: hidden;
   padding: 0 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ui-select-menu {
@@ -630,6 +633,11 @@ button i.icon-angle-right {
         background: @lightgrey;
       }
     }
+  }
+  li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 

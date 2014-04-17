@@ -1,5 +1,99 @@
-<div class="jumbotron explore-jumbotron">
-  <div class="container">
-    <h1>{{ 'Explore the World of Webmaker' | i18n }}</h1>
-  </div>
+<div class="mainContainer">
+  <section id="front-page-intro" class="container">
+    <h1>{{ 'explore_frontpage_title' | i18n }}</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2 class="text-primary">Explore creative ways to teach digital superpowers</h2>
+        <p>...through fun making and sharing, backed by the global Mozilla community’s Web Literacy Map.</p>
+      </div>
+      <div class="hidden-xs col-sm-6 col-lg-4 col-lg-offset-1">
+        <img src="img/front-page/explore-map-2x.png" alt="The Web Literacy Map helps you build literacy in exploring, building, and sharing the web" class="animated slideInDown">
+      </div>
+    </div>
+  </section>
+
+  <section id="front-page-teaching-kits">
+    <div class="container">
+      <div class="row flex-center">
+        <div class="hidden-xs col-sm-5">
+          <img class="teaching-kits-img" src="img/front-page/explore-teaching-kits-2x.png">
+        </div>
+        <div class="col-sm-7 col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h2 class="text-primary">A cookbook for teaching the web</h2>
+              <p>...that's free, open source and fun. Each skill includes free recipes, resources and teaching kits anyone can use to teach others. To understand how the web works, and discover new powers like coding, storytelling, protecting your online privacy and more. It's all part of our non-profit mission to create a more open, web literate world. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="front-page-tools" class="container">
+    <h2 class="text-primary">...with free tools that make it easy to create and learn</h2>
+    <p>Webmaker tools Make things on the web, using the real language of the web. Create web pages, interactive videos, remixes and even mobile apps – learning as you go. It’s all free, open source and fun.</p>
+    <div class="panel panel-default panel-tools">
+      <div class="panel-body text-center">
+        <div class="row">
+          <div class="col-sm-3">
+            <img class="tools-img" src="/img/icon-tools-xray-2x.png">
+            <h3>Xray Goggles</h3>
+            <p>See how the web works. Take apart and remix any web page. (<em>Warning: may alter reality</em>.)</p>
+          </div>
+          <div class="col-sm-3">
+            <img class="tools-img" src="/img/icon-tools-thimble-2x.png">
+            <h3>Thimble</h3>
+            <p>Make and publish your own web page. Learn HTML and CSS basics with this ridiculously simple code editor.</p>
+          </div>
+          <div class="col-sm-3">
+            <img class="tools-img" src="/img/icon-tools-popcorn-2x.png">
+            <h3>Popcorn Maker</h3>
+            <p>Create interactive videos.  Make multimedia stories, music videos, mash-ups, animated GIFs and more.</p>
+          </div>
+          <div class="col-sm-3">
+            <div class="tools-img appmaker-container">
+              <div class="ribbon">Coming soon</div>
+            </div>
+            <h3>AppMaker</h3>
+            <p>Make apps for your phone. Combine pieces of your favorite web sites and services to make an app for you and your friends.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center small">
+      Tools. More crazy stuff in prototypes. Find something cool, play, let us know what you like.
+    </p>
+  </section>
+
+  <section id="front-page-events">
+    <div class="container text-white">
+      <h2>Make. Learn. Get together.</h2>
+      <p>Webmaker Mentors and learners get together at events everywhere around the world – libraries, community centers, internet cafes, or your own living room. Find an event near you, learn how to host your own, or get involved with our global Maker Party (July to Sep 2014.)</p>
+      <img src="img/front-page/explore-events.png">
+    </div>
+  </section>
+
+  <section id="front-page-contribute" class="container">
+    <h2 class="text-primary">Contribute to Webmaker</h2>
+    <p>The Webmaker project is Open Source and anyone can contribute code, design or translations. Find out more about how to Get Involved.</p>
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 contribute-box" ng-repeat="box in contributeBoxes">
+        <div class="contribute-box-body">
+          <div>
+            <h2><span class="fa fa-{{box.icon}}"></span></h2>
+            <h2>{{box.title}}</h2>
+            <p>{{box.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="front-page-where-to-start">
+    <div class="container">
+      <h2 class="text-primary">Not sure where to start?</h2>
+      <p>Explore the competencies and see what teaching resources the Webmaker community has to offer.</p>
+  </section>
 </div>

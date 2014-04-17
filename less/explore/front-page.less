@@ -1,0 +1,186 @@
+.mainContainer {
+
+  font-size: 10px;
+  @media (min-width: @screen-xl-min) {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    .text-light;
+  }
+
+  h1, h2 {
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 5em;
+    margin-bottom: 0.8em;
+  }
+
+  h2 {
+    font-size: 2.8em;
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  section {
+    padding-top: @grid-gutter-width;
+    padding-bottom: @grid-gutter-width;
+    position: relative;
+    @media (min-width: @screen-sm-min) {
+      padding-top: 2 * @grid-gutter-width;
+      padding-bottom: 2 * @grid-gutter-width;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -@grid-gutter-width;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: @grid-gutter-width @grid-gutter-width 0 @grid-gutter-width;
+      border-color: white transparent transparent transparent;
+    }
+  }
+
+  .panel {
+    margin: @grid-gutter-width 0;
+  }
+
+  .panel-body {
+    padding: @grid-gutter-width;
+  }
+
+}
+
+/*********************************************************
+* Sections
+*/
+
+#front-page-teaching-kits {
+  background: url(/explore/img/front-page/explore-map-bkg-2x.png) center;
+  background-size: cover;
+  .panel {
+    margin: 0;
+  }
+  .teaching-kits-img {
+    display: block;
+    max-width: 372px;
+    margin: 0 auto;
+  }
+}
+
+#front-page-events {
+  background-color: #FF4D14;
+  padding-bottom: 0;
+}
+
+#front-page-where-to-start {
+  background-color: @lightgrey;
+}
+
+#front-page-tools {
+  .tools-img {
+    width: auto;
+    height: 100px;
+  }
+  .appmaker-container {
+    position: relative;
+    display: block;
+    background: url(/explore/img/front-page/logo-appmaker-fpo-2x.png) center no-repeat;
+    background-size: auto 100%;
+    padding-top: 40px;
+  }
+  .ribbon {
+    display: inline-block;
+    white-space: nowrap;
+    background: @brand-primary;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    font-style: italic;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    &:before {
+      left: 0;
+      border-width: 11px 0 11px 10px;
+      border-color: transparent transparent transparent white;
+    }
+    &:after {
+      right: 0;
+      border-width: 11px 10px 11px 0;
+      border-color: transparent white transparent transparent;
+    }
+  }
+}
+
+/*********************************************************
+* Contribute boxes
+*/
+
+.contribute-box {
+  @media (min-width: @screen-sm-min) {
+    margin-top: @grid-gutter-width;
+  }
+}
+
+.contribute-box-body {
+  position: relative;
+  .text-white;
+  .text-center;
+  .flex-center;
+
+  padding: @grid-gutter-width * 2;
+  @media (min-width: @screen-sm-min) {
+    height: 300px;
+  }
+
+  p {
+    line-height: 1.4;
+    margin-top: 0.5em;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .contribute-box:first-child & {
+    background-color: @brand-primary;
+  }
+  .contribute-box:nth-child(2) & {
+    background-color: @brand-secondary;
+  }
+  .contribute-box:nth-child(3) & {
+    background-color: #E49D07;
+  }
+  .contribute-box:nth-child(4) & {
+    background-color: #00B2D0;
+  }
+  .contribute-box:nth-child(5) & {
+    background-color: #008CD0;
+  }
+  .contribute-box:nth-child(6) & {
+    background-color: #FF5E5E;
+  }
+}

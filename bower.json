@@ -12,7 +12,7 @@
     "jquery": "2.0.3",
     "jquery-ui": "1.10.3",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.21",
-    "makerstrap": "0.1.2",
+    "makerstrap": "0.1.3",
     "masonry": "3.1.5",
     "moment": "2.2.1",
     "nav-global": "https://github.com/mozilla/nav-global/archive/v0.1.4.tar.gz",
@@ -24,7 +24,8 @@
     "webmaker-analytics": "0.0.5",
     "webmaker-auth-client": "0.0.26",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",
-    "webmaker-language-picker": "0.0.16"
+    "webmaker-language-picker": "0.0.16",
+    "animate.css": "~3.1.0"
   },
   "resolutions": {
     "angular": "1.2.10"

@@ -4,7 +4,38 @@ angular
   .module('exploreApp')
   .controller('mainController', ['$scope',
     function ($scope) {
-      // Home
+      $scope.contributeBoxes = [
+        {
+          icon: 'book',
+          title: 'Teaching kits',
+          description: 'Create or share a resource for teaching digital skills.'
+        },
+        {
+          icon: 'map-marker',
+          title: 'Events',
+          description: 'Host a Webmaker event in your hometown.'
+        },
+        {
+          icon: 'globe',
+          title: 'Translate',
+          description: 'Help localize and translate Webmaker.'
+        },
+        {
+          icon: 'picture-o',
+          title: 'Design',
+          description: 'Participate in co-design or level up on your design review skills'
+        },
+        {
+          icon: 'code',
+          title: 'Code',
+          description: 'File bugs, submit patches or hack with our MakeAPI.'
+        },
+        {
+          icon: 'rocket',
+          title: 'Partner',
+          description: 'Become a partner in our global Maker Party campaign, July to Sept 2014.'
+        }
+      ];
     }
   ])
   .controller('navigationController', ['$scope', '$location', '$routeParams', 'weblit',

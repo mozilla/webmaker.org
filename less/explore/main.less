@@ -1,10 +1,14 @@
 @import "../../bower_components/makerstrap/less/makerstrap";
 @makerstrap-bower-path: "../../bower_components";
 
+// Animations
+@import (less) "../../bower_components/animate.css/animate.css";
+
 /*********************************************************
 * Sections
 */
 @import 'variables';
+@import 'front-page';
 @import 'kits';
 
 /*********************************************************
@@ -20,6 +24,21 @@
     width: @container-xl;
   }
 }
+
+.text-primary {
+  color: @brand-primary
+}
+
+.text-white {
+  color: white;
+}
+
+.flex-center {
+  .flex-display();
+  .align-items(center);
+  .justify-content(center);
+}
+
 
 //  Navbar Header
 @navbar-height: 60px;
@@ -144,9 +163,6 @@ img {
 
 .explore-main {
   .container {
-    @media (min-width: @screen-sm-min) {
-      width: @container-sm;
-    }
     @media (min-width: @screen-md-min) {
       width: @container-md - @explore-sidebar-width;
     }
@@ -213,7 +229,8 @@ img {
   overflow-y: auto;
   background: @brand-secondary;
 
-  .hidden-xs();
+  .hidden-xs;
+  .hidden-sm;
 
   width: 33%;
   max-width: @explore-sidebar-width;

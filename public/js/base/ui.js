@@ -24,12 +24,14 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
     $options.each(function (i, option) {
       var val = $(option).val(),
         html = $(option).text(),
+        title = $(option).attr("title"),
         $newLi = $li.clone();
       $newLi.attr("data-value", val);
       $newLi.html(html);
+      $newLi.attr("title", title);
       if ($(option).attr("selected")) {
         $newLi.attr("data-selected", true);
-        $selectedEl.html(html);
+        $selectedEl.html(html).attr("title", title);
       }
       $newLi.click(function () {
         $menu.find("[data-selected]").removeAttr("data-selected");

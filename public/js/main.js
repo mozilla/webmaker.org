@@ -28,7 +28,7 @@ requirejs.config({
     'doc-ready': '/bower_components/doc-ready',
     'eventEmitter': '/bower_components/eventEmitter',
     'matches-selector': '/bower_components/matches-selector',
-    'webmaker-auth-client': '/bower_components/webmaker-auth-client',
+    'webmaker-auth-client': '/bower_components/webmaker-auth-client/dist/webmaker-auth-client.min',
     'analytics': '/bower_components/webmaker-analytics/analytics'
   },
   shim: {

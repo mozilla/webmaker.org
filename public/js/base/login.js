@@ -1,4 +1,4 @@
-define(['jquery', 'webmaker-auth-client/webmaker-auth-client', 'analytics'], function ($, WebmakerAuthClient, analytics) {
+define(['jquery', 'webmaker-auth-client', 'analytics'], function ($, WebmakerAuthClient, analytics) {
   'use strict';
 
   var auth = new WebmakerAuthClient({

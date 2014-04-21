@@ -4,11 +4,10 @@ requirejs.config({
     'jquery': '../bower_components/jquery/jquery',
     'social': '../js/lib/socialmedia',
     'localized': '../bower_components/webmaker-i18n/localized',
-    'eventEmitter': '../bower_components/eventEmitter',
-    'webmaker-auth-client': '../bower_components/webmaker-auth-client',
+    'webmaker-auth-client': '../bower_components/webmaker-auth-client/dist/webmaker-auth-client.min',
   }
 });
-define(['jquery', 'social', 'localized', 'webmaker-auth-client/webmaker-auth-client'],
+define(['jquery', 'social', 'localized', 'webmaker-auth-client'],
   function ($, SocialMedia, localized, WebmakerAuth) {
     localized.ready(function () {
       var social,

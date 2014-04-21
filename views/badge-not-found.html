@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}{{ gettext('Badge not found') }}{% endblock %}
+{% block body %}
+
+<section id="badge-not-found" class="container">
+  <img class="empty-badge" src="/img/empty-badge.svg" alt="{{ gettext('NoBadgeHere') }}">
+  <div>
+    <h1>{{gettext('BadgeNotFound')}}</h1>
+    <p class="lead">{{gettext('BadgeNotFoundDesc')}}</p>
+  </div>
+</section>
+
+{% endblock %}

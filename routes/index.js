@@ -2,6 +2,7 @@ module.exports = {
   api: {
     healthcheck: require("./api/healthcheck")
   },
+  badges: require("./badges"),
   details: require("./details"),
   gallery: require("./gallery"),
   me: require("./me"),

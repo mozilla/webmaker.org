@@ -22,7 +22,8 @@ var express = require("express"),
   i18n = require("webmaker-i18n"),
   WebmakerAuth = require("webmaker-auth"),
   navigation = require("./navigation"),
-  rtltrForLess = require("rtltr-for-less");
+  rtltrForLess = require("rtltr-for-less"),
+  markdown = require("markdown").markdown;
 
 habitat.load();
 
@@ -75,6 +76,11 @@ nunjucksEnv.addFilter("getSection", function (pageId) {
     }
   }
   return "";
+});
+
+// Markdown
+nunjucksEnv.addFilter("markdown", function (string) {
+  return markdown.toHTML(string);
 });
 
 if (!(env.get("MAKE_ENDPOINT") && env.get("MAKE_PRIVATEKEY") && env.get("MAKE_PUBLICKEY"))) {
@@ -342,6 +348,10 @@ app.get("/privacy-makes", routes.gallery({
   prefix: "privacy",
   limit: 20
 }));
+
+// Badges
+app.get("/badges/:badge?", routes.badges(env).details);
+app.post("/badges/:badge/apply", routes.badges(env).apply);
 
 app.get("/party", routes.page("party"));
 app.get("/tools", routes.page("tools"));

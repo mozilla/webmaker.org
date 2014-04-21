@@ -75,6 +75,11 @@ module.exports = function (app) {
     paths: [
       "/starter-makes"
     ]
+  }, {
+    route: "http://party.webmaker.org",
+    paths: [
+      "/party"
+    ]
   }];
 
   redirectMap.forEach(function (redirect) {

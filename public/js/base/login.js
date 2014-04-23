@@ -11,7 +11,7 @@ define(['jquery', 'webmaker-auth-client', 'analytics'], function ($, WebmakerAut
   function toggleUserData(userData) {
     var placeHolder = $('#identity');
     var userElement = $('div.user-name');
-    var emailSpans = $('.webmaker-email-placeholder')
+    var emailSpans = $('.webmaker-email-placeholder');
 
     if (userData) {
       emailSpans.html(userData.email);

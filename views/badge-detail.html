@@ -18,7 +18,11 @@
           </div>
           <div class="col-sm-9">
             <h1>{{ badge.name }}</h1>
-            <p><span class="logo"></span> {{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
+            {% if badge.issuer %}
+              <p>{% if badge.issuer.imageUrl %}<img class="issuer-avatar" src="{{ badge.issuer.imageUrl }}"> {% endif %}{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuer.url }}">{{ badge.issuer.name }}</a></p>
+            {% else %}
+            <p>{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
+            {% endif %}
             <p>{{ badge.earnerDescription }}</p>
           </div>
         </div>

@@ -2,8 +2,6 @@ var BadgeClient = require('badgekit-api-client');
 
 module.exports = function (env) {
 
-  // var ALLOWED_BADGES = env.get('BADGES_ALLOWED_BADGES');
-
   var badgeClient = new BadgeClient(env.get('BADGES_ENDPOINT'), {
     key: env.get('BADGES_KEY'),
     secret: env.get('BADGES_SECRET')
@@ -11,13 +9,11 @@ module.exports = function (env) {
 
   return {
     details: function (req, res, next) {
-      // if (ALLOWED_BADGES && ALLOWED_BADGES.indexOf(req.params.badge) === -1) {
-      //   return res.render('badge-not-found.html');
-      // }
       badgeClient.getBadge({
         system: env.get('BADGES_SYSTEM'),
         badge: req.params.badge,
       }, function (err, data) {
+
         if (err) {
           return res.render('badge-not-found.html', {
             page: 'badges'
@@ -26,6 +22,11 @@ module.exports = function (env) {
 
         // Add tags manually for now.
         data.tags = ['supermentor', 'mentor', 'contribution', 'mozilla', 'community'];
+
+        // Shim for https://bugzilla.mozilla.org/show_bug.cgi?id=1001161
+        if (data.issuer && !data.issuer.imageUrl) {
+          data.issuer.imageUrl = 'https://webmaker.org/img/logo-webmaker.png';
+        }
 
         res.render('badge-detail.html', {
           page: 'badges',

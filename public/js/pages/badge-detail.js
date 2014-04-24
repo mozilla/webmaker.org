@@ -24,7 +24,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
 
     // An application error occurred
     emitter.on('submit-application-error', function (err) {
-      $success.addlass('hidden');
+      $success.addClass('hidden');
       $error.removeClass('hidden');
     });
 

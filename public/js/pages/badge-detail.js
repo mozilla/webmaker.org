@@ -15,6 +15,8 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $applicationOn = $('.application-on');
     var $applicationOff = $('.application-off');
 
+    var slug = $application.attr('data-badge-slug');
+
     // An application was submitted successfully
     emitter.on('submit-application', function () {
       $success.removeClass('hidden');
@@ -56,7 +58,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
 
     $applicationForm.on('submit', function (e) {
       e.preventDefault();
-      $.post('/badges/webmaker-super-mentor/apply', {
+      $.post('/badges/' + slug + '/apply', {
         evidence: $applicationForm.find('[name="evidence"]').val(),
         _csrf: $('meta[name="csrf-token"]').attr("content")
       })

@@ -2,38 +2,44 @@
 
 angular
   .module('exploreApp')
-  .controller('mainController', ['$scope',
-    function ($scope) {
+  .controller('mainController', ['$scope', 'CONFIG',
+    function ($scope, CONFIG) {
       $scope.contributeBoxes = [
         {
           icon: 'book',
           title: 'Teaching kits',
-          description: 'Create or share a resource for teaching digital skills.'
+          description: 'Create or share a resource for teaching digital skills.',
+          target: '/' + CONFIG.lang + '/teach-templates'
         },
         {
           icon: 'map-marker',
           title: 'Events',
-          description: 'Host a Webmaker event in your hometown.'
+          description: 'Host a Webmaker event in your hometown.',
+          target: 'https://events.webmaker.org/' + CONFIG.lang
         },
         {
           icon: 'globe',
           title: 'Translate',
-          description: 'Help localize and translate Webmaker.'
+          description: 'Help localize and translate Webmaker.',
+          target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/translate-webmaker'
         },
         {
           icon: 'picture-o',
           title: 'Design',
-          description: 'Participate in co-design or level up on your design review skills'
+          description: 'Participate in co-design or level up on your design review skills',
+          target: 'https://wiki.mozilla.org/Webmaker/Design'
         },
         {
           icon: 'code',
           title: 'Code',
-          description: 'File bugs, submit patches or hack with our MakeAPI.'
+          description: 'File bugs, submit patches or hack with our MakeAPI.',
+          target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/contribute-webmaker-code'
         },
         {
           icon: 'rocket',
           title: 'Partner',
-          description: 'Become a partner in our global Maker Party campaign, July to Sept 2014.'
+          description: 'Become a partner in our global Maker Party campaign, July to Sept 2014.',
+          target: 'http://party.webmaker.org/' + CONFIG.lang + '/partners'
         }
       ];
     }

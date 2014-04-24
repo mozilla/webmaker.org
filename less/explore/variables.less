@@ -9,3 +9,7 @@
 @kit-height: 300px; // How tall are the kits?
 
 @kit-title-size: 24px;
+
+// For standard vs retina devices—and making sure images only download once
+@standard-def: ~'screen and (-webkit-max-device-pixel-ratio: 1.49), (max-resolution: 143.9dpi)';
+@retina: ~'screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)';

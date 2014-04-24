@@ -9,11 +9,11 @@
   <p class="lead">{{ gettext('StandardMainDescInProgress') | safe }}</p>
   <ul class="list-hanging list-unstyled">
   {% for strand, literacies in wlc.allByStrand() %}
-    <li>
+    <li class="strand-section">
       <h3 class="strand" id="{{ strand }}"><a href="#{{ strand }}">{{ strand }}</a></h3>
       <ul class="list-unstyled">
         {% for literacy in literacies %}
-        <li>
+        <li class="competency-section">
           <h4 class="competency" id="{{ literacy.term }}"><a href="#{{ literacy.term }}">{{ literacy.term }}</a></h4>
           <p class="description">{{ literacy.description }}</p>
           <ul>

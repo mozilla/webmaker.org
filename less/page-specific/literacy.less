@@ -26,12 +26,20 @@
 
   h1 {
     font-size: 3em;
+    margin-bottom: 40px;
     font-weight: 200;
   }
 
   p.lead {
     font-size: 1.3em;
     line-height: 1.5;
+  }
+
+  li.strand-section {
+    margin-top: 60px;
+  }
+  li.competency-section {
+    margin-top: 40px;
   }
 
   h3.strand {
@@ -44,7 +52,12 @@
   }
 
   h4.competency {
+    font-size: 1.4em;
     margin-bottom: 0;
+    font-weight: bold;
+    @media print {
+      font-size: 1em;
+    }
   }
 
   p.description {
@@ -82,12 +95,15 @@
       padding: 60px;
     }
     background: #E3EAEE;
+    box-shadow: none;
+    border: none;
   }
 
   .well-web-literacy {
     h3 {
       font-weight: 200;
       font-size: 1.5em;
+      margin-bottom: 15px;
     }
     text-align: center;
     margin-top: 40px;

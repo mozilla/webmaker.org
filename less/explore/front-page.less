@@ -98,6 +98,82 @@
 }
 
 #front-page-tools {
+  a {
+    &:link, &:visited, &:hover, &:active {
+      color: @grey;
+      text-decoration: none;
+    }
+  }
+  h3 {
+    @media @standard-def {
+      background-image: url('/img/tools_sprite.png');
+    }
+    @media @retina {
+      background-image: url('/img/tools_sprite@2x.png');
+    }
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 16.2rem;
+    margin: 0 auto 4rem;
+    padding-top: 15.5rem;
+    max-width: 16.4rem;
+
+    @media screen and (min-width: @screen-sm) {
+      margin-bottom: 5rem;
+    }
+
+    &.disabled {
+      color: @lightgrey;
+    }
+
+    &.appmaker {
+      background-position: 50% 3.5%;
+    }
+
+    &.popcorn-maker {
+      background-position: 50% 35%;
+    }
+
+    &.thimble {
+      background-position: 50% 67%;
+    }
+
+    &.xray-goggles {
+      background-position: 50% 98.5%;
+    }
+
+    @media screen and (min-width: @screen-md) {
+      &.xray-goggles {
+        background-position: 50% 100%;
+      }
+
+      &.popcorn-maker {
+        background-position: 50% 32%;
+      }
+
+      &.appmaker {
+        background-position: 50% 0;
+      }
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      margin-bottom: 4rem;
+
+      &.xray-goggles {
+        background-position: 50% 98.5%;
+      }
+
+      &.popcorn-maker {
+        background-position: 50% 35%;
+      }
+
+      &.appmaker {
+        background-position: 50% 3.5%;
+      }
+    }
+  }
+
   .tools-img {
     width: auto;
     height: 100px;

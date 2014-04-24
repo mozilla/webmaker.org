@@ -51,7 +51,7 @@
               <textarea class="form-control" name="evidence" placeholder="{{ gettext("BadgesIncludeLinks") }}" required></textarea>
             </div>
             <div class="form-inline">
-              <label for="claimcode">{{ gettext("HaveClaimCode") }}</label><a href="https://badges.mozilla.org" target="_blank">{{ gettext("Enter it here") }}</a><!--  <input class="form-control" name="claimcode" placeholder="Enter it here"> -->
+              <label for="claimcode">{{ gettext("HaveClaimCode") }}</label><a href="https://badges.mozilla.org" target="_blank">{{ gettext("Submit with a claim code here") }}</a><!--  <input class="form-control" name="claimcode" placeholder="Enter it here"> -->
               <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
             </div>
           </form>
@@ -61,10 +61,10 @@
   </div>
 
   <div class="container">
-    <h2>{{ gettext("Requirements") }}
+    <h2>{{ gettext("Badge Requirements") }}
       <span class="application-off">
         <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">{{ gettext("Apply now") }}</button>
-        <button class="btn btn-lg btn-success pull-right logout-only hidden webmaker-login">{{ gettext("Login to apply now") }}</button>
+        <button class="btn btn-lg btn-success pull-right logout-only hidden webmaker-login">{{ gettext("Login to apply") }}</button>
       </span>
     </h2>
     <ol class="list-badges-requirements list-unstyled">

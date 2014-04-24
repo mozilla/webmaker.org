@@ -369,15 +369,15 @@
   "BadgeNotFoundDesc": "Sorry, looks like that badge doesn't exist in our system.",
   "NoBadgeHere": "No badge here!",
   "BadgesIssuedBy": "Issued by:",
-  "GotApplication": "Thanks, we got your application!",
-  "ReplyToEmail": "We will reply to your Webmaker email (<strong class=\"webmaker-email-placeholder\"></strong>)",
+  "GotApplication": "Thanks for submitting!",
+  "ReplyToEmail": "We will let you know via email (<strong class=\"webmaker-email-placeholder\"></strong>) whether or not your application has been approved.",
   "Apply for this badge": "Apply for this badge",
   "BadgesError": "Oops, looks like there was an error. Try submitting again or file a bug!",
   "BadgesEvidenceLabel": "What qualifies you to earn this badge?",
   "BadgesIncludeLinks": "Include any links to your work that you'd like us to review",
   "HaveClaimCode": "Have a claim code?",
-  "Enter it here": "Enter it here",
-  "Requirements": "Requirements",
+  "Submit with a claim code here": "Submit with a claim code here",
+  "Badge Requirements": "Badge Requirements",
   "Apply now": "Apply now",
-  "Login to apply now": "Login to apply now"
+  "Login to apply": "Login to apply"
 }

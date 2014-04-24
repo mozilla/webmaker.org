@@ -6,7 +6,7 @@
         <h2 class="text-primary">Explore creative ways to teach digital superpowers</h2>
         <p>
           Get involved with Webmaker through fun making and sharing, backed by the global Mozilla community&rsquo;s Web
-          Literacy Map. It&rsquo;s all part of our <a href="/en-us/about">non-profit mission</a> to create a more open,
+          Literacy Map. It&rsquo;s all part of our <a href="/{{ lang }}/about">non-profit mission</a> to create a more open,
           web literate world.
         </p>
       </div>
@@ -44,7 +44,7 @@
   <section id="front-page-tools" class="container">
     <h2 class="text-primary">Free tools that make it easy to create and learn</h2>
     <p>
-      <a href="/en-us/tools">Webmaker tools</a> make it easy to create things on the web. Make your own web pages,
+      <a href="/{{ lang }}/tools">Webmaker tools</a> make it easy to create things on the web. Make your own web pages,
       interactive videos, remixes, mobile apps and more&mdash;learning web mechanics, code and other valuable skills as
       you go.
     </p>
@@ -87,9 +87,9 @@
       <h2>Make. Learn. Get together.</h2>
       <p>
         The Webmaker community gets together at events around the world&mdash;at libraries, community centers, internet
-        cafes, or in your own living room. <a href="https://events.webmaker.org/en-us/">Find an event near you</a>,
-        learn how to <a href="https://events.webmaker.org/en-us/#!/event-guides">host your own</a>, or get involved with
-        our global <a href="http://party.webmaker.org/en-us/">Maker Party</a> (July to Sep 2014).
+        cafes, or in your own living room. <a href="https://events.webmaker.org/{{ lang }}/">Find an event near you</a>,
+        learn how to <a href="https://events.webmaker.org/{{ lang }}/#!/event-guides">host your own</a>, or get involved with
+        our global <a href="http://party.webmaker.org/{{ lang }}/">Maker Party</a> (July to Sep 2014).
       </p>
       <img src="#" retina-image data-src-1x="img/front-page/explore-events.png"
            data-src-2x="img/front-page/explore-events-2x.png" width="999" height="305" />
@@ -100,18 +100,20 @@
     <h2 class="text-primary">Contribute to Webmaker</h2>
     <p>
       Webmaker is open source, community-powered, and backed by Mozilla&rsquo;s non-profit
-      <a href="https://mozilla.org/en-us/mission/">mission</a> to build and protect the open web. We&rsquo;d love for
-      you to <a href="/en-us/getinvolved">get more involved</a>.
+      <a href="https://mozilla.org/{{ lang }}/mission/">mission</a> to build and protect the open web. We&rsquo;d love for
+      you to <a href="/{{ lang }}/getinvolved">get more involved</a>.
     </p>
     <div class="row">
       <div class="col-sm-6 col-lg-4 contribute-box" ng-repeat="box in contributeBoxes">
-        <div class="contribute-box-body">
-          <div>
-            <h2><span class="fa fa-{{box.icon}}"></span></h2>
-            <h2>{{box.title}}</h2>
-            <p>{{box.description}}</p>
+        <a href="{{ box.target }}">
+          <div class="contribute-box-body">
+            <div>
+              <h2><span class="fa fa-{{box.icon}}"></span></h2>
+              <h2>{{box.title}}</h2>
+              <p>{{box.description}}</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

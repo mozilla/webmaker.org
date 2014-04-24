@@ -72,13 +72,13 @@
     <section class="main">
       <div class="explore-sidebar">
         <ul ng-cloak ng-class="{ unselected: isUnselected() }" class="explore-sidebar-nav nav nav-stacked">
-          <li
-            ng-class="{ active : isActive('/') }"
-            style="background-color: #01527D">
-            <a href="#/">{{ 'Web Literacy Map' | i18n }}</a>
+          <li class="sidebar-header">
+            <h4><span class="star"></span> <a href="#/">{{ 'Web Literacy Skills' | i18n }}</a></h4>
+            <p bind-unsafe-html="'SidebarHeaderDesc' | i18n"></p>
           </li>
           <li
             ng-repeat="skill in literacies"
+            class="literacy"
             ng-class="{ active : isActive(skill.tag) }"
             style="background-color: {{ skill.color }}">
             <a href="#/competencies/{{ skill.tag }}">{{ skill.term }}</a>

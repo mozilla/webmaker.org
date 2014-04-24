@@ -5,6 +5,18 @@
   },
   "Web Literacy Map": {
     "message": "Web Literacy Map",
+    "description": "The title of the explore section"
+  },
+  "SidebarHeaderDesc": {
+    "message": "Explore our teaching resources for each skill in the Web Literacy Map. Need more info? Here's our <a href=\"/{{lang}}/literacy\">documentation</a>.",
+    "description": "Description for the sidebar header"
+  },
+  "SidebarHeaderDesc2": {
+    "message": ".",
+    "description": "Description for the sidebar header part 2. Links to /literacy"
+  },
+  "Web Literacy Skills": {
+    "message": "Web Literacy Skills",
     "description": "Heading for sidebar"
   },
   "Become a mentor": {

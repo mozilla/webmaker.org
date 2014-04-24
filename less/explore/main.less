@@ -17,7 +17,7 @@
 
 // Grid
 @container-xl: 1580px;
-@screen-xl-min: 1580px;
+@screen-xl-min: 1620px;
 
 .container {
   @media (min-width: @screen-xl-min) {
@@ -240,6 +240,38 @@ img {
 
 }
 
+// The 12-point star
+.star {
+  display: inline-block;
+  background: @brand-primary;
+  width: 9px;
+  height: 9px;
+  position: relative;
+  margin-right: 5px;
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 9px;
+    width: 9px;
+    background: @brand-primary;
+  }
+  &:before {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+  }
+  &:after {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+  }
+}
+
 .nav.explore-sidebar-nav {
   position: relative;
   z-index: 1;
@@ -249,8 +281,31 @@ img {
     margin-top: 0;
   }
 
+  // The header element
+  > li.sidebar-header {
+    color: #555;
+    font-size: 13px;
+    padding: 20px 15px;
+    background: @lightgrey;
+    h4 {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      a {
+        color: inherit;
+      }
+    }
+    > a {
+      padding: 0;
+      display: inline;
+    }
+  }
+  &.unselected > li.sidebar-header {
+    opacity: 1;
+  }
+
   // Each element, active states
-  > li {
+  > li.literacy {
     transition: all 0.2s ease-in-out;
     opacity: 0.5;
     position: relative;
@@ -270,7 +325,7 @@ img {
   }
 
   // Links
-  > li > a {
+  > li.literacy > a {
     padding: 20px 15px;
     color: #FFF;
     text-align: left;

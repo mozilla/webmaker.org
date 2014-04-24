@@ -87,14 +87,14 @@
   <main id="content" class="content {% if page != 'events' %} clearfix {% endif %}">{% block body %}{% endblock %}</main>
 
   <footer class="footer">
+
+    {% block footer %}
     <div id="footer-actions">
       {% if layout %}
       <a class="load-more">{{ gettext("Load more") }} <span class="icon-angle-down"></span></a>
       {% endif %}
       <a class="back-to-top anchor-slide" href="#">{{ gettext("Back to top") }} <span class="icon-angle-up"></span></a>
     </div>
-
-    {% block footer %}
     <section class="make-footer">
         <div class="make-wrapper"></div>
     </section>

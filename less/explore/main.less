@@ -47,6 +47,24 @@
   font-weight: normal;
 }
 
+// Light blue
+.navbar.navbar-tertiary {
+  background: #01527D;
+  font-weight: normal;
+  font-size: 13px;
+  .nav > li > a {
+    padding: 18px 15px;
+    color: fade(white, 80%);
+    &:hover {
+      background: none;
+      color: white;
+    }
+  }
+  .nav > li.active > a {
+    color: white;
+  }
+}
+
 .navbar.navbar-no-header-xs {
   margin-bottom: 0;
   border: none;

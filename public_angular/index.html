@@ -59,10 +59,22 @@
           <div class="navbar-collapse" collapse="isCollapsed">
             <ul class="nav navbar-nav">
               <li class="active nav-icon"><a href="#!"><span class="fa fa-random"></span> {{ 'Explore' | i18n }}</a></li>
-              <li class="nav-icon" ><a href="/resources"><span class="fa fa-hand-o-up"></span> {{ 'Make' | i18n }}</a></li>
-              <li class="nav-icon"><a href="/teach"><span class="fa fa-book"></span> {{ 'Teach' | i18n }}</a></li>
-              <li class="nav-icon"><a href="/events"><span class="fa fa-map-marker"></span> {{ 'Events' | i18n }}</a></li>
-              <li class="nav-icon"><a href="/about"><span class="fa fa-info"></span> {{ 'Info' | i18n }}</a></li>
+              <li class="nav-icon" ><a href="/{{lang}}/resources"><span class="fa fa-hand-o-up"></span> {{ 'Make' | i18n }}</a></li>
+              <li class="nav-icon"><a href="/{{lang}}/teach"><span class="fa fa-book"></span> {{ 'Teach' | i18n }}</a></li>
+              <li class="nav-icon"><a href="/{{lang}}/events"><span class="fa fa-map-marker"></span> {{ 'Events' | i18n }}</a></li>
+              <li class="nav-icon"><a href="/{{lang}}/about"><span class="fa fa-info"></span> {{ 'Info' | i18n }}</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-tertiary navbar-no-header-xs">
+        <div class="container">
+          <div class="navbar-collapse" collapse="isCollapsed">
+            <ul class="nav navbar-nav">
+              <li class="active"></span><a href="/{{lang}}/explore">{{ 'Home' | i18n }}</a></li>
+              <li><a href="/{{lang}}/gallery">{{ 'Gallery' | i18n }}</a></li>
+              <li><a href="/{{lang}}/tools">{{ 'Tools' | i18n }}</a></li>
+              <li><a href="/{{lang}}/search">{{ 'Search' | i18n }}</a></li>
             </ul>
           </div>
         </div>

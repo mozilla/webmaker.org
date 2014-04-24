@@ -32,7 +32,7 @@
     "description": "Title for teaching resources in competency page"
   },
   "noStaffPick": {
-    "message": "There are no staff picks yet. <a href=\"#\">submit some</a>!",
+    "message": "There are no featured teaching resources yet. <a href=\"#\">Submit one.</a>",
     "description": "No item in the list picked by staff and there is a submit link."
   },
   "Endorsement": {
@@ -43,8 +43,8 @@
     "message": "Endorsements",
     "description": "Plural Endorsements"
   },
-  "Featured mentors": {
-    "message": "Featured mentors",
+  "Featured Mentors": {
+    "message": "Featured Mentors",
     "description": "Featured mentors"
   },
   "Nominate": {

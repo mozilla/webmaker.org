@@ -3,7 +3,6 @@
   /*********************************************************
   * Makerstrap shims
   */
-  font-size: 14px;
 
   * {
     .border-box;
@@ -27,10 +26,13 @@
     margin-bottom: 5px;
   }
   h1 {
-    font-size: 36px;
+    font-size: 2.5em;
   }
   h2 {
-    font-size: 30px;
+    font-size: 2.2em;
+  }
+  p {
+    line-height: 1.8;
   }
 
   .panel {
@@ -65,7 +67,7 @@
   }
 
   li {
-    line-height: 1.4;
+    line-height: 1.6;
   }
   .form-inline {
     .clearfix;
@@ -138,8 +140,11 @@
       max-width: 300px;
     }
   }
-  .badge-tags .icon-tags {
-    color: @green;
+  .badge-tags {
+    line-height: 1.4;
+    .icon-tags {
+      color: @green;
+    }
   }
   .badge-tag {
     &:not(:last-of-type):after {
@@ -161,9 +166,6 @@
   }
 
   .panel-badges {
-    p {
-      line-height: 1.6;
-    }
     textarea {
       max-width: 700px;
       min-height: 80px;
@@ -194,7 +196,8 @@
     > li  {
       > h1, h2, h3 {
         font-weight: normal;
-        font-size: 1.4em;
+        font-size: 1.6em;
+        margin-bottom: @grid-gutter-width;
         color: @green;
         &:before {
           counter-increment: badges-number;

@@ -49,9 +49,9 @@
               <img ng-src="{{mentor.photo}}" alt="{{mentor.name}}" class="img-circle img-mentor-avatar">
               <div ng-show="mentor.gif" class="mentor-gif" style="background-image:url({{mentor.gif}})"></div>
             </ex-avatar>
-
-            <p>{{mentor.name}}<br>
-            <span class="text-muted">{{ mentor.bio }}</span></p>
+            <h3>{{ mentor.name }}</h3>
+            <p>@{{mentor.username}}</p>
+            <p><span class="text-muted">{{ mentor.bio }}</span></p>
           </a>
         </div>
 

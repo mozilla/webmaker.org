@@ -12,6 +12,7 @@ requirejs.config({
     'jquery.powertip': '/js/lib/jquery.powertip',
     'moment': '/bower_components/moment/min/moment+langs.min',
     'social': '/js/lib/socialmedia',
+    'selectize': "/bower_components/selectize/dist/js/standalone/selectize.min",
     'uri': '/js/lib/uri',
     'tabzilla': 'https://mozorg.cdn.mozilla.net/tabzilla/tabzilla',
     'nunjucks': '/bower_components/nunjucks/browser/nunjucks-dev',
@@ -51,9 +52,10 @@ require([
   'base/navigation',
   'base/webmaker-campaign',
   'languages',
+  'selectize',
   'base/login',
   'tabzilla',
-], function ($, cta, Marquee, privacy, AnchorSlide, navigation, webmakerCampaign, languages) {
+], function ($, cta, Marquee, privacy, AnchorSlide, navigation, webmakerCampaign, languages, selectize) {
   'use strict';
 
   var $window = $(window);
@@ -73,6 +75,9 @@ require([
     position: "top",
     arrow: "left"
   });
+
+  //initialized language selectize -- used in signup for webmaker-auth-client
+  $('#supportedLocales').selectize();
 
   // Attach navigation UI
   navigation();

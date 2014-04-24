@@ -204,6 +204,12 @@ app.use(express.compress());
 app.use(express.static(WWW_ROOT));
 app.use("/bower_components", express.static(path.join(__dirname, "bower_components")));
 
+app.use(express.json());
+app.use(express.urlencoded());
+
+app.use(webmakerAuth.cookieParser());
+app.use(webmakerAuth.cookieSession());
+
 // Setup locales with i18n
 app.use(i18n.middleware({
   supported_languages: env.get("SUPPORTED_LANGS"),
@@ -231,12 +237,6 @@ i18n.addLocaleObject({
   }
 });
 
-app.use(express.json());
-app.use(express.urlencoded());
-
-app.use(webmakerAuth.cookieParser());
-app.use(webmakerAuth.cookieSession());
-
 app.use(express.csrf());
 
 app.locals({
@@ -250,7 +250,8 @@ app.locals({
   PROFILE_URL: env.get("PROFILE_URL"),
   EVENTS_URL: env.get("EVENTS_URL"),
   flags: env.get("FLAGS") || {},
-  personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org")
+  personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org"),
+  bower_path: "bower_components"
 });
 
 app.use(function (req, res, next) {

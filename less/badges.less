@@ -1,5 +1,90 @@
 #badges {
 
+  /*********************************************************
+  * Makerstrap shims
+  */
+  font-size: 14px;
+
+  * {
+    .border-box;
+  }
+
+  .hidden {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .container {
+    .ui-wrapper;
+    margin-top: 0;
+  }
+
+  .row {
+    .clearfix;
+  }
+
+  h1, h2 {
+    margin-bottom: 5px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+
+  .panel {
+    background-color: #FFF;
+  }
+
+  .panel-info {
+    border: 1px solid @green;
+  }
+
+  .alert-danger {
+    background: @red;
+    padding: 10px;
+    margin-bottom: @grid-gutter-width;
+  }
+
+  label {
+    display: block;
+  }
+
+  textarea.form-control {
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    &:focus {
+      outline: none;
+      border-color: @blue;
+    }
+  }
+
+  li {
+    line-height: 1.4;
+  }
+  .form-inline {
+    .clearfix;
+  }
+  .form-inline label {
+    display: inline-block;
+  }
+
+  .list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  /*********************************************************
+  * Custom
+  */
+
   // Type
   h1, h2 {
     font-family: 'Open Sans Light', sans-serif;
@@ -63,6 +148,7 @@
   }
 
   // Panels
+
   .panel-navy {
     background: @navy;
     color: #FFF;
@@ -107,6 +193,7 @@
     // Since this is parsed from markdown, include h1, h2, h3 just in case.
     > li  {
       > h1, h2, h3 {
+        font-weight: normal;
         font-size: 1.4em;
         color: @green;
         &:before {

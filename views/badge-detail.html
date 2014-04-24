@@ -2,23 +2,25 @@
 {% block title %}{{ gettext("Badges") }}{% endblock %}
 {% block body %}
 
-<section class="container">
-  <div class="panel panel-badges">
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-sm-3">
-          <div id="badge"><img src="{{ badge.imageUrl }}"></div>
-          <p class="badge-tags">
-            <span class="icon-tags"></span>
-            {% for tag in badge.tags %}
-            <a href="/{{localeInfo.lang}}/search?type=tags&q={{ tag }}" class="badge-tag">{{ tag }}</a>
-            {% endfor %}
-          </p>
-        </div>
-        <div class="col-sm-9">
-          <h1>{{ badge.name }}</h1>
-          <p><span class="logo"></span> {{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
-          <p>{{ badge.earnerDescription }}</p>
+<section>
+  <div class="container">
+    <div class="panel panel-badges">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <div id="badge"><img src="{{ badge.imageUrl }}"></div>
+            <p class="badge-tags">
+              <span class="icon-tags"></span>
+              {% for tag in badge.tags %}
+              <a href="/{{localeInfo.lang}}/search?type=tags&q={{ tag }}" class="badge-tag">{{ tag }}</a>
+              {% endfor %}
+            </p>
+          </div>
+          <div class="col-sm-9">
+            <h1>{{ badge.name }}</h1>
+            <p><span class="logo"></span> {{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
+            <p>{{ badge.earnerDescription }}</p>
+          </div>
         </div>
       </div>
     </div>

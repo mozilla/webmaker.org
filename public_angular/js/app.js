@@ -11,10 +11,6 @@ angular.module('exploreApp', ['ngRoute', 'ui.bootstrap', 'exploreApp.services', 
         templateUrl: 'views/competency.html',
         controller: 'competencyController'
       })
-      .when('/add', {
-        templateUrl: 'views/add.html',
-        controller: 'addController'
-      })
       .otherwise({
         redirectTo: '/'
       });

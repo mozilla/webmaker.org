@@ -83,11 +83,6 @@
             style="background-color: {{ skill.color }}">
             <a href="#/competencies/{{ skill.tag }}">{{ skill.term }}</a>
           </li>
-          <li
-            ng-class="{ active : isActive('/add') }"
-            style="background-color: #000">
-            <a href="#/add"><span class="fa fa-plus"></span> {{ 'Add your own' | i18n }}</a>
-          </li>
         </ul>
       </div>
 

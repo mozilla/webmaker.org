@@ -306,6 +306,11 @@ img {
     font-size: 13px;
     padding: 20px 15px;
     background: @lightgrey;
+
+    // Needed for the little triangle at the bottom
+    position: relative;
+    z-index: 1;
+
     h4 {
       text-transform: uppercase;
       font-size: 13px;
@@ -317,6 +322,18 @@ img {
     > a {
       padding: 0;
       display: inline;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 15px 0 15px;
+      border-color: @lightgrey transparent transparent transparent;
     }
   }
   &.unselected > li.sidebar-header {

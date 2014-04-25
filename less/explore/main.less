@@ -342,10 +342,37 @@ h3 {
   position: relative;
 
   .img-mentor-avatar {
+    opacity: 0.75;
     width: 100%;
     -webkit-transform: scale(0.9);
     transition: all 150ms ease-in;
   }
+
+
+  @media screen and (min-width: @screen-sm) {
+    .mentor-overlay {
+      background-color: @blue;
+      border-radius: 50%;
+      bottom: 0;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: background-color 200ms ease-in;
+      z-index: 10;
+    }
+    &:hover {
+      .mentor-overlay {
+        background-color: transparent;
+      }
+    }
+
+    .img-mentor-avatar {
+      opacity: 1;
+    }
+  }
+
   .laurel {
     position: absolute;
     top: -5px;

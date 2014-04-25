@@ -44,6 +44,7 @@
         <div ng-repeat="mentor in skillMentors" class="col-xs-4 col-sm-3">
           <a class="mentor-container" href="https://{{mentor.username}}.makes.org" target="_blank">
             <ex-avatar class="mentor">
+              <span class="mentor-overlay">&nbsp;</span>
               <img class="laurel laurel-left" src="/img/explore/laurel-leaves-left.svg">
               <img class="laurel laurel-right" src="/img/explore/laurel-leaves-right.svg">
               <img ng-src="{{mentor.photo}}" alt="{{mentor.name}}" class="img-circle img-mentor-avatar">

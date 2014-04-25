@@ -44,9 +44,10 @@ angular
       ];
     }
   ])
-  .controller('navigationController', ['$scope', '$location', '$routeParams', 'weblit',
-    function ($scope, $location, $routeParams, weblit) {
+  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit',
+    function ($scope, $location, $routeParams, $rootScope, weblit) {
       $scope.isCollapsed = true;
+      $scope.isSidebarCollapsed = true;
 
       $scope.isActive = function (tag) {
         if (tag[0] === '/') {
@@ -58,6 +59,22 @@ angular
       $scope.isUnselected = function () {
         return window.location.hash === '#/';
       };
+
+      $scope.toggleSidebar = function () {
+        $scope.isCollapsed = true;
+        $scope.isSidebarCollapsed = !$scope.isSidebarCollapsed;
+      };
+
+      $scope.collapseAll = function () {
+        $scope.isCollapsed = true;
+        $scope.isSidebarCollapsed = true;
+      };
+
+      // Jump to top of viewport when new views load
+      $rootScope.$on('$locationChangeSuccess', function (event) {
+        window.scrollTo(0, 0);
+      });
+
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'makeapi', 'CONFIG',

@@ -158,5 +158,9 @@
   "By": {
     "message": "By",
     "description": "The byline for featured kits"
+  },
+  "Main menu": {
+    "message": "Main menu",
+    "description": "On mobile nav"
   }
 }

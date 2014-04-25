@@ -1,0 +1,137 @@
+/*********************************************************
+* Sidebar
+*/
+
+.explore-sidebar {
+  overflow-y: auto;
+  background: @brand-secondary;
+
+  width: 100%;
+
+  @media (min-width: @screen-sm-min) {
+    width: 33%;
+    max-width: @explore-sidebar-width;
+    float: left;
+
+    // This is to override the logic for collapsing on mobile
+    height: auto !important;
+    display: block;
+  }
+
+}
+
+// The 12-point star
+.star {
+  display: inline-block;
+  background: @brand-primary;
+  width: 9px;
+  height: 9px;
+  position: relative;
+  margin-right: 5px;
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 9px;
+    width: 9px;
+    background: @brand-primary;
+  }
+  &:before {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+  }
+  &:after {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+  }
+}
+
+.nav.explore-sidebar-nav {
+  position: relative;
+  z-index: 1;
+
+  // Spacing
+  > li + li {
+    margin-top: 0;
+  }
+
+  // The header element
+  > li.sidebar-header {
+    color: #555;
+    font-size: 13px;
+    padding: 20px 15px;
+    background: @lightgrey;
+
+    // Needed for the little triangle at the bottom
+    position: relative;
+    z-index: 1;
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      a {
+        color: inherit;
+      }
+    }
+    > a {
+      padding: 0;
+      display: inline;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 15px 0 15px;
+      border-color: @lightgrey transparent transparent transparent;
+    }
+  }
+  &.unselected > li.sidebar-header {
+    opacity: 1;
+  }
+
+  // Each element, active states
+  > li.literacy {
+    transition: all 0.2s ease-in-out;
+    opacity: 0.5;
+    position: relative;
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &.unselected > li {
+    opacity: 0.85;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // Links
+  > li.literacy > a {
+    padding: 20px 15px;
+    color: #FFF;
+    text-align: left;
+
+    &:hover,
+    &:focus {
+      color: #FFF;
+      background: none;
+    }
+  }
+
+}

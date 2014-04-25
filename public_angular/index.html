@@ -27,14 +27,15 @@
         <div class="container">
 
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+            <button type="button" class="navbar-toggle" ng-click="toggleSidebar()">
               <span class="sr-only">Toggle navigation</span>
               <span class="fa fa-bars fa-lg"></span>
             </button>
+
             <a href="{{webmakerUrl}}/{{lang}}" class="logo webmaker-logo"><img src="https://webmaker.org/img/logo.png"></a>
           </div>
 
-          <div class="navbar-collapse" collapse="isCollapsed">
+          <div class="navbar-collapse" collapse="true">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown" ng-cloak ng-show="_user.email">
                 <a class="navbar-user-info dropdown-toggle">
@@ -69,7 +70,7 @@
       </nav>
       <nav class="navbar navbar-tertiary navbar-no-header-xs">
         <div class="container">
-          <div class="navbar-collapse" collapse="isCollapsed">
+          <div class="navbar-collapse" collapse="true">
             <ul class="nav navbar-nav">
               <li class="active"></span><a href="/{{lang}}/explore">{{ 'Home' | i18n }}</a></li>
               <li><a href="/{{lang}}/gallery">{{ 'Gallery' | i18n }}</a></li>
@@ -82,8 +83,13 @@
     </div>
 
     <section class="main">
-      <div class="explore-sidebar">
+      <div class="explore-sidebar" collapse="isSidebarCollapsed">
         <ul ng-cloak ng-class="{ unselected: isUnselected() }" class="explore-sidebar-nav nav nav-stacked">
+          <li class="literacy">
+           <a href="#" ng-show="isCollapsed" ng-click="isCollapsed = false" class="hidden-sm hidden-md hidden-lg">
+              <span class="fa fa-angle-left"></span> {{ 'Main menu' | i18n }}
+           </a>
+          </li>
           <li class="sidebar-header">
             <h4><span class="star"></span> <a href="#/">{{ 'Web Literacy Skills' | i18n }}</a></h4>
             <p bind-unsafe-html="'SidebarHeaderDesc' | i18n"></p>
@@ -92,6 +98,7 @@
             ng-repeat="skill in literacies"
             class="literacy"
             ng-class="{ active : isActive(skill.tag) }"
+            ng-click="collapseAll()"
             style="background-color: {{ skill.color }}">
             <a href="#/competencies/{{ skill.tag }}">{{ skill.term }}</a>
           </li>

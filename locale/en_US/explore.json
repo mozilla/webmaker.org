@@ -3,9 +3,97 @@
     "message": "Teach web skills with Webmaker",
     "description": "Heading for Explore page"
   },
+  "Explore creative ways": {
+    "message": "Explore creative ways to teach digital superpowers",
+    "description": "Heading for first explore subsection with map"
+  },
+  "Get involved with webmaker": {
+    "message": "Get involved with Webmaker through fun making and sharing, backed by the global Mozilla community&rsquo;s Web Literacy Map. It&rsquo;s all part of our <a href=\"/{{ lang }}/about\">non-profit mission</a> to create a more open, web literate world.",
+    "description": "Copy for first explore subsection with map"
+  },
   "Web Literacy Map": {
     "message": "Web Literacy Map",
     "description": "The title of the explore section"
+  },
+  "A cookbook for teaching the web": {
+    "message": "A cookbook for teaching the web",
+    "description": "Heading for the second explore subsection with document stacks"
+  },
+  "Each skill includes": {
+    "message": "Each skill includes free recipes, resources and teaching kits anyone can use to teach others to understand how the web works. Discover new powers like coding, storytelling, protecting your online privacy and more.",
+    "description": "Copy for the second explore subsection with document stacks"
+  },
+  "Free tools that make it easy to create and learn": {
+    "message": "Free tools that make it easy to create and learn",
+    "description": "Header for section that includes description of webmaker tools"
+  },
+  "Tools description": {
+    "message": "<a href=\"/{{ lang }}/tools\">Webmaker tools</a> make it easy to create things on the web. Make your own web pages, interactive videos, remixes, mobile apps and more&mdash;learning web mechanics, code and other valuable skills as you go.",
+    "description":"a description of the webmaker tools"
+  },
+  "Event subsection header": {
+    "message": "Make. Learn. Get together.",
+    "description": "Header for the events subsection of explore"
+  },
+  "Event subsection copy": {
+    "message": "The Webmaker community gets together at events around the world&mdash;at libraries, community centers, internet cafes, or in your own living room. <a href=\"https://events.webmaker.org/{{ lang }}/\">Find an event near you</a>, learn how to <a href=\"https://events.webmaker.org/{{ lang }}/#!/event-guides\">host your own</a>, or get involved with our global <a href=\"http://party.webmaker.org/{{ lang }}/\">Maker Party</a> (July to Sep 2014).",
+    "description": "Copy for the events subsection of explore"
+  },
+  "Contribute subsection copy": {
+    "message": "Webmaker is open source, community-powered, and backed by Mozilla&rsquo;s non-profit <a href=\"https://mozilla.org/{{ lang }}/mission/\">mission</a> to build and protect the open web. We&rsquo;d love for you to <a href=\"/{{ lang }}/getinvolved\">get more involved</a>.",
+    "description": "Copy for the contribute subsection of explore"
+  },
+  "Teaching kits": {
+    "message": "Teaching kits",
+    "description": "First square in contribute grid on explore"
+  },
+  "Teaching kits desc": {
+    "message": "Create or share a resource for teaching digital skills.",
+    "description": "Copy for first square in contribute grid on explore"
+  },
+  "Events desc": {
+    "message": "Host a Webmaker event in your hometown.",
+    "description": "Copy for second square in contribute grid on explore"
+  },
+  "Translate": {
+    "message": "Translate",
+    "description": "Third square in contribute grid on explore"
+  },
+  "Translate desc": {
+    "message": "Help localize and translate Webmaker.",
+    "description": "Copy for third square in contribute grid on explore"
+  },
+  "Design": {
+    "message": "Design",
+    "description": "Fourth square in contribute grid on explore"
+  },
+  "Design desc": {
+    "message": "Participate in co-design or level up on your design review skills.",
+    "description": "Copy for fourth square in contribute grid on explore"
+  },
+  "Code": {
+    "message": "Code",
+    "description": "Fifth square in contribute grid on explore"
+  },
+  "Code desc": {
+    "message": "File bugs, submit patches, or hack with our MakeAPI.",
+    "description": "Copy for fifth square in contribute grid on explore"
+  },
+  "Partner": {
+    "message": "Partner",
+    "description": "Sixth square in contribute grid on explore"
+  },
+  "Partner desc": {
+    "message": "Become a partner in our global Maker Party campaign, July to Sept 2014.",
+    "description": "Copy for sixth square in contribute grid on explore"
+  },
+  "Footer header": {
+    "message": "Not sure where to start?",
+    "description": "Header for bottom section of explore"
+  },
+  "Footer copy": {
+    "message": "Explore the competencies and see what teaching resources the Webmaker community has to offer.",
+    "description": "Copy for bottom section of explore"
   },
   "SidebarHeaderDesc": {
     "message": "Explore our teaching resources for each skill in the Web Literacy Map. Need more info? Here's our <a href=\"/{{lang}}/literacy\">documentation</a>.",

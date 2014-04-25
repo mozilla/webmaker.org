@@ -113,63 +113,78 @@
     }
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 16.2rem;
-    margin: 0 auto 4rem;
-    padding-top: 15.5rem;
+    background-size: 162px auto;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 15.1rem;
     max-width: 16.4rem;
-
-    @media screen and (min-width: @screen-sm) {
-      margin-bottom: 5rem;
-    }
 
     &.disabled {
       color: @lightgrey;
     }
 
-    &.appmaker {
-      background-position: 50% 3.5%;
-    }
-
-    &.popcorn-maker {
-      background-position: 50% 35%;
-    }
-
-    &.thimble {
-      background-position: 50% 67%;
-    }
-
     &.xray-goggles {
-      background-position: 50% 98.5%;
+      background-position: 50% -56.7rem;
+    }
+    &.thimble {
+      background-position: 50% -38.7rem;
+    }
+    &.popcorn-maker {
+      background-position: 50% -19.8rem;
+    }
+    &.appmaker {
+      background-position: 50% -1.9rem;
+    }
+
+    @media screen and (min-width: @screen-sm) {
+      background-size: 156px auto;
+      padding-top: 14.3rem;
+      &.xray-goggles {
+        background-position: 50% -53.9rem;
+      }
+      &.thimble {
+        background-position: 50% -36.7rem;
+      }
+      &.popcorn-maker {
+        background-position: 50% -19.1rem;
+      }
+      &.appmaker {
+        background-position: 50% -2.1rem;
+      }
     }
 
     @media screen and (min-width: @screen-md) {
+      background-size: 136px auto;
+      padding-top: 12.5rem;
       &.xray-goggles {
-        background-position: 50% 100%;
+        background-position: 50% -46.8rem;
       }
-
+      &.thimble {
+        background-position: 50% -31.8rem;
+      }
       &.popcorn-maker {
-        background-position: 50% 32%;
+        background-position: 50% -16.6rem;
       }
-
       &.appmaker {
-        background-position: 50% 0;
+        background-position: 50% -1.4rem;
       }
     }
 
     @media screen and (min-width: @screen-lg) {
-      margin-bottom: 4rem;
+      background-size: 162px auto;
+      padding-top: 14.9rem;
 
       &.xray-goggles {
-        background-position: 50% 98.5%;
+        background-position: 50% -55.9rem;
       }
-
+      &.thimble {
+        background-position: 50% -37.9rem;
+      }
       &.popcorn-maker {
-        background-position: 50% 35%;
+        background-position: 50% -19.8rem;
       }
-
       &.appmaker {
-        background-position: 50% 3.5%;
+        background-position: 50% -1.8rem;
       }
     }
   }

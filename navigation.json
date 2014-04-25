@@ -21,6 +21,12 @@
         "url": "tools"
       },
       {
+        "id": "badges",
+        "title": "Badges",
+        "url": "badges/webmaker-super-mentor",
+        "flag": "badges"
+      },
+      {
         "id": "search",
         "title": "Search",
         "url": "search"

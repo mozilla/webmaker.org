@@ -55,7 +55,9 @@
               <textarea class="form-control" name="evidence" placeholder="{{ gettext("BadgesIncludeLinks") }}" required></textarea>
             </div>
             <div class="form-inline">
-              <label for="claimcode">{{ gettext("HaveClaimCode") }}</label><a href="https://badges.mozilla.org" target="_blank">{{ gettext("Submit with a claim code here") }}</a><!--  <input class="form-control" name="claimcode" placeholder="Enter it here"> -->
+              <label for="claimcode">{{ gettext("HaveClaimCode") }}</label>
+              <a href="https://badgekit.org/help" target="_blank" class="icon-question-sign"></a>
+              <input class="form-control" name="claimcode" placeholder="e.g. 1234Z764HGZIHBHZ">
               <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
             </div>
           </form>

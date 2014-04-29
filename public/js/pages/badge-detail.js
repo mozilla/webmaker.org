@@ -5,7 +5,8 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var emitter = new EventEmitter();
 
     var $applyBtn = $('#apply-now');
-    var $closeBtn = $('#close-panel');
+    var $closeBtn = $('.js-close-panel');
+    var $issueBadgeBtn = $('#js-badge-issuing');
     var $applicationForm = $('#submit-badge-application');
     var $application = $('#application');
     var $error = $('#submit-badge-error');
@@ -14,6 +15,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $logoutOnly = $('.logout-only');
     var $applicationOn = $('.application-on');
     var $applicationOff = $('.application-off');
+    var $issueBadgeOn = $('.js-issue-badge-on');
 
     var slug = $application.attr('data-badge-slug');
 
@@ -41,8 +43,14 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       $applicationOff.addClass('hidden');
     });
 
+    emitter.on('js-issue-badge-on', function () {
+      $issueBadgeOn.removeClass('hidden');
+      $applicationOff.addClass('hidden');
+    });
+
     emitter.on('application-off', function () {
       $applicationOn.addClass('hidden');
+      $issueBadgeOn.addClass('hidden');
       $applicationOff.removeClass('hidden');
     });
 
@@ -77,6 +85,10 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     $closeBtn.on('click', function (e) {
       e.preventDefault();
       emitter.emitEvent('application-off');
+    });
+    $issueBadgeBtn.on('click', function (e) {
+      e.preventDefault();
+      emitter.emitEvent('js-issue-badge-on');
     });
 
     auth.verify();

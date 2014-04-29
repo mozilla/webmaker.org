@@ -53,6 +53,7 @@
     display: block;
   }
 
+  input.form-control,
   textarea.form-control {
     display: block;
     font-size: inherit;
@@ -179,6 +180,7 @@
       max-width: 700px;
       min-height: 80px;
     }
+    input { max-width: 700px; }
     .form-group, h2, h1 {
       margin: 0 0 @grid-gutter-width 0;
     }
@@ -241,7 +243,7 @@
   }
 
   // Close button
-  #close-panel {
+  .close-panel {
     background: none;
     float: right;
     color: fade(#FFF, 80%);

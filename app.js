@@ -353,6 +353,7 @@ app.get("/privacy-makes", routes.gallery({
 // Badges
 app.get("/badges/:badge?", routes.badges(env).details);
 app.post("/badges/:badge/apply", routes.badges(env).apply);
+app.post("/badges/:badge/issue", routes.badges(env).issue);
 
 app.get("/party", routes.page("party"));
 app.get("/tools", routes.page("tools"));

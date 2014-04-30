@@ -35,6 +35,7 @@
 
   <div class="container application-on hidden">
     <div class="login-only">
+
       <div id="submit-badge-success" class="panel panel-info panel-badges hidden">
         <div class="panel-body">
           <h2>{{ gettext("GotApplication") }}</h2>
@@ -46,8 +47,8 @@
         <div class="panel-body">
           <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>
           <h2>{{ gettext("Apply for this badge") }}</h2>
-          <div id="submit-badge-error" class="alert alert-danger hidden">
-            <p>{{ gettext("BadgesError") }}</p>
+          <div class="submit-badge-error alert alert-danger hidden">
+            <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
           </div>
           <form id="submit-badge-application">
             <div class="form-group">
@@ -68,17 +69,25 @@
 
   <div class="container js-issue-badge-on hidden">
     <div class="login-only">
-      <div id="" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}">
+
+      <div id="issue-badge-success" class="panel panel-info panel-badges hidden">
+        <div class="panel-body">
+          <h2>{{ gettext("Thanks") }}</h2>
+          <p>{{ gettext("IssuedBadgeSuccess") }}</p>
+        </div>
+      </div>
+
+      <div id="issue" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}">
         <div class="panel-body">
           <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>
           <h2>Issue this badge</h2>
-          <!-- <div id="submit-badge-error" class="alert alert-danger hidden">
-            <p>{{ gettext("BadgesError") }}</p>
-          </div> -->
-          <form id="">
+          <div class="submit-badge-error alert alert-danger hidden">
+            <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
+          </div>
+          <form id="issue-form">
             <div class="form-group">
-              <label for="username">Who are you issuing this badge to?</label>
-              <input class="form-control" name="username" placeholder="Email Address" required></input>
+              <label for="email">Who are you issuing this badge to?</label>
+              <input class="form-control" name="email" placeholder="Email Address" required></input>
             </div>
             <div class="form-group">
               <label for="comment">Add a comment</label>
@@ -97,8 +106,8 @@
     <h2>{{ gettext("Badge Requirements") }}
       <span class="application-off">
         <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">{{ gettext("Apply now") }}</button>
-        {% if isAdmin %}
-          <button id="js-badge-issuing" class="btn btn-lg btn-success pull-right">Issue Badge</button>
+        {% if canIssue %}
+          <button id="js-badge-issuing" class="btn btn-lg btn-success pull-right">{{ gettext("Issue Badge") }}</button>
         {% endif %}
         <button class="btn btn-lg btn-success pull-right logout-only hidden webmaker-login">{{ gettext("Login to apply") }}</button>
       </span>

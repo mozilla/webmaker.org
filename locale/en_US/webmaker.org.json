@@ -382,6 +382,8 @@
   "BadgesIssuedBy": "Issued by:",
   "GotApplication": "Thanks for submitting!",
   "ReplyToEmail": "We will let you know via email (<strong class=\"webmaker-email-placeholder\"></strong>) whether or not your application has been approved.",
+  "ClaimSuccess": "You've claimed a badge!",
+  "ClaimSuccessDetails": "Check your email (<strong class=\"webmaker-email-placeholder\"></strong>) for more information about the badge you've just earned.",
   "Apply for this badge": "Apply for this badge",
   "BadgesError": "Oops, looks like there was an error.",
   "BadgesEvidenceLabel": "What qualifies you to earn this badge?",

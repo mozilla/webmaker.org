@@ -89,15 +89,44 @@ module.exports = function (env) {
         }
         res.send(data);
       });
+    },
+    claim: function (req, res, next) {
+
+      var codeQuery = {
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.params.badge,
+        claimCode: req.body.claimcode
+      };
+
+      badgeClient.claimClaimCode(codeQuery, req.session.user.email, function (err, data) {
+        if (err) {
+          var errorString = err.message;
+          if (err.code === 404) {
+            errorString = 'The code "' + req.body.claimcode + '" could not be found';
+          }
+          return res.send(500, {
+            error: errorString
+          });
+        }
+
+        var instanceQuery = {
+          system: env.get('BADGES_SYSTEM'),
+          badge: req.params.badge,
+          email: req.session.user.email
+        };
+
+        badgeClient.createBadgeInstance(instanceQuery, function (err, data) {
+          if (err) {
+            var errorString = err.message;
+            return res.send(500, {
+              error: errorString
+            });
+          }
+
+          res.send(data);
+        });
+      });
     }
-    // Note: Claimcode is not implemented yet in badgekit-api
-    // claimcode: function (req, res, next) {
-    //   badgeClient.claimClaimCode({
-    //     system: 'webmaker-badges'
-    //   }, req.session.user.email, function(err, data) {
-    //     res.send(data);
-    //   });
-    // }
   };
 
 };

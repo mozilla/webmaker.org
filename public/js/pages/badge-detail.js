@@ -9,9 +9,12 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $issueBadgeBtn = $('#js-badge-issuing');
     var $applicationForm = $('#submit-badge-application');
     var $application = $('#application');
+    var $claimCodeInput = $applicationForm.find('[name="claimcode"]');
+    var $evidenceInput = $applicationForm.find('[name="evidence"]');
     var $error = $('.submit-badge-error');
     var $success = $('#submit-badge-success');
     var $successIssued = $('#issue-badge-success');
+    var $successClaimed = $('#claim-badge-success');
     var $loginOnly = $('.login-only');
     var $logoutOnly = $('.logout-only');
     var $applicationOn = $('.application-on');
@@ -25,6 +28,13 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     // An application was submitted successfully
     emitter.on('submit-application', function () {
       $success.removeClass('hidden');
+      $error.addClass('hidden');
+      $application.addClass('hidden');
+    });
+
+    // An claim code was claimed successfully
+    emitter.on('claim-successful', function () {
+      $successClaimed.removeClass('hidden');
       $error.addClass('hidden');
       $application.addClass('hidden');
     });
@@ -78,18 +88,43 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       $logoutOnly.removeClass('hidden');
     });
 
+    $claimCodeInput.on('change', function (e) {
+      if ($claimCodeInput.val().length) {
+        $evidenceInput.removeAttr('required');
+        $evidenceInput.attr('disabled', 'disabled');
+      } else {
+        $evidenceInput.attr('required', 'required');
+        $evidenceInput.removeAttr('disabled');
+      }
+    }).change();
+
     $applicationForm.on('submit', function (e) {
       e.preventDefault();
-      $.post('/badges/' + slug + '/apply', {
-        evidence: $applicationForm.find('[name="evidence"]').val(),
-        _csrf: $('meta[name="csrf-token"]').attr("content")
-      })
-        .done(function (data) {
-          emitter.emitEvent('submit-application');
+
+      var claimcode = $claimCodeInput.val();
+      if (claimcode.length) {
+        $.post('/badges/' + slug + '/claim', {
+          claimcode: claimcode,
+          _csrf: $('meta[name="csrf-token"]').attr('content')
         })
-        .fail(function (err) {
-          emitter.emitEvent('error', [err]);
-        });
+          .done(function (data) {
+            emitter.emitEvent('claim-successful');
+          })
+          .fail(function (err) {
+            emitter.emitEvent('error', [err]);
+          });
+      } else {
+        $.post('/badges/' + slug + '/apply', {
+          evidence: $evidenceInput.val(),
+          _csrf: $('meta[name="csrf-token"]').attr('content')
+        })
+          .done(function (data) {
+            emitter.emitEvent('submit-application');
+          })
+          .fail(function (err) {
+            emitter.emitEvent('error', [err]);
+          });
+      }
     });
 
     $issueForm.on('submit', function (e) {
@@ -97,7 +132,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       $.post('/badges/' + slug + '/issue', {
         email: $issueForm.find('[name="email"]').val(),
         comment: $issueForm.find('[name="comment""]').val(),
-        _csrf: $('meta[name="csrf-token"]').attr("content")
+        _csrf: $('meta[name="csrf-token"]').attr('content')
       })
         .done(function (data) {
           emitter.emitEvent('badge-issued');

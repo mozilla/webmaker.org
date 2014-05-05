@@ -43,6 +43,13 @@
         </div>
       </div>
 
+      <div id="claim-badge-success" class="panel panel-info panel-badges hidden">
+        <div class="panel-body">
+          <h2>{{ gettext("ClaimSuccess") }}</h2>
+          <p>{{ gettext("ClaimSuccessDetails") | safe }}</p>
+        </div>
+      </div>
+
       <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}">
         <div class="panel-body">
           <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>

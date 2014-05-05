@@ -9,6 +9,8 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $issueBadgeBtn = $('#js-badge-issuing');
     var $applicationForm = $('#submit-badge-application');
     var $application = $('#application');
+    var $claimCodeInput = $applicationForm.find('[name="claimcode"]');
+    var $evidenceInput = $applicationForm.find('[name="evidence"]');
     var $error = $('.submit-badge-error');
     var $success = $('#submit-badge-success');
     var $successIssued = $('#issue-badge-success');
@@ -86,14 +88,24 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       $logoutOnly.removeClass('hidden');
     });
 
+    $claimCodeInput.on('change', function (e) {
+      if ($claimCodeInput.val().length) {
+        $evidenceInput.removeAttr('required');
+        $evidenceInput.attr('disabled', 'disabled');
+      } else {
+        $evidenceInput.attr('required', 'required');
+        $evidenceInput.removeAttr('disabled');
+      }
+    }).change();
+
     $applicationForm.on('submit', function (e) {
       e.preventDefault();
 
-      var claimcode = $applicationForm.find('[name="claimcode"]').val();
+      var claimcode = $claimCodeInput.val();
       if (claimcode.length) {
         $.post('/badges/' + slug + '/claim', {
           claimcode: claimcode,
-          _csrf: $('meta[name="csrf-token"]').attr("content")
+          _csrf: $('meta[name="csrf-token"]').attr('content')
         })
           .done(function (data) {
             emitter.emitEvent('claim-successful');
@@ -103,8 +115,8 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
           });
       } else {
         $.post('/badges/' + slug + '/apply', {
-          evidence: $applicationForm.find('[name="evidence"]').val(),
-          _csrf: $('meta[name="csrf-token"]').attr("content")
+          evidence: $evidenceInput.val(),
+          _csrf: $('meta[name="csrf-token"]').attr('content')
         })
           .done(function (data) {
             emitter.emitEvent('submit-application');
@@ -120,7 +132,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       $.post('/badges/' + slug + '/issue', {
         email: $issueForm.find('[name="email"]').val(),
         comment: $issueForm.find('[name="comment""]').val(),
-        _csrf: $('meta[name="csrf-token"]').attr("content")
+        _csrf: $('meta[name="csrf-token"]').attr('content')
       })
         .done(function (data) {
           emitter.emitEvent('badge-issued');

@@ -95,7 +95,33 @@
     "title": "Events",
     "icon": "icon-map-marker",
     "defaultUrl": "{{EVENTS_URL}}",
-    "instantiate": true
+    "instantiate": true,
+    "pages": [
+      {
+        "id": "events-home",
+        "title": "Events Home",
+        "url": "{{EVENTS_URL}}",
+        "external": "true"
+      },
+      {
+        "id": "upcomingEvents",
+        "title": "Upcoming Events",
+        "url": "{{EVENTS_URL}}/#!/events",
+        "external": "true"
+      },
+      {
+        "id": "addEvent",
+        "title": "Add Event",
+        "url": "{{EVENTS_URL}}/#!/add",
+        "external": "true"
+      },
+      {
+        "id": "eventGuides",
+        "title": "Event Guides",
+        "url": "{{EVENTS_URL}}/#!/event-guides",
+        "external": "true"
+      }
+    ]
   },
   {
     "id": "info",

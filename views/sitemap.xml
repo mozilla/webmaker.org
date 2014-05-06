@@ -38,15 +38,6 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://webmaker.org/party</loc>
-      <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/party"/>
-    {% for locale in supportedLanguages %}
-      <xhtml:link rel="alternate" hreflang="{{locale}}" href="https://webmaker.org/{{locale}}/party"/>
-    {% endfor %}
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
     <loc>https://webmaker.org/privacy</loc>
       <xhtml:link rel="alternate" hreflang="en-US" href="https://webmaker.org/privacy"/>
     {% for locale in supportedLanguages %}

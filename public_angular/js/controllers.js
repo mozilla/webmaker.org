@@ -46,8 +46,14 @@ angular
   ])
   .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit',
     function ($scope, $location, $routeParams, $rootScope, weblit) {
+
+      // Start with collapsed state for navigation
       $scope.isCollapsed = true;
-      $scope.isSidebarCollapsed = true;
+      $scope.mobileTocCollapse = true;
+      $scope.collapseAll = function() {
+        $scope.isCollapsed = true;
+        $scope.mobileTocCollapse = true;
+      };
 
       $scope.isActive = function (tag) {
         if (tag[0] === '/') {
@@ -58,16 +64,6 @@ angular
 
       $scope.isUnselected = function () {
         return window.location.hash === '#/';
-      };
-
-      $scope.toggleSidebar = function () {
-        $scope.isCollapsed = true;
-        $scope.isSidebarCollapsed = !$scope.isSidebarCollapsed;
-      };
-
-      $scope.collapseAll = function () {
-        $scope.isCollapsed = true;
-        $scope.isSidebarCollapsed = true;
       };
 
       // Jump to top of viewport when new views load

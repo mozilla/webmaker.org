@@ -23,6 +23,33 @@ angular
       };
     }
   ])
+  .directive('wmAffix', ['$window', '$timeout',
+    function ($window, $timeout) {
+      return {
+        restrict: 'EA',
+        link: function (scope, el, attrs) {
+
+          var elHeight = attrs.offsetHeight;
+          var elTop = attrs.offsetTop;
+
+          $window.addEventListener('scroll', function() {
+            var scrollTop = $(this).scrollTop();
+            if (scrollTop >= elTop) {
+              $('body').css('padding-top', elHeight);
+              el.addClass('navbar-affix-top');
+              scope.affixed = true;
+              scope.$apply();
+            } else {
+              $('body').css('padding-top', 0);
+              el.removeClass('navbar-affix-top');
+              scope.affixed = false;
+              scope.$apply();
+            }
+          }, false);
+        }
+      };
+    }
+  ])
   .directive('retinaImage', ['$window',
     function ($window) {
       'use strict';

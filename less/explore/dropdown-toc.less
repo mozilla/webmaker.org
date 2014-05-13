@@ -1,0 +1,97 @@
+/*********************************************************
+* Dropdown Table of Contents
+*/
+
+.dropdown-menu {
+  background: lighten(#01527D, 5%);
+  border: none;
+  @media (min-width: @screen-sm-min) {
+    width: 45rem;
+  }
+}
+
+.dropdown-menu > li {
+  @media (min-width: @screen-sm-min) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.dropdown-menu>li>a {
+  color: white;
+  font-size: 13px;
+  padding: 8px 20px;
+
+  &:hover {
+    color: white;
+  }
+
+  &.color-0:hover {
+    background-color: @literacy-color-navigation;
+  }
+
+  &.color-1:hover {
+    background-color: @literacy-color-web-mechanics;
+  }
+
+  &.color-2:hover {
+    background-color: @literacy-color-search;
+  }
+
+  &.color-3:hover {
+    background-color: @literacy-color-credibility;
+  }
+
+  &.color-4:hover {
+    background-color: @literacy-color-security;
+  }
+
+  &.color-5:hover {
+    background-color: @literacy-color-composing;
+  }
+
+  &.color-6:hover {
+    background-color: @literacy-color-remixing;
+  }
+
+  &.color-7:hover {
+    background-color: @literacy-color-design-accessibility;
+  }
+
+  &.color-8:hover {
+    background-color: @literacy-color-coding-scripting;
+  }
+
+  &.color-9:hover {
+    background-color: @literacy-color-infrastructure;
+  }
+
+  &.color-10:hover {
+    background-color: @literacy-color-sharing;
+  }
+
+  &.color-11:hover {
+    background-color: @literacy-color-collaborating;
+  }
+
+  &.color-12:hover {
+    background-color: @literacy-color-community-participation;
+  }
+
+  &.color-13:hover {
+    background-color: @literacy-color-privacy;
+  }
+
+  &.color-14:hover {
+    background-color: @literacy-color-open-practices;
+  }
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+  background-color: #01527D;
+}
+
+.page-header.no-border {
+  border-bottom: none;
+}
+

@@ -1,4 +1,4 @@
-define(['jquery', 'webmaker-auth-client', 'analytics'], function ($, WebmakerAuthClient, analytics) {
+define(['jquery', 'webmaker-auth-client'], function ($, WebmakerAuthClient) {
   'use strict';
 
   var auth = new WebmakerAuthClient({
@@ -48,22 +48,6 @@ define(['jquery', 'webmaker-auth-client', 'analytics'], function ($, WebmakerAut
   });
 
   loginEl.click(auth.login);
-  loginEl.click(function () {
-    analytics.event('Webmaker Login Clicked');
-  });
-  logoutEl.click(function () {
-    analytics.event('Webmaker Logout Clicked');
-  });
-  auth.on('newuser', function () {
-    analytics.event('Webmaker New User Started');
-  });
-  auth.on('login', function (data, message) {
-    if (message === 'user created') {
-      analytics.event('Webmaker New User Created', {
-        nonInteraction: true
-      });
-    }
-  });
   logoutEl.click(auth.logout);
 
   return auth;

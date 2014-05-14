@@ -30,7 +30,7 @@ module.exports = function (env) {
         }
 
         // Can the current user issue this badge?
-        var canIssue = req.session.user && req.session.user.isAdmin || (req.session.user.isCollaborator && data.slug !== 'webmaker-super-mentor');
+        var canIssue = req.session.user && (req.session.user.isAdmin || (req.session.user.isCollaborator && data.slug !== 'webmaker-super-mentor'));
 
         res.render('badge-detail.html', {
           page: 'badges',

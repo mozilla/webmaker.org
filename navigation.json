@@ -21,9 +21,22 @@
         "url": "tools"
       },
       {
-        "id": "badges",
-        "title": "Badges",
+        "id": "badges-admin",
+        "title": "Badges Admin",
+        "url": "admin/badges",
+        "flag": "badges",
+        "adminOnly": "true"
+      },
+      {
+        "id": "webmaker-super-mentor",
+        "title": "Super Mentor Badge",
         "url": "badges/webmaker-super-mentor",
+        "flag": "badges"
+      },
+      {
+        "id": "hive-community-member",
+        "title": "Hive Community Badge",
+        "url": "badges/hive-community-member",
         "flag": "badges"
       },
       {

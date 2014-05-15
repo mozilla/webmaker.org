@@ -8,6 +8,70 @@ module.exports = function (env) {
   });
 
   return {
+    admin: function (req, res, next) {
+      badgeClient.getBadges({
+        system: env.get('BADGES_SYSTEM')
+      }, function (err, badges) {
+        if (err) {
+          return next(err);
+        }
+        res.render('badges-admin.html', {
+          page: 'badges-admin',
+          view: 'badges',
+          badges: badges
+        });
+      });
+    },
+    adminBadge: function (req, res, next) {
+      badgeClient.getBadgeInstances({
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.params.badge
+      }, function (err, instances) {
+
+        // Errors
+        if (err) {
+          return next(err);
+        }
+
+        // If there are no instances, we need to get the badge data.
+        else if (!instances || !instances.length) {
+          badgeClient.getBadge({
+            system: env.get('BADGES_SYSTEM'),
+            badge: req.params.badge
+          }, function (err, badge) {
+            res.render('badges-admin-badge.html', {
+              page: 'badges-admin',
+              view: 'badges',
+              instances: [],
+              badge: badge
+            });
+          });
+
+          // If there are instances
+        } else {
+          res.render('badges-admin-badge.html', {
+            page: 'badges-admin',
+            view: 'badges',
+            instances: instances,
+            badge: instances[0].badge
+          });
+        }
+
+      });
+    },
+    deleteInstance: function (req, res, next) {
+      badgeClient.deleteBadgeInstance({
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.params.badge,
+        email: req.params.email
+      }, function (err, result) {
+        if (err) {
+          console.log(err.stack);
+          return res.send(500, err.message);
+        }
+        res.send('DELETED');
+      });
+    },
     details: function (req, res, next) {
 
       badgeClient.getBadge({
@@ -17,7 +81,8 @@ module.exports = function (env) {
 
         if (err) {
           return res.render('badge-not-found.html', {
-            page: 'badges'
+            page: 'search',
+            view: 'badges'
           });
         }
 
@@ -33,7 +98,8 @@ module.exports = function (env) {
         var canIssue = req.session.user && (req.session.user.isAdmin || (req.session.user.isCollaborator && data.slug !== 'webmaker-super-mentor'));
 
         res.render('badge-detail.html', {
-          page: 'badges',
+          page: req.params.badge,
+          view: 'badges',
           badge: data,
           canIssue: canIssue
         });

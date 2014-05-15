@@ -25,6 +25,7 @@
       <ul data-section="{{section.id}}" class="navigation-list navigation-wrapper{% if section.id == currentSection %} active{% endif %}">
         {% for page in section.pages %}
         {% if not page.flag or flags[page.flag] %}
+        {% if not page.adminOnly or isAdmin %}
         <li{% if page.icon %} class="nav-item-with-icon"{% endif %}>
 
             <a
@@ -38,6 +39,7 @@
               {{gettext(page.title)}}
             </a>
         </li>
+        {% endif %}
         {% endif %}
         {% endfor %}
       </ul>

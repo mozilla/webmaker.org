@@ -262,6 +262,7 @@ app.use(function (req, res, next) {
     returnPath: req.param('page'),
     email: user ? user.email : '',
     username: user ? user.username : '',
+    isAdmin: user ? user.isAdmin : '',
     makerID: user ? user.id : '',
     csrf: req.csrfToken(),
     navigation: navigation,
@@ -349,6 +350,11 @@ app.get("/privacy-makes", routes.gallery({
   prefix: "privacy",
   limit: 20
 }));
+
+// Badges admin
+app.get("/admin/badges", middleware.checkAdmin, routes.badges(env).admin);
+app.get("/admin/badges/:badge", middleware.checkAdmin, routes.badges(env).adminBadge);
+app.delete("/badges/:badge/instance/email/:email", middleware.checkAdmin, routes.badges(env).deleteInstance);
 
 // Badges
 app.get("/badges/:badge?", routes.badges(env).details);

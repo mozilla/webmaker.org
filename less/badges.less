@@ -1,4 +1,4 @@
-#badges {
+.badges {
 
   /*********************************************************
   * Makerstrap shims
@@ -8,9 +8,25 @@
     .border-box;
   }
 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
   .hidden {
     display: none !important;
     visibility: hidden !important;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
   }
 
   .container {
@@ -34,7 +50,6 @@
   p {
     line-height: 1.8;
   }
-
   .panel {
     background-color: #FFF;
   }
@@ -44,6 +59,7 @@
   }
 
   .alert-danger {
+    color: white;
     background: @red;
     padding: 10px;
     margin-bottom: @grid-gutter-width;
@@ -60,7 +76,7 @@
     font-family: inherit;
     width: 100%;
     padding: 10px;
-    border: 1px solid #555;
+    border: 1px solid #CCC;
     &:focus {
       outline: none;
       border-color: @blue;
@@ -142,7 +158,7 @@
   }
 
   // Badge
-  #badge {
+  .badge {
     margin-bottom: @grid-gutter-width;
     text-align: center;
     img {
@@ -162,6 +178,47 @@
     }
   }
 
+  // Badges on admin home
+  .badge-row-admin {
+    &:first-of-type a {
+      border-top: 1px solid #DDD;
+    }
+    a {
+      .flex-display();
+      .align-items(center);
+      color: inherit;
+      border-bottom: 1px solid #DDD;
+      padding-top: (@grid-gutter-width / 2);
+      padding-bottom: (@grid-gutter-width / 2);
+      &:hover {
+        text-decoration: none;
+        color: @green;
+        img {
+          opacity: 1;
+        }
+      }
+    }
+    h3 {
+      font-weight: 200;
+    }
+    img {
+      width: 100%;
+      max-width: 10rem;
+      opacity: 0.8;
+    }
+  }
+
+  // Vertically center admin tables
+  .table.table-admin {
+    td,
+    th {
+      vertical-align: middle;
+    }
+    .btn {
+      padding: 10px 14px;
+    }
+  }
+
   // Panels
 
   .panel-navy {
@@ -172,6 +229,10 @@
     }
     h1, h2, h3, h4, label {
       font-weight: normal;
+    }
+    input.form-control,
+    textarea.form-control {
+      border-color: #555;
     }
   }
 

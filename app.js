@@ -23,7 +23,9 @@ var express = require("express"),
   WebmakerAuth = require("webmaker-auth"),
   navigation = require("./navigation"),
   rtltrForLess = require("rtltr-for-less"),
-  markdown = require("markdown").markdown;
+  markdown = require("markdown").markdown,
+  proxy = require("proxy-middleware"),
+  url = require("url");
 
 habitat.load();
 
@@ -117,6 +119,11 @@ if (env.get("ENABLE_GELF_LOGS")) {
   app.use(logger.middleware());
 } else {
   app.use(express.logger("dev"));
+}
+
+// Proxy to profile-2
+if (env.get('PROFILE_URL')) {
+  app.use('/user', proxy(url.parse(env.get('PROFILE_URL'))));
 }
 
 app.use(helmet.iexss());

@@ -42,16 +42,11 @@ angular.module('exploreApp', ['ngRoute', 'ui.bootstrap', 'exploreApp.services', 
       weblit.lang(CONFIG.lang);
       $rootScope.literacies = weblit.all();
 
-      // Set up Kits
+      // Set up content for competency pages
       $http
-        .get('data/kits.json')
+        .get('data/content.json')
         .success(function (data) {
-          $rootScope.kits = data;
-        });
-      $http
-        .get('data/mentors.json')
-        .success(function (data) {
-          $rootScope.mentors = data;
+          $rootScope.content = data;
         });
     }
   ]);

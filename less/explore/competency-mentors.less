@@ -1,0 +1,159 @@
+// Not currently being used
+
+// <div class="container">
+
+ //    <div class="peoples">
+ //      <h2 class="page-header">{{ 'Featured Mentors' | i18n }} <a href="/{{lang}}/mentor" class="btn btn-default pull-right">{{ 'Become a mentor' | i18n }}</a></h2>
+
+ //      <div class="row text-center">
+
+ //        <div ng-repeat="mentor in skillMentors" class="col-xs-4 col-sm-3">
+ //          <a class="mentor-container" href="https://{{mentor.username}}.makes.org" target="_blank">
+ //            <ex-avatar class="mentor">
+ //              <img class="laurel laurel-left" src="/img/explore/laurel-leaves-left.svg">
+ //              <img class="laurel laurel-right" src="/img/explore/laurel-leaves-right.svg">
+ //              <img ng-src="{{mentor.photo}}" alt="{{mentor.name}}" class="img-circle img-mentor-avatar">
+ //              <div ng-show="mentor.gif" class="mentor-gif" style="background-image:url({{mentor.gif}})"></div>
+ //            </ex-avatar>
+ //            <h3>{{ mentor.name }}</h3>
+ //            <p>@{{mentor.username}}</p>
+ //            <p><span class="text-muted">{{ mentor.bio }}</span></p>
+ //          </a>
+ //        </div>
+
+ //      </div>
+
+ //    </div>
+
+ //  </div>
+
+.mentor-container {
+  display: block;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  height: 400px;
+}
+
+.mentor-circle-btn {
+  display: block;
+  background: @brand-primary;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten(@brand-primary, 10%);
+    color: white;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin-left: -15px;
+    margin-top: -1.75em;
+  }
+
+  img {
+    visibility: hidden;
+  }
+}
+
+
+
+.mentor {
+  display: block;
+  position: relative;
+
+  .img-mentor-avatar {
+    width: 100%;
+    -webkit-transform: scale(0.9);
+    transition: all 150ms ease-in;
+  }
+  .laurel {
+    position: absolute;
+    top: -5px;
+    width: 60%;
+    transition: all 200ms ease-in;
+    opacity: 0;
+    z-index: 1;
+
+    &.laurel-left {
+      html[dir="ltr"] & {
+        left: 0;
+      }
+      html[dir="rtl"] & {
+        right: 0;
+      }
+      -webkit-transform: rotate(90deg);
+      -webkit-transform-origin: 100% 50%;
+    }
+    &.laurel-right {
+      html[dir="ltr"] & {
+        right: 0;
+      }
+      html[dir="rtl"] & {
+        left: 0;
+      }
+      -webkit-transform: rotate(-90deg);
+      -webkit-transform-origin: 0 50%;
+    }
+  }
+
+  .mentor-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 200%;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .laurel {
+      -webkit-transform: rotate(0);
+      opacity: 1;
+    }
+    html[dir="ltr"] & {
+      .laurel-left {
+        left: -15px;
+      }
+      .laurel-right {
+        right: -15px;
+      }
+    }
+    html[dir="rtl"] & {
+      .laurel-left {
+        right: -15px;
+      }
+      .laurel-right {
+        left: -15px;
+      }
+    }
+    .img-mentor-avatar {
+      -webkit-transform: scale(1);
+    }
+    .mentor-gif {
+      opacity: 1;
+    }
+  }
+
+  margin-bottom: 20px;
+}

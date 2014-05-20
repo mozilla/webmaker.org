@@ -12,7 +12,7 @@
     "jquery": "2.0.3",
     "jquery-ui": "1.10.3",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.21",
-    "makerstrap": "0.1.7",
+    "makerstrap": "0.1.8",
     "masonry": "3.1.5",
     "moment": "2.2.1",
     "nav-global": "https://github.com/mozilla/nav-global/archive/v0.1.4.tar.gz",

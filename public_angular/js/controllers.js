@@ -82,13 +82,7 @@ angular
       return item.tag === $scope.tag;
     })[0];
 
-    $scope.kits = $rootScope.kits[$scope.tag];
-
-    $scope.skillMentors = $rootScope.mentors.filter(function (mentor) {
-      return mentor.competencies.filter(function (competency) {
-        return competency === $scope.tag;
-      }).length
-    });
+    $scope.content = $rootScope.content[$scope.tag];
 
     $scope.wlcPoints = CONFIG.wlcPoints;
 

@@ -1,66 +1,159 @@
-<div class="jumbotron" style="background: {{ skill.color }}">
-  <div class="container">
-    <h1>{{ skill.term }}</h1>
-    <p>{{ skill.description }}</p>
+<div class="competency-page">
+  <div class="jumbotron" style="background: {{ skill.color }}">
+    <div class="container">
+      <h1>{{ skill.term }}</h1>
+      <p>{{ skill.description }}</p>
+    </div>
   </div>
-</div>
-
-<div>
 
   <div class="container">
 
-    <h2 class="page-header">{{ 'Skills' | i18n }}</h2>
-    <ul class="list list-web-literacy-points">
-      <li ng-repeat="point in wlcPoints[skill.tag]">{{point | i18n }}</li>
-    </ul>
+    <div class="row">
+      <div class="col-sm-8">
+        <p class="lead">{{ content.intro }}</p>
+      </div>
 
-    <h2 class="page-header">{{ 'Featured Teaching Resources' | i18n }} <a href="/{{lang}}/search?type=tags&q={{skill.tag}}" class="pull-right btn btn-default">{{ 'More Resources' | i18n }}</a></h2>
+      <div class="col-sm-4">
+        <h3>{{ 'Skills' | i18n }}</h3>
+        <ul class="list list-checkmarks">
+          <li ng-repeat="point in wlcPoints[skill.tag]">{{ point | i18n }}</li>
+        </ul>
+      </div>
+    </div>
 
-    <div ng-hide="kits.length" class="well well-create-kit text-center">
-      <button class="btn btn-default btn-create-kit"><span class="fa fa-plus"></span></button>
-      <p class="text-muted" ng-bind-html="'noStaffPick' | i18n"></p>
+    <div class="well well-grey">
+      <h3>{{ 'Help us find great community content' | i18n }} <a href="#" class="btn btn-lg btn-success pull-right">
+          <span class="fa fa-plus"></span> {{ 'Suggest a resource' | i18n }}
+        </a></h3>
     </div>
 
     <div class="row">
-      <div ng-repeat="kit in kits" class="col-sm-6 col-lg-4">
-        <a target="_blank" class="thumbnail thumbnail-staff-pick" href="{{kit.url}}">
-          <div class="caption">
-            <h3>{{ kit.title }}</h3>
-            <p class="text-muted">{{ 'By' | i18n }} {{ kit.author }}</p>
-          </div>
-        </a>
+      <div class="col-sm-2">
+        <aside class="fixed-toc" scroll-sidebar offset="80">
+          <h4>{{ 'Jump to' | i18n }}</h4>
+          <ul>
+            <li>
+              <a href="#discover-section" scroll-to>
+                <span class="fa-stack">
+                  <span class="fa fa-circle fa-stack-2x text-lightgrey"></span>
+                  <span class="fa fa-random fa-stack-1x text-secondary"></span>
+                </span> {{ 'Discover' | i18n }}
+              </a>
+            </li>
+            <li>
+              <a href="#make-section" scroll-to>
+                <span class="fa-stack">
+                  <span class="fa fa-circle fa-stack-2x text-lightgrey"></span>
+                  <span class="fa fa-hand-o-up fa-stack-1x text-secondary"></span>
+                </span> {{ 'Make' | i18n }}</li>
+              </a>
+            <li>
+              <a href="#teach-section" scroll-to>
+                <span class="fa-stack">
+                  <span class="fa fa-circle fa-stack-2x text-lightgrey"></span>
+                  <span class="fa fa-book fa-stack-1x text-secondary"></span>
+                </span> {{ 'Teach' | i18n }}</li>
+              </a>
+          </ul>
+        </aside>
       </div>
-    </div>
+      <div class="col-sm-10 main-competency">
+          <h2 class="header-section">
+            <a class="section-anchor" id="discover-section"></a>
+            <span class="fa fa-random"></span> {{ 'Discover' | i18n }}
+          </h2>
 
-  </div>
+          <ul ng-repeat="item in content.discover" class="list list-subway list-subway-{{skill.tag}}" style="color:{{skill.color}};">
+            <li>
+              <div>
+                <h2 ng-bind-html="item.title"></h2>
+                <p ng-bind-html="item.description"></p>
+              </div>
+            </li>
+            <li ng-repeat="link in item.links">
+              <div>
+                <p ng-bind-html="link"></p>
+              </div>
+            </li>
+          </ul>
 
-  <div class="container">
+          <h2 class="header-section">
+            <a class="section-anchor" id="make-section"></a>
+            <span class="fa fa-hand-o-up"></span> {{ 'Make' | i18n }}
+          </h2>
 
-    <div class="peoples">
-      <h2 class="page-header">{{ 'Featured Mentors' | i18n }} <a href="/{{lang}}/mentor" class="btn btn-default pull-right">{{ 'Become a mentor' | i18n }}</a></h2>
+          <ul ng-repeat="item in content.make" class="list list-subway list-subway-{{skill.tag}}" style="color:{{skill.color}};">
+            <li>
+              <div>
+                <h2 ng-bind-html="item.title"></h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p ng-bind-html="item.description"></p>
+              </div>
+            </li>
+          </ul>
 
-      <div class="row text-center">
+          <h2 class="header-section">
+            <a class="section-anchor" id="teach-section"></a>
+            <span class="fa fa-book"></span> {{ 'Teach' | i18n }}
+          </h2>
 
-        <div ng-repeat="mentor in skillMentors" class="col-xs-4 col-sm-3">
-          <a class="mentor-container" href="https://{{mentor.username}}.makes.org" target="_blank">
-            <ex-avatar class="mentor">
-              <span class="mentor-overlay">&nbsp;</span>
-              <img class="laurel laurel-left" src="/img/explore/laurel-leaves-left.svg">
-              <img class="laurel laurel-right" src="/img/explore/laurel-leaves-right.svg">
-              <img ng-src="{{mentor.photo}}" alt="{{mentor.name}}" class="img-circle img-mentor-avatar">
-              <div ng-show="mentor.gif" class="mentor-gif" style="background-image:url({{mentor.gif}})"></div>
-            </ex-avatar>
-            <h3>{{ mentor.name }}</h3>
-            <p>@{{mentor.username}}</p>
-            <p><span class="text-muted">{{ mentor.bio }}</span></p>
-          </a>
+          <h4 class="header-divider">{{ 'Featured Teaching Resources' | i18n }}</h4>
+
+          <div ng-hide="content.teach.kits.length" class="well well-create-kit text-center">
+            <button class="btn btn-default btn-create-kit"><span class="fa fa-plus"></span></button>
+            <p class="text-muted" ng-bind-html="'noStaffPick' | i18n"></p>
+          </div>
+
+          <div class="row">
+            <div ng-repeat="kit in content.teach.kits" class="col-sm-6 col-lg-4">
+              <a target="_blank" class="thumbnail thumbnail-staff-pick thumbnail-{{kit.type}}" href="{{kit.url}}">
+                <div class="caption">
+                  <h3>{{ kit.title }}</h3>
+                  <p class="text-muted">{{ 'By' | i18n }} {{ kit.author }}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <h4 class="header-divider">{{ 'More Resources' | i18n }}</h4>
+
+          <ul ng-repeat="item in content.teach.more" class="list list-subway list-subway-{{skill.tag}}" style="color:{{skill.color}};">
+            <li>
+              <div>
+                <h2 ng-bind-html="item.title"></h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p ng-bind-html="item.description"></p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="row ctas">
+            <div class="col-sm-4" ng-repeat="cta in content.ctas">
+              <h3 class="text-primary" ng-bind-html="cta.title"></h3>
+              <p ng-bind-html="cta.description"></p>
+              <p><a href="cta.link" class="btn btn-success">{{ 'Learn more' | i18n }}</a></p>
+            </div>
+          </div>
         </div>
 
       </div>
-
     </div>
-
   </div>
 
+  <footer class="footer-competency" style="background-color: {{skill.color}}">
+    <div class="container">
+      <div class="col-sm-10 col-sm-offset-2">
+        <h4>{{ 'You might also like' | i18n }}</h4>
 
+        <h1><span class="fa fa-lock"></span> Security</h1>
+        <p class="lead">Learn how to keep systems, identities and content safe</p>
+      </div>
+    </div>
+  </footer>
 </div>

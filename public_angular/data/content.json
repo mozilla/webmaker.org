@@ -1,0 +1,375 @@
+{
+  "weblit-Navigation": {
+    "teach": [
+      {
+        "title": "Firefox is Free - a lesson on web browsers",
+        "description": "",
+        "url": "https://mozilla.makes.org/thimble/firefox-is-free-learn-about-your-web-browser",
+        "author": "mozilla"
+      }
+    ]
+  },
+  "weblit-WebMechanics": {
+    "teach": [
+      {
+        "title": "The Markup Mixer",
+        "description": "",
+        "url": "https://thomaspark.makes.org/thimble/markup-mixer",
+        "author": "Thomas Park"
+      },
+      {
+        "title": "Xray Goggles teaching kit",
+        "description": "Help people learn basic concepts of HTML, CSS and the Open Web by through tinkering and remixing real web pages",
+        "url": "https://mozteach.makes.org/thimble/xray-goggles-teaching-kit",
+        "author": "mozteach"
+      },
+      {
+        "title": "Ways of the Web teaching kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/ways-of-the-web-teaching-kit",
+        "author": "mozteach"
+      }
+    ]
+  },
+  "weblit-Search": {
+    "teach": [
+      {
+        "title": "SEO Battle",
+        "description": "",
+        "url": "https://mousemeredith.makes.org/thimble/seo-battle",
+        "author": "Mouse NYC"
+      },
+      {
+        "title": "Remixathon: Wonders of the Web",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/remixathon-cultural-heritage",
+        "author": "mozteach"
+      }
+    ]
+  },
+  "weblit-Credibility": {
+    "intro": "Can we believe everything we see on the web? The internet contains a confounding mix of facts, opinions, advertising, hidden agendas and pranks. Sharpening your BS detector helps you identify credible content on the web, and reminds you to approach certain web sites with a healthy dose of skepticism.",
+    "discover": [
+      {
+        "title": "Crap Detection 101",
+        "description": "Howard Rheingold offers some fantastic ideas on how to separate accurate information from inaccurate information, misinformation and disinformation.",
+        "links": [
+          "Check out <a href=\"http://rheingold.com/2013/crap-detection-mini-course\"> Howard's Crap Detection mini-course",
+          "Read Howard's <a href=\"http://blog.sfgate.com/rheingold/2009/06/30/crap-detection-101/\">Crap Detection 101 blog post</a>"
+        ]
+      },
+      {
+        "title": "The &ldquo;CRAP Test&rdquo;",
+        "links": [
+          "This <a href=\"http://loex2008collaborate.pbworks.com/w/page/18686701/The%20CRAP%20Test\">quick and easy evaluation process</a> helps you analyze the legitimacy of a web pages by considering its Currency, Reliability, Authority and Point of View."
+        ]
+      },
+      {
+        "title": "Internet Detective",
+        "links": [
+          "<a href=\"http://www.vtstutorials.ac.uk/detective/questions.html\">Decide whether a site is legitimate</a> by learning to look for clues and evidence."
+        ]
+      },
+      {
+        "title": "Journalist's Toolbox",
+        "links": [
+          "<a href=\"http://www.journaliststoolbox.org/archive/urban-legends-hoaxes-and-scams\">Detect urban legends, hoaxes and scams</a> with this comprehensive toolbox used by journalists for myth-busting, fact-checking and more. "
+        ]
+      }
+    ],
+    "make": [
+      {
+        "title": "Punk a friend",
+        "description": "Remix your buddy's social media profile, news article, or their favorite web site and give them a funny surprise with <a href=\"https://mozteach.makes.org/thimble/xray-goggles-teaching-kit\">XRay Goggles </a>"
+      },
+      {
+        "title": "NewsJack remix",
+        "description": "<a href='http://newsjack.in'>Remix a news web page</a> by changing the ads, altering headlines, and exploring the visual and linguistic cues that signal credibility"
+      }
+    ],
+    "teach": {
+      "kits": [
+        {
+          "title": "Remixathon: Wonders of the Web",
+          "description": "",
+          "url": "https://mozteach.makes.org/thimble/remixathon-cultural-heritage",
+          "author": "mozteach",
+          "type": "activity"
+        },
+        {
+          "title": "Create your evil twin",
+          "description": "Teach people to Use HTML and CSS, to create a profile page for their Evil Twin.",
+          "url": "https://mozteach.makes.org/thimble/evil-twin-the-opposite-of-me",
+          "author": "mozteach",
+          "type": "kit"
+        },
+        {
+          "title": "Create your evil twin",
+          "description": "Teach people to Use HTML and CSS, to create a profile page for their Evil Twin.",
+          "url": "https://mozteach.makes.org/thimble/evil-twin-the-opposite-of-me",
+          "author": "mozteach",
+          "type": "kit"
+        }
+      ],
+      "more": [
+        {
+          "title": "Common Sense Media teaching plan",
+          "description": "A <a href='http://www.commonsensemedia.org/educators/lesson/rating-websites-3-5'>set of resources</a> made by Common Sense Media to guide students through the process of evaluating good sources of information on the web"
+        },
+        {
+          "title": "Digital Disruption Toolkit",
+          "description": "<a href='http://www.digitaldisruption.co.uk/teaching-tools'>Tools and lesson plans</a> designed to improve your student’s ability to critically evaluate information they encounter online"
+        }
+      ]
+    },
+    "ctas": [
+      {
+        "title": "Become a mentor",
+        "description": "Help others become web savvy, level up their critical thinking online, and get the most from the web"
+      },
+      {
+        "title": "Get free training from Mozilla",
+        "description": "Learn how to teach credibility, privacy, and other essential skills for web literacy"
+      },
+      {
+        "title": "Share a resource for teaching credibility skills",
+        "description": "Add links, activities or curricula you've had success with in your own work"
+      }
+    ]
+  },
+  "weblit-Security": {
+    "teach": [
+      {
+        "title": "Privacy and Security Teaching Kit",
+        "description": "",
+        "url": "https://laura.makes.org/thimble/privacy-and-security-teaching-kit",
+        "author": "Laura Hilliger"
+      }
+    ]
+  },
+  "weblit-Composing": {
+    "teach": [
+      {
+        "title": "Making Stop Motion Movies",
+        "description": "",
+        "url": "https://nwp.makes.org/thimble/making-stop-motion-movies",
+        "author": "NWP"
+      },
+      {
+        "title": "Online Storytelling Teaching Kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/online-storytelling-teaching-kit ",
+        "author": "mozteach"
+      },
+      {
+        "title": "How to Use Thimble Teaching Kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/thimble-teaching-kit",
+        "author": "mozteach"
+      },
+      {
+        "title": "How to Use Popcorn Teaching Kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/popcorn-teaching-kit",
+        "author": "mozteach"
+      },
+      {
+        "title": "Evil Twin Activity",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/evil-twin-the-opposite-of-me",
+        "author": "mozteach"
+      }
+    ]
+  },
+  "weblit-Remix": {
+    "teach": [
+      {
+        "title": "Revolutions in Media Storycamp Kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/revolutions-in-media-teaching-kit",
+        "author": "mozteach"
+      },
+      {
+        "title": "Make a Meme Hacktivity",
+        "description": "",
+        "url": "https://ccantrill.makes.org/thimble/make-a-meme-hacktivity",
+        "author": "Christina Cantrill"
+      },
+      {
+        "title": "Cultural Heritage Remixjam",
+        "description": "",
+        "url": "https://keyboardkat.makes.org/thimble/cultural-remixjam",
+        "author": "Kat Braybrooke"
+      },
+      {
+        "title": "Busting Media Stereotypes",
+        "description": "",
+        "url": "https://techkim.makes.org/thimble/busting-media-stereotypes",
+        "author": "techkim"
+      },
+      {
+        "title": "Online Storytelling Teaching Kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/online-storytelling-teaching-kit ",
+        "author": "mozteach"
+      }
+    ]
+  },
+  "weblit-DesignAccessibility": {
+    "teach": [
+      {
+        "title": "How to Make an Animated Music Video",
+        "description": "",
+        "url": "https://popcorn.webmaker.org/editor/60433/remix",
+        "author": "Max Capacity"
+      },
+      {
+        "title": "Designing for the Web: Planning a Page",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/designing-for-the-web-planning",
+        "author": "mozteach"
+      },
+      {
+        "title": "A Beginner's Guide to Game-Making Teaching Kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/a-beginners-guide-to-game-making",
+        "author": "mozteach"
+      },
+      {
+        "title": "Radio Rookies: How to Report Your Own Story",
+        "description": "",
+        "url": "https://radiorookies.makes.org/thimble/diy-toolkit-how-to-report-your-own-story",
+        "author": "radiorookies"
+      }
+    ]
+  },
+  "weblit-CodingScripting": {
+    "teach": [
+      {
+        "title": "Minecraft: A Flavor of Java",
+        "description": "",
+        "url": "https://epik.makes.org/thimble/minecraft-a-flavor-of-java-epik ",
+        "author": "Epik"
+      },
+      {
+        "title": "Intro to HTML, CSS & Javascript",
+        "description": "",
+        "url": "https://techkim.makes.org/thimble/intro-to-html-css-javascript",
+        "author": "techkim"
+      },
+      {
+        "title": "Coding With the NY Times",
+        "description": "",
+        "url": "https://nwp.makes.org/thimble/coding-with-the-new-york-times",
+        "author": "National Writing Project"
+      }
+    ]
+  },
+  "weblit-Infrastructure": {
+    "teach": [
+      {
+        "title": "How to extract tables from PDF files with Tabula",
+        "description": "",
+        "url": "https://manuelaristaran.makes.org/thimble/extract-tables-from-pdf-files-with-tabula",
+        "author": "manuelaristaran"
+      }
+    ]
+  },
+  "weblit-Sharing": {
+    "teach": []
+  },
+  "weblit-Collaborating": {
+    "teach": [
+      {
+        "title": "Make it! Share it! Teaching Kit",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/make-it-share-it-teaching-kit",
+        "author": "laura"
+      },
+      {
+        "title": "Localize it: Street Level Journalism",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/localize-it-street-level-journalism",
+        "author": "mozteach"
+      }
+    ]
+  },
+  "weblit-Community": {
+    "teach": [
+      {
+        "title": "Make. Hack. Play.",
+        "description": "A teaching kit on collaborative practices for NWP",
+        "url": "https://laura.makes.org/thimble/agenda-for-make-hack-play-at-nwpam",
+        "author": "laura"
+      },
+      {
+        "title": "Girls in Tech teaching kit",
+        "description": "",
+        "url": "https://stephguthrie.makes.org/thimble/girls-in-tech-teaching-kit",
+        "author": "stephguthrie"
+      },
+      {
+        "title": "Train the Trainer India: Teaching Kit",
+        "description": "",
+        "url": "https://michelle.makes.org/thimble/train-the-trainer-india-teaching-kit",
+        "author": "michelle"
+      }
+    ]
+  },
+  "weblit-Privacy": {
+    "teach": [
+      {
+        "title": "Evil Twin Activity",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/evil-twin-the-opposite-of-me",
+        "author": "mozteach"
+      },
+      {
+        "title": "XRay Goggles Gallery Walk",
+        "description": "",
+        "url": "https://patrickwade.makes.org/thimble/xray-goggles-gallery-walk-",
+        "author": "Patrick Wade"
+      },
+      {
+        "title": "Our Privacy Matters!",
+        "description": "",
+        "url": "https://patrickwade.makes.org/thimble/privacy-and-remix-workshop-teaching-kit",
+        "author": "Patrick Wade"
+      },
+      {
+        "title": "Privacy and Security Teaching Kit ",
+        "description": "",
+        "url": "https://laura.makes.org/thimble/privacy-and-security-teaching-kit",
+        "author": "laura"
+      },
+      {
+        "title": "How to make a gif-remix for Data Privacy Day",
+        "description": "",
+        "url": "https://popcorn.webmaker.org/editor/65799/remix",
+        "author": "keyboardkat"
+      }
+    ]
+  },
+  "weblit-OpenPractices": {
+    "teach": [
+      {
+        "title": "Open Data Day Activity",
+        "description": "",
+        "url": "https://tiptoes.makes.org/thimble/open-data-day",
+        "author": "Emma Irwin"
+      },
+      {
+        "title": "The Open Webville Disco",
+        "description": "",
+        "url": "https://thimble.webmaker.org/project/5483/remix",
+        "author": "Chloe Varelidi"
+      },
+      {
+        "title": "Remix-a-thon / Save the Open Web",
+        "description": "",
+        "url": "https://mozteach.makes.org/thimble/remixathon-save-the-open-web",
+        "author": "mozteach"
+      }
+    ]
+  }
+}

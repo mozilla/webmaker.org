@@ -162,5 +162,29 @@
   "Main menu": {
     "message": "Main menu",
     "description": "On mobile nav"
+  },
+  "Help us find great community content": {
+    "message": "Help us find great community content",
+    "description": "Submit a teaching resource"
+  },
+  "Discover": {
+    "message": "Discover",
+    "description": "Section in competency pages"
+  },
+  "Learn more": {
+    "message": "Learn more",
+    "description": "Heading for calls to action: Learn more ...about becoming a mentor, etc."
+  },
+  "You might also like": {
+    "message": "You might also like",
+    "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
+  },
+  "Jump to": {
+    "message": "Jump to",
+    "description": "Heading for sidebar: Jump to... Discover, Make, Teach"
+  },
+  "Suggest a resource": {
+    "message": "Suggest a resource",
+    "description": "Submit a teaching resource"
   }
 }

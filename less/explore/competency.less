@@ -1,0 +1,205 @@
+
+/*********************************************************
+* Competency pages
+*/
+
+.competency-page {
+  line-height: 1.8;
+  font-size: 1.6rem;
+  h3 {
+    font-size: 2.4rem;
+    font-weight: 200;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #999;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 0.5em;
+    letter-spacing: 0.05em;
+  }
+
+  .lead {
+    margin-top: 1em;
+    font-size: 1.8em;
+  }
+  .header-section {
+    position: relative;
+    margin-bottom: 40px;
+    font-weight: 200;
+    color: #999;
+    font-size: 4.5rem;
+    .fa {
+      background: @lightgrey;
+      color: @brand-secondary;
+      border-radius: 50%;
+      padding: 30px;
+      font-size: 0.6em;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+  .header-divider {
+    margin: 20px 0;
+    text-align: center;
+    border-bottom: 0;
+    white-space: nowrap;
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 100px;
+      background: #CCC;
+      vertical-align: middle;
+    }
+    &:before {
+      margin-right: 10px;
+    }
+    &:after {
+      margin-left: 10px;
+    }
+  }
+  .main-competency {
+    padding-bottom: 80px;
+  }
+  .ctas {
+    padding: 40px 0;
+  }
+}
+
+
+.fixed-toc {
+  font-size: 1.8rem;
+  ul {
+    .list-unstyled;
+    li > {
+      margin-bottom: 0.5em;
+    }
+
+  }
+}
+
+// Section anchors - allows for $anchorScroll to work with an offset
+.section-anchor {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  top: -65px;
+}
+
+
+.list.list-subway {
+  padding-left: 40px;
+  font-size: 1.8rem;
+  > li {
+    color: inherit;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    border-left: 5px solid;
+    // Needed for resetting text colour
+    > div {
+      color: #555;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    &:first-child:before {
+      border-width: 16px;
+    }
+    &:before {
+      content: '';
+      width: 31px;
+      height: 31px;
+      padding: 0;
+      border-radius: 50%;
+      right: auto;
+      left: -3px;
+      color: inherit;
+      border: 2px solid;
+      background: white;
+    }
+    &:last-child {
+      border-color: transparent;
+    }
+  }
+
+}
+
+.btn-create-kit {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 2rem;
+  padding: 0;
+  margin-bottom: 15px;
+  border: 1px dashed #999;
+  color: #999;
+}
+
+.well-create-kit,
+.well-grey {
+  box-shadow: none;
+  border: none;
+  background: @lightgrey;
+  color: #999;
+  padding: 40px;
+  margin: 30px 0;
+  h1, h2, h3 {
+    margin: 0;
+  }
+  .btn {
+    margin-top: -5px;
+  }
+}
+
+
+// The skills for each competency
+// This is copied from badges
+.list.list-checkmarks {
+  line-height: 1.6;
+  background: #F5F5F5;
+  list-style: none;
+  padding: @grid-gutter-width;
+  border-top: 1px solid darken(#F5F5F5, 5%);
+  border-bottom: 1px solid darken(#F5F5F5, 5%);
+  > li {
+    padding-left: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:before {
+      content: '\f00c';
+      color: @green;
+      position: absolute;
+      left: 0;
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      *margin-right: .3em; // fixes ie7 issues
+    }
+  }
+}
+
+footer.footer-competency {
+  color: white;
+  padding: 20px 20px 80px;
+  h1 {
+    font-weight: 200;
+    margin: 20px 0;
+  }
+  h4 {
+    color: white;
+    border: none;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+

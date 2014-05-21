@@ -21,7 +21,7 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
 
     moment.lang(localized.langToMomentJSLang(lang));
 
-    nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader("/views", true));
+    nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader("/templates", true));
 
     // Making a custom filter to use it for the client-side l10n
     // Using this filter will help reduce the number of adding

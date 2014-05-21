@@ -15,7 +15,7 @@ requirejs.config({
     'selectize': "/bower_components/selectize/dist/js/standalone/selectize.min",
     'uri': '/js/lib/uri',
     'tabzilla': 'https://mozorg.cdn.mozilla.net/tabzilla/tabzilla',
-    'nunjucks': '/bower_components/nunjucks/browser/nunjucks-dev',
+    'nunjucks': '/bower_components/nunjucks/browser/nunjucks',
     'makeapi': '/bower_components/makeapi-client/src/make-api',
     'localized': '/bower_components/webmaker-i18n/localized',
     'languages': '/bower_components/webmaker-language-picker/js/languages',

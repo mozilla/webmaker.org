@@ -10,4 +10,4 @@ locale/
 !locale/en_US/*
 !locale/localeinfo.json
 public/css/*
-public_angular/compiled/
+public/compiled/

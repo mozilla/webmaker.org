@@ -13,7 +13,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
       options.gutterSize = options.gutterSize || '.gutter-sizer';
       options.hiddenClass = options.hiddenClass || 'gallery-hide';
       options.makeView = options.makeView || 'make-teach.html';
-      options.makeUrl = options.makeUrl || $('body').data('endpoint') || 'https://makeapi.webmaker.org';
+      options.makeUrl = options.makeUrl || $('meta[name="make-endpoint"]').attr('content') || 'https://makeapi.webmaker.org';
       options.defaultSearch = options.defaultSearch || 'webmaker:recommended';
 
       var banner = document.querySelector(options.banner),
@@ -51,7 +51,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
       // Nunjucks
       // Todo - nunjucks middleware
       var makeView = 'make-templates/' + options.makeView;
-      nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader('/views', true));
+      nunjucks.env = new nunjucks.Environment(new nunjucks.WebLoader('/templates', true));
 
       // Making a custom filter to use it for the client-side l10n
       // Using this filter will help reduce the number of adding

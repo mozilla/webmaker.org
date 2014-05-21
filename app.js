@@ -247,7 +247,7 @@ i18n.addLocaleObject({
 app.use(express.csrf());
 
 app.locals({
-  makeEndpoint: env.get("MAKE_ENDPOINT"),
+  makeEndpoint: env.get("MAKE_ENDPOINT_READONLY") || env.get("MAKE_ENDPOINT"),
   newrelic: newrelic,
   personaSSO: env.get("AUDIENCE"),
   loginAPI: env.get("LOGIN"),
@@ -258,7 +258,7 @@ app.locals({
   EVENTS_URL: env.get("EVENTS_URL"),
   flags: env.get("FLAGS") || {},
   personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org"),
-  bower_path: "bower_components"
+  bower_path: "../bower_components"
 });
 
 app.use(function (req, res, next) {
@@ -279,14 +279,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-// Angular
-if (env.get('FLAGS_EXPLORE')) {
-  app.use('/explore', express.static(path.join(__dirname, 'public_angular')));
-}
-
 // Nunjucks
 // This just uses nunjucks-dev for now -- middleware to handle compiling templates in progress
-app.use("/views", express.static(path.join(__dirname, "views")));
+app.use("/templates", express.static(path.join(__dirname, "views")));
 
 //adding Content Security Policy (CSP) to webmaker.org
 app.use(middleware.addCSP());
@@ -333,6 +328,12 @@ app.get("/", routes.gallery({
   prefix: "frontpage",
   limit: 10
 }));
+
+// Angular
+if (env.get('FLAGS_EXPLORE')) {
+  app.get('/explore', routes.angular);
+  app.get('/resources/:section/:competency?', routes.angular);
+}
 
 app.get("/gallery", routes.gallery({
   layout: "index",

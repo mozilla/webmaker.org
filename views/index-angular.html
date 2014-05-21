@@ -1,0 +1,134 @@
+{% raw %}
+<!doctype html>
+
+<html lang="{{lang}}" dir="{{direction}}" ng-app="webmakerApp">
+  <head>
+    <!-- All paths relative to the root -->
+    <base href="/{{lang}}">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title ng-bind-html="'Explore' | i18n"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- We have to do this to make sure we display the page when localization has been loaded. -->
+    <style>
+      html, body {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- Note: this file is rendered with Less middleware can be found at /less/explore/main.less -->
+    <link rel="stylesheet" ng-href="/css/explore/main.{{direction}}.css">
+</head>
+<body>
+
+  <div ng-controller="createUserController"></div>
+
+  <div class="wrapper" ng-controller="navigationController">
+    <header class="explore-nav">
+      <nav class="navbar navbar-default navbar-webmaker">
+        <div class="container">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="fa fa-bars fa-lg"></span>
+            </button>
+
+            <a href="{{baseUrl}}" class="logo webmaker-logo"><img src="https://webmaker.org/img/logo.png"></a>
+          </div>
+
+          <div class="navbar-collapse" collapse="true">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown" ng-cloak ng-show="_user.email">
+                <a class="navbar-user-info dropdown-toggle">
+                  <img class="user-info-avatar" ng-src="{{_user.avatar}}"> {{ 'Hi' | i18n }} <strong>{{_user.username}}</strong> <span class="label label-primary" ng-show="_user.isAdmin">admin</span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/me" target="_blank"><span class="fa fa-th-large"></span> {{ 'My makes' | i18n }}</a></li>
+                  <li><a href="{{accountSettingsUrl}}" target="_blank"><span class="fa fa-cog"></span> {{ 'My Settings' | i18n }}</a></li>
+                  <li class="divider"></li>
+                  <li><a ng-click="logout()"><span class="fa fa-sign-out"></span> {{ 'Sign out' | i18n }}</a></li>
+                </ul>
+              </li>
+              <li>
+                <button ng-cloak ng-show="!_user.email" class="btn btn-primary btn-sm navbar-btn" ng-click="login()">{{'Sign in' | i18n }}</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-inverse navbar-no-header-xs">
+        <div class="container">
+          <div class="navbar-collapse" collapse="isCollapsed">
+            <ul class="nav navbar-nav">
+              <li class="active nav-icon"><a href="{{baseUrl}}"><span class="fa fa-random"></span> {{ 'Explore' | i18n }}</a></li>
+              <li class="nav-icon" ><a href="{{baseUrl}}resources"><span class="fa fa-hand-o-up"></span> {{ 'Make' | i18n }}</a></li>
+              <li class="nav-icon"><a href="{{baseUrl}}teach"><span class="fa fa-book"></span> {{ 'Teach' | i18n }}</a></li>
+              <li class="nav-icon"><a href="{{baseUrl}}events"><span class="fa fa-map-marker"></span> {{ 'Events' | i18n }}</a></li>
+              <li class="nav-icon"><a href="{{baseUrl}}about"><span class="fa fa-info"></span> {{ 'Info' | i18n }}</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-no-header-xs navbar-tertiary" wm-affix data-offset-top="150" data-offset-height="60">
+        <div class="container">
+          <div class="navbar-collapse" collapse="isCollapsed">
+            <ul class="nav navbar-nav">
+              <li ng-show="affixed" class="nav-icon nav-title active">
+                <a href="{{baseUrl}}explore"><span class="fa fa-random"></span> {{ 'Explore' | i18n }}</a>
+              </li>
+              <li class="dropdown dropdown-toc hidden-xs">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ 'Web Literacies' | i18n }}<span class="caret"></span></a>
+                <ul class="explore-dropdown-menu dropdown-menu">
+                  <li
+                    ng-repeat="skill in literacies"
+                    class="literacy"
+                    ng-class="{ active : isActive(skill.tag) }">
+                    <a href="{{baseUrl}}resources/web-literacy/{{ skill.tag }}" ng-click="collapseAll()" class="color-{{$index}}">{{ skill.term }}</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="{{baseUrl}}teach-templates">{{test}}{{ 'Teaching templates' | i18n }}</a>
+              </li>
+              <li>
+                <a href="{{baseUrl}}literacy">{{ 'Web Literacy Map' | i18n }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-skills-nav visible-xs">
+            <ul class="nav navbar-nav">
+              <li><a href="#" ng-click="mobileTocCollapse = !mobileTocCollapse">{{ 'Web Literacies' | i18n }} <span class="caret"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav" collapse="mobileTocCollapse">
+
+              <li
+                ng-repeat="skill in literacies"
+                class="literacy"
+                ng-class="{ active : isActive(skill.tag) }" >
+                <a href="{{baseUrl}}resources/web-literacy/{{ skill.tag }}" ng-click="collapseAll()" style="background-color: {{skill.color}};">{{ skill.term }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="main">
+      <div class="explore-main" ng-view=""></div>
+    </section>
+
+  </div>
+  {% endraw %}
+  {# From here on, everything is rendered with nunjucks #}
+  <script src="/{{ localeInfo.lang }}/angular-config.js"></script>
+  <script src="https://login.persona.org/include.js"></script>
+  <script src="compiled/dependencies.min.js"></script>
+  <script src="compiled/app.min.js"></script>
+
+</body>
+</html>

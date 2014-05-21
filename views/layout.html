@@ -22,7 +22,7 @@
   <script src="/js/lib/error-track.js" async></script>
 </head>
 
-<body id="{{ page }}" {% if view %}class="{{ view }}"{% endif %} data-endpoint="{{ makeEndpoint }}">
+<body id="{{ page }}" {% if view %}class="{{ view }}"{% endif %}>
 
 <div id="browser-warning">
   <p>{{ gettext("browserUpgradeWarning") | safe }}</p>

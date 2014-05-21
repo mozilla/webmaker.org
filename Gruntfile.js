@@ -76,15 +76,16 @@ module.exports = function (grunt) {
     uglify: {
       dependencies: {
         options: {
-          sourceMap: true
+          sourceMap: true,
+          beautify: true,
+          mangle: false
         },
         files: {
-          'public_angular/compiled/dependencies.min.js': [
+          'public/compiled/dependencies.min.js': [
             'bower_components/jquery/jquery.js',
             'bower_components/web-literacy-client/dist/web-literacy-client.with-langs.js',
             'bower_components/makeapi-client/src/make-api.js',
             'bower_components/webmaker-auth-client/dist/webmaker-auth-client.min.js',
-            'bower_components/masonry/dist/masonry.pkgd.js',
 
             'bower_components/angular/angular.js',
             'bower_components/angular-bootstrap/ui-bootstrap.js',
@@ -97,17 +98,19 @@ module.exports = function (grunt) {
       },
       app: {
         options: {
-          sourceMap: true
+          sourceMap: true,
+          beautify: true,
+          mangle: false
         },
         files: {
-          'public_angular/compiled/app.min.js': ['public_angular/js/**/*.js']
+          'public/compiled/app.min.js': ['public/js/angular/**/*.js']
         },
       },
     },
 
     watch: {
       angular: {
-        files: ['public_angular/js/**/*.js'],
+        files: ['public/js/angular/**/*.js'],
         tasks: ['uglify'],
         options: {
           spawn: false
@@ -156,7 +159,7 @@ module.exports = function (grunt) {
   // For building angular js
   grunt.registerTask('build', ['uglify']);
 
-  grunt.registerTask('dev', ['express', 'watch']);
+  grunt.registerTask('dev', ['uglify', 'express', 'watch']);
 
   // Clean & verify code (Run before commit)
   grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'imagemin']);

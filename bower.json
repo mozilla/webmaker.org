@@ -16,7 +16,7 @@
     "masonry": "3.1.5",
     "moment": "2.2.1",
     "nav-global": "https://github.com/mozilla/nav-global/archive/v0.1.4.tar.gz",
-    "nunjucks": "0.1.10",
+    "nunjucks": "1.0.5",
     "persona-btn": "~0.0.12",
     "requirejs": "2.1.8",
     "text": "2.0.9",

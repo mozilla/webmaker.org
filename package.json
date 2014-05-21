@@ -32,7 +32,7 @@
     "mysql": "2.0.x",
     "newrelic": "1.5.5",
     "noxmox": "0.2.x",
-    "nunjucks": "0.1.10",
+    "nunjucks": "1.0.5",
     "proxy-middleware": "0.5.0",
     "rtltr-for-less": "0.0.6",
     "sequelize": "1.7.0-rc1",

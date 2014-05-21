@@ -3,7 +3,10 @@
     "module": true,
     "define": true,
     "requirejs": true,
-    "require": true
+    "require": true,
+    "console": true,
+    "$": true,
+    "angular": true
   },
   "bitwise": true,
   "curly": true,

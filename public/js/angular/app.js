@@ -10,7 +10,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: 'views/resources-home.html',
           controller: 'resourcesHomeController'
         })
-        .when('/:locale?/resources/web-literacy/:id', {
+        .when('/:locale?/resource/literacy/:id', {
           templateUrl: 'views/competency.html',
           controller: 'competencyController'
         })

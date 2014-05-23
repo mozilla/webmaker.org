@@ -1,4 +1,11 @@
 module.exports = function (grunt) {
+  require('time-grunt')(grunt);
+  require('jit-grunt')(grunt, {
+    shell: 'grunt-shell-spawn',
+    express: 'grunt-express-server',
+    gettext_finder: 'grunt-gettext-finder'
+  });
+
   // Node and client side JS have slightly different JSHint directives
   // We'll create 2 versions with .jshintrc as a baseline
   var browserJSHint = grunt.file.readJSON('.jshintrc');
@@ -111,7 +118,7 @@ module.exports = function (grunt) {
     watch: {
       angular: {
         files: ['public/js/angular/**/*.js'],
-        tasks: ['uglify'],
+        tasks: ['uglify:app'],
         options: {
           spawn: false
         }
@@ -145,16 +152,6 @@ module.exports = function (grunt) {
       }
     }
   });
-
-  grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-express-server');
-  grunt.loadNpmTasks('grunt-gettext-finder');
-  grunt.loadNpmTasks('grunt-jsbeautifier');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // For building angular js
   grunt.registerTask('build', ['uglify']);

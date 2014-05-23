@@ -21,11 +21,44 @@
       </div>
     </div>
 
-    <div class="well well-grey">
-      <h3>{{ 'Help us find great community content' | i18n }} <a href="#" class="btn btn-lg btn-success pull-right">
+  <div ng-controller="resourceFormController">
+
+    <div ng-hide="clickedResource" class="well well-grey">
+      <h3>{{ 'Help us find great community content' | i18n }}
+      <span ng-show="_user.email">
+        <a href="#" ng-click="clickedResource = !clickedResource" class="btn btn-lg btn-success pull-right">
           <span class="fa fa-plus"></span> {{ 'Suggest a resource' | i18n }}
-        </a></h3>
+        </a>
+      </span>
+      <span ng-show="!_user.email">
+        <button ng-cloak ng-show="!_user.email" class="btn btn-lg btn-success pull-right" ng-click="login()">{{ 'Login to submit a resource' | i18n }}</button>
+      </span>
+      </h3>
     </div>
+
+    <div ng-show="clickedResource" class="panel panel-navy">
+      <div class="panel-body">
+        <a href="#" ng-click="clickedResource = !clickedResource; success = false"><i class="fa fa-times close-panel"></i></a>
+        <h2 bind-unsafe-html="'Suggest a resource for' | i18n"></h2>
+        <form role="form" name="resourceForm">
+          <div class="form-group">
+            <label for="link">{{ 'Link:' | i18n }}</label>
+            <input type="text" class="form-control" ng-model="formData.link" placeholder="https://website.com/my-resource" required>
+          </div>
+          <div class="form-group">
+            <label for="language">{{ 'What language is your resource link?' | i18n }}</label>
+            <input type="text" class="form-control" ng-model="formData.language" placeholder="e.g. Spanish" required>
+          </div>
+          <button ng-hide="success" name="submit" ng-disabled="!resourceForm.$valid" class="btn btn-primary btn-lg pull-right" ng-click="submit(resourceForm)">{{ 'Submit' | i18n }}</button>
+        </form>
+        <div class="alert alert-success text-center" ng-show="success">
+          <span class="fa fa-check"></span>
+          <span bind-unsafe-html="'success resource banner' | i18n"></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
     <div class="row">
       <div class="col-sm-2">

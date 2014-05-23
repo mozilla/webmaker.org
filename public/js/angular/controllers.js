@@ -11,6 +11,7 @@ angular
         $scope.mobileTocCollapse = true;
       };
 
+      $scope.clickedResource = false;
       $scope.literacies = weblit.all();
 
       $scope.isActive = function (tag) {
@@ -85,6 +86,30 @@ angular
           $scope.makes = data;
         });
 
+    }
+  ])
+  .controller('resourceFormController', ['$scope', '$http', '$timeout',
+    function ($scope, $http, $timeout) {
+      $scope.formData = {};
+      $scope.submit = function (form) {
+
+        var data = $scope.formData;
+        data.username = $scope._user.username;
+        data.email = $scope._user.email;
+        data.webliteracy = $scope.skill.term;
+
+        $http
+          .post('/api/submit-resource', data)
+          .success(function (ok) {
+            if (ok) {
+              $scope.success = true;
+              $scope.formData = {};
+            }
+          })
+          .error(function (err) {
+            console.log(err);
+          });
+      };
     }
   ])
   .controller('resourcesHomeController', ['$scope',

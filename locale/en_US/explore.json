@@ -175,6 +175,30 @@
     "message": "Learn more",
     "description": "Heading for calls to action: Learn more ...about becoming a mentor, etc."
   },
+  "Login to submit a resource": {
+    "message": "Login to submit a resource",
+    "description": "A button Login to submit a resource."
+  },
+  "Suggest a resource for": {
+    "message": "Suggest a resource for {{ skill.term }}",
+    "description": "Title for suggesting resource form"
+  },
+  "Link:": {
+    "message": "Link:",
+    "description": "Label form for Link submission"
+  },
+  "What language is your resource link?": {
+    "message": "What language is your resource link?",
+    "description": "Label for language name for resource link"
+  },
+  "Submit": {
+    "message": "Submit",
+    "description": "Submit button"
+  },
+  "success resource banner": {
+    "message": "<strong>Thank you!</strong> We have received your suggested resource.",
+    "description": "Banner for form success submission."
+  },
   "You might also like": {
     "message": "You might also like",
     "description": "Heading for related competencies section, You might also like... Security, Coding, etc."

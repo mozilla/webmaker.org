@@ -19,6 +19,7 @@
     "csv": "0.3.x",
     "express": "3.4.5",
     "habitat": "0.4.1",
+    "hatchet": "0.1.0",
     "helmet": "0.1.2",
     "hood": "0.2.1",
     "knox": "0.8.x",

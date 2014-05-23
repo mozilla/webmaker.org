@@ -1,6 +1,7 @@
 module.exports = {
   api: {
-    healthcheck: require("./api/healthcheck")
+    healthcheck: require("./api/healthcheck"),
+    submitResource: require("./api/submitResource")
   },
   angular: require("./angular"),
   badges: require("./badges"),

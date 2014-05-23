@@ -366,6 +366,8 @@ app.post("/badges/:badge/apply", routes.badges(env).apply);
 app.post("/badges/:badge/claim", routes.badges(env).claim);
 app.post("/badges/:badge/issue", routes.badges(env).issue);
 
+app.post("/api/submit-resource", routes.api.submitResource);
+
 app.get("/tools", routes.page("tools"));
 app.get("/make-your-own", routes.page("make-your-own"));
 app.get("/mentor", routes.page("mentor"));

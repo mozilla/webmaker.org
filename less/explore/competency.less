@@ -196,4 +196,50 @@ footer.footer-competency {
   }
 }
 
+.panel-navy {
+  margin-top: 31px;
+  background: @navy;
+  color: #FFF;
+  h2 {
+    font-size: 2.2em;
+    margin-top: 0;
+  }
+  h1, h2, h3, h4, label {
+    font-weight: normal;
+  }
+  input.form-control {
+    &:focus {
+      outline: none;
+      border-color: @blue;
+    }
+  }
+}
+
+.panel-body {
+  padding: 40px;
+  font-size: 1.8rem;
+  .form-group {
+    padding: 5px;
+  }
+}
+
+// Close button
+.close-panel {
+  background: none;
+  float: right;
+  color: fade(#FFF, 80%);
+  margin-top: -20px;
+  margin-right: -20px;
+  &:hover {
+    color: #FFF;
+  }
+}
+
+input#language {
+  width: 50%;
+}
+
+.panel-body label {
+  padding: 5px 0;
+}
 

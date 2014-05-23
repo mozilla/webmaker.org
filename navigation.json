@@ -55,21 +55,21 @@
       {
         "id": "popcorn",
         "icon": "popcorn-icon",
-        "title": "Multimedia with Popcorn",
+        "title": "Popcorn Maker",
         "url": "https://popcorn.webmaker.org/{{localeInfo.lang}}",
         "external": "true"
       },
       {
         "id": "thimble",
         "icon": "thimble-icon",
-        "title": "Webpages with Thimble",
+        "title": "Thimble",
         "url": "https://thimble.webmaker.org/{{localeInfo.lang}}",
         "external": "true"
       },
       {
         "id": "xray",
         "icon": "xray-icon",
-        "title": "Remixes with X-Ray Goggles",
+        "title": "X-Ray Goggles",
         "url": "https://goggles.webmaker.org/{{localeInfo.lang}}",
         "external": "true"
       }

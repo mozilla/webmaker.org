@@ -371,7 +371,7 @@ app.post("/badges/:badge/claim", routes.badges(env).claim);
 app.post("/badges/:badge/issue", routes.badges(env).issue);
 
 app.get("/tools", routes.page("tools"));
-app.get("/teach-templates", routes.page("teach-templates"));
+app.get("/make-your-own", routes.page("make-your-own"));
 app.get("/mentor", routes.page("mentor"));
 app.get("/getinvolved", routes.page("getinvolved"));
 app.get("/search", routes.search);

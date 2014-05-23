@@ -38,6 +38,11 @@ module.exports = function (app) {
       "/kit-prototypes"
     ]
   }, {
+    route: "/make-your-own",
+    paths: [
+      "/teach-templates"
+    ]
+  }, {
     route: "/getinvolved",
     paths: [
       "/build",
@@ -70,7 +75,7 @@ module.exports = function (app) {
     paths: [
       "/community"
     ]
-  }, {
+  },{
     route: "/resources",
     paths: [
       "/starter-makes"

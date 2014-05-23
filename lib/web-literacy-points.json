@@ -15,10 +15,7 @@
     "StandardExploringSearchPoint1",
     "StandardExploringSearchPoint2",
     "StandardExploringSearchPoint3",
-    "StandardExploringSearchPoint4",
-    "StandardExploringSecurityPoint1",
-    "StandardExploringSecurityPoint2",
-    "StandardExploringSecurityPoint3"
+    "StandardExploringSearchPoint4"
   ],
   "weblit-Credibility": [
     "StandardExploringCredibilityPoint1",
@@ -74,12 +71,9 @@
     "StandardConnectingSharingPoint6"
   ],
   "weblit-Collaborating": [
-    "StandardConnectingCommunityPoint1",
-    "StandardConnectingCommunityPoint2",
-    "StandardConnectingCommunityPoint3",
-    "StandardConnectingCommunityPoint4",
-    "StandardConnectingCommunityPoint5",
-    "StandardConnectingCommunityPoint6"
+    "StandardConnectingCollaboratingPoint1",
+    "StandardConnectingCollaboratingPoint2",
+    "StandardConnectingCollaboratingPoint3"
   ],
   "weblit-Community": [
     "StandardConnectingCommunityPoint1",

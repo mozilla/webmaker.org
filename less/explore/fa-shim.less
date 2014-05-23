@@ -1,0 +1,31 @@
+// Variables
+// -------------
+
+@fa-chevron-right: "\f054";
+@fa-random: "\f074";
+@fa-hand-o-up: "\f0a6";
+@fa-book: "\f02d";
+@fa-suitcase: "\f0f2";
+@fa-th: "\f00a";
+@fa-file-text-o: "\f0f6";
+@fa-check: "\f00c";
+
+
+// Mixins
+// ------
+
+// I actually dk if these are included in fa 4 anymore but they're *incredibly*
+// useful so we may want to move them back into mixins when we upgrade
+
+.icon(@icon) {
+  .icon-FontAwesome();
+  content: @icon;
+}
+
+.icon-FontAwesome() {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+}

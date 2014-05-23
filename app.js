@@ -31,11 +31,9 @@ habitat.load();
 
 var app = express(),
   env = new habitat(),
-  nunjucksEnv = new nunjucks.Environment([
-    new nunjucks.FileSystemLoader(path.join(__dirname, 'views')),
-    new nunjucks.FileSystemLoader(path.join(__dirname, 'bower_components'))
-  ], {
-    autoescape: true
+  nunjucksEnv = nunjucks.configure([path.join(__dirname, '/views'), path.join(__dirname, '/bower_components')], {
+    autoescape: true,
+    watch: false
   }),
   NODE_ENV = env.get("NODE_ENV"),
   WWW_ROOT = path.resolve(__dirname, "public"),
@@ -44,8 +42,7 @@ var app = express(),
   logger;
 
 nunjucksEnv.addFilter("instantiate", function (input) {
-  var tmpl = new nunjucks.Template(input);
-  return tmpl.render(this.getVariables());
+  return nunjucks.renderString(input, this.getVariables());
 });
 
 // `localVar` filter accepting two parameters
@@ -55,8 +52,7 @@ nunjucksEnv.addFilter("instantiate", function (input) {
 // tmpl.render(localVar) will try to render it with the available variable from the
 // `localVar` object and return something like `My name is Ali`
 nunjucksEnv.addFilter("localVar", function (input, localVar) {
-  var tmpl = new nunjucks.Template(input);
-  return tmpl.render(localVar);
+  return nunjucks.renderString(input, localVar);
 });
 
 // Make the client-side gettext possible!!

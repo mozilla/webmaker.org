@@ -117,7 +117,7 @@ module.exports = function (grunt) {
         }
       },
       node: {
-        files: ['routes/**/*.js', 'lib/**/*.js', 'app.js', 'less/**/*', 'locale/**/*.json'],
+        files: ['routes/**/*.js', 'lib/**/*.js', 'app.js', 'less/**/*', 'locale/**/*.json', 'views/**/*.html'],
         tasks: ['express:dev'],
         options: {
           spawn: false

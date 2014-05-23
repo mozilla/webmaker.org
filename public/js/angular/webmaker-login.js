@@ -91,6 +91,7 @@ angular
         };
 
         $scope.cancel = function () {
+          webmakerLoginService.analytics.webmakerNewUserCancelled();
           $modalInstance.dismiss('cancel');
         };
       };

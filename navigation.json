@@ -16,11 +16,6 @@
         "url": "gallery"
       },
       {
-        "id": "tools",
-        "title": "Tools",
-        "url": "tools"
-      },
-      {
         "id": "badges-admin",
         "title": "Badges Admin",
         "url": "admin/badges",
@@ -47,15 +42,15 @@
     ]
   },
   {
-    "id": "make",
-    "title": "Make",
+    "id": "tools",
+    "title": "Tools",
     "icon": "icon-hand-up",
-    "defaultUrl": "resources",
+    "defaultUrl": "tools",
     "pages": [
       {
-        "id": "starterMakes",
-        "title": "Resources",
-        "url": "resources"
+        "id": "tools",
+        "title": "Tools",
+        "url": "tools"
       },
       {
         "id": "popcorn",

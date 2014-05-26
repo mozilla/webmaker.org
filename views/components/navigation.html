@@ -5,10 +5,14 @@
   <nav id="navigation-primary" class="navigation-container">
       <ul class="navigation-list navigation-wrapper">
         {% for section in navigation %}
+        {% if not section.flag or flags[section.flag] %}
+        {% if not section.exclude or (section.exclude and not flags[section.exclude]) %}
           <li><a href="{% if section.instantiate %}{{section.defaultUrl | instantiate}}{% else %}/{{localeInfo.lang}}/{{section.defaultUrl}}{% endif %}"
           {% if section.id == currentSection %}class="active"{% endif %} data-section="{{section.id}}">
             <span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a>
           </li>
+        {% endif %}
+        {% endif %}
         {% endfor %}
         <li><a href="#" class="navigation-more"><span class="icon-reorder"></span></a></li>
         <li>
@@ -22,6 +26,8 @@
 
   <nav id="navigation-secondary" class="navigation-container">
     {% for section in navigation %}
+    {% if not section.flag or flags[section.flag] %}
+    {% if not section.exclude or (section.exclude and not flags[section.exclude]) %}
       <ul data-section="{{section.id}}" class="navigation-list navigation-wrapper{% if section.id == currentSection %} active{% endif %}">
         {% for page in section.pages %}
         {% if not page.flag or flags[page.flag] %}
@@ -43,12 +49,16 @@
         {% endif %}
         {% endfor %}
       </ul>
+    {% endif %}
+    {% endif %}
     {% endfor %}
   </nav>
 
   <nav id="expanded-navigation">
     <div class="navigation-wrapper">
     {% for section in navigation %}
+    {% if not section.flag or flags[section.flag] %}
+    {% if not section.exclude or (section.exclude and not flags[section.exclude]) %}
       <ul class="navigation-list">
         <li><a><span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a></li>
         {% if section%}{% for page in section.pages %}
@@ -59,6 +69,8 @@
           </li>
         {% endfor %}{% endif %}
       </ul>
+    {% endif %}
+    {% endif %}
     {% endfor %}
     </div>
   </nav>

@@ -328,7 +328,13 @@ app.get("/", routes.gallery({
 // Angular
 if (env.get('FLAGS_EXPLORE')) {
   app.get('/explore', routes.angular);
-  app.get('/resources/:section/:competency?', routes.angular);
+  app.get('/resources/:section?/:competency?', routes.angular);
+} else {
+  app.get("/resources", routes.gallery({
+    layout: "starterMakes",
+    prefix: "template",
+    limit: 20
+  }));
 }
 
 app.get("/gallery", routes.gallery({
@@ -344,11 +350,7 @@ app.get("/teach", routes.gallery({
   layout: "teach",
   prefix: "teach"
 }));
-app.get("/resources", routes.gallery({
-  layout: "starterMakes",
-  prefix: "template",
-  limit: 20
-}));
+
 app.get("/privacy-makes", routes.gallery({
   layout: "privacy-makes",
   prefix: "privacy",

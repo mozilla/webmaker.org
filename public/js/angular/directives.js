@@ -40,6 +40,17 @@ angular
       }
     };
   })
+  .directive('externalLink', function () {
+    // Prevent default on all elements that have ngClick defined
+    return {
+      restrict: 'A',
+      link: function (scope, el, attrs) {
+        if (attrs.externalLink) {
+          el.attr('target', '_blank');
+        }
+      }
+    };
+  })
   .directive('scrollTo', ['$anchorScroll', '$location',
     function ($anchorScroll, $location) {
       return {

@@ -1,7 +1,92 @@
 angular
   .module('webmakerApp')
-  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit',
-    function ($scope, $location, $routeParams, $rootScope, weblit) {
+  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', '$location', 'weblit',
+    function ($scope, $location, $routeParams, $rootScope, $location, weblit) {
+
+      // Nav data
+      $scope.nav = {
+        sections: [
+          {
+            id: 'explore',
+            url: 'explore',
+            title: 'Explore',
+            icon: 'random',
+            pages: [
+              {
+                "id": "index",
+                "title": "Gallery",
+                "url": "gallery"
+              },
+              {
+                id: 'super-mentor',
+                title: 'Super Mentor Badge',
+                url: 'badges/webmaker-super-mentor',
+                external: true
+              },
+              {
+                id: 'super-mentor',
+                title: 'Hive Community Badge',
+                url: 'badges/hive-community-member',
+                external: true
+              },
+              {
+                id: 'badges-admin',
+                title: 'Badges Admin',
+                url: 'admin/badges',
+                external: true,
+                adminOnly: true
+              },
+              {
+                id: 'search',
+                title: 'Search',
+                url: 'search',
+                external: true
+              }
+            ]
+          },
+          {
+            id: 'tools',
+            url: 'tools',
+            title: 'Tools',
+            icon: 'hand-o-up',
+            external: true
+          },
+          {
+            id: 'resources',
+            url: 'resources',
+            title: 'Resources',
+            icon: 'book',
+            pages: [
+              {
+                id: 'make-our-own',
+                title: 'Make Your Own',
+                url: 'make-your-own',
+                external: true
+              },
+              {
+                id: 'literacy',
+                title: 'Web Literacy Map',
+                url: 'literacy',
+                external: true
+              }
+            ]
+          },
+          {
+            id: 'events',
+            url: 'events',
+            title: 'Events',
+            icon: 'map-marker',
+            external: true
+          },
+          {
+            id: 'info',
+            url: 'about',
+            title: 'Info',
+            icon: 'info',
+            external: true
+          }
+        ]
+      };
 
       // Start with collapsed state for navigation
       $scope.isCollapsed = true;
@@ -16,20 +101,14 @@ angular
       $scope.weblit = weblit;
 
       $scope.isActive = function (tag) {
-        if (tag[0] === '/') {
-          return tag === $location.path();
-        }
         return tag === $routeParams.id;
       };
 
-      $scope.isUnselected = function () {
-        return window.location.hash === '#/';
+      $scope.isActiveSection = function (section) {
+        var path = $location.path() + '/';
+        var match = path.match('/' + section + '/');
+        return match && match.length;
       };
-
-      // Jump to top of viewport when new views load
-      $rootScope.$on('$locationChangeSuccess', function (event) {
-        window.scrollTo(0, 0);
-      });
 
     }
   ])

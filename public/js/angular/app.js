@@ -6,7 +6,11 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: 'views/explore.html',
           controller: 'exploreController'
         })
-        .when('/:locale?/resources/home', {
+        .when('/resources', {
+          templateUrl: 'views/resources-home.html',
+          controller: 'resourcesHomeController'
+        })
+        .when('/:locale/resources', {
           templateUrl: 'views/resources-home.html',
           controller: 'resourcesHomeController'
         })
@@ -15,7 +19,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'competencyController'
         })
         .otherwise({
-          redirectTo: '/resources/home'
+          redirectTo: '/resources'
         });
 
       // html5mode
@@ -54,7 +58,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         }
       });
 
-      // Set up content for competency pages
+      // Set up content for competency
       $http
         .get('data/content.json')
         .success(function (data) {

@@ -1,0 +1,96 @@
+<nav class="navbar navbar-default navbar-webmaker">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="fa fa-bars fa-lg"></span>
+      </button>
+
+      <a href="{{baseUrl}}" external-link="true" class="logo webmaker-logo"><img src="https://webmaker.org/img/logo.png"></a>
+    </div>
+
+    <div class="navbar-collapse" collapse="true">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" ng-cloak ng-show="_user.email">
+          <a class="navbar-user-info dropdown-toggle">
+          <img class="user-info-avatar" ng-src="{{_user.avatar}}"> {{ 'Hi' | i18n }} <strong>{{_user.username}}</strong> <span class="label label-primary" ng-show="_user.isAdmin">admin</span> <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/me" target="_blank"><span class="fa fa-th-large"></span> {{ 'My makes' | i18n }}</a></li>
+            <li><a href="{{accountSettingsUrl}}" target="_blank"><span class="fa fa-cog"></span> {{ 'My Settings' | i18n }}</a></li>
+            <li class="divider"></li>
+            <li><a ng-click="logout()"><span class="fa fa-sign-out"></span> {{ 'Sign out' | i18n }}</a></li>
+          </ul>
+        </li>
+        <li>
+          <button ng-cloak ng-show="!_user.email" class="btn btn-primary btn-sm navbar-btn" ng-click="login()">{{'Sign in' | i18n }}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Secondary nav -->
+<nav class="navbar navbar-inverse navbar-no-header-xs">
+  <div class="container">
+    <div class="navbar-collapse" collapse="isCollapsed">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id) }">
+          <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
+            <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Tertiary nav -->
+<nav class="navbar navbar-no-header-xs navbar-tertiary" wm-affix data-offset-top="150" data-offset-height="60">
+  <div class="container">
+    <div class="navbar-collapse" collapse="isCollapsed">
+      <ul ng-repeat="section in nav.sections" ng-if="section.pages" ng-show="isActiveSection(section.id)" class="nav navbar-nav">
+        <li ng-show="affixed" class="nav-icon nav-title active">
+          <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
+            <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
+          </a>
+        </li>
+
+        <!-- Weblit dropdown -->
+        <li ng-if="section.id === 'resources'" class="dropdown dropdown-toc hidden-xs">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ 'Web Literacies' | i18n }}<span class="caret"></span></a>
+          <ul class="explore-dropdown-menu dropdown-menu">
+            <li
+              ng-repeat="skill in literacies"
+              class="literacy"
+              ng-class="{ active : isActive(skill.tag) }">
+              <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" ng-click="collapseAll()" class="color-{{$index}}">{{ skill.term }}</a>
+            </li>
+          </ul>
+        </li>
+
+        <li ng-repeat="page in section.pages" ng-if="!page.adminOnly || _user.isAdmin">
+          <a href="{{baseUrl + page.url}}" external-link="{{page.external}}">{{ page.title | i18n }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile weblit nav -->
+    <div class="mobile-skills-nav visible-xs">
+      <ul class="nav navbar-nav">
+        <li><a href="#" ng-click="mobileTocCollapse = !mobileTocCollapse">{{ 'Web Literacies' | i18n }} <span class="caret"></span></a></li>
+      </ul>
+      <ul class="nav navbar-nav" collapse="mobileTocCollapse">
+
+        <li
+          ng-repeat="skill in literacies"
+          class="literacy"
+          ng-class="{ active : isActive(skill.tag, 'id') }" >
+          <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" ng-click="collapseAll()" class="bg-{{ skill.tag }}">{{ skill.term }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

@@ -60,6 +60,8 @@
     "grunt-contrib-concat": "^0.4.0",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-express-server": "^0.4.13"
+    "grunt-express-server": "^0.4.13",
+    "time-grunt": "^0.3.1",
+    "jit-grunt": "^0.7.0"
   }
 }

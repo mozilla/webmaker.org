@@ -13,6 +13,7 @@ angular
 
       $scope.clickedResource = false;
       $scope.literacies = weblit.all();
+      $scope.weblit = weblit;
 
       $scope.isActive = function (tag) {
         if (tag[0] === '/') {

@@ -179,13 +179,13 @@
     </div>
   </div>
 
-  <footer class="footer-competency" style="background-color: {{skill.color}}">
+  <footer class="footer-competency bg-{{ content.related }}">
     <div class="container">
       <div class="col-sm-10 col-sm-offset-2">
         <h4>{{ 'You might also like' | i18n }}</h4>
 
-        <h1><span class="fa fa-lock"></span> Security</h1>
-        <p class="lead">Learn how to keep systems, identities and content safe</p>
+        <h1><span class="fa {{ content.icon }}"></span> {{ weblit.term(content.related) }}</h1>
+        <p class="lead">{{ weblit.description(content.related) }}</p>
       </div>
     </div>
   </footer>

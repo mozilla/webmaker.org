@@ -1,5 +1,6 @@
 {
   "weblit-Navigation": {
+    "related": "weblit-Privacy",
     "intro": "How do you get around the web? Browsers are the software we use the web &ndash; they can quickly direct us exactly where we want to go, or can take us on a winding path to serendipitously discover new interests. Improving web navigation by customizing your browser with add-ons is a wonderful way to take control of your web experience.",
     "discover": [
       {
@@ -82,6 +83,7 @@
   },
   "weblit-WebMechanics": {
     "intro": "What happens when you browse the web? Clicking on a link or entering a URL in your browser initiates a series of behind the scenes operations that define your experiences on the web. Recognizing the relationships between the moving parts of the web like IP addresses and URLs makes the overall browsing experience more rewarding, and helps you make smart choices about the content you consume and share online.",
+    "related": "weblit-Infrastructure",
     "discover": [
       {
         "title": "URL Demystifier.",
@@ -150,6 +152,7 @@
   },
   "weblit-Search": {
     "intro": "Can the web be harnessed? With millions of new web pages being added to the Internet every month, the web can feel chaotic &ndash; even overwhelming. Using effective search techniques can make the difference between a frustrating web experience and an empowered one.",
+    "related": "weblit-Remix",
     "discover": [
       {
         "title": "Search engine optimized versus search engine friendly",
@@ -229,6 +232,7 @@
   },
   "weblit-Credibility": {
     "intro": "Can we believe everything we see on the web? The internet contains a confounding mix of facts, opinions, advertising, hidden agendas and pranks. Sharpening your BS detector helps you identify credible content on the web, and reminds you to approach certain web sites with a healthy dose of skepticism.",
+    "related": "weblit-Sharing",
     "discover": [
       {
         "title": "Crap Detection 101",
@@ -319,6 +323,7 @@
   },
   "weblit-Security": {
     "intro": "Is it possible to stay safe online? The web works by connecting every computer and device in the world &ndash; this offers us astounding opportunities, but also exposes us to significant risk. The web can be safe with the right skills, tools and software, giving us the power to remain secure.",
+    "related": "weblit-Community",
     "discover": [
       {
         "title": "Install these 10 Firefox add-ons to secure your web browser",
@@ -396,6 +401,7 @@
   },
   "weblit-Composing": {
     "intro": "What makes creating for the web different? Hyperlinks, multimedia, up-to-date content &ndash; these features make the web powerfully interconnected and entirely different from media of the past. When you write and build specifically for the web, recognizing that your audience is as much a part of the creative process as you are will allow you to tell stories and build experiences in ways that television, books and other media cannot.",
+    "related": "weblit-DesignAccessibility",
     "discover": [
       {
         "title": "A brief history of storytelling",
@@ -485,6 +491,7 @@
   },
   "weblit-Remix": {
     "intro": "Many of our greatest creative accomplishments are made as a reaction to someone else. Nowhere is this more evident than on the web. Remixing the ideas of others by adding your own spin can let you turn something old into something new, talk back to media, or stand on the shoulders of giants to make your own statement on the web.",
+    "related": "weblit-Composing",
     "discover": [
       {
         "title": "Listen to a remix. These mashups are songs made from bits of other songs.",
@@ -586,6 +593,7 @@
   },
   "weblit-DesignAccessibility": {
     "intro": "Should using the web be enjoyable for everyone?  As more people across the globe come online with phones and tablets, ensuring that the web is viewable across multiple devices has become an increasingly urgent challenge. Understanding CSS (Cascading Style Sheets) and the principles of good design help make interacting with webpages a pleasure.",
+    "related": "weblit-Navigation",
     "discover": [
       {
         "title": "Know your font",
@@ -728,6 +736,7 @@
   },
   "weblit-CodingScripting": {
     "intro": "How does the web respond to you? Interactivity has become essential to our web experience. How does that work? Small programs known as scripts run in the background of our web browsers automating hundreds of tasks and allowing our web experiences to be seamlessly responsive.  Understanding the role of scripting languages like JavaScript helps us maximize the interactive potential of the web, making our overall online experiences more useful and satisfying.",
+    "related": "weblit-WebMechanics",
     "discover": [
       {
         "title": "Learn JavaScript",
@@ -806,6 +815,7 @@
   },
   "weblit-Infrastructure": {
     "intro": "What's the difference between apps, the web and the Internet? There's a bewildering array of words used to describe the global network we use to communicate and share data. Understanding the basic underlying technology that makes up the Internet, and how it differs from the web and services like email, helps us grasp what happens to the data we share and guides us towards making safer, more intelligent choices online.",
+    "related": "weblit-CodingScripting",
     "discover": [
       {
         "title": "What's the difference between the Web and the Internet?",
@@ -883,6 +893,7 @@
   },
   "weblit-Sharing": {
     "intro": "Great ideas should be shared. For a concept to grow from a seedling into a tree, it needs to spread beyond one or two people and into the community. Co-creating on the web with diverse groups of stakeholders and open tools can yield unexpected solutions to vexing problems and mutually beneficial relationships.",
+    "related": "weblit-OpenPractices",
     "discover": [
       {
         "title": "Ten leading platforms for creating online communities",
@@ -962,6 +973,7 @@
   },
   "weblit-Collaborating": {
     "intro": "There's only so much one person can do alone.  Fortunately, the web allows us to connect with others across distances, languages and cultures. Honing our online collaboration skills lets us do more than just send better emails &ndash; it helps us build things on the web faster, better and smarter.",
+    "related": "weblit-Search",
     "discover": [
       {
         "title": "The 7 habits of effective online discussion participants",
@@ -1041,6 +1053,7 @@
   },
   "weblit-Community": {
     "intro": "Why should the web be open?  In recent years, corporations have tried to control the web through proprietary software and private, walled-off sections of the Internet. Learning to collaborate online as part of a global community of contributors and creators is an empowering way to ensure that the web remains a shared resource for everyone.",
+    "related": "weblit-Credibility",
     "discover": [
       {
         "title": "Mozilla Community guidelines",
@@ -1125,6 +1138,7 @@
   },
   "weblit-Privacy": {
     "intro": "",
+    "related": "weblit-Security",
     "discover": [
       {
         "title": "",
@@ -1166,6 +1180,7 @@
   },
   "weblit-OpenPractices": {
     "intro": "Who can make the web? The web is universally accessible &ndash; its technologies are rooted in open standards that can be studied, reused and improved by anyone. Licenses define what's possible with the code and content we find online, and understanding how they work allows you to participate in the web's evolution.",
+    "related": "weblit-Collaborating",
     "discover": [
       {
         "title": "What is openly licensed content?",

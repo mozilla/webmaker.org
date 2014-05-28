@@ -7,11 +7,11 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'exploreController'
         })
         .when('/resources', {
-          templateUrl: 'views/resources-home.html',
+          templateUrl: 'views/resources.html',
           controller: 'resourcesHomeController'
         })
         .when('/:locale/resources', {
-          templateUrl: 'views/resources-home.html',
+          templateUrl: 'views/resources.html',
           controller: 'resourcesHomeController'
         })
         .when('/:locale?/resources/literacy/:id', {

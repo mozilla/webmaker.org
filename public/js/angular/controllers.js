@@ -98,7 +98,6 @@ angular
 
       $scope.clickedResource = false;
       $scope.literacies = weblit.all();
-      $scope.weblit = weblit;
 
       $scope.isActive = function (tag) {
         return tag === $routeParams.id;
@@ -157,6 +156,7 @@ angular
       })[0];
 
       $scope.content = $rootScope.content[$scope.tag];
+      $scope.weblit = weblit;
 
       $scope.wlcPoints = CONFIG.wlcPoints;
 

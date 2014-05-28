@@ -7,6 +7,10 @@
     "message": "Explore creative ways to teach digital superpowers",
     "description": "Heading for first explore subsection with map"
   },
+  "Documentation": {
+    "message": "Documentation",
+    "description": "Link to literacy page"
+  },
   "Get involved with webmaker": {
     "message": "Get involved with Webmaker through fun making and sharing, backed by the global Mozilla community&rsquo;s Web Literacy Map. It&rsquo;s all part of our <a href=\"/{{ lang }}/about\">non-profit mission</a> to create a more open, web literate world.",
     "description": "Copy for first explore subsection with map"

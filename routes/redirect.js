@@ -31,11 +31,13 @@ module.exports = function (app) {
       "/news"
     ]
   }, {
-    route: "/teach",
+    route: "/resources",
     paths: [
       "/network",
       "/kits",
-      "/kit-prototypes"
+      "/kit-prototypes",
+      "/teach",
+      "/starter-makes"
     ]
   }, {
     route: "/make-your-own",
@@ -74,11 +76,6 @@ module.exports = function (app) {
     route: "/mentor",
     paths: [
       "/community"
-    ]
-  }, {
-    route: "/resources",
-    paths: [
-      "/starter-makes"
     ]
   }, {
     route: "http://party.webmaker.org",

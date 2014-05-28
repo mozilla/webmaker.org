@@ -115,11 +115,11 @@
     ]
   },
   {
-    "id": "teach",
-    "title": "Teach",
+    "id": "resources",
+    "title": "Resources",
     "icon": "icon-book",
-    "defaultUrl": "teach",
     "exclude": "explore",
+    "defaultUrl": "resources",
     "pages": [
       {
         "id": "teach",
@@ -133,7 +133,7 @@
       },
       {
         "id": "literacy",
-        "title": "WebLiteracyMap",
+        "title": "Documentation",
         "url": "literacy"
       }
     ]

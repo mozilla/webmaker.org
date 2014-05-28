@@ -69,15 +69,17 @@
   }
 }
 
-
 .fixed-toc {
-  font-size: 1.8rem;
-  ul {
-    .list-unstyled;
-    li > {
-      margin-bottom: 0.5em;
+  display: none;
+  @media screen and (min-width: @screen-sm) {
+    display: block;
+    font-size: 1.8rem;
+    ul {
+      .list-unstyled();
+      li > {
+        margin-bottom: 0.5em;
+      }
     }
-
   }
 }
 

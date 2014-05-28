@@ -21,7 +21,7 @@ define(['jquery', 'webmaker-auth-client'], function ($, WebmakerAuthClient) {
       placeHolder.html('<img src="https://secure.gravatar.com/avatar/' +
         userData.emailHash + '?s=26&d=https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png" alt="">' +
         '<a href="' + $("#loginURL").attr('href') + '">' + userData.username + (userData.isAdmin ? adminBadge : '') + "</a>");
-      profileLink.attr('href', '/user/#!/' + userData.username)
+      profileLink.attr('href', '/user/#!/' + userData.username);
     } else {
       emailSpans.html('');
       userElement.html('<span id="identity"></span>');

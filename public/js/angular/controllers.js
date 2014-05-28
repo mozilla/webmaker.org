@@ -112,9 +112,8 @@ angular
       };
     }
   ])
-  .controller('resourcesHomeController', ['$scope',
-    function ($scope) {
-      // This is the controller for resources home
-      $scope.whatever = 'blah';
+  .controller('resourcesHomeController', ['$scope', 'weblit',
+    function ($scope, weblit) {
+      $scope.literacies = weblit.all();
     }
   ]);

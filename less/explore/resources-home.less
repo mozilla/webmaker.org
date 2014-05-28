@@ -1,0 +1,227 @@
+[ng-controller="resourcesHomeController"] {
+  color: @grey;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-bottom: 2rem;
+  h1, h2 {
+    font-weight: 300;
+  }
+  h1, h2, h3 {
+    margin-bottom: 0.5em;
+  }
+  h1 {
+    font-size: 5rem;
+    @media screen and (min-width: @screen-md) {
+      font-size: 6rem;
+    }
+  }
+  h2 {
+    color: @green;
+    font-size: 3.6rem;
+  }
+  p {
+    line-height: 1.555740433;
+  }
+  figcaption p {
+    font-size: 1.3rem;
+  }
+  section {
+    margin-bottom: 4rem;
+    @media screen and (min-width: @screen-sm) {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+#resources-Resources {
+  @media screen and (min-width: @screen-md) {
+    margin-bottom: 0;
+  }
+  figure {
+    margin-top: 4.5rem;
+    @media screen and (min-width: @screen-md) {
+      margin-top: 2.5rem;
+    }
+    img {
+      display: block;
+      margin: 0 auto 1.8rem;
+      max-width: 42rem;
+    }
+  }
+}
+
+#resources-Web-Literacy-Map {
+  hgroup {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 90% 3rem;
+    padding-bottom: 4rem;
+    @media @standard-def {
+      background-image: url('/img/explore/bg-competencies-header.png');
+    }
+    @media @retina {
+      background-image: url('/img/explore/bg-competencies-header@2x.png');
+    }
+    @media screen and (min-width: @screen-sm) {
+      background-size: 90% auto;
+    }
+  }
+  h3, h4 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  h4 {
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  ul, li {
+    background-color: @blue;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .literacies-Exploring, .literacies-Building {
+    margin-bottom: 4rem;
+    @media screen and (min-width: @screen-sm) {
+      margin-bottom: auto;
+    }
+  }
+  .competency-link {
+    color: @white;
+    display: block;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    &:hover,
+    &:focus {
+      background: none;
+      color: @white;
+      position: relative;
+      text-decoration: none;
+      &::after {
+        .icon(@fa-chevron-right);
+        position: absolute;
+        right: 1rem;
+      }
+    }
+  }
+}
+
+#resources-Discover-new-skills {
+  h3 {
+    color: lighten(@grey, 25%);
+    font-weight: 200;
+    font-size: 3.4rem;
+    @media screen and (min-width: @screen-sm) {
+      margin-top: 2rem;
+    }
+    @media screen and (min-width: @screen-md) {
+      font-size: 4rem;
+      margin-top: 4rem;
+    }
+    &::before {
+      .icon-FontAwesome;
+      color: @resources-blue;
+      background: lighten(@grey, 55%);
+      border: solid lighten(@grey, 55%) 0.6em;
+      border-bottom-width: 0.55em;
+      border-left-width: 0.55em;
+      border-radius: 50%;
+      font-size: 0.725em;
+      margin-right: 1rem;
+      position: relative;
+      top: -0.1em;
+    }
+    &.resource-discover {
+      &::before {
+        content: @fa-random;
+      }
+    }
+    &.resource-make {
+      &::before {
+        content: @fa-hand-o-up;
+      }
+    }
+    &.resource-teach {
+      &::before {
+        content: @fa-book;
+      }
+    }
+  }
+}
+
+#resources-People-Resources {
+  margin-bottom: 17.6rem;
+
+  @media screen and (min-width: @screen-sm) {
+    margin-bottom: 41rem;
+  }
+  i {
+    background-position: center top;
+    background-repeat: no-repeat;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    @media screen and (max-width: @screen-xs-max) {
+      background-image: url('/img/explore/bg-people-sm-vp.jpg');
+      background-size: auto 17.6rem;
+      height: 17.6rem;
+    }
+    @media screen and (min-width: @screen-sm) {
+      background-image: url('/img/explore/bg-people.jpg');
+      background-size: auto;
+      height: 39.2rem;
+      margin-top: 17rem;
+    }
+    @media screen and (min-width: @screen-lg) {
+      background-size: 100% auto;
+    }
+  }
+}
+
+#resources-Still-Reading {
+  a {
+    display: block;
+    transition: color 300ms;
+    &:link, &:visited {
+      color: @grey;
+    }
+    &:hover, &:active, &:focus {
+      color: @resources-blue;
+      text-decoration: none;
+    }
+  }
+  h2, p {
+    color: inherit;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 0;
+    &::before {
+      .icon-FontAwesome;
+      display: block;
+    }
+  }
+  .web-lit-get-training {
+    &::before {
+      content: @fa-suitcase;
+    }
+  }
+  .web-lit-gallery {
+    &::before {
+      content: @fa-th;
+    }
+  }
+  .web-lit-get-involved {
+    &::before {
+      content: @fa-hand-o-up;
+    }
+  }
+}

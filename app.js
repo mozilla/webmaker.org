@@ -250,11 +250,11 @@ app.locals({
   ga_account: env.get("GA_ACCOUNT"),
   ga_domain: env.get("GA_DOMAIN"),
   languages: i18n.getSupportLanguages(),
-  PROFILE_URL: env.get("PROFILE_URL"),
   EVENTS_URL: env.get("EVENTS_URL"),
   flags: env.get("FLAGS") || {},
   personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org"),
-  bower_path: "../bower_components"
+  bower_path: "../bower_components",
+  SHOW_PROFILE: env.get("SHOW_PROFILE")
 });
 
 app.use(function (req, res, next) {

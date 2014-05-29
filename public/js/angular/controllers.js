@@ -1,7 +1,7 @@
 angular
   .module('webmakerApp')
-  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', '$location', 'weblit',
-    function ($scope, $location, $routeParams, $rootScope, $location, weblit) {
+  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit',
+    function ($scope, $location, $routeParams, $rootScope, weblit) {
 
       // Nav data
       $scope.nav = {

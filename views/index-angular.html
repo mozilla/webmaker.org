@@ -1,7 +1,7 @@
 {% raw %}
 <!doctype html>
 
-<html lang="{{lang}}" dir="{{direction}}" ng-app="webmakerApp">
+<html lang="{{lang}}" dir="{{direction}}" xmlns:ng="http://angularjs.org" ng-app="webmakerApp" id="ng-app">
   <head>
     <!-- All paths relative to the root -->
     <base href="/{{lang}}">
@@ -110,7 +110,7 @@
                 ng-repeat="skill in literacies"
                 class="literacy"
                 ng-class="{ active : isActive(skill.tag) }" >
-                <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" ng-click="collapseAll()" style="background-color: {{skill.color}};">{{ skill.term }}</a>
+                <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" ng-click="collapseAll()" class="bg-{{ skill.tag }}">{{ skill.term }}</a>
               </li>
             </ul>
           </div>

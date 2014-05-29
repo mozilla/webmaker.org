@@ -1,5 +1,5 @@
 <div class="competency-page">
-  <div class="jumbotron" style="background: {{ skill.color }}">
+  <div class="jumbotron bg-{{ skill.tag }}">
     <div class="container">
       <h1><i class="fa {{ content.icon }}"></i> {{ skill.term }}</h1>
       <p>{{ skill.description }}</p>
@@ -7,7 +7,6 @@
   </div>
 
   <div class="container">
-
     <div class="row">
       <div class="col-sm-8">
         <p class="lead" ng-bind-html="content.intro"></p>
@@ -96,7 +95,7 @@
             <span class="fa fa-random"></span> {{ 'Discover' | i18n }}
           </h2>
 
-          <ul ng-repeat="item in content.discover" class="list list-subway list-subway-{{skill.tag}}" style="color:{{skill.color}};">
+          <ul ng-repeat="item in content.discover" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
             <li>
               <div>
                 <h2 ng-bind-html="item.title"></h2>
@@ -115,7 +114,7 @@
             <span class="fa fa-hand-o-up"></span> {{ 'Make' | i18n }}
           </h2>
 
-          <ul ng-repeat="item in content.make" class="list list-subway list-subway-{{skill.tag}}" style="color:{{skill.color}};">
+          <ul ng-repeat="item in content.make" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
             <li>
               <div>
                 <h2 ng-bind-html="item.title"></h2>
@@ -153,7 +152,7 @@
 
           <h4 class="header-divider">{{ 'More Resources' | i18n }}</h4>
 
-          <ul ng-repeat="item in content.teach.more" class="list list-subway list-subway-{{skill.tag}}" style="color:{{skill.color}};">
+          <ul ng-repeat="item in content.teach.more" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
             <li>
               <div>
                 <h2 ng-bind-html="item.title"></h2>

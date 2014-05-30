@@ -63,6 +63,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         .get('data/content.json')
         .success(function (data) {
           $rootScope.content = data;
+          $rootScope.contentReady = true;
         });
     }
   ]);

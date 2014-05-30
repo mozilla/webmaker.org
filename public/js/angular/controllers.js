@@ -146,8 +146,8 @@ angular
       }];
     }
   ])
-  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'makeapi', 'CONFIG',
-    function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, CONFIG) {
+  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'makeapi', 'CONFIG', '$timeout',
+    function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, CONFIG, $timeout) {
 
       $scope.tag = $routeParams.id;
 
@@ -155,7 +155,13 @@ angular
         return item.tag === $scope.tag;
       })[0];
 
-      $scope.content = $rootScope.content[$scope.tag];
+      if($rootScope.contentReady) {
+        $scope.content = $rootScope.content[$scope.tag];
+      } else {
+        $timeout(function(){
+          $scope.content = $rootScope.content[$scope.tag];
+        }, 500)
+      }
       $scope.weblit = weblit;
 
       $scope.wlcPoints = CONFIG.wlcPoints;
@@ -168,8 +174,8 @@ angular
 
     }
   ])
-  .controller('resourceFormController', ['$scope', '$http', '$timeout',
-    function ($scope, $http, $timeout) {
+  .controller('resourceFormController', ['$scope', '$http',
+    function ($scope, $http) {
       $scope.formData = {};
       $scope.submit = function (form) {
 

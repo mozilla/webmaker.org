@@ -155,10 +155,10 @@ angular
         return item.tag === $scope.tag;
       })[0];
 
-      if($rootScope.contentReady) {
+      if ($rootScope.contentReady) {
         $scope.content = $rootScope.content[$scope.tag];
       } else {
-        $timeout(function(){
+        $timeout(function () {
           $scope.content = $rootScope.content[$scope.tag];
         }, 500)
       }

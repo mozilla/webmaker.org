@@ -160,7 +160,7 @@ angular
       } else {
         $timeout(function () {
           $scope.content = $rootScope.content[$scope.tag];
-        }, 500)
+        }, 500);
       }
       $scope.weblit = weblit;
 

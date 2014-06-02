@@ -67,17 +67,21 @@
   .ctas {
     padding: 40px 0;
   }
-}
 
-.fixed-toc {
-  display: none;
-  @media screen and (min-width: @screen-sm) {
-    display: block;
-    font-size: 1.8rem;
-    ul {
-      .list-unstyled();
-      li > {
-        margin-bottom: 0.5em;
+  // Fixed side menu - Discover, Make, Teach
+  .competency-page-menu {
+    &.affix {
+      top: 50px;
+    }
+    li {
+      transition: opacity 0.3s ease;
+      opacity: 0.5;
+      &.active,
+      &:hover {
+        opacity: 1;
+      }
+      > a:hover {
+        background: none;
       }
     }
   }
@@ -86,8 +90,9 @@
 // Section anchors - allows for $anchorScroll to work with an offset
 .section-anchor {
   display: block;
-  visibility: hidden;
   position: relative;
+  text-indent: -99999px;
+  height: 1px;
   top: -65px;
 }
 

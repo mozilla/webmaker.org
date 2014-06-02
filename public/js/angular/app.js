@@ -1,4 +1,4 @@
-angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services', 'webmakerAngular.login', 'localization'])
+angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services', 'webmakerAngular.login', 'localization', 'ngScrollSpy'])
   .config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
       $routeProvider
@@ -32,14 +32,6 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
 
       // Configure CSRF token
       $http.defaults.headers.common['X-CSRF-Token'] = CONFIG.csrf;
-
-      // Scroll
-      $rootScope.$on('$locationChangeSuccess', function (event) {
-        var ngView = document.querySelector('[ng-view]');
-        if (ngView) {
-          ngView.scrollTop = 0;
-        }
-      });
 
       // Set locale information
       if (CONFIG.supported_languages.indexOf(CONFIG.lang) > 0) {

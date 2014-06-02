@@ -146,8 +146,8 @@ angular
       }];
     }
   ])
-  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'makeapi', 'CONFIG', '$timeout',
-    function ($rootScope, $scope, $location, $routeParams, weblit, makeapi, CONFIG, $timeout) {
+  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'CONFIG', '$timeout',
+    function ($rootScope, $scope, $location, $routeParams, weblit, CONFIG, $timeout) {
 
       $scope.tag = $routeParams.id;
 
@@ -165,12 +165,6 @@ angular
       $scope.weblit = weblit;
 
       $scope.wlcPoints = CONFIG.wlcPoints;
-
-      makeapi
-        .tags($scope.skill.tag)
-        .then(function (data) {
-          $scope.makes = data;
-        });
 
     }
   ])

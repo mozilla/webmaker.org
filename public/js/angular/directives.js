@@ -27,19 +27,32 @@ angular
       };
     }
   ])
-  .directive('ngClick', function () {
-    // Prevent default on all elements that have ngClick defined
-    return {
-      restrict: 'A',
-      link: function (scope, el, attrs) {
-        if (attrs.href === '#') {
-          el.on('click', function (e) {
-            e.preventDefault();
-          });
+  .directive('a', [
+    '$location',
+    '$anchorScroll',
+    function ($location, $anchorScroll) {
+      return {
+        restrict: 'E',
+        link: function (scope, el, attrs) {
+          // Prevent default on all elements that have # as a location
+          if (attrs.href === '#') {
+            el.on('click', function (e) {
+              e.preventDefault();
+            });
+          }
+          // Make sure hash links send user to proper relative link
+          else if (attrs.href && attrs.href.match(/(^|\s)#([^ ]*)/)) {
+            el.on('click', function (e) {
+              e.preventDefault();
+              $location.hash(attrs.href.replace('#', ''));
+              scope.$apply();
+              $anchorScroll();
+            });
+          }
         }
-      }
-    };
-  })
+      };
+    }
+  ])
   .directive('externalLink', function () {
     // Prevent default on all elements that have ngClick defined
     return {

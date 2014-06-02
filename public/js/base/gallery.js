@@ -1,5 +1,5 @@
-define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'masonry'],
-  function ($, nunjucks, UI, moment, Make, localized, Masonry) {
+define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'masonry', 'base/login'],
+  function ($, nunjucks, UI, moment, Make, localized, Masonry, auth) {
 
     var DEFAULT_LIMIT = 12;
     var lang = $('html').attr('lang');
@@ -111,8 +111,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
           }
         }).fail(function (res) {
           if (res.status === 401) {
-            window.location.replace(window.location.protocol + "//" + window.location.host +
-              "/" + localized.getCurrentLang() + "/login");
+            auth.login();
           } else {
             // already like/unliked, update UI to reflect.
             $this.toggleClass("icon-heart icon-heart-empty");

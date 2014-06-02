@@ -24,7 +24,7 @@
     "hood": "0.2.1",
     "knox": "0.8.x",
     "less-middleware": "https://github.com/Pomax/less.js-middleware/archive/master.tar.gz",
-    "makeapi-client": "0.5.21",
+    "makeapi-client": "0.5.25",
     "mapquest": "0.0.1",
     "markdown": "0.4.x",
     "messina": "0.1.1",

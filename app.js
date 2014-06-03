@@ -41,6 +41,8 @@ var app = express(),
   messina,
   logger;
 
+var flags = env.get("FLAGS") || {};
+
 nunjucksEnv.addFilter("instantiate", function (input) {
   return nunjucks.renderString(input, this.getVariables());
 });
@@ -66,6 +68,13 @@ nunjucksEnv.addFilter("getSection", function (pageId) {
   var page;
   for (var i in navigation) {
     section = navigation[i];
+
+    if (section.exclude && flags[section.exclude]) {
+      return;
+    } else if (section.flag && !flags[section.flag]) {
+      return;
+    }
+
     for (var j in section.pages) {
       page = section.pages[j];
       if (page.id === pageId) {
@@ -251,7 +260,7 @@ app.locals({
   ga_domain: env.get("GA_DOMAIN"),
   languages: i18n.getSupportLanguages(),
   EVENTS_URL: env.get("EVENTS_URL"),
-  flags: env.get("FLAGS") || {},
+  flags: flags,
   personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org"),
   bower_path: "../bower_components",
   SHOW_PROFILE: env.get("SHOW_PROFILE")

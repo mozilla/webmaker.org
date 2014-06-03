@@ -61,13 +61,19 @@
     {% if not section.exclude or (section.exclude and not flags[section.exclude]) %}
       <ul class="navigation-list">
         <li><a><span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a></li>
-        {% if section%}{% for page in section.pages %}
+        {% if section%}
+          {% for page in section.pages %}
+          {% if not page.flag or flags[page.flag] %}
+          {% if not page.adminOnly or isAdmin %}
           <li>
             <a href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}>
               {{gettext(page.title)}}
             </a>
           </li>
-        {% endfor %}{% endif %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+        {% endif %}
       </ul>
     {% endif %}
     {% endif %}

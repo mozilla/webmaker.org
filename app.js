@@ -64,25 +64,20 @@ nunjucksEnv.addFilter("gettext", function (string) {
 
 // For navigation
 nunjucksEnv.addFilter("getSection", function (pageId) {
-  var section;
-  var page;
-  for (var i in navigation) {
-    section = navigation[i];
-
+  var id = '';
+  navigation.forEach(function (section) {
     if (section.exclude && flags[section.exclude]) {
       return;
     } else if (section.flag && !flags[section.flag]) {
       return;
     }
-
-    for (var j in section.pages) {
-      page = section.pages[j];
+    section.pages.forEach(function (page) {
       if (page.id === pageId) {
-        return section.id;
+        id = section.id;
       }
-    }
-  }
-  return "";
+    });
+  });
+  return id;
 });
 
 // Markdown

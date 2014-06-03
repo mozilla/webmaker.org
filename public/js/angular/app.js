@@ -3,19 +3,19 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
     function ($routeProvider, $locationProvider) {
       $routeProvider
         .when('/:locale?/explore', {
-          templateUrl: 'views/explore.html',
+          templateUrl: '/views/explore.html',
           controller: 'exploreController'
         })
         .when('/resources', {
-          templateUrl: 'views/resources.html',
+          templateUrl: '/views/resources.html',
           controller: 'resourcesHomeController'
         })
         .when('/:locale/resources', {
-          templateUrl: 'views/resources.html',
+          templateUrl: '/views/resources.html',
           controller: 'resourcesHomeController'
         })
         .when('/:locale?/resources/literacy/:id', {
-          templateUrl: 'views/competency.html',
+          templateUrl: '/views/competency.html',
           controller: 'competencyController'
         })
         .otherwise({
@@ -52,7 +52,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
 
       // Set up content for competency
       $http
-        .get('data/content.json')
+        .get('/data/content.json')
         .success(function (data) {
           $rootScope.content = data;
           $rootScope.contentReady = true;

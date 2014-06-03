@@ -15,7 +15,8 @@ angular
               {
                 "id": "index",
                 "title": "Gallery",
-                "url": "gallery"
+                "url": "gallery",
+                external: true
               },
               {
                 id: 'super-mentor',

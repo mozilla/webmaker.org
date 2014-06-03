@@ -3,8 +3,6 @@
 
 <html lang="{{lang}}" dir="{{direction}}" xmlns:ng="http://angularjs.org" ng-app="webmakerApp" id="ng-app">
   <head>
-    <!-- All paths relative to the root -->
-    <base href="/">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -28,7 +26,7 @@
   <div ng-controller="createUserController"></div>
 
   <div class="wrapper">
-    <header class="explore-nav" ng-include="'views/partials/navigation.html'" ng-controller="navigationController"></header>
+    <header class="explore-nav" ng-include="'/views/partials/navigation.html'" ng-controller="navigationController"></header>
   </div>
   <section class="main">
     <div class="explore-main" ng-view=""></div>
@@ -37,8 +35,8 @@
   {# From here on, everything is rendered with nunjucks #}
   <script src="/{{ localeInfo.lang }}/angular-config.js"></script>
   <script src="https://login.persona.org/include.js"></script>
-  <script src="compiled/dependencies.min.js"></script>
-  <script src="compiled/app.min.js"></script>
+  <script src="/compiled/dependencies.min.js"></script>
+  <script src="/compiled/app.min.js"></script>
 
 </body>
 </html>

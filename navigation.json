@@ -218,6 +218,11 @@
         "url": "getinvolved"
       },
       {
+        "id": "feedback",
+        "title": "Feedback",
+        "url": "feedback"
+      },
+      {
         "id": "help",
         "title": "Help",
         "url": "https://support.mozilla.org/en-US/products/webmaker",

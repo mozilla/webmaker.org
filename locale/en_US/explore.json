@@ -96,7 +96,7 @@
     "description": "Header for bottom section of explore"
   },
   "Footer copy": {
-    "message": "Explore the competencies and see what teaching resources the Webmaker community has to offer.",
+    "message": "<a href=\"/{{lang}}/resources\">Explore the competencies</a> and see what teaching resources the Webmaker community has to offer.",
     "description": "Copy for bottom section of explore"
   },
   "SidebarHeaderDesc": {

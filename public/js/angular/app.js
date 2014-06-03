@@ -38,6 +38,10 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
   .run(['$rootScope', '$http', '$routeParams', '$location', 'CONFIG', 'weblit',
     function ($rootScope, $http, $routeParams, $location, CONFIG, weblit) {
 
+      // feed supported langs to meta
+      $rootScope.languages = CONFIG.supported_languages;
+      $rootScope.currentPath = $location.path();
+
       // Configure CSRF token
       $http.defaults.headers.common['X-CSRF-Token'] = CONFIG.csrf;
 

@@ -8,6 +8,25 @@
   <meta name="persona-email" content="{{ email }}">
   <meta name="maker-id" content="{{ makerID }}">
   <meta name="make-endpoint" content="{{ makeEndpoint }}">
+
+<!-- For sharing & search engines -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://webmaker.org/img/logo-og.png" />
+  <meta property="og:image:width" content="1400" />
+  <meta property="og:image:height" content="1400" />
+  <meta property="og:site_name" content="Webmaker" />
+  <meta property="og:determiner" content="" />
+  <meta property="og:locale" content="{{ localeInfo.lang | replace('-', '_') }}" />
+  {% for language in languages %}
+  <meta property="og:locale:alternate" content="{{ language | replace('-', '_') }}" />{% endfor %}
+  <meta property="og:title" content="{% block title %}{% endblock %} - {{ gettext("Mozilla Webmaker") }}" />
+  <meta property="og:description" content="We're a global community dedicated to teaching digital skills and web literacy. We explore, tinker and create together to build a web that's open and made by everyone." />
+  <meta property="og:url" content="https://webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+
+  <link rel="canonical" href="https://webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+  <meta property="description" content="We're a global community dedicated to teaching digital skills and web literacy. We explore, tinker and create together to build a web that's open and made by everyone." />
+  <!-- /sharing -->
+
   <link rel="login" content="{{ loginAPI }}">
 
   <title>{% block title %}{% endblock %} - {{ gettext("Mozilla Webmaker") }}</title>

@@ -18,6 +18,14 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/competency.html',
           controller: 'competencyController'
         })
+        .when('/:locale?/admin/badges', {
+          templateUrl: '/views/admin/badges-main.html',
+          controller: 'badgesAdminController'
+        })
+        .when('/:locale?/admin/badges/:badge', {
+          templateUrl: '/views/admin/badges-badge.html',
+          controller: 'badgesAdminBadgeController'
+        })
         .otherwise({
           redirectTo: '/resources'
         });
@@ -56,6 +64,9 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         .success(function (data) {
           $rootScope.content = data;
           $rootScope.contentReady = true;
+        })
+        .error(function (err) {
+          console.log(err);
         });
     }
   ]);

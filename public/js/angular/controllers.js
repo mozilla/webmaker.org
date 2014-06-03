@@ -1,7 +1,7 @@
 angular
   .module('webmakerApp')
-  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit',
-    function ($scope, $location, $routeParams, $rootScope, weblit) {
+  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit', 'wmNav',
+    function ($scope, $location, $routeParams, $rootScope, weblit, wmNav) {
 
       // Nav data
       $scope.nav = {
@@ -34,7 +34,6 @@ angular
                 id: 'badges-admin',
                 title: 'Badges Admin',
                 url: 'admin/badges',
-                external: true,
                 adminOnly: true
               },
               {
@@ -100,20 +99,24 @@ angular
       $scope.clickedResource = false;
       $scope.literacies = weblit.all();
 
-      $scope.isActive = function (tag) {
-        return tag === $routeParams.id;
+      $scope.page = wmNav.page;
+      $scope.section = wmNav.section;
+
+      $scope.isActivePage = function (page) {
+        return page === wmNav.page();
       };
 
       $scope.isActiveSection = function (section) {
-        var path = $location.path() + '/';
-        var match = path.match('/' + section + '/');
-        return match && match.length;
+        return section === wmNav.section();
       };
 
     }
   ])
-  .controller('exploreController', ['$scope', 'CONFIG',
-    function ($scope, CONFIG) {
+  .controller('exploreController', ['$scope', 'CONFIG', 'wmNav',
+    function ($scope, CONFIG, wmNav) {
+      wmNav.page('explore');
+      wmNav.section('explore');
+
       $scope.contributeBoxes = [{
         icon: 'book',
         title: 'Teaching kits',
@@ -147,8 +150,10 @@ angular
       }];
     }
   ])
-  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'CONFIG', '$timeout',
-    function ($rootScope, $scope, $location, $routeParams, weblit, CONFIG, $timeout) {
+  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'CONFIG', '$timeout', 'wmNav',
+    function ($rootScope, $scope, $location, $routeParams, weblit, CONFIG, $timeout, wmNav) {
+      wmNav.page($routeParams.id);
+      wmNav.section('resources');
 
       $scope.tag = $routeParams.id;
 
@@ -193,8 +198,80 @@ angular
       };
     }
   ])
-  .controller('resourcesHomeController', ['$scope', 'weblit',
-    function ($scope, weblit) {
+  .controller('resourcesHomeController', ['$scope', 'weblit', 'wmNav',
+    function ($scope, weblit, wmNav) {
+      wmNav.page('resources');
+      wmNav.section('resources');
+
       $scope.literacies = weblit.all();
+    }
+  ])
+  .controller('badgesAdminController', ['$scope', '$http', 'wmNav',
+    function ($scope, $http, wmNav) {
+      wmNav.page('badges-admin');
+      wmNav.section('explore');
+
+      $scope.badges = [];
+
+      $http
+        .get('/api/badges')
+        .success(function (badges) {
+          $scope.badges = badges;
+        });
+    }
+  ])
+  .controller('badgesAdminBadgeController', ['$scope', '$http', '$routeParams', 'wmNav',
+    function ($scope, $http, $routeParams, wmNav) {
+      wmNav.page('badges-admin');
+      wmNav.section('explore');
+
+      var currentBadge = $routeParams.badge;
+
+      $scope.badge = {};
+      $scope.instances = [];
+      $scope.badgesError = false;
+
+      // Error handling
+
+      function onError(err) {
+        $scope.badgesError = err.error;
+        console.log(err);
+      }
+
+      // This issues a new badge
+      $scope.issueBadge = function (email) {
+        $http
+          .post('/api/badges/' + currentBadge + '/issue', {
+            email: email
+          })
+          .success(function (data) {
+            $scope.badgesError = false;
+            $scope.instances.unshift(data);
+          })
+          .error(onError);
+      };
+
+      // This revokes badges
+      $scope.revokeBadge = function (email) {
+        $http
+          .delete('/api/badges/' + currentBadge + '/instance/email/' + email)
+          .success(function () {
+            for (var i = 0; i < $scope.instances.length; i++) {
+              if ($scope.instances[i].email === email) {
+                $scope.instances.splice(i, 1);
+              }
+            }
+          })
+          .error(onError);
+      };
+
+      // On load, Get all instances
+      $http
+        .get('/api/badges/' + currentBadge + '/instances')
+        .success(function (data) {
+          $scope.instances = data.instances;
+          $scope.badge = data.badge;
+        })
+        .error(onError);
     }
   ]);

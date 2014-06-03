@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="panel panel-badges">
+    <div class="panel-body">
+      <h1><a href="{{baseUrl}}admin/badges">{{ "Badges Admin" | i18n }}</a> / {{ badge.name }}</h1>
+
+      <div class="error badges-error alert alert-danger" ng-show="badgesError">
+        <p>{{ "BadgesError" | i18n }} <span class="error-message">{{ badgesError }}</span></p>
+      </div>
+
+      <table class="table table-admin table-striped table-responsive">
+        <thead>
+          <tr>
+            <th>{{ "Email" | i18n }}</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label class="sr-only" for="issue_email">{{ "Email" | i18n }}</label>
+              <input name="issue_email" ng-model="issueEmail" class="form-control">
+            </td>
+            <td>
+              <button class="btn btn-success" ng-click="issueBadge(issueEmail)">
+                <span class="icon icon-plus"></span> {{ "Issue new badge"| i18n }}
+              </button>
+            </td>
+          </tr>
+          <tr ng-repeat="instance in instances">
+            <td>{{ instance.email }}</td>
+            <td><button class="btn btn-danger" ng-click="revokeBadge(instance.email)">{{ "Revoke badge" | i18n }}</button></td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>

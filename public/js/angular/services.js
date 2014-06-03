@@ -6,6 +6,29 @@ angular
       return decodeURIComponent(input);
     };
   })
+  .factory('wmNav', [
+    '$window',
+    function ($window) {
+
+      var activePage = '';
+      var activeSection = '';
+
+      return {
+        page: function (page) {
+          if (page) {
+            activePage = page;
+          }
+          return activePage;
+        },
+        section: function (section) {
+          if (section) {
+            activeSection = section;
+          }
+          return activeSection;
+        }
+      };
+    }
+  ])
   .factory('weblit', [
     '$window',
     function ($window) {

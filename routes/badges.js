@@ -8,21 +8,17 @@ module.exports = function (env) {
   });
 
   return {
-    admin: function (req, res, next) {
+    getAll: function (req, res, next) {
       badgeClient.getBadges({
         system: env.get('BADGES_SYSTEM')
       }, function (err, badges) {
         if (err) {
-          return next(err);
+          return res.send(500, err.message);
         }
-        res.render('badges-admin.html', {
-          page: 'badges-admin',
-          view: 'badges',
-          badges: badges
-        });
+        res.json(badges);
       });
     },
-    adminBadge: function (req, res, next) {
+    getInstances: function (req, res, next) {
       badgeClient.getBadgeInstances({
         system: env.get('BADGES_SYSTEM'),
         badge: req.params.badge
@@ -30,7 +26,7 @@ module.exports = function (env) {
 
         // Errors
         if (err) {
-          return next(err);
+          return res.send(500, err.message);
         }
 
         // If there are no instances, we need to get the badge data.
@@ -39,21 +35,20 @@ module.exports = function (env) {
             system: env.get('BADGES_SYSTEM'),
             badge: req.params.badge
           }, function (err, badge) {
-            res.render('badges-admin-badge.html', {
-              page: 'badges-admin',
-              view: 'badges',
-              instances: [],
-              badge: badge
+            if (err) {
+              return res.send(500, err.message);
+            }
+            res.json({
+              badge: badge,
+              instances: []
             });
           });
 
           // If there are instances
         } else {
-          res.render('badges-admin-badge.html', {
-            page: 'badges-admin',
-            view: 'badges',
-            instances: instances,
-            badge: instances[0].badge
+          res.json({
+            badge: instances[0].badge,
+            instances: instances
           });
         }
 

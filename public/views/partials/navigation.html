@@ -64,7 +64,7 @@
             <li
               ng-repeat="skill in literacies"
               class="literacy"
-              ng-class="{ active : isActive(skill.tag) }">
+              ng-class="{ active : isActivePage(skill.tag) }">
               <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" ng-click="collapseAll()" class="color-{{$index}}">{{ skill.term }}</a>
             </li>
           </ul>

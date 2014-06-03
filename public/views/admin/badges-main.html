@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="panel panel-badges">
+    <div class="panel-body">
+      <hgroup>
+        <h1>{{ "Badges Admin" | i18n }}</h1>
+        <p class="lead">{{ "ChooseABadge" | i18n }}</p>
+      </hgroup>
+      <div>
+        <div ng-repeat="badge in badges" class="row badge-row-admin">
+          <a href="{{ baseUrl }}admin/badges/{{ badge.slug }}">
+            <div class="col-xs-4 col-sm-2">
+              <img ng-src="{{ badge.imageUrl }}">
+            </div>
+            <div class="col-xs-8 col-sm-10">
+              <h3>{{ badge.name }}</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

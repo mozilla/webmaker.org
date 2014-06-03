@@ -103,7 +103,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
 
       var claimcode = $claimCodeInput.val();
       if (claimcode.length) {
-        $.post('/badges/' + slug + '/claim', {
+        $.post('/api/badges/' + slug + '/claim', {
           claimcode: claimcode,
           _csrf: $('meta[name="csrf-token"]').attr('content')
         })
@@ -114,7 +114,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
             emitter.emitEvent('error', [err]);
           });
       } else {
-        $.post('/badges/' + slug + '/apply', {
+        $.post('/api/badges/' + slug + '/apply', {
           evidence: $evidenceInput.val(),
           _csrf: $('meta[name="csrf-token"]').attr('content')
         })
@@ -129,7 +129,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
 
     $issueForm.on('submit', function (e) {
       e.preventDefault();
-      $.post('/badges/' + slug + '/issue', {
+      $.post('/api/badges/' + slug + '/issue', {
         email: $issueForm.find('[name="email"]').val(),
         comment: $issueForm.find('[name="comment""]').val(),
         _csrf: $('meta[name="csrf-token"]').attr('content')

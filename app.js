@@ -333,6 +333,10 @@ app.get("/", routes.gallery({
 if (env.get('FLAGS_EXPLORE')) {
   app.get('/explore', routes.angular);
   app.get('/resources/:section?/:competency?', routes.angular);
+  // Badges admin
+  app.get('/admin/badges', middleware.checkAdmin, routes.angular);
+  app.get('/admin/badges/:badge', middleware.checkAdmin, routes.angular);
+
 } else {
   app.get("/resources", routes.gallery({
     layout: "starterMakes",
@@ -361,16 +365,16 @@ app.get("/privacy-makes", routes.gallery({
   limit: 20
 }));
 
-// Badges admin
-app.get("/admin/badges", middleware.checkAdmin, routes.badges(env).admin);
-app.get("/admin/badges/:badge", middleware.checkAdmin, routes.badges(env).adminBadge);
-app.delete("/badges/:badge/instance/email/:email", middleware.checkAdmin, routes.badges(env).deleteInstance);
-
-// Badges
+// Badge detail
 app.get("/badges/:badge?", routes.badges(env).details);
-app.post("/badges/:badge/apply", routes.badges(env).apply);
-app.post("/badges/:badge/claim", routes.badges(env).claim);
-app.post("/badges/:badge/issue", routes.badges(env).issue);
+
+// Badges API
+app.get("/api/badges", routes.badges(env).getAll);
+app.post("/api/badges/:badge/apply", routes.badges(env).apply);
+app.post("/api/badges/:badge/claim", routes.badges(env).claim);
+app.post("/api/badges/:badge/issue", routes.badges(env).issue);
+app.get("/api/badges/:badge/instances", middleware.checkAdmin, routes.badges(env).getInstances);
+app.delete("/api/badges/:badge/instance/email/:email", middleware.checkAdmin, routes.badges(env).deleteInstance);
 
 app.post("/api/submit-resource", routes.api.submitResource);
 

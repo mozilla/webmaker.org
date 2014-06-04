@@ -135,6 +135,11 @@
         "id": "literacy",
         "title": "Documentation",
         "url": "literacy"
+      },
+      {
+        "id": "mentor",
+        "title": "Mentor",
+        "url": "mentor"
       }
     ]
   },
@@ -159,6 +164,11 @@
         "id": "literacy",
         "title": "WebLiteracyMap",
         "url": "literacy"
+      },
+      {
+        "id": "mentor",
+        "title": "Mentor",
+        "url": "mentor"
       }
     ]
   },

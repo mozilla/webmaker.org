@@ -115,15 +115,15 @@
     ]
   },
   {
-    "id": "resources",
-    "title": "Resources",
+    "id": "teach",
+    "title": "Teach",
     "icon": "icon-book",
     "exclude": "explore",
-    "defaultUrl": "resources",
+    "defaultUrl": "teach",
     "pages": [
       {
         "id": "teach",
-        "title": "Resources",
+        "title": "Teach",
         "url": "teach"
       },
       {

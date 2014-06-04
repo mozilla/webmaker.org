@@ -185,6 +185,7 @@
       .icon(@fa-check);
     }
   }
+
 }
 
 footer.footer-competency {
@@ -220,35 +221,38 @@ footer.footer-competency {
       border-color: @blue;
     }
   }
-}
+  .panel-body {
+    padding: 40px;
+    font-size: 1.8rem;
+    .form-group {
+      padding: 5px;
+    }
+  }
 
-.panel-body {
-  padding: 40px;
-  font-size: 1.8rem;
-  .form-group {
-    padding: 5px;
+  // Close button
+  .close-panel {
+    background: none;
+    float: right;
+    color: fade(#FFF, 80%);
+    margin-top: -20px;
+    margin-right: -20px;
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  input#language {
+    width: 50%;
+  }
+
+  .panel-body label {
+    padding: 5px 0;
   }
 }
 
-// Close button
-.close-panel {
-  background: none;
-  float: right;
-  color: fade(#FFF, 80%);
-  margin-top: -20px;
-  margin-right: -20px;
-  &:hover {
-    color: #FFF;
-  }
-}
 
-input#language {
-  width: 50%;
-}
 
-.panel-body label {
-  padding: 5px 0;
-}
+
 
 // Font size override
 

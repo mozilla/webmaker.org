@@ -365,16 +365,21 @@ app.get("/privacy-makes", routes.gallery({
   limit: 20
 }));
 
+// Initialize badges routes
+var badgesRoutes = routes.badges(env);
+
 // Badge detail
-app.get("/badges/:badge?", routes.badges(env).details);
+app.get("/badges/:badge?", badgesRoutes.details);
 
 // Badges API
-app.get("/api/badges", routes.badges(env).getAll);
-app.post("/api/badges/:badge/apply", routes.badges(env).apply);
-app.post("/api/badges/:badge/claim", routes.badges(env).claim);
-app.post("/api/badges/:badge/issue", routes.badges(env).issue);
-app.get("/api/badges/:badge/instances", middleware.checkAdmin, routes.badges(env).getInstances);
-app.delete("/api/badges/:badge/instance/email/:email", middleware.checkAdmin, routes.badges(env).deleteInstance);
+app.get("/api/badges", badgesRoutes.getAll);
+app.post("/api/badges/:badge/apply", badgesRoutes.apply);
+app.post("/api/badges/:badge/claim", badgesRoutes.claim);
+app.post("/api/badges/:badge/issue", badgesRoutes.issue);
+app.get("/api/badges/:badge/instances", middleware.checkAdmin, badgesRoutes.getInstances);
+app.get("/api/badges/:badge/applications", badgesRoutes.getApplications);
+app.post("/api/badges/:badge/applications/:application/review", badgesRoutes.submitReview);
+app.delete("/api/badges/:badge/instance/email/:email", middleware.checkAdmin, badgesRoutes.deleteInstance);
 
 app.post("/api/submit-resource", routes.api.submitResource);
 

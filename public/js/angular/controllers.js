@@ -220,8 +220,8 @@ angular
         });
     }
   ])
-  .controller('badgesAdminBadgeController', ['$scope', '$http', '$routeParams', 'wmNav',
-    function ($scope, $http, $routeParams, wmNav) {
+  .controller('badgesAdminBadgeController', ['$scope', '$http', '$window', '$routeParams', '$modal', 'wmNav',
+    function ($scope, $http, $window, $routeParams, $modal, wmNav) {
       wmNav.page('badges-admin');
       wmNav.section('explore');
 
@@ -253,16 +253,79 @@ angular
 
       // This revokes badges
       $scope.revokeBadge = function (email) {
-        $http
-          .delete('/api/badges/' + currentBadge + '/instance/email/' + email)
-          .success(function () {
-            for (var i = 0; i < $scope.instances.length; i++) {
-              if ($scope.instances[i].email === email) {
-                $scope.instances.splice(i, 1);
+        var ok = $window.confirm('Are you sure you want to delete ' + email + "'s badge?");
+        if (ok) {
+          $http
+            .delete('/api/badges/' + currentBadge + '/instance/email/' + email)
+            .success(function () {
+              for (var i = 0; i < $scope.instances.length; i++) {
+                if ($scope.instances[i].email === email) {
+                  $scope.instances.splice(i, 1);
+                }
               }
+            })
+            .error(onError);
+        }
+      };
+
+      // This opens the review application dialog
+      $scope.reviewApplication = function reviewApplication(application) {
+        $modal.open({
+          templateUrl: '/views/partials/review-application-modal.html',
+          resolve: {
+            application: function () {
+              return application;
             }
-          })
-          .error(onError);
+          },
+          controller: ReviewApplicationController
+        }).result.then(function (review) {
+          $http
+            .post('/api/badges/' + currentBadge + '/applications/' + review.id + '/review', {
+              comment: review.comment,
+              reviewItems: createReviewItems(review.decision)
+            })
+            .success(function () {
+              for (var i = 0; i < $scope.applications.length; i++) {
+                if ($scope.applications[i].slug === review.id) {
+                  $scope.applications.splice(i, 1);
+                }
+              }
+            })
+            .error(onError);
+        });
+      };
+
+      // Allows all criteria to be satisfied/not satisfied based on single decision
+
+      function createReviewItems(decision) {
+        var criteria = $scope.badge.criteria;
+        var reviewItems = [];
+        // true not allowed due to bug 1021186
+        var satisfied = decision === 'yes';
+
+        criteria.forEach(function (item) {
+          reviewItems.push({
+            criterionId: item.id,
+            satisfied: satisfied,
+            comment: ''
+          });
+        });
+
+        return reviewItems;
+      }
+
+      var ReviewApplicationController = function ($scope, $modalInstance, application) {
+        $scope.review = {
+          id: application.slug
+        };
+        $scope.application = application;
+        $scope.ok = function () {
+          $modalInstance.close($scope.review);
+        };
+
+        $scope.cancel = function () {
+          $modalInstance.dismiss('cancel');
+        };
       };
 
       // On load, Get all instances
@@ -271,6 +334,14 @@ angular
         .success(function (data) {
           $scope.instances = data.instances;
           $scope.badge = data.badge;
+        })
+        .error(onError);
+
+      // Also get applications
+      $http
+        .get('/api/badges/' + currentBadge + '/applications')
+        .success(function (data) {
+          $scope.applications = data;
         })
         .error(onError);
     }

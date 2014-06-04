@@ -7,6 +7,14 @@ module.exports = function (env) {
     secret: env.get('BADGES_SECRET')
   });
 
+  function isAdminOrSuperMentor(req) {
+    if (req.session.user && (req.session.user.isAdmin || req.session.user.isCollaborator)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   return {
     getAll: function (req, res, next) {
       badgeClient.getBadges({
@@ -29,28 +37,19 @@ module.exports = function (env) {
           return res.send(500, err.message);
         }
 
-        // If there are no instances, we need to get the badge data.
-        else if (!instances || !instances.length) {
-          badgeClient.getBadge({
-            system: env.get('BADGES_SYSTEM'),
-            badge: req.params.badge
-          }, function (err, badge) {
-            if (err) {
-              return res.send(500, err.message);
-            }
-            res.json({
-              badge: badge,
-              instances: []
-            });
-          });
-
-          // If there are instances
-        } else {
+        // We need to get the badge data too
+        badgeClient.getBadge({
+          system: env.get('BADGES_SYSTEM'),
+          badge: req.params.badge
+        }, function (err, badge) {
+          if (err) {
+            return res.send(500, err.message);
+          }
           res.json({
-            badge: instances[0].badge,
+            badge: badge,
             instances: instances
           });
-        }
+        });
 
       });
     },
@@ -122,7 +121,7 @@ module.exports = function (env) {
     },
     issue: function (req, res, next) {
 
-      if (!req.session.user || !(req.session.user.isAdmin || req.session.user.isCollaborator)) {
+      if (!isAdminOrSuperMentor(req)) {
         return res.send(400, {
           error: 'Sorry, you must be an admin or collaborator to issue badges'
         });
@@ -179,13 +178,63 @@ module.exports = function (env) {
         badgeClient.createBadgeInstance(instanceQuery, function (err, data) {
           if (err) {
             var errorString = err.message;
-            return res.send(500, {
-              error: errorString
-            });
+            return res.send(500, errorString);
           }
 
           res.send(data);
         });
+      });
+    },
+    getApplications: function (req, res, next) {
+      if (!req.session.user) {
+        return res.send(401, 'You must be logged in view applications');
+      }
+
+      if (!isAdminOrSuperMentor) {
+        return res.send(403, 'You are not authorized to view applications');
+      }
+
+      badgeClient.getApplications({
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.params.badge
+      }, function (err, raw) {
+        if (err) {
+          return res.send(500, err.message);
+        }
+
+        var applications = [];
+        // No way to query for pending applications only.
+        // See bug 1021009
+        if (req.query.processed) {
+          applications = raw;
+        } else {
+          raw.forEach(function (application) {
+            if (!application.processed) {
+              applications.push(application);
+            }
+          });
+        }
+
+        res.send(applications);
+      });
+    },
+    submitReview: function (req, res, next) {
+      var context = {
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.params.badge,
+        application: req.params.application,
+        review: {
+          author: req.session.email,
+          comment: req.body.comment,
+          reviewItems: req.body.reviewItems
+        }
+      };
+      console.log(context, req.body.reviewItems);
+      badgeClient.addReview(context, function (err, review) {
+        if (err) {
+          return res.send(500, err.message);
+        }
+        return res.send(200, 'Success');
       });
     }
   };

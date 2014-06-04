@@ -22,6 +22,15 @@
   .justify-content(center);
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
+// Use in badges application modal
+dd {
+  margin-bottom: @line-height-computed;
+}
+
 //  Navbar Header
 @navbar-height: 60px;
 
@@ -158,4 +167,24 @@
     }
   }
 
+}
+
+/* ===========
+* Modal
+*/
+@modal-inner-padding: 40px;
+@modal-title-padding: 40px;
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.modal-footer {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+.modal {
+  .form-group {
+    margin-bottom: @line-height-computed;
+  }
 }

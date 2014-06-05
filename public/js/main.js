@@ -38,7 +38,7 @@ requirejs.config({
     'jquery-ui': ['jquery'],
     'jquery-ui.widget': ['jquery-ui'],
     'jquery-ui.position': ['jquery-ui'],
-    'jquery-ui.menu': ['jquery-ui'],
+    'jquery-ui.menu': ['jquery-ui', 'jquery-ui.widget'],
     'jquery-ui.autocomplete': ['jquery-ui', 'jquery-ui.widget', 'jquery-ui.position', 'jquery-ui.menu']
   }
 });

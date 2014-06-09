@@ -69,8 +69,12 @@ module.exports = function (app) {
   }, {
     route: app.locals.EVENTS_URL,
     paths: [
-      "/events",
-      "/events/*"
+      "/events"
+    ]
+  }, {
+    route: app.locals.EVENTS_URL + '/#!/events/:event',
+    paths: [
+      "/events/:event"
     ]
   }, {
     route: "/mentor",
@@ -87,7 +91,13 @@ module.exports = function (app) {
   redirectMap.forEach(function (redirect) {
     redirect.paths.forEach(function (legacyRoute) {
       app.get(legacyRoute, function (req, res) {
-        res.redirect(301, redirect.route);
+        var newURL = redirect.route;
+
+        for (var param in req.params) {
+          newURL = newURL.replace(':' + param, req.params[param]);
+        }
+
+        res.redirect(301, newURL);
       });
     });
   });

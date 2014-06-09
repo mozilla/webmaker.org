@@ -4,7 +4,7 @@
 
   p {
     font-size: 16px;
-    line-height: 1.6;
+    //    line-height: 1.6;
   }
 
   h1, h2, h3 {
@@ -95,10 +95,38 @@
 }
 
 #front-page-tools {
+  .tool {
+    margin: 0 auto 1.6rem;
+    min-height: 0.1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    width: 25.8rem;
+    @media screen and (min-width: 32.25em) {
+      float: left;
+      width: 50%;
+    }
+    @media screen and (min-width: @screen-md) {
+      width: 25%;
+    }
+  }
   a {
+    h3 {
+      transition: opacity 300ms;
+    }
     &:link, &:visited, &:hover, &:active {
       color: @grey;
       text-decoration: none;
+    }
+    &:link, &:visited {
+      h3 {
+        opacity: 0.9;
+      }
+    }
+    &:hover, &:active {
+      h3 {
+        opacity: 1;
+      }
     }
   }
   h3 {
@@ -110,122 +138,23 @@
     }
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 162px auto;
+    background-size: 705px 164px;
     height: auto;
-    margin: 0 auto;
-    padding-top: 15.1rem;
-    max-width: 16.4rem;
-
-    &.disabled {
-      color: @lightgrey;
-    }
+    margin: 0 auto 1rem;
+    padding-top: 17.5rem;
+    max-width: 18rem;
 
     &.xray-goggles {
-      background-position: 50% -56.7rem;
+      background-position: 1.6rem 0;
     }
     &.thimble {
-      background-position: 50% -38.7rem;
+      background-position: -17.1rem 0;
     }
     &.popcorn-maker {
-      background-position: 50% -19.8rem;
+      background-position: -35.9rem 0;
     }
     &.appmaker {
-      background-position: 50% -1.9rem;
-    }
-
-    @media screen and (min-width: @screen-sm) {
-      background-size: 156px auto;
-      padding-top: 14.3rem;
-      &.xray-goggles {
-        background-position: 50% -53.9rem;
-      }
-      &.thimble {
-        background-position: 50% -36.7rem;
-      }
-      &.popcorn-maker {
-        background-position: 50% -19.1rem;
-      }
-      &.appmaker {
-        background-position: 50% -2.1rem;
-      }
-    }
-
-    @media screen and (min-width: @screen-md) {
-      background-size: 136px auto;
-      padding-top: 12.5rem;
-      &.xray-goggles {
-        background-position: 50% -46.8rem;
-      }
-      &.thimble {
-        background-position: 50% -31.8rem;
-      }
-      &.popcorn-maker {
-        background-position: 50% -16.6rem;
-      }
-      &.appmaker {
-        background-position: 50% -1.4rem;
-      }
-    }
-
-    @media screen and (min-width: @screen-lg) {
-      background-size: 162px auto;
-      padding-top: 14.9rem;
-
-      &.xray-goggles {
-        background-position: 50% -55.9rem;
-      }
-      &.thimble {
-        background-position: 50% -37.9rem;
-      }
-      &.popcorn-maker {
-        background-position: 50% -19.8rem;
-      }
-      &.appmaker {
-        background-position: 50% -1.8rem;
-      }
-    }
-  }
-
-  .tools-img {
-    width: auto;
-    height: 100px;
-  }
-  .appmaker-container {
-    position: relative;
-    display: block;
-    background: url(/img/explore/logo-appmaker-fpo-2x.png) center no-repeat;
-    background-size: auto 100%;
-    padding-top: 40px;
-  }
-  .ribbon {
-    display: inline-block;
-    white-space: nowrap;
-    background: @brand-primary;
-    color: white;
-    position: relative;
-    padding: 0 20px;
-    height: 22px;
-    line-height: 22px;
-    font-size: 12px;
-    font-style: italic;
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-    }
-    &:before {
-      left: 0;
-      border-width: 11px 0 11px 10px;
-      border-color: transparent transparent transparent white;
-    }
-    &:after {
-      right: 0;
-      border-width: 11px 10px 11px 0;
-      border-color: transparent white transparent transparent;
+      background-position: -54.6rem 0;
     }
   }
 }

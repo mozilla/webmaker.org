@@ -32,9 +32,6 @@
   p {
     line-height: 1.555740433;
   }
-  figcaption p {
-    font-size: 1.3rem;
-  }
   section {
     margin-bottom: 4rem;
     @media screen and (min-width: @screen-sm) {
@@ -47,15 +44,39 @@
   @media screen and (min-width: @screen-md) {
     margin-bottom: 0;
   }
-  figure {
-    margin-top: 4.5rem;
+  .resources-map {
+    @media screen and (min-width: @screen-sm) {
+      margin-top: 8rem;
+    }
     @media screen and (min-width: @screen-md) {
+      margin-top: 4.6rem;
+    }
+    @media screen and (min-width: @screen-lg) {
       margin-top: 2.5rem;
     }
     img {
       display: block;
-      margin: 0 auto 1.8rem;
-      max-width: 42rem;
+      margin: 1rem auto;
+      max-width: 22rem;
+
+      @media screen and (min-width: 31.25em) {
+        float: right;
+      }
+      @media screen and (min-width: @screen-sm) {
+        float: none;
+        max-width: 63.8225256%;
+      }
+    }
+    figcaption {
+      @media screen and (min-width: 31.25em) {
+        padding-top: 4rem;
+      }
+      @media screen and (min-width: @screen-sm) {
+        padding-top: 1.6rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
     }
   }
 }

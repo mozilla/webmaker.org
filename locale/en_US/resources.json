@@ -11,6 +11,10 @@
     "message": "Webmaker educational resources are backed by <a href=\"/{{ lang }}/literacy\">Mozilla&rsquo;s Web Literacy Map</a>, covering the complete set of skills people need to thrive in today&rsquo;s digital world.",
     "description": "Caption for below the map graphic on resources home header section"
   },
+  "Weblit map alt text": {
+    "message" : "The Web Literacy Map helps you build literacy in exploring, building, and sharing the web.",
+    "description": "Alt text for the graphic of the web literacy map on /resources"
+  },
   "Web Literacy Map": {
     "message": "Web Literacy Map",
     "description": "The title of the competencies list"

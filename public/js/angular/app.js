@@ -26,8 +26,12 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/admin/badges-badge.html',
           controller: 'badgesAdminBadgeController'
         })
+        .when('/:locale?', {
+          templateUrl: '/views/home.html',
+          controller: 'homeController'
+        })
         .otherwise({
-          redirectTo: '/resources'
+          redirectTo: '/'
         });
 
       // html5mode
@@ -58,7 +62,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
         $rootScope.baseUrl = '/';
         if ($routeParams.locale) {
-          $rootScope.baseUrl += $routeParams.locale + '/';
+          $rootScope.baseUrl += ($routeParams.locale + '/');
         }
       });
 

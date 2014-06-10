@@ -1,0 +1,138 @@
+<section id="home-carousel">
+  <carousel interval="-1">
+    <slide class="slide" id="slide-1">
+      <div class="container text-center">
+        <img class="maker-party-logo" src="/img/home/maker-party-logo.svg" alt="Maker Party">
+        <h1>{{ 'Throw an Event' | i18n }}</h1>
+        <h3 bind-unsafe-html="'maker_party_date' | i18n"></h3>
+        <p class="lead">{{ 'Host a Maker party event to celebrate teaching, learning and making on the web.' | i18n }} <a href="/party">{{ 'Learn more' | i18n }}</a></p>
+      </div>
+    </slide>
+    <slide class="slide" id="slide-2">
+      <div class="slide-inner">
+        <div class="container text-center">
+          <h1>{{ 'I hosted a maker party where women taught the the wonders of the web' | i18n }}</h1>
+          <p class="lead">{{ 'J Faye Tandog, Manilla, Phillippines' | i18n }}</p>
+        </div>
+      </div>
+    </slide>
+    <slide class="slide" id="slide-3">
+      <div class="slide-inner">
+        <div class="container text-center">
+          <h1>{{ 'We remixed our favorite stories using digital media and the web' | i18n }}</h1>
+          <p class="lead">{{ 'Hive NYC Storymakers, Brooklyn Public Library, New York' | i18n }}</p>
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</section>
+
+<section id="home-teach-the-web">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4">
+        <div class="illustration">
+          <!-- <img dir="ltr" class="cat-off" src="/img/cat-off.png">
+          <img class="browser-off" src="/img/browser-off.png"> -->
+          <img class="browser-on hidden-scroll" src="/img/browser-on.png">
+          <img dir="ltr" class="cat-on hidden-scroll" src="/img/cat.gif">
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-8">
+        <h1>{{ 'We teach the web' | i18n }}</h1>
+        <p>{{ 'front-page-description' | i18n }}</p>
+        <p>
+          <button class="btn btn-default" ng-click="login()">{{ 'Create an account' | i18n }}</button>
+          <button class="btn btn-success" ng-click="login()">{{ 'Sign in' | i18n }}</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="home-features">
+  <div class="container text-center">
+    <div class="row">
+      <div class="feature col-sm-4">
+        <div class="img-container map"></div>
+        <h2>{{ 'Explore Webmaker' | i18n }}</h2>
+        <p>{{ 'See all the things Webmaker has to offer in the brand new Explore section' | i18n }}</p>
+      </div>
+      <div class="feature col-sm-4">
+        <div class="img-container resources"></div>
+        <h2>{{ 'Resources' | i18n }}</h2>
+        <p>{{ 'Teach the web with Webmaker resources: free and hackable tools, activities and lesson plans' | i18n }}</p>
+      </div>
+      <div class="feature col-sm-4">
+        <div class="img-container get-together"></div>
+        <h2>{{ 'Get Together' | i18n }}</h2>
+        <p>{{ 'Join others at a local event of Maker Party or collaborate online' | i18n }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container text-center">
+    <p class="lead hidden-xs">{{ 'Mozillaian like you' | i18n }}</p>
+    <ul class="sponsors list-inline hidden-xs" marquee>
+      <li>Chicago Community Trust</li>
+      <li>Chicago Instructional Technology Foundation</li>
+      <li>City of Chicago</li>
+      <li>Corporation for Public Broadcasting</li>
+      <li>U.S. Department of Energy</li>
+      <li>Ford Foundation</li>
+      <li>Google</li>
+      <li>Intel</li>
+      <li>Knight Foundation</li>
+      <li>MacArthur Foundation</li>
+      <li>National Endowment for the Arts</li>
+      <li>NESTA</li>
+      <li>The Nominet Trust</li>
+      <li>National Science Foundation</li>
+      <li>Ontario Trillium Foundation</li>
+      <li>Social Science Research Council</li>
+      <li>Alfred P. Sloan Foundation</li>
+      <li>Telefonica</li>
+      <li>ZeroDivide</li>
+    </ul>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-left">
+        <form name="emailForm" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
+          <div class="input-group">
+            <span class="input-group-addon"><span class="fa fa-envelope"></span></span>
+            <input class="form-control" type="email" ng-model="emailUpdates" name="email" autocomplete="off"  required placeholder="{{ 'Sign up for email updates' | i18n }}" >
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit" ng-disabled="emailForm.$invalid || !emailPrivacy">
+                <span class="fa fa-chevron-right"></span>
+              </button>
+            </span>
+          </div><!-- /input-group -->
+          <div class="checkbox" ng-show="emailUpdates" >
+            <label for="newsletter-signup-checkbox-proxy">
+              <input type="checkbox" ng-model="emailPrivacy" name="custom-1216" required> {{ "privacy-desc" | i18n }} <a href="/{{ lang }}/privacy" target="_blank">{{ "privacy policy" | i18n }}</a>.
+            </label>
+          </div>
+        </form>
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+  </div>
+</footer>
+<nav class="navbar navbar-no-header-xs navbar-tertiary">
+  <div class="container">
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="mailto:help@webmaker.org">{{ 'Contact' | i18n }}</a></li>
+        <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ 'Donate' | i18n }}</a></li>
+        <li><a href="/{{lang}}/privacy" external-link="true">{{ 'Privacy' | i18n }}</a></li>
+        <li><a href="/{{lang}}/terms" external-link="true">{{ 'Legal' | i18n }}</a></li>
+        <li><a href="https://support.mozilla.org/products/webmaker">{{ 'Help' | i18n }}</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://twitter.com/webmaker"><span class="fa fa-twitter"></span> @webmaker</a></li>
+        <li><a href="https://plus.google.com/u/2/communities/106022863174952221205"><span class="fa fa-google-plus"></span> {{ 'google+' | i18n }}</a></li>
+        <li><a href="http://blog.webmaker.org"><span class="fa fa-file-text-o"></span> {{ 'Blog' | i18n }}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

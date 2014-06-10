@@ -7,8 +7,8 @@ angular
     };
   })
   .factory('wmNav', [
-    '$window',
-    function ($window) {
+    '$rootScope',
+    function ($rootScope) {
 
       var activePage = '';
       var activeSection = '';
@@ -17,12 +17,14 @@ angular
         page: function (page) {
           if (page) {
             activePage = page;
+            $rootScope.currentPageId = 'page-' + page;
           }
           return activePage;
         },
         section: function (section) {
           if (section) {
             activeSection = section;
+            $rootScope.currentSectionId = section;
           }
           return activeSection;
         }

@@ -323,13 +323,8 @@ app.post('/check-username', webmakerAuth.handlers.exists);
 
 app.get("/healthcheck", routes.api.healthcheck);
 
-app.get("/", routes.gallery({
-  layout: "teachtheweb",
-  prefix: "frontpage",
-  limit: 10
-}));
-
 // Angular
+app.get('/', routes.angular);
 if (env.get('FLAGS_EXPLORE')) {
   app.get('/explore', routes.angular);
   app.get('/resources/:section?/:competency?', routes.angular);

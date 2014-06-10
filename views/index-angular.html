@@ -10,6 +10,25 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
+    <!-- For sharing & search engines -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://webmaker.org/img/logo-og.png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="1400" />
+    <meta property="og:site_name" content="Webmaker" />
+    <meta property="og:determiner" content="" />
+    <meta property="og:locale" content="{{ lang | openGraphLocale }}" />
+    <meta ng-repeat="language in languages track by $index" property="og:locale:alternate" content="{{ language | openGraphLocale }}" />
+    <!-- TODO update og:title maybe add an angular factory to update all of meta -->
+    <meta property="og:title" content="Mozilla Webmaker Web Literacy Resources" />
+    <meta property="og:description" content="We're a global community dedicated to teaching digital skills and web literacy. We explore, tinker and create together to build a web that's open and made by everyone." />
+    <meta property="og:url" content="https://webmaker.org{{ currentPath }}" />
+
+    <link rel="canonical" href="https://webmaker.org{{ currentPath }}" />
+    <meta property="description" content="We're a global community dedicated to teaching digital skills and web literacy. We explore, tinker and create together to build a web that's open and made by everyone." />
+    <!-- /sharing -->
+
+
     <!-- We have to do this to make sure we display the page when localization has been loaded. -->
     <style>
       html, body {

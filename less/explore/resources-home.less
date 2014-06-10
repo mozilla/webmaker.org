@@ -156,33 +156,8 @@
       font-size: 4rem;
       margin-top: 4rem;
     }
-    &::before {
-      .icon-FontAwesome;
-      color: @resources-blue;
-      background: lighten(@grey, 55%);
-      border: solid lighten(@grey, 55%) 0.6em;
-      border-bottom-width: 0.55em;
-      border-left-width: 0.55em;
-      border-radius: 50%;
-      font-size: 0.725em;
-      margin-right: 1rem;
-      position: relative;
-      top: -0.1em;
-    }
-    &.resource-discover {
-      &::before {
-        content: @fa-random;
-      }
-    }
-    &.resource-make {
-      &::before {
-        content: @fa-hand-o-up;
-      }
-    }
-    &.resource-teach {
-      &::before {
-        content: @fa-book;
-      }
+    .fa-stack {
+      font-size: 0.8em;
     }
   }
 }

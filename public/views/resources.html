@@ -78,17 +78,35 @@
     </div>
     <div class="row">
       <aside class="col-sm-4">
-        <h3 class="resource-discover">{{ "Discover" | i18n }}</h3>
+        <h3>
+          <span class="fa-stack">
+            <span class="fa fa-circle fa-stack-2x text-lightgrey"></span>
+            <span class="fa fa-random fa-stack-1x text-secondary"></span>
+          </span>
+          {{ "Discover" | i18n }}
+        </h3>
 
         <p ng-bind-html="'Get your feet wet' | i18n"></p>
       </aside>
       <aside class="col-sm-4">
-        <h3 class="resource-make">{{ "Make" | i18n }}</h3>
+        <h3>
+          <span class="fa-stack">
+            <span class="fa fa-circle fa-stack-2x text-lightgrey"></span>
+            <span class="fa fa-hand-o-up fa-stack-1x text-secondary"></span>
+          </span>
+          {{ 'Make' | i18n }}
+        </h3>
 
         <p ng-bind-html="'Get your hands dirty' | i18n"></p>
       </aside>
       <aside class="col-sm-4">
-        <h3 class="resource-teach">{{ "Teach" | i18n }}</h3>
+        <h3>
+          <span class="fa-stack">
+            <span class="fa fa-circle fa-stack-2x text-lightgrey"></span>
+            <span class="fa fa-book fa-stack-1x text-secondary"></span>
+          </span>
+          {{ 'Teach' | i18n }}
+        </h3>
 
         <p ng-bind-html="'Share what you know' | i18n "></p>
       </aside>

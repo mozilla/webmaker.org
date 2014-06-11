@@ -1029,7 +1029,7 @@
     }
   },
   "weblit-Community": {
-    "intro": "Why should the web be open?  In recent years, corporations have tried to control the web through proprietary software and private, walled-off sections of the Internet. Learning to collaborate online as part of a global community of contributors and creators is an empowering way to ensure that the web remains a shared resource for everyone.",
+    "intro": "Who owns the web?  One of the beatiful things about the web is that it is a global, public resource. Learning to collaborate online as part of a global community of contributors and creators is an empowering way to ensure that the web remains a shared resource for everyone.",
     "related": "weblit-Credibility",
     "discover": [
       {
@@ -1071,8 +1071,8 @@
     ],
     "make": [
       {
-        "title": "",
-        "description": ""
+        "title": "Become a Webmaker Contributor",
+        "description": "Whether you write code, want to translate Webmaker into a new language, host an event or teach someone, there are many ways to <a href="/getinvolved">get involved in this open source project.</a> "
       }
     ],
     "teach": {

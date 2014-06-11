@@ -47,7 +47,7 @@ angular
 
       webmakerLoginService.on('newuser', function (assertion) {
         $modal.open({
-          templateUrl: 'views/create-user-form.html',
+          templateUrl: '/views/create-user-form.html',
           controller: createUserCtrl,
           resolve: {
             assertion: function () {

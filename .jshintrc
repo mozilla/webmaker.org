@@ -6,7 +6,8 @@
     "require": true,
     "console": true,
     "$": true,
-    "angular": true
+    "angular": true,
+    "window": true
   },
   "bitwise": true,
   "curly": true,

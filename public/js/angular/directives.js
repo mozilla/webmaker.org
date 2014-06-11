@@ -59,6 +59,25 @@ angular
       };
     }
   ])
+  .directive('sampleMake', ['$window', 'makeapi',
+    function ($window, makeapi) {
+      return {
+        restrict: 'A',
+        templateUrl: '/views/partials/gallery-item.html',
+        link: function (scope, el, attrs) {
+          makeapi.makeapi
+            .id(attrs.makeId)
+            .then(function (err, makes) {
+              if (err) {
+                console.error(err);
+              }
+              scope.sampleMake = makes[0];
+              scope.$apply();
+            });
+        }
+      };
+    }
+  ])
   .directive('retinaImage', ['$window',
     function ($window) {
       'use strict';

@@ -1,0 +1,237 @@
+#make-gallery {
+  .make {
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.3);
+    color: @gray-light;
+    font-family: @primary-font;
+    font-size: 1.4rem;
+    font-weight: 300;
+    max-width: 30rem;
+    margin: 0 auto;
+    position: relative;
+
+    a {
+      transition: color 100ms;
+    }
+
+    h3 {
+      display: inline-block;
+      font-family: @primary-font;
+      font-size: 2.1rem;
+      font-weight: 300;
+      line-height: 1.3;
+      margin: 0 0 1rem;
+    }
+    h3, .make-meta {
+      a {
+        &:link, &:visited {
+          color: @black;
+        }
+        &:hover, &:active, &:focus {
+          color: @brand-info;
+        }
+      }
+    }
+
+    img {
+      height: auto;
+      margin: auto;
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.3;
+    }
+
+    .make-thumbnail {
+      opacity: 0.9;
+      transition: opacity 100ms;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .gallery-info {
+      padding: 1.9rem;
+    }
+
+    .data-avatar {
+      border-radius: 50%;
+      float: left;
+      height: 4.4rem;
+      margin-right: 0.6rem;
+      width: 4.4rem;
+    }
+
+    .btn-container {
+      text-align: center;
+      transition: opacity 100ms ease;
+    }
+
+    .btn {
+      font-size: 1.8rem;
+    }
+
+    .like-toggle {
+      color: @brand-danger;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 3rem;
+      margin-left: 0.5rem;
+      position: relative;
+      top: 0.6rem;
+      &.fa-heart-o {
+        color: @brand-primary;
+      }
+    }
+
+    .tag-container {
+      .icon-tags {
+        color: #CCC;
+      }
+      font-size: 1.4rem;
+      margin: 0.8rem 0 1.6rem;
+    }
+
+    .tag {
+      &:after {
+        content: ', ';
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+}
+
+.made-with-code {
+  color: @grey;
+  font-family: @primary-font;
+  font-size: 1.6rem;
+  position: relative;
+
+  h1, h2, h3 {
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 5.2rem;
+  }
+
+  h2 {
+    color: @brand-primary;
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 3.4rem;
+    font-weight: 300;
+  }
+
+  header {
+    p {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 1rem auto 2rem;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: remix-steps;
+    padding-left: 1.8rem;
+    li {
+      .container-fluid;
+      margin-bottom: 3rem;
+      position: relative;
+      &::before {
+        background: @lightgrey;
+        border-radius: 50%;
+        content: counter(remix-steps);
+        counter-increment: remix-steps;
+        display: block;
+        font-size: 0.75em;
+        left: -1.7em;
+        line-height: 2.3;
+        height: 2.5em;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        width: 2.5em;
+      }
+    }
+    figure {
+      .row;
+    }
+  }
+
+  .get-started {
+    padding-left: 3.3rem;
+    @media screen and (min-width: @screen-sm-min){
+      margin-top: 0;
+    }
+  }
+
+  footer {
+    background: @lightgrey;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+    position: relative;
+    right: 0;
+    h3 {
+      color: @brand-primary;
+      font-size: 3.1rem;
+      font-weight: 300;
+    }
+    ul {
+      padding-left: 2rem;
+    }
+  }
+}
+
+.mwc-top {
+  margin: 4rem auto;
+  position: relative;
+  @media screen and (min-width: 37em) {
+    min-height: 35.2rem;
+    padding-right: 22rem;
+  }
+  @media screen and (min-width: @screen-lg-min) {
+    margin-bottom: 0;
+  }
+}
+
+.mwc-logo-block {
+  display: block;
+  margin: 4rem auto;
+  width: 20rem;
+
+  @media screen and (min-width: 37em) {
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+[sample-make] {
+  margin-bottom: 4rem;
+  @media screen and (min-width: @screen-sm-min) {
+    margin-top: 1.3rem;
+  }
+}

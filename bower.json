@@ -25,7 +25,8 @@
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",
     "webmaker-language-picker": "0.0.22",
     "animate.css": "~3.1.0",
-    "ngScrollSpy": "1.0.2"
+    "ngScrollSpy": "1.0.2",
+    "angular-moment": "0.7.1"
   },
   "resolutions": {
     "angular": "1.2.14"

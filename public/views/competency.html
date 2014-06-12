@@ -23,16 +23,23 @@
   <div ng-controller="resourceFormController">
 
     <div ng-hide="clickedResource" class="well well-grey">
-      <h3>{{ 'Help us find great community content' | i18n }}
-      <span ng-show="_user.email">
-        <a href="#" ng-click="clickedResource = !clickedResource" class="btn btn-lg btn-success pull-right">
-          <span class="fa fa-plus"></span> {{ 'Suggest a resource' | i18n }}
-        </a>
-      </span>
-      <span ng-show="!_user.email">
-        <button ng-cloak ng-show="!_user.email" class="btn btn-lg btn-success pull-right" ng-click="login()">{{ 'Login to submit a resource' | i18n }}</button>
-      </span>
-      </h3>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3 bind-unsafe-html="'Suggest your own links and resources' | i18n"></h3>
+        </div>
+        <div class="col-sm-4 text-right">
+          <p>
+            <span ng-show="_user.email">
+            <a href="#" ng-click="clickedResource = !clickedResource" class="btn btn-lg btn-success">
+              <span class="fa fa-plus"></span> {{ 'Submit a resource' | i18n }}
+            </a>
+            </span>
+            <span ng-show="!_user.email">
+              <button ng-cloak ng-show="!_user.email" class="btn btn-lg btn-success" ng-click="login()">{{ 'Login to submit a resource' | i18n }}</button>
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
 
     <div ng-show="clickedResource" class="panel panel-navy">

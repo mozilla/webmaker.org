@@ -1072,7 +1072,7 @@
     "make": [
       {
         "title": "Become a Webmaker Contributor",
-        "description": "Whether you write code, want to translate Webmaker into a new language, host an event or teach someone, there are many ways to <a href="/{{ lang }}/getinvolved">get involved in this open source project.</a> "
+        "description": "Whether you write code, want to translate Webmaker into a new language, host an event or teach someone, there are many ways to <a href=\"/{{ lang }}/getinvolved\">get involved in this open source project.</a>"
       }
     ],
     "teach": {

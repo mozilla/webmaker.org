@@ -237,4 +237,32 @@ angular
       restrict: 'EA',
       template: '<img class="maker-party-arrow" src="/img/home/maker-party-arrow.svg">'
     };
-  });
+  })
+  .directive('languageSelect', ['CONFIG', '$timeout',
+    function (config, $timeout) {
+      return {
+        restrict: 'A',
+        link: function ($scope, $element) {
+          var options = [];
+          var lang;
+          for (var i = 0; i < config.supported_languages.length; i++) {
+            lang = config.supported_languages[i];
+            options.push({
+              id: lang,
+              title: config.langmap[lang] ? config.langmap[lang].englishName + ' - ' + config.langmap[lang].nativeName : lang
+            });
+          }
+          $timeout(function () {
+            $element.selectize({
+              options: options,
+              labelField: 'title',
+              valueField: 'id',
+              searchField: ['title']
+            });
+            var selectize = $element[0].selectize;
+            selectize.setValue('en-US');
+          });
+        }
+      };
+    }
+  ]);

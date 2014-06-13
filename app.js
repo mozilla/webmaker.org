@@ -453,6 +453,7 @@ app.get('/angular-config.js', function (req, res) {
   angularConfig.direction = req.localeInfo.direction;
   angularConfig.defaultLang = 'en-US';
   angularConfig.supported_languages = i18n.getSupportLanguages();
+  angularConfig.langmap = i18n.getAllLocaleCodes();
   angularConfig.csrf = req.csrfToken();
   angularConfig.wlcPoints = res.locals.wlcPoints;
 

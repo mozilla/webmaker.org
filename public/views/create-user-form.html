@@ -1,0 +1,37 @@
+<div class="modal-header">
+  <button ng-click="cancel()" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h3 class="modal-title" >{{ 'webmakerAuthWelcome' | i18n }}</h3>
+</div>
+<div class="modal-body">
+  <form class="form" name="form.user" novalidate>
+    <div class="form-group" ng-class="{'has-error': (submit || form.user.username.$dirty) && form.user.username.$invalid }">
+      <div class="row">
+        <div class="col-sm-6">
+          <label>{{ 'webmakerAuthChooseUsername' | i18n }}</label>
+        </div>
+        <div class="col-sm-6">
+          <input ng-model="user.username" name="username" autocomplete="off" class="form-control" ng-change="checkUsername()" required>
+          <span class="help-block" ng-show="form.user.username.$error.taken">{{ 'webmakerAuthTakenError' | i18n }}</span>
+          <span class="help-block" ng-show="(submit || form.user.username.$dirty) && form.user.username.$error.required">{{ 'webmakerAuthUsernameRequiredError' | i18n }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input ng-model="user.mailingList" name="mailingList" type="checkbox"> {{ 'webmakerAuthMailingList' | i18n }}
+      </label>
+    </div>
+    <div class="checkbox" ng-class="{'has-error': submit && !form.agree }">
+      <label>
+        <input ng-model="form.agree" name="agree" type="checkbox"><span bind-unsafe-html="'webmakerAuthAgreeToTerms' | i18n"></span>
+        <span class="help-block" ng-show="submit && !form.agree">{{ 'webmakerAuthAgreeError' | i18n }}</span>
+      </label>
+    </div>
+    <label>{{ 'Language Preference' | i18n }}</label>
+    <select ng-model="user.prefLocale" language-select></select>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">{{ 'Cancel' | i18n }}</button>
+  <button ng-click="createUser()" class="create-user btn btn-primary" type="button">{{ 'webmakerAuthCreateAccount' | i18n }}</button>
+</div>

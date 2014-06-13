@@ -7,6 +7,7 @@ module.exports = function (req, res) {
   var data = req.body;
   hatchet.send('suggest_featured_resource', {
     email: req.session.user.email,
+    userId: req.session.user.id,
     username: req.session.user.username,
     language: data.language,
     link: data.link,

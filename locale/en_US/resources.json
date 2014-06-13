@@ -83,24 +83,20 @@
     "message": "<strong>Mozilla Webmaker is different.</strong> We&rsquo;re an open source project built by and for a global community of educators, techies and people like you. We love the web and want to spread its creative potential to all. We&rsquo;d love to collaborate with you or have you <a href=\"/{{ lang }}/getinvolved\">get more involved</a>.",
     "description": "Copy for the people section"
   },
-  "Get Training.": {
-    "message": "Get training.",
+  "Get Training": {
+    "message": "Get training",
     "description": "Headline for the Get Training column"
   },
   "Join our free open online course": {
     "message": "Join our free open online course on how to teach the web.",
     "description": "Copy for the Get Training column"
   },
-  "Explore.": {
-    "message": "Explore.",
-    "description": "Headline for the Explore column"
-  },
   "Explore the community gallery": {
     "message": "Explore the community gallery and see what other webmakers are making.",
     "description": "Copy for the Explore column"
   },
-  "Get Involved.": {
-    "message": "Get Involved.",
+  "Get Involved": {
+    "message": "Get Involved",
     "description": "Headline for the Get Involved column"
   },
   "Get more involved": {

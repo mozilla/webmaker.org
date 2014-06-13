@@ -2,10 +2,15 @@
   background: lighten(@yellow, 28%);
   font-size: 1.2rem;
   left: 0;
+  margin-bottom: 2.5rem;
   padding-top: 0.8rem;
   position: relative;
   right: 0;
   text-align: center;
+
+  @media screen and (min-width: @screen-sm-min) {
+    margin-bottom: 4rem;
+  }
 }
 
 [ng-controller="resourcesHomeController"] {
@@ -21,37 +26,41 @@
   }
   h1 {
     font-size: 5rem;
-    @media screen and (min-width: @screen-md) {
+    @media screen and (min-width: @screen-md-min) {
       font-size: 6rem;
     }
   }
   h2 {
     color: @green;
     font-size: 3.6rem;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-bottom: 0.3rem;
+    }
+
   }
   p {
     line-height: 1.555740433;
   }
   section {
     margin-bottom: 4rem;
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-sm-min) {
       margin-bottom: 1.6rem;
     }
   }
 }
 
 #resources-Resources {
-  @media screen and (min-width: @screen-md) {
+  @media screen and (min-width: @screen-md-min) {
     margin-bottom: 0;
   }
   .resources-map {
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-sm-min) {
       margin-top: 8rem;
     }
-    @media screen and (min-width: @screen-md) {
+    @media screen and (min-width: @screen-md-min) {
       margin-top: 4.6rem;
     }
-    @media screen and (min-width: @screen-lg) {
+    @media screen and (min-width: @screen-lg-min) {
       margin-top: 2.5rem;
     }
     img {
@@ -62,7 +71,7 @@
       @media screen and (min-width: 31.25em) {
         float: right;
       }
-      @media screen and (min-width: @screen-sm) {
+      @media screen and (min-width: @screen-sm-min) {
         float: none;
         max-width: 63.8225256%;
       }
@@ -71,7 +80,7 @@
       @media screen and (min-width: 31.25em) {
         padding-top: 4rem;
       }
-      @media screen and (min-width: @screen-sm) {
+      @media screen and (min-width: @screen-sm-min) {
         padding-top: 1.6rem;
       }
       p {
@@ -82,6 +91,7 @@
 }
 
 #resources-Web-Literacy-Map {
+  margin-bottom: 4rem;
   hgroup {
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -93,7 +103,7 @@
     @media @retina {
       background-image: url('/img/explore/bg-competencies-header@2x.png');
     }
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-sm-min) {
       background-size: 90% auto;
     }
   }
@@ -120,7 +130,7 @@
   }
   .literacies-Exploring, .literacies-Building {
     margin-bottom: 4rem;
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-sm-min) {
       margin-bottom: auto;
     }
   }
@@ -145,14 +155,26 @@
 }
 
 #resources-Discover-new-skills {
+  .row {
+    margin-bottom: 2rem;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-bottom: 1rem;
+    }
+  }
+  aside {
+    margin-bottom: 3rem;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-bottom: 1rem;
+    }
+  }
   h3 {
     color: lighten(@grey, 25%);
     font-weight: 200;
     font-size: 3.4rem;
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-sm-min) {
       margin-top: 2rem;
     }
-    @media screen and (min-width: @screen-md) {
+    @media screen and (min-width: @screen-md-min) {
       font-size: 4rem;
       margin-top: 4rem;
     }
@@ -163,10 +185,14 @@
 }
 
 #resources-People-Resources {
-  margin-bottom: 17.6rem;
+  margin-bottom: 19rem;
 
-  @media screen and (min-width: @screen-sm) {
-    margin-bottom: 41rem;
+  div {
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: @screen-sm-min) {
+    margin-bottom: 44rem;
   }
   i {
     background-position: center top;
@@ -180,13 +206,13 @@
       background-size: auto 17.6rem;
       height: 17.6rem;
     }
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-sm-min) {
       background-image: url('/img/explore/bg-people.jpg');
       background-size: auto;
       height: 39.2rem;
-      margin-top: 17rem;
+      margin-top: 18rem;
     }
-    @media screen and (min-width: @screen-lg) {
+    @media screen and (min-width: @screen-lg-min) {
       background-size: 100% auto;
     }
   }
@@ -209,11 +235,14 @@
     text-align: center;
   }
   h2 {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     &::before {
       .icon-FontAwesome;
       display: block;
     }
+  }
+  p {
+    margin-bottom: 4rem;
   }
   .web-lit-get-training {
     &::before {

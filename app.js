@@ -341,7 +341,7 @@ if (env.get('FLAGS_EXPLORE')) {
   app.get('/admin/badges/:badge', middleware.checkAdmin, routes.angular);
 
   // Made With Code
-  app.get('/madewithcode-meme', routes.angular);
+  app.get('/madewithcode-*', routes.angular);
 
 } else {
   app.get("/resources", routes.gallery({

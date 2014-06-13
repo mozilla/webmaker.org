@@ -16,6 +16,12 @@
   color: @navy;
 }
 
+.text-center-xs {
+  @media (max-width: @screen-xs-max) {
+    text-align: center;
+  }
+}
+
 .flex-center {
   .flex-display();
   .align-items(center);
@@ -60,6 +66,10 @@ dd {
   }
 }
 
+.navbar-btn {
+  margin-right: 1em;
+}
+
 .navbar-affix-top {
   @media (min-width: @screen-sm-min) {
     .navbar-fixed-top;
@@ -95,8 +105,14 @@ dd {
       padding: 0;
     }
 
-    .navbar-nav {
-      margin-top: 6px;
+    .navbar-nav,
+    .navbar-form {
+      @media (min-width: @screen-md-min) {
+        margin-top: 6px;
+        .form-group {
+          padding: 12px 0;
+        }
+      }
     }
 
   }
@@ -113,6 +129,10 @@ dd {
       padding-bottom: 20px;
     }
   }
+}
+.navbar-form {
+  border-top: none;
+  margin-bottom: 0;
 }
 
 // Nav Icons
@@ -206,3 +226,16 @@ dd {
   }
 }
 
+/* ===========
+* Selectize
+*/
+
+.navbar-form .selectize-control.form-control {
+  min-width: 160px;
+  .selectize-input {
+    padding-right: 25px;
+    &:after {
+      right: 8px;
+    }
+  }
+}

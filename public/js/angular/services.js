@@ -15,14 +15,14 @@ angular
 
       return {
         page: function (page) {
-          if (page) {
+          if (page || page === '') {
             activePage = page;
             $rootScope.currentPageId = 'page-' + page;
           }
           return activePage;
         },
         section: function (section) {
-          if (section) {
+          if (section || section === '') {
             activeSection = section;
             $rootScope.currentSectionId = section;
           }

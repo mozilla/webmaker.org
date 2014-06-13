@@ -10,7 +10,12 @@
       <a href="/{{lang}}" class="logo webmaker-logo"><img src="/img/logo.png"></a>
     </div>
 
-    <div class="navbar-collapse" collapse="primaryCollapse">
+    <div class="navbar-collapse text-center-xs" collapse="primaryCollapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <select class="form-control" language-select ng-model="language" redirect="true"></select>
+        </div>
+      </form>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" ng-cloak ng-show="_user.email">
           <a class="navbar-user-info dropdown-toggle">
@@ -46,6 +51,11 @@
             <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
           </a>
         </li>
+        <li>
+          <a href="/{{lang}}/search" external-link="true">
+            <span class="fa fa-search"></span><span class="sr-only">{{ 'Search' | i18n}}</span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -64,7 +74,7 @@
   <div class="container">
     <div class="navbar-collapse" collapse="tertiaryCollapse">
       <ul class="nav navbar-nav">
-        <li ng-show="affixed" class="nav-icon nav-title active">
+        <li ng-hide="!affixed" class="nav-icon nav-title active hidden-xs">
           <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
             <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
           </a>
@@ -87,6 +97,11 @@
           <a href="{{baseUrl + page.url}}" external-link="{{page.external}}">{{ page.title | i18n }}</a>
         </li>
       </ul>
+      <form class="navbar-form navbar-right hidden-xs" ng-hide="!affixed">
+        <div class="form-group">
+          <select class="form-control" language-select ng-model="language" redirect="true"></select>
+        </div>
+      </form>
     </div>
   </div>
   <!-- Mobile weblit nav -->

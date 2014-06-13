@@ -178,6 +178,7 @@ angular
   .controller('homeController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
       wmNav.page('home');
+      wmNav.section('');
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'CONFIG', '$timeout', 'wmNav',
@@ -239,6 +240,7 @@ angular
   .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',
     function ($rootScope, $scope, $routeParams, $timeout, wmNav) {
       wmNav.section('resources');
+      wmNav.page('');
 
       $scope.page = $routeParams.mwc;
 

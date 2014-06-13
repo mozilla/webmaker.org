@@ -2,7 +2,7 @@
   <div class="container">
 
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+      <button type="button" class="navbar-toggle" ng-click="collapseToggle()">
         <span class="sr-only">Toggle navigation</span>
         <span class="fa fa-bars fa-lg"></span>
       </button>
@@ -10,7 +10,7 @@
       <a href="/{{lang}}" class="logo webmaker-logo"><img src="/img/logo.png"></a>
     </div>
 
-    <div class="navbar-collapse" collapse="true">
+    <div class="navbar-collapse" collapse="primaryCollapse">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" ng-cloak ng-show="_user.email">
           <a class="navbar-user-info dropdown-toggle">
@@ -38,7 +38,7 @@
 <!-- Secondary nav -->
 <nav class="navbar navbar-inverse navbar-no-header-xs">
   <div class="container">
-    <div class="navbar-collapse" collapse="isCollapsed">
+    <div class="navbar-collapse" collapse="secondaryCollapse">
       <ul class="nav navbar-nav">
         <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id) }">
           <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
@@ -61,7 +61,7 @@
   ng-show="isActiveSection(section.id)">
 
   <div class="container">
-    <div class="navbar-collapse" collapse="isCollapsed">
+    <div class="navbar-collapse" collapse="tertiaryCollapse">
       <ul class="nav navbar-nav">
         <li ng-show="affixed" class="nav-icon nav-title active">
           <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
@@ -71,13 +71,13 @@
 
         <!-- Weblit dropdown -->
         <li ng-if="section.id === 'resources'" class="dropdown dropdown-toc hidden-xs">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ 'Web Literacies' | i18n }}<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle">{{ 'Web Literacies' | i18n }}<span class="caret"></span></a>
           <ul class="explore-dropdown-menu dropdown-menu">
             <li
               ng-repeat="skill in literacies"
               class="literacy"
               ng-class="{ active : isActivePage(skill.tag) }">
-              <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" ng-click="collapseAll()" class="color-{{$index}}">{{ skill.term }}</a>
+              <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" class="color-{{$index}}">{{ skill.term }}</a>
             </li>
           </ul>
         </li>
@@ -87,19 +87,19 @@
         </li>
       </ul>
     </div>
-
-    <!-- Mobile weblit nav -->
-    <div class="mobile-skills-nav visible-xs" ng-if="currentSectionId === 'resources'">
+  </div>
+  <!-- Mobile weblit nav -->
+  <div class="mobile-skills-nav visible-xs" ng-if="currentSectionId === 'resources'">
+    <ul class="nav navbar-nav">
+      <li><a href="#" ng-click="weblitToggle()">{{ 'Web Literacies' | i18n }} <span class="caret"></span></a></li>
+    </ul>
+    <div collapse="mobileCollapse">
       <ul class="nav navbar-nav">
-        <li><a href="#" ng-click="mobileTocCollapse = !mobileTocCollapse">{{ 'Web Literacies' | i18n }} <span class="caret"></span></a></li>
-      </ul>
-      <ul class="nav navbar-nav" collapse="mobileTocCollapse">
-
         <li
           ng-repeat="skill in literacies"
           class="literacy"
           ng-class="{ active : isActive(skill.tag, 'id') }" >
-          <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" ng-click="collapseAll()" class="bg-{{ skill.tag }}">{{ skill.term }}</a>
+          <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" class="bg-{{ skill.tag }}">{{ skill.term }}</a>
         </li>
       </ul>
     </div>

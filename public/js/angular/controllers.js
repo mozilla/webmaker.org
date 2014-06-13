@@ -88,12 +88,27 @@ angular
       };
 
       // Start with collapsed state for navigation
-      $scope.isCollapsed = true;
-      $scope.mobileTocCollapse = true;
-      $scope.collapseAll = function () {
-        $scope.isCollapsed = true;
-        $scope.mobileTocCollapse = true;
+      $scope.primaryCollapse = true;
+      $scope.secondaryCollapse = true;
+      $scope.tertiaryCollapse = true;
+      $scope.mobileCollapse = true;
+
+      $scope.collapseToggle = function () {
+        $scope.primaryCollapse = !$scope.primaryCollapse;
+        $scope.secondaryCollapse = !$scope.secondaryCollapse;
+        $scope.tertiaryCollapse = !$scope.tertiaryCollapse;
       };
+
+      $scope.weblitToggle = function () {
+        $scope.mobileCollapse = !$scope.mobileCollapse;
+      };
+
+      $rootScope.$on('$locationChangeSuccess', function (event) {
+        $scope.primaryCollapse = true;
+        $scope.secondaryCollapse = true;
+        $scope.tertiaryCollapse = true;
+        $scope.mobileCollapse = true;
+      });
 
       $scope.clickedResource = false;
       $scope.literacies = weblit.all();

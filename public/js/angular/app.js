@@ -35,6 +35,14 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/madewithcode-firstwebpage.html',
           controller: 'mwcController'
         })
+        .when('/madewithcode-poster', {
+          templateUrl: '/views/madewithcode-poster.html',
+          controller: 'mwcController'
+        })
+        .when('/:locale?/madewithcode-poster', {
+          templateUrl: '/views/madewithcode-poster.html',
+          controller: 'mwcController'
+        })
         .when('/:locale?/admin/badges', {
           templateUrl: '/views/admin/badges-main.html',
           controller: 'badgesAdminController'

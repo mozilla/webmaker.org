@@ -33,8 +33,7 @@ angular
               {
                 id: 'badges-admin',
                 title: 'Badges Admin',
-                url: 'admin/badges',
-                adminOnly: true
+                url: 'admin/badges'
               },
               {
                 id: 'search',
@@ -211,12 +210,19 @@ angular
       $scope.literacies = weblit.all();
     }
   ])
-  .controller('badgesAdminController', ['$scope', '$http', 'wmNav',
-    function ($scope, $http, wmNav) {
+  .controller('badgesAdminController', ['$scope', '$http', '$rootScope', 'wmNav',
+    function ($scope, $http, $rootScope, wmNav) {
       wmNav.page('badges-admin');
       wmNav.section('explore');
 
       $scope.badges = [];
+      $scope.hasPermissions = function (badge) {
+        return window.badgesPermissionsModel({
+          badge: badge,
+          user: $rootScope._user,
+          action: 'applications'
+        });
+      };
 
       $http
         .get('/api/badges')
@@ -252,6 +258,7 @@ angular
           .success(function (data) {
             $scope.badgesError = false;
             $scope.instances.unshift(data);
+            $scope.issueEmail = '';
           })
           .error(onError);
       };
@@ -295,6 +302,11 @@ angular
                   $scope.applications.splice(i, 1);
                 }
               }
+              if (review.decision === 'yes') {
+                $scope.instances.unshift({
+                  email: review.email
+                });
+              }
             })
             .error(onError);
         });
@@ -321,7 +333,8 @@ angular
 
       var ReviewApplicationController = function ($scope, $modalInstance, application) {
         $scope.review = {
-          id: application.slug
+          id: application.slug,
+          email: application.learner
         };
         $scope.application = application;
         $scope.ok = function () {

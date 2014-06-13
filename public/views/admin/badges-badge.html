@@ -48,7 +48,9 @@
         <tbody>
           <tr ng-repeat="instance in instances">
             <td>{{ instance.email }}</td>
-            <td class="text-right"><button class="btn btn-default" ng-click="revokeBadge(instance.email)"><span class="fa fa-times"></span><span class="sr-only">{{ "Revoke" | i18n }}</span></button></td>
+            <td class="text-right">
+              <button ng-if="_user.isAdmin" class="btn btn-default" ng-click="revokeBadge(instance.email)"><span class="fa fa-times"></span><span class="sr-only">{{ "Revoke" | i18n }}</span></button>
+            </td>
           </tr>
           </tbody>
       </table>

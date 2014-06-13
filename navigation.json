@@ -32,8 +32,7 @@
         "id": "badges-admin",
         "title": "Badges Admin",
         "url": "admin/badges",
-        "flag": "badges",
-        "adminOnly": "true"
+        "flag": "badges"
       },
       {
         "id": "search",

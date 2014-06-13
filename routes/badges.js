@@ -2,20 +2,75 @@ var BadgeClient = require('badgekit-api-client');
 
 module.exports = function (env) {
 
+  // Error messages
+  var errorHandlers = {
+    unauthorized: function () {
+      var err = new Error('You must be logged in to access this area.');
+      err.status = 401;
+      return err;
+    },
+    forbidden: function () {
+      var err = new Error('You are not authorized to access this area. If you think you are supposed to have permissions, try logging out and in again, or contact help@webmaker.org');
+      err.status = 403;
+      return err;
+    }
+  };
+
   var badgeClient = new BadgeClient(env.get('BADGES_ENDPOINT'), {
     key: env.get('BADGES_KEY'),
     secret: env.get('BADGES_SECRET')
   });
 
-  function isAdminOrSuperMentor(req) {
-    if (req.session.user && (req.session.user.isAdmin || req.session.user.isCollaborator)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  var permissionsModel = require('../lib/badges-permissions-model.js');
 
   return {
+    middleware: {
+      // Check if a use has at least a certain level of permissions
+      // Can be 'admin', 'superMentor' or 'mentor'
+      atleast: function (level) {
+        var levels = ['isAdmin', 'isSuperMentor', 'isMentor'];
+        return function (req, res, next) {
+          var user = req.session.user;
+          if (!level || levels.indexOf(level) <= -1) {
+            var err = new Error('There is a problem with the permissions model: ' + level + ' is not a valid type of user.');
+            return next(err);
+          } else if (!user) {
+            return next(errorHandlers.unauthorized());
+          } else if (user.isAdmin) {
+            return next();
+          } else if (level === 'isSuperMentor' && (user.isAdmin || user.isSuperMentor)) {
+            return next();
+          } else if (level === 'isMentor' && (user.isAdmin || user.isSuperMentor || user.isMentor)) {
+            return next();
+          } else {
+            return next(errorHandlers.forbidden());
+          }
+        };
+      },
+      // Does this user have permissions to issue, approve applications, see instances?
+      hasPermissions: function (action) {
+        return function (req, res, next) {
+          var user = req.session.user;
+
+          if (!user) {
+            return next(errorHandlers.unauthorized());
+          }
+
+          var allowed = permissionsModel({
+            badge: req.params.badge,
+            user: req.session.user,
+            action: action
+          });
+
+          if (!allowed) {
+            return next(errorHandlers.forbidden());
+          } else {
+            return next();
+          }
+
+        };
+      }
+    },
     getAll: function (req, res, next) {
       badgeClient.getBadges({
         system: env.get('BADGES_SYSTEM')
@@ -89,7 +144,7 @@ module.exports = function (env) {
         }
 
         // Can the current user issue this badge?
-        var canIssue = req.session.user && (req.session.user.isAdmin || (req.session.user.isCollaborator && data.slug !== 'webmaker-super-mentor'));
+        var canIssue = req.session.user && (req.session.user.isAdmin || (req.session.user.isSuperMentor && data.slug !== 'webmaker-super-mentor'));
 
         res.render('badge-detail.html', {
           page: req.params.badge,
@@ -120,18 +175,6 @@ module.exports = function (env) {
       });
     },
     issue: function (req, res, next) {
-
-      if (!isAdminOrSuperMentor(req)) {
-        return res.send(400, {
-          error: 'Sorry, you must be an admin or collaborator to issue badges'
-        });
-      }
-
-      if (req.params.badge === 'webmaker-super-mentor' && !req.session.user.isAdmin) {
-        return res.send(400, {
-          error: 'Sorry, you cannot issue a super mentor badge directly. Please have your applicant apply instead.'
-        });
-      }
 
       var query = {
         system: env.get('BADGES_SYSTEM'),
@@ -186,14 +229,6 @@ module.exports = function (env) {
       });
     },
     getApplications: function (req, res, next) {
-      if (!req.session.user) {
-        return res.send(401, 'You must be logged in view applications');
-      }
-
-      if (!isAdminOrSuperMentor) {
-        return res.send(403, 'You are not authorized to view applications');
-      }
-
       badgeClient.getApplications({
         system: env.get('BADGES_SYSTEM'),
         badge: req.params.badge
@@ -229,7 +264,6 @@ module.exports = function (env) {
           reviewItems: req.body.reviewItems
         }
       };
-      console.log(context, req.body.reviewItems);
       badgeClient.addReview(context, function (err, review) {
         if (err) {
           return res.send(500, err.message);
@@ -238,5 +272,4 @@ module.exports = function (env) {
       });
     }
   };
-
 };

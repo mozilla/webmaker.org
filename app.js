@@ -305,10 +305,18 @@ app.use(function (err, req, res, next) {
     code: http.STATUS_CODES[err.status] ? err.status : 500
   };
 
-  console.error(err);
+  console.error(err, err.stack);
 
   res.status(error.code);
-  res.render('error.html', error);
+  res.format({
+    'text/html': function () {
+      res.render('error.html', error);
+    },
+    'application/json': function () {
+      res.send(err.message);
+    }
+  });
+
 });
 
 var middleware = require("./lib/middleware");
@@ -328,10 +336,6 @@ app.get('/', routes.angular);
 if (env.get('FLAGS_EXPLORE')) {
   app.get('/explore', routes.angular);
   app.get('/resources/:section?/:competency?', routes.angular);
-  // Badges admin
-  app.get('/admin/badges', middleware.checkAdmin, routes.angular);
-  app.get('/admin/badges/:badge', middleware.checkAdmin, routes.angular);
-
 } else {
   app.get("/resources", routes.gallery({
     layout: "starterMakes",
@@ -363,18 +367,21 @@ app.get("/privacy-makes", routes.gallery({
 // Initialize badges routes
 var badgesRoutes = routes.badges(env);
 
-// Badge detail
+// Badge pages
 app.get("/badges/:badge?", badgesRoutes.details);
+// Badges admin
+app.get('/admin/badges', badgesRoutes.middleware.atleast('isMentor'), routes.angular);
+app.get('/admin/badges/:badge', badgesRoutes.middleware.hasPermissions('viewInstances'), routes.angular);
 
 // Badges API
 app.get("/api/badges", badgesRoutes.getAll);
 app.post("/api/badges/:badge/apply", badgesRoutes.apply);
 app.post("/api/badges/:badge/claim", badgesRoutes.claim);
-app.post("/api/badges/:badge/issue", badgesRoutes.issue);
-app.get("/api/badges/:badge/instances", middleware.checkAdmin, badgesRoutes.getInstances);
-app.get("/api/badges/:badge/applications", badgesRoutes.getApplications);
-app.post("/api/badges/:badge/applications/:application/review", badgesRoutes.submitReview);
-app.delete("/api/badges/:badge/instance/email/:email", middleware.checkAdmin, badgesRoutes.deleteInstance);
+app.post("/api/badges/:badge/issue", badgesRoutes.middleware.hasPermissions('issue'), badgesRoutes.issue);
+app.get("/api/badges/:badge/instances", badgesRoutes.middleware.hasPermissions('viewInstances'), badgesRoutes.getInstances);
+app.get("/api/badges/:badge/applications", badgesRoutes.middleware.hasPermissions('applications'), badgesRoutes.getApplications);
+app.post("/api/badges/:badge/applications/:application/review", badgesRoutes.middleware.hasPermissions('applications'), badgesRoutes.submitReview);
+app.delete("/api/badges/:badge/instance/email/:email", badgesRoutes.middleware.hasPermissions('delete'), badgesRoutes.deleteInstance);
 
 app.post("/api/submit-resource", routes.api.submitResource);
 

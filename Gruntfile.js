@@ -111,14 +111,14 @@ module.exports = function (grunt) {
           mangle: false
         },
         files: {
-          'public/compiled/app.min.js': ['public/js/angular/**/*.js']
+          'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js']
         },
       },
     },
 
     watch: {
       angular: {
-        files: ['public/js/angular/**/*.js'],
+        files: ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js'],
         tasks: ['uglify:app'],
         options: {
           spawn: false

@@ -1,12 +1,12 @@
 <article class="make sample-make">
-  <a href="{{ sampleMake.url }}">
+  <a href="{{ sampleMake.url }}" target="_self">
     <img ng-src="{{ sampleMake.thumbnail }}" alt="{{ sampleMake.title }}"
          class="make-thumbnail"/>
   </a>
 
   <div class="gallery-info">
     <h3>
-      <a class="title" href="{{ sampleMake.url }}">
+      <a class="title" href="{{ sampleMake.url }}" target="_self">
         {{ sampleMake.title }}
       </a>
     </h3>
@@ -17,7 +17,7 @@
 
       <p>
         {{ "Created by" | i18n }}
-        <a class="author" href="/u/{{ sampleMake.username }}">
+        <a class="author" href="/u/{{ sampleMake.username }}" target="_self">
           @{{ sampleMake.username }}
         </a>
         <time class="date" am-time-ago="sampleMake.createdAt"
@@ -30,7 +30,7 @@
     <div class="tag-container">
       <span class="fa fa-tags"></span>
       <a ng-repeat="tag in sampleMake.tags | filter: '!tutorial-'" class="tag"
-         href="/t/{{ tag }}">{{ tag }}</a>
+         href="/t/{{ tag }}" target="_self">{{ tag }}</a>
     </div>
     <div class="make-actions btn-container">
       <a class="btn btn-primary" href="{{ sampleMake.remixurl }}">
@@ -40,8 +40,6 @@
       <a class="btn btn-primary" href="{{ sampleMake.url }}">
         {{ 'Details' | i18n }}
       </a>
-    <span class="like-toggle fa fa-heart-o"
-          data-make-id="{{ sampleMake.id }}"></span>
     </div>
 
   </div>

@@ -19,28 +19,12 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/competency.html',
           controller: 'competencyController'
         })
-        .when('/madewithcode-meme', {
-          templateUrl: '/views/madewithcode-meme.html',
+        .when('/madewithcode-:mwc', {
+          templateUrl: '/views/madewithcode.html',
           controller: 'mwcController'
         })
-        .when('/:locale?/madewithcode-meme', {
-          templateUrl: '/views/madewithcode-meme.html',
-          controller: 'mwcController'
-        })
-        .when('/madewithcode-firstwebpage', {
-          templateUrl: '/views/madewithcode-firstwebpage.html',
-          controller: 'mwcController'
-        })
-        .when('/:locale?/madewithcode-firstwebpage', {
-          templateUrl: '/views/madewithcode-firstwebpage.html',
-          controller: 'mwcController'
-        })
-        .when('/madewithcode-poster', {
-          templateUrl: '/views/madewithcode-poster.html',
-          controller: 'mwcController'
-        })
-        .when('/:locale?/madewithcode-poster', {
-          templateUrl: '/views/madewithcode-poster.html',
+        .when('/:locale?/madewithcode-:mwc', {
+          templateUrl: '/views/madewithcode.html',
           controller: 'mwcController'
         })
         .when('/:locale?/admin/badges', {
@@ -97,6 +81,16 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         .success(function (data) {
           $rootScope.content = data;
           $rootScope.contentReady = true;
+        })
+        .error(function (err) {
+          console.log(err);
+        });
+
+      $http
+        .get('/data/madewithcode.json')
+        .success(function (data) {
+          $rootScope.madewithcode = data;
+          $rootScope.mwcReady = true;
         })
         .error(function (err) {
           console.log(err);

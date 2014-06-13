@@ -150,6 +150,11 @@ angular
       }];
     }
   ])
+  .controller('homeController', ['$scope', 'wmNav',
+    function ($scope, wmNav) {
+      wmNav.page('home');
+    }
+  ])
   .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'CONFIG', '$timeout', 'wmNav',
     function ($rootScope, $scope, $location, $routeParams, weblit, CONFIG, $timeout, wmNav) {
       wmNav.page($routeParams.id);

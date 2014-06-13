@@ -7,7 +7,7 @@
         <span class="fa fa-bars fa-lg"></span>
       </button>
 
-      <a href="{{baseUrl}}" external-link="true" class="logo webmaker-logo"><img src="https://webmaker.org/img/logo.png"></a>
+      <a href="/{{lang}}" class="logo webmaker-logo"><img src="/img/logo.png"></a>
     </div>
 
     <div class="navbar-collapse" collapse="true">
@@ -47,10 +47,18 @@
 </nav>
 
 <!-- Tertiary nav -->
-<nav class="navbar navbar-no-header-xs navbar-tertiary" wm-affix data-offset-top="150" data-offset-height="60">
+<nav
+  class="navbar navbar-no-header-xs navbar-tertiary"
+  wm-affix
+  data-offset-top="150"
+  data-offset-height="60"
+  ng-repeat="section in nav.sections"
+  ng-if="section.pages"
+  ng-show="isActiveSection(section.id)">
+
   <div class="container">
     <div class="navbar-collapse" collapse="isCollapsed">
-      <ul ng-repeat="section in nav.sections" ng-if="section.pages" ng-show="isActiveSection(section.id)" class="nav navbar-nav">
+      <ul class="nav navbar-nav">
         <li ng-show="affixed" class="nav-icon nav-title active">
           <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
             <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
@@ -77,7 +85,7 @@
     </div>
 
     <!-- Mobile weblit nav -->
-    <div class="mobile-skills-nav visible-xs">
+    <div class="mobile-skills-nav visible-xs" ng-if="currentSectionId === 'resources'">
       <ul class="nav navbar-nav">
         <li><a href="#" ng-click="mobileTocCollapse = !mobileTocCollapse">{{ 'Web Literacies' | i18n }} <span class="caret"></span></a></li>
       </ul>

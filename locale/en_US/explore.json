@@ -167,8 +167,8 @@
     "message": "Main menu",
     "description": "On mobile nav"
   },
-  "Help us find great community content": {
-    "message": "Help us find great community content",
+  "Suggest your own links and resources": {
+    "message": "This page is evolving! Suggest your own links and resources to add. <a href='/{{lang}}/get-involved'> Or get more involved</a>.</a>",
     "description": "Submit a teaching resource"
   },
   "Discover": {
@@ -211,8 +211,8 @@
     "message": "Jump to",
     "description": "Heading for sidebar: Jump to... Discover, Make, Teach"
   },
-  "Suggest a resource": {
-    "message": "Suggest a resource",
+  "Submit a resource": {
+    "message": "Submit a resource",
     "description": "Submit a teaching resource"
   }
 }

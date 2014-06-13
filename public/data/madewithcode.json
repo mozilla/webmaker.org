@@ -1,0 +1,54 @@
+{
+  "instructions": {
+    "showcss": "[bool] Variable used to determine whether the header text will display 'HTML' or 'HTML and CSS' when referring to the languages of the web",
+    "title": "[string] Copy which lives inside of an h2 tag—should be plain text only",
+    "intro": "[markup] Lives inside a <div>, so should be shielded by at least one <p> tag. Set up so it can be multiple paragraphs.",
+    "makeid": "[string] Alphanumeric string used by MakeAPI to fetch sample make",
+    "step1": "[string] Lives inside a <p> tag, displayed immediately above a 'remix' image",
+    "step2": "[string] Lives inside a <p> tag, displayed immediately above a thimble illustration",
+    "step3": "[string] Lives inside a <p> tag, usually used to cta 'save your work'",
+    "more": [
+      "[string] A list of text with links for people to learn more",
+      "[string] Lives inside of a <p> tag"
+    ]
+  },
+  "meme": {
+    "showcss": false,
+    "title": "Let&rsquo;s make a meme",
+    "intro": "<p><strong>A &ldquo;meme&rdquo; is something that&rsquo;s shared on the internet, and it usually has three parts</strong>: a picture, a caption, and a dash of humor. In this activity, you&rsquo;ll make your own meme using a bit of HTML and your own creativity. <a href=\"https://thimble.webmaker.org/\">Thimble</a>, Mozilla&rsquo;s code editor, makes it easy.</p>",
+    "makeid": "53962d732e50e55a22000132",
+    "step1": "<strong>Click the &ldquo;remix&rdquo; button.</strong> This will open Thimble. You&rsquo;ll see a simple meme we created to get you started.",
+    "step2": "<strong>Follow the steps in the tutorial.</strong> The tutorial will walk you through how to make changes to the code.",
+    "step3": "<strong>Done!</strong> Once you&rsquo;re finished, you can save your work and share it. Log in to Webmaker and hit &ldquo;Save.&rdquo;",
+    "more": [
+      "Try the next Made with Code activity. Use your new HTML and CSS skills to <a href=\"/{{ lang }}/madewithcode-poster\">Make a Movie poster</a>.",
+      "Or Webmaker has <a href=\"/{{ lang }}/gallery\" target='_self'>lots of other free activities</a> too."
+    ]
+  },
+  "firstwebpage": {
+    "showcss": false,
+    "title": "Make your first web page",
+    "intro": "<p><strong>You&rsquo;ve probably seen hundreds (if not thousands) of web pages</strong>. All of them are written in a language called <em>HTML.</em></p><p><strong>It&rsquo;s easy to start messing around with HTML.</strong> In this activity, you&rsquo;ll make a basic web page in about 60 seconds or less, using <a href=\"https://thimble.webmaker.org/\">Thimble</a>, Mozilla&rsquo;s free HTML power tool.</p></div>",
+    "makeid": "5395cbc32e50e55a220000df",
+    "step1": "<strong>Click the &ldquo;remix&rdquo; button.</strong> This will open Thimble. You&rsquo;ll see a simple web page we created to get you started. The code is on one side, the page preview is on the other.",
+    "step2": "<strong>Follow the steps.</strong> The tutorial will walk you through how to make changes to the code.",
+    "step3": "<strong>Done!</strong> Once you&rsquo;re finished, you can save your work and share it. Log in to Webmaker and hit &ldquo;Save.&rdquo;",
+    "more": [
+      "Try the next Made with Code activity. Use your new HTML and CSS skills to <a href=\"/{{ lang }}/madewithcode-meme\">make a meme",
+      "Or Webmaker has <a href=\"/{{ lang }}/gallery\" target='_self'>lots of other free activities</a> too."
+    ]
+  },
+  "poster": {
+    "showcss": true,
+    "title": "Make a movie poster",
+    "intro": "<p><strong>Seen a movie or read any good books lately?</strong> Make a web page with your glowing (or vicious) review. Learn a little code along the way.</p>",
+    "makeid": "5398813236745db24d0000be",
+    "step1": "<strong>Click the &ldquo;remix&rdquo; button.</strong> This will open Thimble. You&rsquo;ll see a placeholder movie poster to help you get started.",
+    "step2": "<strong>Follow the steps</strong>. The tutorial will walk you through how to swap in your own text, images and style.",
+    "step3": "<strong>Done!</strong> Once you&rsquo;re finished, just log in to Webmaker and hit &ldquo;Save&rdquo;.",
+    "more": [
+      "Try the next Made with Code activity. Use your new HTML and CSS skills to <a href=\"/{{ lang }}/madewithcode-firstwebpage\">make your first web page</a>.",
+      "Webmaker has <a href=\"/{{ lang }}/gallery\" target='_self'>lots of other free activities</a> like this one."
+    ]
+  }
+}

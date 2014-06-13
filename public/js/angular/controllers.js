@@ -232,10 +232,19 @@ angular
       $scope.literacies = weblit.all();
     }
   ])
-  .controller('mwcController', ['$scope', 'wmNav',
-    function ($scope, wmNav) {
+  .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',
+    function ($rootScope, $scope, $routeParams, $timeout, wmNav) {
       wmNav.section('resources');
 
+      $scope.page = $routeParams.mwc;
+
+      if ($rootScope.mwcReady) {
+        $scope.madewithcode = $rootScope.madewithcode[$scope.page];
+      } else {
+        $timeout(function () {
+          $scope.madewithcode = $rootScope.madewithcode[$scope.page];
+        }, 500);
+      }
     }
   ])
   .controller('badgesAdminController', ['$rootScope', '$scope', '$http', 'wmNav',

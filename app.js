@@ -336,6 +336,13 @@ app.get('/', routes.angular);
 if (env.get('FLAGS_EXPLORE')) {
   app.get('/explore', routes.angular);
   app.get('/resources/:section?/:competency?', routes.angular);
+  // Badges admin
+  app.get('/admin/badges', middleware.checkAdmin, routes.angular);
+  app.get('/admin/badges/:badge', middleware.checkAdmin, routes.angular);
+
+  // Made With Code
+  app.get('/madewithcode-meme', routes.angular);
+
 } else {
   app.get("/resources", routes.gallery({
     layout: "starterMakes",

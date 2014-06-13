@@ -1,4 +1,5 @@
-angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services', 'webmakerAngular.login', 'localization', 'ngScrollSpy'])
+angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
+  'webmakerAngular.login', 'localization', 'ngScrollSpy', 'angularMoment'])
   .config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
       $routeProvider
@@ -17,6 +18,14 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         .when('/:locale?/resources/literacy/:id', {
           templateUrl: '/views/competency.html',
           controller: 'competencyController'
+        })
+        .when('/madewithcode-meme', {
+          templateUrl: '/views/madewithcode-meme.html',
+          controller: 'mwcController'
+        })
+        .when('/:locale?/madewithcode-meme', {
+          templateUrl: '/views/madewithcode-meme.html',
+          controller: 'mwcController'
         })
         .when('/:locale?/admin/badges', {
           templateUrl: '/views/admin/badges-main.html',

@@ -1,0 +1,48 @@
+<article class="make sample-make">
+  <a href="{{ sampleMake.url }}">
+    <img ng-src="{{ sampleMake.thumbnail }}" alt="{{ sampleMake.title }}"
+         class="make-thumbnail"/>
+  </a>
+
+  <div class="gallery-info">
+    <h3>
+      <a class="title" href="{{ sampleMake.url }}">
+        {{ sampleMake.title }}
+      </a>
+    </h3>
+
+    <div class="make-meta">
+      <img class="data-avatar pull-left" alt="{{ sampleMake.username }}"
+           ng-src="{{ sampleMake.emailHash | generateGravatar }}"/>
+
+      <p>
+        {{ "Created by" | i18n }}
+        <a class="author" href="/u/{{ sampleMake.username }}">
+          @{{ sampleMake.username }}
+        </a>
+        <time class="date" am-time-ago="sampleMake.createdAt"
+              datetime="{{ sampleMake.createdAt | rfc3339 }}"></time>,
+        {{ sampleMake.likes.length }}
+        {{ sampleMake.likes | likesText | i18n }}
+      </p>
+      <p>{{ sampleMake.description }}</p>
+    </div>
+    <div class="tag-container">
+      <span class="fa fa-tags"></span>
+      <a ng-repeat="tag in sampleMake.tags | filter: '!tutorial-'" class="tag"
+         href="/t/{{ tag }}">{{ tag }}</a>
+    </div>
+    <div class="make-actions btn-container">
+      <a class="btn btn-primary" href="{{ sampleMake.remixurl }}">
+        <span class="fa fa-code-fork"></span>
+        {{ 'Remix' | i18n }}
+      </a>
+      <a class="btn btn-primary" href="{{ sampleMake.url }}">
+        {{ 'Details' | i18n }}
+      </a>
+    <span class="like-toggle fa fa-heart-o"
+          data-make-id="{{ sampleMake.id }}"></span>
+    </div>
+
+  </div>
+</article>

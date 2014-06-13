@@ -131,37 +131,44 @@ angular
       wmNav.page('explore');
       wmNav.section('explore');
 
-      $scope.contributeBoxes = [{
-        icon: 'book',
-        title: 'Teaching kits',
-        description: 'Teaching kits desc',
-        target: '/' + CONFIG.lang + '/teach-templates'
-      }, {
-        icon: 'map-marker',
-        title: 'Events',
-        description: 'Events desc',
-        target: 'https://events.webmaker.org/' + CONFIG.lang
-      }, {
-        icon: 'globe',
-        title: 'Translate',
-        description: 'Translate desc',
-        target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/translate-webmaker'
-      }, {
-        icon: 'picture-o',
-        title: 'Design',
-        description: 'Design desc',
-        target: 'https://wiki.mozilla.org/Webmaker/Design'
-      }, {
-        icon: 'code',
-        title: 'Code',
-        description: 'Code desc',
-        target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/contribute-webmaker-code'
-      }, {
-        icon: 'rocket',
-        title: 'Partner',
-        description: 'Partner desc',
-        target: 'http://party.webmaker.org/' + CONFIG.lang + '/partners'
-      }];
+      $scope.contributeBoxes = [
+        {
+          icon: 'book',
+          title: 'Teaching kits',
+          description: 'Teaching kits desc',
+          target: '/' + CONFIG.lang + '/teach-templates'
+        },
+        {
+          icon: 'map-marker',
+          title: 'Events',
+          description: 'Events desc',
+          target: 'https://events.webmaker.org/' + CONFIG.lang
+        },
+        {
+          icon: 'globe',
+          title: 'Translate',
+          description: 'Translate desc',
+          target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/translate-webmaker'
+        },
+        {
+          icon: 'picture-o',
+          title: 'Design',
+          description: 'Design desc',
+          target: 'https://wiki.mozilla.org/Webmaker/Design'
+        },
+        {
+          icon: 'code',
+          title: 'Code',
+          description: 'Code desc',
+          target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/contribute-webmaker-code'
+        },
+        {
+          icon: 'rocket',
+          title: 'Partner',
+          description: 'Partner desc',
+          target: 'http://party.webmaker.org/' + CONFIG.lang + '/partners'
+        }
+      ];
     }
   ])
   .controller('homeController', ['$scope', 'wmNav',
@@ -225,8 +232,14 @@ angular
       $scope.literacies = weblit.all();
     }
   ])
-  .controller('badgesAdminController', ['$scope', '$http', '$rootScope', 'wmNav',
-    function ($scope, $http, $rootScope, wmNav) {
+  .controller('mwcController', ['$scope', 'wmNav',
+    function ($scope, wmNav) {
+      wmNav.section('resources');
+
+    }
+  ])
+  .controller('badgesAdminController', ['$rootScope', '$scope', '$http', 'wmNav',
+    function ($rootScope, $scope, $http, wmNav) {
       wmNav.page('badges-admin');
       wmNav.section('explore');
 
@@ -316,11 +329,6 @@ angular
                 if ($scope.applications[i].slug === review.id) {
                   $scope.applications.splice(i, 1);
                 }
-              }
-              if (review.decision === 'yes') {
-                $scope.instances.unshift({
-                  email: review.email
-                });
               }
             })
             .error(onError);

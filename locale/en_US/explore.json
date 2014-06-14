@@ -1,10 +1,10 @@
 {
   "explore_frontpage_title": {
-    "message": "Teach web skills with Webmaker",
+    "message": "Explore the world of Webmaker",
     "description": "Heading for Explore page"
   },
-  "Explore creative ways": {
-    "message": "Explore creative ways to teach digital superpowers",
+  "Discover creative ways to teach and learn digital superpowers": {
+    "message": "Discover creative ways to teach and learn digital superpowers",
     "description": "Heading for first explore subsection with map"
   },
   "Documentation": {
@@ -12,19 +12,19 @@
     "description": "Link to literacy page"
   },
   "Get involved with webmaker": {
-    "message": "Get involved with Webmaker through fun making and sharing, backed by the global Mozilla community&rsquo;s Web Literacy Map. It&rsquo;s all part of our <a href=\"/{{ lang }}/about\">non-profit mission</a> to create a more open, web literate world.",
+    "message": "Webmaker is a part of Mozilla's <a href=\"/{{ lang }}/about\" external=\"true\">non-profit mission</a> to create a more open, web literate world.",
     "description": "Copy for first explore subsection with map"
   },
   "Web Literacy Map": {
     "message": "Web Literacy Map",
     "description": "The title of the explore section"
   },
-  "A cookbook for teaching the web": {
-    "message": "A cookbook for teaching the web",
+  "Resources for teaching the web": {
+    "message": "Resources for teaching the web",
     "description": "Heading for the second explore subsection with document stacks"
   },
-  "Each skill includes": {
-    "message": "Each skill includes free recipes, resources and teaching kits anyone can use to teach others to understand how the web works. Discover new powers like coding, storytelling, protecting your online privacy and more.",
+  "Resources section description": {
+    "message": "The <a href=\"/{{ lang }}/resources\">resources</a> section of Webmaker is your guide to Web Literacy.   Discover new powers like coding, storytelling, protecting your online privacy and more.  Each section has links to discover, hands on projects to make and activities for teaching.",
     "description": "Copy for the second explore subsection with document stacks"
   },
   "Free tools that make it easy to create and learn": {

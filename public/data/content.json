@@ -955,6 +955,7 @@
   "weblit-Collaborating": {
     "intro": "There&rsquo;s only so much one person can do alone.  Fortunately, the web allows us to connect with others across distances, languages and cultures. Honing our online collaboration skills lets us do more than just send better emails&mdash;it helps us build things on the web faster, better and smarter.",
     "related": "weblit-Search",
+    "icon": "fa-users",
     "discover": [
       {
         "title": "Ways to make your experience of online forums more productive",
@@ -1110,7 +1111,7 @@
   "weblit-Privacy": {
     "intro": "Your personal information is valuable. That&rsquo;s why it&rsquo;s vital that you are the one in charge of controlling how your personal information gets shared. That way, you can take steps to prevent others from tracking you, using your data in ways you don&rsquo;t like, or spying on you without your knowledge or consent. This page includes steps anyone can take to make their online lives more private and secure. It also explores some of the larger ideas and debates around privacy, trust and your digital footprint.",
     "related": "weblit-Security",
-    "icon": "fa-eye",
+    "icon": "fa-eye-slash",
     "discover": [
       {
         "title": "See who&rsquo;s tracking you online",
@@ -1247,6 +1248,7 @@
   "weblit-OpenPractices": {
     "intro": "How do we spread ideas? To help the network grow and to let new ideas flourish, the web is based on open standards that can be studied, reused and improved by anyone. Licenses define what&rsquo;s possible with the code and content we find online, and understanding how they work allows you to participate in the web&rsquo;s evolution.",
     "related": "weblit-Collaborating",
+    "icon": "fa-fire",
     "discover": [
       {
         "title": "What is openly licensed content?",

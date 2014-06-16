@@ -32,6 +32,7 @@
         {% for page in section.pages %}
         {% if not page.flag or flags[page.flag] %}
         {% if not page.adminOnly or isAdmin %}
+        {% if not page.isAtleastMentor or isAdmin or isSuperMentor or isMentor %}
         <li{% if page.icon %} class="nav-item-with-icon"{% endif %}>
 
             <a
@@ -45,6 +46,7 @@
               {{gettext(page.title)}}
             </a>
         </li>
+        {% endif %}
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -65,11 +67,13 @@
           {% for page in section.pages %}
           {% if not page.flag or flags[page.flag] %}
           {% if not page.adminOnly or isAdmin %}
+          {% if not page.isAtleastMentor or isAdmin or isSuperMentor or isMentor %}
           <li>
             <a href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}>
               {{gettext(page.title)}}
             </a>
           </li>
+          {% endif %}
           {% endif %}
           {% endif %}
           {% endfor %}

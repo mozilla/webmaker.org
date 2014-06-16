@@ -82,7 +82,7 @@
           </ul>
         </li>
 
-        <li ng-repeat="page in section.pages" ng-if="!page.adminOnly || _user.isAdmin">
+        <li ng-repeat="page in section.pages" ng-if="!page.isAtleastMentor || _user.isAdmin || _user.isSuperMentor || _user.isMentor">
           <a href="{{baseUrl + page.url}}" external-link="{{page.external}}">{{ page.title | i18n }}</a>
         </li>
       </ul>

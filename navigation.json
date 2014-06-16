@@ -19,20 +19,18 @@
       {
         "id": "webmaker-super-mentor",
         "title": "Super Mentor Badge",
-        "url": "badges/webmaker-super-mentor",
-        "flag": "badges"
+        "url": "badges/webmaker-super-mentor"
       },
       {
         "id": "hive-community-member",
         "title": "Hive Community Badge",
-        "url": "badges/hive-community-member",
-        "flag": "badges"
+        "url": "badges/hive-community-member"
       },
       {
         "id": "badges-admin",
         "title": "Badges Admin",
         "url": "admin/badges",
-        "flag": "badges"
+        "isAtleastMentor": "true"
       },
       {
         "id": "search",
@@ -56,21 +54,18 @@
       {
         "id": "webmaker-super-mentor",
         "title": "Super Mentor Badge",
-        "url": "badges/webmaker-super-mentor",
-        "flag": "badges"
+        "url": "badges/webmaker-super-mentor"
       },
       {
         "id": "hive-community-member",
         "title": "Hive Community Badge",
-        "url": "badges/hive-community-member",
-        "flag": "badges"
+        "url": "badges/hive-community-member"
       },
       {
         "id": "badges-admin",
         "title": "Badges Admin",
         "url": "admin/badges",
-        "flag": "badges",
-        "adminOnly": "true"
+        "isAtleastMentor": "true"
       },
       {
         "id": "search",

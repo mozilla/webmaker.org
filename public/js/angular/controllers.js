@@ -33,7 +33,8 @@ angular
               {
                 id: 'badges-admin',
                 title: 'Badges Admin',
-                url: 'admin/badges'
+                url: 'admin/badges',
+                isAtleastMentor: true
               },
               {
                 id: 'search',

@@ -100,7 +100,7 @@
   "Filter projects by...": "Filter projects by...",
   "Filter the gallery": "Filter the gallery",
   "Find a willing volunteer": "<strong>Find a willing volunteer</strong> and walk them through our survey. Let them drive, but ask them to speak their thoughts aloud so you can write them in the form.",
-  "Find or host an event paragraph": "From hack jams to pop ups to the global <a href='/{{localeInfo.lang}}/party'>Maker Party</a>, there's an event to suit every interest. Search for one near you or host your own — we have <a href='/{{localeInfo.lang}}/event-guides'>guides</a> to show you how.",
+  "Find or host an event paragraph": "From hack jams to pop ups to the global <a href='https://party.webmaker.org'>Maker Party</a>, there's an event to suit every interest. Search for one near you or host your own — we have <a href='/{{localeInfo.lang}}/event-guides'>guides</a> to show you how.",
   "Find or host an event": "Find or host an event",
   "From newsletters to community calls": "From newsletters to community calls, there are many ways you can join our community.",
   "front-page-description": "We're a global community dedicated to teaching digital skills and web literacy. We explore, tinker and create together to build a web that's open and made by everyone.",

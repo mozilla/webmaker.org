@@ -1,49 +1,42 @@
-
 {
   "weblit-Navigation": {
-    "related": "weblit-Privacy",
-    "intro": "How do you get around the web? Browsers are the software we use to explore the web&mdash;they can quickly direct us exactly where we want to go, or can take us on a winding path to serendipitously discover new interests. Improving web navigation by customizing your browser with add-ons is a wonderful way to take control of your web experience.",
     "icon": "fa-map-marker",
+    "intro": "<strong>How do you get around the web?</strong> Browsers are the software we use to explore the web. They can quickly direct us exactly where we want to go, or can take us on a winding path to serendipitously discover new interests. Sharpening your navigation skills can help you browse faster, make use of speedy new short-cuts and add-ons, and get more from the time you spend on the web each day.",
+    "related": "weblit-Privacy",
     "discover": [
       {
-        "title": "Firefox Browser",
+        "title": "What&rsquo;s a web browser?",
         "links": [
-          "Find out about the different parts of a Firefox browser with <a href='https://support.mozilla.org/en-US/products/firefox/get-started/tips'>these tips and tricks</a>."
+          "<strong>It&rsquo;s one of the most important pieces of software on your computer</strong>. But many people don&rsquo;t even know what it is! <a href=\"https://openmatt.makes.org/thimble/MTYwOTEwNTQwOA==/learn-about-your-web-browser\">This page quickly explains what browsers are and why they matter.</a>"
         ]
       },
       {
-        "title": "Resize your browser",
+        "title": "Tips and tricks",
         "links": [
-          "Learn the size of your browser window on this handy <a href='http://whatsmybrowsersize.com/'>&ldquo;What&rsquo;s My Browser Size&rdquo; tool</a>"
+          "<strong><a href=\"https://support.mozilla.org/en-US/products/firefox/get-started/tips\">Level up your browser skills</a> </strong>with these tips and tricks for Firefox. Keyboard and mouse shortcuts, automating common searches, organizing tabs and more. (Here&rsquo;s similar tips for <a href=\"https://www.google.com/intl/en/chrome/browser/signin.html\">Chrome</a>, <a href=\"http://windows.microsoft.com/en-ca/internet-explorer/products/ie-9/tips\">Internet Explorer</a>, <a href=\"http://support.apple.com/kb/ht5364\">Safari</a> and<a href=\"http://fedoraproject.org/en/get-help\"> Fedora</a>.)"
         ]
       },
       {
-        "title": "Firefox is Free",
+        "title": "Watch the evolution of the web",
         "links": [
-          "Remix this <a href='https://mozilla.makes.org/thimble/firefox-is-free-learn-about-your-web-browser'>&ldquo;Firefox is Free&rdquo; webpage</a> by modifying it for your own chosen browser."
+          "<strong>The web is like a living, breathing ecosystem</strong>. This <a href=\"http://www.evolutionoftheweb.com/\">beautiful interactive timeline</a> shows how much it has grown and changed since its birth in the early 1990s."
         ]
       },
       {
-        "title": "&ldquo;The Filter Bubble&rdquo;",
+        "title": "Navigating &ldquo;filter bubbles&rdquo;",
         "links": [
-          "Watch <a href='http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles#t-36384'>Eli Pariser&rsquo;s TED Talk &ldquo;The Filter Bubble&rdquo;</a>to learn more about online filtering."
-        ]
-      },
-      {
-        "title": "Evolution of the Web",
-        "links": [
-          "Explore <a href='http://www.evolutionoftheweb.com/'>an interactive timeline of the web</a>."
+          "<strong>Are you stuck in a filter bubble?</strong> How do you know what <em>you&rsquo;re</em> seeing on the web is the same as what others are seeing? Watch <a href=\"http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles#t-36384\">Eli Pariser&rsquo;s TED Talk, <strong>The Filter Bubble</strong>, </a>to learn more about online filtering."
         ]
       }
     ],
     "make": [
       {
-        "title": "Firefox Add-Ons",
-        "description": "<a href='https://addons.mozilla.org/en-US/firefox/?application=firefox'>Trick out your Firefox Browser</a> with Add-ons "
+        "title": "Supercharge your browser",
+        "description": "<strong>Add-ons for your browser can help you navigate more easily</strong>&mdash;plus simplify tasks and unlock new powers. <a href=\"https://addons.mozilla.org/en-US/firefox/?application=firefox\">Trick out your Firefox browser with add-ons</a>."
       },
       {
-        "title": "Navigation Superhero",
-        "description": "<a href='http://toolness.github.io/hackasaurus-parable/navigator-badge/'>Hack your browser</a>"
+        "title": "Navigate like a superhero",
+        "description": "<strong><a href=\"http://toolness.github.io/hackasaurus-parable/navigator-badge/\">Test yourself on web navigation basics</a></strong>. Working with URLs in your navigation bar, copying and pasting text, finding image URLs and more."
       }
     ],
     "teach": {
@@ -54,76 +47,73 @@
           "url": "https://mozteach.makes.org/thimble/ways-of-the-web-teaching-kit",
           "author": "Mozteach",
           "type": "kit"
-        },
-        {
-          "title": "Become a mentor",
-          "description": "Help others become web savvy, level up their critical thinking online, and get the most from the web",
-          "url": "",
-          "author": "",
-          "type": "kit"
-        },
-        {
-          "title": "Webmaker Training",
-          "description": "Get free training from Mozilla and learn how to teach credibility, privacy, and other essential skills for web literacy ",
-          "url": "",
-          "author": "",
-          "type": "kit"
         }
       ],
-      "more": [
+      "ctas": [
         {
-          "title": "Share a resource",
-          "description": "Teach navigation skills by adding links, activities or curricula you've had success with in your own work [link]"
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> web navigation, coding and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
     }
   },
   "weblit-WebMechanics": {
-    "intro": "What happens when you browse the web? Clicking on a link or entering a URL in your browser initiates a series of behind the scenes operations that define your experiences on the web. Recognizing the relationships between the moving parts of the web like IP addresses and URLs makes the overall browsing experience more rewarding, and helps you make smart choices about the content you consume and share online.",
-    "related": "weblit-Infrastructure",
     "icon": "fa-wrench",
+    "intro": "<strong>What happens when you browse the web?</strong> Clicking on a link or entering a URL in your browser initiates a series of behind the scenes operations that define your experiences on the web. Recognizing the relationships between the moving parts of the web, like IP addresses and URLs, makes the overall browsing experience more rewarding, and helps you make smart choices about the content you consume and share online.",
+    "related": "weblit-Infrastructure",
     "discover": [
-      {
-        "title": "URL Demystifier.",
-        "description": "Where in the world is the computer that hosts your website located?",
-        "links": [
-          "Enter any address in <a href='http://url-demystifier.toolness.org/'>the URL Demystifier</a> to find out."
-        ]
-      },
-      {
-        "title": "Find out who owns the Internet",
-        "links": [
-          "<a href='http://computer.howstuffworks.com/internet/basics/who-owns-internet.htm'>Read about the ownership structures</a> of the world&rsquo;s largest public resource."
-        ]
-      },
-      {
-        "title": "What is my IP address?",
-        "links": [
-          "This tool will show you <a href='http://whatismyipaddress.com/hostname-ip'>what IP address you&rsquo;re using right now</a>."
-        ]
-      },
-      {
-        "title": "Host Name Converter",
-        "links": [
-          "This tool will show you <a href='http://www.hcidata.info/host2ip.htm'>how the domain name of the site you&rsquo;re visiting is converted to an IP address</a> by your web server."
-        ]
-      },
       {
         "title": "Not a Series of Tubes",
         "description": "",
         "links": [
-          "Despite popular belief, the Internet is neither a series of tubes nor a web browser. <a href='http://www.dontfeartheinternet.com/the-basics/not-tubes'>This video explains how the Internet is a collection of files</a> connected to a domain name that link to each other."
+          "<strong>Despite popular belief, the Internet is <em>not</em> a series of tubes.</strong> <a href=\"http://www.dontfeartheinternet.com/the-basics/not-tubes\">This video from &ldquo;Don&rsquo;t Fear the Internet&rdquo;</a> explains how the internet and web sites actually work."
+        ]
+      },
+      {
+        "title": "What&rsquo;s it built with?",
+        "links": [
+          "<strong>What makes your favorite web sites tick?</strong> <a href=\"http://builtwith.com\">Paste in their address here</a> to see what technologies they&rsquo;re built with."
+        ]
+      },
+      {
+        "title": "What can you learn from a URL?",
+        "links": [
+          "<strong>Where in the world is the computer that hosts your website located?</strong> Enter any address in <a href=\"http://url-demystifier.toolness.org/\">the URL Demystifier</a> to find out."
+        ]
+      },
+      {
+        "title": "What&rsquo;s my IP address?",
+        "links": [
+          "Your &ldquo;Internet Protocol&rdquo; address is what lets your computer talk to other computers on the Internet. This tool will show you <a href=\"http://whatismyipaddress.com/ip-address\">what IP address you&rsquo;re using right now</a>."
+        ]
+      },
+      {
+        "title": "Who owns the Internet?",
+        "links": [
+          "<a href=\"http://computer.howstuffworks.com/internet/basics/who-owns-internet.htm\">Learn more about the ownership structures</a> of the world&rsquo;s largest public resource."
         ]
       }
     ],
     "make": [
       {
         "title": "Mash up the web with Popcorn Maker",
-        "description": "See <a href='https://popcorn.webmaker.org/editor/61795/remix'>how embedding resources</a> from sites like Wikipedia or Flickr depends on web mechanics."
+        "description": "See <a href=\"https://popcorn.webmaker.org/editor/61795/remix\">how embedding resources</a> from sites like Wikipedia, You Tube or Flickr rely on web mechanics."
       },
       {
-        "title": "Use a browser, hack a webpage",
-        "description": "Wouldn&rsquo;t it be cool if you could &ldquo;hack&rdquo; websites like Google and Facebook? Now you can&mdash;and you'll <a href='https://tbx.makes.org/thimble/your-first-hack'>learn about the back-end of web mechanics</a> while doing it."
+        "title": "Explain the evolution of the web in your own way",
+        "description": "Write a blog post, <a href=\"https://thimble.webmaker.org/\">make a web page,</a> or <a href=\"https://popcorn.webmaker.org/\">create a Popcorn video</a> about the web&rsquo;s history, evolution or future."
+      },
+      {
+        "title": "Hack Google",
+        "description": "Wouldn&rsquo;t it be cool if you could &ldquo;hack&rdquo; websites like Google or Facebook? Now you can&mdash;safely. And you&rsquo;ll <a href=\"https://tbx.makes.org/thimble/your-first-hack\">learn a bit about web mechanics</a> while doing it."
       }
     ],
     "teach": {
@@ -132,7 +122,7 @@
           "title": "Speed dating for web mechanics",
           "description": "Make learning about the elements of the web fun for students.",
           "url": "https://juliahivenyc.makes.org/thimble/MTgwOTQ0ODk2/web-mechanics-speed-dating",
-          "author": "Julia Vallera",
+          "author": "Julia Vallera, Hive NYC",
           "type": "kit"
         },
         {
@@ -142,328 +132,365 @@
           "author": "@malesser + @thomashpark",
           "type": "kit"
         }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> web mechanics, coding and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+        }
       ]
     }
   },
   "weblit-Search": {
-    "intro": "Can the web be harnessed? With millions of new web pages being added to the Internet every month, the web can feel chaotic&mdash;even overwhelming. Using effective search techniques can make the difference between a frustrating web experience and an empowered one.",
-    "related": "weblit-Remix",
     "icon": "fa-search",
+    "intro": "<strong>Can the web be harnessed?</strong> With millions of new web pages being added to the Internet every month, the web can feel chaotic&mdash;even overwhelming. Using effective search techniques can make the difference between a frustrating web experience and an empowered one.",
+    "related": "weblit-Remix",
     "discover": [
       {
-        "title": "Search engine optimized versus search engine friendly",
+        "title": "How good a searcher are you?",
         "links": [
-          "What&rsquo;s the difference? <a href='http://searchenginewatch.com/article/2065486/Search-Engine-Optimized-vs.-Search-Engine-Friendly-Websites'>This handy article</a> shines a light on the topic."
+          "<a href=\"http://www.google.co.uk/insidesearch/searcheducation/lessons.html#challenges\"><strong>Put your skills to the test with these search challenges</strong></a>. See how quickly you can track down answers on everything from Che Guevera to ancient Egypt, in categories like culture, geography, history and science."
         ]
       },
       {
-        "title": "Search box histories",
+        "title": "Search Creative Commons images",
         "links": [
-          "Learn about<a href='http://www.google.co.uk/insidesearch/searcheducation/'>the human history of the search box</a> via Google Search Education."
+          "Find free openly-licensed images from multiple sources using this handy <a href=\"http://search.creativecommons.org/\">Creative Commons search hub</a>."
         ]
       },
       {
-        "title": "Creative Common&rsquo;s own image search",
+        "title": "Go back in time",
         "links": [
-          "Find an openly-licensed image using different content providers on <a href='http://search.creativecommons.org/'>this Creative Commons search hub</a>."
+          "<strong>Search the Internet&rsquo;s past with <a href=\"https://archive.org/web/\">the Internet Archive&rsquo;s <em>Way Back Machine</em></a></strong>. See what your favorite sites looked like back in the day."
         ]
       },
       {
-        "title": "How does Google Search actually work?",
+        "title": "What is the world searching for?",
         "links": [
-          "<a href='http://www.youtube.com/watch?v=BNHR6IQJGZs'>Learn how Google Search works in this video</a> from the Google Search team."
+          "<a href=\"http://www.google.com/trends/\"><strong> See what the rest of the world is searching on Google right now</strong></a>. Visualize <a href=\"http://www.google.com/trends/hottrends/visualize?pn=p13\">hot searches</a> or <a href=\"http://www.google.com/trends/explore\">explore trends.</a> What&rsquo;s more popular&mdash;<a href=\"http://www.google.com/trends/explore#q=%2Fm%2F01yrx%2C%20%2Fm%2F0bt9lr&amp;cmpt=q\">cats or dogs</a>?"
         ]
       },
       {
-        "title": "The Internet Archive&rsquo;s Way Back machine",
+        "title": "Don&rsquo;t want your searches to be tracked?",
         "links": [
-          "View what your favorite web sites looked like in the past at <a href='https://archive.org/web/web.php'>the Internet Archive&rsquo;s WayBack Machine</a>."
+          "Search without letting your searches be tracked using <a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature\">Do Not Track.</a>"
         ]
       },
       {
         "title": "What is the world searching today?",
         "links": [
-          "<a href='http://www.google.com/trends/'>See what the world is searching for</a> using Google Trends."
+          "<a href=\"http://www.google.com/trends/\">See what the world is searching for</a> using Google Trends."
         ]
       },
       {
         "title": "I don&rsquo;t want my searches to be tracked....",
         "links": [
-          "Search without allowing your searches to be tracked using <a href='https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature'>Do Not Track by Firefox</a>."
+          "Search without allowing your searches to be tracked using <a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature\">Do Not Track by Firefox</a>."
+        ]
+      },
+      {
+        "title": "How does search work?",
+        "links": [
+          "<strong>What happens when you Google something?</strong> <a href=\"http://www.youtube.com/watch?v=BNHR6IQJGZs\">This video shows the life span of a search query.</a>"
         ]
       }
     ],
     "make": [
       {
-        "title": "How to customize Twitter hashtags",
-        "description": "Make hashtags on Twitter using <a href='http://www.wikihow.com/Use-Hashtags-With-Twitter'>this WikiHow tutorial</a>."
+        "title": "Make an interactive concept map",
+        "description": "<a href=\"http://www.instagrok.com/index.html\">Use instaGrok</a> to research and share an interactive concept map of your search on a particular topic."
       },
       {
-        "title": "Make your own Google search engine",
-        "description": "A tutorial on <a href='https://www.google.com/cse/'>how to add a search box to your homepage </a>to help people find what they need on your website"
+        "title": "Tell a story with GIFs",
+        "description": "<a href=\"http://giphy.com\">Search and find the perfect series of animated GIFs</a> to tell a story."
       },
       {
         "title": "Change your browser&rsquo;s default search bar",
-        "description": "Step-by-step instructions on <a href='http://www.searchenginejournal.com/change-your-default-search-engine-in-firefox-google-chrome-ie/'>how to change the search bar in various web browsers</a>"
+        "description": "Step-by-step instructions on <a href=\"http://www.searchenginejournal.com/change-your-default-search-engine-in-firefox-google-chrome-ie/\">how to change the search bar in various web browsers.</a>"
       }
     ],
     "teach": {
       "kits": [
         {
-          "title": "Hold a SEO battle with kids",
-          "description": "Facilitate this activity to help learners get their websites at the top of Google Search",
-          "url": "https://mousemeredith.makes.org/thimble/seo-battle",
-          "author": "meredith",
+          "title": "Help learners become better searchers",
+          "description": "Lesson plans, power search tips and ways to help students search academic sources.",
+          "url": "http://www.google.co.uk/insidesearch/searcheducation/",
+          "author": "Google Education",
           "type": "kit"
+        },
+        {
+          "title": "Hold a SEO battle with kids",
+          "description": "Help learners improve their websites&rsquo; search rankings",
+          "url": "https://mousemeredith.makes.org/thimble/seo-battle",
+          "author": "Meredith Summs",
+          "type": "kit"
+        }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> smarter searching, navigation and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
     }
   },
   "weblit-Credibility": {
-    "intro": "Can we believe everything we see on the web? The internet contains a confounding mix of facts, opinions, advertising, hidden agendas and pranks. Sharpening your BS detector helps you identify credible content on the web, and reminds you to approach certain web sites with a healthy dose of skepticism.",
-    "related": "weblit-Sharing",
     "icon": "fa-check",
+    "intro": "<strong>Can we believe everything we see on the web?</strong> The Internet contains a confounding mix of facts, opinions, advertising, hidden agendas and pranks. Sharpening your &ldquo;crap detector&rdquo; helps you identify credible content on the web, and reminds you to approach certain web sites with a healthy dose of skepticism.",
+    "related": "weblit-Sharing",
     "discover": [
       {
-        "title": "Crap Detection 101",
-        "description": "Howard Rheingold offers some fantastic ideas on how to separate accurate information from inaccurate information, misinformation and disinformation.",
+        "title": "Strengthen your Crap Detector",
+        "description": "<strong>How do you separate the good stuff from the bad?</strong> Howard Rheingold explains how to separate accurate information from <em>inaccurate</em> information, <em>misinformation</em> and <em>disinformation</em>.",
         "links": [
-          "Check out <a href='http://rheingold.com/2013/crap-detection-mini-course'> Howard&rsquo;s Crap Detection mini-course",
-          "Read Howard&rsquo;s <a href='http://blog.sfgate.com/rheingold/2009/06/30/crap-detection-101/'>Crap Detection 101 blog post</a>"
+          "Read about <a href=\"http://blog.sfgate.com/rheingold/2009/06/30/crap-detection-101/\">Crap Detection 101</a>",
+          "Check out <a href=\"http://rheingold.com/2013/crap-detection-mini-course\"> this Crap Detection mini-course</a>",
+          "<strong><a href=\"http://loex2008collaborate.pbworks.com/w/page/18686701/The%20CRAP%20Test\">Does it pass the &ldquo;CRAP Test?&rdquo;</a></strong> A quick and easy evaluation process: consider a web page&rsquo;s <strong>C</strong>urrency, <strong>R</strong>eliability, <strong>A</strong>uthority and <strong>P</strong>oint of View."
         ]
       },
       {
-        "title": "The &ldquo;CRAP Test&rdquo;",
+        "title": "Hone your Internet Detective skills",
         "links": [
-          "This <a href='http://loex2008collaborate.pbworks.com/w/page/18686701/The%20CRAP%20Test'>quick and easy evaluation process</a> helps you analyze the legitimacy of a web pages by considering its Currency, Reliability, Authority and Point of View."
+          "<strong>Doing online research?</strong> <a href=\"http://www.vtstutorials.ac.uk/detective/questions.html\">Here&rsquo;s some clues and evidence to look for</a> when deciding whether a site is legitimate."
         ]
       },
       {
-        "title": "Internet Detective",
+        "title": "Fact-check like a pro",
         "links": [
-          "<a href='http://www.vtstutorials.ac.uk/detective/questions.html'>Decide whether a site is legitimate</a> by learning to look for clues and evidence."
-        ]
-      },
-      {
-        "title": "Journalist&rsquo;s Toolbox",
-        "links": [
-          "<a href='http://www.journaliststoolbox.org/archive/urban-legends-hoaxes-and-scams'>Detect urban legends, hoaxes and scams</a> with this comprehensive toolbox used by journalists for myth-busting, fact-checking and more. "
+          "Use this <a href=\"http://www.journaliststoolbox.org/archive/urban-legends-hoaxes-and-scams\">journalist&rsquo;s toolbox</a> to detect urban legends, hoaxes and scams with this comprehensive toolbox for myth-busting, fact-checking and more."
         ]
       }
     ],
     "make": [
       {
         "title": "Punk a friend",
-        "description": "Remix your buddy&rsquo;s social media profile, news article, or their favorite web site and give them a funny surprise with <a href='https://mozteach.makes.org/thimble/xray-goggles-teaching-kit'>XRay Goggles </a>"
+        "description": "Use the <a href=\"https://mozteach.makes.org/thimble/xray-goggles-teaching-kit\">X-Ray Goggles</a> to remix a friend&rsquo;s social media profile, their favorite web site, or a news article to give them a funny surprise. Explore how easy it can be to make something fake look legit."
       },
       {
-        "title": "NewsJack remix",
-        "description": "<a href='http://newsjack.in'>Remix a news web page</a> by changing the ads, altering headlines, and exploring the visual and linguistic cues that signal credibility"
+        "title": "Remix a news web page",
+        "description": "<a href=\"http://newsjack.in\">Use the NewsJack tool</a> to remix the news. Try changing the ads, altering headlines, or explore the visual and linguistic cues that signal credibility."
+      },
+      {
+        "title": "Spot hidden persuasion techniques in You Tube videos",
+        "description": "<a href=\"http://www.digitaldisruption.co.uk/the-propaganda-machine/\">Identify hidden persuasion and propaganda techniques</a> in ads, films and conspiracy videos. Then write, <a href=\"https://thimble.webmaker.org/\">make a web page</a> or <a href=\"https://popcorn.webmaker.org/\">video about what you discovered.</a>"
       }
     ],
     "teach": {
       "kits": [
         {
-          "title": "Remixathon: Wonders of the Web",
-          "description": "",
-          "url": "https://mozteach.makes.org/thimble/remixathon-cultural-heritage",
-          "author": "mozteach",
-          "type": "activity"
-        },
-        {
-          "title": "Create your evil twin",
-          "description": "Teach people to Use HTML and CSS, to create a profile page for their Evil Twin.",
+          "title": "Create your own evil twin",
+          "description": "Teach learners how to use HTML and CSS by creating a customized profile page for their Evil Twin",
           "url": "https://mozteach.makes.org/thimble/evil-twin-the-opposite-of-me",
           "author": "mozteach",
           "type": "kit"
         },
         {
-          "title": "Create your evil twin",
-          "description": "Teach people to Use HTML and CSS, to create a profile page for their Evil Twin.",
-          "url": "https://mozteach.makes.org/thimble/evil-twin-the-opposite-of-me",
-          "author": "mozteach",
+          "title": "Choosing good websites for your research",
+          "description": "Lesson materials for helping students discuss and assess good rating criteria",
+          "url": "https://www.commonsensemedia.org/educators/lesson/rating-websites-3-5",
+          "author": "Common Sense Media",
+          "type": "kit"
+        },
+        {
+          "title": "Teaching critical thinking",
+          "description": "Activities and lesson plans on source-checking, online sharing, detecting hidden propaganda, and more.",
+          "url": "http://www.digitaldisruption.co.uk/teaching-tools",
+          "author": "Digital Disruption",
           "type": "kit"
         }
       ],
-      "more": [
+      "ctas": [
         {
-          "title": "Common Sense Media teaching plan",
-          "description": "A <a href='http://www.commonsensemedia.org/educators/lesson/rating-websites-3-5'>set of resources</a> made by Common Sense Media to guide students through the process of evaluating good sources of information on the web"
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> credibility, critical thinking and other digital skills."
         },
         {
-          "title": "Digital Disruption Toolkit",
-          "description": "<a href='http://www.digitaldisruption.co.uk/teaching-tools'>Tools and lesson plans</a> designed to improve your student&rsquo;s ability to critically evaluate information they encounter online"
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
-    },
-    "ctas": [
-      {
-        "title": "Become a mentor",
-        "description": "Help others become web savvy, level up their critical thinking online, and get the most from the web"
-      },
-      {
-        "title": "Get free training from Mozilla",
-        "description": "Learn how to teach credibility, privacy, and other essential skills for web literacy"
-      },
-      {
-        "title": "Share a resource for teaching credibility skills",
-        "description": "Add links, activities or curricula you've had success with in your own work"
-      }
-    ]
+    }
   },
   "weblit-Security": {
-    "intro": "Is it possible to stay safe online? The web works by connecting every computer and device in the world&mdash;this offers us astounding opportunities, but also exposes us to significant risk. The web can be safe with the right skills, tools and software, giving us the power to remain secure.",
-    "related": "weblit-Community",
     "icon": "fa-lock",
+    "intro": "<strong>How do you protect yourself online?</strong> The web works by connecting every computer and device in the world. This offers astounding opportunities, but also exposes us to risk. With the right skills, tools and software, you can protect yourself and remain secure.",
+    "related": "weblit-Community",
     "discover": [
       {
-        "title": "Security with Firefox add-ons",
+        "title": "Increase your security with add-ons",
         "links": [
-          "<a href='http://www.notebookreview.com/news/top-10-best-firefox-security-add-ons/'>Install these 10 Firefox add-ons</a> to secure your web browser."
+          "<a href=\"http://www.notebookreview.com/news/top-10-best-firefox-security-add-ons/\">Install these 10 Firefox add-ons</a> to secure your web browser.</a>"
         ]
       },
       {
         "title": "What is Heartbleed?",
         "links": [
-          "Learn about < a href='http://heartbleed.com/'>one of the web&rsquo;s most serious vulnerabilities</a>, and how to combat it."
+          "Learn about <a href=\"http://heartbleed.com/\">one of the web&rsquo;s most serious vulnerabilities</a>, and how to combat it."
         ]
       },
       {
-        "title": "Add-ons that block ads",
+        "title": "Block ads",
         "links": [
-          "Learn more about Adblock Plus, an <a href='https://adblockplus.org/en/about'>add-on that prevents sites from employing cookies</a> that track your activity online and blocks irritating website ads."
+          "Learn more about Adblock Plus, an <a href=\"https://adblockplus.org/en/about\">add-on that prevents sites from employing cookies</a> that track your activity online and blocks irritating website ads."
         ]
       },
       {
-        "title": "University of Texas&rsquo;s guide to preventing identity theft",
+        "title": "Preventing identity theft",
         "links": [
-          "Identity theft is serious business. <a href='http://www.utexas.edu/its/secure/articles/identity_theft.php'>Here is a primer to understand the key signs</a> you may have been a victim of it."
+          "Identity theft is serious business. <a href=\"http://www.utexas.edu/its/secure/articles/identity_theft.php\">Here&rsquo;s a primer from the University of Texas to understand the key signs</a>."
         ]
       },
       {
-        "title": "The security mirage by Bruce Schneier",
+        "title": "The security mirage",
         "links": [
-          "The feeling of security and the reality of security don&rsquo;t always match, says computer-security expert Bruce Schneier. In this talk <a href='http://www.ted.com/talks/bruce_schneier'>he explains why we spend billions to address certain kinds of risks</a> while avoiding others."
+          "The feeling of security and the reality of security don&rsquo;t always match, says computer-security expert Bruce Schneier. In this talk <a href=\"http://www.ted.com/talks/bruce_schneier\">he explains why we spend billions to address certain kinds of risks</a> while avoiding others."
         ]
       }
     ],
     "make": [
       {
         "title": "Create a how-to video for the Lightbeam project",
-        "description": "Learn about the <a href='https://www.mozilla.org/en-US/lightbeam/'>Mozilla Lightbeam project</a>, which tracks those who are watching you online, and then add your own flavor to the issue by <a href='https://laura.makes.org/popcorn/1oj6'>remixing this Popcorn video</a> and enhancing it with your own sound and images."
+        "description": "Learn about the <a href=\"https://www.mozilla.org/en-US/lightbeam/\">Mozilla Lightbeam project</a>, which tracks those who are watching you online, and then add your own flavor to the issue by <a href=\"https://laura.makes.org/popcorn/1oj6\">remixing this Popcorn video</a> and enhancing it with your own sound and images."
       },
       {
-        "title": "A graphic novel about mobile security",
-        "description": "Modify this Thimble page created by a Webmaker community member to <a href='https://ryancalmon.makes.org/thimble/mobile-security-11'>add your own take on mobile security in graphic novel format</a>."
+        "title": "Remix a graphic novel about mobile security",
+        "description": "Modify this Thimble page created by a Webmaker community member to <a href=\"https://ryancalmon.makes.org/thimble/mobile-security-11\">add your own take on mobile security in graphic novel format</a>."
       },
       {
         "title": "Create a strong Internet password",
-        "description": "This article and the companion video by the Mozilla Support team will show you <a href='https://support.mozilla.org/en-US/kb/create-secure-passwords-keep-your-identity-safe'>how to create secure, easy-to-remember passwords</a>."
+        "description": "This article and the companion video by the Mozilla Support team will show you <a href=\"https://support.mozilla.org/en-US/kb/create-secure-passwords-keep-your-identity-safe\">how to create secure, easy-to-remember passwords</a>."
       }
     ],
     "teach": {
       "kits": [
         {
-          "title": "Hold an X-Ray Goggles Gallery Walk",
-          "description": "Help youth to express their thoughts on privacy by hacking websites that house their personal information",
-          "url": "https://patrickwade.makes.org/thimble/xray-goggles-gallery-walk-",
-          "author": "the Our Privacy Matters! team",
-          "type": "kit"
-        },
-        {
-          "title": "Share privacy and security concepts with learners",
+          "title": "How to teach privacy and security concepts",
           "description": "This teaching kit outlines a set of hands-on activities for helping participants learn basic privacy practices quickly",
           "url": "https://laura.makes.org/thimble/privacy-and-security-teaching-kit",
-          "author": "Laura Hilliger, Dumitru Gherman, Emma Irwin, Ben Moskowitz, Atul Varma, Alina Hua, Stacy Martin, Matthew Willse, and Shane Caraveo",
+          "author": "Laura Hilliger, Dumitru Gherman, Emma Irwin + others",
           "type": "kit"
         },
         {
           "title": "Remix for cybersafety",
-          "description": "Show your learners how to explore security through remix with X-Ray Goggles",
+          "description": "Explore security through remixing with the X-Ray Goggles",
           "url": "https://laura.makes.org/thimble/remix-for-cybersafety",
           "author": "Laura Hilliger, Dumitru Gherman and Emma Irwin",
           "type": "kit"
+        }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> smarter searching, navigation and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
     }
   },
   "weblit-Composing": {
-    "intro": "What makes creating for the web different? Hyperlinks, multimedia, up-to-date content&mdash;these features make the web powerfully interconnected and entirely different from media of the past. When you write and build specifically for the web, recognizing that your audience is as much a part of the creative process as you are will allow you to tell stories and build experiences in ways that television, books and other media cannot.",
-    "related": "weblit-DesignAccessibility",
     "icon": "fa-pencil",
+    "intro": "<strong>What makes creating for the web different?</strong> Hyperlinks, multimedia, up-to-date content&mdash;these features make the web powerfully interconnected and different from media of the past. When you write and build specifically for the web, recognizing your audience as an interactive part of the  process will allow you to tell stories and build experiences in ways that television, books and other media can&rsquo;t.",
+    "related": "weblit-DesignAccessibility",
     "discover": [
       {
         "title": "A brief history of storytelling",
         "links": [
-          "Explore the <a href='https://mozteach.makes.org/thimble/a-brief-history-of-storytelling'>connections between early cave paintings, video games and today&rsquo;s web</a>."
+          "Explore the <a href=\"https://mozteach.makes.org/thimble/a-brief-history-of-storytelling\">connections between early cave paintings, video games and today&rsquo;s web</a>."
         ]
       },
       {
         "title": "What do screens want?",
         "links": [
-          "An essay by designer Frank Chimero examines <a href='http://frankchimero.com/talks/what-screens-want/transcript/'>what makes creating for the web unique</a>."
+          "An essay by designer Frank Chimero examines <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">what makes creating for the web unique</a>."
         ]
       },
       {
         "title": "Explore some introductory HTML",
         "links": [
-          "This <a href='http://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b'>Code Academy tutorial</a> is great for learning the very basics of HTML code."
+          "This <a href=\"http://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b\">Code Academy tutorial</a> is great for learning the basics of HTML, the language of the web."
         ]
       },
       {
         "title": "Get familiar with HTML and CSS",
         "links": [
-          "<a href='https://mozteach.makes.org/thimble/html-cheatsheet'>HTML</a> and <a href='https://mozteach.makes.org/thimble/css-cheatsheet'>CSS</a> coding cheat sheets that help you with the basics."
+          "<a href=\"https://mozteach.makes.org/thimble/html-cheatsheet\">HTML</a> and <a href=\"https://mozteach.makes.org/thimble/css-cheatsheet\">CSS</a> coding cheat sheets that help you with the basics."
         ]
       },
       {
         "title": "The Machine is Us/ing Us",
         "links": [
-          "Watch a viral video about <a href='http://www.youtube.com/watch?v=NLlGopyXT_g'>what makes hypermedia (the web) different</a>."
+          "Watch a viral video about <a href=\"http://www.youtube.com/watch?v=NLlGopyXT_g\">what makes hypermedia different</a>."
         ]
       }
     ],
     "make": [
       {
         "title": "Make an &ldquo;About Me&rdquo; page",
-        "description": "<a href='https://fuzzyfox.makes.org/thimble/LTE0MTQzMzI0MTY=/a-little-about-me'>Tell the web the story of you</a>."
+        "description": "<a href=\"https://fuzzyfox.makes.org/thimble/LTE0MTQzMzI0MTY=/a-little-about-me\">Make a web page that tells the story of you</a>."
       },
       {
-        "title": "Animated JavaScript poem with the National Writing Project",
-        "description": "Make a poem beautiful with <a href='https://thimble.webmaker.org/project/14661/remix'>dynamic text effects</a>."
+        "title": "Make an animated JavaScript poem",
+        "description": "This National Writing Project make lets you create a beautiful poem with <a href=\"https://thimble.webmaker.org/project/14661/remix\">dynamic text effects</a>."
       },
       {
         "title": "Bring a book cover to life",
-        "description": "Become the author of <a href='https://thimble.webmaker.org/project/14661/remix'>your own international best-seller</a>."
+        "description": "Become the author of <a href=\"https://thimble.webmaker.org/project/14661/remix\">your own international best-seller</a>."
       },
       {
-        "title": "Movie poster template",
-        "description": "Broadcast your brilliant project with a <a href='https://thimble.webmaker.org/project/21788/remix'>handy template that makes it into a feature poster</a>."
+        "title": "Make a movie poster",
+        "description": "Create your own blockbuster movie poster <a href=\"https://thimble.webmaker.org/project/58873/remix\"> with this handy web page template</a>."
       },
       {
         "title": "Create your own glitch music video",
-        "description": "Use a tutorial by glitch-artist Max Capacit to <a href='https://popcorn.webmaker.org/editor/60433/remix'>learn the process of creating a music video</a> using your own content and creative methods."
+        "description": "Use a tutorial by glitch-artist Max Capacity to <a href=\"https://popcorn.webmaker.org/editor/60433/remix\">learn the process of creating a music video</a> using your own content and creative methods."
       }
     ],
     "teach": {
       "kits": [
         {
-          "title": "Teach an introduction to HTML, CSS & JavaScript",
-          "description": "Help learners become web literate through hands-on learning with the building blocks of the web.",
+          "title": "Teach introductory HTML, CSS and JavaScript",
+          "description": "Hands-on learning with the building blocks of the web, from Tech Girls founder Kim Wilkens",
           "url": "https://techkim.makes.org/thimble/intro-to-html-css-javascript",
-          "author": "Webmaker community member Tech Kim",
+          "author": "Tech Kim",
           "type": "kit"
         },
         {
-          "title": "Facilitate storytelling with the New York Times",
-          "description": "This teaching kit by the National Writing Project facilitates a set of exercises that work with code, storytelling and remix in journalism",
+          "title": "Online storytelling with <em>the New York Times</em>",
+          "description": "Activities that work with code, storytelling and remix in journalism",
           "url": "https://nwp.makes.org/thimble/coding-with-the-new-york-times",
           "author": "The National Writing Project",
           "type": "kit"
         },
         {
           "title": "The Markup Mixer",
-          "description": "A Post-It note activity by Webmaker community member Thomas Park that helps learners build a basic understanding of markup",
+          "description": "An offline post-it note activity that helps learners build a basic understanding of markup",
           "url": "https://thomaspark.makes.org/thimble/markup-mixer",
           "author": "Thomas Park",
           "type": "kit"
@@ -471,94 +498,108 @@
       ],
       "more": [
         {
-          "title": "Explain HTML tags with Digital Corps",
-          "description": "A fun exercise for learners to <a href='https://robertapb.makes.org/thimble/LTk0MzkxNTAwOA==/html-thimble-tag-puzzle'>replicate the structure of a basic HTML document</a>."
+          "title": "Explain HTML tags with a live action puzzle",
+          "description": "A fun exercise from Digital Corps for learners to <a href=\"https://robertapb.makes.org/thimble/LTk0MzkxNTAwOA==/html-thimble-tag-puzzle\">replicate the structure of a basic HTML document</a>."
+        }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> online storytelling, coding and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
     }
   },
   "weblit-Remix": {
-    "intro": "Many of our greatest creative accomplishments are made as a reaction to someone else. Nowhere is this more evident than on the web. Remixing the ideas of others by adding your own spin can let you turn something old into something new, talk back to media, or stand on the shoulders of giants to make your own statement on the web.",
-    "related": "weblit-Composing",
     "icon": "fa-code-fork",
+    "intro": "<strong>Many of our greatest creative accomplishments are made as a reaction to someone else.</strong> Nowhere is this more evident than on the web. Remixing the ideas of others by adding your own spin can let you turn something old into something new, talk back to media, or stand on the shoulders of giants to make your own statement on the web.",
+    "related": "weblit-Composing",
     "discover": [
       {
         "title": "Listen to a remix",
         "description": "These mashups are songs made from bits of other songs.",
         "links": [
-          "<a href='http://www.youtube.com/watch?v=uNNma1BDIUA'>The Grey Album</a>, DJ Dangermouse&rsquo;s remix of JayZ and The Beatles",
-          "<a href='http://www.youtube.com/watch?v=KykbPtRb0K4'>Girl Talk creating a mashup</a> on his couch by remixing Elvis Costello",
-          "<a href='http://www.youtube.com/watch?v=HJMapA8WgYw'>Pop Danthology 2013</a>: a mashup of 68 different songs"
+          "<a href=\"http://www.youtube.com/watch?v=uNNma1BDIUA\">The Grey Album</a>, DJ Dangermouse&rsquo;s remix of JayZ and The Beatles",
+          "<a href=\"http://www.youtube.com/watch?v=KykbPtRb0K4\">Girl Talk creating a mashup</a> on his couch by remixing Elvis Costello",
+          "<a href=\"http://www.youtube.com/watch?v=HJMapA8WgYw\">Pop Danthology 2013</a>: a mashup of 68 different songs"
         ]
       },
       {
-        "title": "Watch DJ Kutiman&rsquo;s &ldquo;Thru You&rdquo; remix.",
+        "title": "Watch DJ Kutiman&rsquo;s &ldquo;Thru You&rdquo; remix",
         "links": [
-          "A mashup <a href='http://thru-you.com/#/videos/3/'>created by remixing hundreds of uploaded You Tube clips</a>"
+          "A mashup <a href=\"http://thru-you.com/#/videos/3/\">created by remixing hundreds of uploaded You Tube clips</a>"
         ]
       },
       {
-        "title": "Learn about sampling and hip-hop.",
+        "title": "Learn about sampling and hip-hop",
         "links": [
-          "<a href='https://archive.org/details/mcastRaidingthe20thCenturyWordsMusicExpansionfeatStrictlyKevPaulMorleyaCastofThousands'>&ldquo;Raiding The 20th Century&rdquo;</a> by DJ Food is an in-depth exploration into remix"
+          "<a href=\"https://archive.org/details/mcastRaidingthe20thCenturyWordsMusicExpansionfeatStrictlyKevPaulMorleyaCastofThousands\">&ldquo;Raiding The 20th Century&rdquo;</a> by DJ Food is an in-depth exploration into remix"
         ]
       },
       {
         "title": "Watch a documentary about remix culture",
-        "description": "Like Rip: A Remix Manifesto or Everything is a Remix.",
+        "description": "Like <em>RIP: A Remix Manifesto</em> or <em>Everything is a Remix</em>.",
         "links": [
-          "Watch <a href='https://www.nfb.ca/film/rip_a_remix_manifesto/'>the entire Rip film</a> free",
-          "<a href='http://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CC8QFjAA&url=http%3A%2F%2Fonf-nfb.gc.ca%2Fsg%2F100577.pdf&ei=8eRrU9PCBc2iyASC5oHQBw&usg=AFQjCNHcZXX4WT3xX527T5HMh2QwZbprdw&bvm=bv.66330100,d.aWw&cad=rja'>RIP educational guide (PDF)</a>",
-          "<a href='http://everythingisaremix.info/watch-the-series/'>Everything is a Remix</a>"
+          "Watch <a href=\"https://www.nfb.ca/film/rip_a_remix_manifesto/\">the entire RIP film</a> free",
+          "<a href=\"http://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CC8QFjAA&url=http%3A%2F%2Fonf-nfb.gc.ca%2Fsg%2F100577.pdf&ei=8eRrU9PCBc2iyASC5oHQBw&usg=AFQjCNHcZXX4WT3xX527T5HMh2QwZbprdw&bvm=bv.66330100,d.aWw&cad=rja\">RIP educational guide (PDF)</a>",
+          "<a href=\"http://everythingisaremix.info/watch-the-series/\"><em>Everything is a Remix</em></a>"
         ]
       }
     ],
     "make": [
       {
-        "title": "Remix a web page.",
-        "description": "Use <a href='https://goggles.webmaker.org/'>X-Ray Goggles</a> to remix any web page&mdash;your Facebook profile, the Google start page, NBA.com, or anything."
+        "title": "Remix a web page",
+        "description": "Use the <a href=\"https://goggles.webmaker.org/\">X-Ray Goggles</a> to remix any web page&mdash;your Facebook profile, the Google start page, NBA.com, or anything."
       },
       {
         "title": "Create your own animated music video",
-        "description": "Bring together web links to <a href='https://popcorn.webmaker.org/editor/60433/remix'>create your own animated music video</a> with help from glitch-artist Max Capacity."
+        "description": "Bring together web links to <a href=\"https://popcorn.webmaker.org/editor/60433/remix\">create your own animated music video</a> with help from glitch-artist Max Capacity."
       },
       {
         "title": "Remix a TV commercial",
-        "description": "See what happens when you use the <a href='http://www.genderremixer.com/'>Gendered Advertising Remixer </a> to overlay toy commercials for girls over toy commercials for boys and vice versa."
+        "description": "See what happens when you use the <a href=\"http://www.genderremixer.com/\">Gendered Advertising Remixer</a> to overlay toy commercials for girls over toy commercials for boys and vice versa."
       },
       {
-        "title": "Gif maker",
-        "description": "<a href='https://imgflip.com/gifgenerator'>Create a gif using your favorite web images</a> with Img Flip."
+        "title": "GIF maker",
+        "description": "<a href=\"https://imgflip.com/gifgenerator\">Create a gif using your favorite web images</a> with Img Flip."
       },
       {
         "title": "Audio and video mashups",
-        "description": "<a href='http://hyperaud.io/'>Build audio video mashups from text</a> using HyperAudio."
+        "description": "<a href=\"http://hyperaud.io/\">Build audio video mashups from text</a> using HyperAudio."
       },
       {
         "title": "Photo mashups",
-        "description": "<a href='https://gopop.co/'>Mashup photos with animated gifs on your iPhone</a> with Pop."
+        "description": "<a href=\"https://gopop.co/\">Mashup photos with animated gifs on your iPhone</a> with Pop."
       }
     ],
     "teach": {
       "kits": [
         {
-          "title": "Teach learners how to make web video mashups.",
+          "title": "Teach learners how to make web video mashups",
           "description": "Use this teaching kit to work with Popcorn Maker in three easy steps",
           "url": "https://kathrynmeisner.makes.org/thimble/popcorn-maker-in-3-easy-steps",
           "author": "MozTeach",
           "type": "kit"
         },
         {
-          "title": "Teaching remix with the X-Ray Goggles.",
+          "title": "Teaching remix with the X-Ray Goggles",
           "description": "Help people learn basic web basics by remixing web pages",
           "url": "https://mozteach.makes.org/thimble/xray-goggles-teaching-kit",
           "author": "MozTeach",
           "type": "kit"
         },
         {
-          "title": "Make a Meme.",
-          "description": "Remix popular internet memes by putting your own spin on them",
-          "url": "https://ccantrill.makes.org/thimble/make-a-meme-hacktivity",
+          "title": "Make a Meme",
+          "description": "Remix popular Internet memes by putting your own spin on them",
+          "url": "https://thimble.webmaker.org/project/59455/remix",
           "author": "Christina",
           "type": "kit"
         }
@@ -566,212 +607,241 @@
       "more": [
         {
           "title": "Remix your museum&rsquo;s art collection.",
-          "description": "<a href='https://keyboardkat.makes.org/thimble/cultural-remixjam'>Hold a Cultural Heritage Remix Jam </a> with the help of Tate Britain. By Kat Braybrooke, Mozilla and Luca Damiani, TATE."
+          "description": "<a href=\"https://keyboardkat.makes.org/thimble/cultural-remixjam\">Hold a Cultural Heritage Remix Jam </a> with the help of Tate Britain."
         },
         {
           "title": "Bust media stereotypes.",
-          "description": "<a href='https://techkim.makes.org/thimble/busting-media-stereotypes'>Use remix to challenge and talk back to media stereotypes</a>. By TechKim."
+          "description": "<a href=\"https://techkim.makes.org/thimble/busting-media-stereotypes\">Use remix to challenge and talk back to media stereotypes</a>."
+        }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> remix, coding and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
-    },
-    "ctas": [
-      {
-        "title": "",
-        "description": ""
-      }
-    ]
+    }
   },
   "weblit-DesignAccessibility": {
-    "intro": "Should using the web be enjoyable for everyone? As more people across the globe come online with phones and tablets, ensuring that the web is viewable across multiple devices has become an increasingly urgent challenge. Understanding CSS (Cascading Style Sheets) and the principles of good design help make interacting with webpages a pleasure.",
-    "related": "weblit-Navigation",
     "icon": "fa-picture-o",
+    "intro": "<strong>Should using the web be enjoyable for everyone?</strong> As more people across the globe come online with phones and tablets, ensuring that the web is viewable across multiple devices has become an increasingly urgent challenge. Understanding CSS (Cascading Style Sheets) and the principles of good design help make interacting with web pages a pleasure.",
+    "related": "weblit-Navigation",
     "discover": [
       {
         "title": "Know your font",
         "links": [
-          "<a href='http://www.ironicsans.com/helvarialquiz/'>Try this quiz by Ironic Sans</a> to test your knowledge."
+          "<a href=\"http://www.ironicsans.com/helvarialquiz/\">Try this quiz by Ironic Sans</a> to test your knowledge."
         ]
       },
       {
         "title": "Design for Programmers",
         "links": [
-          "A <a href='http://method.ac/'>series of 50 interactive challenges</a> to learn how to implement design online"
+          "A <a href=\"http://method.ac/\">series of 50 interactive challenges</a> to learn how to implement design online"
         ]
       },
       {
         "title": "CSS with HTML5DOG",
         "links": [
-          "<a href='http://www.htmldog.com/guides/css/'>Get started learning CSS</a>."
+          "<a href=\"http://www.htmldog.com/guides/css/\">Get started learning CSS</a>."
         ]
       },
       {
         "title": "Designer&rsquo;s News",
         "links": [
-          "Browse through <a href='https://news.layervault.com/'>a Hacker&rsquo;s News-style feed</a> tailored to designers."
+          "Browse through <a href=\"https://news.layervault.com/\">a Hacker&rsquo;s News-style feed</a> tailored to designers."
         ]
       },
       {
         "title": "Your website on different devices",
         "links": [
-          "See what your site looks like in different formats with this <a href='http://ami.responsivedesign.is/'>Am I Responsive tool</a>."
+          "See what your site looks like in different formats with this <a href=\"http://ami.responsivedesign.is/\">Am I Responsive tool</a>."
         ]
       },
       {
         "title": "Web accessibility primer",
         "links": [
-          "Understand <a href='http://webaim.org/intro/'>how people with disabilities experience the web</a>."
+          "Understand <a href=\"http://webaim.org/intro/\">how people with disabilities experience the web</a>."
         ]
       },
       {
         "title": "What Screens Want",
         "links": [
-          "Find out what it means to design with screens in mind <a href='http://frankchimero.com/talks/what-screens-want/transcript/'>in this article by Frank Chimero</a>."
+          "Find out what it means to design with screens in mind <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">in this article by Frank Chimero</a>."
         ]
       },
       {
         "title": "An Interactive history of design",
         "links": [
-          "Learn about <a href='http://designhistorytimeline.com/'>some of the field&rsquo;s key events</a>."
+          "Learn about <a href=\"http://designhistorytimeline.com/\">some of the field&rsquo;s key events</a>."
         ]
       },
       {
         "title": "Hexidecimal color picker",
         "links": [
-          "Learn <a href='http://color.hailpixel.com/'>how the web reads colors</a>."
+          "Learn <a href=\"http://color.hailpixel.com/\">how the web reads colors</a>."
         ]
       },
       {
         "title": "Meet the design community",
         "links": [
-          "Get inspired by <a href='https://dribbble.com/shots'>what people are making on Dribble</a> and <a href='http://www.niice.co/'>on Nice</a>."
+          "Get inspired by <a href=\"https://dribbble.com/shots\">what people are making on Dribble</a> and <a href=\"http://www.niice.co/\">on Nice</a>."
         ]
       },
       {
         "title": "CSS Diner",
         "links": [
-          "Learn advanced CSS tricks with <a href='http://flukeout.github.io/'>this fun coding game</a>."
+          "Learn advanced CSS tricks with <a href=\"http://flukeout.github.io/\">this fun coding game</a>."
         ]
       },
       {
         "title": "Resize that!",
         "links": [
-          "Play <a href='http://resize.thatsh.it/'>this responsive design jigsaw puzzle</a>."
+          "Play <a href=\"http://resize.thatsh.it/\">this responsive design jigsaw puzzle</a>."
         ]
       },
       {
         "title": "Webpage accessibility",
         "links": [
-          "<a href='http://wave.webaim.org/'>Test your webpage&rsquo;s accessibility with WAVE</a>, a tool that helps you evaluate the effectiveness of its elements for those with disabilities "
+          "<a href=\"http://wave.webaim.org/\">Test your webpage&rsquo;s accessibility with WAVE</a>, a tool that helps you evaluate the effectiveness of its elements for those with disabilities."
         ]
       }
     ],
     "make": [
       {
         "title": "Design your own e-book cover",
-        "description": "Learn CSS by remixing <a href='https://thimble.webmaker.org/project/14661/remix'>this starter template</a>."
+        "description": "Learn CSS by remixing <a href=\"https://thimble.webmaker.org/project/14661/remix\">this starter template</a>."
       },
       {
         "title": "CSS: Coding with Style",
-        "description": "Learn <a href='http://www.codecademy.com/courses/css-coding-with-style/0/1'>how to implement design in code</a> at Code Academy."
+        "description": "Learn <a href=\"http://www.codecademy.com/courses/css-coding-with-style/0/1\">how to implement design in code</a> at Code Academy."
       },
       {
         "title": "Hack your favorite webpage",
-        "description": "<a href='https://goggles.webmaker.org/'>Use the X-Ray Goggles to &ldquo;view source&rdquo;</a> on a website and change its properties."
+        "description": "<a href=\"https://goggles.webmaker.org/\">Use the X-Ray Goggles to &ldquo;view source&rdquo;</a> on a website and change its properties."
       },
       {
         "title": "Skeleton",
-        "description": "Try <a href='http://www.getskeleton.com/'>building your own webpage with Skeleton</a>, a minimalist boilerplate that facilitates responsive, mobile-friendly designs, or <a href='http://getbootstrap.com/2.3.2/'>with Bootstrap</a>, a clean interface for front-end developers."
+        "description": "Try <a href=\"http://www.getskeleton.com/\">building your own webpage with Skeleton</a>, a minimalist boilerplate that facilitates responsive, mobile-friendly designs, or <a href=\"http://getbootstrap.com/2.3.2/\">with Bootstrap</a>, a clean interface for front-end developers."
       },
       {
         "title": "Download the Firefox Accessibility extension",
-        "description": "<a href='http://firefox.cita.uiuc.edu/index.php'>Emulate web-browsing experiences</a> for a variety of special needs."
+        "description": "<a href=\"http://firefox.cita.uiuc.edu/index.php\">Emulate web-browsing experiences</a> for a variety of special needs."
       }
     ],
     "teach": {
       "kits": [
         {
-          "title": "Teach the web offline",
-          "description": "Use the Lo-Fi, No-Fi! teaching kit to implement design methods in unique settings",
-          "url": "https://keyboardkat.makes.org/thimble/LTIxMDA3NTY0ODA=/lofi-nofi-teaching-kit",
-          "author": "Kat Braybrooke, Karen Smith, Julia Vallera, Jess Klein and Chad Sansing.",
-          "type": "kit"
-        },
-        {
-          "title": "Cultural Heritage Remix Jam",
-          "description": "Facilitate a set of design challenges about cultural heritage with this teaching kit co-designed with Tate Britain",
-          "url": "https://keyboardkat.makes.org/thimble/cultural-remixjam",
-          "author": "Kat Braybrooke, Mozilla and Luca Damiani, TATE",
+          "title": "A beginner&rsquo;s guide to game-making",
+          "description": "Teach basic game design principles with this fun, interactive teaching kit",
+          "url": "https://mozteach.makes.org/thimble/a-beginners-guide-to-game-making",
+          "author": "Mozteach",
           "type": "kit"
         },
         {
           "title": "Design prototyping on paper",
-          "description": "Show educators how to prototype teaching kits on paper with this design canvas activity",
+          "description": "Prototype teaching kits on paper with this design canvas activity",
           "url": "https://keyboardkat.makes.org/thimble/LTU0ODUzNjMy/prototyping-with-a-teaching-kit-design-canvas",
-          "author": "codekat",
+          "author": "Keyboardkat",
           "type": "kit"
         },
         {
-          "title": "A beginner&rsquo;s guide to game makery",
-          "description": "Facilitate learning around basic game design principles with this interactive and fun teaching kit",
-          "url": "https://mozteach.makes.org/thimble/a-beginners-guide-to-game-making",
-          "author": "Mozteach",
+          "title": "Teach the web offline",
+          "description": "Use the Lo-Fi, No-Fi! teaching kit to implement design methods in unique settings",
+          "url": "https://keyboardkat.makes.org/thimble/LTIxMDA3NTY0ODA=/lofi-nofi-teaching-kit",
+          "author": "Kat Braybrooke, Karen Smith, Julia Vallera, Jess Klein and Chad Sansing",
           "type": "kit"
+        },
+        {
+          "title": "Use digital storytelling to learn about urban design",
+          "description": "Tell stories about cities, places and people through this kit by the University of Toronto&rsquo;s Andi Argast and Michelle Gay",
+          "url": "https://urbanstorytellers.makes.org/thimble/urban-storytelling-a-how-to-guide",
+          "author": "Urbanstorytellers",
+          "type": "kit"
+        },
+        {
+          "title": "Redesign cultural heritage",
+          "description": "Facilitate a set of design challenges about cultural heritage with this teaching kit co-designed with Tate Britain",
+          "url": "https://keyboardkat.makes.org/thimble/cultural-remixjam",
+          "author": "Keyboardkat",
+          "type": "kit"
+        }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> design, accessibility and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
     }
   },
   "weblit-CodingScripting": {
-    "intro": "How does the web respond to you? Interactivity has become essential to our web experience. How does that work? Small programs known as scripts run in the background of our web browsers automating hundreds of tasks and allowing our web experiences to be seamlessly responsive.  Understanding the role of scripting languages like JavaScript helps us maximize the interactive potential of the web, making our overall online experiences more useful and satisfying.",
-    "related": "weblit-WebMechanics",
     "icon": "fa-code",
+    "intro": "<strong>How does the web respond to you?</strong> Interactivity has become essential to our web experience. How does that work? Small programs known as scripts run in the background of our web browsers, automating hundreds of tasks and allowing our web experiences to be seamlessly responsive. Understanding the role of scripting languages like JavaScript helps us maximize the interactive potential of the web, making our overall online experiences more awesome.",
+    "related": "weblit-WebMechanics",
     "discover": [
       {
         "title": "Learn JavaScript",
         "links": [
-          "Explore the <a href='https://developer.mozilla.org/en/learn/javascript'>Mozilla Developer Network&rsquo;s JavaScript resource</a> for beginner to advanced programmers."
+          "Explore the <a href=\"https://developer.mozilla.org/en/learn/javascript\">Mozilla Developer Network&rsquo;s JavaScript resource</a> for beginner to advanced programmers."
         ]
       },
       {
         "title": "Why Programming Matters",
         "links": [
-          "Watch this <a href='https://www.youtube.com/watch?feature=player_embedded&v=nKIu9yen5nc'>Hour of Code video</a> where programmers explain how scripting changed their life."
+          "Watch this <a href=\"https://www.youtube.com/watch?feature=player_embedded&v=nKIu9yen5nc\">Hour of Code video</a> where programmers explain how scripting changed their life."
         ]
       },
       {
         "title": "Computer programming with Khan Academy",
         "links": [
-          "Check out this <a href='https://www.khanacademy.org/computing/cs'>Khan Academy course</a> in computer science."
+          "Check out this <a href=\"https://www.khanacademy.org/computing/cs\">Khan Academy course</a> in computer science."
         ]
       },
       {
         "title": "JavaScript for Cats",
         "links": [
-          "A fun <a href='http://jsforcats.com/'>introduction for new programmers</a>."
+          "A fun <a href=\"http://jsforcats.com/\">introduction for new programmers</a>."
         ]
       },
       {
         "title": "Learn Javascript while gaming",
         "links": [
-          "<a href='http://codecombat.com/'>Play Code Combat</a>, a fun game that teaches programming."
+          "<a href=\"http://codecombat.com/\">Play Code Combat</a>, a fun game that teaches programming."
         ]
       }
     ],
     "make": [
       {
         "title": "Hello, Processing!",
-        "description": "Make web graphics with this fun, <a href='http://hello.processing.org/'>step by step guide to the Processing language</a>."
+        "description": "Make web graphics with this fun, <a href=\"http://hello.processing.org/\">step by step guide to the Processing language</a>."
       },
       {
         "title": "Dance the Robot Boogie",
-        "description": "Learn how to <a href='http://roboboogie.codeclub.org.uk/'>mix design</a> with JavaScript."
+        "description": "Learn how to <a href=\"http://roboboogie.codeclub.org.uk/\">mix design</a> with JavaScript."
       },
       {
         "title": "Coding Maps with Leaflet.js",
-        "description": "Make an interactive web mapping application <a href='https://thimble.webmaker.org/project/22915/remix'>using the Leaflet.js JavaScript library</a>."
+        "description": "Make an interactive web mapping application <a href=\"https://thimble.webmaker.org/project/22915/remix\">using the Leaflet.js JavaScript library</a>."
       },
       {
         "title": "Code your own Python script ",
-        "description": "Learn about the with <a href='http://www.learnpython.org/'>this interactive tutorial</a>."
+        "description": "Learn about the with <a href=\"http://www.learnpython.org/\">this interactive tutorial</a>."
       }
     ],
     "teach": {
@@ -797,133 +867,155 @@
           "author": "Chad Sansing",
           "type": "kit"
         }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> coding, scripting and other digital skills."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+        }
       ]
     }
   },
   "weblit-Infrastructure": {
-    "intro": "What&rsquo;s the difference between apps, the web and the Internet? There&rsquo;s a bewildering array of words used to describe the global network we use to communicate and share data. Understanding the basic underlying technology that makes up the Internet, and how it differs from the web and services like email, helps us grasp what happens to the data we share and guides us towards making safer, more intelligent choices online.",
-    "related": "weblit-CodingScripting",
     "icon": "fa-sitemap",
+    "intro": "<strong>What&rsquo;s the difference between apps, the web and the Internet?</strong> There&rsquo;s a bewildering array of words used to describe the global network we use to communicate and share data. Understanding the basic underlying technology that makes up the Internet, and how it differs from the web and services like email, helps us grasp what happens to the data we share and guides us towards making smarter choices online.",
+    "related": "weblit-CodingScripting",
     "discover": [
       {
         "title": "What&rsquo;s the difference between the Web and the Internet?",
         "links": [
-          "This <a href='http://en.wikipedia.org/wiki/World_Wide_Web#Function'>article on Wikipedia</a> explains it all."
+          "This <a href=\"http://en.wikipedia.org/wiki/World_Wide_Web#Function\">Wikipedia article</a> explains all."
         ]
       },
       {
-        "title": "What is the Internet, Really?",
+        "title": "What is the Internet, really?",
         "links": [
-          "<a href='http://www.ted.com/talks/andrew_blum_what_is_the_internet_really'>Andrew Blum&rsquo;s TED talk</a> about the underwater cables, secret switches and other physical bits that make up the net."
+          "<a href=\"http://www.ted.com/talks/andrew_blum_what_is_the_internet_really\">Andrew Blum&rsquo;s TED talk</a> about the underwater cables, secret switches and other physical bits that make up the net."
         ]
       },
       {
         "title": "The Internet Stack",
         "links": [
-          "Understand how the <a href='http://www.w3.org/People/Frystyk/thesis/TcpIp.html'>foundational technologies</a> of the web work."
+          "Understand how the <a href=\"http://www.w3.org/People/Frystyk/thesis/TcpIp.html\">foundational technologies</a> of the web work."
         ]
       },
       {
         "title": "Printing out the Internet, page by page",
         "links": [
-          "A <a href='http://printingtheinternet.tumblr.com/'>crowdsourced art project</a> to print out the entire Internet, in honor of deceased open free-information activist Aaron Schwartz",
-          "More about this project in the <a href='http://www.washingtonpost.com/lifestyle/style/print-this-web-page-mail-it-to-mexico-citys-labor-gallery-make-art/2013/07/26/534e2582-f320-11e2-ae43-b31dc363c3bf_story.html'>Washington Post</a>"
-        ]
-      },
-      {
-        "title": "The Cleverest ways to use Dropbox",
-        "links": [
-          "Dropbox makes full use of the architectures of the web and the Internet. <a href='http://lifehacker.com/5527055/the-cleverest-ways-to-use-dropbox-that-youre-not-using'>Learn how to use it to its full potential</a>."
+          "A <a href=\"http://printingtheinternet.tumblr.com/\">crowdsourced art project</a> to print out the entire Internet, in honor of deceased open free-information activist Aaron Schwartz.",
+          "More about this project in the <a href=\"http://www.washingtonpost.com/lifestyle/style/print-this-web-page-mail-it-to-mexico-citys-labor-gallery-make-art/2013/07/26/534e2582-f320-11e2-ae43-b31dc363c3bf_story.html\">Washington Post</a>."
         ]
       },
       {
         "title": "The Story of Send",
         "links": [
-          "<a href='http://www.google.com/green/storyofsend/desktop/'>Take a journey through Google&rsquo;s data centers</a> by following an email along its path."
+          "<a href=\"http://www.google.com/green/storyofsend/desktop/\">Take a journey through Google&rsquo;s data centers</a> by following an email along its path."
         ]
       },
       {
         "title": "How the Internet works in 5 minutes",
         "links": [
-          "The Internet is not a fuzzy cloud.<a href='http://www.youtube.com/watch?v=7_LPdttKXPc'>This video by Aaron Titus</a> explains how the Internet is a wire, actually buried in the ground."
+          "The Internet is not a fuzzy cloud. <a href=\"http://www.youtube.com/watch?v=7_LPdttKXPc\">This video by Aaron Titus</a> explains."
         ]
       }
     ],
     "make": [
       {
         "title": "Draw your understanding of the Internet",
-        "description": "<a href='http://www.canyoudrawtheinternet.com/'>Take part in this global art project</a> by submitting a drawing that demonstrates your understand of the Internet."
+        "description": "<a href=\"http://www.canyoudrawtheinternet.com/\">Take part in this global art project</a> by submitting a drawing that demonstrates your understanding of how the Internet works."
       },
       {
         "title": "Create a page for the Internet Defense League",
-        "description": "Do you believe in a free and open Internet? <a href='https://chongkim.makes.org/thimble/LTExMjgwMDU2MzI=/internet-defense-league'>Remix this statement by the IDL</a> to share your views."
+        "description": "Do you believe in a free and open Internet? <a href=\"https://chongkim.makes.org/thimble/LTExMjgwMDU2MzI=/internet-defense-league\">Remix this statement by the IDL</a> to share your views."
       },
       {
         "title": "Why do you believe in the open web?",
-        "description": "Is the web about collaboration and communication for you? Or, is it about wires, tubes and machines? Why does it all matter? <a href='https://thimble.webmaker.org/project/17857/remix'>Tell the world with this Thimble page</a>."
+        "description": "<a href=\"https://thimble.webmaker.org/project/17857/remix\">Tell the world with this Thimble page</a>."
       }
     ],
     "teach": {
       "kits": [
         {
           "title": "Speed dating for web mechanics",
-          "description": "Make learning about the elements of the web fun for students.",
+          "description": "Make learning about the elements of the web fun",
           "url": "https://juliahivenyc.makes.org/thimble/MTgwOTQ0ODk2/web-mechanics-speed-dating",
           "author": "Julia Vallera",
           "type": "kit"
+        }
+      ],
+      "ctas": [
+        {
+          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> how the web works."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
+        },
+        {
+          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
         }
       ]
     }
   },
   "weblit-Sharing": {
-    "intro": "Great ideas should be shared. For a concept to grow from a seedling into a tree, it needs to spread beyond one or two people and into a community. Collaboring on the web with diverse groups of people can yield unexpected solutions to hard problems.",
-    "related": "weblit-OpenPractices",
     "icon": "fa-share-square-o",
+    "related": "weblit-OpenPractices",
+    "intro": "Great ideas should be shared. For a concept to grow from a seedling into a tree, it needs to spread beyond one or two people and into a community. Collaborating on the web with diverse groups of people can yield unexpected solutions to hard problems.",
     "discover": [
       {
         "title": "Ten leading platforms for creating online communities",
         "links": [
-          "<a href='http://www.zdnet.com/blog/hinchcliffe/ten-leading-platforms-for-creating-online-communities/195'>Browse this ZDNet list of tools</a> that help communities organize people on the web and accomplish work in a highly collaborative manner."
+          "<a href=\"http://www.zdnet.com/blog/hinchcliffe/ten-leading-platforms-for-creating-online-communities/195\">Browse this ZDNet list of tools</a> that help communities organize people on the web and accomplish work in a highly collaborative manner."
         ]
       },
       {
         "title": "Radical tools to empower communities in the museum sector",
         "links": [
-          "As museums go digital, more activities are created and produced through community collaborations. This blog post discusses <a href='http://museumtwo.blogspot.ca/2013/02/guest-post-radical-collaboration-tools.html'>the approaches of the Santa Cruz Museum of Art and History</a>"
+          "As museums go digital, more activities are created and produced through community collaborations. This blog post discusses <a href=\"http://museumtwo.blogspot.ca/2013/02/guest-post-radical-collaboration-tools.html\">the approaches of the Santa Cruz Museum of Art and History</a>."
         ]
       },
       {
         "title": "How can I share large files online for free?",
         "links": [
-          "Lifehacker review of <a href='http://lifehacker.com/what-s-the-best-way-to-share-large-files-with-friends-1486810038'>some of the best services to share easily and quickly</a> with friends and colleagues",
-          "And a similar <a href='http://www.pcadvisor.co.uk/how-to/storage/3509067/how-send-large-files-free/'>list by PC Advisor</a>"
+          "Lifehacker review of <a href=\"http://lifehacker.com/what-s-the-best-way-to-share-large-files-with-friends-1486810038\">some of the best services to share easily and quickly</a> with friends and colleagues.",
+          "And a similar <a href=\"http://www.pcadvisor.co.uk/how-to/storage/3509067/how-send-large-files-free/\">list by PC Advisor</a>"
         ]
       },
       {
         "title": "Asynchronous and synchronous classroom discussion methods",
         "links": [
-          "Thoughtful <a href='http://chronicle.com/blogs/profhacker/tools-for-synchronousasynchronous-classroom-discussion/22902'>examination of e-learning management systems</a> for different kinds of learner needs by the Chronicle of Higher Education"
+          "Thoughtful <a href=\"http://chronicle.com/blogs/profhacker/tools-for-synchronousasynchronous-classroom-discussion/22902\">examination of e-learning management systems</a> for different kinds of learner needs by the Chronicle of Higher Education."
         ]
       },
       {
         "title": "A short written history of collaborative methods",
         "links": [
-          "<a href='http://etec.ctlt.ubc.ca/510wiki/Synchronous_and_Asynchronous_Communication:Tools_for_Collaboration'>Wiki page by the University of British Columbia</a> that outlines the tools, sources and theories of group communication from the 1940s to the present day"
+          "<a href=\"http://etec.ctlt.ubc.ca/510wiki/Synchronous_and_Asynchronous_Communication:Tools_for_Collaboration\">Wiki page by the University of British Columbia</a> that outlines the tools, sources and theories of group communication from the 1940s to the present day."
         ]
       }
     ],
     "make": [
       {
         "title": "What kind of web do you want?",
-        "description": "Remix this Thimble greeting card in honor of the web&rsquo;s 25th birthday to <a href='https://mozilla.makes.org/thimble/the-web-we-want'>share what the open web means to you</a>."
+        "description": "Remix this Thimble greeting card in honor of the web&rsquo;s 25th birthday to <a href=\"https://mozilla.makes.org/thimble/the-web-we-want\">share what the open web means to you</a>."
       },
       {
         "title": "A corkboard for idea-sharing",
-        "description": "<a href='https://keyboardkat.makes.org/thimble/ideas-mood-board'>Share how you would effectively facilitate an online community</a> with this remixable corkboard made up of post-it notes, photos and words."
+        "description": "<a href=\"https://keyboardkat.makes.org/thimble/ideas-mood-board\">Share how you would effectively facilitate an online community</a> with this remixable corkboard made up of post-it notes, photos and words."
       },
       {
         "title": "Publishing web apps with social media attached",
-        "description": "Have you just made a web app that you want to share across the web? <a href='https://fourtonfish.makes.org/thimble/make-your-own-social-media-sharing-buttons'>This handy tutorial</a> leads you through the steps necessary to make it ready for social media."
+        "description": "Have you just made a web app that you want to share across the web? <a href=\"https://fourtonfish.makes.org/thimble/make-your-own-social-media-sharing-buttons\">This handy tutorial</a> leads you through the steps necessary to make it ready for social media."
       }
     ],
     "teach": {
@@ -953,54 +1045,54 @@
     }
   },
   "weblit-Collaborating": {
+    "icon": "fa-users",
     "intro": "There&rsquo;s only so much one person can do alone.  Fortunately, the web allows us to connect with others across distances, languages and cultures. Honing our online collaboration skills lets us do more than just send better emails&mdash;it helps us build things on the web faster, better and smarter.",
     "related": "weblit-Search",
-    "icon": "fa-users",
     "discover": [
       {
         "title": "Ways to make your experience of online forums more productive",
         "links": [
-          "<a href='http://www.cats-pyjamas.net/2008/08/7-habits-of-highly-effective-online-discussion-participants/'>The 7 habits of effective online discussion participants</a>"
+          "<a href=\"http://www.cats-pyjamas.net/2008/08/7-habits-of-highly-effective-online-discussion-participants/\">The 7 habits of effective online discussion participants</a>."
         ]
       },
       {
         "title": "Github, Academia and Collaborative Writing",
         "links": [
-        "Git&rsquo;s decentralized nature makes it an excellent tool for <a href='https://www.hastac.org/blogs/harrisonm/2013/10/12/github-academia-and-collaborative-writing'>coordinating collaborative editing</a>."
+          "Git&rsquo;s decentralized nature makes it an excellent tool for <a href=\"https://www.hastac.org/blogs/harrisonm/2013/10/12/github-academia-and-collaborative-writing\">coordinating collaborative editing</a>."
         ]
       },
       {
         "title": "How the Web Changed Everything",
         "description": "",
         "links": [
-        "<a href='http://www.youtube.com/watch?v=-bUtu7Fj9UA'>Watch this talk by Cory Doctorow</a>, one of BoingBoing&rsquo;s founding editors, on how the web lets us use collaboration to be &ldquo;super human&rdquo;."
+          "<a href=\"http://www.youtube.com/watch?v=-bUtu7Fj9UA\">Watch this talk by Cory Doctorow</a>, one of BoingBoing&rsquo;s founding editors, on how the web lets us use collaboration to be &ldquo;super human&rdquo;."
         ]
       },
       {
         "title": "Effective Crowdsourcing",
         "links": [
-        "Check out these Mashable articles on <a href='http://mashable.com/category/crowdsourcing/'>different kinds of crowdsourcing</a>."
+          "Check out these Mashable articles on <a href=\"http://mashable.com/category/crowdsourcing/\">different kinds of crowdsourcing</a>."
         ]
       },
       {
         "title": "The birth of Wikipedia",
         "links": [
-        "<a href='https://www.ted.com/talks/jimmy_wales_on_the_birth_of_wikipedia'>Watch this TED talk</a> by Wikipedia&rsquo;s founder Jimmy Wales."
+          "<a href=\"https://www.ted.com/talks/jimmy_wales_on_the_birth_of_wikipedia\">Watch this TED talk</a> by Wikipedia&rsquo;s founder Jimmy Wales."
         ]
       }
     ],
     "make": [
       {
         "title": "Edit your own Wikipedia page",
-        "description": "This introductory tutorial shows you <a href='https://en.wikipedia.org/wiki/Wikipedia:Introduction'>how to get started</a>."
+        "description": "This introductory tutorial shows you <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Introduction\">how to get started</a>."
       },
       {
         "title": "Crowdsource your research experiment",
-        "description": "<a href='http://pybossa.com/'>Pybossa</a> and <a href='http://crowdcrafting.org/'>Crowdcrafting</a> are two great tools made for projects that need community input and guidance"
+        "description": "<a href=\"http://pybossa.com/\">Pybossa</a> and <a href=\"http://crowdcrafting.org/\">Crowdcrafting</a> are two great tools made for projects that need community input and guidance."
       },
       {
         "title": "Get involved with the Webmaker community ",
-        "description": "<a href='https://webmaker.org/en-US/getinvolved'>Help learners around the world</a> by teaching the web, together."
+        "description": "<a href=\"https://webmaker.org/en-US/getinvolved\">Help learners around the world</a> by teaching the web, together."
       }
     ],
     "teach": {
@@ -1030,43 +1122,43 @@
     }
   },
   "weblit-Community": {
-    "intro": "Who owns the web?  One of the beatiful things about the web is that it is a global, public resource. Learning to collaborate online as part of a global community of contributors and creators is an empowering way to ensure that the web remains a shared resource for everyone.",
+    "intro": "Who owns the web?  One of the beautiful things about the web is that it is a global, public resource. Learning to collaborate online as part of a global community of contributors and creators is an empowering way to ensure that the web remains a shared resource for everyone.",
     "related": "weblit-Credibility",
     "discover": [
       {
         "title": "Mozilla Community guidelines",
         "links": [
-          "<a href='http://www.mozilla.org/en-US/about/governance/policies/participation/'>Participation Guidelines</a> for involvement in the Mozilla Community"
+          "<a href=\"http://www.mozilla.org/en-US/about/governance/policies/participation/\">Participation Guidelines</a> for involvement in the Mozilla Community."
         ]
       },
       {
         "title": "GitHub Community guidelines",
         "links": [
-          "Github provides code management for groups and communities. Here are its various <a href='https://guides.github.com/'>participation guidelines</a>."
+          "Github provides code management for groups and communities. Here are its various <a href=\"https://guides.github.com/\">participation guidelines</a>."
         ]
       },
       {
         "title": "The Hive Learning Network",
         "links": [
-          "Hive creates opportunities that enable learning through hands-on making and exploration with peers and mentors. <a href='http://hivenyc.org/2014/03/14/three-tiers-hive/'>Learn about the path towards creating and sustaining this kind of network.</a>"
+          "Hive creates opportunities that enable learning through hands-on making and exploration with peers and mentors. <a href=\"http://hivenyc.org/2014/03/14/three-tiers-hive/\">Learn about the path towards creating and sustaining this kind of network</a>."
         ]
       },
       {
         "title": "Digital Is",
         "links": [
-          "<a href='http://digitalis.nwp.org/'>An open community of educators</a> sharing, publishing and remixing each others work"
+          "<a href=\"http://digitalis.nwp.org/\">An open community of educators</a> sharing, publishing and remixing each others work."
         ]
       },
       {
         "title": "Source",
         "links": [
-          "<a href='https://source.opennews.org/en-US/'>Source is an OpenNews project</a> designed to amplify the impact of journalism code and the community of developers, designers, journalists, and editors."
+          "<a href=\"https://source.opennews.org/en-US/\">Source is an OpenNews project</a> designed to amplify the impact of journalism code and the community of developers, designers, journalists, and editors."
         ]
       },
       {
         "title": "Mozilla Science Lab",
         "links": [
-          "<a href='http://mozillascience.org/code-as-a-research-object-updates-prototypes-next-steps/'>Code as a research object</a>"
+          "<a href=\"http://mozillascience.org/code-as-a-research-object-updates-prototypes-next-steps/\">Code as a research object</a>."
         ]
       }
     ],
@@ -1103,83 +1195,83 @@
       "more": [
         {
           "title": "Peers working in the open",
-          "description": "<a href='http://hivenyc.org/teachtheweb/week-6-peers-working-in-the-open/'>The 2013 syllabus</a> from the Teach the Web MOOC looking at community participation"
+          "description": "<a href=\"http://hivenyc.org/teachtheweb/week-6-peers-working-in-the-open/\">The 2013 syllabus</a> from the Teach the Web MOOC looking at community participation."
         }
       ]
     }
   },
   "weblit-Privacy": {
+    "icon": "fa-eye-slash",
     "intro": "Your personal information is valuable. That&rsquo;s why it&rsquo;s vital that you are the one in charge of controlling how your personal information gets shared. That way, you can take steps to prevent others from tracking you, using your data in ways you don&rsquo;t like, or spying on you without your knowledge or consent. This page includes steps anyone can take to make their online lives more private and secure. It also explores some of the larger ideas and debates around privacy, trust and your digital footprint.",
     "related": "weblit-Security",
-    "icon": "fa-eye-slash",
     "discover": [
       {
         "title": "See who&rsquo;s tracking you online",
         "links": [
-          "Watch the video. As you surf the Web, information is being collected about you. This <a href='http://www.ted.com/talks/gary_kovacs_tracking_the_trackers'>&ldquo;Tracking the Trackers&rdquo; TED Talk video</a> explains how.",
-          "Try it for yourself. <a href='http://www.mozilla.org/en-US/lightbeam/'>Install the Lightbeam add-on</a> to see for yourself. Shine a light on who&rsquo;s watching your online activities."
+          "Watch the video. As you surf the Web, information is being collected about you. This <a href=\"http://www.ted.com/talks/gary_kovacs_tracking_the_trackers\">&ldquo;Tracking the Trackers&rdquo; TED Talk video</a> explains how.",
+          "Try it for yourself. <a href=\"http://www.mozilla.org/en-US/lightbeam/\">Install the Lightbeam add-on</a> to see for yourself. Shine a light on who&rsquo;s watching your online activities."
         ]
       },
       {
         "title": "Tell sites you don&rsquo;t want to be tracked",
         "links": [
-          "Enable &ldquo;Do Not Track.&rdquo; You can tell sites to stop tracking your browsing history using <a href='http://www.mozilla.org/en-US/dnt/'>this simple change</a> to your browser settings. Here&rsquo;s how: <br><br>\n<ul>\n<li><a href='https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature#w_how-does-the-do-not-track-feature-work'>Firefox</a></li>\n<li><a href='http://windows.microsoft.com/en-ca/internet-explorer/use-tracking-protection#ie=ie-11'>Internet Explorer</a></li>\n<li><a href='http://osxdaily.com/2012/08/21/how-to-enable-do-not-track-in-safari-6/'>Safari</a></li>\n<li><a href='http://www.cnet.com/how-to/how-to-enable-chromes-do-not-track-option/'>Chrome</a></li>\n<li><a href='http://www.opera.com/help/tutorials/security/control/#referrer'>Opera</a></li>\n</ul>"
+          "Enable &ldquo;Do Not Track.&rdquo; You can tell sites to stop tracking your browsing history using <a href=\"http://www.mozilla.org/en-US/dnt/\">this simple change</a> to your browser settings. Here&rsquo;s how: <br><br>\n<ul>\n<li><a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature#w_how-does-the-do-not-track-feature-work\">Firefox</a></li>\n<li><a href=\"http://windows.microsoft.com/en-ca/internet-explorer/use-tracking-protection#ie=ie-11\">Internet Explorer</a></li>\n<li><a href=\"http://osxdaily.com/2012/08/21/how-to-enable-do-not-track-in-safari-6/\">Safari</a></li>\n<li><a href=\"http://www.cnet.com/how-to/how-to-enable-chromes-do-not-track-option/\">Chrome</a></li>\n<li><a href=\"http://www.opera.com/help/tutorials/security/control/#referrer\">Opera</a></li>\n</ul>"
         ]
       },
       {
         "title": "How to turn on private browsing",
         "links": [
-          "If you don&rsquo;t want anyone with physical access to your computer to see what you&rsquo;re doing online, you can <a href='https://support.mozilla.org/en-US/kb/private-browsing-browse-web-without-saving-info'>enable &ldquo;private browsing.&rdquo;</a> This deletes cookies, temporary Internet files and browsing history after you close the window."
+          "If you don&rsquo;t want anyone with physical access to your computer to see what you&rsquo;re doing online, you can <a href=\"https://support.mozilla.org/en-US/kb/private-browsing-browse-web-without-saving-info\">enable &ldquo;private browsing.&rdquo;</a> This deletes cookies, temporary Internet files and browsing history after you close the window."
         ]
       },
       {
         "title": "See how much your personal data is worth to marketers",
         "links": [
-          "<a href='http://www.ft.com/cms/s/2/927ca86e-d29b-11e2-88ed-00144feab7de.html#axzz31EY3SAom'>How much buyers would pay for your information?</a> Use this interactive calculator from the Financial Times to find out."
+          "<a href=\"http://www.ft.com/cms/s/2/927ca86e-d29b-11e2-88ed-00144feab7de.html#axzz31EY3SAom\">How much buyers would pay for your information?</a> Use this interactive calculator from the Financial Times to find out."
         ]
       },
       {
         "title": "Adjust your social network settings",
         "links": [
-          "<a href='https://www.facebook.com/settings?tab=privacy'>Facebook</a>&mdash;Click the settings cog in the upper right corner of your screen, then click  <a href='https://www.facebook.com/settings?tab=privacy'>Privacy  Settings</a> >> &ldquo;Who can see my stuff.&rdquo;",
-          "<a href=''>Twitter</a>&mdash;click the <a href='https://twitter.com/settings/security'>settings</a> cog, then &ldquo;Settings.&rdquo; You can adjust settings like adding or removing your location to tweets, or make your  tweets private so that only people you approve can see them.",
-          "<a href='https://plus.google.com/u/1/settings?hl=en'>Google+</a>&mdash;go to Home >> <a href='https://plus.google.com/u/1/settings?hl=en'>Settings</a> to adjust who can interact with you, comment on your posts, or start a conversation."
+          "<a href=\"https://www.facebook.com/settings?tab=privacy\">Facebook</a>&mdash;Click the settings cog in the upper right corner of your screen, then click  <a href=\"https://www.facebook.com/settings?tab=privacy\">Privacy Settings</a> &gt;&gt; &ldquo;Who can see my stuff.&rdquo;",
+          "<a href=\"https://twitter.com/settings/security\">Twitter</a>&mdash;Click the settings cog, then &ldquo;Settings.&rdquo; You can adjust settings like adding or removing your location to tweets, or make your tweets private so that only people you approve can see them.",
+          "<a href=\"https://plus.google.com/u/1/settings?hl=en\">Google+</a>&mdash;go to Home &gt;&gt; <a href=\"https://plus.google.com/u/1/settings?hl=en\">Settings</a> to adjust who can interact with you, comment on your posts, or start a conversation."
         ]
       },
       {
         "title": "Learn more about surveillance and spying",
         "links": [
-          "<a href='http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1'>NSA Files Decoded</a>: <a href='http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1'>What the revelations mean for you</a>. The Guardian newspaper&rsquo;s interactive exploration on what the National Security Agency is collecting about you.",
-          "<a href='http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/13'>Learn more about your own meta-data.</a> What social networks, devices and services do you use? What meta-data does that reveal about you to the NSA and others?"
+          "<a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1\">NSA Files Decoded</a>: <a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1\">What the revelations mean for you</a>. The Guardian newspaper&rsquo;s interactive exploration on what the National Security Agency is collecting about you.",
+          "<a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/13\">Learn more about your own meta-data.</a> What social networks, devices and services do you use? What meta-data does that reveal about you to the NSA and others?"
         ]
       },
       {
         "title": "Learn more about the &ldquo;Stop Watching Us&rdquo; campaign",
         "links": [
-          "<a href='https://optin.stopwatching.us/'>StopWatching.us</a> is a coalition of more than 100 public advocacy organizations, companies and prominent figures speaking out against mass surveillance."
+          "<a href=\"https://optin.stopwatching.us/\">StopWatching.us</a> is a coalition of more than 100 public advocacy organizations, companies and prominent figures speaking out against mass surveillance."
         ]
       },
       {
         "title": "Thinking about your digital footprint and reputation",
         "links": [
-          "<a href='https://www.commonsensemedia.org/videos/abbass-story-pride-in-your-digital-footprint'>Check out Abbas&rsquo;s story</a> from Common Sense Media about making conscious choices around what you share and how you represent yourself online.",
-          "<a href='http://www.youtube.com/watch?v=8n-AdP6PBT8#t=75'>Making choices about what to post or share</a>&mdash;sharing things online is what makes the web great. But sharing embarrassing or personal things about yourself or your friends can come back to haunt you. This short video walks you through it.",
-          "<a href='http://www.wnyc.org/story/228771-digital-literacy-citizenship-workshop/'>Over-sharing, identity and respect.</a> WNYC&rsquo;s Radio Rookies interview youth and others about over-sharing, online identity, responsibility, sexism and more."
+          "<a href=\"https://www.commonsensemedia.org/videos/abbass-story-pride-in-your-digital-footprint\">Check out Abbas&rsquo;s story</a> from Common Sense Media about making conscious choices around what you share and how you represent yourself online.",
+          "<a href=\"http://www.youtube.com/watch?v=8n-AdP6PBT8#t=75\">Making choices about what to post or share</a>&mdash;sharing things online is what makes the web great. But sharing embarrassing or personal things about yourself or your friends can come back to haunt you. This short video walks you through it.",
+          "<a href=\"http://www.wnyc.org/story/228771-digital-literacy-citizenship-workshop/\">Over-sharing, identity and respect.</a> WNYC&rsquo;s Radio Rookies interview youth and others about over-sharing, online identity, responsibility, sexism and more."
         ]
       }
     ],
     "make": [
       {
         "title": "Make a music video about privacy, surveillance or online freedom",
-        "description": "Use <a href='https://popcorn.webmaker.org/'>Popcorn Maker</a> to make a video. You could use videos you find on the web, music, pictures, animated GIFs or your own voice commentary.<br><br><ul><li><a href='https://keyboardkat.makes.org/popcorn/1err'>&ldquo;Party at the NSA.&ldquo;</a> Check out this  example from @keyboardkat. Then <a href='https://popcorn.webmaker.org/editor/65799/remix'>remix it</a> to make it your own.</li><li>Or <a href='https://popcorn.webmaker.org/'>make your own</a> from scratch. <a href='https://mozteach.makes.org/popcorn/1boj'>This guide</a> walks you through how to use Popcorn Maker for the first time.</li></ul>"
+        "description": "Use <a href=\"https://popcorn.webmaker.org/\">Popcorn Maker</a> to make a video. You could use videos you find on the web, music, pictures, animated GIFs or your own voice commentary.<br><br><ul><li><a href=\"https://keyboardkat.makes.org/popcorn/1err\">&ldquo;Party at the NSA.&ldquo;</a> Check out this example from <a href=\"/u/keyboardkat\">@keyboardkat</a>. Then <a href=\"https://popcorn.webmaker.org/editor/65799/remix\">remix it</a> to make it your own.</li><li>Or <a href=\"https://popcorn.webmaker.org/\">make your own</a> from scratch. <a href=\"https://mozteach.makes.org/popcorn/1boj\">This guide</a> walks you through how to use Popcorn Maker for the first time.</li></ul>"
       },
       {
         "title": "Write about who&rsquo;s tracking your online",
-        "description": "Use <a href='https://www.mozilla.org/en-US/lightbeam/'>Lightbeam</a> to gather research about who&rsquo;s tracking you online. Or do research about government surveillance. Then tell a story about what you&rsquo;ve learned. You could publish it as a web page with <a href='http://thimble.webmaker.org/'>Thimble</a>, make a multimedia essay with <a href='https://popcorn.webmaker.org/'>Popcorn</a>, or just write a blog post or tweet about it."
+        "description": "Use <a href=\"https://www.mozilla.org/en-US/lightbeam/\">Lightbeam</a> to gather research about who&rsquo;s tracking you online. Or do research about government surveillance. Then tell a story about what you&rsquo;ve learned. You could publish it as a web page with <a href=\"http://thimble.webmaker.org/\">Thimble</a>, make a multimedia essay with <a href=\"https://popcorn.webmaker.org/\">Popcorn</a>, or just write a blog post or tweet about it."
       },
       {
         "title": "Host a &ldquo;crypto-party&rdquo; for you and your friends",
-        "description": "There are various things you can do to make your online data more secure. Some are harder than others. If you want to take extra steps to protect your communications, here are some ways to go further.<br><br><ul><li><a href='https://www.eff.org/https-everywhere'>Install HTTPS Everywhere.</a> A collaboration between <a href='https://www.torproject.org/'>The Tor Project</a> and <a href='https://eff.org/'>Electronic Frontier Foundation</a>, this extension encrypts your communications to make your browsing more secure.</li><li><a href='https://www.eff.org/pages/tor-and-https'>Learn more about the Tor Project.</a> If you&rsquo;re more ambitious, you can use tools like <a href='https://www.torproject.org/'>Tor</a> to defend yourself against network surveillance and traffic analysis. Here&rsquo;s <a href='https://www.torproject.org/docs/documentation.html.en'>how to get started</a>. Or check out The Guardian&rsquo;s <a href='http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/9'>explanation</a> on Tor works.</li><li><a href='https://www.eff.org/torchallenge/setting-up/'>Volunteer with Tor.</a> Tor is a free network that relies on bandwidth donated by volunteers around the world. Want to help? This <a href='https://www.eff.org/torchallenge/setting-up/'>guide</a> and <a href='http://www.youtube.com/watch?v=1jmj4bILqiY'>video</a> show you how.</li><li><a href='https://www.cryptoparty.in/documentation'>Host a crypto-party.</a> Now that you&rsquo;ve learned how to encrypt your data, why not help others? <a href='https://www.cryptoparty.in/documentation'>This &ldquo;CryptoParty&rdquo; guide</a> can help. You can also add your event to <a href='http://party.webmaker.org/'>Mozilla&rsquo;s Maker Party</a> to join others hosting web literacy parties around the world.</li></ul>"
+        "description": "There are various things you can do to make your online data more secure. Some are harder than others. If you want to take extra steps to protect your communications, here are some ways to go further.<br><br><ul><li><a href=\"https://www.eff.org/https-everywhere\">Install HTTPS Everywhere.</a> A collaboration between <a href=\"https://www.torproject.org/\">The Tor Project</a> and <a href=\"https://eff.org/\">Electronic Frontier Foundation</a>, this extension encrypts your communications to make your browsing more secure.</li><li><a href=\"https://www.eff.org/pages/tor-and-https\">Learn more about the Tor Project.</a> If you&rsquo;re more ambitious, you can use tools like <a href=\"https://www.torproject.org/\">Tor</a> to defend yourself against network surveillance and traffic analysis. Here&rsquo;s <a href=\"https://www.torproject.org/docs/documentation.html.en\">how to get started</a>. Or check out The Guardian&rsquo;s <a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/9\">explanation on how Tor works</a>.</li><li><a href=\"https://www.eff.org/torchallenge/setting-up/\">Volunteer with Tor.</a> Tor is a free network that relies on bandwidth donated by volunteers around the world. Want to help? This <a href=\"https://www.eff.org/torchallenge/setting-up/\">guide</a> and <a href=\"http://www.youtube.com/watch?v=1jmj4bILqiY\">video</a> show you how.</li><li><a href=\"https://www.cryptoparty.in/documentation\">Host a crypto-party.</a> Now that you&rsquo;ve learned how to encrypt your data, why not help others? <a href=\"https://www.cryptoparty.in/documentation\">This &ldquo;CryptoParty&rdquo; guide</a> can help. You can also add your event to <a href=\"http://party.webmaker.org/\">Mozilla&rsquo;s Maker Party</a> to join others hosting web literacy parties around the world.</li></ul>"
       }
     ],
     "teach": {
@@ -1229,95 +1321,95 @@
       ],
       "more": [
         {
-          "title": "<a href='https://www.youtube.com/watch?feature=player_embedded&v=RAGjNe1YhMA'>Teaching privacy and network education in schools.</a>",
+          "title": "<a href=\"https://www.youtube.com/watch?feature=player_embedded&v=RAGjNe1YhMA\">Teaching privacy and network education in schools.</a>",
           "description": "Cory Doctorow&rsquo;s take on how teachers and parents can teach privacy and network education the right way. And why many schools may be inadvertently sending the wrong message."
         },
         {
-          "title": "<a href='http://training.webmakerprototypes.org/'>Get free training from Mozilla.</a>",
+          "title": "<a href=\"http://training.webmakerprototypes.org/\">Get free training from Mozilla.</a>",
           "description": "On how to teach online privacy, security, digital citizenship and more."
         }
+      ],
+      "ctas": [
+        {
+          "title": "",
+          "description": ""
+        }
       ]
-    },
-    "ctas": [
-      {
-        "title": "",
-        "description": ""
-      }
-    ]
+    }
   },
   "weblit-OpenPractices": {
+    "icon": "fa-fire",
     "intro": "How do we spread ideas? To help the network grow and to let new ideas flourish, the web is based on open standards that can be studied, reused and improved by anyone. Licenses define what&rsquo;s possible with the code and content we find online, and understanding how they work allows you to participate in the web&rsquo;s evolution.",
     "related": "weblit-Collaborating",
-    "icon": "fa-fire",
     "discover": [
       {
         "title": "What is openly licensed content?",
         "links": [
-          "<a href='http://wiki.creativecommons.org/Before_Licensing'>This wiki page</a> by Creative Commons explains the basics."
+          "<a href=\"http://wiki.creativecommons.org/Before_Licensing\">This wiki page</a> by Creative Commons explains the basics."
         ]
       },
       {
         "title": "What are OERs?",
         "description": "This page by UNESCO explains what OERs (Open Educational Resources) are, and how they might manifest in our societies.",
         "links": [
-          "<a href='http://www.unesco.org/new/en/communication-and-information/access-to-knowledge/open-educational-resources/what-are-open-educational-resources-oers/'>What are Open Educational Resources (OERs)?</a>",
-          "And here&rsquo;s <a href='http://clt.lse.ac.uk/digital-and-information-literacy/OERs.php'>another useful description by the London School of Economics</a>",
-          "Want to know even more? Here is <a href='http://www.jisc.ac.uk/publications/programmerelated/2013/Openeducationalresources.aspx'>a comprehensive guide by JISC</a>"
+          "<a href=\"http://www.unesco.org/new/en/communication-and-information/access-to-knowledge/open-educational-resources/what-are-open-educational-resources-oers/\">What are Open Educational Resources (OERs)?</a>",
+          "And here&rsquo;s <a href=\"http://clt.lse.ac.uk/digital-and-information-literacy/OERs.php\">another useful description by the London School of Economics</a>",
+          "Want to know even more? Here is <a href=\"http://www.jisc.ac.uk/publications/programmerelated/2013/Openeducationalresources.aspx\">a comprehensive guide by JISC</a>"
         ]
       },
       {
         "title": "The evolution of open knowledge&mdash;a crowdsourced community timeline",
         "links": [
-          " <a href='http://openbook.okfn.org/timeline/'>A history of openness</a> from 1425 to the present day, based on events contributed by communities. And here&rsquo;s the project this timeline was built for, <a href='http://openbook.okfn.org/'>The Open Book</a>."
+          " <a href=\"http://openbook.okfn.org/timeline/\">A history of openness</a> from 1425 to the present day, based on events contributed by communities. And here&rsquo;s the project this timeline was built for, <a href=\"http://openbook.okfn.org/\">The Open Book</a>."
         ]
       },
       {
         "title": "Yochai Benkler TED talk: Open-source economics",
         "links": [
-          "<a href='http://www.youtube.com/watch?v=NgYE75gkzkM'>In this 17 minute speech</a>, law professor Yochai Benkler explains how open and collaborative projects like Wikipedia and Linux represent the next stage of human organization."
+          "<a href=\"http://www.youtube.com/watch?v=NgYE75gkzkM\">In this 17 minute speech</a>, law professor Yochai Benkler explains how open and collaborative projects like Wikipedia and Linux represent the next stage of human organization."
         ]
       },
       {
         "title": "The 9 most important events in open source history",
         "links": [
-          "What are <a href='http://royal.pingdom.com/2010/01/15/the-9-most-important-events-in-open-source-history/'>the key moments in time</a> that made open source software such an immense success story?"
+          "What are <a href=\"http://royal.pingdom.com/2010/01/15/the-9-most-important-events-in-open-source-history/\">the key moments in time</a> that made open source software such an immense success story?"
         ]
       },
       {
         "title": "An overview of some of the most popular Open Source Licenses",
         "links": [
-          "Written by the <a href='http://opensource.org/licenses'>Open Source Initiative</a>"
+          "Written by the <a href=\"http://opensource.org/licenses\">Open Source Initiative</a>"
         ]
       },
       {
         "title": "P2PU&rsquo;s School of Open",
         "links": [
-          "Learn about <a href='https://p2pu.org/en/schools/school-of-open/'>P2PU&rsquo;s School of Open</a>"
+          "Learn about <a href=\"https://p2pu.org/en/schools/school-of-open/\">P2PU&rsquo;s School of Open</a>"
         ]
       },
       {
         "title": "What&rsquo;s happening in open source today?",
         "links": [
-          "This online publication focuses on <a href='http://opensource.com/'>how open source is applied to different areas</a> including business, education, government, health, law and other disciplines."
+          "This online publication focuses on <a href=\"http://opensource.com/\">how open source is applied to different areas</a> including business, education, government, health, law and other disciplines."
         ]
       }
     ],
     "make": [
       {
         "title": "Contribute to an open source project on Github",
-        "description": "This useful guide will help you <a href='https://guides.github.com/activities/contributing-to-open-source/'>get started quickly</a>."
+        "description": "This useful guide will help you <a href=\"https://guides.github.com/activities/contributing-to-open-source/\">get started quickly</a>."
       },
       {
         "title": "License your web content using Creative Commons",
-        "description": "This page leads you through the process of <a href='http://creativecommons.org/choose/'>choosing the right license for your work</a>."
+        "description": "This page leads you through the process of <a href=\"http://creativecommons.org/choose/\">choosing the right license for your work</a>."
       },
       {
         "title": "Create your own open source project",
-        "description": "Creating an open-source project isn&rsquo;t just about making your code freely available to others. This <a href='http://www.smashingmagazine.com/2013/01/03/starting-an-open-source-project/'>step-by-step guide in Smashing Magazine</a> explains how to make it happen."
+        "description": "Creating an open-source project isn&rsquo;t just about making your code freely available to others. This <a href=\"http://www.smashingmagazine.com/2013/01/03/starting-an-open-source-project/\">step-by-step guide in Smashing Magazine</a> explains how to make it happen."
       },
       {
         "title": "Report on an event and release its content for free",
-        "description": "<a href='https://thimble.webmaker.org/project/43402/remix'>Remix this Thimble page</a> to share the details of an event or meetup and share its content with a creative commons license of your choice."
+        "description": "<a href=\"https://thimble.webmaker.org/project/43402/remix\">Remix this Thimble page</a> to share the details of an event or meetup and share its content with a creative commons license of your choice."
       }
     ],
     "teach": {

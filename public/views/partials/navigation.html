@@ -22,6 +22,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a href="/me" target="_blank"><span class="fa fa-th-large"></span> {{ 'My makes' | i18n }}</a></li>
+            <li><a href="/user/{{_user.username}}" external-link="true"><span class="fa fa-user"></span> {{ 'My Profile' | i18n }}</a></li>
             <li><a href="{{accountSettingsUrl}}" target="_blank"><span class="fa fa-cog"></span> {{ 'My Settings' | i18n }}</a></li>
             <li class="divider"></li>
             <li><a ng-click="logout()"><span class="fa fa-sign-out"></span> {{ 'Sign out' | i18n }}</a></li>

@@ -1,7 +1,7 @@
 angular
   .module('webmakerApp')
-  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit', 'wmNav',
-    function ($scope, $location, $routeParams, $rootScope, weblit, wmNav) {
+  .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit', 'wmNav', 'CONFIG',
+    function ($scope, $location, $routeParams, $rootScope, weblit, wmNav, config) {
 
       // Nav data
       $scope.nav = {
@@ -87,6 +87,9 @@ angular
           }
         ]
       };
+
+      // User urls
+      $scope.accountSettingsUrl = config.accountSettingsUrl;
 
       // Start with collapsed state for navigation
       $scope.primaryCollapse = true;

@@ -57,20 +57,17 @@
         "id": "webmaker-super-mentor",
         "title": "Super Mentor Badge",
         "url": "badges/webmaker-super-mentor",
-        "flag": "badges"
       },
       {
         "id": "hive-community-member",
         "title": "Hive Community Badge",
         "url": "badges/hive-community-member",
-        "flag": "badges"
       },
       {
         "id": "badges-admin",
         "title": "Badges Admin",
         "url": "admin/badges",
-        "flag": "badges",
-        "adminOnly": "true"
+        "isAtleastMentor": "true"
       },
       {
         "id": "search",

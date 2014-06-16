@@ -336,13 +336,6 @@ app.get('/', routes.angular);
 if (env.get('FLAGS_EXPLORE')) {
   app.get('/explore', routes.angular);
   app.get('/resources/:section?/:competency?', routes.angular);
-  // Badges admin
-  app.get('/admin/badges', middleware.checkAdmin, routes.angular);
-  app.get('/admin/badges/:badge', middleware.checkAdmin, routes.angular);
-
-  // Made With Code
-  app.get('/madewithcode-*', routes.angular);
-
 } else {
   app.get("/resources", routes.gallery({
     layout: "starterMakes",
@@ -350,6 +343,9 @@ if (env.get('FLAGS_EXPLORE')) {
     limit: 20
   }));
 }
+
+// Made With Code
+app.get('/madewithcode-*', routes.angular);
 
 app.get("/gallery", routes.gallery({
   layout: "index",
@@ -375,7 +371,8 @@ app.get("/privacy-makes", routes.gallery({
 var badgesRoutes = routes.badges(env);
 
 // Badge pages
-app.get("/badges/:badge?", badgesRoutes.details);
+app.get('/badges/:badge?', badgesRoutes.details);
+
 // Badges admin
 app.get('/admin/badges', badgesRoutes.middleware.atleast('isMentor'), routes.angular);
 app.get('/admin/badges/:badge', badgesRoutes.middleware.hasPermissions('viewInstances'), routes.angular);

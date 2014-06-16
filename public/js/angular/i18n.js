@@ -57,7 +57,8 @@ angular.module('localization', ['ngSanitize'])
           if (localize.dictionary.hasOwnProperty(value)) {
             return localize.dictionary[value];
           } else {
-            return 'unknown key: "' + value + '"';
+            console.err('i18n unknown key: "' + value + '"');
+            return value;
           }
         }
       }

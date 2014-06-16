@@ -14,12 +14,22 @@ define(['jquery', 'webmaker-auth-client'], function ($, WebmakerAuthClient) {
     var emailSpans = $('.webmaker-email-placeholder');
     var profileLink = $('.profile-link a');
 
-    var adminBadge = ' <span class="label label-primary">admin</span>';
+    function userBadge(user) {
+      if (user.isAdmin) {
+        return ' <span class="label label-primary">admin</span>';
+      } else if (user.isSuperMentor) {
+        return ' <span class="label label-info">supermentor</span>';
+      } else if (user.isMentor) {
+        return ' <span class="label label-warning">mentor</span>';
+      } else {
+        return '';
+      }
+    }
 
     if (userData) {
       emailSpans.html(userData.email);
       placeHolder.html('<img src="' + userData.avatar + '" alt="">' +
-        '<a href="' + $("#loginURL").attr('href') + '">' + userData.username + (userData.isAdmin ? adminBadge : '') + "</a>");
+        '<a href="' + $("#loginURL").attr('href') + '">' + userData.username + userBadge(userData) + "</a>");
       profileLink.attr('href', '/user/' + userData.username);
     } else {
       emailSpans.html('');

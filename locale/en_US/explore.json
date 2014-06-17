@@ -123,6 +123,10 @@
     "message": "Featured Teaching Resources",
     "description": "Title for teaching resources in competency page"
   },
+  "Explore the gallery": {
+    "message": "Explore the gallery",
+    "description": "Link to additional teaching resources in competency page"
+  },
   "noStaffPick": {
     "message": "There are no featured teaching resources yet. <a href=\"#\">Submit one.</a>",
     "description": "No item in the list picked by staff and there is a submit link."

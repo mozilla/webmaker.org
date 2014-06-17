@@ -69,6 +69,22 @@
     padding: 40px 0;
   }
 
+  .resources-link {
+    &:link, &:visited, &:hover, &:active, &:focus {
+      color: @blue;
+    }
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-left: 1.2rem;
+    text-transform: none;
+    &:after {
+      .icon(@fa-chevron-right);
+      font-size: 0.9em;
+      margin-left: 0.5rem;
+    }
+  }
+
   // Fixed side menu - Discover, Make, Teach
   .competency-page-menu {
     &.affix {

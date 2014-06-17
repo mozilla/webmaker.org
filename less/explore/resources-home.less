@@ -138,18 +138,18 @@
     color: @white;
     display: block;
     padding: 2rem 1.5rem;
+    position: relative;
     text-align: left;
+    &::after {
+      .icon(@fa-chevron-right);
+      position: absolute;
+      right: 1rem;
+    }
     &:hover,
     &:focus {
       background: none;
       color: @white;
-      position: relative;
       text-decoration: none;
-      &::after {
-        .icon(@fa-chevron-right);
-        position: absolute;
-        right: 1rem;
-      }
     }
   }
 }

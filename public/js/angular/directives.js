@@ -59,6 +59,22 @@ angular
       };
     }
   ])
+  .directive('remixLink', ['$window', 'makeapi',
+    function ($window, makeapi) {
+      return {
+        restrict: 'A',
+        link: function (scope, el, attrs) {
+          makeapi.makeapi
+            .id(attrs.remixLink)
+            .then(function (err, makes) {
+              if (err) {
+                console.error(err);
+              }
+              el.prop('href', makes[0].remixurl);
+            });
+        }
+      };
+    }])
   .directive('sampleMake', ['$window', 'makeapi',
     function ($window, makeapi) {
       return {

@@ -242,11 +242,19 @@ angular
 
       $scope.page = $routeParams.mwc;
 
-      if ($rootScope.mwcReady) {
+      // Keeps controller operations in one function to be fired when $rootScope is ready
+
+      function init() {
         $scope.madewithcode = $rootScope.madewithcode[$scope.page];
+
+      }
+
+      // Don't fire controller until after $rootScope is ready
+      if ($rootScope.mwcReady) {
+        init();
       } else {
         $timeout(function () {
-          $scope.madewithcode = $rootScope.madewithcode[$scope.page];
+          init();
         }, 500);
       }
     }

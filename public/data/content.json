@@ -1042,7 +1042,21 @@
           "type": "kit"
         }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> about sharing, collaboration and co-creation on the web."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own remixable teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Collaborating": {
     "icon": "fa-users",
@@ -1115,11 +1129,25 @@
           "title": "Paper Prototyping Teaching Kits",
           "description": "Collaborate with other educators to design Open Educational Resources together",
           "url": "https://keyboardkat.makes.org/thimble/LTU0ODUzNjMy/prototyping-with-a-teaching-kit-design-canvas",
-          "author": "codekat",
+          "author": "Kat Braybrooke",
           "type": "kit"
         }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> about online collaboration skills and providing access on the web."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own remixable teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Community": {
     "intro": "Who owns the web?  One of the beautiful things about the web is that it is a global, public resource. Learning to collaborate online as part of a global community of contributors and creators is an empowering way to ensure that the web remains a shared resource for everyone.",
@@ -1198,7 +1226,21 @@
           "description": "<a href=\"http://hivenyc.org/teachtheweb/week-6-peers-working-in-the-open/\">The 2013 syllabus</a> from the Teach the Web MOOC looking at community participation."
         }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> about how to encourage participation and collaborate online within their own communities."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own remixable teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Privacy": {
     "icon": "fa-eye-slash",
@@ -1332,8 +1374,16 @@
     },
     "ctas": [
       {
-        "title": "",
-        "description": ""
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> about how to make their online lives more private and secure."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own remixable teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
       }
     ]
   },
@@ -1450,6 +1500,20 @@
           "type": "kit"
         }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> about how to keep the web democratic, open and accessible for all."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own remixable teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   }
 }

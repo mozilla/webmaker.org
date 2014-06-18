@@ -195,6 +195,15 @@
 footer.footer-competency {
   color: white;
   padding: 20px 20px 80px;
+  h1, p {
+    color: fadeout(@white, 3%);
+    transition: color 100ms;
+  }
+  &:hover, &:active {
+    h1, p {
+      color: @white;
+    }
+  }
   h1 {
     font-weight: 200;
     margin: 20px 0;

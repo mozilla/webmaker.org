@@ -160,13 +160,14 @@
   </div>
 
   <footer class="footer-competency bg-{{ content.related }}">
-    <div class="container">
-      <div class="col-sm-10 col-sm-offset-2">
-        <h4>{{ 'You might also like' | i18n }}</h4>
+    <a href="/{{ lang }}/resources/literacy/{{ content.related }}">
+      <div class="container">
+        <div class="col-sm-10 col-sm-offset-2">
+          <h4>{{ 'You might also like' | i18n }}</h4>
 
-        <h1><span class="fa {{ content.icon }}"></span> {{ weblit.term(content.related) }}</h1>
-        <p class="lead">{{ weblit.description(content.related) }}</p>
+          <h1><span class="fa {{ content.icon }}"></span> {{ weblit.term(content.related) }}</h1>
+          <p class="lead">{{ weblit.description(content.related) }}</p>
+        </div>
       </div>
-    </div>
+    </a>
   </footer>
-</div>

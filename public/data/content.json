@@ -48,22 +48,22 @@
           "author": "Mozteach",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> web navigation, coding and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> web navigation, coding and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-WebMechanics": {
     "icon": "fa-wrench",
@@ -132,22 +132,22 @@
           "author": "@malesser + @thomashpark",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> web mechanics, coding and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> web mechanics, coding and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Search": {
     "icon": "fa-search",
@@ -233,22 +233,22 @@
           "author": "Meredith Summs",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> smarter searching, navigation and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> smarter searching, navigation and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Credibility": {
     "icon": "fa-check",
@@ -314,22 +314,22 @@
           "author": "Digital Disruption",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> credibility, critical thinking and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> credibility, critical thinking and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Security": {
     "icon": "fa-lock",
@@ -397,22 +397,22 @@
           "author": "Laura Hilliger, Dumitru Gherman and Emma Irwin",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> smarter searching, navigation and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> smarter searching, navigation and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Composing": {
     "icon": "fa-pencil",
@@ -501,22 +501,22 @@
           "title": "Explain HTML tags with a live action puzzle",
           "description": "A fun exercise from Digital Corps for learners to <a href=\"https://robertapb.makes.org/thimble/LTk0MzkxNTAwOA==/html-thimble-tag-puzzle\">replicate the structure of a basic HTML document</a>."
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> online storytelling, coding and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> online storytelling, coding and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Remix": {
     "icon": "fa-code-fork",
@@ -613,22 +613,22 @@
           "title": "Bust media stereotypes.",
           "description": "<a href=\"https://techkim.makes.org/thimble/busting-media-stereotypes\">Use remix to challenge and talk back to media stereotypes</a>."
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> remix, coding and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> remix, coding and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-DesignAccessibility": {
     "icon": "fa-picture-o",
@@ -773,22 +773,22 @@
           "author": "Keyboardkat",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> design, accessibility and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> design, accessibility and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-CodingScripting": {
     "icon": "fa-code",
@@ -867,22 +867,22 @@
           "author": "Chad Sansing",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> coding, scripting and other digital skills."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> coding, scripting and other digital skills."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Infrastructure": {
     "icon": "fa-sitemap",
@@ -950,22 +950,22 @@
           "author": "Julia Vallera",
           "type": "kit"
         }
-      ],
-      "ctas": [
-        {
-          "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
-          "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> how the web works."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
-          "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates to make your own teaching kits and activities like these."
-        },
-        {
-          "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
-          "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> how the web works."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
   },
   "weblit-Sharing": {
     "icon": "fa-share-square-o",
@@ -1328,14 +1328,14 @@
           "title": "<a href=\"http://training.webmakerprototypes.org/\">Get free training from Mozilla.</a>",
           "description": "On how to teach online privacy, security, digital citizenship and more."
         }
-      ],
-      "ctas": [
-        {
-          "title": "",
-          "description": ""
-        }
       ]
-    }
+    },
+    "ctas": [
+      {
+        "title": "",
+        "description": ""
+      }
+    ]
   },
   "weblit-OpenPractices": {
     "icon": "fa-fire",

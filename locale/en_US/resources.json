@@ -104,7 +104,7 @@
     "description": "Copy for the Get Involved column"
   },
   "We have re-organized Webmaker Resources": {
-    "message": "<strong>We&rsquo;ve changed!</strong> We&rsquo;ve re-organized Webmaker Resources. We hope you find the new content helpful! Looking for easy ways to get started? Try out our <a href=\"/{{ lang}}/tools\">Tools</a> or get started by remixing something in the <a href=\"/{{ lang }}/gallery\">Gallery</a>.",
+    "message": "<strong>We&rsquo;ve changed!</strong> Looking for easy ways to get started? Try out our <a href=\"/{{ lang}}/tools\">Tools</a>. Or remix something in the <a href=\"/{{ lang }}/gallery\">Gallery</a>.",
     "description": "Copy for the banner alerting users to the IA changes"
   }
 }

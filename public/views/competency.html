@@ -83,9 +83,22 @@
                 <p ng-bind-html="item.description"></p>
               </div>
             </li>
-            <li ng-repeat="link in item.links">
-              <div>
-                <p ng-bind-html="link"></p>
+            <li ng-repeat="media in item.multimedia" ng-switch="media.type">
+              <div class="v-wrap" ng-switch-when="youtube">
+                <div class="v-box">
+                  <iframe allowfullscreen frameborder="0" width="853" height="480" ng-src="{{ media.content }}"></iframe>
+                </div>
+              </div>
+              <div class="v-wrap" ng-switch-when="vimeo">
+                <div class="v-box">
+                  <iframe src="{{ media.content }}" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div ng-switch-when="markup">
+                <p bind-unsafe-html="media.content"></p>
+              </div>
+              <div ng-switch-when="image">
+                <img src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
               </div>
             </li>
           </ul>
@@ -101,9 +114,22 @@
                 <h2 ng-bind-html="item.title"></h2>
               </div>
             </li>
-            <li>
-              <div>
-                <p ng-bind-html="item.description"></p>
+            <li ng-repeat="media in item.multimedia" ng-switch="media.type">
+              <div class="v-wrap" ng-switch-when="youtube">
+                <div class="v-box">
+                  <iframe allowfullscreen frameborder="0" width="853" height="480" ng-src="{{ media.content }}"></iframe>
+                </div>
+              </div>
+              <div class="v-wrap" ng-switch-when="vimeo">
+                <div class="v-box">
+                  <iframe src="{{ media.content }}" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div ng-switch-when="markup">
+                <p bind-unsafe-html="media.content"></p>
+              </div>
+              <div ng-switch-when="image">
+                <img src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
               </div>
             </li>
           </ul>

@@ -1,4 +1,107 @@
 {
+  "weblit-Sample-Content": {
+    "icon": "fa-times-circle",
+    "intro": "<strong>This is sample content.</strong> This object will help internal content creators form additional competencies.",
+    "related": null,
+    "discover": [
+      {
+        "title": "Test Content",
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "This is some sample content with <strong>a strong tag</strong> in it even."
+          },
+          {
+            "type": "youtube",
+            "content": "CMNry4PE93Y"
+          },
+          {
+            "type": "markup",
+            "content": "Adding another markup section will helpfully break up content in between images and video."
+          }
+        ]
+      },
+      {
+        "title": "An additional section of content",
+        "multimedia": [
+          {
+            "type": "image",
+            "content": {
+              "src": "http://hosted.akibraun.com/g/roomba.gif",
+              "alt": "Who doesn&rsquo;t like kittens on a roomba?"
+            }
+          },
+          {
+            "type": "markup",
+            "content": "This is another markup section, maybe it's even copy about the video below."
+          },
+          {
+            "type": "vimeo",
+            "content": "6736261"
+          }
+        ]
+      }
+    ],
+    "make": [
+      {
+        "title": "Test Content",
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "This is some sample content with <strong>a strong tag</strong> in it even."
+          },
+          {
+            "type": "youtube",
+            "content": "CMNry4PE93Y"
+          },
+          {
+            "type": "markup",
+            "content": "Adding another markup section will helpfully break up content in between images and video."
+          },
+          {
+            "type": "image",
+            "content": {
+              "src": "http://hosted.akibraun.com/g/roomba.gif",
+              "alt": "Who doesn&rsquo;t like kittens on a roomba?"
+            }
+          },
+          {
+            "type": "markup",
+            "content": "This is another markup section, maybe it's even copy about the video below."
+          },
+          {
+            "type": "vimeo",
+            "content": "6736261"
+          }
+        ]
+      }
+    ],
+    "teach": {
+      "kits": [
+        {
+          "title": "The title of a teaching kit",
+          "description": "A longer description of a teaching kit",
+          "url": "https://mozteach.makes.org/thimble/_________________",
+          "author": "Mozteach",
+          "type": "kit"
+        }
+      ]
+    },
+    "ctas": [
+      {
+        "title": "<a href=\"/{{ lang }}/mentor\">Become a mentor</a>",
+        "description": "<a href=\"/{{ lang }}/mentor\">Teach others</a> things (customise this)."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/make-your-own\">Make your own teaching kit</a>",
+        "description": "<a href=\"/{{ lang }}/make-your-own\">Use our templates</a> to make your own teaching kits and activities like these."
+      },
+      {
+        "title": "<a href=\"/{{ lang }}/events\">Get together</a>",
+        "description": "<a href=\"/{{ lang }}/events\">Find or host a webmaker event</a> with others around the world."
+      }
+    ]
+  },
   "weblit-Navigation": {
     "icon": "fa-map-marker",
     "intro": "<strong>How do you get around the web?</strong> Browsers are the software we use to explore the web. They can quickly direct us exactly where we want to go, or can take us on a winding path to serendipitously discover new interests. Sharpening your navigation skills can help you browse faster, make use of speedy new short-cuts and add-ons, and get more from the time you spend on the web each day.",
@@ -6,26 +109,42 @@
     "discover": [
       {
         "title": "What&rsquo;s a web browser?",
-        "links": [
-          "<strong>It&rsquo;s one of the most important pieces of software on your computer</strong>. But many people don&rsquo;t even know what it is! <a href=\"https://openmatt.makes.org/thimble/MTYwOTEwNTQwOA==/learn-about-your-web-browser\">This page quickly explains what browsers are and why they matter.</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>It&rsquo;s one of the most important pieces of software on your computer</strong>. But many people don&rsquo;t even know what it is! <a href='https://openmatt.makes.org/thimble/MTYwOTEwNTQwOA==/learn-about-your-web-browser'>This page quickly explains what browsers are and why they matter.</a>"
+          },
+          {
+            "type": "youtube",
+            "content": "BrXPcaRlBqo"
+          }
         ]
       },
       {
         "title": "Tips and tricks",
-        "links": [
-          "<strong><a href=\"https://support.mozilla.org/en-US/products/firefox/get-started/tips\">Level up your browser skills</a> </strong>with these tips and tricks for Firefox. Keyboard and mouse shortcuts, automating common searches, organizing tabs and more. (Here&rsquo;s similar tips for <a href=\"https://www.google.com/intl/en/chrome/browser/signin.html\">Chrome</a>, <a href=\"http://windows.microsoft.com/en-ca/internet-explorer/products/ie-9/tips\">Internet Explorer</a>, <a href=\"http://support.apple.com/kb/ht5364\">Safari</a> and<a href=\"http://fedoraproject.org/en/get-help\"> Fedora</a>.)"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong><a href=\"https://support.mozilla.org/en-US/products/firefox/get-started/tips\">Level up your browser skills</a> </strong>with these tips and tricks for Firefox. Keyboard and mouse shortcuts, automating common searches, organizing tabs and more. (Here&rsquo;s similar tips for <a href=\"https://www.google.com/intl/en/chrome/browser/signin.html\">Chrome</a>, <a href=\"http://windows.microsoft.com/en-ca/internet-explorer/products/ie-9/tips\">Internet Explorer</a>, <a href=\"http://support.apple.com/kb/ht5364\">Safari</a> and<a href=\"http://fedoraproject.org/en/get-help\"> Fedora</a>.)"
+          }
         ]
       },
       {
         "title": "Watch the evolution of the web",
-        "links": [
-          "<strong>The web is like a living, breathing ecosystem</strong>. This <a href=\"http://www.evolutionoftheweb.com/\">beautiful interactive timeline</a> shows how much it has grown and changed since its birth in the early 1990s."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>The web is like a living, breathing ecosystem</strong>. This <a href=\"http://www.evolutionoftheweb.com/\">beautiful interactive timeline</a> shows how much it has grown and changed since its birth in the early 1990s."
+          }
         ]
       },
       {
         "title": "Navigating &ldquo;filter bubbles&rdquo;",
-        "links": [
-          "<strong>Are you stuck in a filter bubble?</strong> How do you know what <em>you&rsquo;re</em> seeing on the web is the same as what others are seeing? Watch <a href=\"http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles#t-36384\">Eli Pariser&rsquo;s TED Talk, <strong>The Filter Bubble</strong>, </a>to learn more about online filtering."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>Are you stuck in a filter bubble?</strong> How do you know what <em>you&rsquo;re</em> seeing on the web is the same as what others are seeing? Watch <a href=\"http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles#t-36384\">Eli Pariser&rsquo;s TED Talk, <strong>The Filter Bubble</strong>, </a>to learn more about online filtering."
+          }
         ]
       }
     ],
@@ -73,32 +192,47 @@
       {
         "title": "Not a Series of Tubes",
         "description": "",
-        "links": [
-          "<strong>Despite popular belief, the Internet is <em>not</em> a series of tubes.</strong> <a href=\"http://www.dontfeartheinternet.com/the-basics/not-tubes\">This video from &ldquo;Don&rsquo;t Fear the Internet&rdquo;</a> explains how the internet and web sites actually work."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>Despite popular belief, the Internet is <em>not</em> a series of tubes.</strong> <a href=\"http://www.dontfeartheinternet.com/the-basics/not-tubes\">This video from &ldquo;Don&rsquo;t Fear the Internet&rdquo;</a> explains how the internet and web sites actually work."
+          }
         ]
       },
       {
         "title": "What&rsquo;s it built with?",
-        "links": [
-          "<strong>What makes your favorite web sites tick?</strong> <a href=\"http://builtwith.com\">Paste in their address here</a> to see what technologies they&rsquo;re built with."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>What makes your favorite web sites tick?</strong> <a href=\"http://builtwith.com\">Paste in their address here</a> to see what technologies they&rsquo;re built with."
+          }
         ]
       },
       {
         "title": "What can you learn from a URL?",
-        "links": [
-          "<strong>Where in the world is the computer that hosts your website located?</strong> Enter any address in <a href=\"http://url-demystifier.toolness.org/\">the URL Demystifier</a> to find out."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>Where in the world is the computer that hosts your website located?</strong> Enter any address in <a href=\"http://url-demystifier.toolness.org/\">the URL Demystifier</a> to find out."
+          }
         ]
       },
       {
         "title": "What&rsquo;s my IP address?",
-        "links": [
-          "Your &ldquo;Internet Protocol&rdquo; address is what lets your computer talk to other computers on the Internet. This tool will show you <a href=\"http://whatismyipaddress.com/ip-address\">what IP address you&rsquo;re using right now</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Your &ldquo;Internet Protocol&rdquo; address is what lets your computer talk to other computers on the Internet. This tool will show you <a href=\"http://whatismyipaddress.com/ip-address\">what IP address you&rsquo;re using right now</a>."
+          }
         ]
       },
       {
         "title": "Who owns the Internet?",
-        "links": [
-          "<a href=\"http://computer.howstuffworks.com/internet/basics/who-owns-internet.htm\">Learn more about the ownership structures</a> of the world&rsquo;s largest public resource."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://computer.howstuffworks.com/internet/basics/who-owns-internet.htm\">Learn more about the ownership structures</a> of the world&rsquo;s largest public resource."
+          }
         ]
       }
     ],
@@ -156,50 +290,74 @@
     "discover": [
       {
         "title": "How good a searcher are you?",
-        "links": [
-          "<a href=\"http://www.google.co.uk/insidesearch/searcheducation/lessons.html#challenges\"><strong>Put your skills to the test with these search challenges</strong></a>. See how quickly you can track down answers on everything from Che Guevera to ancient Egypt, in categories like culture, geography, history and science."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.google.co.uk/insidesearch/searcheducation/lessons.html#challenges\"><strong>Put your skills to the test with these search challenges</strong></a>. See how quickly you can track down answers on everything from Che Guevera to ancient Egypt, in categories like culture, geography, history and science."
+          }
         ]
       },
       {
         "title": "Search Creative Commons images",
-        "links": [
-          "Find free openly-licensed images from multiple sources using this handy <a href=\"http://search.creativecommons.org/\">Creative Commons search hub</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Find free openly-licensed images from multiple sources using this handy <a href=\"http://search.creativecommons.org/\">Creative Commons search hub</a>."
+          }
         ]
       },
       {
         "title": "Go back in time",
-        "links": [
-          "<strong>Search the Internet&rsquo;s past with <a href=\"https://archive.org/web/\">the Internet Archive&rsquo;s <em>Way Back Machine</em></a></strong>. See what your favorite sites looked like back in the day."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>Search the Internet&rsquo;s past with <a href=\"https://archive.org/web/\">the Internet Archive&rsquo;s <em>Way Back Machine</em></a></strong>. See what your favorite sites looked like back in the day."
+          }
         ]
       },
       {
         "title": "What is the world searching for?",
-        "links": [
-          "<a href=\"http://www.google.com/trends/\"><strong> See what the rest of the world is searching on Google right now</strong></a>. Visualize <a href=\"http://www.google.com/trends/hottrends/visualize?pn=p13\">hot searches</a> or <a href=\"http://www.google.com/trends/explore\">explore trends.</a> What&rsquo;s more popular&mdash;<a href=\"http://www.google.com/trends/explore#q=%2Fm%2F01yrx%2C%20%2Fm%2F0bt9lr&amp;cmpt=q\">cats or dogs</a>?"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.google.com/trends/\"><strong> See what the rest of the world is searching on Google right now</strong></a>. Visualize <a href=\"http://www.google.com/trends/hottrends/visualize?pn=p13\">hot searches</a> or <a href=\"http://www.google.com/trends/explore\">explore trends.</a> What&rsquo;s more popular&mdash;<a href=\"http://www.google.com/trends/explore#q=%2Fm%2F01yrx%2C%20%2Fm%2F0bt9lr&amp;cmpt=q\">cats or dogs</a>?"
+          }
         ]
       },
       {
         "title": "Don&rsquo;t want your searches to be tracked?",
-        "links": [
-          "Search without letting your searches be tracked using <a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature\">Do Not Track.</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Search without letting your searches be tracked using <a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature\">Do Not Track.</a>"
+          }
         ]
       },
       {
         "title": "What is the world searching today?",
-        "links": [
-          "<a href=\"http://www.google.com/trends/\">See what the world is searching for</a> using Google Trends."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.google.com/trends/\">See what the world is searching for</a> using Google Trends."
+          }
         ]
       },
       {
         "title": "I don&rsquo;t want my searches to be tracked....",
-        "links": [
-          "Search without allowing your searches to be tracked using <a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature\">Do Not Track by Firefox</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Search without allowing your searches to be tracked using <a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature\">Do Not Track by Firefox</a>."
+          }
         ]
       },
       {
         "title": "How does search work?",
-        "links": [
-          "<strong>What happens when you Google something?</strong> <a href=\"http://www.youtube.com/watch?v=BNHR6IQJGZs\">This video shows the life span of a search query.</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>What happens when you Google something?</strong> <a href=\"http://www.youtube.com/watch?v=BNHR6IQJGZs\">This video shows the life span of a search query.</a>"
+          }
         ]
       }
     ],
@@ -265,22 +423,37 @@
       {
         "title": "Strengthen your Crap Detector",
         "description": "<strong>How do you separate the good stuff from the bad?</strong> Howard Rheingold explains how to separate accurate information from <em>inaccurate</em> information, <em>misinformation</em> and <em>disinformation</em>.",
-        "links": [
-          "Read about <a href=\"http://blog.sfgate.com/rheingold/2009/06/30/crap-detection-101/\">Crap Detection 101</a>",
-          "Check out <a href=\"http://rheingold.com/2013/crap-detection-mini-course\"> this Crap Detection mini-course</a>",
-          "<strong><a href=\"http://loex2008collaborate.pbworks.com/w/page/18686701/The%20CRAP%20Test\">Does it pass the &ldquo;CRAP Test?&rdquo;</a></strong> A quick and easy evaluation process: consider a web page&rsquo;s <strong>C</strong>urrency, <strong>R</strong>eliability, <strong>A</strong>uthority and <strong>P</strong>oint of View."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Read about <a href=\"http://blog.sfgate.com/rheingold/2009/06/30/crap-detection-101/\">Crap Detection 101</a>"
+          },
+          {
+            "type": "markup",
+            "content": "Check out <a href=\"http://rheingold.com/2013/crap-detection-mini-course\"> this Crap Detection mini-course</a>"
+          },
+          {
+            "type": "markup",
+            "content": "<strong><a href=\"http://loex2008collaborate.pbworks.com/w/page/18686701/The%20CRAP%20Test\">Does it pass the &ldquo;CRAP Test?&rdquo;</a></strong> A quick and easy evaluation process: consider a web page&rsquo;s <strong>C</strong>urrency, <strong>R</strong>eliability, <strong>A</strong>uthority and <strong>P</strong>oint of View."
+          }
         ]
       },
       {
         "title": "Hone your Internet Detective skills",
-        "links": [
-          "<strong>Doing online research?</strong> <a href=\"http://www.vtstutorials.ac.uk/detective/questions.html\">Here&rsquo;s some clues and evidence to look for</a> when deciding whether a site is legitimate."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>Doing online research?</strong> <a href=\"http://www.vtstutorials.ac.uk/detective/questions.html\">Here&rsquo;s some clues and evidence to look for</a> when deciding whether a site is legitimate."
+          }
         ]
       },
       {
         "title": "Fact-check like a pro",
-        "links": [
-          "Use this <a href=\"http://www.journaliststoolbox.org/archive/urban-legends-hoaxes-and-scams\">journalist&rsquo;s toolbox</a> to detect urban legends, hoaxes and scams with this comprehensive toolbox for myth-busting, fact-checking and more."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Use this <a href=\"http://www.journaliststoolbox.org/archive/urban-legends-hoaxes-and-scams\">journalist&rsquo;s toolbox</a> to detect urban legends, hoaxes and scams with this comprehensive toolbox for myth-busting, fact-checking and more."
+          }
         ]
       }
     ],
@@ -345,32 +518,47 @@
     "discover": [
       {
         "title": "Increase your security with add-ons",
-        "links": [
-          "<a href=\"http://www.notebookreview.com/news/top-10-best-firefox-security-add-ons/\">Install these 10 Firefox add-ons</a> to secure your web browser.</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.notebookreview.com/news/top-10-best-firefox-security-add-ons/\">Install these 10 Firefox add-ons</a> to secure your web browser.</a>"
+          }
         ]
       },
       {
         "title": "What is Heartbleed?",
-        "links": [
-          "Learn about <a href=\"http://heartbleed.com/\">one of the web&rsquo;s most serious vulnerabilities</a>, and how to combat it."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Learn about <a href=\"http://heartbleed.com/\">one of the web&rsquo;s most serious vulnerabilities</a>, and how to combat it."
+          }
         ]
       },
       {
         "title": "Block ads",
-        "links": [
-          "Learn more about Adblock Plus, an <a href=\"https://adblockplus.org/en/about\">add-on that prevents sites from employing cookies</a> that track your activity online and blocks irritating website ads."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Learn more about Adblock Plus, an <a href=\"https://adblockplus.org/en/about\">add-on that prevents sites from employing cookies</a> that track your activity online and blocks irritating website ads."
+          }
         ]
       },
       {
         "title": "Preventing identity theft",
-        "links": [
-          "Identity theft is serious business. <a href=\"http://www.utexas.edu/its/secure/articles/identity_theft.php\">Here&rsquo;s a primer from the University of Texas to understand the key signs</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Identity theft is serious business. <a href=\"http://www.utexas.edu/its/secure/articles/identity_theft.php\">Here&rsquo;s a primer from the University of Texas to understand the key signs</a>."
+          }
         ]
       },
       {
         "title": "The security mirage",
-        "links": [
-          "The feeling of security and the reality of security don&rsquo;t always match, says computer-security expert Bruce Schneier. In this talk <a href=\"http://www.ted.com/talks/bruce_schneier\">he explains why we spend billions to address certain kinds of risks</a> while avoiding others."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "The feeling of security and the reality of security don&rsquo;t always match, says computer-security expert Bruce Schneier. In this talk <a href=\"http://www.ted.com/talks/bruce_schneier\">he explains why we spend billions to address certain kinds of risks</a> while avoiding others."
+          }
         ]
       }
     ],
@@ -428,32 +616,47 @@
     "discover": [
       {
         "title": "A brief history of storytelling",
-        "links": [
-          "Explore the <a href=\"https://mozteach.makes.org/thimble/a-brief-history-of-storytelling\">connections between early cave paintings, video games and today&rsquo;s web</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Explore the <a href=\"https://mozteach.makes.org/thimble/a-brief-history-of-storytelling\">connections between early cave paintings, video games and today&rsquo;s web</a>."
+          }
         ]
       },
       {
         "title": "What do screens want?",
-        "links": [
-          "An essay by designer Frank Chimero examines <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">what makes creating for the web unique</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "An essay by designer Frank Chimero examines <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">what makes creating for the web unique</a>."
+          }
         ]
       },
       {
         "title": "Explore some introductory HTML",
-        "links": [
-          "This <a href=\"http://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b\">Code Academy tutorial</a> is great for learning the basics of HTML, the language of the web."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "This <a href=\"http://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b\">Code Academy tutorial</a> is great for learning the basics of HTML, the language of the web."
+          }
         ]
       },
       {
         "title": "Get familiar with HTML and CSS",
-        "links": [
-          "<a href=\"https://mozteach.makes.org/thimble/html-cheatsheet\">HTML</a> and <a href=\"https://mozteach.makes.org/thimble/css-cheatsheet\">CSS</a> coding cheat sheets that help you with the basics."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://mozteach.makes.org/thimble/html-cheatsheet\">HTML</a> and <a href=\"https://mozteach.makes.org/thimble/css-cheatsheet\">CSS</a> coding cheat sheets that help you with the basics."
+          }
         ]
       },
       {
         "title": "The Machine is Us/ing Us",
-        "links": [
-          "Watch a viral video about <a href=\"http://www.youtube.com/watch?v=NLlGopyXT_g\">what makes hypermedia different</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Watch a viral video about <a href=\"http://www.youtube.com/watch?v=NLlGopyXT_g\">what makes hypermedia different</a>."
+          }
         ]
       }
     ],
@@ -540,31 +743,55 @@
       {
         "title": "Listen to a remix",
         "description": "These mashups are songs made from bits of other songs.",
-        "links": [
-          "<a href=\"http://www.youtube.com/watch?v=uNNma1BDIUA\">The Grey Album</a>, DJ Dangermouse&rsquo;s remix of JayZ and The Beatles",
-          "<a href=\"http://www.youtube.com/watch?v=KykbPtRb0K4\">Girl Talk creating a mashup</a> on his couch by remixing Elvis Costello",
-          "<a href=\"http://www.youtube.com/watch?v=HJMapA8WgYw\">Pop Danthology 2013</a>: a mashup of 68 different songs"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.youtube.com/watch?v=uNNma1BDIUA\">The Grey Album</a>, DJ Dangermouse&rsquo;s remix of JayZ and The Beatles"
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.youtube.com/watch?v=KykbPtRb0K4\">Girl Talk creating a mashup</a> on his couch by remixing Elvis Costello"
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.youtube.com/watch?v=HJMapA8WgYw\">Pop Danthology 2013</a>: a mashup of 68 different songs"
+          }
         ]
       },
       {
         "title": "Watch DJ Kutiman&rsquo;s &ldquo;Thru You&rdquo; remix",
-        "links": [
-          "A mashup <a href=\"http://thru-you.com/#/videos/3/\">created by remixing hundreds of uploaded You Tube clips</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "A mashup <a href=\"http://thru-you.com/#/videos/3/\">created by remixing hundreds of uploaded You Tube clips</a>"
+          }
         ]
       },
       {
         "title": "Learn about sampling and hip-hop",
-        "links": [
-          "<a href=\"https://archive.org/details/mcastRaidingthe20thCenturyWordsMusicExpansionfeatStrictlyKevPaulMorleyaCastofThousands\">&ldquo;Raiding The 20th Century&rdquo;</a> by DJ Food is an in-depth exploration into remix"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://archive.org/details/mcastRaidingthe20thCenturyWordsMusicExpansionfeatStrictlyKevPaulMorleyaCastofThousands\">&ldquo;Raiding The 20th Century&rdquo;</a> by DJ Food is an in-depth exploration into remix"
+          }
         ]
       },
       {
         "title": "Watch a documentary about remix culture",
         "description": "Like <em>RIP: A Remix Manifesto</em> or <em>Everything is a Remix</em>.",
-        "links": [
-          "Watch <a href=\"https://www.nfb.ca/film/rip_a_remix_manifesto/\">the entire RIP film</a> free",
-          "<a href=\"http://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CC8QFjAA&url=http%3A%2F%2Fonf-nfb.gc.ca%2Fsg%2F100577.pdf&ei=8eRrU9PCBc2iyASC5oHQBw&usg=AFQjCNHcZXX4WT3xX527T5HMh2QwZbprdw&bvm=bv.66330100,d.aWw&cad=rja\">RIP educational guide (PDF)</a>",
-          "<a href=\"http://everythingisaremix.info/watch-the-series/\"><em>Everything is a Remix</em></a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Watch <a href=\"https://www.nfb.ca/film/rip_a_remix_manifesto/\">the entire RIP film</a> free"
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CC8QFjAA&url=http%3A%2F%2Fonf-nfb.gc.ca%2Fsg%2F100577.pdf&ei=8eRrU9PCBc2iyASC5oHQBw&usg=AFQjCNHcZXX4WT3xX527T5HMh2QwZbprdw&bvm=bv.66330100,d.aWw&cad=rja\">RIP educational guide (PDF)</a>"
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"http://everythingisaremix.info/watch-the-series/\"><em>Everything is a Remix</em></a>"
+          }
         ]
       }
     ],
@@ -651,80 +878,119 @@
     "discover": [
       {
         "title": "Know your font",
-        "links": [
-          "<a href=\"http://www.ironicsans.com/helvarialquiz/\">Try this quiz by Ironic Sans</a> to test your knowledge."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.ironicsans.com/helvarialquiz/\">Try this quiz by Ironic Sans</a> to test your knowledge."
+          }
         ]
       },
       {
         "title": "Design for Programmers",
-        "links": [
-          "A <a href=\"http://method.ac/\">series of 50 interactive challenges</a> to learn how to implement design online"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "A <a href=\"http://method.ac/\">series of 50 interactive challenges</a> to learn how to implement design online"
+          }
         ]
       },
       {
         "title": "CSS with HTML5DOG",
-        "links": [
-          "<a href=\"http://www.htmldog.com/guides/css/\">Get started learning CSS</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.htmldog.com/guides/css/\">Get started learning CSS</a>."
+          }
         ]
       },
       {
         "title": "Designer&rsquo;s News",
-        "links": [
-          "Browse through <a href=\"https://news.layervault.com/\">a Hacker&rsquo;s News-style feed</a> tailored to designers."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Browse through <a href=\"https://news.layervault.com/\">a Hacker&rsquo;s News-style feed</a> tailored to designers."
+          }
         ]
       },
       {
         "title": "Your website on different devices",
-        "links": [
-          "See what your site looks like in different formats with this <a href=\"http://ami.responsivedesign.is/\">Am I Responsive tool</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "See what your site looks like in different formats with this <a href=\"http://ami.responsivedesign.is/\">Am I Responsive tool</a>."
+          }
         ]
       },
       {
         "title": "Web accessibility primer",
-        "links": [
-          "Understand <a href=\"http://webaim.org/intro/\">how people with disabilities experience the web</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Understand <a href=\"http://webaim.org/intro/\">how people with disabilities experience the web</a>."
+          }
         ]
       },
       {
         "title": "What Screens Want",
-        "links": [
-          "Find out what it means to design with screens in mind <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">in this article by Frank Chimero</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Find out what it means to design with screens in mind <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">in this article by Frank Chimero</a>."
+          }
         ]
       },
       {
         "title": "An Interactive history of design",
-        "links": [
-          "Learn about <a href=\"http://designhistorytimeline.com/\">some of the field&rsquo;s key events</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Learn about <a href=\"http://designhistorytimeline.com/\">some of the field&rsquo;s key events</a>."
+          }
         ]
       },
       {
         "title": "Hexidecimal color picker",
-        "links": [
-          "Learn <a href=\"http://color.hailpixel.com/\">how the web reads colors</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Learn <a href=\"http://color.hailpixel.com/\">how the web reads colors</a>."
+          }
         ]
       },
       {
         "title": "Meet the design community",
-        "links": [
-          "Get inspired by <a href=\"https://dribbble.com/shots\">what people are making on Dribble</a> and <a href=\"http://www.niice.co/\">on Nice</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Get inspired by <a href=\"https://dribbble.com/shots\">what people are making on Dribble</a> and <a href=\"http://www.niice.co/\">on Nice</a>."
+          }
         ]
       },
       {
         "title": "CSS Diner",
-        "links": [
-          "Learn advanced CSS tricks with <a href=\"http://flukeout.github.io/\">this fun coding game</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Learn advanced CSS tricks with <a href=\"http://flukeout.github.io/\">this fun coding game</a>."
+          }
         ]
       },
       {
         "title": "Resize that!",
-        "links": [
-          "Play <a href=\"http://resize.thatsh.it/\">this responsive design jigsaw puzzle</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Play <a href=\"http://resize.thatsh.it/\">this responsive design jigsaw puzzle</a>."
+          }
         ]
       },
       {
         "title": "Webpage accessibility",
-        "links": [
-          "<a href=\"http://wave.webaim.org/\">Test your webpage&rsquo;s accessibility with WAVE</a>, a tool that helps you evaluate the effectiveness of its elements for those with disabilities."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://wave.webaim.org/\">Test your webpage&rsquo;s accessibility with WAVE</a>, a tool that helps you evaluate the effectiveness of its elements for those with disabilities."
+          }
         ]
       }
     ],
@@ -818,32 +1084,47 @@
     "discover": [
       {
         "title": "Learn JavaScript",
-        "links": [
-          "Explore the <a href=\"https://developer.mozilla.org/en/learn/javascript\">Mozilla Developer Network&rsquo;s JavaScript resource</a> for beginner to advanced programmers."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Explore the <a href=\"https://developer.mozilla.org/en/learn/javascript\">Mozilla Developer Network&rsquo;s JavaScript resource</a> for beginner to advanced programmers."
+          }
         ]
       },
       {
         "title": "Why Programming Matters",
-        "links": [
-          "Watch this <a href=\"https://www.youtube.com/watch?feature=player_embedded&v=nKIu9yen5nc\">Hour of Code video</a> where programmers explain how scripting changed their life."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Watch this <a href=\"https://www.youtube.com/watch?feature=player_embedded&v=nKIu9yen5nc\">Hour of Code video</a> where programmers explain how scripting changed their life."
+          }
         ]
       },
       {
         "title": "Computer programming with Khan Academy",
-        "links": [
-          "Check out this <a href=\"https://www.khanacademy.org/computing/cs\">Khan Academy course</a> in computer science."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Check out this <a href=\"https://www.khanacademy.org/computing/cs\">Khan Academy course</a> in computer science."
+          }
         ]
       },
       {
         "title": "JavaScript for Cats",
-        "links": [
-          "A fun <a href=\"http://jsforcats.com/\">introduction for new programmers</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "A fun <a href=\"http://jsforcats.com/\">introduction for new programmers</a>."
+          }
         ]
       },
       {
         "title": "Learn Javascript while gaming",
-        "links": [
-          "<a href=\"http://codecombat.com/\">Play Code Combat</a>, a fun game that teaches programming."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://codecombat.com/\">Play Code Combat</a>, a fun game that teaches programming."
+          }
         ]
       }
     ],
@@ -912,39 +1193,60 @@
     "discover": [
       {
         "title": "What&rsquo;s the difference between the Web and the Internet?",
-        "links": [
-          "This <a href=\"http://en.wikipedia.org/wiki/World_Wide_Web#Function\">Wikipedia article</a> explains all."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "This <a href=\"http://en.wikipedia.org/wiki/World_Wide_Web#Function\">Wikipedia article</a> explains all."
+          }
         ]
       },
       {
         "title": "What is the Internet, really?",
-        "links": [
-          "<a href=\"http://www.ted.com/talks/andrew_blum_what_is_the_internet_really\">Andrew Blum&rsquo;s TED talk</a> about the underwater cables, secret switches and other physical bits that make up the net."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.ted.com/talks/andrew_blum_what_is_the_internet_really\">Andrew Blum&rsquo;s TED talk</a> about the underwater cables, secret switches and other physical bits that make up the net."
+          }
         ]
       },
       {
         "title": "The Internet Stack",
-        "links": [
-          "Understand how the <a href=\"http://www.w3.org/People/Frystyk/thesis/TcpIp.html\">foundational technologies</a> of the web work."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Understand how the <a href=\"http://www.w3.org/People/Frystyk/thesis/TcpIp.html\">foundational technologies</a> of the web work."
+          }
         ]
       },
       {
         "title": "Printing out the Internet, page by page",
-        "links": [
-          "A <a href=\"http://printingtheinternet.tumblr.com/\">crowdsourced art project</a> to print out the entire Internet, in honor of deceased open free-information activist Aaron Schwartz.",
-          "More about this project in the <a href=\"http://www.washingtonpost.com/lifestyle/style/print-this-web-page-mail-it-to-mexico-citys-labor-gallery-make-art/2013/07/26/534e2582-f320-11e2-ae43-b31dc363c3bf_story.html\">Washington Post</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "A <a href=\"http://printingtheinternet.tumblr.com/\">crowdsourced art project</a> to print out the entire Internet, in honor of deceased open free-information activist Aaron Schwartz."
+          },
+          {
+            "type": "markup",
+            "content": "More about this project in the <a href=\"http://www.washingtonpost.com/lifestyle/style/print-this-web-page-mail-it-to-mexico-citys-labor-gallery-make-art/2013/07/26/534e2582-f320-11e2-ae43-b31dc363c3bf_story.html\">Washington Post</a>."
+          }
         ]
       },
       {
         "title": "The Story of Send",
-        "links": [
-          "<a href=\"http://www.google.com/green/storyofsend/desktop/\">Take a journey through Google&rsquo;s data centers</a> by following an email along its path."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.google.com/green/storyofsend/desktop/\">Take a journey through Google&rsquo;s data centers</a> by following an email along its path."
+          }
         ]
       },
       {
         "title": "How the Internet works in 5 minutes",
-        "links": [
-          "The Internet is not a fuzzy cloud. <a href=\"http://www.youtube.com/watch?v=7_LPdttKXPc\">This video by Aaron Titus</a> explains."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "The Internet is not a fuzzy cloud. <a href=\"http://www.youtube.com/watch?v=7_LPdttKXPc\">This video by Aaron Titus</a> explains."
+          }
         ]
       }
     ],
@@ -995,33 +1297,51 @@
     "discover": [
       {
         "title": "Ten leading platforms for creating online communities",
-        "links": [
-          "<a href=\"http://www.zdnet.com/blog/hinchcliffe/ten-leading-platforms-for-creating-online-communities/195\">Browse this ZDNet list of tools</a> that help communities organize people on the web and accomplish work in a highly collaborative manner."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.zdnet.com/blog/hinchcliffe/ten-leading-platforms-for-creating-online-communities/195\">Browse this ZDNet list of tools</a> that help communities organize people on the web and accomplish work in a highly collaborative manner."
+          }
         ]
       },
       {
         "title": "Radical tools to empower communities in the museum sector",
-        "links": [
-          "As museums go digital, more activities are created and produced through community collaborations. This blog post discusses <a href=\"http://museumtwo.blogspot.ca/2013/02/guest-post-radical-collaboration-tools.html\">the approaches of the Santa Cruz Museum of Art and History</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "As museums go digital, more activities are created and produced through community collaborations. This blog post discusses <a href=\"http://museumtwo.blogspot.ca/2013/02/guest-post-radical-collaboration-tools.html\">the approaches of the Santa Cruz Museum of Art and History</a>."
+          }
         ]
       },
       {
         "title": "How can I share large files online for free?",
-        "links": [
-          "Lifehacker review of <a href=\"http://lifehacker.com/what-s-the-best-way-to-share-large-files-with-friends-1486810038\">some of the best services to share easily and quickly</a> with friends and colleagues.",
-          "And a similar <a href=\"http://www.pcadvisor.co.uk/how-to/storage/3509067/how-send-large-files-free/\">list by PC Advisor</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Lifehacker review of <a href=\"http://lifehacker.com/what-s-the-best-way-to-share-large-files-with-friends-1486810038\">some of the best services to share easily and quickly</a> with friends and colleagues."
+          },
+          {
+            "type": "markup",
+            "content": "And a similar <a href=\"http://www.pcadvisor.co.uk/how-to/storage/3509067/how-send-large-files-free/\">list by PC Advisor</a>"
+          }
         ]
       },
       {
         "title": "Asynchronous and synchronous classroom discussion methods",
-        "links": [
-          "Thoughtful <a href=\"http://chronicle.com/blogs/profhacker/tools-for-synchronousasynchronous-classroom-discussion/22902\">examination of e-learning management systems</a> for different kinds of learner needs by the Chronicle of Higher Education."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Thoughtful <a href=\"http://chronicle.com/blogs/profhacker/tools-for-synchronousasynchronous-classroom-discussion/22902\">examination of e-learning management systems</a> for different kinds of learner needs by the Chronicle of Higher Education."
+          }
         ]
       },
       {
         "title": "A short written history of collaborative methods",
-        "links": [
-          "<a href=\"http://etec.ctlt.ubc.ca/510wiki/Synchronous_and_Asynchronous_Communication:Tools_for_Collaboration\">Wiki page by the University of British Columbia</a> that outlines the tools, sources and theories of group communication from the 1940s to the present day."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://etec.ctlt.ubc.ca/510wiki/Synchronous_and_Asynchronous_Communication:Tools_for_Collaboration\">Wiki page by the University of British Columbia</a> that outlines the tools, sources and theories of group communication from the 1940s to the present day."
+          }
         ]
       }
     ],
@@ -1086,33 +1406,48 @@
     "discover": [
       {
         "title": "Ways to make your experience of online forums more productive",
-        "links": [
-          "<a href=\"http://www.cats-pyjamas.net/2008/08/7-habits-of-highly-effective-online-discussion-participants/\">The 7 habits of effective online discussion participants</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.cats-pyjamas.net/2008/08/7-habits-of-highly-effective-online-discussion-participants/\">The 7 habits of effective online discussion participants</a>."
+          }
         ]
       },
       {
         "title": "Github, Academia and Collaborative Writing",
-        "links": [
-          "Git&rsquo;s decentralized nature makes it an excellent tool for <a href=\"https://www.hastac.org/blogs/harrisonm/2013/10/12/github-academia-and-collaborative-writing\">coordinating collaborative editing</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Git&rsquo;s decentralized nature makes it an excellent tool for <a href=\"https://www.hastac.org/blogs/harrisonm/2013/10/12/github-academia-and-collaborative-writing\">coordinating collaborative editing</a>."
+          }
         ]
       },
       {
         "title": "How the Web Changed Everything",
         "description": "",
-        "links": [
-          "<a href=\"http://www.youtube.com/watch?v=-bUtu7Fj9UA\">Watch this talk by Cory Doctorow</a>, one of BoingBoing&rsquo;s founding editors, on how the web lets us use collaboration to be &ldquo;super human&rdquo;."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.youtube.com/watch?v=-bUtu7Fj9UA\">Watch this talk by Cory Doctorow</a>, one of BoingBoing&rsquo;s founding editors, on how the web lets us use collaboration to be &ldquo;super human&rdquo;."
+          }
         ]
       },
       {
         "title": "Effective Crowdsourcing",
-        "links": [
-          "Check out these Mashable articles on <a href=\"http://mashable.com/category/crowdsourcing/\">different kinds of crowdsourcing</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Check out these Mashable articles on <a href=\"http://mashable.com/category/crowdsourcing/\">different kinds of crowdsourcing</a>."
+          }
         ]
       },
       {
         "title": "The birth of Wikipedia",
-        "links": [
-          "<a href=\"https://www.ted.com/talks/jimmy_wales_on_the_birth_of_wikipedia\">Watch this TED talk</a> by Wikipedia&rsquo;s founder Jimmy Wales."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://www.ted.com/talks/jimmy_wales_on_the_birth_of_wikipedia\">Watch this TED talk</a> by Wikipedia&rsquo;s founder Jimmy Wales."
+          }
         ]
       }
     ],
@@ -1176,38 +1511,56 @@
     "discover": [
       {
         "title": "Mozilla Community guidelines",
-        "links": [
-          "<a href=\"http://www.mozilla.org/en-US/about/governance/policies/participation/\">Participation Guidelines</a> for involvement in the Mozilla Community."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.mozilla.org/en-US/about/governance/policies/participation/\">Participation Guidelines</a> for involvement in the Mozilla Community."
+          }
         ]
       },
       {
         "title": "GitHub Community guidelines",
-        "links": [
-          "Github provides code management for groups and communities. Here are its various <a href=\"https://guides.github.com/\">participation guidelines</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Github provides code management for groups and communities. Here are its various <a href=\"https://guides.github.com/\">participation guidelines</a>."
+          }
         ]
       },
       {
         "title": "The Hive Learning Network",
-        "links": [
-          "Hive creates opportunities that enable learning through hands-on making and exploration with peers and mentors. <a href=\"http://hivenyc.org/2014/03/14/three-tiers-hive/\">Learn about the path towards creating and sustaining this kind of network</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Hive creates opportunities that enable learning through hands-on making and exploration with peers and mentors. <a href=\"http://hivenyc.org/2014/03/14/three-tiers-hive/\">Learn about the path towards creating and sustaining this kind of network</a>."
+          }
         ]
       },
       {
         "title": "Digital Is",
-        "links": [
-          "<a href=\"http://digitalis.nwp.org/\">An open community of educators</a> sharing, publishing and remixing each others work."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://digitalis.nwp.org/\">An open community of educators</a> sharing, publishing and remixing each others work."
+          }
         ]
       },
       {
         "title": "Source",
-        "links": [
-          "<a href=\"https://source.opennews.org/en-US/\">Source is an OpenNews project</a> designed to amplify the impact of journalism code and the community of developers, designers, journalists, and editors."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://source.opennews.org/en-US/\">Source is an OpenNews project</a> designed to amplify the impact of journalism code and the community of developers, designers, journalists, and editors."
+          }
         ]
       },
       {
         "title": "Mozilla Science Lab",
-        "links": [
-          "<a href=\"http://mozillascience.org/code-as-a-research-object-updates-prototypes-next-steps/\">Code as a research object</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://mozillascience.org/code-as-a-research-object-updates-prototypes-next-steps/\">Code as a research object</a>."
+          }
         ]
       }
     ],
@@ -1270,56 +1623,98 @@
     "discover": [
       {
         "title": "See who&rsquo;s tracking you online",
-        "links": [
-          "Watch the video. As you surf the Web, information is being collected about you. This <a href=\"http://www.ted.com/talks/gary_kovacs_tracking_the_trackers\">&ldquo;Tracking the Trackers&rdquo; TED Talk video</a> explains how.",
-          "Try it for yourself. <a href=\"http://www.mozilla.org/en-US/lightbeam/\">Install the Lightbeam add-on</a> to see for yourself. Shine a light on who&rsquo;s watching your online activities."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Watch the video. As you surf the Web, information is being collected about you. This <a href=\"http://www.ted.com/talks/gary_kovacs_tracking_the_trackers\">&ldquo;Tracking the Trackers&rdquo; TED Talk video</a> explains how."
+          },
+          {
+            "type": "markup",
+            "content": "Try it for yourself. <a href=\"http://www.mozilla.org/en-US/lightbeam/\">Install the Lightbeam add-on</a> to see for yourself. Shine a light on who&rsquo;s watching your online activities."
+          }
         ]
       },
       {
         "title": "Tell sites you don&rsquo;t want to be tracked",
-        "links": [
-          "Enable &ldquo;Do Not Track.&rdquo; You can tell sites to stop tracking your browsing history using <a href=\"http://www.mozilla.org/en-US/dnt/\">this simple change</a> to your browser settings. Here&rsquo;s how: <br><br>\n<ul>\n<li><a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature#w_how-does-the-do-not-track-feature-work\">Firefox</a></li>\n<li><a href=\"http://windows.microsoft.com/en-ca/internet-explorer/use-tracking-protection#ie=ie-11\">Internet Explorer</a></li>\n<li><a href=\"http://osxdaily.com/2012/08/21/how-to-enable-do-not-track-in-safari-6/\">Safari</a></li>\n<li><a href=\"http://www.cnet.com/how-to/how-to-enable-chromes-do-not-track-option/\">Chrome</a></li>\n<li><a href=\"http://www.opera.com/help/tutorials/security/control/#referrer\">Opera</a></li>\n</ul>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Enable &ldquo;Do Not Track.&rdquo; You can tell sites to stop tracking your browsing history using <a href=\"http://www.mozilla.org/en-US/dnt/\">this simple change</a> to your browser settings. Here&rsquo;s how: <br><br>\n<ul>\n<li><a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature#w_how-does-the-do-not-track-feature-work\">Firefox</a></li>\n<li><a href=\"http://windows.microsoft.com/en-ca/internet-explorer/use-tracking-protection#ie=ie-11\">Internet Explorer</a></li>\n<li><a href=\"http://osxdaily.com/2012/08/21/how-to-enable-do-not-track-in-safari-6/\">Safari</a></li>\n<li><a href=\"http://www.cnet.com/how-to/how-to-enable-chromes-do-not-track-option/\">Chrome</a></li>\n<li><a href=\"http://www.opera.com/help/tutorials/security/control/#referrer\">Opera</a></li>\n</ul>"
+          }
         ]
       },
       {
         "title": "How to turn on private browsing",
-        "links": [
-          "If you don&rsquo;t want anyone with physical access to your computer to see what you&rsquo;re doing online, you can <a href=\"https://support.mozilla.org/en-US/kb/private-browsing-browse-web-without-saving-info\">enable &ldquo;private browsing.&rdquo;</a> This deletes cookies, temporary Internet files and browsing history after you close the window."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "If you don&rsquo;t want anyone with physical access to your computer to see what you&rsquo;re doing online, you can <a href=\"https://support.mozilla.org/en-US/kb/private-browsing-browse-web-without-saving-info\">enable &ldquo;private browsing.&rdquo;</a> This deletes cookies, temporary Internet files and browsing history after you close the window."
+          }
         ]
       },
       {
         "title": "See how much your personal data is worth to marketers",
-        "links": [
-          "<a href=\"http://www.ft.com/cms/s/2/927ca86e-d29b-11e2-88ed-00144feab7de.html#axzz31EY3SAom\">How much buyers would pay for your information?</a> Use this interactive calculator from the Financial Times to find out."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.ft.com/cms/s/2/927ca86e-d29b-11e2-88ed-00144feab7de.html#axzz31EY3SAom\">How much buyers would pay for your information?</a> Use this interactive calculator from the Financial Times to find out."
+          }
         ]
       },
       {
         "title": "Adjust your social network settings",
-        "links": [
-          "<a href=\"https://www.facebook.com/settings?tab=privacy\">Facebook</a>&mdash;Click the settings cog in the upper right corner of your screen, then click  <a href=\"https://www.facebook.com/settings?tab=privacy\">Privacy Settings</a> &gt;&gt; &ldquo;Who can see my stuff.&rdquo;",
-          "<a href=\"https://twitter.com/settings/security\">Twitter</a>&mdash;Click the settings cog, then &ldquo;Settings.&rdquo; You can adjust settings like adding or removing your location to tweets, or make your tweets private so that only people you approve can see them.",
-          "<a href=\"https://plus.google.com/u/1/settings?hl=en\">Google+</a>&mdash;go to Home &gt;&gt; <a href=\"https://plus.google.com/u/1/settings?hl=en\">Settings</a> to adjust who can interact with you, comment on your posts, or start a conversation."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://www.facebook.com/settings?tab=privacy\">Facebook</a>&mdash;Click the settings cog in the upper right corner of your screen, then click  <a href=\"https://www.facebook.com/settings?tab=privacy\">Privacy Settings</a> &gt;&gt; &ldquo;Who can see my stuff.&rdquo;"
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"https://twitter.com/settings/security\">Twitter</a>&mdash;Click the settings cog, then &ldquo;Settings.&rdquo; You can adjust settings like adding or removing your location to tweets, or make your tweets private so that only people you approve can see them."
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"https://plus.google.com/u/1/settings?hl=en\">Google+</a>&mdash;go to Home &gt;&gt; <a href=\"https://plus.google.com/u/1/settings?hl=en\">Settings</a> to adjust who can interact with you, comment on your posts, or start a conversation."
+          }
         ]
       },
       {
         "title": "Learn more about surveillance and spying",
-        "links": [
-          "<a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1\">NSA Files Decoded</a>: <a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1\">What the revelations mean for you</a>. The Guardian newspaper&rsquo;s interactive exploration on what the National Security Agency is collecting about you.",
-          "<a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/13\">Learn more about your own meta-data.</a> What social networks, devices and services do you use? What meta-data does that reveal about you to the NSA and others?"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1\">NSA Files Decoded</a>: <a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1\">What the revelations mean for you</a>. The Guardian newspaper&rsquo;s interactive exploration on what the National Security Agency is collecting about you."
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/13\">Learn more about your own meta-data.</a> What social networks, devices and services do you use? What meta-data does that reveal about you to the NSA and others?"
+          }
         ]
       },
       {
         "title": "Learn more about the &ldquo;Stop Watching Us&rdquo; campaign",
-        "links": [
-          "<a href=\"https://optin.stopwatching.us/\">StopWatching.us</a> is a coalition of more than 100 public advocacy organizations, companies and prominent figures speaking out against mass surveillance."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://optin.stopwatching.us/\">StopWatching.us</a> is a coalition of more than 100 public advocacy organizations, companies and prominent figures speaking out against mass surveillance."
+          }
         ]
       },
       {
         "title": "Thinking about your digital footprint and reputation",
-        "links": [
-          "<a href=\"https://www.commonsensemedia.org/videos/abbass-story-pride-in-your-digital-footprint\">Check out Abbas&rsquo;s story</a> from Common Sense Media about making conscious choices around what you share and how you represent yourself online.",
-          "<a href=\"http://www.youtube.com/watch?v=8n-AdP6PBT8#t=75\">Making choices about what to post or share</a>&mdash;sharing things online is what makes the web great. But sharing embarrassing or personal things about yourself or your friends can come back to haunt you. This short video walks you through it.",
-          "<a href=\"http://www.wnyc.org/story/228771-digital-literacy-citizenship-workshop/\">Over-sharing, identity and respect.</a> WNYC&rsquo;s Radio Rookies interview youth and others about over-sharing, online identity, responsibility, sexism and more."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://www.commonsensemedia.org/videos/abbass-story-pride-in-your-digital-footprint\">Check out Abbas&rsquo;s story</a> from Common Sense Media about making conscious choices around what you share and how you represent yourself online."
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.youtube.com/watch?v=8n-AdP6PBT8#t=75\">Making choices about what to post or share</a>&mdash;sharing things online is what makes the web great. But sharing embarrassing or personal things about yourself or your friends can come back to haunt you. This short video walks you through it."
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.wnyc.org/story/228771-digital-literacy-citizenship-workshop/\">Over-sharing, identity and respect.</a> WNYC&rsquo;s Radio Rookies interview youth and others about over-sharing, online identity, responsibility, sexism and more."
+          }
         ]
       }
     ],
@@ -1415,53 +1810,83 @@
     "discover": [
       {
         "title": "What is openly licensed content?",
-        "links": [
-          "<a href=\"http://wiki.creativecommons.org/Before_Licensing\">This wiki page</a> by Creative Commons explains the basics."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://wiki.creativecommons.org/Before_Licensing\">This wiki page</a> by Creative Commons explains the basics."
+          }
         ]
       },
       {
         "title": "What are OERs?",
         "description": "This page by UNESCO explains what OERs (Open Educational Resources) are, and how they might manifest in our societies.",
-        "links": [
-          "<a href=\"http://www.unesco.org/new/en/communication-and-information/access-to-knowledge/open-educational-resources/what-are-open-educational-resources-oers/\">What are Open Educational Resources (OERs)?</a>",
-          "And here&rsquo;s <a href=\"http://clt.lse.ac.uk/digital-and-information-literacy/OERs.php\">another useful description by the London School of Economics</a>",
-          "Want to know even more? Here is <a href=\"http://www.jisc.ac.uk/publications/programmerelated/2013/Openeducationalresources.aspx\">a comprehensive guide by JISC</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.unesco.org/new/en/communication-and-information/access-to-knowledge/open-educational-resources/what-are-open-educational-resources-oers/\">What are Open Educational Resources (OERs)?</a>"
+          },
+          {
+            "type": "markup",
+            "content": "And here&rsquo;s <a href=\"http://clt.lse.ac.uk/digital-and-information-literacy/OERs.php\">another useful description by the London School of Economics</a>"
+          },
+          {
+            "type": "markup",
+            "content": "Want to know even more? Here is <a href=\"http://www.jisc.ac.uk/publications/programmerelated/2013/Openeducationalresources.aspx\">a comprehensive guide by JISC</a>"
+          }
         ]
       },
       {
         "title": "The evolution of open knowledge&mdash;a crowdsourced community timeline",
-        "links": [
-          " <a href=\"http://openbook.okfn.org/timeline/\">A history of openness</a> from 1425 to the present day, based on events contributed by communities. And here&rsquo;s the project this timeline was built for, <a href=\"http://openbook.okfn.org/\">The Open Book</a>."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://openbook.okfn.org/timeline/\">A history of openness</a> from 1425 to the present day, based on events contributed by communities. And here&rsquo;s the project this timeline was built for, <a href=\"http://openbook.okfn.org/\">The Open Book</a>."
+          }
         ]
       },
       {
         "title": "Yochai Benkler TED talk: Open-source economics",
-        "links": [
-          "<a href=\"http://www.youtube.com/watch?v=NgYE75gkzkM\">In this 17 minute speech</a>, law professor Yochai Benkler explains how open and collaborative projects like Wikipedia and Linux represent the next stage of human organization."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"http://www.youtube.com/watch?v=NgYE75gkzkM\">In this 17 minute speech</a>, law professor Yochai Benkler explains how open and collaborative projects like Wikipedia and Linux represent the next stage of human organization."
+          }
         ]
       },
       {
         "title": "The 9 most important events in open source history",
-        "links": [
-          "What are <a href=\"http://royal.pingdom.com/2010/01/15/the-9-most-important-events-in-open-source-history/\">the key moments in time</a> that made open source software such an immense success story?"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "What are <a href=\"http://royal.pingdom.com/2010/01/15/the-9-most-important-events-in-open-source-history/\">the key moments in time</a> that made open source software such an immense success story?"
+          }
         ]
       },
       {
         "title": "An overview of some of the most popular Open Source Licenses",
-        "links": [
-          "Written by the <a href=\"http://opensource.org/licenses\">Open Source Initiative</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Written by the <a href=\"http://opensource.org/licenses\">Open Source Initiative</a>"
+          }
         ]
       },
       {
         "title": "P2PU&rsquo;s School of Open",
-        "links": [
-          "Learn about <a href=\"https://p2pu.org/en/schools/school-of-open/\">P2PU&rsquo;s School of Open</a>"
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "Learn about <a href=\"https://p2pu.org/en/schools/school-of-open/\">P2PU&rsquo;s School of Open</a>"
+          }
         ]
       },
       {
         "title": "What&rsquo;s happening in open source today?",
-        "links": [
-          "This online publication focuses on <a href=\"http://opensource.com/\">how open source is applied to different areas</a> including business, education, government, health, law and other disciplines."
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "This online publication focuses on <a href=\"http://opensource.com/\">how open source is applied to different areas</a> including business, education, government, health, law and other disciplines."
+          }
         ]
       }
     ],

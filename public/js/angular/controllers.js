@@ -162,8 +162,10 @@ angular
       wmNav.section('');
     }
   ])
-  .controller('competencyController', ['$rootScope', '$scope', '$location', '$routeParams', 'weblit', 'CONFIG', '$timeout', 'wmNav',
-    function ($rootScope, $scope, $location, $routeParams, weblit, CONFIG, $timeout, wmNav) {
+  .controller('competencyController', ['$rootScope', '$scope', '$routeParams',
+    'weblit', 'CONFIG', '$timeout', 'wmNav', '$sce',
+    function ($rootScope, $scope, $routeParams, weblit, CONFIG, $timeout, wmNav,
+      $sce) {
       wmNav.page($routeParams.id);
       wmNav.section('resources');
 
@@ -173,11 +175,53 @@ angular
         return item.tag === $scope.tag;
       })[0];
 
-      if ($rootScope.contentReady) {
+      function prepContent(header) {
         $scope.content = $rootScope.content[$scope.tag];
+        var contentSection;
+
+        function swapLink(section, media, newUrl) {
+          // Update trusted content item in JSON object
+          contentSection[section].multimedia[media].content = $sce.trustAsResourceUrl(newUrl);
+        }
+
+        contentSection = $scope.content[header];
+
+        // Loop through Discover, Make, and Teach
+        for (var section in contentSection) {
+          if (contentSection.hasOwnProperty(section)) {
+            // Loop through media items in section selected
+            for (var media in contentSection[section].multimedia) {
+              if (contentSection[section].multimedia.hasOwnProperty(media)) {
+                // Find content type, return modified content for template
+                switch (contentSection[section].multimedia[media].type) {
+                case 'youtube':
+                  swapLink(section, media, 'https://www.youtube-nocookie.com/embed/' + contentSection[section].multimedia[media].content + '?enablejsapi=1&amp;wmode=transparent&amp;autohide=1&amp;autoplay=0&amp;rel=0&amp;fs=1&amp;hd=1&amp;rel=0&amp;showinfo=0&amp;start=&amp;theme=dark');
+                  break;
+                case 'vimeo':
+                  swapLink(section, media, 'https://player.vimeo.com/video/' + contentSection[section].multimedia[media].content + '?title=0&amp;byline=0&amp;portrait=0&amp;color=eb6933');
+                  break;
+                default:
+
+                }
+              }
+            }
+          }
+        }
+        return contentSection;
+      }
+
+      function updateContentObject() {
+        $scope.content = $rootScope.content[$scope.tag];
+        $scope.content.discover = prepContent('discover');
+        $scope.content.make = prepContent('make');
+        $scope.content.teach = prepContent('teach');
+      }
+
+      if ($rootScope.contentReady) {
+        updateContentObject();
       } else {
         $timeout(function () {
-          $scope.content = $rootScope.content[$scope.tag];
+          updateContentObject();
         }, 500);
       }
       $scope.weblit = weblit;

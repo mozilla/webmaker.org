@@ -135,9 +135,6 @@ module.exports = function (env) {
           });
         }
 
-        // Add tags manually for now.
-        data.tags = ['supermentor', 'mentor', 'contribution', 'mozilla', 'community'];
-
         // Shim for https://bugzilla.mozilla.org/show_bug.cgi?id=1001161
         if (data.issuer && !data.issuer.imageUrl) {
           data.issuer.imageUrl = 'https://webmaker.org/img/logo-webmaker.png';

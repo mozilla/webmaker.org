@@ -12,7 +12,7 @@
             <p class="badge-tags">
               <span class="icon-tags"></span>
               {% for tag in badge.tags %}
-              <a href="/{{localeInfo.lang}}/search?type=tags&q={{ tag }}" class="badge-tag">{{ tag }}</a>
+              <a href="/{{localeInfo.lang}}/search?type=tags&q={{ tag.value }}" class="badge-tag">{{ tag.value }}</a>
               {% endfor %}
             </p>
           </div>

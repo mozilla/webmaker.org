@@ -65,10 +65,7 @@
   "weblit-Sharing": [
     "StandardConnectingSharingPoint1",
     "StandardConnectingSharingPoint2",
-    "StandardConnectingSharingPoint3",
-    "StandardConnectingSharingPoint4",
-    "StandardConnectingSharingPoint5",
-    "StandardConnectingSharingPoint6"
+    "StandardConnectingSharingPoint3"
   ],
   "weblit-Collaborating": [
     "StandardConnectingCollaboratingPoint1",

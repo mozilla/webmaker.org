@@ -356,10 +356,6 @@ app.get("/editor", middleware.checkAdmin, routes.gallery({
   page: "editor"
 }));
 app.get("/about", routes.page("about"));
-app.get("/teach", routes.gallery({
-  layout: "teach",
-  prefix: "teach"
-}));
 
 app.get("/privacy-makes", routes.gallery({
   layout: "privacy-makes",

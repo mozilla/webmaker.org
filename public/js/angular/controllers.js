@@ -205,8 +205,8 @@ angular
 
     }
   ])
-  .controller('resourceFormController', ['$scope', '$http',
-    function ($scope, $http) {
+  .controller('resourceFormController', ['$scope', '$http', 'wmAnalytics',
+    function ($scope, $http, analytics) {
       $scope.formData = {};
       $scope.submit = function (form) {
 
@@ -221,6 +221,7 @@ angular
             if (ok) {
               $scope.success = true;
               $scope.formData = {};
+              analytics.event('Suggested Web Literacy Resource');
             }
           })
           .error(function (err) {

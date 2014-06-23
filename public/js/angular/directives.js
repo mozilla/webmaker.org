@@ -30,12 +30,14 @@ angular
   .directive('a', [
     '$location',
     '$anchorScroll',
-    function ($location, $anchorScroll) {
+    '$route',
+    function ($location, $anchorScroll, $route) {
+
       return {
         restrict: 'E',
         link: function (scope, el, attrs) {
           // Make sure external links actually cause the browser to load a new page
-          if (attrs.externalLink) {
+          if (!attrs.pushState) {
             el.attr('target', '_self');
           }
           // Prevent default on all elements that have # as a location

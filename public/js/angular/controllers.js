@@ -11,36 +11,34 @@ angular
             url: 'explore',
             title: 'Explore',
             icon: 'random',
+            pushState: true,
             pages: [
               {
                 "id": "index",
                 "title": "Gallery",
-                "url": "gallery",
-                external: true
+                "url": "gallery"
               },
               {
                 id: 'super-mentor',
                 title: 'Super Mentor Badge',
-                url: 'badges/webmaker-super-mentor',
-                external: true
+                url: 'badges/webmaker-super-mentor'
               },
               {
                 id: 'super-mentor',
                 title: 'Hive Community Badge',
-                url: 'badges/hive-community-member',
-                external: true
+                url: 'badges/hive-community-member'
               },
               {
                 id: 'badges-admin',
                 title: 'Badges Admin',
                 url: 'admin/badges',
+                pushState: true,
                 isAtleastMentor: true
               },
               {
                 id: 'search',
                 title: 'Search',
-                url: 'search',
-                external: true
+                url: 'search'
               }
             ]
           },
@@ -48,26 +46,24 @@ angular
             id: 'tools',
             url: 'tools',
             title: 'Tools',
-            icon: 'hand-o-up',
-            external: true
+            icon: 'hand-o-up'
           },
           {
             id: 'resources',
             url: 'resources',
             title: 'Resources',
             icon: 'book',
+            pushState: true,
             pages: [
               {
                 id: 'make-our-own',
                 title: 'Make Your Own',
-                url: 'make-your-own',
-                external: true
+                url: 'make-your-own'
               },
               {
                 id: 'literacy',
                 title: 'Web Literacy Map',
-                url: 'literacy',
-                external: true
+                url: 'literacy'
               }
             ]
           },
@@ -75,15 +71,13 @@ angular
             id: 'events',
             url: 'events',
             title: 'Events',
-            icon: 'map-marker',
-            external: true
+            icon: 'map-marker'
           },
           {
             id: 'info',
             url: 'about',
             title: 'Info',
-            icon: 'info',
-            external: true
+            icon: 'info'
           }
         ]
       };

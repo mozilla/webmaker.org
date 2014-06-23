@@ -12,7 +12,7 @@
     "description": "Link to literacy page"
   },
   "Get involved with webmaker": {
-    "message": "Webmaker is a part of Mozilla's <a href=\"/{{ lang }}/about\" external-link=\"true\">non-profit mission</a> to create a more open, web literate world.",
+    "message": "Webmaker is a part of Mozilla's <a href=\"/{{ lang }}/about\">non-profit mission</a> to create a more open, web literate world.",
     "description": "Copy for first explore subsection with map"
   },
   "Web Literacy Map": {

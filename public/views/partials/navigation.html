@@ -7,7 +7,7 @@
         <span class="fa fa-bars fa-lg"></span>
       </button>
 
-      <a href="/{{lang}}" class="logo webmaker-logo"><img src="/img/logo.png"></a>
+      <a href="/{{lang}}" push-state="true" class="logo webmaker-logo"><img src="/img/logo.png"></a>
     </div>
 
     <div class="navbar-collapse text-center-xs" collapse="primaryCollapse">
@@ -26,8 +26,8 @@
            <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/me" target="_blank"><span class="fa fa-th-large"></span> {{ 'My makes' | i18n }}</a></li>
-            <li><a href="/user/{{_user.username}}" external-link="true"><span class="fa fa-user"></span> {{ 'My Profile' | i18n }}</a></li>
+            <li><a href="/{{lang}}/me" target="_blank"><span class="fa fa-th-large"></span> {{ 'My makes' | i18n }}</a></li>
+            <li><a href="/user/{{_user.username}}"><span class="fa fa-user"></span> {{ 'My Profile' | i18n }}</a></li>
             <li><a href="{{accountSettingsUrl}}" target="_blank"><span class="fa fa-cog"></span> {{ 'My Settings' | i18n }}</a></li>
             <li class="divider"></li>
             <li><a ng-click="logout()"><span class="fa fa-sign-out"></span> {{ 'Sign out' | i18n }}</a></li>
@@ -47,12 +47,12 @@
     <div class="navbar-collapse" collapse="secondaryCollapse">
       <ul class="nav navbar-nav">
         <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id) }">
-          <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
+          <a href="{{baseUrl + section.url}}" push-state="{{section.pushState}}">
             <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
           </a>
         </li>
         <li>
-          <a href="/{{lang}}/search" external-link="true">
+          <a href="/{{lang}}/search">
             <span class="fa fa-search"></span><span class="sr-only">{{ 'Search' | i18n}}</span>
           </a>
         </li>
@@ -75,7 +75,7 @@
     <div class="navbar-collapse" collapse="tertiaryCollapse">
       <ul class="nav navbar-nav">
         <li ng-hide="!affixed" class="nav-icon nav-title active hidden-xs">
-          <a href="{{baseUrl + section.url}}" external-link="{{section.external}}">
+          <a href="{{baseUrl + section.url}}" push-state="{{section.pushState}}">
             <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
           </a>
         </li>
@@ -88,13 +88,13 @@
               ng-repeat="skill in literacies"
               class="literacy"
               ng-class="{ active : isActivePage(skill.tag) }">
-              <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" class="color-{{$index}}">{{ skill.term }}</a>
+              <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" push-state="true" class="color-{{$index}}">{{ skill.term }}</a>
             </li>
           </ul>
         </li>
 
         <li ng-repeat="page in section.pages" ng-if="!page.isAtleastMentor || _user.isAdmin || _user.isSuperMentor || _user.isMentor">
-          <a href="{{baseUrl + page.url}}" external-link="{{page.external}}">{{ page.title | i18n }}</a>
+          <a href="{{baseUrl + page.url}}" push-state="{{page.pushState}}">{{ page.title | i18n }}</a>
         </li>
       </ul>
       <form class="navbar-form navbar-right hidden-xs" ng-hide="!affixed">
@@ -115,7 +115,7 @@
           ng-repeat="skill in literacies"
           class="literacy"
           ng-class="{ active : isActive(skill.tag, 'id') }" >
-          <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" class="bg-{{ skill.tag }}">{{ skill.term }}</a>
+          <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" push-state="true" class="bg-{{ skill.tag }}">{{ skill.term }}</a>
         </li>
       </ul>
     </div>

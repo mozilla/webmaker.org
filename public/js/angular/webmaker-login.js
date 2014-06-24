@@ -62,10 +62,17 @@ angular
         $scope.form = {};
         $scope.user = {};
 
+        var usernameRegex = /^[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\-]{1,20}$/;
+
         $scope.checkUsername = function () {
           if (!$scope.form.user.username) {
             return;
           }
+          if (!usernameRegex.test($scope.form.user.username.$viewValue)) {
+            $scope.form.user.username.$setValidity('invalid', false);
+            return;
+          }
+          $scope.form.user.username.$setValidity('invalid', true);
           $http
             .post(webmakerLoginService.urls.checkUsername, {
               username: $scope.form.user.username.$viewValue
@@ -74,7 +81,6 @@ angular
               $scope.form.user.username.$setValidity('taken', !username.exists);
             })
             .error(function (err) {
-              console.log(err);
               $scope.form.user.username.$setValidity('taken', true);
             });
         };

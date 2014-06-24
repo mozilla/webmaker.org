@@ -12,6 +12,7 @@
         <div class="col-sm-6">
           <input ng-model="user.username" name="username" autocomplete="off" class="form-control" ng-change="checkUsername()" required>
           <span class="help-block" ng-show="form.user.username.$error.taken">{{ 'webmakerAuthTakenError' | i18n }}</span>
+          <span class="help-block" ng-show="form.user.username.$error.invalid">{{ 'webmakerAuthUsernameInvalid' | i18n }}</span>
           <span class="help-block" ng-show="(submit || form.user.username.$dirty) && form.user.username.$error.required">{{ 'webmakerAuthUsernameRequiredError' | i18n }}</span>
         </div>
       </div>

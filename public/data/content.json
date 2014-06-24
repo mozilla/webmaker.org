@@ -739,17 +739,17 @@
     "teach": {
       "kits": [
         {
-          "title": "A beginner&rsquo;s guide to game-making",
-          "description": "Teach basic game design principles with this fun, interactive teaching kit",
-          "url": "https://mozteach.makes.org/thimble/a-beginners-guide-to-game-making",
-          "author": "Mozteach",
+          "title": "Mobile design kit",
+          "description": "Play with, break apart and modify mobile apps with the help of Appmaker",
+          "url": "https://jess.makes.org/thimble/MTMyMzM2ODQ0OA==/mobile-design-kit",
+          "author": "Jess Klein, Robert Richter, Kat Braybrooke",
           "type": "kit"
         },
         {
-          "title": "Design prototyping on paper",
+          "title": "Prototyping with a teaching kit design canvas",
           "description": "Prototype teaching kits on paper with this design canvas activity",
           "url": "https://keyboardkat.makes.org/thimble/LTU0ODUzNjMy/prototyping-with-a-teaching-kit-design-canvas",
-          "author": "Keyboardkat",
+          "author": "Kat Braybrooke",
           "type": "kit"
         },
         {
@@ -763,16 +763,23 @@
           "title": "Use digital storytelling to learn about urban design",
           "description": "Tell stories about cities, places and people through this kit by the University of Toronto&rsquo;s Andi Argast and Michelle Gay",
           "url": "https://urbanstorytellers.makes.org/thimble/urban-storytelling-a-how-to-guide",
-          "author": "Urbanstorytellers",
+          "author": "Andi Argast, Michelle Gay",
           "type": "kit"
         },
         {
-          "title": "Redesign cultural heritage",
+          "title": "Cultural Heritage Remixjam",
           "description": "Facilitate a set of design challenges about cultural heritage with this teaching kit co-designed with Tate Britain",
           "url": "https://keyboardkat.makes.org/thimble/cultural-remixjam",
-          "author": "Keyboardkat",
+          "author": "Kat Braybrooke and Luca Damiani, TATE",
           "type": "kit"
-        }
+        },
+        {
+          "title": "A beginner&rsquo;s guide to game-making",
+          "description": "Teach basic game design principles with this fun, interactive teaching kit",
+          "url": "https://mozteach.makes.org/thimble/a-beginners-guide-to-game-making",
+          "author": "Chloe Varelidi",
+          "type": "kit"
+        } 
       ]
     },
     "ctas": [

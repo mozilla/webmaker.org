@@ -38,6 +38,12 @@ angular
       return weblit;
     }
   ])
+  .factory('wmAnalytics', [
+    '$window',
+    function ($window) {
+      return $window.analytics;
+    }
+  ])
   .factory('makeapi', ['$q', '$window',
     function ($q, $window) {
 

@@ -94,6 +94,7 @@ module.exports = function (grunt) {
             'bower_components/makeapi-client/src/make-api.js',
             'bower_components/webmaker-auth-client/dist/webmaker-auth-client.min.js',
             'bower_components/selectize/dist/js/standalone/selectize.js',
+            'bower_components/webmaker-analytics/analytics.js',
 
             'bower_components/angular/angular.js',
             'bower_components/angular-bootstrap/ui-bootstrap.js',

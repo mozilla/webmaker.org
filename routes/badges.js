@@ -141,7 +141,11 @@ module.exports = function (env) {
         }
 
         // Can the current user issue this badge?
-        var canIssue = req.session.user && (req.session.user.isAdmin || (req.session.user.isSuperMentor && data.slug !== 'webmaker-super-mentor'));
+        var canIssue = permissionsModel({
+          badge: req.params.badge,
+          user: req.session.user,
+          action: 'issue'
+        });
 
         res.render('badge-detail.html', {
           page: req.params.badge,

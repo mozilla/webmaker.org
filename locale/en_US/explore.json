@@ -7,6 +7,10 @@
     "message": "Discover creative ways to teach and learn digital superpowers",
     "description": "Heading for first explore subsection with map"
   },
+  "Overview": {
+    "message": "Overview",
+    "description": "Overview link for resources page"
+  },
   "Documentation": {
     "message": "Documentation",
     "description": "Link to literacy page"

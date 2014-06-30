@@ -47,9 +47,12 @@ module.exports = function (req, res) {
   if (type === 'all' || type === 'tags') {
     var tags = query.split(',');
     options.tags = [];
-    options.tags[0] = tags.map(function (t) {
-      return t.trim();
-    });
+    options.tags = [{
+      tags: tags.map(function (t) {
+        return t.trim();
+      }),
+      execution: 'or'
+    }];
   } else {
     // check for '@', remove
     if (query[0] === '@') {
@@ -74,9 +77,15 @@ module.exports = function (req, res) {
       if (err) {
         return res.send(err);
       }
-      // query can be an array of tags sometimes,
-      // so force a string so that it's autoescaped
-      var query = type === "all" ? options.title.toString() : options[type].toString();
+
+      var query;
+      if (type === 'all') {
+        query = options.title.toString();
+      } else if (type === 'tags') {
+        query = options[type][0].tags.join(', ');
+      } else {
+        query = options[type].toString();
+      }
 
       if (hideNamespace) {
         query = "featured";

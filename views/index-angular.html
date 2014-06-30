@@ -52,6 +52,13 @@
   {% endraw %}
   {# From here on, everything is rendered with nunjucks #}
   <script src="/{{ localeInfo.lang }}/angular-config.js"></script>
+  {% if ga_account %}
+  <script id="google-analytics-js" src="/js/lib/google-analytics.js"
+    data-ga-account="{{ ga_account }}"
+    data-ga-domain="{{ ga_domain }}"
+    async>
+  </script>
+  {% endif %}
   <script src="https://login.persona.org/include.js"></script>
   <script src="/compiled/dependencies.min.js"></script>
   <script src="/compiled/app.min.js"></script>

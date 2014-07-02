@@ -63,6 +63,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "^0.4.13",
     "time-grunt": "^0.3.1",
-    "jit-grunt": "^0.7.0"
+    "jit-grunt": "^0.7.0",
+    "grunt-jsonlint": "^1.0.4"
   }
 }

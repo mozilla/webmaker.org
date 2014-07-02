@@ -141,7 +141,7 @@ module.exports = function (env) {
         }
 
         // Can the current user issue this badge?
-        var canIssue = permissionsModel({
+        var canIssue = req.session.user && permissionsModel({
           badge: req.params.badge,
           user: req.session.user,
           action: 'issue'

@@ -49,6 +49,11 @@ module.exports = function (grunt) {
         }
       }
     },
+    jsonlint: {
+      json: {
+        src: ['bower.json', 'package.json', 'public/data/*.json']
+      }
+    },
     jshint: {
       browser: {
         src: clientSideJS,
@@ -164,10 +169,10 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', ['uglify', 'express', 'watch']);
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'imagemin']);
+  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'jsonlint', 'imagemin']);
 
   // Verify code (Read only)
-  grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint', 'gettext_finder']);
+  grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint', 'gettext_finder', 'jsonlint']);
 
   // Run through all pages and test for JS errors
   // * Requires global install of PhantomJS *

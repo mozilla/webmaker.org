@@ -88,9 +88,7 @@ module.exports = function (grunt) {
     uglify: {
       dependencies: {
         options: {
-          sourceMap: true,
-          beautify: true,
-          mangle: false
+          sourceMap: true
         },
         files: {
           'public/compiled/dependencies.min.js': [
@@ -115,9 +113,7 @@ module.exports = function (grunt) {
       },
       app: {
         options: {
-          sourceMap: true,
-          beautify: true,
-          mangle: false
+          sourceMap: true
         },
         files: {
           'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js']

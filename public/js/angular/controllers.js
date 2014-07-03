@@ -2,7 +2,6 @@ angular
   .module('webmakerApp')
   .controller('navigationController', ['$scope', '$location', '$routeParams', '$rootScope', 'weblit', 'wmNav', 'CONFIG',
     function ($scope, $location, $routeParams, $rootScope, weblit, wmNav, config) {
-
       // Nav data
       $scope.nav = {
         sections: [

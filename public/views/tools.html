@@ -1,0 +1,107 @@
+<div class="bg-lightgrey">
+  <div class="container">
+    <h1 class="section-header text-primary">{{ 'toolsHeader' | i18n }}</h1>
+    <div class="row">
+      <div class="col-sm-6 col-lg-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <hgroup class="text-center">
+              <p><img class="tools-logo" src="/img/icon-tools-xray-2x.png" alt="{{ 'X-Ray Goggles' | i18n }}"></p>
+              <h2 class="text-primary">{{ 'X-Ray Goggles' | i18n }}</h2>
+              <p class="lead">{{ 'X-Ray Desc' | i18n }}</p>
+            </hgroup>
+            <p>{{ 'toolsXrayDesc' | i18n }}</p>
+            <h4>{{ 'You can build:' | i18n }}</h4>
+            <ul class="list list-inset">
+              <li>{{ 'a custom homepage for the New York Times' | i18n }}</li>
+              <li>{{ 'an alternate version of a controversial webpage' | i18n }}</li>
+              <li>{{ "a funny remix of your best friend's favorite site" | i18n }}</li>
+              <li>{{ 'and more!' | i18n }}</li>
+            </ul>
+            <div class="text-center">
+              <h3>{{ 'Get started' | i18n }}</h3>
+              <p><a href="https://goggles.webmaker.org/{{localeInfo.lang}}" class="btn btn-lg btn-info">
+                  {{ 'Try the Goggles' | i18n }}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="panel">
+          <div class="panel-body">
+            <hgroup class="text-center">
+              <p><img class="tools-logo" src="/img/icon-tools-thimble-2x.png" alt="{{ 'Thimble' | i18n }}"></p>
+              <h2 class="text-primary">{{ 'Thimble' | i18n }}</h2>
+              <p class="lead">{{ 'Webmaking made easy' | i18n }}</p>
+            </hgroup>
+            <p>{{ "toolsThimbleDesc" | i18n }}</p>
+            <h4>{{ "You can build:" | i18n }}</h4>
+            <ul class="list list-inset">
+              <li>{{ "a personalized greeting card" | i18n }}</li>
+              <li>{{ "an online poster for your favorite movie" | i18n }}</li>
+              <li>{{ "a hilarious meme" | i18n }}</li>
+              <li>{{ "and more!" | i18n }}</li>
+            </ul>
+            <div class="text-center">
+              <h3>{{ "Get started" | i18n }}</h3>
+                <p><a href="https://thimble.webmaker.org/{{localeInfo.lang}}" class="btn btn-lg btn-info">
+                  {{ "Start from scratch" | i18n }}
+                </a></p>
+                <p><a href="/{{localeInfo.lang}}/gallery" class="btn btn-lg btn-success"><span class="fa fa-code-fork"></span> {{ "Remix a project" | i18n }}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <hgroup class="text-center">
+              <p><img class="tools-logo" src="/img/icon-tools-popcorn-2x.png" alt="{{ 'Popcorn Maker' | i18n }}"></p>
+              <h2 class="text-primary">{{ "Popcorn Maker" | i18n }}</h2>
+              <p class="lead">{{ "Supercharge web video" | i18n }}</p>
+            </hgroup>
+            <p>{{ "toolsPMDesc" | i18n }}</p>
+            <h4>{{ "You can build:" | i18n }}</h4>
+            <ul class="list list-inset">
+              <li>{{ "an animated gif with sound" | i18n }}</li>
+              <li>{{ "a documentary with dynamic links" | i18n }}</li>
+              <li>{{ "vdo-profile" | i18n }}</li>
+              <li>{{ "and more!" | i18n }}</li>
+            </ul>
+            <div class="text-center">
+              <h3>{{ "Get started" | i18n }}</h3>
+              <p><a href="https://popcorn.webmaker.org/{{localeInfo.lang}}/editor/" class="btn btn-info btn-lg">
+                {{ "Start from scratch" | i18n }} <span class="fa fa-angle-{{direction}}"></span></a></p>
+              <p><a href="/{{localeInfo.lang}}/gallery" class="btn btn-success btn-lg">
+                <span class="fa fa-code-fork"></span> {{ "Remix a project" | i18n }}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <hgroup class="text-center">
+              <p><img class="tools-logo" src="/img/logo_brickphone_phone_only.png" alt="{{ 'Popcorn Maker' | i18n }}"></p>
+              <h2 class="text-primary">{{ "Appmaker" | i18n }}</h2>
+              <p class="lead">{{ "Mobile apps made easy" | i18n }}</p>
+            </hgroup>
+            <p ng-bind-html="'AppmakerDesc' | i18n"></p>
+            <h4>{{ "You can build:" | i18n }}</h4>
+            <ul class="list list-inset">
+              <li>{{ "an animated gif with sound" | i18n }}</li>
+              <li>{{ "a documentary with dynamic links" | i18n }}</li>
+              <li>{{ "vdo-profile" | i18n }}</li>
+              <li>{{ "and more!" | i18n }}</li>
+            </ul>
+            <div class="text-center">
+              <h3>{{ "Get started" | i18n }}</h3>
+              <p><a href="https://apps.webmaker.org/en-US/designer" class="btn btn-info btn-lg">
+                {{ "Start from scratch" | i18n }}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

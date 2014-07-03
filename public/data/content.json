@@ -1626,11 +1626,15 @@
         "multimedia": [
           {
             "type": "markup",
-            "content": "Watch the video. As you surf the Web, information is being collected about you. This <a href=\"http://www.ted.com/talks/gary_kovacs_tracking_the_trackers\">&ldquo;Tracking the Trackers&rdquo; TED Talk video</a> explains how."
+            "content": "Watch the video below. As you surf the Web, information is being collected about you. This <a href=\"http://www.ted.com/talks/gary_kovacs_tracking_the_trackers\">&ldquo;Tracking the Trackers&rdquo; TED Talk video</a> explains how."
           },
           {
             "type": "markup",
-            "content": "Try it for yourself. <a href=\"http://www.mozilla.org/en-US/lightbeam/\">Install the Lightbeam add-on</a> to see for yourself. Shine a light on who&rsquo;s watching your online activities."
+            "content": "Then try it for yourself. <a href=\"http://www.mozilla.org/en-US/lightbeam/\">Install the Lightbeam add-on</a> to see for yourself. Shine a light on who&rsquo;s watching your online activities."
+          },
+          {
+            "type": "ted",
+            "content": "gary_kovacs_tracking_the_trackers"
           }
         ]
       },

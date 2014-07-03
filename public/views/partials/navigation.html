@@ -34,7 +34,7 @@
           </ul>
         </li>
         <li>
-          <button ng-cloak ng-show="!_user.email" class="btn btn-primary btn-sm navbar-btn" ng-click="login()">{{'Sign in' | i18n }}</button>
+          <button ng-cloak ng-show="!_user.email" class="btn btn-primary navbar-btn" ng-click="login()">{{'Sign in' | i18n }}</button>
         </li>
       </ul>
     </div>
@@ -122,9 +122,7 @@
         </li>
       </ul>
       <form class="navbar-form navbar-right hidden-xs" ng-hide="!affixed">
-        <div class="form-group">
-          <select class="form-control" language-select ng-model="language" redirect="true"></select>
-        </div>
+        <select class="form-control" language-select ng-model="language" redirect="true"></select>
       </form>
     </div>
   </div>

@@ -151,8 +151,8 @@
 
           <div class="row ctas">
             <div class="col-sm-4" ng-repeat="cta in content.ctas">
-              <h3 class="text-primary" ng-bind-html="cta.title"></h3>
-              <p ng-bind-html="cta.description"></p>
+              <h3 class="text-primary" bind-unsafe-html="cta.title"></h3>
+              <p bind-unsafe-html="cta.description"></p>
               <p ng-show="cta.link"><a href="{{cta.link}}" class="btn btn-success">{{ 'Learn more' | i18n }}</a></p>
             </div>
           </div>

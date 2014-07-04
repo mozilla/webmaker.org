@@ -345,6 +345,7 @@ if (env.get('FLAGS_EXPLORE')) {
     limit: 20
   }));
 }
+app.get("/tools", routes.angular);
 
 // Made With Code
 app.get('/madewithcode-*', routes.angular);
@@ -387,7 +388,6 @@ app.delete("/api/badges/:badge/instance/email/:email", badgesRoutes.middleware.h
 
 app.post("/api/submit-resource", routes.api.submitResource);
 
-app.get("/tools", routes.page("tools"));
 app.get("/make-your-own", routes.page("make-your-own"));
 app.get("/mentor", routes.page("mentor"));
 app.get("/getinvolved", routes.page("getinvolved"));

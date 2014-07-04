@@ -117,8 +117,11 @@
           </ul>
         </li>
 
-        <li ng-repeat="page in section.pages" ng-if="!page.isAtleastMentor || _user.isAdmin || _user.isSuperMentor || _user.isMentor">
-          <a href="{{baseUrl + page.url}}" push-state="{{page.pushState}}">{{ page.title | i18n }}</a>
+        <li ng-repeat="page in section.pages" ng-if="!page.isAtleastMentor || _user.isAdmin || _user.isSuperMentor || _user.isMentor" ng-class="{'nav-icon': page.icon}">
+          <a href="{{page.external ? page.url : baseUrl + page.url}}" push-state="{{page.pushState}}">
+            <span ng-if="page.icon" class="tools-icon {{page.icon}}"></span>
+            {{ page.title | i18n }}
+          </a>
         </li>
       </ul>
       <form class="navbar-form navbar-right hidden-xs" ng-hide="!affixed">

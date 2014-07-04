@@ -13,9 +13,9 @@ angular
             pushState: true,
             pages: [
               {
-                "id": "index",
-                "title": "Gallery",
-                "url": "gallery"
+                id: 'index',
+                title: 'Gallery',
+                url: 'gallery'
               },
               {
                 id: 'super-mentor',
@@ -45,7 +45,37 @@ angular
             id: 'tools',
             url: 'tools',
             title: 'Tools',
-            icon: 'hand-o-up'
+            icon: 'hand-o-up',
+            pushState: true,
+            pages: [
+              {
+                id: 'tools',
+                title: 'Tools',
+                url: 'tools',
+                pushState: true
+              },
+              {
+                id: 'popcorn',
+                icon: 'popcorn-icon',
+                title: 'Popcorn Maker',
+                url: 'https://popcorn.webmaker.org/' + config.lang,
+                external: 'true'
+              },
+              {
+                id: 'thimble',
+                icon: 'thimble-icon',
+                title: 'Thimble',
+                url: 'https://thimble.webmaker.org/' + config.lang,
+                external: 'true'
+              },
+              {
+                id: 'xray',
+                icon: 'xray-icon',
+                title: 'X-Ray Goggles',
+                url: 'https://goggles.webmaker.org/' + config.lang,
+                external: 'true'
+              }
+            ]
           },
           {
             id: 'resources',
@@ -217,6 +247,12 @@ angular
       wmNav.section('resources');
 
       $scope.literacies = weblit.all();
+    }
+  ])
+  .controller('toolsController', ['$scope', 'wmNav',
+    function ($scope, wmNav) {
+      wmNav.page('tools');
+      wmNav.section('tools');
     }
   ])
   .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',

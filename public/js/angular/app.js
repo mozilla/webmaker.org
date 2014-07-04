@@ -19,9 +19,9 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/competency.html',
           controller: 'competencyController'
         })
-        .when('/madewithcode-:mwc', {
-          templateUrl: '/views/madewithcode.html',
-          controller: 'mwcController'
+        .when('/:locale?/tools', {
+          templateUrl: '/views/tools.html',
+          controller: 'toolsController'
         })
         .when('/:locale?/madewithcode-:mwc', {
           templateUrl: '/views/madewithcode.html',

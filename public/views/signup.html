@@ -1,0 +1,45 @@
+<section id="signup-page-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+      <figure>
+        <img src="/img/img-sign-up.jpg" class="img-circle img-page-info"/>
+         <figcaption class="caption"><i class="fa fa-camera"></i> harshavardhankuchi</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-9 col-lg-7">
+        <h1>{{ 'Sign up for Webmaker' | i18n }}</h1>
+        <p ng-bind-html="'signup_intro' | i18n"></p>
+        <p>
+          <button class="btn-page-info btn btn-secondary" ng-click="login()">{{ 'Create an account' | i18n }} <i class="fa fa-chevron-right fa-smaller"></i></button>
+          <a href="#" ng-click="login()">{{ 'Log in' | i18n }} <i class="fa fa-chevron-right fa-smaller"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="signup-list">
+          <h1 class="list-info-header">{{ 'signup-list-intro' | i18n }}</h1>
+          <ul class="list-item-signup">
+            <li><i class="fa fa-check"></i> <span bind-unsafe-html="'signup-list-1' | i18n"></span></li>
+            <li><i class="fa fa-check"></i> <span bind-unsafe-html="'signup-list-2' | i18n"></span></li>
+            <li><i class="fa fa-check"></i> <span bind-unsafe-html="'signup-list-3' | i18n"></span></li>
+            <li><i class="fa fa-star-o"></i> <span bind-unsafe-html="'signup-list-4' | i18n"></span></li>
+            <li><i class="fa fa-star-o"></i> <span bind-unsafe-html="'signup-list-5' | i18n"></span></li>
+            <li><i class="fa fa-star-o"></i> <span bind-unsafe-html="'signup-list-6' | i18n"></span></li>
+            <li><i class="fa fa-star-o"></i> <span bind-unsafe-html="'signup-list-7' | i18n"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<div ng-include="'/views/partials/footer.html'"></div>

@@ -1,0 +1,84 @@
+// Signup page ---------------------
+#signup-page-info {
+  text-align: center;
+  @media (min-width: @screen-sm-min) {
+    text-align: left;
+  }
+  background: @brand-info;
+  color: @white;
+  font-weight: 200;
+  a {
+    color: @white;
+    text-decoration: none;
+  }
+  h1 {
+    @media (min-width: @screen-sm-min) {
+      font-size: 6rem;
+    }
+    line-height: 1;
+  }
+  p {
+    margin: 2rem 0;
+  }
+  .btn {
+    padding: 18px 65px;
+    margin-right: 40px;
+    font-size: 1.8rem;
+  }
+}
+
+div.signup-list {
+  h1 {
+    @media (max-width: @screen-sm-min) {
+      font-size: 2.5rem;
+    }
+  }
+  .list-info-header {
+    text-align: left;
+    padding-bottom: 15px;
+  }
+  ul {
+    padding-left: 0;
+    li {
+      .fa {
+        color: #09b773;
+        font-size: 26px;
+        padding-right: 10px;
+      }
+      &:nth-child(odd) {
+        background: #F9F9F9;
+        border-top: 0.1rem solid darken(#F9F9F9, 10%);
+        border-bottom: 0.1rem solid darken(#F9F9F9, 10%);
+      }
+      .green-text {
+        color: #09b773;
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 5px
+      }
+      list-style: none;
+      text-align: left;
+      padding: 15px 15px;
+    }
+  }
+}
+
+.highlight-text {
+  font-weight: 600;
+}
+
+.img-page-info {
+  width: 275px;
+}
+
+.fa-smaller {
+  font-size: 80%;
+}
+
+
+.caption {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+}

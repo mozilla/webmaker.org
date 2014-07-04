@@ -335,6 +335,7 @@ app.post('/check-username', webmakerAuth.handlers.exists);
 
 app.get("/healthcheck", routes.api.healthcheck);
 
+app.get('/signup', routes.angular);
 // Angular
 app.get('/', routes.angular);
 if (env.get('FLAGS_EXPLORE')) {

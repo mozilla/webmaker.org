@@ -126,6 +126,8 @@ if (env.get('PROFILE_URL')) {
   app.use('/user', proxy(url.parse(env.get('PROFILE_URL'))));
 }
 
+app.use(require('prerender-node'));
+
 app.use(helmet.iexss());
 app.use(helmet.contentTypeOptions());
 app.use(helmet.xframe());

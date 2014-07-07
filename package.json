@@ -34,6 +34,7 @@
     "newrelic": "1.5.5",
     "noxmox": "0.2.x",
     "nunjucks": "1.0.5",
+    "prerender-node": "1.0.4",
     "proxy-middleware": "0.5.0",
     "rtltr-for-less": "0.0.6",
     "sequelize": "1.7.0-rc1",

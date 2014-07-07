@@ -8,12 +8,115 @@ angular
   })
   .factory('wmNav', [
     '$rootScope',
-    function ($rootScope) {
+    'CONFIG',
+    function ($rootScope, config) {
 
       var activePage = '';
       var activeSection = '';
 
       return {
+        nav: {
+          sections: [
+            {
+              id: 'explore',
+              url: 'explore',
+              title: 'Explore',
+              icon: 'random',
+              pushState: true,
+              pages: [
+                {
+                  id: 'index',
+                  title: 'Gallery',
+                  url: 'gallery'
+                },
+                {
+                  id: 'super-mentor',
+                  title: 'Super Mentor Badge',
+                  url: 'badges/webmaker-super-mentor'
+                },
+                {
+                  id: 'super-mentor',
+                  title: 'Hive Community Badge',
+                  url: 'badges/hive-community-member'
+                },
+                {
+                  id: 'badges-admin',
+                  title: 'Badges Admin',
+                  url: 'admin/badges',
+                  pushState: true,
+                  isAtleastMentor: true
+                },
+                {
+                  id: 'search',
+                  title: 'Search',
+                  url: 'search'
+                }
+              ]
+            },
+            {
+              id: 'tools',
+              url: 'tools',
+              title: 'Tools',
+              icon: 'hand-o-up',
+              pushState: true,
+              pages: [
+                {
+                  id: 'tools',
+                  title: 'Tools',
+                  url: 'tools',
+                  pushState: true
+                },
+                {
+                  id: 'popcorn',
+                  icon: 'popcorn-icon',
+                  title: 'Popcorn Maker',
+                  url: 'https://popcorn.webmaker.org/' + config.lang,
+                  external: 'true'
+                },
+                {
+                  id: 'thimble',
+                  icon: 'thimble-icon',
+                  title: 'Thimble',
+                  url: 'https://thimble.webmaker.org/' + config.lang,
+                  external: 'true'
+                },
+                {
+                  id: 'xray',
+                  icon: 'xray-icon',
+                  title: 'X-Ray Goggles',
+                  url: 'https://goggles.webmaker.org/' + config.lang,
+                  external: 'true'
+                },
+                {
+                  id: 'appmaker',
+                  icon: 'appmaker-icon',
+                  title: 'Appmaker',
+                  url: 'https://apps.webmaker.org/designer',
+                  external: 'true'
+                }
+              ]
+            },
+            {
+              id: 'resources',
+              title: 'Resources',
+              icon: 'book',
+              pushState: true,
+              dropdown: true
+            },
+            {
+              id: 'events',
+              url: 'events',
+              title: 'Events',
+              icon: 'map-marker'
+            },
+            {
+              id: 'info',
+              url: 'about',
+              title: 'Info',
+              icon: 'info'
+            }
+          ]
+        },
         page: function (page) {
           if (page || page === '') {
             activePage = page;

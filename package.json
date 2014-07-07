@@ -40,7 +40,7 @@
     "sequelize": "1.7.0-rc1",
     "sqlite3": "2.1.17",
     "uuid": "1.4.x",
-    "webmaker-auth": "0.1.1",
+    "webmaker-auth": "0.1.3",
     "webmaker-download-locales": "0.1.3",
     "webmaker-locale-mapping": "latest",
     "webmaker-i18n": "0.3.20",

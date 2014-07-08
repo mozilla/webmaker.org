@@ -684,18 +684,11 @@
     ],
     "teach": {
       "kits": [
-                {
-          "title": "Hack the Notebook Day activities",
-          "description": "Hack your notebook and illuminate your thinking with circuit-building.",
-          "url": "https://chadsansing.makes.org/thimble/MzM0MDM2OTky/hack-your-notebook-day-teaching-kit",
-          "author": "Chad Sansing, Jen Dick, Jie Qui and David Cole",
-          "type": "kit"
-        },
         {
           "title": "Teach introductory HTML, CSS and JavaScript",
           "description": "Hands-on learning with the building blocks of the web, from Tech Girls founder Kim Wilkens",
           "url": "https://techkim.makes.org/thimble/intro-to-html-css-javascript",
-          "author": "Kim Wilkens from Tech Girls",
+          "author": "Tech Kim",
           "type": "kit"
         },
         {

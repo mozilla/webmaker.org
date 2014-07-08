@@ -377,4 +377,88 @@ angular
         })
         .error(onError);
     }
+  ])
+  .controller('appmakerController', ['$scope', '$rootScope', '$timeout',
+    function ($scope, $rootScope, $timeout) {
+
+      $scope.audiences = [
+        {
+          title: 'students',
+          image: '/img/appmaker/appmaker-hero-blue.svg'
+        },
+        {
+          title: 'business',
+          image: '/img/appmaker/appmaker-hero-red.svg'
+        },
+        {
+          title: 'friends',
+          image: '/img/appmaker/appmaker-hero-yellow.svg'
+        }
+      ];
+
+      $scope.makes = [
+        {
+          title: 'Music App',
+          image: '/img/appmaker/music-app.jpg',
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://petite-carriage-8.appalot.me/app',
+          installUrl: '//petite-carriage-8.appalot.me/install',
+          appUrl: '//petite-carriage-8.appalot.me/app'
+        },
+        {
+          title: 'Chat App',
+          image: '/img/appmaker/chat-app.jpg',
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://loose-mass-816.appalot.me/app',
+          installUrl: '//loose-mass-816.appalot.me/install',
+          appUrl: '//loose-mass-816.appalot.me/app'
+        },
+        {
+          title: 'Fireworks App',
+          image: '/img/appmaker/fireworks-app.jpg',
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://combative-lake-777.appalot.me/app',
+          installUrl: '//combative-lake-777.appalot.me/install',
+          appUrl: '//combative-lake-777.appalot.me/app'
+        }
+      ];
+
+      // Change the page title for Appmaker.
+      $rootScope.title = 'Discover Appmaker';
+
+      // Properties the view needs to see
+      $scope.showAudienceTitle = $scope.audiences[0].title;
+      $scope.currentSlideIndex = 0;
+
+      // Group of timeout promises used to transition the selected audience
+      var transitionPromises = [];
+
+      // Reference to the slide that's actually coming up
+      var currentSlideIndex = 0;
+
+      $scope.setActiveSlide = function (active, index) {
+        // If the slide that called this function is active...
+        if (active) {
+          // ... and it's not already the slide we're headed to...
+          if (currentSlideIndex !== index) {
+            currentSlideIndex = index;
+
+            // Destroy any existing promises
+            if (transitionPromises.length) {
+              transitionPromises.forEach($timeout.cancel);
+            }
+
+            // Hide the audience text
+            $scope.showAudienceTitle = false;
+
+            // Wait until audience text is faded out; then change view's currentSlideIndex
+            transitionPromises.push($timeout(function () {
+              $scope.currentSlideIndex = currentSlideIndex;
+            }, 400));
+
+            // Show audience text again once fade has happened and text has changed
+            transitionPromises.push($timeout(function () {
+              $scope.showAudienceTitle = $scope.audiences[currentSlideIndex].title;
+            }, 800));
+          }
+        }
+      };
+    }
   ]);

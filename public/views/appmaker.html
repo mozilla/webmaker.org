@@ -1,0 +1,128 @@
+<div id="appmaker">
+  <section id="appmaker-carousel">
+    <carousel interval="5000">
+      <slide class="slide" ng-repeat="audience in audiences" active="slide.active">
+        <div class="container text-center">
+          <img ng-src="{{audience.image}}" alt="{{audience.title | i18n}}">{{setActiveSlide(slide.active, $index)}}
+        </div>
+      </slide>
+      <div id="front-phone-container">
+        <div class="container text-center">
+          <img src="/img/appmaker/hand-phone.svg">
+        </div>
+      </div>
+    </carousel>
+    <div class="container text-center">
+      <h1><span bind-unsafe-html="'Make an app for your...' | i18n">{{'Make an app for your...' | i18n}}</span>.</h1>
+      <p class="lead" id="sub-heading">{{'Appmaker Description' | i18n}}</p>
+      <p>
+        <a href="#starter-apps" class="btn btn-success btn-lg">{{'Pick a template' | i18n}}</a>
+        <a href="//apps.webmaker.org/{{lang}}/designer" class="btn btn-info btn-lg">{{'Start from scratch' | i18n}}</a>
+      </p>
+    </div>
+  </section>
+  <section name="starter-apps" id="starter-apps">
+    <div class="container">
+      <p class="lead text-center">{{'Don\'t know where to start?' | i18n}}</p>
+      <div class="row">
+        <div class="col-sm-4" ng-repeat="make in makes">
+          <div class="make">
+            <div class="thumbnail-wrapper" ng-style="{'background-image':'url('+ make.image + ')'}"></div>
+            <div class="caption">
+              <h3>{{make.title | i18n}}</h3>
+              <p>{{(make.title + ' Description') | i18n}}</p>
+              <p>
+                <a href="{{make.remixUrl}}" class="btn btn-primary" role="button">
+                  <span class="fa fa-code-fork"></span> Remix
+                </a>
+                <a href="{{make.playUrl}}" class="btn btn-info" role="button">
+                  <span class="fa fa-mobile"></span> Play
+                </a>
+                <a href="{{make.installUrl}}" class="btn btn-warning" role="button">
+                  <span class="fa fa-gears"></span> Install
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gallery-actions">
+      <a class="load-more" href="/{{lang}}/search?type=tags&q=appmaker">{{'See more' | i18n}} <span class="icon-angle-down"></span></a>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <img class="maker-party-logo" src="/img/appmaker/teach.svg" alt="{{'Teach' | i18n}}">
+          <h2>{{'Teach' | i18n}}</h2>
+          <p>{{'Teach Description' | i18n}}</p>
+          <p>
+            <a href="https://jess.makes.org/thimble/MTMyMzM2ODQ0OA==/mobile-design-kit" class="btn btn-info" role="button">
+              {{'See how' | i18n}}
+            </a>
+          </p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <img class="maker-party-logo" src="/img/appmaker/contribute.svg" alt="{{'Contribute' | i18n}}">
+          <h2>{{'Contribute' | i18n}}</h2>
+          <p>{{'Contribute Description' | i18n}}</p>
+          <p>
+            <a href="//github.com/mozilla-appmaker/appmaker/wiki/How-to-Contribute" class="btn btn-info" role="button">
+              {{'Get started' | i18n}}
+            </a>
+          </p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <img class="maker-party-logo" src="/img/appmaker/imagine.svg" alt="{{'Imagine' | i18n}}">
+          <h2>{{'Imagine' | i18n}}</h2>
+          <p>{{'Imagine Description' | i18n}}</p>
+          <p>
+            <a href="//mozilla.github.io/mobile-opportunity/" class="btn btn-info" role="button">
+              {{'Learn more' | i18n}}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="appmaker">
+  <div class="container text-center">
+    <p class="lead hidden-xs">{{ 'Let us know what you think' | i18n }}</p>
+    <div class="row contact">
+      <div class="col-sm-3 text-center">
+        <a href="//twitter.com/MozillaAppmaker"><span class="fa fa-twitter"> </span> Twitter</a>
+      </div>
+      <div class="col-sm-3 text-center">
+        <a href="//github.com/mozilla-appmaker/appmaker"><span class="fa fa-github"> </span> Github</a>
+      </div>
+      <div class="col-sm-3 text-center">
+        <a href="//github.com/mozilla-appmaker/appmaker/wiki"><span class="fa fa-book"> </span> Wiki</a>
+      </div>
+      <div class="col-sm-3 text-center">
+        <a href="//mail.mozilla.org/listinfo/appmaker"><span class="fa fa-envelope"> </span> Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<nav class="navbar navbar-no-header-xs navbar-tertiary">
+  <div class="container">
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="mailto:help@webmaker.org">{{ 'Contact' | i18n }}</a></li>
+        <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ 'Donate' | i18n }}</a></li>
+        <li><a href="/{{lang}}/privacy">{{ 'Privacy' | i18n }}</a></li>
+        <li><a href="/{{lang}}/terms">{{ 'Legal' | i18n }}</a></li>
+        <li><a href="https://support.mozilla.org/products/webmaker">{{ 'Help' | i18n }}</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://twitter.com/webmaker"><span class="fa fa-twitter"></span> @webmaker</a></li>
+        <li><a href="https://plus.google.com/u/2/communities/106022863174952221205"><span class="fa fa-google-plus"></span> {{ 'google+' | i18n }}</a></li>
+        <li><a href="http://blog.webmaker.org"><span class="fa fa-file-text-o"></span> {{ 'Blog' | i18n }}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

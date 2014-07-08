@@ -30,7 +30,6 @@
   },
   "resolutions": {
     "angular": "1.2.14",
-    "webmaker-analytics": "0.1.0",
     "selectize": "0.10.1"
   },
   "version": "1.1.18"

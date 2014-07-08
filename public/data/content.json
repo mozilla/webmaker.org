@@ -40,9 +40,7 @@
             "content": "6736261"
           }
         ]
-      }
-    ],
-    "make": [
+      },
       {
         "title": "Test Content",
         "multimedia": [
@@ -70,10 +68,20 @@
             "content": "This is another markup section, maybe it's even copy about the video below."
           },
           {
-            "type": "vimeo",
-            "content": "6736261"
+            "type": "ted",
+            "content": "gary_kovacs_tracking_the_trackers"
           }
         ]
+      }
+    ],
+    "make": [
+      {
+        "title": "I love Popcorn Maker",
+        "description": "Because <a href=\"/user/jp\">@jp</a> does stuff like <a href=\"https://jp.makes.org/popcorn/1z16\" target=\"_self\">Proving the Holcomb Rule</a>."
+      },
+      {
+        "title": "I also love small acts of defiance",
+        "description": "I&rsquo;m lookin&rsquo; at you, <a href=\"/user/keyboardkat\">@keyboardkat</a>. <a href=\"https://keyboardkat.makes.org/popcorn/1err\" target=\"_self\">This is amazing.</a>"
       }
     ],
     "teach": {
@@ -81,7 +89,7 @@
         {
           "title": "The title of a teaching kit",
           "description": "A longer description of a teaching kit",
-          "url": "https://mozteach.makes.org/thimble/_________________",
+          "url": "https://mozteach.makes.org/thimble/__________",
           "author": "Mozteach",
           "type": "kit"
         }

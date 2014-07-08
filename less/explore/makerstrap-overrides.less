@@ -59,6 +59,31 @@ dd {
   padding-right: 15px;
 }
 
+.navbar-inverse {
+  .navbar-form .form-control {
+    border-color: fade(white, 50%);
+  }
+  .btn-link {
+    color: @navbar-inverse-link-color;
+    &:hover {
+      color: @navbar-inverse-link-hover-color;
+    }
+  }
+}
+
+// Search input
+.navbar-inverse .navbar-form .search-input.form-control {
+  background: none;
+  color: @white;
+  transition: all 0.2s ease-in;
+  .placeholder(@navbar-inverse-link-color);
+  &:focus {
+    .placeholder(#CCC);
+    color: #333;
+    background: @white;
+  }
+}
+
 /* ===========
 * Modal
 */

@@ -4,6 +4,22 @@
   white-space: nowrap;
 }
 
+// Placeholder text
+.placeholder(@colour:#555) {
+  &::-webkit-input-placeholder {
+    color: @colour;
+  }
+  &:-moz-placeholder {
+    color: @colour;
+  }
+  &::-moz-placeholder {
+    color: @colour;
+  }
+  &:-ms-input-placeholder {
+    color: @colour;
+  }
+}
+
 
 // To be used as-is in markup, or for shortcuts as mixins!
 .bg-weblit-Navigation {

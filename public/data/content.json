@@ -257,6 +257,10 @@
         "title": "Hack Google",
         "description": "Wouldn&rsquo;t it be cool if you could &ldquo;hack&rdquo; websites like Google or Facebook? Now you can&mdash;safely. And you&rsquo;ll <a href=\"https://tbx.makes.org/thimble/your-first-hack\">learn a bit about web mechanics</a> while doing it."
       }
+      {
+        "title": "What can you learn from a web address?",
+        "description": "Use the <a href=\"http://url-demystifier.toolness.org/?foo=1\">URL Demystifier</a> to learn how a website's URL can tell you about how the web works."
+      }
     ],
     "teach": {
       "kits": [

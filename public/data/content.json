@@ -480,8 +480,8 @@
       },
       {
         "title": "Who owns your domains?",
-        "description": "Investigate who runs the domains of your favorite websites by searching the <a href="https://www.easywhois.com/">EasyWhoIs</a> database."
-      },
+        "description": "Investigate who runs the domains of your favorite websites by searching the <a href=\"https://www.easywhois.com/\">EasyWhoIs</a> database."
+      }
     ],
     "teach": {
       "kits": [

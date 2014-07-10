@@ -162,6 +162,10 @@
         "description": "<strong>Add-ons for your browser can help you navigate more easily</strong>&mdash;plus simplify tasks and unlock new powers. <a href=\"https://addons.mozilla.org/en-US/firefox/?application=firefox\">Trick out your Firefox browser with add-ons</a>."
       },
       {
+        "title": "Create a collection of your favorite Firefox add-ons",
+        "description": "Explore collections of other users' favorite add-ons for everything from privacy to travel to web development. Then <a href=\"https://addons.mozilla.org/en-US/firefox/collections/\">create your own</a>."
+      },
+      {
         "title": "Navigate like a superhero",
         "description": "<strong><a href=\"http://toolness.github.io/hackasaurus-parable/navigator-badge/\">Test yourself on web navigation basics</a></strong>. Working with URLs in your navigation bar, copying and pasting text, finding image URLs and more."
       }

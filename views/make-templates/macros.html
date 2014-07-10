@@ -24,8 +24,8 @@
 
 {% macro likeIcon() %}
   {% if make.hasBeenLiked %}
-    <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart"></span>
+    <span data-make-id="make.id" class="make-like-toggle icon-heart"></span>
   {% else %}
-    <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart-empty"></span>
+    <span data-make-id="make.id" class="make-like-toggle icon-heart-empty"></span>
   {% endif %}
 {% endmacro %}

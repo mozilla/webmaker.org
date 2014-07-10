@@ -7,6 +7,12 @@ angular
       }
     };
   })
+  .filter('decode', function () {
+    return function (tag) {
+      tag = tag || '';
+      return decodeURIComponent(tag);
+    };
+  })
   .filter('openGraphLocale', function () {
     return function (locale) {
       if (locale) {

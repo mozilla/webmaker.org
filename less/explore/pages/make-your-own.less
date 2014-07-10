@@ -1,0 +1,166 @@
+/*********************************************************
+ * TEACH-TEMPLATES
+ */
+
+#make-your-own {
+  background-color: @lightgrey;
+  header {
+    h1 {
+      color: @brand-primary;
+      font-size: 3.2rem;
+      margin-top: 0;
+      padding-top: 2rem;
+    }
+    p {
+      font-size: 2.2rem;
+      font-weight: 200;
+      strong {
+        font-weight: 400;
+      }
+    }
+    @media screen and (min-width: @screen-sm-min) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .helpbox {
+    background-color: @white;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    margin: 2rem auto 2rem 2.5rem;
+    max-width: 27rem;
+    padding: 0.5rem 0;
+    position: relative;
+
+    p {
+      margin: 1.5rem;
+      margin-left: 5rem;
+      min-height: 5.4rem;
+    }
+    img {
+      border-radius: 50%;
+      float: left;
+      height: 7rem;
+      left: -2.5rem;
+      position: absolute;
+      top: 1.2rem;
+    }
+  }
+
+  .column-teachtemplate {
+    background: @white;
+    margin-bottom: 3rem;
+    padding: 2rem 2rem 3rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    &.activity-column {
+      background-color: @lightyellow;
+    }
+    .note-paper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 12.2rem;
+      background: -webkit-linear-gradient(top, darken(@lightyellow, 13%), @lightyellow 8%) 5.7rem;
+      background: linear-gradient(top, darken(@lightyellow, 13%), @lightyellow 8%) 5.7rem;
+      background-size: 100% 3rem;
+      border-bottom: 0.1rem dotted #ccc;
+
+      @media screen and (min-width: 23.875em) {
+        top: 10rem;
+      }
+      @media screen and (min-width: @screen-sm-min) {
+        top: 12.5rem;
+      }
+      @media screen and (min-width: @screen-md-min) {
+        top: 10rem;
+      }
+    }
+
+    .note-paper-side {
+      border-left: 0.1rem solid darken(@lightyellow, 13%);
+      height: 100%;
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      z-index: 1;
+    }
+
+    .activity-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    h2, h3 {
+      font-weight: 200;
+      margin: 0 auto 1rem;
+    }
+    h2 {
+      color: @brand-primary;
+      font-size: 4rem;
+      font-weight: 200;
+    }
+
+    h3 {
+      font-size: 2rem;
+      line-height: 1.3;
+
+      @media screen and (min-width: @screen-sm-min) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .btn {
+      font-size: 1.8rem;
+      padding: 1.25rem 5rem;
+      transition: background-color 150ms;
+      .fa-angle-right {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .banner {
+    display: none;
+    @media screen and (min-width: @screen-sm-min) {
+      display: block;
+      font-size: 1.4rem;
+      left: -6.5rem;
+      padding: 0.5rem;
+      position: absolute;
+      text-align: center;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 2rem;
+      width: 20rem;
+      z-index: 2;
+      &[dir="rtl"] {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: auto;
+        right: -6.5rem;
+      }
+    }
+    @media screen and (min-width: @screen-md-min) {
+      font-size: 1.8rem;
+      left: -5.2rem;
+      top: 3rem;
+      &[dir="rtl"] {
+        left: auto;
+        right: -5.2rem;
+      }
+    }
+  }
+  .teachkit {
+    color: @gray-light;
+    background-color: @yellow;
+  }
+
+  .teachactivity {
+    color: @white;
+    background-color: @brand-primary;
+  }
+}

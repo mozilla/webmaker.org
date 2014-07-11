@@ -1147,19 +1147,19 @@
       },
       {
         "title": "Code your own Python script",
-        "description": "Learn about the with <a href=\"http://www.learnpython.org/\">this interactive tutorial</a>."
-      }
+        "description": "Learn about the fundamentals with <a href=\"http://www.learnpython.org/\">this interactive tutorial</a>."
+      },
       {
         "title": "Make a 'Robot Rampage' game",
         "description": "Play <a href=\"https://thimble.webmaker.org/project/59304/remix\">this Javascript game</a>, then remix its code in Thimble to make your own version."
       },
       {
         "title": "Learn programming through drawing and animation",
-        "description": "Use these beginner <a href=\"https://www.khanacademy.org/computing/cs/programming\">Khan Academy tutorials</a> on Processing.js and Javascript to learn creative programming skills.""
+        "description": "Use these beginner <a href=\"https://www.khanacademy.org/computing/cs/programming\">Khan Academy tutorials</a> on Processing.js and Javascript to learn creative programming skills."
       },
       {
-        "title": "Cover a webpage with French toast",
-        "description: "Drag <a href=\"https://mousemeredith.makes.org/thimble/ODg2MTc3Nzky/javascript-takeover\">this bookmarklet</a> to your toolbar to cover any web page with French toast! Then try remixing the code to include your own images."
+       "title": "Cover a webpage with French toast",
+       "description": "Drag <a href=\"https://mousemeredith.makes.org/thimble/ODg2MTc3Nzky/javascript-takeover\">this bookmarklet</a> to your toolbar to cover any web page with French toast! Then try remixing the code to include your own images."
       }
     ],
     "teach": {

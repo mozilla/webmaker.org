@@ -1,0 +1,172 @@
+/*********************************************************
+* Appmaker
+*/
+
+@appmakerBlue: #20A8CC;
+@appmakerRed: #F37A62;
+@appmakerYellow: #FAD666;
+@appmakerYellowText: #EEAD05;
+
+footer.appmaker {
+  .contact {
+    padding: 20px 0;
+    max-width: 40em;
+    margin: 0 auto;
+
+    a {
+      color: white;
+      font-size: 1.5em;
+    }
+
+    a:hover {
+      color: @blue;
+      text-decoration: none;
+    }
+
+    a .fa {
+      color: @blue;
+    }
+  }
+}
+
+#appmaker {
+  section {
+    padding: 40px 0;
+  }
+
+  section:first-child {
+    padding-top: 0;
+    #front-phone-container {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: auto;
+      z-index: 10;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .slide:nth-child(1) {
+      background: -webkit-linear-gradient(180deg, @appmakerBlue 90%, transparent 10%);
+      background: -moz-linear-gradient(180deg, @appmakerBlue 90%, transparent 10%);
+      background: -ms-linear-gradient(180deg, @appmakerBlue 90%, transparent 10%);
+      background: linear-gradient(180deg, @appmakerBlue 90%, transparent 10%);
+    }
+    .slide:nth-child(2) {
+      background: rgb(243, 122, 98);
+      background: -webkit-linear-gradient(180deg, @appmakerRed 90%, transparent 10%);
+      background: -moz-linear-gradient(180deg, @appmakerRed 90%, transparent 10%);
+      background: -ms-linear-gradient(180deg, @appmakerRed 90%, transparent 10%);
+      background: linear-gradient(180deg, @appmakerRed 90%, transparent 10%);
+    }
+    .slide:nth-child(3) {
+      background: rgb(250, 214, 102);
+      background: -webkit-linear-gradient(180deg, @appmakerYellow 90%, transparent 10%);
+      background: -moz-linear-gradient(180deg, @appmakerYellow 90%, transparent 10%);
+      background: -ms-linear-gradient(180deg, @appmakerYellow 90%, transparent 10%);
+      background: linear-gradient(180deg, @appmakerYellow 90%, transparent 10%);
+    }
+  }
+
+  section#starter-apps {
+    position: relative;
+    background-color: rgb(227, 236, 241);
+    padding-bottom: 100px;
+    .make {
+      margin-bottom: 20px;
+      @media (min-width: @screen-md-min) {
+        margin: 20px;
+      }
+      background: white;
+    }
+    .thumbnail-wrapper {
+      @media (min-width: @screen-sm-min) {
+        padding-bottom: 150%;
+      }
+    }
+    .caption {
+      padding: 20px;
+      h3 {
+        margin-top: 0;
+      }
+      .btn {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  #appmaker-carousel {
+    background-color: white;
+
+    .carousel-control {
+      display: none;
+    }
+
+    .carousel-indicators {
+      bottom: 16%;
+    }
+  }
+
+  #app-audience {
+    padding: 0 10px;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 5em;
+
+    -webkit-transition: color .5s;
+    transition: color .5s;
+
+    &[data-show="students"] {
+      color: @blue;
+    }
+    &[data-show="business"] {
+      color: @appmakerRed;
+    }
+    &[data-show="friends"] {
+      color: @appmakerYellowText;
+    }
+    &[data-show="false"] {
+      color: transparent;
+    }
+  }
+
+  #sub-heading {
+    margin: 20px;
+  }
+}
+
+#gallery-actions {
+  position: absolute;
+  right: 55px;
+  bottom: 0;
+  width: 350px;
+
+  a {
+    cursor: pointer;
+    background: @green;
+    color: #FFF;
+    border: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 200;
+    margin-right: 5px;
+    text-align: center;
+    padding: 0 30px;
+
+    &:hover {
+      background: lighten(@green, 10%);
+      text-decoration: none;
+    }
+  }
+
+  .addMore {
+    height: 56px;
+    line-height: 50px;
+  }
+}
+

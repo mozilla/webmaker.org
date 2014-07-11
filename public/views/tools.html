@@ -20,7 +20,7 @@
             </ul>
             <div class="text-center">
               <h3>{{ 'Get started' | i18n }}</h3>
-              <p><a href="https://goggles.webmaker.org/{{localeInfo.lang}}" class="btn btn-lg btn-info">
+              <p><a href="https://goggles.webmaker.org/{{lang}}" class="btn btn-lg btn-info">
                   {{ 'Try the Goggles' | i18n }}</a></p>
             </div>
           </div>
@@ -44,10 +44,10 @@
             </ul>
             <div class="text-center">
               <h3>{{ "Get started" | i18n }}</h3>
-                <p><a href="https://thimble.webmaker.org/{{localeInfo.lang}}" class="btn btn-lg btn-info">
+                <p><a href="https://thimble.webmaker.org/{{lang}}" class="btn btn-lg btn-info">
                   {{ "Start from scratch" | i18n }}
                 </a></p>
-                <p><a href="/{{localeInfo.lang}}/gallery" class="btn btn-lg btn-success"><span class="fa fa-code-fork"></span> {{ "Remix a project" | i18n }}</a></p>
+                <p><a href="/{{lang}}/gallery" class="btn btn-lg btn-success"><span class="fa fa-code-fork"></span> {{ "Remix a project" | i18n }}</a></p>
             </div>
           </div>
         </div>
@@ -70,9 +70,9 @@
             </ul>
             <div class="text-center">
               <h3>{{ "Get started" | i18n }}</h3>
-              <p><a href="https://popcorn.webmaker.org/{{localeInfo.lang}}/editor/" class="btn btn-info btn-lg">
+              <p><a href="https://popcorn.webmaker.org/{{lang}}/editor/" class="btn btn-info btn-lg">
                 {{ "Start from scratch" | i18n }} <span class="fa fa-angle-{{direction}}"></span></a></p>
-              <p><a href="/{{localeInfo.lang}}/gallery" class="btn btn-success btn-lg">
+              <p><a href="/{{lang}}/gallery" class="btn btn-success btn-lg">
                 <span class="fa fa-code-fork"></span> {{ "Remix a project" | i18n }}</a></p>
             </div>
           </div>
@@ -86,18 +86,21 @@
               <h2 class="text-primary">{{ "Appmaker" | i18n }}</h2>
               <p class="lead">{{ "Mobile apps made easy" | i18n }}</p>
             </hgroup>
-            <p ng-bind-html="'AppmakerDesc' | i18n"></p>
+            <p>{{'Appmaker Tools Page Description' | i18n}}</p>
             <h4>{{ "You can build:" | i18n }}</h4>
             <ul class="list list-inset">
-              <li>{{ "an animated gif with sound" | i18n }}</li>
-              <li>{{ "a documentary with dynamic links" | i18n }}</li>
-              <li>{{ "vdo-profile" | i18n }}</li>
+              <li>{{ "an app to chat with your friends" | i18n }}</li>
+              <li>{{ "a music-making app" | i18n }}</li>
+              <li>{{ "a personal goal tracker" | i18n }}</li>
               <li>{{ "and more!" | i18n }}</li>
             </ul>
             <div class="text-center">
               <h3>{{ "Get started" | i18n }}</h3>
               <p><a href="https://apps.webmaker.org/en-US/designer" class="btn btn-info btn-lg">
                 {{ "Start from scratch" | i18n }}</a></p>
+              <p><a href="/{{lang}}/gallery" class="btn btn-success btn-lg">
+                <span class="fa fa-code-fork"></span> {{ "Remix a project" | i18n }}</a></p>
+            </div>
             </div>
           </div>
         </div>

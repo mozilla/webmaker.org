@@ -223,18 +223,6 @@
     "message": "Submit a resource",
     "description": "Submit a teaching resource"
   },
-  "Appmaker": {
-    "message": "Appmaker",
-    "description": "Tools page"
-  },
-  "Mobile apps made easy": {
-    "message": "Mobile apps made easy",
-    "description": "Tools page"
-  },
-  "AppmakerDesc": {
-    "message": "Appmaker helps you create mobile apps without a drop of code &ndash; at least at first! Start from a template, create your first app, and learn the ins and outs of mobile app technology. When you're ready, help Mozilla by diving deeper and becoming an Appmaker contributor: build an Appmaker Brick; provide valuable user feedback; submit your own starter app for others to use.",
-    "description": "Tools page"
-  },
   "a collaborative playlist": {
     "message": "a collaborative playlist",
     "description": ""

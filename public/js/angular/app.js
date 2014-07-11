@@ -39,6 +39,10 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/signup.html',
           controller: 'homeController'
         })
+        .when('/:locale?/appmaker', {
+          templateUrl: '/views/appmaker.html',
+          controller: 'appmakerController'
+        })
         .when('/:locale?', {
           templateUrl: '/views/home.html',
           controller: 'homeController'
@@ -54,6 +58,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
   ])
   .run(['$rootScope', '$http', '$routeParams', '$location', 'CONFIG', 'weblit',
     function ($rootScope, $http, $routeParams, $location, CONFIG, weblit) {
+      $rootScope.title = 'Webmaker';
 
       // feed supported langs to meta
       $rootScope.languages = CONFIG.supported_languages;
@@ -73,6 +78,9 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
 
       // Set base url
       $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
+        // Reset the page title when route changes
+        $rootScope.title = 'Webmaker';
+
         $rootScope.baseUrl = '/';
         if ($routeParams.locale) {
           $rootScope.baseUrl += ($routeParams.locale + '/');

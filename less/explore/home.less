@@ -223,46 +223,4 @@
       }
     }
   }
-
-  // Footer - we could move this to be a general footer eventually
-  footer {
-    padding: 2.5rem 0;
-    background: @navy;
-    color: @white;
-    p {
-      margin-bottom: 2rem;
-    }
-    .input-group {
-      border-bottom: 1px solid lighten(@navy, 15%);
-      input.form-control,
-      .input-group-addon,
-      .input-group-btn button {
-        color: @white;
-        border: none;
-        background: none;
-        box-shadow: none;
-      }
-      .input-group-addon {
-        padding: 0;
-      }
-      .input-group-btn button:hover {
-        background: lighten(@navy, 5%);
-      }
-    }
-    .sponsors {
-      font-size: 0.7em;
-      text-transform: uppercase;
-      @media (min-width: @screen-sm-min) {
-         li {
-          margin-right: 3em;
-          &:last-of-type {
-            margin-right: 0;
-          }
-        }
-      }
-    }
-    .checkbox {
-      font-size: 13px;
-    }
-  }
 }

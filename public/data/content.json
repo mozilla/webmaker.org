@@ -685,8 +685,16 @@
     ],
     "make": [
       {
+        "title": "How accessible is your website?",
+        "description": "Determine what your website looks like as a textual representation with <a href=\"http://www.standards-schmandards.com/projects/fangs/\">Fangs</a>, a screen reader emulator."
+      },
+      {
         "title": "Make an &ldquo;About Me&rdquo; page",
         "description": "<a href=\"https://fuzzyfox.makes.org/thimble/LTE0MTQzMzI0MTY=/a-little-about-me\">Make a web page that tells the story of you</a>."
+      },
+      {
+        "title": "Learn about CSS selectors through play",
+        "description": "Try building CSS selectors to make a dinner table come alive with <a href=\"https://addons.mozilla.org/en-US/firefox/collections/\">CSS Diner</a>, a game by Luke Pacholski."
       },
       {
         "title": "Make an animated JavaScript poem",

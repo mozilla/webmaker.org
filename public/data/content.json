@@ -1292,14 +1292,18 @@
     "make": [
       {
         "title": "Draw your understanding of the Internet",
-        "description": "<a href=\"http://www.canyoudrawtheinternet.com/\">Take part in this global art project</a> by submitting a drawing that demonstrates your understanding of how the Internet works."
+        "description": "<a href=\"http://www.canyoudrawtheinternet.com/\">Take part in this global art project</a> by submitting a drawing that shares the Internet as you see it."
       },
       {
         "title": "Create a page for the Internet Defense League",
         "description": "Do you believe in a free and open Internet? <a href=\"https://chongkim.makes.org/thimble/LTExMjgwMDU2MzI=/internet-defense-league\">Remix this statement by the IDL</a> to share your views."
       },
       {
-        "title": "Why do you believe in the open web?",
+        "title": "What can be learned from a web address?",
+        "description": "Use the <a href=\"http://url-demystifier.toolness.org/?foo=1\">URL Demystifier</a> to see how a website's URL can share web secrets."
+      },
+      {
+        "title": "Why I believe in the open web",
         "description": "<a href=\"https://thimble.webmaker.org/project/17857/remix\">Tell the world with this Thimble page</a>."
       }
     ],

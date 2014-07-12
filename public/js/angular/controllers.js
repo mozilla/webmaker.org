@@ -92,10 +92,11 @@ angular
       ];
     }
   ])
-  .controller('homeController', ['$scope', 'wmNav',
-    function ($scope, wmNav) {
+  .controller('homeController', ['$scope', 'wmNav', '$routeParams',
+    function ($scope, wmNav, $routeParams) {
       wmNav.page('home');
       wmNav.section('');
+      $scope.userDel = $routeParams.userDel;
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$routeParams',

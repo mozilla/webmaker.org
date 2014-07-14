@@ -205,11 +205,12 @@ angular
       wmNav.section('tools');
     }
   ])
-  .controller('makeYourOwnController', ['$scope', 'wmNav',
-    function ($scope, wmNav) {
+  .controller('makeYourOwnController', ['$scope', 'wmNav', 'CONFIG',
+    function ($scope, wmNav, CONFIG) {
+      // When we update title, this should be {{ "TeachTemplates" | i18n }}
       wmNav.page('make-your-own');
       wmNav.section('resources');
-      // When we update title, this should be {{ "TeachTemplates" | i18n }}
+      $scope.direction = CONFIG.direction;
     }
   ])
   .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',

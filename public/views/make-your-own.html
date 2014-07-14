@@ -1,0 +1,73 @@
+<div id="make-your-own" ng-controller="makeYourOwnController">
+  <div class="container">
+    <div class="row">
+      <header class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+        <h1 bind-unsafe-html="'teachtemplateHeader' | i18n"></h1>
+
+        <p bind-unsafe-html="'teachtemplateDesc' | i18n"></p>
+      </header>
+      <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+        <div class="helpbox">
+          <img src="/img/img-teach-template-help.jpg">
+
+          <p bind-unsafe-html="'teachtemplateHelpCopy' | i18n"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="column-teachtemplate">
+          <div dir="{{localeInfo.direction}}" class="banner teachkit">
+            {{ 'teachingkit' | i18n }}
+          </div>
+          <h2>
+            {{ 'teachingkit' | i18n }}
+          </h2>
+
+          <h3>
+            {{ 'teachtemplateKitDesc' | i18n }}
+          </h3>
+          <a href="https://thimble.webmaker.org/project/10274/remix" class="btn btn-info">
+            {{'Get started' | i18n }}
+            <span class="fa fa-angle-right"></span></a>
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="column-teachtemplate activity-column">
+          <div class="note-paper-side"></div>
+          <div class="note-paper"></div>
+          <div dir="{{localeInfo.direction}}" class="banner teachactivity">
+            {{ 'activity' | i18n }}
+          </div>
+          <div class="activity-content">
+            <h2>
+              {{ 'activity' | i18n }}
+            </h2>
+
+            <h3>
+              {{ 'teachtemplateActivityDesc' | i18n }}
+            </h3>
+            <a href="https://thimble.webmaker.org/project/10286/remix" class="btn btn-info">
+              {{'Get started' | i18n }}
+              <span class="fa fa-angle-right"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
+           make-id="'5362830d2e257e986700014f'"></div>
+      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
+           make-id="'52cee30ba921914a44000005'"></div>
+      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
+           make-id="'53a0acff7a091a167200001e'"></div>
+      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
+           make-id="'5387a4bfdd8624d371000215'"></div>
+    </div>
+  </div>
+</div>

@@ -57,7 +57,7 @@ angular
           icon: 'book',
           title: 'Teaching kits',
           description: 'Teaching kits desc',
-          target: '/' + CONFIG.lang + '/teach-templates'
+          target: '/' + CONFIG.lang + '/make-your-own'
         },
         {
           icon: 'map-marker',
@@ -203,6 +203,13 @@ angular
     function ($scope, wmNav) {
       wmNav.page('tools');
       wmNav.section('tools');
+    }
+  ])
+  .controller('makeYourOwnController', ['$scope', 'wmNav',
+    function ($scope, wmNav) {
+      wmNav.page('make-your-own');
+      wmNav.section('resources');
+      // When we update title, this should be {{ "TeachTemplates" | i18n }}
     }
   ])
   .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',

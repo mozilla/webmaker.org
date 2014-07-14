@@ -36,13 +36,7 @@ module.exports = function (app) {
       "/network",
       "/kits",
       "/kit-prototypes",
-      "/teach",
       "/starter-makes"
-    ]
-  }, {
-    route: "/make-your-own",
-    paths: [
-      "/teach-templates"
     ]
   }, {
     route: "/getinvolved",
@@ -54,6 +48,12 @@ module.exports = function (app) {
     route: "/mentor",
     paths: [
       "/connect"
+    ]
+  }, {
+    route: "/make-your-own",
+    paths: [
+      "/teach",
+      "/teach-templates"
     ]
   }, {
     route: app.locals.EVENTS_URL + '/#!/event-guides',

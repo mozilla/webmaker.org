@@ -30,7 +30,7 @@
     <div class="tag-container">
       <span class="fa fa-tags"></span>
       <a ng-repeat="tag in sampleMake.tags | filter: '!tutorial-'" class="tag"
-         href="/t/{{ tag }}" target="_self">{{ tag }}</a>
+         href="/t/{{ tag }}" target="_self">{{ tag | decode }}</a>
     </div>
     <div class="make-actions btn-container">
       <a class="btn btn-primary" href="{{ sampleMake.remixurl }}">
@@ -41,6 +41,5 @@
         {{ 'Details' | i18n }}
       </a>
     </div>
-
   </div>
 </article>

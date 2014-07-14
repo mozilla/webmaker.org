@@ -1,0 +1,106 @@
+.make {
+  &.sample-make {
+  // prevents accidental class-collisions (make is a pretty
+  // common word 'round these parts)
+    background: @white;
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.3);
+    color: @gray-light;
+    font-family: @primary-font;
+    font-size: 1.4rem;
+    font-weight: 300;
+    max-width: 30rem;
+    margin: 0 auto;
+    position: relative;
+
+    a {
+      transition: color 100ms;
+    }
+
+    h3 {
+      display: inline-block;
+      font-family: @primary-font;
+      font-size: 2.1rem;
+      font-weight: 300;
+      line-height: 1.3;
+      margin: 0 0 1rem;
+    }
+    h3, .make-meta {
+      a {
+        &:link, &:visited {
+          color: @black;
+        }
+        &:hover, &:active, &:focus {
+          color: @brand-info;
+        }
+      }
+    }
+
+    img {
+      height: auto;
+      margin: auto;
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.3;
+    }
+
+    .make-thumbnail {
+      opacity: 0.9;
+      transition: opacity 100ms;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .gallery-info {
+      padding: 1.9rem;
+    }
+
+    .data-avatar {
+      border-radius: 50%;
+      float: left;
+      height: 4.4rem;
+      margin-right: 0.6rem;
+      width: 4.4rem;
+    }
+
+    .btn-container {
+      text-align: center;
+      transition: opacity 100ms ease;
+    }
+
+    .btn {
+      font-size: 1.8rem;
+    }
+
+    .like-toggle {
+      color: @brand-danger;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 3rem;
+      margin-left: 0.5rem;
+      position: relative;
+      top: 0.6rem;
+      &.fa-heart-o {
+        color: @brand-primary;
+      }
+    }
+
+    .tag-container {
+      .icon-tags {
+        color: @gray-light;
+      }
+      font-size: 1.4rem;
+      margin: 0.8rem 0 1.6rem;
+    }
+
+    .tag {
+      &:after {
+        content: ', ';
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+}

@@ -82,9 +82,12 @@ angular
       return {
         restrict: 'A',
         templateUrl: '/views/partials/gallery-item.html',
+        scope: {
+          makeId: '=makeId'
+        },
         link: function (scope, el, attrs) {
           makeapi.makeapi
-            .id(attrs.makeId)
+            .id(scope.makeId)
             .then(function (err, makes) {
               if (err) {
                 console.error(err);

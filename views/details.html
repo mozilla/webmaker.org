@@ -55,7 +55,7 @@
                   {{ gettext("Made by") }}
                   <a target="_blank" class="make-username" href="/u/{{ username }}">@{{ username }}</a>
                   <span class="make-relative-date">{{ createdAt }}</span>
-                  <span data-make-id="{{ id }}"
+                  <span data-make-id="id"
                         title="Report Inappropriate Make"
                         id="make-report-toggle"
                         class="{{ 'icon-flag' if userReported else 'icon-flag-alt' }}">
@@ -83,7 +83,7 @@
             <p class="built-with"><span class="built-with">{{ gettext("Built with") }}</span>
               <span class="icon-{{tool}}"></span>
               <a target="_blank" href="{{remixurl}}" class="tool-name">{{ tool }}</a>
-              <span data-make-id="{{ id }}"
+              <span data-make-id="id"
                     class="make-like-toggle details-page-icon make-like-details {{ 'icon-heart' if hasBeenLiked else 'icon-heart-empty' }}" >
                 <span id="like-not-logged-in" class="tooltip hide">{{ gettext("Log in to like") }}</span>
               </span>

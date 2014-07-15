@@ -246,5 +246,13 @@
   "and more!": {
     "message": "and more!",
     "description": ""
+  },
+  "or remix someone elses": {
+    "message": "…or remix someone else’s",
+    "description": "headline for gallery section of Make Your Own"
+  },
+  "Get inspired by examples like these": {
+    "message": "Get inspired by examples like these (<a href=\"https://webmaker.org/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">more</a>)",
+    "description": "Paragraph copy for gallery section of Make Your Own"
   }
 }

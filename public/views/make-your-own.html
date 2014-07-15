@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="column-teachtemplate">
-          <div dir="{{localeInfo.direction}}" class="banner teachkit">
+          <div dir="{{ direction }}" class="banner teachkit">
             {{ 'teachingkit' | i18n }}
           </div>
           <h2>
@@ -39,7 +39,7 @@
         <div class="column-teachtemplate activity-column">
           <div class="note-paper-side"></div>
           <div class="note-paper"></div>
-          <div dir="{{localeInfo.direction}}" class="banner teachactivity">
+          <div dir="{{ direction }}" class="banner teachactivity">
             {{ 'activity' | i18n }}
           </div>
           <div class="activity-content">
@@ -55,6 +55,14 @@
               <span class="fa fa-angle-right"></span></a>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="or-remix col-xs-12">
+        <h2>{{ 'or remix someone elses' | i18n }}</h2>
+        <p bind-unsafe-html="'Get inspired by examples like these' | i18n"></p>
       </div>
     </div>
   </div>

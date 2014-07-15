@@ -328,7 +328,7 @@
         ]
       },
       {
-        "title": "What is the world searching for?",
+        "title": "What is the world searching for today?",
         "multimedia": [
           {
             "type": "markup",
@@ -337,20 +337,11 @@
         ]
       },
       {
-        "title": "Don&rsquo;t want your searches to be tracked?",
+        "title": "Have you explored search engines other than Google?",
         "multimedia": [
           {
             "type": "markup",
-            "content": "Search without letting your searches be tracked using <a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature\">Do Not Track.</a>"
-          }
-        ]
-      },
-      {
-        "title": "What is the world searching today?",
-        "multimedia": [
-          {
-            "type": "markup",
-            "content": "<a href=\"http://www.google.com/trends/\">See what the world is searching for</a> using Google Trends."
+            "content": "Try using engines like <a href=\"https://duckduckgo.com/\">Duck Duck Go</a> (which doesn't track its users), <a href=\"http://www.wolframalpha.com/\">Wolfram Alpha</a> (which conducts dynamic computations on the go), and others <a href=\"http://searchenginewatch.com/article/2343048/Escape-Google-With-These-12-Search-Engine-Alternatives\">in this list</a> to diversify your searches."
           }
         ]
       },
@@ -364,7 +355,7 @@
         ]
       },
       {
-        "title": "How does search work?",
+        "title": "How does search work, exactly?",
         "multimedia": [
           {
             "type": "markup",

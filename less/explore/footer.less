@@ -22,6 +22,18 @@ footer {
     .input-group-btn button:hover {
       background: lighten(@navy, 5%);
     }
+    /* Webkit */
+    ::-webkit-input-placeholder {
+      color: fade(@white, 40%);
+    }
+    /* Mozilla Firefox 19+ */
+    ::-moz-placeholder {
+      color: fade(@white, 40%);
+    }
+    /* Internet Explorer 10+ */
+    :-ms-input-placeholder {
+      color: fade(@white, 40%);
+    }
   }
   .sponsors {
     font-size: 0.7em;
@@ -39,3 +51,5 @@ footer {
     font-size: 13px;
   }
 }
+
+

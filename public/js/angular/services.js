@@ -61,12 +61,6 @@ angular
               pushState: true,
               pages: [
                 {
-                  id: 'tools',
-                  title: 'Tools',
-                  url: 'tools',
-                  pushState: true
-                },
-                {
                   id: 'popcorn',
                   icon: 'popcorn-icon',
                   title: 'Popcorn Maker',

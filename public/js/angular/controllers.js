@@ -45,6 +45,11 @@ angular
         return section === wmNav.section();
       };
 
+      // Search
+      $scope.search = function (input) {
+        window.location = '/' + config.lang + '/search?type=all&q=' + input;
+      };
+
     }
   ])
   .controller('exploreController', ['$scope', 'CONFIG', 'wmNav',

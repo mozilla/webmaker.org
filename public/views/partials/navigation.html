@@ -73,12 +73,23 @@
             </li>
           </ul>
         </li>
-        <li>
-          <a href="/{{lang}}/search">
-            <span class="fa fa-search"></span><span class="sr-only">{{ 'Search' | i18n}}</span>
+        <li class="hidden-lg">
+          <a href="{{baseUrl}}search">
+            <span class="fa fa-search"></span>
+            <span class="sr-only">{{ 'Search' | i18n }}</span>
           </a>
         </li>
       </ul>
+      <form class="navbar-form navbar-right visible-lg" role="search">
+        <div class="form-group">
+          <input type="text" ng-model="searchInput" class="search-input form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-link" ng-click="isSearching=true; search(searchInput)">
+          <span ng-if="!isSearching" class="fa fa-search"></span>
+          <span ng-if="isSearching" class="fa fa-spinner fa-spin"></span>
+          <span class="sr-only">{{ 'Search' | i18n }}</span>
+        </button>
+     </form>
     </div>
   </div>
 </nav>
@@ -102,7 +113,7 @@
             <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
           </a>
         </li>
-        <li class="nav-title hidden-xs" ng-hide="!affixed">
+        <li ng-if="section.id === 'resources'" class="nav-title hidden-xs" ng-hide="!affixed">
           <a href="/resources" push-state="true">{{ 'Overview' | i18n }}</a>
         </li>
         <li ng-if="section.id === 'resources'" class="dropdown dropdown-toc hidden-xs">

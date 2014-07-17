@@ -1081,7 +1081,7 @@
           "url": "https://mozteach.makes.org/thimble/a-beginners-guide-to-game-making",
           "author": "Chloe Varelidi",
           "type": "kit"
-        } 
+        }
       ]
     },
     "ctas": [
@@ -1540,6 +1540,7 @@
     ]
   },
   "weblit-Community": {
+    "icon": "fa-comments",
     "intro": "Who owns the web?  One of the beautiful things about the web is that it is a global, public resource. Learning to collaborate online as part of a global community of contributors and creators is an empowering way to ensure that the web remains a shared resource for everyone.",
     "related": "weblit-Credibility",
     "discover": [

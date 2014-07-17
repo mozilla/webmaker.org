@@ -62,6 +62,12 @@
               <label for="evidence">{{ gettext("BadgesEvidenceLabel") }}</label>
               <textarea class="form-control" name="evidence" placeholder="{{ gettext("BadgesIncludeLinks") }}" required></textarea>
             </div>
+            {% if requestCity %}
+            <div class="form-group">
+              <label for="city">{{ gettext("BadgesCityLabel") }}</label>
+              <textarea class="form-control" name="city" placeholder="{{ gettext("BadgesExampleCity") }}" required></textarea>
+            </div>
+            {% endif %}
             <div class="form-inline">
               <label for="claimcode">{{ gettext("HaveClaimCode") }}</label>
               <a href="https://badgekit.org/help" target="_blank" class="icon-question-sign"></a>

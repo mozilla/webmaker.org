@@ -147,21 +147,34 @@ module.exports = function (env) {
           action: 'issue'
         });
 
+        // Do we want to ask which Hive city the earner is affiliated with?
+        var requestCity = (req.params.badge === 'hive-community-member');
+
         res.render('badge-detail.html', {
           page: req.params.badge,
           view: 'badges',
           badge: data,
-          canIssue: canIssue
+          canIssue: canIssue,
+          requestCity: requestCity
         });
       });
 
     },
     apply: function (req, res, next) {
+      var evidence = [req.body.evidence];
+      if (req.body.city) {
+        evidence.push('Hive City: ' + req.body.city);
+      }
+
+      evidence = evidence.map(function (evidence) {
+        return {
+          reflection: evidence
+        };
+      });
+
       var application = {
         learner: req.session.user.email,
-        evidence: [{
-          reflection: req.body.evidence
-        }]
+        evidence: evidence
       };
 
       badgeClient.addApplication({

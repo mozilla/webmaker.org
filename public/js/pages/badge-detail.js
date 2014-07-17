@@ -11,6 +11,8 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $application = $('#application');
     var $claimCodeInput = $applicationForm.find('[name="claimcode"]');
     var $evidenceInput = $applicationForm.find('[name="evidence"]');
+    var $cityInput = $applicationForm.find('[name="city"]');
+    var $applicationInputs = $evidenceInput.add($cityInput);
     var $error = $('.submit-badge-error');
     var $success = $('#submit-badge-success');
     var $successIssued = $('#issue-badge-success');
@@ -90,11 +92,11 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
 
     $claimCodeInput.on('change', function (e) {
       if ($claimCodeInput.val().length) {
-        $evidenceInput.removeAttr('required');
-        $evidenceInput.attr('disabled', 'disabled');
+        $applicationInputs.removeAttr('required');
+        $applicationInputs.attr('disabled', 'disabled');
       } else {
-        $evidenceInput.attr('required', 'required');
-        $evidenceInput.removeAttr('disabled');
+        $applicationInputs.attr('required', 'required');
+        $applicationInputs.removeAttr('disabled');
       }
     }).change();
 
@@ -116,6 +118,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       } else {
         $.post('/api/badges/' + slug + '/apply', {
           evidence: $evidenceInput.val(),
+          city: $cityInput.val(),
           _csrf: $('meta[name="csrf-token"]').attr('content')
         })
           .done(function (data) {

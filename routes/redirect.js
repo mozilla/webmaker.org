@@ -84,7 +84,8 @@ module.exports = function (app) {
   }, {
     route: "http://party.webmaker.org",
     paths: [
-      "/party"
+      "/party",
+      "/makerparty"
     ]
   }];
 

@@ -685,7 +685,7 @@
       },
       {
         "title": "Learn about CSS selectors through play",
-        "description": "Try building CSS selectors to make a dinner table come alive with <a href=\"https://addons.mozilla.org/en-US/firefox/collections/\">CSS Diner</a>, a game by Luke Pacholski."
+        "description": "Try building CSS selectors to make a dinner table come alive with <a href=\"http://flukeout.github.io/\">CSS Diner</a>, a game by Luke Pacholski."
       },
       {
         "title": "Make an animated JavaScript poem",

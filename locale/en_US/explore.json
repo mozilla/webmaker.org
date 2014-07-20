@@ -7,6 +7,22 @@
     "message": "Discover creative ways to teach and learn digital superpowers",
     "description": "Heading for first explore subsection with map"
   },
+  "make-learn-teach-section-info": {
+    "message": "The Webmaker community gets together at events around the world&mdash;at libraries, community centers, internet cafes, or in your own living room. Find an event near you, learn how to host your own, or get involved with our global Maker Party (July to Sep 2014).",
+    "description": "Make Learn Teach information section"
+  },
+  "Make. Learn. Get together.": {
+    "message": "Make. Learn. Get together.",
+    "description": "Make. Learn. Get together. Header section"
+  },
+  "Add an event": {
+    "message": "Add an event",
+    "description": "Add an event button"
+  },
+  "Find an event": {
+    "message": "Find an event",
+    "description": "Find an event button"
+  },
   "Overview": {
     "message": "Overview",
     "description": "Overview link for resources page"

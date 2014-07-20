@@ -85,17 +85,23 @@
     </div>
   </section>
 
-  <section id="front-page-events">
-    <div class="container text-white">
-      <h2>{{'Event subsection header' | i18n}}</h2>
-
-      <p>
-        <span bind-unsafe-html="'Event subsection copy' | i18n"></span>
-      </p>
-      <img src="#" retina-image data-src-1x="/img/explore/explore-events.png"
-           data-src-2x="/img/explore/explore-events-2x.png" width="999"
-           height="305"/>
-    </div>
+  <section class="container section-pull-up">
+      <div class="row">
+        <div class="col-sm-3">
+        <figure class="learn-image-explore">
+          <img src="/img/explore/img-explore-mentor.jpg" class="img-circle img-page-info"/>
+           <figcaption class="caption"><i class="fa fa-camera"></i> <a href="https://www.flickr.com/photos/newyouthcity/9613074255">HiveLearningNYC</a></figcaption>
+          </figure>
+        </div>
+        <div class="col-md-9 col-lg-7">
+          <h2 class="text-primary">{{ 'Make. Learn. Get together.' | i18n }}</h2>
+          <p>{{ 'make-learn-teach-section-info' | i18n }}</p>
+          <p class="section-pull-down">
+            <a href="/events" class="btn-events btn btn-lg btn-primary"><span class="fa fa-search"></span> {{ 'Find an event' | i18n }}</a>
+            <a href="https://events.webmaker.org/#!/add" class="btn-events btn btn-lg btn-primary"><span class="fa fa-plus"></span> {{ 'Add an event' | i18n }}</a>
+          </p>
+        </div>
+      </div>
   </section>
 
   <section id="front-page-contribute" class="container">

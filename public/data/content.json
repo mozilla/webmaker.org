@@ -1160,6 +1160,10 @@
         "description": "Make an interactive web mapping application <a href=\"https://thimble.webmaker.org/project/22915/remix\">using the Leaflet.js JavaScript library</a>."
       },
       {
+        "title": "Learn HTML on the Ancient Internet with 'Erase All Kittens'",
+        "description": "Use code to save kitten friends and explore exotic lands by playing the <a href=\"http://eraseallkittens.com/\">Erase All Kittens</a> game."
+      },
+      {
         "title": "Code your own Python script",
         "description": "Learn about the fundamentals with <a href=\"http://www.learnpython.org/\">this interactive tutorial</a>."
       },
@@ -1190,6 +1194,13 @@
           "description": "Share programming skills with kids using Minecraft",
           "url": "https://epik.makes.org/thimble/minecraft-a-flavor-of-java-epik",
           "author": "EPIK - Dorine and Luke",
+          "type": "kit"
+        },
+        {
+          "title": "Erase All Kittens activity guide",
+          "description": "Teach others how to play 'Erase All Kittens', a game that helps learners understand HTML while saving kittens",
+          "url": "https://drumroll.makes.org/thimble/LTExNzQ0MDQ4NjQ=/eak-activity-guide",
+          "author": "Drum Roll HQ",
           "type": "kit"
         },
         {

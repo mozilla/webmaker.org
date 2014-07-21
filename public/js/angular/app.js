@@ -5,15 +5,18 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       $routeProvider
         .when('/:locale?/explore', {
           templateUrl: '/views/explore.html',
-          controller: 'exploreController'
+          controller: 'exploreController',
+          title: 'Explore'
         })
         .when('/resources', {
           templateUrl: '/views/resources.html',
-          controller: 'resourcesHomeController'
+          controller: 'resourcesHomeController',
+          title: 'Resources'
         })
         .when('/:locale/resources', {
           templateUrl: '/views/resources.html',
-          controller: 'resourcesHomeController'
+          controller: 'resourcesHomeController',
+          title: 'Resources'
         })
         .when('/:locale?/resources/literacy/:id', {
           templateUrl: '/views/competency.html',
@@ -21,35 +24,43 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         })
         .when('/:locale?/tools', {
           templateUrl: '/views/tools.html',
-          controller: 'toolsController'
+          controller: 'toolsController',
+          title: 'Tools'
         })
         .when('/:locale?/madewithcode-:mwc', {
           templateUrl: '/views/madewithcode.html',
-          controller: 'mwcController'
+          controller: 'mwcController',
+          title: 'Made with Code'
         })
         .when('/:locale?/admin/badges', {
           templateUrl: '/views/admin/badges-main.html',
-          controller: 'badgesAdminController'
+          controller: 'badgesAdminController',
+          title: 'Badges Admin'
         })
         .when('/:locale?/admin/badges/:badge', {
           templateUrl: '/views/admin/badges-badge.html',
-          controller: 'badgesAdminBadgeController'
+          controller: 'badgesAdminBadgeController',
+          title: 'Badges Admin'
         })
         .when('/:locale?/signup', {
           templateUrl: '/views/signup.html',
-          controller: 'homeController'
+          controller: 'homeController',
+          title: 'Webmaker - Sign Up'
         })
         .when('/:locale?/appmaker', {
           templateUrl: '/views/appmaker.html',
-          controller: 'appmakerController'
+          controller: 'appmakerController',
+          title: 'Discover Appmaker'
         })
         .when('/:locale?/make-your-own', {
           templateUrl: '/views/make-your-own.html',
-          controller: 'makeYourOwnController'
+          controller: 'makeYourOwnController',
+          title: 'TeachTemplates'
         })
         .when('/:locale?', {
           templateUrl: '/views/home.html',
-          controller: 'homeController'
+          controller: 'homeController',
+          title: 'Webmaker'
         })
         .otherwise({
           redirectTo: '/'
@@ -83,7 +94,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       // Set base url
       $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
         // Reset the page title when route changes
-        $rootScope.title = 'Webmaker';
+        $rootScope.title = current.$$route.title || 'Webmaker';
 
         $rootScope.baseUrl = '/';
         if ($routeParams.locale) {

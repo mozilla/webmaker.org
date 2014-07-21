@@ -213,7 +213,6 @@ angular
   ])
   .controller('makeYourOwnController', ['$scope', 'wmNav', 'CONFIG',
     function ($scope, wmNav, CONFIG) {
-      // When we update title, this should be {{ "TeachTemplates" | i18n }}
       wmNav.page('make-your-own');
       wmNav.section('resources');
       $scope.direction = CONFIG.direction;
@@ -433,9 +432,6 @@ angular
           appUrl: '//combative-lake-777.appalot.me/app'
         }
       ];
-
-      // Change the page title for Appmaker.
-      $rootScope.title = 'Discover Appmaker';
 
       // Properties the view needs to see
       $scope.showAudienceTitle = $scope.audiences[0].title;

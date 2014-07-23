@@ -40,6 +40,11 @@ angular
                   url: 'badges/hive-community-member'
                 },
                 {
+                  id: 'webmaker-mentor',
+                  title: 'Webmaker Mentor Badge',
+                  url: 'badges/webmaker-mentor'
+                },
+                {
                   id: 'badges-admin',
                   title: 'Badges Admin',
                   url: 'admin/badges',

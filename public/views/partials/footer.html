@@ -1,6 +1,6 @@
 <footer>
   <div class="container text-center">
-    <p class="lead hidden-xs">{{ 'Mozillians like you' | i18n }}</p>
+    <p class="lead hidden-xs" ng-bind-html="'Mozillians like you' | i18n"></p>
     <ul class="sponsors list-inline hidden-xs" marquee>
       <li>Chicago Community Trust</li>
       <li>Chicago Instructional Technology Foundation</li>
@@ -24,7 +24,7 @@
     </ul>
     <div class="row">
       <div class="col-md-4 col-md-offset-4 text-left">
-        <form name="emailForm" action="https://sendto.webmaker.org/page/s/webmaker" method="post" novalidate>
+        <form name="emailForm" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
           <div class="input-group">
             <span class="input-group-addon"><span class="fa fa-envelope"></span></span>
             <input class="form-control" type="email" ng-model="emailUpdates" name="email" autocomplete="off"  required placeholder="{{ 'Sign up for email updates' | i18n }}" >

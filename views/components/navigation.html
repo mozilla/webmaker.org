@@ -33,16 +33,14 @@
         {% if not page.flag or flags[page.flag] %}
         {% if not page.adminOnly or isAdmin %}
         {% if not page.isAtleastMentor or isAdmin or isSuperMentor or isMentor %}
-        <li{% if page.icon %} class="nav-item-with-icon"{% endif %}>
+        <li>
 
             <a
               data-page="{{page.id}}" {% if page.id == currentPage %}
               class="active"{% endif %}
               href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}
               >
-              {% if page.icon %}
-              <img src="/img/empty.png" class="{{page.icon}}"/>
-              {% endif %}
+              
               {{gettext(page.title)}}
             </a>
         </li>

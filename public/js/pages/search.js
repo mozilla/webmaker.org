@@ -1,6 +1,5 @@
-define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "jquery-ui.autocomplete"],
-  function ($, URI, UI, Masonry, webmakerAuth, analytics) {
-    "use strict";
+define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "localized", "jquery-ui.autocomplete"],
+  function ($, URI, UI, Masonry, webmakerAuth, analytics, localized) {
 
     var query = $(".search-poster").attr("data-query"),
       queryKeys = URI.parse(window.location.href).queryKey,
@@ -64,6 +63,49 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "jquer
         $(".search-wrapper").submit();
       }
     });
+
+    function likeClickCallback(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var $this = $(this),
+        makeID = $this.data("make-id"),
+        method;
+
+      if ($this.hasClass("icon-heart")) {
+        method = "/unlike";
+      } else {
+        method = "/like";
+      }
+      $.post(method, {
+        makeID: makeID,
+        _csrf: $("meta[name='csrf-token']").attr("content")
+      }, function (res) {
+        var newLen = res.likes.length,
+          $count = $this.parent().parent().find(".like-count"),
+          $text = $this.parent().parent().find(".like-text");
+
+        $this.toggleClass("icon-heart icon-heart-empty");
+        $count.html(newLen);
+        if (newLen === 0) {
+          $text.html(localized.get("Like-0"));
+        } else if (newLen === 1) {
+          $text.html(localized.get("Like-1"));
+        } else {
+          $text.html(localized.get("Like-n"));
+        }
+      }).fail(function (res) {
+        if (res.status === 401) {
+          webmakerAuth.login();
+        } else {
+          // already like/unliked, update UI to reflect.
+          $this.toggleClass("icon-heart icon-heart-empty");
+        }
+      });
+    }
+
+    $('.make-like-toggle')
+      .off("click")
+      .on("click", likeClickCallback);
 
     function enableTagSuggestion() {
       $searchField.autocomplete("enable");

@@ -119,7 +119,7 @@ angular
 
       function prepContent(header) {
         $scope.content = $rootScope.content[$scope.tag];
-        var contentSection;
+        var contentSection, section, media;
 
         function swapLink(section, media, newUrl) {
           // Update trusted content item in JSON object
@@ -129,10 +129,10 @@ angular
         contentSection = $scope.content[header];
 
         // Loop through Discover, Make, and Teach
-        for (var section in contentSection) {
+        for (section in contentSection) {
           if (contentSection.hasOwnProperty(section)) {
             // Loop through media items in section selected
-            for (var media in contentSection[section].multimedia) {
+            for (media in contentSection[section].multimedia) {
               if (contentSection[section].multimedia.hasOwnProperty(media)) {
                 // Find content type, return modified content for template
                 switch (contentSection[section].multimedia[media].type) {
@@ -141,6 +141,9 @@ angular
                   break;
                 case 'vimeo':
                   swapLink(section, media, 'https://player.vimeo.com/video/' + contentSection[section].multimedia[media].content + '?title=0&amp;byline=0&amp;portrait=0&amp;color=eb6933');
+                  break;
+                case 'popcorn':
+                  swapLink(section, media, contentSection[section].multimedia[media].content);
                   break;
                 default:
 
@@ -155,8 +158,6 @@ angular
       function updateContentObject() {
         $scope.content = $rootScope.content[$scope.tag];
         $scope.content.discover = prepContent('discover');
-        $scope.content.make = prepContent('make');
-        $scope.content.teach = prepContent('teach');
       }
 
       if ($rootScope.contentReady) {

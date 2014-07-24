@@ -627,23 +627,21 @@
     "icon": "fa-pencil",
     "intro": "<strong>What makes creating for the web different?</strong> Hyperlinks, multimedia, up-to-date content&mdash;these features make the web powerfully interconnected and different from media of the past. When you write and build specifically for the web, recognizing your audience as an interactive part of the  process will allow you to tell stories and build experiences in ways that television, books and other media can&rsquo;t.",
     "related": "weblit-DesignAccessibility",
-    "discover": [
+  "discover": [
       {
         "title": "A brief history of storytelling",
         "multimedia": [
           {
             "type": "markup",
             "content": "Explore the <a href=\"https://mozteach.makes.org/thimble/a-brief-history-of-storytelling\">connections between early cave paintings, video games and today&rsquo;s web</a>."
-          }
-        ]
-      },
-      {
-        "title": "What do screens want?",
-        "multimedia": [
-          {
-            "type": "markup",
-            "content": "An essay by designer Frank Chimero examines <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">what makes creating for the web unique</a>."
-          }
+          },
+            {
+            "type": "image",
+            "content": {
+              "src": "https://stuff.webmaker.org/resources/composinggames.jpg",
+              "alt": "Image thanks to <a href=\"https://www.flickr.com/photos/thisisbossi/6876878214\">Bossi</a> on Flickr."
+            }
+          },
         ]
       },
       {
@@ -653,6 +651,22 @@
             "type": "markup",
             "content": "This <a href=\"http://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b\">Code Academy tutorial</a> is great for learning the basics of HTML, the language of the web."
           }
+        ]
+      },
+            {
+        "title": "What do screens want?",
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "An essay by designer Frank Chimero examines <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">what makes creating for the web unique</a>."
+          },
+          {
+            "type": "image",
+            "content": {
+              "src": "https://stuff.webmaker.org/resources/whatdoscreenswant.gif",
+              "alt": "Gif by Frank Chimero."
+            }
+          },
         ]
       },
       {

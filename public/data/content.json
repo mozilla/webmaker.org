@@ -634,15 +634,13 @@
           {
             "type": "markup",
             "content": "Explore the <a href=\"https://mozteach.makes.org/thimble/a-brief-history-of-storytelling\">connections between early cave paintings, video games and today&rsquo;s web</a>."
-          }
-        ]
-      },
-      {
-        "title": "What do screens want?",
-        "multimedia": [
+          },
           {
-            "type": "markup",
-            "content": "An essay by designer Frank Chimero examines <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">what makes creating for the web unique</a>."
+            "type": "image",
+            "content": {
+              "src": "https://stuff.webmaker.org/resources/composinggames.jpg",
+              "alt": "Image thanks to <a href=\"https://www.flickr.com/photos/thisisbossi/6876878214\">Bossi</a> on Flickr."
+            }
           }
         ]
       },
@@ -652,6 +650,22 @@
           {
             "type": "markup",
             "content": "This <a href=\"http://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b\">Code Academy tutorial</a> is great for learning the basics of HTML, the language of the web."
+          }
+        ]
+      },
+      {
+        "title": "What do screens want?",
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "An essay by designer Frank Chimero examines <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">what makes creating for the web unique</a>."
+          },
+          {
+            "type": "image",
+            "content": {
+              "src": "https://stuff.webmaker.org/resources/whatdoscreenswant.gif",
+              "alt": "Gif by Frank Chimero."
+            }
           }
         ]
       },

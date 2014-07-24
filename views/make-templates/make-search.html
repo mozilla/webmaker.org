@@ -6,7 +6,7 @@
     <div class="type-label"><span class="make-type">{{make.type}}</span></div>
     <div class="make-info">{{make.title}} {{ gettext("by") }}
       {% if make.username %}
-        <a class="user-link" href="/u/{{make.username}}" data-username="{{make.username}}">@{{make.username}}</a>, {{ likeText() }}
+        <a class="user-link" href="/u/{{make.username}}" data-username="{{make.username}}">@{{make.username}}</a>, {{ likeIcon() }} {{ likeText() }}
       {% else %}
         <span>{{ gettext("Anonymous") }}</span>
       {% endif %}

@@ -91,14 +91,19 @@
               </div>
               <div class="v-wrap" ng-switch-when="vimeo">
                 <div class="v-box">
-                  <iframe src="{{ media.content }}" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+                  <iframe ng-src="{{ media.content }}" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="v-wrap" ng-switch-when="popcorn">
+                <div class="v-box">
+                  <iframe ng-src="{{ media.content }}" width="640" height="403" frameborder="0" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
                 </div>
               </div>
               <div ng-switch-when="markup">
                 <p bind-unsafe-html="media.content"></p>
               </div>
               <div ng-switch-when="image">
-                <img src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
+                <img ng-src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
               </div>
             </li>
           </ul>

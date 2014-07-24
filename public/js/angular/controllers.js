@@ -154,6 +154,7 @@ angular
 
       function updateContentObject() {
         $scope.content = $rootScope.content[$scope.tag];
+        $scope.relatedIcon = $rootScope.content[$scope.content.related].icon;
         $scope.content.discover = prepContent('discover');
         $scope.content.make = prepContent('make');
         $scope.content.teach = prepContent('teach');

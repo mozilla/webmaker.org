@@ -2,95 +2,81 @@
 {% block title %}{{ gettext("Mentor") }}{% endblock %}
 {% block body %}
 <div class="ui-wrapper ui-body">
-
   <div class="ui-poster">
-    <img src="/img/img-Mentor-feature.jpg" alt="{{ gettext("Mentor") }}" />
+    <img src="/img/img-Mentor-feature.jpg" alt="{{ gettext("Mentor") }}"/>
   </div>
-
   <div class="ui-section">
-
     <div class="ui-row">
       <h1>{{ gettext("Mentor an eager learner") }}</h1>
-      <div class="subtitle">{{ gettext("Mentor an eager learner paragraph") | safe }}</div>
+      <div class="subtitle">
+        {{ gettext("Mentor an eager learner paragraph") | safe }}
+      </div>
     </div>
-
     <div class="ui-row">
       <h2>{{ gettext("Who are Webmaker mentors?") }}</h2>
-      <p>{{ gettext("We're techies") }}</p>
+      <p>
+        {{ gettext("We're techies") | safe }}
+      </p>
     </div>
-
     <h2>{{ gettext("Meet some amazing mentors.") }}</h2>
     <div class="ui-row the-mentors">
-	<div class="g-2 mentor-profile">
-	  <div class="mentor-header">
-	    <img src="/img/img-mentor-emma-erwin.jpg" class="mentor-img" alt="{{ gettext("Emma") }}" />
-	    <h3>{{ gettext("Emma") }}</h3>
-	    <span>{{ gettext("Video remixing and open source for youth") }}</span>
-	  </div>
-	  <p>{{ gettext("About Emma") }}</p>
-	</div>
-	<div class="g-2 mentor-profile">
-	  <div class="mentor-header">
-	    <img src="http://content-2011.mozillafestival.org/uploads/2011/09/jonrogers-sm.jpg" class="mentor-img"  alt="{{ gettext("Jon") }}" />
-	    <h3>{{ gettext("Jon") }}</h3>
-	    <span>{{ gettext("Making the web physical") }}</span>
-	  </div>
-	  <p>{{ gettext("About Jon") }}</p>
-	</div>
-	<div class="g-2 mentor-profile">
-	  <div class="mentor-header">
-	    <img src="http://content-2012.mozillafestival.org/uploads/2013/01/unnati.jpg" class="mentor-img" alt="{{ gettext("Unnati") }}" />
-	    <h3>{{ gettext("Unnati") }}</h3>
-	    <span>{{ gettext("Youth mentor") }}</span>
-	  </div>
-	  <p>{{ gettext("About Unnati") }}</p>
-	</div>
+      <div class="g-2 mentor-profile">
+        <div class="mentor-header">
+          <img src="/img/img-mentor-emma-erwin.jpg" class="mentor-img" alt="{{ gettext("Emma") }}"/>
+          <h3>{{ gettext("Emma") }}</h3>
+          <span>{{ gettext("Video remixing and open source for youth") }}</span>
+        </div>
+        <p>
+          {{ gettext("About Emma") | safe }}
+        </p>
+      </div>
+      <div class="g-2 mentor-profile">
+        <div class="mentor-header">
+          <img src="http://content-2011.mozillafestival.org/uploads/2011/09/jonrogers-sm.jpg" class="mentor-img" alt="{{ gettext("Jon") }}"/>
+          <h3>{{ gettext("Jon") }}</h3>
+          <span>{{ gettext("Making the web physical") }}</span>
+        </div>
+        <p>
+          {{ gettext("About Jon") | safe }}
+        </p>
+      </div>
+      <div class="g-2 mentor-profile">
+        <div class="mentor-header">
+          <img src="http://content-2012.mozillafestival.org/uploads/2013/01/unnati.jpg" class="mentor-img" alt="{{ gettext("Unnati") }}"/>
+          <h3>{{ gettext("Unnati") }}</h3>
+          <span>{{ gettext("Youth mentor") }}</span>
+        </div>
+        <p>
+          {{ gettext("About Unnati") | safe }}
+        </p>
+      </div>
     </div>
-
     <div class="ui-row">
-      <h2>{{ gettext("How to become a mentor") }}</h2>
-      <p>{{ gettext("Mentors help others learn") }}
-      <ul>
-		<li>{{ gettext("Creating and sharing resources") | instantiate | safe }}</li>
-		<li>{{ gettext("Hosting Webmaker events") | instantiate | safe }}</li>
-		<li>{{ gettext("Joining our weekly community calls") | safe }}</li>
-      </ul></p>
+      <h2>{{ gettext("The Webmaker Mentor Badge") }}</h2>
+      <img src="https://stuff.webmaker.org/badges/webmaker-mentor.png" class="badge-img">
+      <p>
+        {{ gettext("The Webmaker Mentor Badge Sub") | instantiate | safe }}
+      </p>
     </div>
-
     <div class="ui-row">
-      <h2>{{ gettext("Why become a mentor?") }}</h2>
+      <h2>{{ gettext("How to become a Webmaker Mentor") }}</h2>
+      <p>
+        {{ gettext("Mentors help others learn") | safe }}
+      </p>
       <ul>
-		<li><strong>{{ gettext("Expand your network.") }}</strong> {{ gettext("Webmaker's mentor community") }}</li>
-		<li><strong>{{ gettext("Grow your reach.") }}</strong> {{ gettext("Mozilla's annual Maker Party") | instantiate | safe }}</li>
-		<li><strong>{{ gettext("Get gear.") }}</strong> {{ gettext("Webmaker mentors get access") | safe }}</li>
-		<li><strong>{{ gettext("Shape standards.") }}</strong> {{ gettext("A global community that wants") | safe }}</li>
-		<li><strong>{{ gettext("Be on the cutting edge.") }}</strong> {{ gettext("Webmaker mentors are defining the future") }}</li>
+        <li>{{ gettext("Creating and sharing resources") | instantiate | safe }}</li>
+        <li>{{ gettext("Hosting Webmaker events") | instantiate | safe }}</li>
+        <li>{{ gettext("Joining our weekly community calls") | safe }}</li>
       </ul>
     </div>
-
-	<div class="ui-row">
-	  <h2>{{ gettext("Connecting with other mentors") }}</h2>
-	  <ul class="mentors-connect">
-	    <li><i class="icon-angle-right"></i>
-	      <h3><a href='https://twitter.com/search?q=%23teachtheweb'>{{ gettext("Tweet #teachtheweb") }}</a></h3>
-	      <p>{{ gettext("The fastest way to get help") }}</p>
-	    </li>
-	    <li><i class="icon-angle-right"></i>
-	      <h3><a href='https://plus.google.com/u/0/communities/106022863174952221205'>
-	      				{{ gettext("Join our global conversation forum.") }}</a></h3>
-	      <p>{{ gettext("This is the G+ community") }}</p>
-	    </li>
-	    <li><i class="icon-angle-right"></i>
-	      <h3><a href='/{{localeInfo.lang}}/getinvolved'>{{ gettext("Get involved with Webmaker.") }}</a></h3>
-	      <p>{{ gettext("From newsletters to community calls") }}</p>
-	    </li>
-	    <li><i class="icon-angle-right"></i>
-	      <h3><a href='https://sendto.mozilla.org/page/s/mentor-signup'>{{ gettext("Stay in touch.") }}</a></h3>
-	      <p>{{ gettext("Join our Webmaker Mentor email list") }}</p>
-	    </li>
-	  </ul>
-	</div>
-
+    <div class="ui-row">
+      <h2>{{ gettext("Why become a Webmaker Mentor?") }}</h2>
+      <ul>
+        <li>{{ gettext("WhyBecomeMentorLI-1") | safe }}</li>
+        <li>{{ gettext("WhyBecomeMentorLI-2") | safe }}</li>
+        <li>{{ gettext("WhyBecomeMentorLI-3") | safe }}</li>
+      </ul>
+    </div>
   </div>
 </div>
 {% endblock %}

@@ -1979,17 +1979,17 @@
     "teach": {
       "kits": [
         {
-          "title": "Join a Webmaker Training session",
-          "description": "Wondering how to apply open practices to Webmaker? Get involved in the next Webmaker Training and learn how to teach vital web literacy skills in your own community:",
-          "url": "http://training.webmakerprototypes.org/en/start-here/",
-          "author": "Community",
+          "title": "The Net Neutrality teaching kit",
+          "description": "How can we explain the importance of an Internet that treats content providers, users and information equally?",
+          "url": "https://keyboardkat.makes.org/thimble/LTQzNjIwNzM2MA==/net-neutrality-teaching-kit",
+          "author": "Kat Braybrooke and Chad Sansing, with thanks to Laura Hilliger, Dave Steer, Alina Hua, Jess Klein and Karen Smith",
           "type": "kit"
         },
         {
-          "title": "And here&rsquo;s a quick &ldquo;Get Started&rdquo; page",
-          "description": "that you can remix for your own needs",
-          "url": "https://laura.makes.org/thimble/LTE5MzI3ODc3MTI=/how-to-participate-in-webmaker-training",
-          "author": "@laura",
+          "title": "Join a Webmaker Training session",
+          "description": "Wondering how to apply open practices to Webmaker? Get involved in the next Webmaker Training and learn how to teach vital web literacy skills in your own community:",
+          "url": "http://training.webmakerprototypes.org/en/start-here/",
+          "author": "Webmaker Community",
           "type": "kit"
         },
         {
@@ -2000,14 +2000,21 @@
           "type": "kit"
         },
         {
-          "title": "Design Challenge: Cultural Licenses",
-          "description": "Facilitate this activity by Mozilla&rsquo;s Kat Braybrooke and the Tate Britain&rsquo;s Luca Damiani to lead a group through the process of determining an open cultural license and then discussing how it works with different kinds of content",
-          "url": "https://keyboardkat.makes.org/thimble/design-challenge-license-debrief",
-          "author": "Kat Braybrooke, Mozilla",
+          "title": "Webmaker Open Online Train the Trainer, India",
+          "description": "An online session to learn about open practices using IRC",
+          "url": "https://shashank_gaikaiwari.makes.org/thimble/LTIwNzk3ODQ3MDQ=/woott",
+          "author": "Shashank Gaikaiwari",
           "type": "kit"
         },
         {
-          "title": "Understanding Hacking with Hive India",
+          "title": "Design Challenge: Cultural licenses",
+          "description": "Facilitate this activity by Mozilla&rsquo;s Kat Braybrooke and the Tate Britain&rsquo;s Luca Damiani to lead a group through the process of determining an open cultural license and then discussing how it works with different kinds of content",
+          "url": "https://keyboardkat.makes.org/thimble/design-challenge-license-debrief",
+          "author": "Kat Braybrooke and Tate Britain's Luca Damiani",
+          "type": "kit"
+        },
+        {
+          "title": "Understanding hacking with Hive India",
           "description": "This kit by Webmaker community member Tanay Pant shares a variety of articles that help mentors spread awareness about the &ldquo;open&rdquo; sides of hacker culture ",
           "url": "https://tanay1337.makes.org/thimble/MTg1ODkyODY0MA==/understanding-hacking-and-the-hacking-culture",
           "author": "Tanay Pant",

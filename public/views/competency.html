@@ -20,174 +20,181 @@
       </div>
     </div>
 
-  <div ng-controller="resourceFormController">
-
-    <div ng-hide="clickedResource" class="well well-grey">
-      <div class="row">
-        <div class="col-sm-8">
-          <h3 bind-unsafe-html="'Suggest your own links and resources' | i18n"></h3>
-        </div>
-        <div class="col-sm-4 text-right">
-          <p>
+    <div ng-controller="resourceFormController">
+      <div ng-hide="clickedResource" class="well well-grey">
+        <div class="row">
+          <div class="col-sm-8">
+            <h3 bind-unsafe-html="'Suggest your own links and resources' | i18n"></h3>
+          </div>
+          <div class="col-sm-4 text-right">
+            <p>
             <span ng-show="_user.email">
             <a href="#" ng-click="clickedResource = !clickedResource" class="btn btn-lg btn-success">
               <span class="fa fa-plus"></span> {{ 'Submit a resource' | i18n }}
             </a>
             </span>
             <span ng-show="!_user.email">
-              <button ng-cloak ng-show="!_user.email" class="btn btn-lg btn-success" ng-click="login()">{{ 'Login to submit a resource' | i18n }}</button>
+              <button ng-cloak ng-show="!_user.email" class="btn btn-lg btn-success" ng-click="login()">
+                {{ 'Login to submit a resource' | i18n }}
+              </button>
             </span>
-          </p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div ng-show="clickedResource" class="panel panel-navy">
+        <div class="panel-body">
+          <a href="#" ng-click="clickedResource = !clickedResource; success = false"><i class="fa fa-times close-panel"></i></a>
+
+          <h2 bind-unsafe-html="'Suggest a resource for' | i18n"></h2>
+
+          <form role="form" name="resourceForm">
+            <div class="form-group">
+              <label for="link">{{ 'Link:' | i18n }}</label>
+              <input type="text" class="form-control" id="link" ng-model="formData.link" placeholder="https://website.com/my-resource" required>
+            </div>
+            <div class="form-group">
+              <label for="language">{{ 'What language is your resource link?' | i18n }}</label>
+              <input type="text" class="form-control" id="language" ng-model="formData.language" placeholder="e.g. Spanish" required>
+            </div>
+            <button ng-hide="success" name="submit" ng-disabled="!resourceForm.$valid" class="btn btn-primary btn-lg pull-right" ng-click="submit(resourceForm)">
+              {{ 'Submit' | i18n }}
+            </button>
+          </form>
+          <div class="alert alert-success text-center" ng-show="success">
+            <span class="fa fa-check"></span>
+            <span bind-unsafe-html="'success resource banner' | i18n"></span>
+          </div>
         </div>
       </div>
     </div>
-
-    <div ng-show="clickedResource" class="panel panel-navy">
-      <div class="panel-body">
-        <a href="#" ng-click="clickedResource = !clickedResource; success = false"><i class="fa fa-times close-panel"></i></a>
-        <h2 bind-unsafe-html="'Suggest a resource for' | i18n"></h2>
-        <form role="form" name="resourceForm">
-          <div class="form-group">
-            <label for="link">{{ 'Link:' | i18n }}</label>
-            <input type="text" class="form-control" ng-model="formData.link" placeholder="https://website.com/my-resource" required>
-          </div>
-          <div class="form-group">
-            <label for="language">{{ 'What language is your resource link?' | i18n }}</label>
-            <input type="text" class="form-control" ng-model="formData.language" placeholder="e.g. Spanish" required>
-          </div>
-          <button ng-hide="success" name="submit" ng-disabled="!resourceForm.$valid" class="btn btn-primary btn-lg pull-right" ng-click="submit(resourceForm)">{{ 'Submit' | i18n }}</button>
-        </form>
-        <div class="alert alert-success text-center" ng-show="success">
-          <span class="fa fa-check"></span>
-          <span bind-unsafe-html="'success resource banner' | i18n"></span>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
     <div class="row">
       <div class="col-sm-2">
         <pagemenu affix class="competency-page-menu"></pagemenu>
       </div>
       <div class="col-sm-10 main-competency" pageitems selector="section-anchor" topmargin="50">
-          <h2 class="header-section">
-            <a class="section-anchor" id="discover">{{ 'Discover' | i18n }}</a>
-            <span class="fa fa-random"></span> {{ 'Discover' | i18n }}
-          </h2>
+        <h2 class="header-section">
+          <a class="section-anchor" id="discover">{{ 'Discover' | i18n }}</a>
+          <span class="fa fa-random"></span> {{ 'Discover' | i18n }}
+        </h2>
 
-          <ul ng-repeat="item in content.discover" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
-            <li>
-              <div>
-                <h2 ng-bind-html="item.title"></h2>
-                <p ng-bind-html="item.description"></p>
-              </div>
-            </li>
-            <li ng-repeat="media in item.multimedia" ng-switch="media.type">
-              <div class="v-wrap" ng-switch-when="youtube">
-                <div class="v-box">
-                  <iframe allowfullscreen frameborder="0" width="853" height="480" ng-src="{{ media.content }}"></iframe>
-                </div>
-              </div>
-              <div class="v-wrap" ng-switch-when="vimeo">
-                <div class="v-box">
-                  <iframe ng-src="{{ media.content }}" width="500" height="281" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="v-wrap" ng-switch-when="popcorn">
-                <div class="v-box">
-                  <iframe ng-src="{{ media.content }}" width="640" height="403" frameborder="0" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
-                </div>
-              </div>
-              <div ng-switch-when="markup">
-                <p bind-unsafe-html="media.content"></p>
-              </div>
-              <div ng-switch-when="image">
-                <img ng-src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
-              </div>
-            </li>
-          </ul>
-
-          <h2 class="header-section">
-            <a class="section-anchor" id="make">{{ 'Make' | i18n }}</a>
-            <span class="fa fa-hand-o-up"></span> {{ 'Make' | i18n }}
-          </h2>
-
-          <ul ng-repeat="item in content.make" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
-            <li>
-              <div>
-                <h2 ng-bind-html="item.title"></h2>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p ng-bind-html="item.description"></p>
-              </div>
-            </li>
-          </ul>
-
-          <h2 class="header-section">
-            <a class="section-anchor" id="teach">{{ 'Teach' | i18n }}</a>
-            <span class="fa fa-book"></span> {{ 'Teach' | i18n }}
-          </h2>
-
-          <h4 class="header-divider">
-            {{ 'Featured Teaching Resources' | i18n }}
-          </h4>
-
-          <div ng-hide="content.teach.kits.length" class="well well-create-kit text-center">
-            <button class="btn btn-default btn-create-kit"><span class="fa fa-plus"></span></button>
-            <p class="text-muted" ng-bind-html="'noStaffPick' | i18n"></p>
-          </div>
-
-          <div class="row">
-            <div ng-repeat="kit in content.teach.kits" class="col-sm-6 col-lg-4">
-              <a target="_blank" class="thumbnail thumbnail-staff-pick thumbnail-{{kit.type}}" href="{{kit.url}}">
-                <div class="caption">
-                  <h3 ng-bind-html="kit.title"></h3>
-                  <p class="text-muted">{{ 'By' | i18n }} {{ kit.author }}</p>
-                </div>
-              </a>
+        <ul ng-repeat="item in content.discover" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
+          <li>
+            <div>
+              <h2 ng-bind-html="item.title"></h2>
+              <p ng-bind-html="item.description"></p>
             </div>
-          </div>
-
-          <h4 class="header-divider">{{ 'More Resources' | i18n }}</h4>
-
-          <ul ng-repeat="item in content.teach.more" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
-            <li>
-              <div>
-                <h2 ng-bind-html="item.title"></h2>
+          </li>
+          <li ng-repeat="media in item.multimedia" ng-switch="media.type">
+            <figure class="video-container" ng-switch-when="youtube">
+              <div class="video-letterbox">
+                <iframe ng-src="{{ media.content }}" width="853" height="480" frameborder="0" allowfullscreen></iframe>
               </div>
-            </li>
-            <li>
-              <div>
-                <p ng-bind-html="item.description"></p>
+            </figure>
+            <figure class="video-container" ng-switch-when="vimeo">
+              <div class="video-letterbox">
+                <iframe ng-src="{{ media.content }}" width="500" height="281" frameborder="0" allowfullscreen></iframe>
               </div>
-            </li>
-          </ul>
-
-          <div class="row ctas">
-            <div class="col-sm-4" ng-repeat="cta in content.ctas">
-              <h3 class="text-primary" bind-unsafe-html="cta.title"></h3>
-              <p bind-unsafe-html="cta.description"></p>
-              <p ng-show="cta.link"><a href="{{cta.link}}" class="btn btn-success">{{ 'Learn more' | i18n }}</a></p>
+            </figure>
+            <figure class="video-container" ng-switch-when="popcorn">
+              <div class="video-letterbox">
+                <iframe ng-src="{{ media.content }}" width="640" height="403" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </figure>
+            <div ng-switch-when="markup">
+              <p bind-unsafe-html="media.content"></p>
             </div>
+            <div ng-switch-when="image">
+              <img ng-src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="header-section">
+          <a class="section-anchor" id="make">{{ 'Make' | i18n }}</a>
+          <span class="fa fa-hand-o-up"></span> {{ 'Make' | i18n }}
+        </h2>
+
+        <ul ng-repeat="item in content.make" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
+          <li>
+            <div>
+              <h2 ng-bind-html="item.title"></h2>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p ng-bind-html="item.description"></p>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="header-section">
+          <a class="section-anchor" id="teach">{{ 'Teach' | i18n }}</a>
+          <span class="fa fa-book"></span> {{ 'Teach' | i18n }}
+        </h2>
+
+        <h4 class="header-divider">
+          {{ 'Featured Teaching Resources' | i18n }}
+        </h4>
+
+        <div ng-hide="content.teach.kits.length" class="well well-create-kit text-center">
+          <button class="btn btn-default btn-create-kit">
+            <span class="fa fa-plus"></span></button>
+          <p class="text-muted" ng-bind-html="'noStaffPick' | i18n"></p>
+        </div>
+
+        <div class="row">
+          <div ng-repeat="kit in content.teach.kits" class="col-sm-6 col-lg-4">
+            <a target="_blank" class="thumbnail thumbnail-staff-pick thumbnail-{{kit.type}}" href="{{kit.url}}">
+              <div class="caption">
+                <h3 ng-bind-html="kit.title"></h3>
+
+                <p class="text-muted">{{ 'By' | i18n }} {{ kit.author }}</p>
+              </div>
+            </a>
           </div>
         </div>
 
+        <h4 class="header-divider">{{ 'More Resources' | i18n }}</h4>
+        <ul ng-repeat="item in content.teach.more" class="list list-subway list-subway-{{skill.tag}} text-{{skill.tag}}">
+          <li>
+            <div>
+              <h2 ng-bind-html="item.title"></h2>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p ng-bind-html="item.description"></p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="row ctas">
+          <div class="col-sm-4" ng-repeat="cta in content.ctas">
+            <h3 class="text-primary" bind-unsafe-html="cta.title"></h3>
+
+            <p bind-unsafe-html="cta.description"></p>
+
+            <p ng-show="cta.link">
+              <a href="{{cta.link}}" class="btn btn-success">{{ 'Learn more' | i18n }}</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
-  <footer class="footer-competency bg-{{ content.related }}">
-    <a href="/{{ lang }}/resources/literacy/{{ content.related }}" push-state="true">
-      <div class="container">
-        <div class="col-sm-10 col-sm-offset-2">
-          <h4>{{ 'You might also like' | i18n }}</h4>
+<footer class="footer-competency bg-{{ content.related }}">
+  <a href="/{{ lang }}/resources/literacy/{{ content.related }}" push-state="true">
+    <div class="container">
+      <div class="col-sm-10 col-sm-offset-2">
+        <h4>{{ 'You might also like' | i18n }}</h4>
 
-          <h1><span class="fa {{ relatedIcon }}"></span> {{ weblit.term(content.related) }}</h1>
-          <p class="lead">{{ weblit.description(content.related) }}</p>
-        </div>
+        <h1><span class="fa {{ relatedIcon }}"></span> {{ weblit.term(content.related) }}</h1>
+        <p class="lead">{{ weblit.description(content.related) }}</p>
       </div>
-    </a>
-  </footer>
+    </div>
+  </a>
+</footer>

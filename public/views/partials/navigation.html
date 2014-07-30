@@ -60,11 +60,11 @@
           </a>
         </li>
       </ul>
-      <form class="navbar-form navbar-right visible-lg" role="search">
+      <form class="navbar-form navbar-right visible-lg" role="search" name="searchMakesForm">
         <div class="form-group">
-          <input type="text" ng-model="searchInput" class="search-input form-control" placeholder="Search">
+          <input type="text" ng-model="searchInput" class="search-input form-control" placeholder="Search" required>
         </div>
-        <button type="submit" class="btn btn-link" ng-click="isSearching=true; search(searchInput)">
+        <button type="submit" class="btn btn-link" ng-click="isSearching=true; search(searchInput)" ng-disabled="searchMakesForm.$invalid">
           <span ng-if="!isSearching" class="fa fa-search"></span>
           <span ng-if="isSearching" class="fa fa-spinner fa-spin"></span>
           <span class="sr-only">{{ 'Search' | i18n }}</span>

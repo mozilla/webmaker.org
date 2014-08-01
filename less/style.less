@@ -672,12 +672,12 @@ img {
  */
 .about-hello {
   img {
-    float: right;
-    margin-left: 20px;
-    @media only screen and (max-width: @width-small) {
-      float: none;
-      display: block;
-      margin: 0 auto;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    @media only screen and (min-width: @screen-xs) {
+      float: right;
+      margin-left: 1.25rem;
     }
   }
 }

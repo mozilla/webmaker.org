@@ -671,15 +671,15 @@ img {
  * ABOUT
  */
 .about-hello {
-  p {
-    width: 500px;
-  }
   img {
-    float: right;
-    margin-left: 20px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    @media only screen and (min-width: @screen-xs) {
+      float: right;
+      margin-left: 1.25rem;
+    }
   }
-
-
 }
 
 #about {

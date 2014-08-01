@@ -66,10 +66,10 @@ angular
               pushState: true,
               pages: [
                 {
-                  id: 'popcorn',
-                  icon: 'popcorn-icon',
-                  title: 'Popcorn Maker',
-                  url: 'https://popcorn.webmaker.org/' + config.lang,
+                  id: 'xray',
+                  icon: 'xray-icon',
+                  title: 'X-Ray Goggles',
+                  url: 'https://goggles.webmaker.org/' + config.lang,
                   external: 'true'
                 },
                 {
@@ -80,10 +80,10 @@ angular
                   external: 'true'
                 },
                 {
-                  id: 'xray',
-                  icon: 'xray-icon',
-                  title: 'X-Ray Goggles',
-                  url: 'https://goggles.webmaker.org/' + config.lang,
+                  id: 'popcorn',
+                  icon: 'popcorn-icon',
+                  title: 'Popcorn Maker',
+                  url: 'https://popcorn.webmaker.org/' + config.lang,
                   external: 'true'
                 },
                 {

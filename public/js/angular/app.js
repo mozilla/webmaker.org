@@ -1,9 +1,8 @@
 angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
-  'webmakerAngular.login', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'])
+  'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'])
   .config(['$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
     function ($routeProvider, $locationProvider, makeApiProvider, CONFIG) {
       makeApiProvider.options.apiURL = CONFIG.makeApiUrl;
-
       $routeProvider
         .when('/:locale/explore', {
           templateUrl: '/views/explore.html',
@@ -148,11 +147,11 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         }
       }
       if ((matches && matches[0]) && CONFIG.supported_languages.indexOf(matchesLang) === -1) {
-        $location.url(CONFIG.lang + href);
+        $location.path(CONFIG.lang + href);
       } else if ((matches && matches[0]) && CONFIG.supported_languages.indexOf(matchesLang) !== -1) {
         return;
       } else {
-        $location.url(CONFIG.lang + href);
+        $location.path(CONFIG.lang + href);
       }
 
       // Configure CSRF token

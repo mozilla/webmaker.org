@@ -57,6 +57,11 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'makeYourOwnController',
           title: 'TeachTemplates'
         })
+        .when('/:locale?/feedback', {
+          templateUrl: '/views/feedback.html',
+          controller: 'feedbackController',
+          title: 'Feedback'
+        })
         .when('/:locale?', {
           templateUrl: '/views/home.html',
           controller: 'homeController',

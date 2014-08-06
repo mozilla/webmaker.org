@@ -473,4 +473,10 @@ angular
         }
       };
     }
+  ])
+  .controller('feedbackController', ['$scope', 'wmNav',
+    function ($scope, wmNav) {
+      wmNav.section('info');
+      wmNav.page('feedback');
+    }
   ]);

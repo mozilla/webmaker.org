@@ -112,7 +112,38 @@ angular
               id: 'info',
               url: 'about',
               title: 'Info',
-              icon: 'info'
+              icon: 'info',
+              external: true,
+              pages: [
+                {
+                  id: 'blog',
+                  title: 'Blog',
+                  url: 'https://blog.webmaker.org/',
+                  external: true
+                },
+                {
+                  id: 'about',
+                  title: 'About',
+                  url: 'about'
+                },
+                {
+                  id: 'getinvolved',
+                  title: 'Get Involved',
+                  url: 'getinvolved'
+                },
+                {
+                  id: 'feedback',
+                  title: 'Feedback',
+                  url: 'feedback',
+                  pushState: true
+                },
+                {
+                  id: 'help',
+                  title: 'Help',
+                  url: 'https://support.mozilla.org/' + config.lang + '/products/webmaker',
+                  external: true
+                }
+              ]
             }
           ]
         },

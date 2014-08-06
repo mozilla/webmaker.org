@@ -1,0 +1,121 @@
+#feedback {
+  .submit-bug {
+    display: inline-block;
+    margin: 2rem auto;
+    &::after {
+      .icon(@fa-chevron-right);
+    }
+  }
+  .chevron-list {
+    margin-bottom: 2rem;
+  }
+
+  .status-whiteboard {
+    margin: 3rem auto 0;
+  }
+
+  .bugzilla {
+    background: @mozilla-sand;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    max-width: 43rem;
+    padding: 1rem;
+    width: 100%;
+    @media screen and (min-width: @screen-xs-min) {
+      height: 6rem;
+      margin: 1rem auto;
+    }
+  }
+
+  .status {
+    color: @grey;
+    font-size: 0.8em;
+    line-height: 1.2;
+    padding-right: 1rem;
+    @media screen and (max-width: @screen-md-min) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+#dummyFeedback {
+  background: @white;
+  color: @grey;
+  border-radius: 0.5rem;
+  border: 0.2rem solid lighten(@mozilla-charcoal, 50%);
+  font-size: 2.2rem;
+  padding: 0 1rem;
+  max-width: 27rem;
+  width: 100%;
+  @media screen and (min-width: @screen-md-min) {
+  }
+}
+
+label[for="dummyFeedback"] {
+  @media screen and (min-width: @screen-xs-min) {
+    float: left;
+    font-size: 1.6rem;
+    margin-right: 1.6rem;
+    max-width: 12rem;
+    text-align: right;
+  }
+}
+
+#community-testing {
+  background: @blue;
+  h2 {
+    &::before {
+      .icon(@fa-group);
+    }
+  }
+}
+
+#submit-a-bug {
+  background: @grey;
+  h2 {
+    &::before {
+      .icon(@fa-bug);
+    }
+  }
+}
+
+#share-experiences {
+  background: @brand-primary;
+  h2 {
+    &::before {
+      .icon(@fa-comments);
+    }
+  }
+}
+
+.color-block-row {
+  color: @white;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  @media screen and (min-width: @screen-sm-min) {
+    font-size: 2.2rem;
+  }
+  a {
+    &:link, :visited, &:hover, &:active, &:focus {
+      color: @white;
+      text-decoration: underline;
+    }
+  }
+  h2 {
+    font-size: 3.6rem;
+    &::before {
+      font-size: 0.875em;
+      margin-right: 0.25em;
+    }
+  }
+  input {
+    color: @black;
+  }
+  .btn {
+    &:link, :visited, &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+}

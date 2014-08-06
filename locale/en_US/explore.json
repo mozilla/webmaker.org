@@ -282,5 +282,61 @@
   "Get training.": {
     "message": "Get training.",
     "description": "As in, 'Start training with Webmaker'. Found on front page, webmaker training cta"
+  },
+  "How are we doing?": {
+    "message": "How are we doing?",
+    "description": "headline on Feedback"
+  },
+  "Receiving your opinions on the Webmaker experience": {
+    "message": "Receiving your opinions on the Webmaker experience is important to us. In fact, your feedback is the first thing we take into account when we plan future improvements to the site. Please take a minute to tell us what you like about the site, what doesn’t work how you expected it would and what could be better.",
+    "description": "copy on Feedback"
+  },
+  "Participate in community testing sessions": {
+    "message": "Participate in community testing sessions",
+    "description": "Headline for community testing session on Feedback"
+  },
+  "Submit a bug on Bugzilla": {
+    "message": "Submit a “bug” on Bugzilla",
+    "description": ""
+  },
+  "Share community experiences": {
+    "message": "Share community experiences",
+    "description": ""
+  },
+  "Opportunities to get involved": {
+    "message": "The Webmaker team periodically posts opportunities for people to test our site, tools and training resources. To get involved participate in one of our many community testing sessions, <a href=\"https://wiki.mozilla.org/Webmaker/TeachTheWeb/Testing\">visit the wiki page</a> for more information.",
+    "description": "copy to encourage people to get involved in testing"
+  },
+  "Our team uses an issue tracker called Bugzilla": {
+    "message": "Our team uses an issue tracker called <a href=\"https://bugzilla.mozilla.org/\">Bugzilla</a> for filing bugs and monitoring fixes. Anyone can submit a bug. And just because it’s called a “bug” doesn’t necessarily mean there’s something wrong; it can be an idea you have for a feature, a note about how much you like something or a non-technical suggestion for improvements.",
+    "description": "description for bugzilla"
+  },
+  "When you file your bug, be sure to use feedback": {
+    "message": "When you file your bug, be sure to put “Feedback” in the Status Whiteboard field so we can find it.",
+    "description": "explainer text for status whiteboard on Feedback"
+  },
+  "Status Whiteboard": {
+    "message": "Status Whiteboard:",
+    "description": "label for faux bugzilla field on Feedback"
+  },
+  "Submit a bug for Popcorn Maker": {
+    "message": "Submit a bug for Popcorn Maker",
+    "description": "quick links list item on Feedback"
+  },
+  "Submit a bug for Thimble": {
+    "message": "Submit a bug for Thimble",
+    "description": "quick links list item on Feedback"
+  },
+  "Submit a bug for Webmaker.org": {
+    "message": "Submit a bug for Webmaker.org",
+    "description": "quick links list item on Feedback"
+  },
+  "Submit a bug now": {
+    "message": "Submit a bug now",
+    "description": "button text on Feedback"
+  },
+  "We’re always eager to learn how Webmaker is used": {
+    "message": "We’re always eager to learn how Webmaker is used to teach the web to diverse audiences. If you have stories about using Webmaker in your community, please join the <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker newsgroup</a> and share your feedback by email. You can also participate in conversations on Twitter by replying to <a href=\"https://twitter.com/webmaker\">@webmaker</a> or using the hashtag <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+    "description": "copy encouraging people to get involved on Feedback"
   }
 }

@@ -351,6 +351,7 @@ if (env.get('FLAGS_EXPLORE')) {
 }
 app.get("/tools", routes.angular);
 app.get("/appmaker", routes.angular);
+app.get("/feedback", routes.angular);
 
 app.get("/make-your-own", routes.angular);
 app.get('/madewithcode-*', routes.angular);
@@ -396,7 +397,6 @@ app.post("/api/submit-resource", routes.api.submitResource);
 app.get("/mentor", routes.page("mentor"));
 app.get("/getinvolved", routes.page("getinvolved"));
 app.get("/search", routes.search);
-app.get("/feedback", routes.page("feedback"));
 
 // Old route - turned into a 301 (perm. redirect) on 2014-02-11.
 // This route should not be removed until sufficient time

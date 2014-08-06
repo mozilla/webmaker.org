@@ -2,7 +2,7 @@
   "weblit-Sample-Content": {
     "icon": "fa-times-circle",
     "intro": "<strong>This is sample content.</strong> This object will help internal content creators form additional competencies.",
-    "related": null,
+    "related":"weblit-Navigation",
     "discover": [
       {
         "title": "Test Content",

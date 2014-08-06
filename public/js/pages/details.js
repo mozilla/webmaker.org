@@ -70,7 +70,7 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client'],
         var timer;
 
         function hideTooltip(e) {
-          window.removeEventListener("click", clickCallback, false);
+          window.removeEventListener("click", clickCallback);
           window.clearTimeout(timer);
           $tooltipElem.addClass("hide");
         }

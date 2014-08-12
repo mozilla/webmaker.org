@@ -8,12 +8,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'exploreController',
           title: 'Explore'
         })
-        .when('/resources', {
-          templateUrl: '/views/resources.html',
-          controller: 'resourcesHomeController',
-          title: 'Resources'
-        })
-        .when('/:locale/resources', {
+        .when('/:locale?/resources', {
           templateUrl: '/views/resources.html',
           controller: 'resourcesHomeController',
           title: 'Resources'
@@ -42,7 +37,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'badgesAdminBadgeController',
           title: 'Badges Admin'
         })
-        .when('/:locale?/signup', {
+        .when('/:locale?/signup/:auth?', {
           templateUrl: '/views/signup.html',
           controller: 'homeController',
           title: 'Webmaker - Sign Up'

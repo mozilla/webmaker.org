@@ -1,0 +1,132 @@
+<article id="feedback">
+  <div class="container">
+    <figure class="hero row">
+      <img src="/img/feedback-hero.jpg" alt="" class="hero">
+    </figure>
+  </div>
+
+  <section class="container">
+    <div class="row">
+      <h1 class="col-xs-12">{{ 'How are we doing?' | i18n }}</h1>
+
+      <p class="col-xs-12">
+        {{ 'Receiving your opinions on the Webmaker experience' | i18n}}
+      </p>
+    </div>
+    <div class="row">
+      <nav class="col-xs-12">
+        <ul class="chevron-list">
+          <li>
+            <a class="anchor-slide" href="#community-testing">
+              {{ 'Participate in community testing sessions' | i18n }}
+            </a>
+          </li>
+          <li>
+            <a class="anchor-slide" href="#submit-a-bug">
+              {{ 'Submit a bug on Bugzilla' | i18n }}
+            </a>
+          </li>
+          <li>
+            <a class="anchor-slide" href="#share-experiences">
+              {{ 'Share community experiences' | i18n }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section id="community-testing" class="color-block-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>
+            {{ 'Participate in community testing sessions' | i18n }}
+          </h2>
+          <p bind-unsafe-html="'Opportunities to get involved' | i18n"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="submit-a-bug" class="color-block-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>{{ 'Submit a bug on Bugzilla' | i18n }}</h2>
+
+          <p bind-unsafe-html="'Our team uses an issue tracker called Bugzilla' | i18n"></p>
+
+          <p>
+            {{ 'When you file your bug, be sure to use feedback' | i18n }}
+          </p>
+
+          <div class="status-whiteboard">
+            <div class="bugzilla">
+              <div class="status">
+                <label for="dummyFeedback">
+                  {{ 'Status Whiteboard:' | i18n }}
+                </label>
+              </div>
+              <input type="text" id="dummyFeedback" value="{{ 'Feedback' | i18n }}" disabled/>
+            </div>
+            <div class="subheader">
+              <p>
+                <small>
+                  {{ 'If you don’t see the Whiteboard field' | i18n }}
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 quick-links">
+          <h3>{{ 'Quick links:' | i18n }}</h3>
+
+          <ul>
+            <li>
+              <a href="https://blog.webmaker.org/bugzilla-for-webmaker" target="_blank">
+                {{ 'Getting Started with Bugzilla' | i18n }}
+              </a>
+            </li>
+            <li>
+              <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webmaker&component=webmaker.org" target="_blank">
+                {{ 'Submit a bug for Webmaker.org' | i18n }}
+              </a>
+            </li>
+            <li>
+              <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webmaker&component=Popcorn%20Maker" target="_blank">
+                {{ 'Submit a bug for Popcorn Maker' | i18n }}
+              </a>
+            </li>
+            <li>
+              <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webmaker&component=Thimble" target="_blank">
+                {{ 'Submit a bug for Thimble' | i18n }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+          <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webmaker" target="_blank" class="btn btn-info btn-lg btn-block submit-bug">
+            {{ 'Submit a bug now' | i18n }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="share-experiences" class="color-block-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>{{ 'Share community experiences' | i18n }}</h2>
+
+          <p bind-unsafe-html="'We’re always eager to learn how Webmaker is used' | i18n"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

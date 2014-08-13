@@ -102,8 +102,9 @@
   "StandardExploringWMPoint3": "Demonstrating the difference between the results of varying search strategies",
   "StandardFooterButton": "Get involved!",
   "StandardFooterTranslate": "Translate the Web Literacy Map into your language.",
-  "StandardMainDesc": "The Web Literacy Map is a map of competencies and skills that Mozilla and our community of stakeholders believe are important to pay attention to when getting better at reading, writing and participating on the web.",
-  "StandardMainDescInProgress": "Keep up to date with the latest changes to the Web Literacy Map on the <a target='_blank' href='http://mzl.la/weblitstd'>wiki</a>.",
+  "StandardMainDesc1": "Mozilla defines web literacy as the skills and competencies needed for reading, writing and participating on the web.",
+  "StandardMainDesc2": "To chart these skills and competencies, Mozilla worked alongside a <a href=\"https://wiki.mozilla.org/Learning/WebLiteracyMap/Contributors\">community of stakeholders</a> to create the Web Literacy Map.",
+  "StandardMainDesc3": "Read more about why Mozilla cares about web literacy in this <a href=\"https://mozilla.github.io/webmaker-whitepaper/\">Webmaker Whitepaper</a>.",
   "StandardMainHeader": "The Web Literacy Map <span class='weblit-spec'>(specification)</span>",
   "WebLiteracyMap": "Web Literacy Map"
 }

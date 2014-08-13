@@ -3,31 +3,11 @@
 {% block title %}{{ wlc.title() }} - {{ wlc.version }}{% endblock %}
 {% block body %}
 
-<div class="container">
-  <h1>{{ wlc.title() }} ({{ wlc.version }})</h1>
-  <p class="lead">{{ gettext('StandardMainDesc') }}</p>
-  <p class="lead">{{ gettext('StandardMainDescInProgress') | safe }}</p>
-  <ul class="list-hanging list-unstyled">
-  {% for strand, literacies in wlc.allByStrand() %}
-    <li class="strand-section">
-      <h3 class="strand" id="{{ strand }}"><a href="#{{ strand }}">{{ strand }}</a></h3>
-      <ul class="list-unstyled">
-        {% for literacy in literacies %}
-        <li class="competency-section">
-          <h4 class="competency" id="{{ literacy.term }}"><a href="#{{ literacy.term }}">{{ literacy.term }}</a></h4>
-          <p class="description">{{ literacy.description }}</p>
-          <ul>
-            {% for point in wlcPoints[literacy.tag] %}
-            <li>{{ gettext(point) }}</li>
-          {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-      </ul>
-    </li>
-  {% endfor %}
-  </ul>
-
+  <div class="container">
+    <h1>{{ wlc.title() }} ({{ wlc.version }})</h1>
+    <p class="lead">{{ gettext('StandardMainDesc1') }}</p>
+    <p class="lead">{{ gettext('StandardMainDesc2') | safe }}</p>
+    <p class="lead">{{ gettext('StandardMainDesc3') | safe }}</p>
   </div>
   <div class="well well-web-literacy">
     <h3>{{ gettext('StandardFooterTranslate') }}</h3>

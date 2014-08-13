@@ -95,7 +95,7 @@
         </div>
         <div class="col-md-9 col-lg-7">
           <h2 class="text-primary">{{ 'Make. Learn. Get together.' | i18n }}</h2>
-          <p>{{ 'make-learn-teach-section-info' | i18n }}</p>
+          <p ng-bind-html="'make-learn-teach-section-info' | i18n"></p>
           <p class="section-pull-down">
             <a href="/events" class="btn-events btn btn-lg btn-primary"><span class="fa fa-search"></span> {{ 'Find an event' | i18n }}</a>
             <a href="https://events.webmaker.org/#!/add" class="btn-events btn btn-lg btn-primary"><span class="fa fa-plus"></span> {{ 'Add an event' | i18n }}</a>

@@ -23,7 +23,7 @@
             {% else %}
             <p>{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
             {% endif %}
-            <p>{{ badge.earnerDescription }}</p>
+            <p>{{ badge.earnerDescription | markdown | safe }}</p>
           </div>
         </div>
       </div>

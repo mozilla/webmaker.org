@@ -422,23 +422,23 @@ angular
         {
           title: 'Music App',
           image: '/img/appmaker/music-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://petite-carriage-8.appalot.me/app',
-          installUrl: '//petite-carriage-8.appalot.me/install',
-          appUrl: '//petite-carriage-8.appalot.me/app'
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://acidic-stick-959.webmak.es/app',
+          installUrl: '//acidic-stick-959.webmak.es/install',
+          appUrl: '//acidic-stick-959.webmak.es/app'
         },
         {
           title: 'Chat App',
           image: '/img/appmaker/chat-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://loose-mass-816.appalot.me/app',
-          installUrl: '//loose-mass-816.appalot.me/install',
-          appUrl: '//loose-mass-816.appalot.me/app'
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://cute-window-475.webmak.es/app',
+          installUrl: '//cute-window-475.webmak.es/install',
+          appUrl: '//cute-window-475.webmak.es/app'
         },
         {
           title: 'Fireworks App',
           image: '/img/appmaker/fireworks-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://combative-lake-777.appalot.me/app',
-          installUrl: '//combative-lake-777.appalot.me/install',
-          appUrl: '//combative-lake-777.appalot.me/app'
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://sweet-coil-961.webmak.es/app',
+          installUrl: '//sweet-coil-961.webmak.es/install',
+          appUrl: '//sweet-coil-961.webmak.es/app'
         }
       ];
 

@@ -131,7 +131,7 @@ app.use(require('prerender-node'));
 
 app.use(helmet.iexss());
 app.use(helmet.contentTypeOptions());
-app.use(helmet.xframe());
+app.use(helmet.xframe('allow-from', 'http://optimizely.com'));
 
 if ( !! env.get("FORCE_SSL")) {
   app.use(helmet.hsts());

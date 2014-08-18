@@ -338,5 +338,13 @@
   "We’re always eager to learn how Webmaker is used": {
     "message": "We’re always eager to learn how Webmaker is used to teach the web to diverse audiences. If you have stories about using Webmaker in your community, please join the <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker newsgroup</a> and share your feedback by email. You can also participate in conversations on Twitter by replying to <a href=\"https://twitter.com/webmaker\">@webmaker</a> or using the hashtag <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
     "description": "copy encouraging people to get involved on Feedback"
+  },
+  "Build your first mobile app in seconds": {
+    "message": "Build your first mobile app in seconds",
+    "description": "Appmaker tagline"
+  },
+  "Try it out": {
+    "message": "Try it out",
+    "description": "Try using Appmaker"
   }
 }

@@ -238,7 +238,7 @@ angular
 
       function init() {
         $scope.madewithcode = $rootScope.madewithcode[$scope.page];
-
+        $scope.userId = $rootScope._user.id;
       }
 
       // Don't fire controller until after $rootScope is ready

@@ -101,8 +101,13 @@ module.exports = function (grunt) {
             'bower_components/webmaker-analytics/analytics.js',
 
             'bower_components/angular/angular.js',
+
+            'bower_components/makeapi-angular/src/makeapi-angular.js',
+            'bower_components/makeapi-angular/dist/makeapi-angular.templates.js',
+
             'bower_components/angular-bootstrap/ui-bootstrap.js',
             'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+
             'bower_components/ngScrollSpy/dist/ngScrollSpy.js',
             'bower_components/angular-resource/angular-resource.js',
             'bower_components/angular-route/angular-route.js',

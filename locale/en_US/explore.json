@@ -346,5 +346,9 @@
   "Try it out": {
     "message": "Try it out",
     "description": "Try using Appmaker"
+  },
+  "English only": {
+    "message": "English only",
+    "description": ""
   }
 }

@@ -15,6 +15,10 @@
     .padded;
   }
 
+  .btn-home {
+    padding: 15px 24px;
+  }
+
 
   // Carousel ---------------------
   #home-carousel {
@@ -33,6 +37,25 @@
       height: 100%;
       .flex-display(flex);
       .align-items(center);
+    }
+    #slide-0 {
+      background: #E1ECEE;
+      color: @green;
+      .appmaker-logo {
+        width: 70%;
+        @media (min-width: @screen-sm-min) {
+          width: 33%;
+        }
+      }
+      h1 {
+        @media (min-width: @screen-sm-min) {
+          font-size: 4rem;
+        }
+        @media (min-width: @screen-md-min) {
+          font-size: 7.2rem;
+        }
+        margin: 1rem 0 2rem;
+      }
     }
     #slide-1 {
       @media @standard-def {
@@ -72,6 +95,9 @@
     a {
       color: @white;
       text-decoration: underline;
+      &.btn {
+        text-decoration: none;
+      }
     }
     .maker-party-logo {
       width: 25%;
@@ -136,18 +162,7 @@
       color: @white;
       text-decoration: underline;
     }
-    h1 {
-      @media (min-width: @screen-sm-min) {
-        font-size: 6rem;
-      }
-      font-weight: 200;
-      line-height: 1;
-    }
-    p {
-      margin: 1rem 0 1.5rem 0;
-    }
-    .btn {
-      padding: 15px 24px;
+    .btn-home {
       margin-right: 5px;
       &.btn-default {
         border: none;
@@ -164,6 +179,16 @@
           background-color: darken(@darkgreen, 5%);
         }
       }
+    }
+    h1 {
+      @media (min-width: @screen-sm-min) {
+        font-size: 6rem;
+      }
+      font-weight: 200;
+      line-height: 1;
+    }
+    p {
+      margin: 1rem 0 1.5rem 0;
     }
     // cats and stuff
     .illustration {

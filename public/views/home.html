@@ -2,13 +2,24 @@
 
 <section id="home-carousel">
   <carousel interval="-1">
+    <slide class="slide" id="slide-0">
+      <div class="slide-inner">
+        <div class="container text-center">
+          <img class="appmaker-logo" src="/img/appmaker/appmaker-logo-with-wordmark.png" alt="Appmaker">
+          <h1>{{ 'Build your first mobile app in seconds.' | i18n }}</h1>
+          <p><a href="/{{lang}}/appmaker" class="btn btn-success btn-home">{{ 'Try it out' | i18n }} <span class="fa fa-chevron-right"></span></a></p>
+        </div>
+      </div>
+    </slide>
     <slide class="slide" id="slide-1">
+    <div class="slide-inner">
       <div class="container text-center">
         <img class="maker-party-logo" src="/img/home/maker-party-logo.svg" alt="Maker Party">
         <h1>{{ 'Throw an Event' | i18n }}</h1>
         <h3 bind-unsafe-html="'maker_party_date' | i18n"></h3>
         <p class="lead">{{ 'maker_party_tagline' | i18n }} <a href="https://party.webmaker.org">{{ 'Learn more' | i18n }}</a></p>
       </div>
+    </div>
     </slide>
     <slide class="slide" id="slide-2">
       <div class="slide-inner">
@@ -44,8 +55,8 @@
         <h1>{{ 'We teach the web' | i18n }}</h1>
         <p>{{ 'front-page-description' | i18n }}</p>
         <p>
-          <button class="btn btn-default" ng-click="login()">{{ 'Create an account' | i18n }}</button>
-          <button class="btn btn-success" ng-click="login()">{{ 'Sign in' | i18n }}</button>
+          <button class="btn btn-default btn-home" ng-click="login()">{{ 'Create an account' | i18n }}</button>
+          <button class="btn btn-success btn-home" ng-click="login()">{{ 'Sign in' | i18n }}</button>
         </p>
       </div>
     </div>

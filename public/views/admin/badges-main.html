@@ -3,16 +3,17 @@
     <h1>{{ "Badges Admin" | i18n }}</h1>
     <p class="lead">{{ "ChooseABadge" | i18n }}</p>
   </hgroup>
-  <div>
-    <div ng-repeat="badge in badges" class="row badge-row-admin">
-      <a ng-if="hasPermissions(badge.slug)" href="{{ baseUrl }}admin/badges/{{ badge.slug }}">
-        <div class="col-xs-4 col-sm-2">
-          <img ng-src="{{ badge.imageUrl }}">
-        </div>
-        <div class="col-xs-8 col-sm-10">
-          <h3>{{ badge.name }}</h3>
-        </div>
-      </a>
-    </div>
+  <div class="alert alert-info">
+    <a href="https://wiki.mozilla.org/Webmaker/Badges/Issuing" target="_blank">Get advice</a> on how to issue badges ({{'English only' | i18n}})
+  </div>
+  <div ng-repeat="badge in badges" class="row badge-row-admin">
+    <a ng-if="hasPermissions(badge.slug)" href="{{ baseUrl }}admin/badges/{{ badge.slug }}">
+      <div class="col-xs-4 col-sm-2">
+        <img ng-src="{{ badge.imageUrl }}">
+      </div>
+      <div class="col-xs-8 col-sm-10">
+        <h3>{{ badge.name }}</h3>
+      </div>
+    </a>
   </div>
 </div>

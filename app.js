@@ -353,6 +353,7 @@ if (env.get('FLAGS_EXPLORE')) {
 app.get("/tools", routes.angular);
 app.get("/appmaker", routes.angular);
 app.get("/feedback", routes.angular);
+app.get("/getinvolved", routes.angular);
 
 app.get("/make-your-own", routes.angular);
 app.get('/madewithcode-*', routes.angular);
@@ -396,7 +397,6 @@ app.delete("/api/badges/:badge/instance/email/:email", badgesRoutes.middleware.h
 app.post("/api/submit-resource", routes.api.submitResource);
 
 app.get("/mentor", routes.page("mentor"));
-app.get("/getinvolved", routes.page("getinvolved"));
 app.get("/search", routes.search);
 
 // Old route - turned into a 301 (perm. redirect) on 2014-02-11.

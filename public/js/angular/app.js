@@ -57,6 +57,11 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'feedbackController',
           title: 'Feedback'
         })
+        .when('/:locale?/getinvolved', {
+          templateUrl: '/views/getinvolved.html',
+          controller: 'getinvolvedController',
+          title: 'Get Involved'
+        })
         .when('/:locale?', {
           templateUrl: '/views/home.html',
           controller: 'homeController',

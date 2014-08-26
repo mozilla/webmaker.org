@@ -486,4 +486,10 @@ angular
       wmNav.section('info');
       wmNav.page('feedback');
     }
+  ])
+  .controller('getinvolvedController', ['$scope', 'wmNav',
+    function ($scope, wmNav) {
+      wmNav.section('info');
+      wmNav.page('getinvolved');
+    }
   ]);

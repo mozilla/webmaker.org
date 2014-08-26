@@ -133,7 +133,7 @@
   },
   "Become a mentor": {
     "message": "Become a mentor",
-    "description": "Button in mentors section on literacy pages"
+    "description": "Button in mentors section on literacy pages, line item on /getinvolved"
   },
   "More Resources": {
     "message": "More resources",
@@ -350,5 +350,125 @@
   "English only": {
     "message": "English only",
     "description": ""
+  },
+  "Mozilla Webmaker creates software, projects and events": {
+    "message": "Mozilla Webmaker creates software, projects and events that promote web literacy through making and sharing. We’re an open source project powered by makers, mentors and community leaders. We’d love you to get involved.",
+    "description": "copy for ‘9 ways to get involved’"
+  },
+  "9 Ways to Get Involved with Webmaker": {
+    "message": "9 Ways to Get Involved with Webmaker",
+    "description": "headline on /getinvolved"
+  },
+  "Make something": {
+    "message": "Make Something",
+    "description": "line item on /getinvolved"
+  },
+  "Making is the basis of everything we do.": {
+    "message": "Making is the basis of everything we do. Try remixing one of our <a href=\"/{{ lang }}/resources\">starter resources</a>, or make something from scratch using <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, or <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Then share it with the world using hashtag <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+    "description": "Make something copy"
+  },
+  "Find or host an event": {
+    "message": "Find or host an event",
+    "description": "line item on /getinvolved"
+  },
+  "From hack jams to pop ups to the global Maker Party": {
+    "message": "From hack jams to pop ups to the global <a href=\"https://party.webmaker.org\">Maker Party</a>, there’s an event to suit every interest. Search for one near you or host your own — we have <a href=\"/{{ lang }}/event-guides\">guides</a> to show you how.",
+    "description": "Find or host an event copy"
+  },
+  "Teach the web": {
+    "message": "Teach the web",
+    "description": "line item on /getinvolved"
+  },
+  "You don’t need to be a wizard to teach the web.": {
+    "message": "You don’t need to be a wizard to teach the web. We’ve created <a href=\"/{{ lang }}/teach\">hackable guides</a> for teaching web literacy, webmaking, online storytelling and more. Want to create your own lesson plan? We have <a href=\"/{{ lang }}/teach-templates\">great templates</a> for that.",
+    "description": "Teach the Web copy"
+  },
+  "Mentoring is a chance to share your knowledge": {
+    "message": "Mentoring is a chance to share your knowledge and provide feedback directly to learners of all ages around the world who are hungry for digital skills.",
+    "description": "Become a mentor copy on /getinvolved"
+  },
+  "Donate to Webmaker": {
+    "message": "Donate to Webmaker",
+    "description": "line item on /getinvolved"
+  },
+  "As a non-profit organization, we depend on": {
+    "message": "As a non-profit organization, we depend on the generosity of people like you to fund our goal of encouraging millions of people around the world to move beyond using the web to making it.",
+    "description": "copy for Donate to Webmaker"
+  },
+  "Please support our work": {
+    "message": "Please <a href=\"https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link\">support our work</a>.",
+    "description": "donate link"
+  },
+  "Contribute a guide or resource": {
+    "message": "Contribute a guide or resource",
+    "description": "line item on /getinvolved"
+  },
+  "Do you have a web literacy project?": {
+    "message": "Do you have a web literacy project? We’d love to hear about it and potentially share it on Webmaker.org.",
+    "description": "Contribute a guide copy"
+  },
+  "Help with beta-testing & quality assurance": {
+    "message": "Help with beta-testing & quality assurance",
+    "description": "line item on /getinvolved"
+  },
+  "new Webmaker tools and projects": {
+    "message": "Be the first to try out new <a href=\"/{{ lang }}/tools\">Webmaker tools</a> and projects.",
+    "description": "copy for QA on /getinvolved, line 1"
+  },
+  "Participate in user testing": {
+    "message": "Participate in user testing, give feedback, or help with QA. Your testing and ideas will make Mozilla Webmaker products better and help shape their future.",
+    "description": "copy for QA on /getinvolved, line 2"
+  },
+  "Contribute code": {
+    "message": "Contribute code",
+    "description": "line item on /getinvolved"
+  },
+  "All Webmaker tools are open source.": {
+    "message": "All Webmaker tools are open source. Contribute ideas, patches, bugs or your own demos and prototypes. Access documentation, issue trackers and more.",
+    "description": "copy for contribute code on /getinvolved"
+  },
+  "Communicate": {
+    "message": "Communicate",
+    "description": ""
+  },
+  "Sign up for Webmaker announcement list": {
+    "message": "Sign up for the <a href=\"https://sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup\">Webmaker announcement list</a></strong>.",
+    "description": "Communicate line item on /getinvolved"
+  },
+  "Receive occasional email updates": {
+    "message": "Receive occasional email updates only about the most important stuff&mdash;about once a month.",
+    "description": "communicate line item description"
+  },
+  "Join the Webmaker newsgroup": {
+    "message": "Join the <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker newsgroup.</a>",
+    "description": "copy on bullet point on /getinvolved"
+  },
+  "active daily discussion paragraph": {
+    "message": "This is a more active daily discussion where you can help shape the direction of the Webmaker project.",
+    "description": "copy on bullet point on /getinvolved"
+  },
+  "Connect through social media": {
+    "message": "<strong>Connect through social media</strong> and see what people are making, follow events from around the world and check out new Webmaker projects by visiting our <a href=\"https://mozillawebmaker.tumblr.com/\">Tumblr</a>, <a href=\"https://twitter.com/webmaker\">Twitter</a>, <a href=\"https://www.facebook.com/mozilla\">Facebook</a>, <a href=\"https://www.flickr.com/photos/mozilladrumbeat/favorites/\">Flickr</a>, <a href=\"https://www.youtube.com/mozillawebmakers\">YouTube</a> and <a href=\"https://blog.webmaker.org/\">our blog</a>.",
+    "description": "copy on bullet point on /getinvolved"
+  },
+  "Say hello on a Webmaker community call": {
+    "message": "Say hello on a <a href=\"https://wiki.mozilla.org/Webmakers/Community_Calls\">Webmaker Community call</a>.",
+    "description": "copy on bullet point on /getinvolved"
+  },
+  "Join our community call": {
+    "message": "Join our community calls every Tuesday. All are welcome! Ask questions, meet our community and staff and find the resources you need.",
+    "description": "copy on bullet point on /getinvolved"
+  },
+  "Wait, there’s more!": {
+    "message": "Wait, there’s more!",
+    "description": "copy on bullet point on /getinvolved"
+  },
+  "connect in many ways.": {
+    "message": "We’re a big community and we connect in many ways.",
+    "description": "copy on bullet point on /getinvolved"
+  },
+  "Visit our communications wiki": {
+    "message": "Visit our <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">communications wiki</a> to find even more places you can reach us.",
+    "description": "copy on bullet point on /getinvolved"
   }
 }

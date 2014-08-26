@@ -1137,6 +1137,10 @@
           {
             "type": "markup",
             "content": "Watch this <a href=\"https://www.youtube.com/watch?feature=player_embedded&v=nKIu9yen5nc\">Hour of Code video</a> where programmers explain how scripting changed their life."
+          },
+          {
+            "type": "youtube",
+            "content": "nKIu9yen5nc"
           }
         ]
       },
@@ -1150,16 +1154,16 @@
         ]
       },
       {
-        "title": "JavaScript for Cats",
+        "title": "Javascript for cats",
         "multimedia": [
           {
             "type": "markup",
-            "content": "A fun <a href=\"http://jsforcats.com/\">introduction for new programmers</a>."
+            "content": "A great <a href=\"http://jsforcats.com/\">introduction for new programmers</a>."
           }
         ]
       },
       {
-        "title": "Learn Javascript while gaming",
+        "title": "Learn code while gaming",
         "multimedia": [
           {
             "type": "markup",
@@ -1195,7 +1199,7 @@
       },
       {
        "title": "Cover a webpage with French toast",
-       "description": "Drag <a href=\"https://mousemeredith.makes.org/thimble/ODg2MTc3Nzky/javascript-takeover\">this bookmarklet</a> to your toolbar to cover any web page with French toast! Then try remixing the code to include your own images."
+       "description": "Drag <a href=\"https://mousemeredith.makes.org/thimble/ODg2MTc3Nzky/javascript-takeover-bookmarklet\">this bookmarklet</a> to your toolbar to cover any web page with French toast! Then try remixing the code to include your own images."
       }
     ],
     "teach": {
@@ -1226,6 +1230,20 @@
           "description": "This card game teaches JavaScript offline",
           "url": "https://chadsansing.makes.org/thimble/MTYwNTk1OTY4MA==/code-thief-printnplay-instructions",
           "author": "Chad Sansing",
+          "type": "kit"
+        },
+        {
+          "title": "Teach learners basic tags with the Train Game",
+          "description": "Ride the HTML train",
+          "url": "https://tanay1337.makes.org/thimble/MTM1ODE2ODA2NA==/learning-html-tags-through-the-train-game",
+          "author": "Tanay Pant",
+          "type": "kit"
+        },
+        {
+          "title": "The mobile hacking kit",
+          "description": "Learn how to hack the web by coding for mobile devices",
+          "url": "https://jess.makes.org/thimble/LTE4NjQzMDI1OTI=/mobile-hacking-kit",
+          "author": "Jess Klein and Bobby Richter",
           "type": "kit"
         }
       ]

@@ -129,7 +129,8 @@ angular
                 {
                   id: 'getinvolved',
                   title: 'Get Involved',
-                  url: 'getinvolved'
+                  url: 'getinvolved',
+                  pushState: true
                 },
                 {
                   id: 'feedback',

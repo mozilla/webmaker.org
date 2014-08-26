@@ -113,7 +113,7 @@ angular
               url: 'about',
               title: 'Info',
               icon: 'info',
-              external: true,
+              pushState: true,
               pages: [
                 {
                   id: 'blog',
@@ -124,7 +124,8 @@ angular
                 {
                   id: 'about',
                   title: 'About',
-                  url: 'about'
+                  url: 'about',
+                  pushState: true
                 },
                 {
                   id: 'getinvolved',

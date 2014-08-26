@@ -470,5 +470,74 @@
   "Visit our communications wiki": {
     "message": "Visit our <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">communications wiki</a> to find even more places you can reach us.",
     "description": "copy on bullet point on /getinvolved"
+  },
+  "About Us": {
+    "message": "About Us",
+    "description": "text for /about title and nav description"
+  },
+  "Hello.": {
+    "message": "Hello.",
+    "description": ""
+  },
+  "Welcome to Webmaker-Mozilla": {
+    "message": "Welcome to Webmaker&mdash;a <a href='https://www.mozilla.org/mission/'>Mozilla</a> project dedicated to helping you create something amazing on the web.",
+    "description": "/about first section first sentence"
+  },
+
+  "Our tools, events and teaching guides": {
+    "message": "Our <a href=\"/{{ lang }}/tools\">tools</a>, <a href=\"/{{ lang }}/events\">events</a> and <a href=\"/{{ lang }}/teach\">teaching guides</a> allow webmakers to not only create the content that makes the web great, but &mdash; perhaps more importantly &mdash; understand how the web works.",
+    "description": "/about first section second sentence"
+  },
+  "With this knowledge": {
+    "message": "With this knowledge, we can make a web without limits. That’s the philosophy behind webmaker.org.",
+    "description": "/about first section third sentence"
+  },
+  "see how it works": {
+    "message": "We’ve built everything so you can see how it works, take it apart and remix it.",
+    "description": "/about first section fourth sentence"
+  },
+  "Enjoy!": {
+    "message": "Enjoy!",
+    "description": "/about first section last sentence"
+  },
+  "Our goal encourage millions of people": {
+    "message": "<strong>Our goal:</strong> encourage millions of people around the world to move beyond using the web to making it.",
+    "description": "‘our goal’ on /about"
+  },
+  "Tools": {
+    "message": "Tools",
+    "description": "headline for section on /about"
+  },
+  "Creating the web is the heart of our work": {
+    "message": "Creating the web is the heart of our work. We build tools like <a href=\"//thimble.webmaker.org/{{localeInfo.lang}}/\">Thimble</a>, <a href=\"//goggles.webmaker.org/{{localeInfo.lang}}/\">X-Ray Goggles</a> and <a href=\"//popcorn.webmaker.org/{{localeInfo.lang}}/\">Popcorn Maker</a> that allow people to create amazing content while  peeking under the hood of the internet, getting familiar with all the moving parts and getting their hands dirty with foundational elements like HTML, CSS and JavaScript.",
+    "description": "tools section copy on /about"
+  },
+  "Teach &amp; Learning": {
+    "message": "Teach &amp; Learning",
+    "description": "headline for section on /about"
+  },
+  "Learning through making": {
+    "message": "Learning through making is a core part of Mozilla's mission.",
+    "description": "/about Teach & Learning section first sentence"
+  },
+  "We provide starter projects": {
+    "message": "We provide <a href=\"/{{ lang }}/resources\">starter projects</a>, <a href=\"/{{ lang }}/teach\">templates</a> and <a href=\"/{{ lang }}/guides\">event guides</a> to inspire teachers and learners at every level to create on the web and share their knowledge with others.",
+    "description": "/about Teach & Learning section second sentence"
+  },
+  "We consider digital literacy": {
+    "message": "We consider <a href=\"/{{ lang }}/literacy\">web literacy</a> a critical skill just like reading, writing and math.",
+    "description": "/about Teach & Learning section third sentence"
+  },
+  "when we understand the building blocks": {
+    "message": "After all, it’s only when we understand the building blocks of the web that we can have a hand in shaping its future.",
+    "description": "/about Teach & Learning section fourth sentence"
+  },
+  "Community": {
+    "message": "Community",
+    "description": "headline for section on /about"
+  },
+  "We recognize that innovation can come from anyone": {
+    "message": "We recognize that innovation can come from anyone, anywhere, so we bring together people with diverse skills and backgrounds &mdash; teachers, filmmakers, <a href=\"http://opennews.org/\">journalists</a>, hackers, <a href=\"http://explorecreateshare.org\">youth</a>, artists, <a href=\"http://kaythaney.com/\">scientists</a> policy-makers and more  &mdash;  to collaborate online and at events around the globe.",
+    "description": "/about Community section copy"
   }
 }

@@ -804,6 +804,10 @@
           {
             "type": "markup",
             "content": "A mashup <a href=\"http://thru-you.com/#/videos/3/\">created by remixing hundreds of uploaded You Tube clips</a>"
+          },
+          {
+            "type": "youtube",
+            "content": "tprMEs-zfQA"
           }
         ]
       },
@@ -823,6 +827,10 @@
           {
             "type": "markup",
             "content": "Watch <a href=\"https://www.nfb.ca/film/rip_a_remix_manifesto/\">the entire RIP film</a> free"
+          },
+          {
+            "type": "vimeo",
+            "content": "14912890"
           },
           {
             "type": "markup",
@@ -867,7 +875,7 @@
           "title": "Teach learners how to make web video mashups",
           "description": "Use this teaching kit to work with Popcorn Maker in three easy steps",
           "url": "https://kathrynmeisner.makes.org/thimble/popcorn-maker-in-3-easy-steps",
-          "author": "MozTeach",
+          "author": "Kathryn Meisner",
           "type": "kit"
         },
         {
@@ -878,10 +886,24 @@
           "type": "kit"
         },
         {
-          "title": "Make a Meme",
+          "title": "Make a meme",
           "description": "Remix popular Internet memes by putting your own spin on them",
           "url": "https://thimble.webmaker.org/project/59455/remix",
-          "author": "Christina",
+          "author": "Christina Cantrill",
+          "type": "kit"
+        },
+        {
+          "title": "Videojam: Life in the slowww lane",
+          "description": "Learn about Net Neutrality through remix",
+          "url": "https://keyboardkat.makes.org/thimble/LTEyMjQyNzc3NjA=/videojam-life-in-the-slowww-lane",
+          "author": "Ollie Simpson and Kat Braybrooke",
+          "type": "kit"
+        },
+        {
+          "title": "A remix activity for cybersafety",
+          "description": "Remix memes and learn about safety and security",
+          "url": "https://laura.makes.org/thimble/remix-for-cybersafety",
+          "author": "Laura Hilliger",
           "type": "kit"
         }
       ],

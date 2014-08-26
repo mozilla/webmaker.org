@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <img src="/img/img-About-Us-feature.jpg" alt="{{ 'About Us' | i18n }}" class="cover-photo">
+  </div>
+
+    <div class="row">
+      <h1 class="col-xs-12">{{ 'Hello.' | i18n }}</h1>
+      <div class="col-xs-12">
+        <figure class="about-hello">
+          <img src="/img/img-About-Us-learning.jpg" alt="Learning" class="img-circle">
+        </figure>
+        <p class="lead">
+          <span bind-unsafe-html="'Welcome to Webmaker-Mozilla' | i18n"></span>
+          <span bind-unsafe-html="'Our tools, events and teaching guides' | i18n"></span>
+          {{ 'With this knowledge' | i18n }}
+          {{ 'see how it works' | i18n }}
+          {{ 'Enjoy!' | i18n }}
+        </p>
+        <p bind-unsafe-html="'Our goal encourage millions of people' | i18n"></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h3><a href="/{{ lang }}/tools">{{ 'Tools' | i18n }}</a></h3>
+        <p bind-unsafe-html="'Creating the web is the heart of our work' | i18n"></p>
+      </div>
+
+      <div class="col-xs-12">
+        <h3><a href='/{{ lang }}/teach' bind-unsafe-html="'Teach &amp; Learning' | i18n"></a></h3>
+        <p>
+          <span bind-unsafe-html="'Learning through making' | i18n"></span>
+          <span bind-unsafe-html="'We provide starter projects' | i18n "></span>
+          <span bind-unsafe-html="'We consider digital literacy' | i18n"></span>
+          {{ 'when we understand the building blocks' | i18n }}
+        </p>
+      </div>
+      <div class="col-xs-12">
+        <h3><a href='/{{ lang }}/getinvolved'>{{ 'Community' | i18n }}</a></h3>
+        <p bind-unsafe-html="'We recognize that innovation can come from anyone' | i18n"></p>
+      </div>
+    </div>
+  </div>

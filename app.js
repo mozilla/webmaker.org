@@ -354,6 +354,7 @@ app.get("/tools", routes.angular);
 app.get("/appmaker", routes.angular);
 app.get("/feedback", routes.angular);
 app.get("/getinvolved", routes.angular);
+app.get("/about", routes.angular);
 
 app.get("/make-your-own", routes.angular);
 app.get('/madewithcode-*', routes.angular);
@@ -366,7 +367,6 @@ app.get("/gallery", routes.gallery({
 app.get("/editor", middleware.checkAdmin, routes.gallery({
   page: "editor"
 }));
-app.get("/about", routes.page("about"));
 
 app.get("/privacy-makes", routes.gallery({
   layout: "privacy-makes",

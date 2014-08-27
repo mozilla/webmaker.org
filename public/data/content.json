@@ -825,12 +825,12 @@
         "description": "Like <em>RIP: A Remix Manifesto</em> or <em>Everything is a Remix</em>.",
         "multimedia": [
           {
-            "type": "markup",
-            "content": "Watch <a href=\"https://www.nfb.ca/film/rip_a_remix_manifesto/\">the entire RIP film</a> free"
-          },
-          {
             "type": "vimeo",
             "content": "14912890"
+          },
+          {
+            "type": "markup",
+            "content": "Watch <a href=\"https://www.nfb.ca/film/rip_a_remix_manifesto/\">the entire RIP film</a> free"
           },
           {
             "type": "markup",

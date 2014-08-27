@@ -249,7 +249,12 @@
         background-image: url(/img/home/map.png);
       }
       &.get-together {
-        background-image: url(/img/home/get-together.png);
+        @media @standard-def {
+          background-image: url(/img/home/get-together.jpg);
+        }
+        @media @retina {
+          background-image: url(/img/home/get-together@2x.jpg);
+        }
       }
     }
   }

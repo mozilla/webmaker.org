@@ -128,7 +128,9 @@
   <div class="container">
     <h2>{{ gettext("Badge Requirements") }}
       <span class="application-off">
-        <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">{{ gettext("Apply") }}</button>
+        {% if not assertionUrl %}
+          <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">{{ gettext("Apply") }}</button>
+        {% endif %}
         {% if canIssue %}
           <button id="js-badge-issuing" class="btn btn-lg btn-success pull-right">Issue this badge</button>
         {% endif %}

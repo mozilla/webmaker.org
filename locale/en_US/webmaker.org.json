@@ -366,6 +366,8 @@
   "Thanks": "Thanks",
   "IssuedBadgeSuccess": "Your badge was issued successfully.",
   "BadgesIssuedBy": "Issued by:",
+  "ViewOnProfile": "View on your profile",
+  "SendToBackpack": "Send to a backpack",
   "GotApplication": "Thanks for submitting!",
   "ReplyToEmail": "We will let you know via email (<strong class=\"webmaker-email-placeholder\"></strong>) whether or not your application has been approved.",
   "ClaimSuccess": "You've claimed a badge!",

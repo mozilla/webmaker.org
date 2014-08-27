@@ -1,4 +1,5 @@
 var BadgeClient = require('badgekit-api-client');
+var async = require("async");
 
 module.exports = function (env) {
 
@@ -123,11 +124,33 @@ module.exports = function (env) {
     },
     details: function (req, res, next) {
 
-      badgeClient.getBadge({
-        system: env.get('BADGES_SYSTEM'),
-        badge: req.params.badge
-      }, function (err, data) {
-
+      async.parallel([
+        function(callback) {
+          badgeClient.getBadge({
+            system: env.get('BADGES_SYSTEM'),
+            badge: req.params.badge
+          }, function(err, data) {
+            return callback(err, data)
+          });
+        },
+        function(callback) {
+          if (req.session.user) {
+            badgeClient.getBadgeInstance({
+              system: env.get('BADGES_SYSTEM'),
+              badge: req.params.badge,
+              email: req.session.user.email
+            }, function(err, data) {
+              if (err && err.name === 'ResourceNotFoundError') {
+                err = null;
+              }
+              return callback(err, data)
+            });
+          } else {
+            return callback(null, null);
+          }
+        }
+      ],
+      function (err, results) {
         if (err) {
           return res.render('badge-not-found.html', {
             page: 'search',
@@ -135,9 +158,12 @@ module.exports = function (env) {
           });
         }
 
+        var badge = results[0];
+        var instance = results[1];
+
         // Shim for https://bugzilla.mozilla.org/show_bug.cgi?id=1001161
-        if (data.issuer && !data.issuer.imageUrl) {
-          data.issuer.imageUrl = 'https://webmaker.org/img/logo-webmaker.png';
+        if (badge.issuer && !badge.issuer.imageUrl) {
+          badge.issuer.imageUrl = 'https://webmaker.org/img/logo-webmaker.png';
         }
 
         // Can the current user issue this badge?
@@ -153,9 +179,11 @@ module.exports = function (env) {
         res.render('badge-detail.html', {
           page: req.params.badge,
           view: 'badges',
-          badge: data,
+          badge: badge,
           canIssue: canIssue,
-          requestCity: requestCity
+          requestCity: requestCity,
+          backpackUrl: env.get('BACKPACK_PUSH_URL'),
+          assertionUrl: instance ? instance.assertionUrl : null
         });
       });
 

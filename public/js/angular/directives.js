@@ -77,28 +77,28 @@ angular
         }
       };
     }])
-  .directive('sampleMake', ['$window', 'makeapi',
-    function ($window, makeapi) {
+  .directive('masonryGallery', ['$timeout', '$rootScope',
+    function ($timeout, $rootScope) {
       return {
         restrict: 'A',
-        templateUrl: '/views/partials/gallery-item.html',
         scope: {
-          makeId: '=makeId'
+          'masonryOptions': '='
         },
-        link: function (scope, el, attrs) {
-          makeapi.makeapi
-            .id(scope.makeId)
-            .then(function (err, makes) {
-              if (err) {
-                console.error(err);
-              }
-              scope.sampleMake = makes[0];
-              scope.$apply();
-            });
+        link: function (scope, element) {
+          $rootScope.$on('makeLoad', function (e) {
+            scope.loaded = (scope.loaded ? scope.loaded + 1 : 1);
+
+            var total = $(element).children('.make').length;
+
+            if (scope.loaded === total) {
+              var
+              mason = new window.Masonry(element.context, scope.masonryOptions);
+              mason.layout();
+            }
+          });
         }
       };
-    }
-  ])
+    }])
   .directive('retinaImage', ['$window',
     function ($window) {
       'use strict';

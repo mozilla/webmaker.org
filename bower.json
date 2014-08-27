@@ -12,7 +12,7 @@
     "jquery-ui": "1.10.3",
     "makeapi-client": "0.5.28",
     "makerstrap": "0.2.3",
-    "masonry": "3.1.5",
+    "masonry": "~3.1.5",
     "moment": "2.2.1",
     "nav-global": "https://github.com/mozilla/nav-global/archive/v0.1.4.tar.gz",
     "nunjucks": "1.0.5",
@@ -27,7 +27,8 @@
     "animate.css": "~3.1.0",
     "ngScrollSpy": "1.0.2",
     "angular-moment": "0.7.1",
-    "makeapi-angular": "https://github.com/k88hudson/makeapi-angular/archive/master.tar.gz"
+    "makeapi-angular": "https://github.com/k88hudson/makeapi-angular/archive/master.tar.gz",
+    "imagesloaded": "~3.1.8"
   },
   "resolutions": {
     "angular": "1.2.14",

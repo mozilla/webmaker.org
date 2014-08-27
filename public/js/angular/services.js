@@ -178,6 +178,32 @@ angular
       return $window.analytics;
     }
   ])
+  .factory('masonry', ['$window',
+    function ($window) {
+      var
+      $win = $window,
+        doc = $win.document,
+        wall = doc.querySelector('.masonry-container'),
+        bricks = doc.querySelector('.masonry-brick'),
+        mason = new $win.Masonry(wall, {
+          itemSelector: '.masonry-brick',
+          gutter: 10
+          // strongly suggest including the following html in your container:
+          // data-masonry-options='{ "columnWidth": 300 }'
+          // with your preferred column width
+        });
+
+      return {
+        align: function () {
+          $win.imagesLoaded(bricks, function () {
+            mason.layout();
+          });
+        },
+        realign: function () {
+          mason.layout();
+        }
+      };
+    }])
   .factory('makeapi', ['$q', '$window',
     function ($q, $window) {
 

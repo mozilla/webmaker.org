@@ -205,11 +205,25 @@ angular
       wmNav.section('tools');
     }
   ])
-  .controller('makeYourOwnController', ['$scope', 'wmNav', 'CONFIG',
-    function ($scope, wmNav, CONFIG) {
+  .controller('makeYourOwnController', ['$scope', '$timeout', 'wmNav', 'CONFIG', 'masonry',
+    function ($scope, $timeout, wmNav, CONFIG, masonry) {
       wmNav.page('make-your-own');
       wmNav.section('resources');
       $scope.direction = CONFIG.direction;
+
+      masonry.align();
+      $timeout(function () {
+        masonry.realign();
+      }, 500);
+
+      $timeout(function () {
+        masonry.realign();
+      }, 1000);
+
+      $timeout(function () {
+        masonry.realign();
+      }, 1500);
+
     }
   ])
   .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',

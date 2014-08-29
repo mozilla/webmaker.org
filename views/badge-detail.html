@@ -24,6 +24,14 @@
             <p>{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
             {% endif %}
             <p>{{ badge.earnerDescription | markdown | safe }}</p>
+            {% if assertionUrl %}
+              <h3>Congratulations <span class="username">{{ username }}</span>, you've earned this badge!</h3>
+              <a href="/user/{{username}}/badges" class="btn btn-lg btn-success pull-left">{{ gettext("ViewOnProfile") }}</a>
+              <form class="backpack" method="post" action="{{backpackUrl}}" target="_blank">
+                <input type="hidden" name="assertions" value="{{assertionUrl}}">
+                <input type="submit" class="btn btn-lg btn-success pull-left" value="{{ gettext('SendToBackpack') }}">
+              </form>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -118,7 +126,9 @@
   <div class="container">
     <h2>{{ gettext("Badge Requirements") }}
       <span class="application-off">
-        <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">{{ gettext("Apply") }}</button>
+        {% if not assertionUrl %}
+          <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">{{ gettext("Apply") }}</button>
+        {% endif %}
         {% if canIssue %}
           <button id="js-badge-issuing" class="btn btn-lg btn-success pull-right">Issue this badge</button>
         {% endif %}

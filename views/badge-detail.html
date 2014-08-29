@@ -24,17 +24,15 @@
             <p>{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
             {% endif %}
             <p>{{ badge.earnerDescription | markdown | safe }}</p>
+            {% if assertionUrl %}
+              <h3>Congratulations <span class="username">{{ username }}</span>, you've earned this badge!</h3>
+              <a href="/user/{{username}}/badges" class="btn btn-lg btn-success pull-left">{{ gettext("ViewOnProfile") }}</a>
+              <form class="backpack" method="post" action="{{backpackUrl}}" target="_blank">
+                <input type="hidden" name="assertions" value="{{assertionUrl}}">
+                <input type="submit" class="btn btn-lg btn-success pull-left" value="{{ gettext('SendToBackpack') }}">
+              </form>
+            {% endif %}
           </div>
-          {% if assertionUrl %}
-          <div class="col-sm-9 badge-earned login-only hidden">
-            <p>Congratulations <span class="username">{{ username }}</span>, you've earned this badge!</p>
-            <a href="/user/{{username}}/badges" class="btn btn-lg btn-success pull-left">{{ gettext("ViewOnProfile") }}</a>
-            <form method="post" action="{{backpackUrl}}" target="_blank">
-              <input type="hidden" name="assertions" value="{{assertionUrl}}">
-              <input type="submit" class="btn btn-lg btn-success pull-left" value="{{ gettext('SendToBackpack') }}">
-            </form>
-          </div>
-          {% endif %}
         </div>
       </div>
     </div>

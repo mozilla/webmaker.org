@@ -112,9 +112,8 @@ angular
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$routeParams',
-    'weblit', 'CONFIG', '$timeout', 'wmNav', '$sce',
-    function ($rootScope, $scope, $routeParams, weblit, CONFIG, $timeout, wmNav,
-      $sce) {
+    'weblit', 'CONFIG', '$timeout', 'wmNav',
+    function ($rootScope, $scope, $routeParams, weblit, CONFIG, $timeout, wmNav) {
       wmNav.page($routeParams.id);
       wmNav.section('resources');
 
@@ -124,55 +123,11 @@ angular
         return item.tag === $scope.tag;
       })[0];
 
-      function prepContent(header) {
-        $scope.content = $rootScope.content[$scope.tag];
-        var contentSection, section, media;
-
-        function swapLink(section, media, newUrl) {
-          // Update trusted content item in JSON object
-          contentSection[section].multimedia[media].content = $sce.trustAsResourceUrl(newUrl);
-        }
-
-        contentSection = $scope.content[header];
-
-        // Loop through Discover, Make, and Teach
-        for (section in contentSection) {
-          if (contentSection.hasOwnProperty(section)) {
-            // Loop through media items in section selected
-            for (media in contentSection[section].multimedia) {
-              if (contentSection[section].multimedia.hasOwnProperty(media)) {
-                // Find content type, return modified content for template
-                switch (contentSection[section].multimedia[media].type) {
-                case 'youtube':
-                  swapLink(section, media, 'https://www.youtube-nocookie.com/embed/' + contentSection[section].multimedia[media].content + '?enablejsapi=1&amp;wmode=transparent&amp;autohide=1&amp;autoplay=0&amp;rel=0&amp;fs=1&amp;hd=1&amp;rel=0&amp;showinfo=0&amp;start=&amp;theme=dark');
-                  break;
-                case 'vimeo':
-                  swapLink(section, media, 'https://player.vimeo.com/video/' + contentSection[section].multimedia[media].content + '?title=0&amp;byline=0&amp;portrait=0&amp;color=eb6933');
-                  break;
-                case 'popcorn':
-                  swapLink(section, media, contentSection[section].multimedia[media].content);
-                  break;
-                default:
-
-                }
-              }
-            }
-          }
-        }
-        return contentSection;
-      }
-
-      function updateContentObject() {
-        $scope.content = $rootScope.content[$scope.tag];
-        $scope.relatedIcon = $rootScope.content[$scope.content.related].icon;
-        $scope.content.discover = prepContent('discover');
-      }
-
       if ($rootScope.contentReady) {
-        updateContentObject();
+        $scope.content = $rootScope.content[$scope.tag];
       } else {
         $timeout(function () {
-          updateContentObject();
+          $scope.content = $rootScope.content[$scope.tag];
         }, 500);
       }
       $scope.weblit = weblit;
@@ -181,6 +136,27 @@ angular
 
     }
   ])
+  .controller('competencyMediaGenController', ['$scope', '$sce',
+    function ($scope, $sce) {
+      function safeUrl(media) {
+        switch (media.type) {
+        case 'youtube':
+          return $sce.trustAsResourceUrl('https://www.youtube-nocookie.com/embed/' + media.content + '?enablejsapi=1&amp;wmode=transparent&amp;autohide=1&amp;autoplay=0&amp;rel=0&amp;fs=1&amp;hd=1&amp;rel=0&amp;showinfo=0&amp;start=&amp;theme=dark');
+        case 'vimeo':
+          return $sce.trustAsResourceUrl('https://player.vimeo.com/video/' + media.content + '?title=0&amp;byline=0&amp;portrait=0&amp;color=eb6933');
+        case 'ted':
+          return $sce.trustAsResourceUrl('https://embed-ssl.ted.com/talks/' + media.content + '.html');
+        case 'popcorn':
+          return $sce.trustAsResourceUrl(media.content);
+        default:
+          return media.content;
+        }
+      }
+
+      if ($scope.media.type !== 'markup') {
+        $scope.media.content = safeUrl($scope.media);
+      }
+    }])
   .controller('resourceFormController', ['$scope', '$http', 'wmAnalytics',
     function ($scope, $http, analytics) {
       $scope.formData = {};

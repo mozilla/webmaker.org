@@ -1,0 +1,32 @@
+<div ng-switch="media.type" ng-controller="competencyMediaGenController">
+  <figure class="video-container" ng-switch-when="youtube">
+    <div class="video-letterbox">
+      <iframe ng-src="https://www.youtube-nocookie.com/embed/{{ media.content }}?enablejsapi=1&amp;wmode=transparent&amp;autohide=1&amp;autoplay=0&amp;rel=0&amp;fs=1&amp;hd=1&amp;rel=0&amp;showinfo=0&amp;start=&amp;theme=dark" width="853" height="480" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </figure>
+  <figure class="video-container" ng-switch-when="vimeo">
+    <div class="video-letterbox">
+      <iframe ng-src="https://player.vimeo.com/video/{{ media.content }}?title=0&amp;byline=0&amp;portrait=0&amp;color=eb6933" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </figure>
+  <figure class="video-container" ng-switch-when="popcorn">
+    <div class="video-letterbox">
+      <iframe ng-src="{{ media.content }}" width="640" height="403" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </figure>
+  <figure class="video-container" ng-switch-when="ted">
+    <div class="video-letterbox">
+      <iframe ng-src="https://embed-ssl.ted.com/talks/{{ media.content }}.html" width="640" height="360" frameborder="0" scrolling="no" allowFullScreen></iframe>
+    </div>
+  </figure>
+  <figure ng-switch-when="image">
+    <img ng-src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
+    <figcaption ng-if="media.content.caption">
+      <p bind-unsafe-html="media.content.caption"></p>
+    </figcaption>
+  </figure>
+  <div ng-switch-when="markup">
+    <p bind-unsafe-html="media.content"></p>
+  </div>
+</div>
+

@@ -66,16 +66,10 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
-           make-id="'5362830d2e257e986700014f'"></div>
-      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
-           make-id="'52cee30ba921914a44000005'"></div>
-      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
-           make-id="'53a0acff7a091a167200001e'"></div>
-      <div class="col-xs-12 col-sm-6 col-lg-3" sample-make
-           make-id="'5387a4bfdd8624d371000215'"></div>
-    </div>
+  <div masonry-gallery data-masonry-options='{"itemSelector": ".sample-make", "gutter": 10, "columnWidth": 300}'>
+    <make class="sample-make" user-id="{{ userId }}" make-id="5362830d2e257e986700014f"></make>
+    <make class="sample-make" user-id="{{ userId }}" make-id="52cee30ba921914a44000005"></make>
+    <make class="sample-make" user-id="{{ userId }}" make-id="53a0acff7a091a167200001e"></make>
+    <make class="sample-make" user-id="{{ userId }}" make-id="5387a4bfdd8624d371000215"></make>
   </div>
 </div>

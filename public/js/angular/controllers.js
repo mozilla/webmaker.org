@@ -214,6 +214,15 @@ angular
       $scope.literacies = weblit.all();
     }
   ])
+  .controller('literacyController', ['$scope', 'weblit', 'wmNav', 'CONFIG',
+    function ($scope, weblit, wmNav, CONFIG) {
+      wmNav.page('resources');
+      wmNav.section('resources');
+      $scope.litMapTitle = weblit.title() + ' - ' + weblit.version;
+      $scope.strands = weblit.strands();
+      $scope.litMap = weblit.allByStrand();
+      $scope.wlcPoints = CONFIG.wlcPoints;
+    }])
   .controller('toolsController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
       wmNav.page('tools');

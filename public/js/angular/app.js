@@ -15,6 +15,11 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'resourcesHomeController',
           title: 'Resources'
         })
+        .when('/:locale?/literacy', {
+          templateUrl: '/views/literacy.html',
+          controller: 'literacyController',
+          title: 'WebLiteracyMap'
+        })
         .when('/:locale?/resources/literacy/:id', {
           templateUrl: '/views/competency.html',
           controller: 'competencyController'

@@ -152,10 +152,7 @@ angular
           return media.content;
         }
       }
-
-      if ($scope.media.type !== 'markup') {
-        $scope.media.content = safeUrl($scope.media);
-      }
+      $scope.safeUrl = safeUrl;
     }])
   .controller('resourceFormController', ['$scope', '$http', 'wmAnalytics',
     function ($scope, $http, analytics) {

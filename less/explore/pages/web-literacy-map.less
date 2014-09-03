@@ -1,0 +1,65 @@
+#literacy {
+  background: white;
+  font-size: 1.8rem;
+
+  .map {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (min-width: @screen-sm-min) {
+      margin-top: 10rem;
+    }
+    @media print {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    font-weight: 200;
+  }
+
+  li.strand-section {
+    margin-top: 60px;
+  }
+  li.competency-section {
+    margin-top: 40px;
+  }
+
+  h3.strand {
+    font-weight: normal;
+    font-size: 2em;
+    @media print {
+      font-size: 1.5em;
+      margin-top: 0;
+    }
+  }
+
+  h4.competency {
+    font-size: 1.4em;
+    margin-bottom: 0;
+    font-weight: bold;
+    @media print {
+      font-size: 1em;
+    }
+  }
+
+  p.description {
+    color: #999;
+    font-style: italic;
+    margin-top: 0;
+  }
+
+  .well-web-literacy {
+    text-align: center;
+    h3 {
+      font-weight: 200;
+      font-size: 1.5em;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      margin: 4rem auto 2rem;
+    }
+  }
+}

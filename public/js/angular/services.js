@@ -169,8 +169,7 @@ angular
   .factory('weblit', [
     '$window',
     function ($window) {
-      var weblit = new $window.WebLiteracyClient();
-      return weblit;
+      return new $window.WebLiteracyClient();
     }
   ])
   .factory('wmAnalytics', [

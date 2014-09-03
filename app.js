@@ -408,7 +408,7 @@ var literacyRedirect = function (req, res) {
 app.get("/standard", literacyRedirect);
 app.get("/standard/*", literacyRedirect);
 
-app.get("/literacy", routes.literacy);
+app.get("/literacy", routes.angular);
 
 app.get("/literacy/exploring", routes.page("literacy-exploring"));
 app.get("/literacy/building", routes.page("literacy-building"));

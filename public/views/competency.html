@@ -87,29 +87,7 @@
               <p ng-bind-html="item.description"></p>
             </div>
           </li>
-          <li ng-repeat="media in item.multimedia" ng-switch="media.type">
-            <figure class="video-container" ng-switch-when="youtube">
-              <div class="video-letterbox">
-                <iframe ng-src="{{ media.content }}" width="853" height="480" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </figure>
-            <figure class="video-container" ng-switch-when="vimeo">
-              <div class="video-letterbox">
-                <iframe ng-src="{{ media.content }}" width="500" height="281" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </figure>
-            <figure class="video-container" ng-switch-when="popcorn">
-              <div class="video-letterbox">
-                <iframe ng-src="{{ media.content }}" width="640" height="403" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </figure>
-            <div ng-switch-when="markup">
-              <p bind-unsafe-html="media.content"></p>
-            </div>
-            <div ng-switch-when="image">
-              <img ng-src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
-            </div>
-          </li>
+          <li ng-repeat="media in item.multimedia" competency-media-gen></li>
         </ul>
 
         <h2 class="header-section">
@@ -123,11 +101,10 @@
               <h2 ng-bind-html="item.title"></h2>
             </div>
           </li>
-          <li>
-            <div>
-              <p ng-bind-html="item.description"></p>
-            </div>
+          <li ng-if="item.description">
+            <div ng-bind-html="item.description"></div>
           </li>
+          <li ng-repeat="media in item.multimedia" competency-media-gen></li>
         </ul>
 
         <h2 class="header-section">

@@ -318,4 +318,11 @@ angular
         }
       };
     }
-  ]);
+  ])
+  .directive('competencyMediaGen', ['$sce',
+    function () {
+      return {
+        restrict: 'EA',
+        templateUrl: '/views/partials/competency-media-gen.html'
+      };
+    }]);

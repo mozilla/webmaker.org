@@ -32,7 +32,8 @@
             "type": "image",
             "content": {
               "src": "http://hosted.akibraun.com/g/roomba.gif",
-              "alt": "Who doesn&rsquo;t like kittens on a roomba?"
+              "alt": "Who doesn&rsquo;t like kittens on a roomba?",
+              "caption":"A roomba goes about its business, unwittingly giving several kittens a free ride. Copyright unknown."
             }
           },
           {
@@ -81,11 +82,23 @@
     "make": [
       {
         "title": "I love Popcorn Maker",
-        "description": "Because <a href=\"/user/jp\">@jp</a> does stuff like <a href=\"https://jp.makes.org/popcorn/1z16\" target=\"_self\">Proving the Holcomb Rule</a>."
+        "description": "Because <a href=\"/user/jp\">@jp</a> does stuff like Proving the Holcomb Rule:",
+        "multimedia": [
+          {
+            "type": "popcorn",
+            "content": "https://jp.makes.org/popcorn/1z16"
+          }
+        ]
       },
       {
         "title": "I also love small acts of defiance",
-        "description": "I&rsquo;m lookin&rsquo; at you, <a href=\"/user/keyboardkat\">@keyboardkat</a>. <a href=\"https://keyboardkat.makes.org/popcorn/1err\" target=\"_self\">This is amazing.</a>"
+        "description": "I&rsquo;m lookin&rsquo; at you, <a href=\"/user/keyboardkat\">@keyboardkat</a>. This is amazing:",
+        "multimedia": [
+          {
+            "type": "popcorn",
+            "content": "https://keyboardkat.makes.org/popcorn/1err"
+          }
+        ]
       }
     ],
     "teach": {
@@ -576,7 +589,13 @@
     "make": [
       {
         "title": "Create a how-to video for the Lightbeam project",
-        "description": "Learn about the <a href=\"https://www.mozilla.org/en-US/lightbeam/\">Mozilla Lightbeam project</a>, which tracks those who are watching you online, and then add your own flavor to the issue by <a href=\"https://laura.makes.org/popcorn/1oj6\">remixing this Popcorn video</a> and enhancing it with your own sound and images."
+        "description": "Learn about the <a href=\"https://www.mozilla.org/en-US/lightbeam/\">Mozilla Lightbeam project</a>, which tracks those who are watching you online, and then add your own flavor to the issue by <a href=\"https://laura.makes.org/popcorn/1oj6\">remixing this Popcorn video</a> and enhancing it with your own sound and images.",
+        "multimedia": [
+          {
+            "type": "popcorn",
+            "content": "https://laura.makes.org/popcorn/1oj6"
+          }
+        ]
       },
       {
         "title": "Remix a graphic novel about mobile security",
@@ -1747,7 +1766,11 @@
         "multimedia": [
           {
             "type": "markup",
-            "content": "Enable &ldquo;Do Not Track.&rdquo; You can tell sites to stop tracking your browsing history using <a href=\"http://www.mozilla.org/en-US/dnt/\">this simple change</a> to your browser settings. Here&rsquo;s how: <br><br>\n<ul>\n<li><a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature#w_how-does-the-do-not-track-feature-work\">Firefox</a></li>\n<li><a href=\"http://windows.microsoft.com/en-ca/internet-explorer/use-tracking-protection#ie=ie-11\">Internet Explorer</a></li>\n<li><a href=\"http://osxdaily.com/2012/08/21/how-to-enable-do-not-track-in-safari-6/\">Safari</a></li>\n<li><a href=\"http://www.cnet.com/how-to/how-to-enable-chromes-do-not-track-option/\">Chrome</a></li>\n<li><a href=\"http://www.opera.com/help/tutorials/security/control/#referrer\">Opera</a></li>\n</ul>"
+            "content": "Enable &ldquo;Do Not Track.&rdquo; You can tell sites to stop tracking your browsing history using <a href=\"http://www.mozilla.org/en-US/dnt/\">this simple change</a> to your browser settings. Here&rsquo;s how:"
+          },
+          {
+            "type": "markup",
+            "content": "<ul><li><a href=\"https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature#w_how-does-the-do-not-track-feature-work\">Firefox</a></li>\n<li><a href=\"http://windows.microsoft.com/en-ca/internet-explorer/use-tracking-protection#ie=ie-11\">Internet Explorer</a></li>\n<li><a href=\"http://osxdaily.com/2012/08/21/how-to-enable-do-not-track-in-safari-6/\">Safari</a></li>\n<li><a href=\"http://www.cnet.com/how-to/how-to-enable-chromes-do-not-track-option/\">Chrome</a></li>\n<li><a href=\"http://www.opera.com/help/tutorials/security/control/#referrer\">Opera</a></li>\n</ul>"
           }
         ]
       },
@@ -1829,7 +1852,25 @@
     "make": [
       {
         "title": "Make a music video about privacy, surveillance or online freedom",
-        "description": "Use <a href=\"https://popcorn.webmaker.org/\">Popcorn Maker</a> to make a video. You could use videos you find on the web, music, pictures, animated GIFs or your own voice commentary.<br><br><ul><li><a href=\"https://keyboardkat.makes.org/popcorn/1err\">&ldquo;Party at the NSA.&ldquo;</a> Check out this example from <a href=\"/u/keyboardkat\">@keyboardkat</a>. Then <a href=\"https://popcorn.webmaker.org/editor/65799/remix\">remix it</a> to make it your own.</li><li>Or <a href=\"https://popcorn.webmaker.org/\">make your own</a> from scratch. <a href=\"https://mozteach.makes.org/popcorn/1boj\">This guide</a> walks you through how to use Popcorn Maker for the first time.</li></ul>"
+        "description": "Use <a href=\"https://popcorn.webmaker.org/\">Popcorn Maker</a> to make a video. You could use videos you find on the web, music, pictures, animated GIFs or your own voice commentary.",
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<strong>&ldquo;Party at the NSA.&ldquo;</strong> Check out this example from <a href=\"/u/keyboardkat\">@keyboardkat</a>. Then <a href=\"https://popcorn.webmaker.org/editor/65799/remix\">remix it</a> to make it your own."
+          },
+          {
+            "type": "popcorn",
+            "content": "https://keyboardkat.makes.org/popcorn/1err"
+          },
+          {
+            "type": "markup",
+            "content": "Or <a href=\"https://popcorn.webmaker.org/\">make your own</a> from scratch. <a href=\"https://mozteach.makes.org/popcorn/1boj\">This guide</a> walks you through how to use Popcorn Maker for the first time:"
+          },
+          {
+            "type": "popcorn",
+            "content": "https://mozteach.makes.org/popcorn/1boj"
+          }
+        ]
       },
       {
         "title": "Write about who&rsquo;s tracking your online",
@@ -1837,7 +1878,21 @@
       },
       {
         "title": "Host a &ldquo;crypto-party&rdquo; for you and your friends",
-        "description": "There are various things you can do to make your online data more secure. Some are harder than others. If you want to take extra steps to protect your communications, here are some ways to go further.<br><br><ul><li><a href=\"https://www.eff.org/https-everywhere\">Install HTTPS Everywhere.</a> A collaboration between <a href=\"https://www.torproject.org/\">The Tor Project</a> and <a href=\"https://eff.org/\">Electronic Frontier Foundation</a>, this extension encrypts your communications to make your browsing more secure.</li><li><a href=\"https://www.eff.org/pages/tor-and-https\">Learn more about the Tor Project.</a> If you&rsquo;re more ambitious, you can use tools like <a href=\"https://www.torproject.org/\">Tor</a> to defend yourself against network surveillance and traffic analysis. Here&rsquo;s <a href=\"https://www.torproject.org/docs/documentation.html.en\">how to get started</a>. Or check out The Guardian&rsquo;s <a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/9\">explanation on how Tor works</a>.</li><li><a href=\"https://www.eff.org/torchallenge/setting-up/\">Volunteer with Tor.</a> Tor is a free network that relies on bandwidth donated by volunteers around the world. Want to help? This <a href=\"https://www.eff.org/torchallenge/setting-up/\">guide</a> and <a href=\"http://www.youtube.com/watch?v=1jmj4bILqiY\">video</a> show you how.</li><li><a href=\"https://www.cryptoparty.in/documentation\">Host a crypto-party.</a> Now that you&rsquo;ve learned how to encrypt your data, why not help others? <a href=\"https://www.cryptoparty.in/documentation\">This &ldquo;CryptoParty&rdquo; guide</a> can help. You can also add your event to <a href=\"http://party.webmaker.org/\">Mozilla&rsquo;s Maker Party</a> to join others hosting web literacy parties around the world.</li></ul>"
+        "description": "There are various things you can do to make your online data more secure. Some are harder than others. If you want to take extra steps to protect your communications, here are some ways to go further.",
+        "multimedia": [
+          {
+            "type": "markup",
+            "content": "<a href=\"https://www.eff.org/https-everywhere\">Install HTTPS Everywhere.</a> A collaboration between <a href=\"https://www.torproject.org/\">The Tor Project</a> and <a href=\"https://eff.org/\">Electronic Frontier Foundation</a>, this extension encrypts your communications to make your browsing more secure."
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"https://www.eff.org/pages/tor-and-https\">Learn more about the Tor Project.</a> If you&rsquo;re more ambitious, you can use tools like <a href=\"https://www.torproject.org/\">Tor</a> to defend yourself against network surveillance and traffic analysis. Here&rsquo;s <a href=\"https://www.torproject.org/docs/documentation.html.en\">how to get started</a>. Or check out The Guardian&rsquo;s <a href=\"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#interactive/9\">explanation on how Tor works</a>."
+          },
+          {
+            "type": "markup",
+            "content": "<a href=\"https://www.eff.org/torchallenge/setting-up/\">Volunteer with Tor.</a> Tor is a free network that relies on bandwidth donated by volunteers around the world. Want to help? This <a href=\"https://www.eff.org/torchallenge/setting-up/\">guide</a> and <a href=\"http://www.youtube.com/watch?v=1jmj4bILqiY\">video</a> show you how.</li><li><a href=\"https://www.cryptoparty.in/documentation\">Host a crypto-party.</a> Now that you&rsquo;ve learned how to encrypt your data, why not help others? <a href=\"https://www.cryptoparty.in/documentation\">This &ldquo;CryptoParty&rdquo; guide</a> can help. You can also add your event to <a href=\"http://party.webmaker.org/\">Mozilla&rsquo;s Maker Party</a> to join others hosting web literacy parties around the world.</li>"
+          }
+        ]
       }
     ],
     "teach": {

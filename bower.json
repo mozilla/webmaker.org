@@ -27,7 +27,7 @@
     "animate.css": "~3.1.0",
     "ngScrollSpy": "1.0.2",
     "angular-moment": "0.7.1",
-    "makeapi-angular": "https://github.com/k88hudson/makeapi-angular/archive/master.tar.gz",
+    "makeapi-angular": "0.0.3",
     "imagesloaded": "~3.1.8"
   },
   "resolutions": {

@@ -189,8 +189,8 @@ angular
   ])
   .controller('literacyController', ['$scope', 'weblit', 'wmNav', 'CONFIG',
     function ($scope, weblit, wmNav, CONFIG) {
-      wmNav.page('resources');
       wmNav.section('resources');
+      wmNav.page('literacy');
       $scope.litMapTitle = weblit.title() + ' - ' + weblit.version;
       $scope.strands = weblit.strands();
       $scope.litMap = weblit.allByStrand();
@@ -204,8 +204,8 @@ angular
   ])
   .controller('makeYourOwnController', ['$rootScope', '$scope', '$timeout', 'wmNav', 'CONFIG',
     function ($rootScope, $scope, $timeout, wmNav, CONFIG) {
-      wmNav.page('make-your-own');
       wmNav.section('resources');
+      wmNav.page('make-your-own');
 
       function init() {
         $scope.userId = $rootScope._user.id;
@@ -484,5 +484,11 @@ angular
     function ($scope, wmNav) {
       wmNav.section('info');
       wmNav.page('about');
+    }
+  ])
+  .controller('mentorController', ['$scope', 'wmNav',
+    function ($scope, wmNav) {
+      wmNav.section('resources');
+      wmNav.page('mentor');
     }
   ]);

@@ -396,7 +396,7 @@ app.delete("/api/badges/:badge/instance/email/:email", badgesRoutes.middleware.h
 
 app.post("/api/submit-resource", routes.api.submitResource);
 
-app.get("/mentor", routes.page("mentor"));
+app.get("/mentor", routes.angular);
 app.get("/search", routes.search);
 
 // Old route - turned into a 301 (perm. redirect) on 2014-02-11.

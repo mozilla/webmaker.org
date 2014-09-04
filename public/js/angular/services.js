@@ -100,7 +100,27 @@ angular
               title: 'Resources',
               icon: 'book',
               pushState: true,
-              dropdown: true
+              url: 'resources',
+              pages: [
+                {
+                  id: 'literacy',
+                  title: 'Web Literacy Map',
+                  url: 'literacy',
+                  pushState: true
+                },
+                {
+                  id: 'make-your-own',
+                  title: 'Make Your Own',
+                  url: 'make-your-own',
+                  pushState: true
+                },
+                {
+                  id: 'mentor',
+                  title: 'Mentor',
+                  url: 'mentor',
+                  pushState: true
+                }
+              ]
             },
             {
               id: 'events',

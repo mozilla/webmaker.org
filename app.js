@@ -364,6 +364,11 @@ app.get("/gallery", routes.gallery({
   prefix: "p"
 }));
 
+app.get("/gallery/list/:list", routes.gallery({
+  layout: "index",
+  prefix: "p"
+}));
+
 app.get("/editor", middleware.checkAdmin, routes.gallery({
   page: "editor"
 }));

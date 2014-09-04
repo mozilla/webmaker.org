@@ -49,14 +49,26 @@ module.exports = function (options) {
     var stickyLimit = options.limit ? options.limit * 2 : DEFAULT_STICKY_LIMIT;
     var totalHitCount = [];
 
+    // if a make list (gallery) id is specified, use that as the primary list of makes
+    var makeListID = req.params.list;
+
     function getMakes(options, callback) {
       make.setLang(req.localeInfo.momentLang);
-      make
-        .find(options)
-        .process(function (err, data, totalHits) {
-          totalHitCount.push(totalHits);
-          callback(err, data);
-        }, req.session.user ? req.session.user.id : '');
+
+      if (makeListID) {
+        make
+          .getList(makeListID, function (err, data, totalHits) {
+            totalHitCount.push(totalHits);
+            callback(err, data);
+          });
+      } else {
+        make
+          .find(options)
+          .process(function (err, data, totalHits) {
+            totalHitCount.push(totalHits);
+            callback(err, data);
+          }, req.session.user ? req.session.user.id : '');
+      }
     }
 
     var stickyOptions = {

@@ -49,6 +49,14 @@ require(['jquery', 'base/ui', 'base/gallery', 'base/login'],
         gallery.searchOptions.sortByField = ['createdAt', 'desc'];
         gallery.searchOptions.contentType = 'application/x-thimble';
         break;
+
+      case 'appmaker':
+        gallery.searchOptions.tags = {
+          tags: ['webmaker:featured']
+        };
+        gallery.searchOptions.sortByField = ['createdAt', 'desc'];
+        gallery.searchOptions.contentType = 'Appmaker';
+        break;
       }
 
       // Reset and set to page 1

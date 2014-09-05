@@ -3,25 +3,37 @@
     <div class="video-letterbox">
       <iframe ng-src="{{ safeUrl(media) }}" width="853" height="480" frameborder="0" allowfullscreen></iframe>
     </div>
+    <figcaption ng-if="media.caption">
+      <p bind-unsafe-html="media.caption"></p>
+    </figcaption>
   </figure>
   <figure class="video-container" ng-switch-when="vimeo">
     <div class="video-letterbox">
       <iframe ng-src="{{ safeUrl(media) }}" width="640" height="360" frameborder="0" allowfullscreen></iframe>
     </div>
+    <figcaption ng-if="media.caption">
+      <p bind-unsafe-html="media.caption"></p>
+    </figcaption>
   </figure>
   <figure class="video-container" ng-switch-when="popcorn">
     <div class="video-letterbox">
       <iframe ng-src="{{ safeUrl(media) }}" width="640" height="403" frameborder="0" allowfullscreen></iframe>
     </div>
+    <figcaption ng-if="media.caption">
+      <p bind-unsafe-html="media.caption"></p>
+    </figcaption>
   </figure>
   <figure class="video-container" ng-switch-when="ted">
     <div class="video-letterbox">
       <iframe ng-src="{{ safeUrl(media) }}" width="640" height="360" frameborder="0" scrolling="no" allowFullScreen></iframe>
     </div>
+    <figcaption ng-if="media.caption">
+      <p bind-unsafe-html="media.caption"></p>
+    </figcaption>
   </figure>
   <figure ng-switch-when="image">
     <img ng-src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
-    <figcaption ng-if="media.content.caption">
+    <figcaption ng-if="media.caption">
       <p bind-unsafe-html="media.content.caption"></p>
     </figcaption>
   </figure>

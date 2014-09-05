@@ -244,6 +244,8 @@ angular
       wmNav.section('explore');
 
       $scope.badges = [];
+      $scope.reverse = false;
+      $scope.predicate = 'created';
       $scope.hasPermissions = function (badge) {
         return window.badgesPermissionsModel({
           badge: badge,

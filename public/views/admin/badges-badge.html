@@ -10,11 +10,11 @@
       <h2 class="section-header">Pending Applications</h2>
       <table class="table table-striped table-hover table-responsive">
         <thead>
-          <th>{{ "Date" | i18n }}</th>
-          <th>{{ "Application" | i18n }}</th>
+          <th><a href="" ng-click="predicate='created'; reverse=!reverse">{{ "Date" | i18n }}</a></th>
+          <th><a href="" ng-click="predicate='learner'; reverse=!reverse">{{ "Application" | i18n }}</a></th>
         </thead>
         <tbody>
-          <tr ng-repeat="application in applications | orderBy:'-created'" ng-click="reviewApplication(application)">
+          <tr ng-repeat="application in applications | orderBy:predicate:reverse" ng-click="reviewApplication(application)">
             <td class="nowrap">{{ application.created | date : 'MMM d'}}</td>
             <td>
               <p><strong>{{ application.learner }}</strong></p>

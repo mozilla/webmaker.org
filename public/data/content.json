@@ -2,7 +2,7 @@
   "weblit-Sample-Content": {
     "icon": "fa-times-circle",
     "intro": "<strong>This is sample content.</strong> This object will help internal content creators form additional competencies.",
-    "related":"weblit-Navigation",
+    "related": "weblit-Navigation",
     "discover": [
       {
         "title": "Test Content",
@@ -13,7 +13,8 @@
           },
           {
             "type": "youtube",
-            "content": "CMNry4PE93Y"
+            "content": "CMNry4PE93Y",
+            "caption": "i like turtles"
           },
           {
             "type": "markup",
@@ -32,9 +33,9 @@
             "type": "image",
             "content": {
               "src": "http://hosted.akibraun.com/g/roomba.gif",
-              "alt": "Who doesn&rsquo;t like kittens on a roomba?",
-              "caption":"A roomba goes about its business, unwittingly giving several kittens a free ride. Copyright unknown."
-            }
+              "alt": "Who doesn&rsquo;t like kittens on a roomba?"
+            },
+            "caption": "A roomba goes about its business, unwittingly giving several kittens a free ride. Copyright unknown."
           },
           {
             "type": "markup",
@@ -42,7 +43,8 @@
           },
           {
             "type": "vimeo",
-            "content": "6736261"
+            "content": "6736261",
+            "caption": "tetris!"
           }
         ]
       },
@@ -743,7 +745,7 @@
     ],
     "teach": {
       "kits": [
-                {
+        {
           "title": "Hack the Notebook Day activities",
           "description": "Hack your notebook and illuminate your thinking with circuit-building.",
           "url": "https://chadsansing.makes.org/thimble/MzM0MDM2OTky/hack-your-notebook-day-teaching-kit",
@@ -1239,8 +1241,8 @@
         "description": "Use these beginner <a href=\"https://www.khanacademy.org/computing/cs/programming\">Khan Academy tutorials</a> on Processing.js and Javascript to learn creative programming skills."
       },
       {
-       "title": "Cover a webpage with French toast",
-       "description": "Drag <a href=\"https://mousemeredith.makes.org/thimble/ODg2MTc3Nzky/javascript-takeover-bookmarklet\">this bookmarklet</a> to your toolbar to cover any web page with French toast! Then try remixing the code to include your own images."
+        "title": "Cover a webpage with French toast",
+        "description": "Drag <a href=\"https://mousemeredith.makes.org/thimble/ODg2MTc3Nzky/javascript-takeover-bookmarklet\">this bookmarklet</a> to your toolbar to cover any web page with French toast! Then try remixing the code to include your own images."
       }
     ],
     "teach": {

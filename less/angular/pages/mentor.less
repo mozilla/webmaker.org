@@ -1,0 +1,41 @@
+#mentor {
+  .banner {
+    height: auto;
+    width: 100%;
+  }
+  .mentor-profile {
+    padding: 2rem;
+    @media screen and (min-width: @screen-md-min) {
+      padding: 3rem;
+    }
+    h3 {
+      font-size: 2.4rem;
+    }
+    h4 {
+      font-size: 1.4rem;
+      font-style: italic;
+      font-weight: 300;
+    }
+    p {
+      clear: left;
+    }
+  }
+  .the-mentors {
+    background: fade(@blue, 15%);
+    border-radius: 0.5rem;
+  }
+
+  .mentor-face {
+    float: left;
+    height: auto;
+    margin: 0 2rem 2rem 0;
+    width: 10rem;
+    @media screen and (min-width: @screen-lg-min){
+      width: 13rem;
+    }
+  }
+  .badge-img {
+    margin-bottom: 2rem;
+  }
+}
+

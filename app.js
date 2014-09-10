@@ -122,6 +122,14 @@ if (env.get("ENABLE_GELF_LOGS")) {
   app.use(express.logger("dev"));
 }
 
+// Setup locales with i18n
+app.use(i18n.middleware({
+  supported_languages: env.get("SUPPORTED_LANGS"),
+  default_lang: "en-US",
+  mappings: require("webmaker-locale-mapping"),
+  translation_directory: path.resolve(__dirname, "locale")
+}));
+
 // Proxy to profile-2
 if (env.get('PROFILE_URL')) {
   app.use('/user', proxy(url.parse(env.get('PROFILE_URL'))));
@@ -219,14 +227,6 @@ app.use(express.urlencoded());
 
 app.use(webmakerAuth.cookieParser());
 app.use(webmakerAuth.cookieSession());
-
-// Setup locales with i18n
-app.use(i18n.middleware({
-  supported_languages: env.get("SUPPORTED_LANGS"),
-  default_lang: "en-US",
-  mappings: require("webmaker-locale-mapping"),
-  translation_directory: path.resolve(__dirname, "locale")
-}));
 
 // Adding an external JSON file to our existing one for the specified locale
 var authLocaleJSON = require("./bower_components/webmaker-auth-client/locale/en_US/create-user-form.json");

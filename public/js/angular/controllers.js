@@ -411,23 +411,23 @@ angular
         {
           title: 'Music App',
           image: '/img/appmaker/music-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://acidic-stick-959.webmak.es/app',
-          installUrl: '//acidic-stick-959.webmak.es/install',
-          appUrl: '//acidic-stick-959.webmak.es/app'
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://magical-profit-510.webmak.es/app',
+          installUrl: '//magical-profit-510.webmak.es/install',
+          appUrl: '//magical-profit-510.webmak.es/app'
         },
         {
           title: 'Chat App',
           image: '/img/appmaker/chat-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://cute-window-475.webmak.es/app',
-          installUrl: '//cute-window-475.webmak.es/install',
-          appUrl: '//cute-window-475.webmak.es/app'
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://scattered-reading-531.webmak.es/app',
+          installUrl: '//scattered-reading-531.webmak.es/install',
+          appUrl: '//scattered-reading-531.webmak.es/app'
         },
         {
           title: 'Fireworks App',
           image: '/img/appmaker/fireworks-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://sweet-coil-961.webmak.es/app',
-          installUrl: '//sweet-coil-961.webmak.es/install',
-          appUrl: '//sweet-coil-961.webmak.es/app'
+          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://neat-rate-866.webmak.es/app',
+          installUrl: '//neat-rate-866.webmak.es/install',
+          appUrl: '//neat-rate-866.webmak.es/app'
         }
       ];
 

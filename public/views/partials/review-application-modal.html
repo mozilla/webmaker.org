@@ -7,7 +7,9 @@
     <dd>{{ application.learner}}</dd>
 
     <dt>Evidence</dt>
-    <dd ng-repeat="evidence in application.evidence">{{ evidence.reflection }}</dd>
+    <dd>
+      <p ng-repeat="evidence in application.evidence" ng-bind-html="evidence.reflection | urlsToLinks"></p>
+    </dd>
   </dl>
 
   <form>

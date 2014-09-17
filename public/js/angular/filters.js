@@ -13,6 +13,11 @@ angular
       return decodeURIComponent(tag);
     };
   })
+  .filter('urlsToLinks', function () {
+    return function (text) {
+      return text.replace(/(https?:\/\/[\S]*)/g, '<a href="$1" target="_blank">$1</a>');
+    };
+  })
   .filter('openGraphLocale', function () {
     return function (locale) {
       if (locale) {

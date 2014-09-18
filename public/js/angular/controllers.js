@@ -280,15 +280,18 @@ angular
       }
 
       // This issues a new badge
-      $scope.issueBadge = function (email) {
+      $scope.issueBadges = function (emailString, comment) {
+        var emails = emailString.split(/[,;\n ]+/);
         $http
           .post('/api/badges/' + currentBadge + '/issue', {
-            email: email
+            emails: emails,
+            comment: comment
           })
           .success(function (data) {
             $scope.badgesError = false;
-            $scope.instances.unshift(data);
-            $scope.issueEmail = '';
+            $scope.instances = data.concat($scope.instances);
+            $scope.issueComment = '';
+            $scope.issueEmails = '';
           })
           .error(onError);
       };

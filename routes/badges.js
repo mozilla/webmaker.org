@@ -220,12 +220,12 @@ module.exports = function (env) {
 
       var query = {
         system: env.get('BADGES_SYSTEM'),
-        email: req.body.email,
+        emails: req.body.emails,
         badge: req.params.badge,
         comment: req.body.comment
       };
 
-      badgeClient.createBadgeInstance(query, function (err, data) {
+      badgeClient.createBadgeInstances(query, function (err, data) {
         if (err) {
           var errorString = err.toString();
           return res.send(500, {

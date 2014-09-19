@@ -149,8 +149,23 @@ module.exports = function (env) {
         }
       }
 
+      function getApplication(callback) {
+        if (req.session.user) {
+          badgeClient.getApplications({
+            system: env.get('BADGES_SYSTEM'),
+            badge: req.params.badge
+          }, {
+            email: req.session.user.email,
+            processed: false
+          }, function (err, data) {
+            return callback(err, data);
+          });
+        } else {
+          return callback(null, null);
+        }
+      }
       async.parallel(
-        [getBadge, getInstance],
+        [getBadge, getInstance, getApplication],
         function (err, results) {
           if (err) {
             return res.render('badge-not-found.html', {
@@ -161,6 +176,7 @@ module.exports = function (env) {
 
           var badge = results[0];
           var instance = results[1];
+          var application = results[2].length ? results[2][0] : null;
 
           // Shim for https://bugzilla.mozilla.org/show_bug.cgi?id=1001161
           if (badge.issuer && !badge.issuer.imageUrl) {
@@ -184,12 +200,15 @@ module.exports = function (env) {
             canIssue: canIssue,
             requestCity: requestCity,
             backpackUrl: env.get('BACKPACK_PUSH_URL'),
-            assertionUrl: instance ? instance.assertionUrl : null
+            assertionUrl: instance ? instance.assertionUrl : null,
+            application: application
           });
         });
     },
     apply: function (req, res, next) {
       var evidence = [req.body.evidence];
+      var applicationSlug = req.body.applicationSlug;
+
       if (req.body.city) {
         evidence.push('Hive City: ' + req.body.city);
       }
@@ -202,10 +221,13 @@ module.exports = function (env) {
 
       var application = {
         learner: req.session.user.email,
-        evidence: evidence
+        evidence: evidence,
+        slug: applicationSlug
       };
 
-      badgeClient.addApplication({
+      var apiFunction = applicationSlug ? badgeClient.updateApplication.bind(badgeClient) : badgeClient.addApplication.bind(badgeClient);
+
+      apiFunction({
         system: env.get('BADGES_SYSTEM'),
         badge: req.params.badge,
         application: application

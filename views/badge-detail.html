@@ -78,7 +78,7 @@
             {% endif %}
             <div class="form-inline">
               <label for="claimcode">{{ gettext("HaveClaimCode") }}</label>
-              <a href="https://badgekit.org/help" target="_blank" class="icon-question-sign"></a>
+              <span id="claim-code-explainer" class="icon-question-sign" title="For example, if you are awarded a badge for attending an event, the organizer of the event may provide you with a claim code."></span>
               <input class="form-control" name="claimcode" placeholder="e.g. 1234Z764HGZIHBHZ">
               <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
             </div>

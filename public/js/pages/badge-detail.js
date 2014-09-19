@@ -24,6 +24,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $issueBadgeOn = $('.js-issue-badge-on');
     var $issue = $('#issue');
     var $issueForm = $('#issue-form');
+    var $claimCodeQuestion = $('#claim-code-explainer');
 
     var slug = $application.attr('data-badge-slug');
 
@@ -99,6 +100,10 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
         $applicationInputs.removeAttr('disabled');
       }
     }).change();
+
+    $claimCodeQuestion.powerTip({
+      placement: 'ne'
+    });
 
     $applicationForm.on('submit', function (e) {
       e.preventDefault();

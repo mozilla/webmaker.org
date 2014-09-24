@@ -32,11 +32,18 @@
       <form class="panel panel-default">
         <div class="panel-body">
           <p>
-            <label for="issue_email">{{ "Email" | i18n }}</label>
-            <input name="issue_email" ng-model="issueEmail" class="form-control" placeholder="email@domain.com">
+            <label for="issue_emails">{{ "Emails" | i18n }}</label>
+            <textarea name="issue_emails" ng-model="issueEmails" class="form-control" placeholder="email@domain.com"></textarea>
+
+            <label for="issue_comment" ng-show="showComment">{{ "Comment" | i18n }}</label>
+            <input name="issue_comment" ng-show="showComment" ng-model="issueComment" class="form-control">
           </p>
-          <button class="btn btn-success pull-right" ng-click="issueBadge(issueEmail)">
-            <span class="icon icon-plus"></span> {{ "Issue new badge"| i18n }}
+          <button class="btn btn-success" ng-click="showComment = true" ng-hide="showComment">
+            <span class="icon icon-plus"></span> {{ "Add a comment"| i18n }}
+          </button>
+
+          <button class="btn btn-success pull-right" ng-click="issueBadges(issueEmails, issueComment)">
+            <span class="icon icon-plus"></span> {{ "Issue new badge(s)"| i18n }}
           </button>
         </div>
       </form>

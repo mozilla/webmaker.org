@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}">
+      <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}" data-application-slug="{{ application.slug if application else null }}">
         <div class="panel-body">
           <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>
           <h2>{{ gettext("Apply for this badge") }}</h2>
@@ -68,12 +68,20 @@
           <form id="submit-badge-application">
             <div class="form-group">
               <label for="evidence">{{ gettext("BadgesEvidenceLabel") }}</label>
-              <textarea class="form-control" name="evidence" placeholder="{{ gettext("BadgesIncludeLinks") }}" required></textarea>
+              <textarea class="form-control" name="evidence" placeholder="{{ gettext("BadgesIncludeLinks") }}" required>
+                {%- if application.evidence.length >= 1 -%} 
+                  {{ application.evidence[0].reflection }}
+                {%- endif -%}
+              </textarea>
             </div>
             {% if requestCity %}
             <div class="form-group">
               <label for="city">{{ gettext("BadgesCityLabel") }}</label>
-              <textarea class="form-control" name="city" placeholder="{{ gettext("BadgesExampleCity") }}" required></textarea>
+              <textarea class="form-control" name="city" placeholder="{{ gettext("BadgesExampleCity") }}" required>
+                {%- if application.evidence.length >= 2 -%} 
+                  {{ application.evidence[1].reflection | replace("Hive City: ", "")}}
+                {%- endif -%}
+              </textarea>
             </div>
             {% endif %}
             <div class="form-inline">
@@ -127,7 +135,13 @@
     <h2>{{ gettext("Badge Requirements") }}
       <span class="application-off">
         {% if not assertionUrl %}
-          <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">{{ gettext("Apply") }}</button>
+          <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">
+            {%- if not application -%}
+              {{ gettext("Apply") }}
+            {% else %}
+              {{ gettext("Edit Application") }}
+            {%- endif -%}
+          </button>
         {% endif %}
         {% if canIssue %}
           <button id="js-badge-issuing" class="btn btn-lg btn-success pull-right">Issue this badge</button>

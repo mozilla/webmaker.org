@@ -26,7 +26,8 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $issueForm = $('#issue-form');
     var $claimCodeQuestion = $('#claim-code-explainer');
 
-    var slug = $application.attr('data-badge-slug');
+    var badgeSlug = $application.attr('data-badge-slug');
+    var applicationSlug = $application.attr('data-application-slug');
 
     // An application was submitted successfully
     emitter.on('submit-application', function () {
@@ -110,7 +111,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
 
       var claimcode = $claimCodeInput.val();
       if (claimcode.length) {
-        $.post('/api/badges/' + slug + '/claim', {
+        $.post('/api/badges/' + badgeSlug + '/claim', {
           claimcode: claimcode,
           _csrf: $('meta[name="csrf-token"]').attr('content')
         })
@@ -121,9 +122,10 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
             emitter.emitEvent('error', [err]);
           });
       } else {
-        $.post('/api/badges/' + slug + '/apply', {
+        $.post('/api/badges/' + badgeSlug + '/apply', {
           evidence: $evidenceInput.val(),
           city: $cityInput.val(),
+          applicationSlug: applicationSlug,
           _csrf: $('meta[name="csrf-token"]').attr('content')
         })
           .done(function (data) {
@@ -137,7 +139,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
 
     $issueForm.on('submit', function (e) {
       e.preventDefault();
-      $.post('/api/badges/' + slug + '/issue', {
+      $.post('/api/badges/' + badgeSlug + '/issue', {
         email: $issueForm.find('[name="email"]').val(),
         comment: $issueForm.find('[name="comment""]').val(),
         _csrf: $('meta[name="csrf-token"]').attr('content')

@@ -342,7 +342,7 @@
   "Teaching templates": "Teaching templates",
   "Web Literacies": "Web Literacies",
   "Email": "Email",
-  "Emails": "Emails (one per line)",
+  "Emails": "Emails (one per line, or comma-separated)",
   "Issue new badge(s)": "Issue new badge(s)",
   "Comment": "Comment",
   "Add a comment": "Add a comment",

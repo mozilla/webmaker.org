@@ -7,6 +7,7 @@ angular
 
       // User urls
       $scope.accountSettingsUrl = config.accountSettingsUrl;
+      $scope.eventsUrl = config.eventsUrl;
 
       // Start with collapsed state for navigation
       $scope.primaryCollapse = true;

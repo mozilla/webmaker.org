@@ -455,6 +455,7 @@ app.get("/strings/:lang?", i18n.stringsRoute("en-US"));
 var angularConfig = {
   accountSettingsUrl: env.get('LOGIN') + '/account',
   makeApiUrl: env.get('MAKE_ENDPOINT'),
+  eventsUrl: env.get('EVENTS_URL'),
 };
 
 app.get('/angular-config.js', function (req, res) {

@@ -439,8 +439,8 @@ app.post("/cancelReport", routes.report.cancelReport);
 app.get("/t/:tag", routes.tag);
 app.get("/u/:user", routes.usersearch);
 
-app.get("/terms", routes.page("terms"));
-app.get("/privacy", routes.page("privacy"));
+app.get("/terms", routes.angular);
+app.get("/privacy", routes.angular);
 app.get("/languages", routes.page("languages"));
 
 app.get("/sitemap.xml", function (req, res) {

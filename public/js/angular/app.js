@@ -79,6 +79,16 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'aboutController',
           title: 'About'
         })
+        .when('/:locale?/privacy', {
+          templateUrl: '/views/privacy.html',
+          controller: 'homeController',
+          title: 'Privacy Policy'
+        })
+        .when('/:locale?/terms', {
+          templateUrl: '/views/terms.html',
+          controller: 'homeController',
+          title: 'Terms of Use'
+        })
         .when('/:locale?', {
           templateUrl: '/views/home.html',
           controller: 'homeController',

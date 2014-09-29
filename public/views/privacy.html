@@ -1,11 +1,6 @@
-{% extends "layout.html" %}
-{% block title %}Privacy Policy{% endblock %}
-{% block body %}
-<div class="ui-wrapper ui-body">
-
-  <div class="ui-section">
-
-    <div class="ui-row">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
       <h1>Webmaker Privacy</h1>
       <h3>June 15, 2013</h3>
       <p>We care about your privacy. When Mozilla (that’s us) collects information 
@@ -79,8 +74,9 @@
         <li>For processing or providing products and services to you, but only 
           if those entities receiving your information are contractually obligated 
           to handle the data in ways that are approved by Mozilla.</li>
-        <li>When we are fulfilling our 
-          <a href="http://www.mozilla.org/en-GB/about/manifesto/">mission of being open</a>. 
+        <li>When we are fulfilling our
+          <a href="http://www.mozilla.org/{{ lang }}/about/manifesto/">mission
+            of being open</a>.
           We sometimes release information to make our products better and 
           foster an open web, but when we do so, we will remove your personal 
           information and try to disclose it in a way that minimizes the risk 
@@ -126,9 +122,9 @@
 
       <p>If you are under 13, we don't want your personal information, and you 
         must not provide it to us. If you are a parent and believe that your 
-        child who is under 13 has provided us with personal information, please 
-        <a href="https://www.mozilla.org/en-US/privacy/policies/firefox-os/#top">contact us</a> 
-        to have your child's information removed.</p>
+        child who is under 13 has provided us with personal information, please
+        <a href="mailto:help@webmaker.org">contact us</a> to have your child’s
+        information removed.</p>
 
       <h2>What if we change this policy?</h2>
       <p>We may need to change this policy and when we do, we'll notify you.</p>
@@ -137,4 +133,4 @@
   </div>
 </div>
 
-{% endblock %}
+<div ng-include="'/views/partials/footer.html'"></div>

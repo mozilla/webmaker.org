@@ -1,11 +1,6 @@
-{% extends "layout.html" %}
-{% block title %}Terms of Use{% endblock %}
-{% block body %}
-<div class="ui-wrapper ui-body">
-
-  <div class="ui-section">
-
-    <div class="ui-row">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
       <h1>Webmaker Terms</h1>
       <h3>June 15, 2013</h3>
       <p>At Mozilla, we are committed to promoting choice and innovation on the 
@@ -34,7 +29,7 @@
       <p>You will be required to provide information about yourself 
         (such as identification or contact details) to us as part of your 
         registration for and use of Webmaker. We will handle your information as 
-        we describe in <a href="/privacy">Webmaker Privacy</a></p>
+        we describe in <a href="/{{ lang }}/privacy">Webmaker Privacy</a></p>
 
       <h2>Your Submissions</h2>
       <p>You may upload or embed comments, profile pictures and other content 
@@ -281,9 +276,8 @@
           shall be deemed to be, or construed as, a further or continuing waiver 
           of any such breach or a waiver of the breach of any other term 
           or covenant contained in these Terms.</p>
-
     </div>
   </div>
 </div>
 
-{% endblock %}
+<div ng-include="'/views/partials/footer.html'"></div>

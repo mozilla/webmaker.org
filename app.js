@@ -451,21 +451,24 @@ app.get("/sitemap.xml", function (req, res) {
 // Localized Strings
 app.get("/strings/:lang?", i18n.stringsRoute("en-US"));
 
-// Angular config
-var angularConfig = {
-  accountSettingsUrl: env.get('LOGIN') + '/account',
-  makeApiUrl: env.get('MAKE_ENDPOINT'),
-  eventsUrl: env.get('EVENTS_URL'),
-};
+var accountSettingsUrl = env.get('LOGIN') + '/account';
+var makeApiUrl = env.get('MAKE_ENDPOINT');
+var eventsUrl = env.get('EVENTS_URL');
 
 app.get('/angular-config.js', function (req, res) {
-  angularConfig.lang = req.localeInfo.lang;
-  angularConfig.direction = req.localeInfo.direction;
-  angularConfig.defaultLang = 'en-US';
-  angularConfig.supported_languages = i18n.getSupportLanguages();
-  angularConfig.langmap = i18n.getAllLocaleCodes();
-  angularConfig.csrf = req.csrfToken();
-  angularConfig.wlcPoints = res.locals.wlcPoints;
+  // Angular config
+  var angularConfig = {
+    accountSettingsUrl: accountSettingsUrl,
+    makeApiUrl: makeApiUrl,
+    eventsUrl: eventsUrl,
+    lang: req.localeInfo.lang,
+    direction: req.localeInfo.direction,
+    defaultLang: 'en-US',
+    supported_languages: i18n.getSupportLanguages(),
+    langmap: i18n.getAllLocaleCodes(),
+    csrf: req.csrfToken(),
+    wlcPoints: res.locals.wlcPoints
+  };
 
   res.setHeader('Content-type', 'text/javascript');
   res.send('window.angularConfig = ' + JSON.stringify(angularConfig));

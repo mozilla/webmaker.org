@@ -250,9 +250,13 @@ module.exports = function (env) {
       if (req.body.emails) {
         query.emails = req.body.emails;
         apiFunction = badgeClient.createBadgeInstances.bind(badgeClient);
-      } else {
+      } else if (req.body.email) {
         query.email = req.body.email;
         apiFunction = badgeClient.createBadgeInstance.bind(badgeClient);
+      } else {
+        return res.send(500, {
+          error: 'No email address provided'
+        });
       }
 
       apiFunction(query, function (err, data) {

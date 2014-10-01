@@ -240,14 +240,22 @@ module.exports = function (env) {
     },
     issue: function (req, res, next) {
 
+      var apiFunction;
       var query = {
         system: env.get('BADGES_SYSTEM'),
-        emails: req.body.emails,
         badge: req.params.badge,
         comment: req.body.comment
       };
 
-      badgeClient.createBadgeInstances(query, function (err, data) {
+      if (req.body.emails) {
+        query.emails = req.body.emails;
+        apiFunction = badgeClient.createBadgeInstances.bind(badgeClient);
+      } else {
+        query.email = req.body.email;
+        apiFunction = badgeClient.createBadgeInstance.bind(badgeClient);
+      }
+
+      apiFunction(query, function (err, data) {
         if (err) {
           var errorString = err.toString();
           return res.send(500, {

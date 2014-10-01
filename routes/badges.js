@@ -176,7 +176,7 @@ module.exports = function (env) {
 
           var badge = results[0];
           var instance = results[1];
-          var application = results[2].length ? results[2][0] : null;
+          var application = (results[2] && results[2].length) ? results[2][0] : null;
 
           // Shim for https://bugzilla.mozilla.org/show_bug.cgi?id=1001161
           if (badge.issuer && !badge.issuer.imageUrl) {

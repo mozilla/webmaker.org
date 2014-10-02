@@ -34,7 +34,7 @@
   <figure ng-switch-when="image">
     <img ng-src="{{ media.content.src }}" alt="{{ media.content.alt }}"/>
     <figcaption ng-if="media.caption">
-      <p bind-unsafe-html="media.content.caption"></p>
+      <p bind-unsafe-html="media.caption"></p>
     </figcaption>
   </figure>
   <div ng-switch-when="markup">

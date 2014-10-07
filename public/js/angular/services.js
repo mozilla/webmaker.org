@@ -30,6 +30,11 @@ angular
                   url: 'gallery'
                 },
                 {
+                  id: 'skill-sharer',
+                  title: 'Skill Sharer Badge',
+                  url: 'badges/skill-sharer'
+                },
+                {
                   id: 'super-mentor',
                   title: 'Super Mentor Badge',
                   url: 'badges/webmaker-super-mentor'

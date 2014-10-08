@@ -1,7 +1,7 @@
 {
   "name": "webmaker.org",
   "dependencies": {
-    "angular": "1.2.14",
+    "angular": "1.1.66",
     "angular-bootstrap": "0.10.0",
     "angular-resource": "1.0.7",
     "angular-route": "1.2.10",

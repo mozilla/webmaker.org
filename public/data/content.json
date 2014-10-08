@@ -1034,7 +1034,15 @@
           {
             "type": "markup",
             "content": "Find out what it means to design with screens in mind <a href=\"http://frankchimero.com/talks/what-screens-want/transcript/\">in this article by Frank Chimero</a>."
-          }
+          },
+          {
+            "type": "image",
+            "content": {
+              "src": "https://stuff.webmaker.org/teach-assets/kat/frankchimero.jpg",
+              "alt": "Frank Chimero"
+            },
+            "caption": "Frank Chimero speaks at Digital Campfires. Photo credit: Flickr user <a href=\"https://secure.flickr.com/photos/webstock06/5452776280\">webstock</a>."
+          },
         ]
       },
       {

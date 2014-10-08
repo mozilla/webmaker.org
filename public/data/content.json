@@ -886,7 +886,13 @@
       },
       {
         "title": "Create your own animated music video",
-        "description": "Bring together web links to <a href=\"https://popcorn.webmaker.org/editor/60433/remix\">create your own animated music video</a> with help from glitch-artist Max Capacity."
+        "description": "Bring together web links to <a href=\"https://popcorn.webmaker.org/editor/60433/remix\">create your own animated music video</a> with help from glitch-artist Max Capacity.",
+        "multimedia": [
+          {
+            "type": "popcorn",
+            "content": "https://maxcapacity.makes.org/popcorn/1amp"
+          }
+        ]
       },
       {
         "title": "Remix a TV commercial",

@@ -462,8 +462,10 @@ app.get('/angular-config.js', function (req, res) {
     makeApiUrl: makeApiUrl,
     eventsUrl: eventsUrl,
     lang: req.localeInfo.lang,
+    localeInfo: req.localeInfo,
     direction: req.localeInfo.direction,
     defaultLang: 'en-US',
+    supportLang: i18n.getLanguages(),
     supported_languages: i18n.getSupportLanguages(),
     langmap: i18n.getAllLocaleCodes(),
     csrf: req.csrfToken(),
@@ -472,6 +474,15 @@ app.get('/angular-config.js', function (req, res) {
 
   res.setHeader('Content-type', 'text/javascript');
   res.send('window.angularConfig = ' + JSON.stringify(angularConfig));
+});
+
+app.get('/localeInfo', function (req, res) {
+  req.localeInfo.didYouKnowLocale = {};
+  req.localeInfo.otherLangPrefs.forEach(function (item, i) {
+    req.localeInfo.didYouKnowLocale[item] = i18n.gettext('Did you know Webmaker is also available in', item);
+  });
+  res.setHeader('Content-type', 'text/javascript');
+  res.send(JSON.stringify(req.localeInfo));
 });
 
 /**

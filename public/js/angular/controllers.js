@@ -497,4 +497,71 @@ angular
       wmNav.section('resources');
       wmNav.page('mentor');
     }
+  ])
+  .controller('localebannerController', ['$scope', 'CONFIG', '$http', '$location',
+    function ($scope, config, $http, $location) {
+      $http.get('/localeInfo').success(function (localeInfo) {
+
+        $scope.listLang = [];
+        $scope.langmap = config.langmap;
+        localeInfo.otherLangPrefs.map(function (item) {
+          if (config.supportLang.indexOf(item) !== -1 && $scope.listLang.indexOf(item) !== 1 && $scope.listLang.length < 1 && item.match(/^[a-z]{2}/) && config.lang.match(/^[a-z]{2}/) && item.match(/^[a-z]{2}/)[0] !== config.lang.match(/^[a-z]{2}/)[0]) {
+            $scope.listLang.push(item);
+          }
+        });
+
+        var el = document.getElementById("locale-banner");
+        if (!$scope.listLang.length) {
+          $scope.bannerBool = true;
+          el.remove();
+        }
+
+        function removeBanner() {
+          localStorage.setItem('localeBanner', true);
+          $scope.bannerBool = true;
+          el.remove();
+        }
+
+        function acceptRedirect() {
+          var href = $location.path();
+          var lang = config.lang;
+          var supportedLanguages = config.supportLang;
+
+          // Remove banner and set cookie session.
+          removeBanner();
+
+          // matches any of these:
+          // `en`, `en-us`, `en-US` or `ady`
+          var matchesLang;
+          var matches = href.match(/([a-z]{2,3})([-]([a-zA-Z]{2}))?/);
+          if (matches) {
+            if (matches[1] && matches[2]) {
+              matchesLang = matches[1].toLowerCase() + matches[2].toUpperCase();
+            } else {
+              matchesLang = matches[1].toLowerCase();
+            }
+          }
+          // if the selected language is match to the language in the header
+          if ($scope.listLang[0] === lang) {
+            return;
+            // check if we have any matches and they are exist in the array we have
+          } else if ((matches && matches[0]) && supportedLanguages.indexOf(matchesLang) !== -1) {
+            href = href.replace(matches[0], $scope.listLang[0]);
+            window.location = href;
+          } else if (href === '/') {
+            window.location = '/' + $scope.listLang[0];
+          } else {
+            window.location = '/' + $scope.listLang[0] + href;
+          }
+        }
+
+        $scope.didYouKnowLocale = localeInfo.didYouKnowLocale[$scope.listLang[0]];
+        var accept = document.getElementById("locale-btn-accept");
+        var cancel = document.getElementById("locale-btn-cancel");
+        $scope.bannerBool = localStorage.getItem('localeBanner');
+        accept.addEventListener("click", acceptRedirect, false);
+        cancel.addEventListener("click", removeBanner, false);
+
+      });
+    }
   ]);

@@ -1,0 +1,73 @@
+<div class="mv-featured-img-div"></div>
+<div class="wizard-template">
+  <div class="container">
+    <h1 class="wizard-header-section">{{ 'music_video_01' | i18n }}</h1>
+    <p class="wizard-header-section-sub">{{ 'music_video_02' | i18n }}</p>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 wiz-center-mv">
+        <img src="/img/logo-popcorn.svg" class="mv-popcorn-img">
+        <a href="//popcorn.webmaker.org" class="btn btn-success wizard-btn" push-state="false" target="_blank">{{ 'music_video_03' | i18n }}</a>
+        <p class="wizard-btn-desc">{{ 'music_video_04' | i18n }}</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 instructions">
+        <h3 class="wiz-titled">{{ 'Let’s get started' | i18n }}</h3>
+        <ol>
+          <li>
+            <figure>
+              <figcaption class="col-xs-12">
+                <p bind-unsafe-html="'music_video_05' | i18n"></p>
+                <img src="/img/Add_media_to_Popcorn_3.gif" >
+              </figcaption>
+            </figure>
+            <div>
+            </div>
+          </li>
+          <li>
+            <figure>
+              <figcaption class="col-xs-12">
+                <p bind-unsafe-html="'music_video_06' | i18n"></p>
+              </figcaption>
+            </figure>
+            <div>
+            </div>
+          </li>
+          <li>
+            <figure>
+              <figcaption class="col-xs-12">
+                <p bind-unsafe-html="'music_video_07' | i18n"></p>
+                <p bind-unsafe-html="'music_video_08' | i18n" class="bottom-padding"></p>
+                <iframe src='https://openmatt.makes.org/popcorn/288a_' width='450' height='290' frameborder='0' mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
+                <p bind-unsafe-html="'music_video_09' | i18n" class="top-padding"></p>
+              </figcaption>
+            </figure>
+            <div>
+            </div>
+          </li>
+          <li>
+            <figure>
+              <figcaption class="col-xs-12">
+                <p bind-unsafe-html="'music_video_10' | i18n"></p>
+              </figcaption>
+            </figure>
+          </li>
+        </ol>
+        <h3 class="wiz-titled wiz-bottom-titled">{{ 'And you’re done. Great work!' | i18n }}</h3>
+      </div>
+    </div>
+  </div>
+  <footer class="wiz-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-4">
+          <img src="/img/remix_your_school/img-badge-Remix.svg" alt="remix your school badge" >
+        </div>
+        <div class="col-md-5">
+          <h2>{{ 'Claim the Remix Badge' | i18n }}</h2>
+          <p bind-unsafe-html="'wizard-footer-badge' | i18n"></p>
+          <button class="btn btn-success wiz-footer-btn">{{ 'Find out more' | i18n }}</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

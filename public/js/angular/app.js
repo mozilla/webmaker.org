@@ -14,6 +14,18 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/competency.html',
           controller: 'competencyController'
         })
+        .when('/:locale/remix-your-school', {
+          templateUrl: '/views/remix-your-school.html',
+          title: 'Remix Your School'
+        })
+        .when('/:locale/music-video', {
+          templateUrl: '/views/music-video.html',
+          title: 'Music Video'
+        })
+        .when('/:locale/private-eye', {
+          templateUrl: '/views/private-eye.html',
+          title: 'Private Eye'
+        })
         .when('/:locale/resources', {
           templateUrl: '/views/resources.html',
           controller: 'resourcesHomeController',
@@ -107,6 +119,9 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
     function ($rootScope, $http, $routeParams, $location, CONFIG, weblit) {
       $rootScope.title = 'Webmaker';
 
+      $rootScope.direction = CONFIG.direction;
+      $rootScope.arrowDir = CONFIG.direction === 'rtl' ? "left" : "right";
+
       // feed supported langs to meta
       $rootScope.languages = CONFIG.supported_languages;
       $rootScope.currentPath = $location.path();
@@ -140,8 +155,6 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       } else {
         $rootScope.lang = CONFIG.defaultLang;
       }
-      $rootScope.direction = CONFIG.direction;
-      $rootScope.arrowDir = CONFIG.direction === 'rtl' ? "left" : "right";
 
       // Set base url
       $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {

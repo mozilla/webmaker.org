@@ -1,0 +1,58 @@
+{
+  "private-eye-01": {
+    "message": "Private Eye: See who’s tracking you online",
+    "description": "Private Eye: See who’s tracking you online"
+  },
+  "private-eye-02": {
+    "message": "Create a “Wizard of Oz” moment by pulling back the curtain to see who’s watching you on the Web. Turn on Mozilla’s Lightbeam tool, visit a handful of websites to see who’s tracking you, and then learn how to fight back. You’ll never look at the Web the same way again!",
+    "description": "description for private eye page"
+  },
+  "Install Firefox Lightbeam": {
+    "message": "Install Firefox Lightbeam",
+    "description": "Install Firefox Lightbeam button"
+  },
+  "private-eye-03": {
+    "message": "Use the button above to install the Lightbeam add-on in your Firefox web browser.",
+    "description": "description for install Lightbeam button"
+  },
+  "Let’s get started": {
+    "message": "Let’s get started",
+    "description": "header for get started"
+  },
+  "private-eye-04": {
+    "message": "<span class=\"wizard-list-title\">Install the Firefox Lightbeam Add-on.</span> Click on the Install Firefox Lightbeam button on the left. Then, click the Install Now button in the dialog that pops up.",
+    "description": "first bullet point for private eye's section"
+  },
+  "private-eye-05": {
+    "message": "<span class=\"wizard-list-title\">Go to five of your favorite websites.</span> They could be Facebook, YouTube, Netflix, the New York Times, Amazon – anywhere.",
+    "description": "second bullet point for private eye's section"
+  },
+  "private-eye-06": {
+    "message": "<span class=\"wizard-list-title\">Now, click the Lightbeam icon in your toolbar.</span> Take a look at the graph. It’s now filled with the sites you’ve visited, plus all the hidden third parties that track what you do on sites you visit. You may not have realized it, but you’ve just interacted with all those third party sites – in addition to the sites you actually meant to visit.",
+    "description": "third bullet point for private eye's section"
+  },
+  "private-eye-07": {
+    "message": "<span class=\"wiz-green-text\">Bonus points:</span> <span class=\"wizard-list-title\">Read up on Do Not Track.</span> Companies are starting to support Do Not Track, but you may not notice any changes initially. Mozilla is working with companies that have started to implement Do Not Track. Find out more",
+    "description": "sub text for third point"
+  },
+  "private-eye-08": {
+    "message": "<span class=\"wizard-list-title\">Take steps to protect yourself from unwanted tracking.</span> On your Firefox browser, go to Preferences. Click on the Privacy panel. Set your Tracking preferences to ‘Tell sites that I do not want to be tracked.’",
+    "description": "fourth bullet point"
+  },
+  "private-eye-09": {
+    "message": "Nice work! Now you know more about protecting your privacy online",
+    "description": "Nice work! Now you know more about protecting your privacy online"
+  },
+  "Claim the Privacy Badge": {
+    "message": "Claim the Privacy Badge",
+    "description": "Claim the Privacy Badge"
+  },
+  "wizard-footer-badge": {
+    "message": "Once you complete this activity, submit a link to what you made to claim the <a href=\"\">Remix badge.</a> You earned it!",
+    "description": "footer section for activity completion"
+  },
+  "Find out more": {
+    "message": "Find out more",
+    "description": "Find out more"
+  }
+}

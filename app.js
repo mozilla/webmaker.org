@@ -351,6 +351,9 @@ if (env.get('FLAGS_EXPLORE')) {
   }));
 }
 app.get("/tools", routes.angular);
+app.get("/remix-your-school", routes.angular);
+app.get("/music-video", routes.angular);
+app.get("/private-eye", routes.angular);
 app.get("/appmaker", routes.angular);
 app.get("/feedback", routes.angular);
 app.get("/getinvolved", routes.angular);

@@ -1,0 +1,233 @@
+.rys-featured-img-div {
+    height: 36rem;
+    background-image: url(/img/remix_your_school/img-Feature-photo.jpg);
+  img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 8rem;
+    height: 28rem;
+  }
+}
+
+.pe-featured-img-div {
+  height: 36rem;
+  background-image: url(/img/Privacy/img-privacy-Feature-photo.jpg);
+}
+
+.mv-featured-img-div {
+  height: 36rem;
+  background-image: url(/img/img-popcorn-Feature-photo.jpg);
+}
+
+.wizard-header-section {
+  font-size: 5rem;
+  padding-top: 1rem;
+}
+
+.wizard-header-section-sub {
+  font-size: 2.27rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.wizard-btn {
+  height: 8rem;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 2rem 0;
+  a {
+    text-decoration: none;
+    color: @white;
+  }
+}
+
+.wizard-btn-desc {
+  padding: 1.5rem 0;
+  font-weight: 300;
+  text-align: center;
+}
+
+.wiz-center-mv {
+  text-align: center;
+}
+
+.mv-popcorn-img {
+  height: 14.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.wizard-template {
+  ol {
+    list-style: none;
+    counter-reset: remix-steps;
+    padding-left: 1.8rem;
+    li {
+      .container-fluid;
+      margin-bottom: 3rem;
+      position: relative;
+      &::before {
+        background: #e3eaee;
+        border-radius: 50%;
+        content: counter(remix-steps);
+        counter-increment: remix-steps;
+        display: block;
+        font-size: 1.3rem;
+        left: -2.5em;
+        line-height: 3.2rem;
+        height: 2.5em;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        width: 2.5em;
+      }
+      img {
+        padding: 2rem 0;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
+    figure {
+      .row;
+    }
+    .top-padding {
+      padding-top: 3rem;
+    }
+    .bottom-padding {
+      padding-bottom: 3rem;
+    }
+    iframe {
+      box-shadow: 0 0 1px 0 #ccc;
+    }
+    .wiz-green-text {
+      color: @green;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 1.7rem;
+    }
+  }
+  .wizard-list-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+  }
+  p {
+    font-weight: 300;
+  }
+  kbd {
+    color: black;
+    background-color: @lightgrey;
+  }
+  .image-sub {
+    padding-top: 2.5rem;
+    font-weight: 600;
+  }
+  .wizard-share-image {
+    padding-top: 2.5rem;
+  }
+  .wiz-align-center {
+    text-align: center;
+  }
+  .instructions {
+    margin-left: 0rem;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-left: 3rem;
+    }
+  }
+  .rys-aside {
+    background: @brand-primary;
+  }
+  .rys-xray-area {
+    height: 30rem;
+    color: @white;
+    .wiz-goggles-btn {
+      display: inline-block;
+      background-color: #ffcd36;
+      color: @black;
+      width: 100%;
+      height: 7.5rem;
+      font-size: 2.5rem;
+      font-weight: 300;
+      padding: 1.8rem 0;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      &:hover {
+        background-color: #fee130;
+        box-shadow: none;
+      }
+    }
+    h2 {
+      padding: 0.4rem 0 1.5rem 0;
+      margin-left: 1.2rem;
+    }
+  }
+  .wiz-titled {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    padding-bottom: 2rem;
+    display: inline-block;
+    margin-left: 3.3rem;
+  }
+  .wiz-bottom-titled {
+    padding-bottom: 6rem;
+  }
+}
+.wiz-xray-cta {
+  padding: 3rem 1.5rem 0 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+    img {
+      width: 7rem;
+      height: 7rem;
+      float: left;
+      margin: 0px 1.5rem 1.5rem 0px;
+    }
+    .highlight-rys {
+      font-weight: 500;
+      font-size: 1.7rem;
+    }
+  }
+
+.wiz-pe-cta {
+  padding-top: 2.5rem;
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.5rem;
+  p {
+    margin-top: 0rem;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-top: 1.5rem;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      margin-top: 0;
+    }
+  }
+  img {
+    width: 8rem;
+    height: 7rem;
+    float: left;
+    margin-top: -2px;
+  }
+}
+
+.lightbeam-img {
+  height: 29rem;
+}
+
+footer.wiz-footer {
+  background: #e3eaee;
+  color: @black;
+  font-size: 1.7rem;
+}
+
+.wiz-footer-btn {
+  width: 17rem;
+  height: 4rem;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

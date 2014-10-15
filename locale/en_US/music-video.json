@@ -1,0 +1,50 @@
+{
+  "music_video_01": {
+    "message": "Make a Music Video on the Web",
+    "description": "Make a Music Video on the Web"
+  },
+  "music_video_02": {
+    "message": "Make your own music video on the web using Webmaker’s Popcorn Maker. It’s fun, easy and can take as little as two minutes! Here’s how.",
+    "description": "description for music video page"
+  },
+  "music_video_03": {
+    "message": "Launch Popcorn Maker",
+    "description": "Launch Popcorn Maker button"
+  },
+  "music_video_04": {
+    "message": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites.",
+    "description": "Call to action description"
+  },
+  "music_video_05": {
+    "message": "<span class=\"wizard-list-title\">Find and add a video with audio you like.</span> Click the big green ‘Launch Popcorn Maker’ button to get started. Once you’re in the application, type a song name or video into the search box. Popcorn Maker will search YouTube and display the results. Click on a video’s thumbnail to add it to the timeline.",
+    "description": "first bullet point for music video page"
+  },
+  "music_video_06": {
+    "message": "<span class=\"wizard-list-title\">Add a second video.</span> Find another video with imagery you like. It could be a video of you lip synching to the music, fluffy white kittens – anything! Paste in the second link and add it to your timeline.",
+    "description": "second bullet point for Music video page"
+  },
+  "music_video_07": {
+    "message": "<span class=\"wizard-list-title\">Adjust.</span> Drag and drop the videos on the timeline to adjust them. You can turn the audio or video for each on or off, or move the clips around on the timeline to get the mix how you want it.",
+    "description": "third bullet point for Music video page"
+  },
+  "music_video_08": {
+    "message": "<span class=\"wizard-list-title\">Wondering what the finished product might look like?</span> Here’s an example of a simple mash-up we created in two minutes by combining this <a href=\"https://www.youtube.com/watch?v=iHSLh8-Ijw8\">music video</a> with this <a href=\"https://www.youtube.com/watch?v=tBiFnDuCJIU\">Martin Luther King speech.</a>",
+    "description": "third bullet sub point for Music video page"
+  },
+  "music_video_09": {
+    "message": "<span class=\"wiz-green-text\">Bonus points:</span> <span class=\"wizard-list-title\">Get fancy.</span> Explore Popcorn Maker to make your music video stand out more. If you feel like it, add more custom touches to your project. Add text, links, photos, animated GIFs, or more videos for some extra sparkle.",
+    "description": "third bullet sub point two for Music video page"
+  },
+  "music_video_10": {
+    "message": "<span class=\"wizard-list-title\">Publish your creation.</span> Once you’re done, hit the big green “Save” button at the top. Now you can share the link to your music video with the world. Share your creation on Twitter using the <a href=\"https://twitter.com/search?q=%23makerparty&src=typd\">#makerparty</a> hashtag.",
+    "description": "fourth bullet point for Music video page"
+  },
+  "And you’re done. Great work!": {
+    "message": "And you’re done. Great work!",
+    "description": "And you’re done. Great work!"
+  },
+  "Claim the Remix Badge": {
+    "message": "Claim the Remix Badge",
+    "description": "Claim the Remix Badge"
+  }
+}

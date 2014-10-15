@@ -1,0 +1,46 @@
+{
+  "remix_your_school_01": {
+    "message": "Remix Your School",
+    "description": "Remix Your School"
+  },
+  "remix_your_school_02": {
+    "message": "In this Maker Party, you'll remix your school's web site. It's fun, creative, and lets you mess around with HTML, the language that makes up the web. It's easy! Don't worry – you're just changing a version of the site only you and others you share with can see.",
+    "description": "page description"
+  },
+  "remix_your_school_03": {
+    "message": "Before you begin",
+    "description": "Before you begin"
+  },
+  "remix_your_school_04": {
+    "message": "Activate X-Ray Goggles",
+    "description": "Activate X-Ray Goggles"
+  },
+  "remix_your_school_05": {
+    "message": "Install the X-Ray Goggles.",
+    "description": "Install the X-Ray Goggles."
+  },
+  "remix_your_school_06": {
+    "message": "Drag the big yellow \"Activate X-Ray Goggles\" button to your browser's bookmarks toolbar.",
+    "description": "Drag the big yellow \"Activate X-Ray Goggles\" button to your browser's bookmarks toolbar."
+  },
+  "remix_your_school_07": {
+    "message": "<span class=\"wizard-list-title\">Once you have the X-Ray Goggles installed, navigate to your school’s website. Or go to your future college website.</span> Choose a site that would be fun to edit.",
+    "description": "first bullet point remix your school page"
+  },
+  "remix_your_school_08": {
+    "message": "<span class=\"wizard-list-title\">Activate the Goggles.</span> Click on your browser’s bookmarklet to explore the page and see what kinds of things you can edit.",
+    "description": "second bullet point remix your school page"
+  },
+  "remix_your_school_09": {
+    "message": "<span class=\"wizard-list-title\">Remix some text.</span> Click on an element or hit <kbd>R</kbd> on the keyboard to remix any element. Try changing some of the text on the page. You could announce that your school is closed next week, that your teacher has been abducted by aliens – anything!",
+    "description": "third bullet point remix your school page"
+  },
+  "remix_your_school_10": {
+    "message": "<span class=\"wiz-green-text\">Bonus points:</span> <span class=\"wizard-list-title\">Swap in a new image.</span> Mouse over an image on the page and hit <kbd>R</kbd> or click ‘Remix’. Then paste in the URL address for your new image. How do you find the address for a new image? First, find an image you like on the web. Right-click on the image you want and select ‘Copy image location.’ Then, paste your new image URL over top of the old one.",
+    "description": "third bullet point sub for remix your school page"
+  },
+  "remix_your_school_11": {
+    "message": "<span class=\"wizard-list-title\">Publish your creation.</span> Click the Publish button or press <kbd>P</kbd> on your keyboard. This makes your changes visible on the web for others to see. Share your creation on Twitter using the <a href=\"https://twitter.com/search?q=%23makerparty&src=typd\">#makerparty</a> hashtag.",
+    "description": "fourth bullet point remix your school page"
+  }
+}

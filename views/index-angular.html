@@ -47,7 +47,7 @@
   <header class="explore-nav" ng-include="'/views/partials/navigation.html'" ng-controller="navigationController"></header>
   <div id="locale-banner" ng-controller="localebannerController" ng-hide="bannerBool">
     <div class="container">
-      <p><span id="locale-btn-cancel" class="fa fa-times"></span>{{ didYouKnowLocale }} <a id="locale-btn-accept">{{ langmap[listLang[0]].nativeName }}</a>?</p>
+      <p><span id="locale-btn-cancel" ng-click="removeBanner()" class="fa fa-times"></span>{{ didYouKnowLocale }} <a id="locale-btn-accept" ng-click="acceptRedirect()">{{ langmap[listLang[0]].nativeName }}</a>?</p>
     </div>
   </div>
   <section class="main">

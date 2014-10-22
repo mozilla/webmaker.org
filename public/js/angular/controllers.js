@@ -516,19 +516,19 @@ angular
           el.remove();
         }
 
-        function removeBanner() {
+        $scope.removeBanner = function removeBanner() {
           localStorage.setItem('localeBanner', true);
           $scope.bannerBool = true;
           el.remove();
         }
 
-        function acceptRedirect() {
+        $scope.acceptRedirect = function acceptRedirect() {
           var href = $location.path();
           var lang = config.lang;
           var supportedLanguages = config.supportLang;
 
           // Remove banner and set cookie session.
-          removeBanner();
+          $scope.removeBanner();
 
           // matches any of these:
           // `en`, `en-us`, `en-US` or `ady`
@@ -556,12 +556,7 @@ angular
         }
 
         $scope.didYouKnowLocale = localeInfo.didYouKnowLocale[$scope.listLang[0]];
-        var accept = document.getElementById("locale-btn-accept");
-        var cancel = document.getElementById("locale-btn-cancel");
         $scope.bannerBool = localStorage.getItem('localeBanner');
-        accept.addEventListener("click", acceptRedirect, false);
-        cancel.addEventListener("click", removeBanner, false);
-
       });
     }
   ]);

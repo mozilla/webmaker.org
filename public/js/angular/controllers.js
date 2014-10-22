@@ -520,7 +520,7 @@ angular
           localStorage.setItem('localeBanner', true);
           $scope.bannerBool = true;
           el.remove();
-        }
+        };
 
         $scope.acceptRedirect = function acceptRedirect() {
           var href = $location.path();
@@ -553,7 +553,7 @@ angular
           } else {
             window.location = '/' + $scope.listLang[0] + href;
           }
-        }
+        };
 
         $scope.didYouKnowLocale = localeInfo.didYouKnowLocale[$scope.listLang[0]];
         $scope.bannerBool = localStorage.getItem('localeBanner');

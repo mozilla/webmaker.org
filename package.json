@@ -56,6 +56,15 @@
     "webmaker-translation-stats": "0.0.1"
   },
   "devDependencies": {
-    "grunt-contrib-imagemin": "0.8.1"
+    "colors": "0.6.2",
+    "grunt-contrib-imagemin": "0.8.1",
+    "grunt-contrib-jshint": "0.7.1",
+    "grunt-gettext-finder": "0.0.2",
+    "grunt-jsbeautifier": "0.2.2",
+    "grunt-shell": "0.6.1",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.4.13",
+    "grunt-jsonlint": "^1.0.4"
   }
 }

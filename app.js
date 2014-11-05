@@ -261,8 +261,7 @@ app.locals({
   EVENTS_URL: env.get("EVENTS_URL"),
   flags: flags,
   personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org"),
-  bower_path: "../bower_components",
-  SHOW_PROFILE: env.get("SHOW_PROFILE")
+  bower_path: "../bower_components"
 });
 
 app.use(function (req, res, next) {
@@ -351,16 +350,8 @@ app.get('/signup/:auth?', routes.angular);
 
 // Angular
 app.get('/', routes.angular);
-if (env.get('FLAGS_EXPLORE')) {
-  app.get('/explore', routes.angular);
-  app.get('/resources/:section?/:competency?', routes.angular);
-} else {
-  app.get("/resources", routes.gallery({
-    layout: "starterMakes",
-    prefix: "template",
-    limit: 20
-  }));
-}
+app.get('/explore', routes.angular);
+app.get('/resources/:section?/:competency?', routes.angular);
 app.get("/tools", routes.angular);
 app.get("/remix-your-school", routes.angular);
 app.get("/music-video", routes.angular);

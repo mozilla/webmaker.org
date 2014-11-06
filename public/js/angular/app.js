@@ -134,6 +134,34 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       $rootScope.languages = CONFIG.supported_languages;
       $rootScope.currentPath = $location.path();
 
+      // Configure CSRF token
+      $http.defaults.headers.common['X-CSRF-Token'] = CONFIG.csrf;
+      $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
+        // Reset the page title when route changes
+        $rootScope.title = current.$$route.title || 'Webmaker';
+      });
+
+      // Set up content for competency
+      $http
+        .get('/data/content.json')
+        .success(function (data) {
+          $rootScope.allContent = data;
+          $rootScope.contentReady = true;
+        })
+        .error(function (err) {
+          console.log(err);
+        });
+
+      $http
+        .get('/data/madewithcode.json')
+        .success(function (data) {
+          $rootScope.madewithcode = data;
+          $rootScope.mwcReady = true;
+        })
+        .error(function (err) {
+          console.log(err);
+        });
+
       // matches any of these:
       // `en`, `en-us`, `en-US` or `ady`
       var href = $location.path();
@@ -153,33 +181,5 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       } else {
         $location.path(CONFIG.lang + href);
       }
-
-      // Configure CSRF token
-      $http.defaults.headers.common['X-CSRF-Token'] = CONFIG.csrf;
-      $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
-        // Reset the page title when route changes
-        $rootScope.title = current.$$route.title || 'Webmaker';
-      });
-
-      // Set up content for competency
-      $http
-        .get('/data/content.json')
-        .success(function (data) {
-          $rootScope.content = data;
-          $rootScope.contentReady = true;
-        })
-        .error(function (err) {
-          console.log(err);
-        });
-
-      $http
-        .get('/data/madewithcode.json')
-        .success(function (data) {
-          $rootScope.madewithcode = data;
-          $rootScope.mwcReady = true;
-        })
-        .error(function (err) {
-          console.log(err);
-        });
     }
   ]);

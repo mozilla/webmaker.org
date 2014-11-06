@@ -135,10 +135,10 @@ angular
       })[0];
 
       if ($rootScope.contentReady) {
-        $scope.content = $rootScope.content[$scope.tag];
+        $scope.content = $rootScope.allContent[$scope.tag];
       } else {
         $timeout(function () {
-          $scope.content = $rootScope.content[$scope.tag];
+          $scope.content = $rootScope.allContent[$scope.tag];
         }, 500);
       }
       $scope.weblit = weblit;

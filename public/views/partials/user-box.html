@@ -1,23 +1,22 @@
 <ul class="nav navbar-nav navbar-right">
-  <li dropdown class="dropdown" ng-cloak ng-show="_user.email">
-  <a dropdown-toggle class="navbar-user-info dropdown-toggle">
+  <li class="dropdown" ng-cloak ng-show="_user.email">
+  <a class="navbar-user-info dropdown-toggle">
     <img class="user-info-avatar" ng-src="{{_user.avatar}}"> {{ 'Hi' | i18n }} <strong>{{_user.username}}</strong>
     <span class="label label-primary" ng-show="_user.isAdmin">admin</span>
     <span class="label label-info" ng-show="!_user.isAdmin && _user.isSuperMentor">supermentor</span>
     <span class="label label-warning" ng-show="!_user.isAdmin && !_user.isSuperMentor && _user.isMentor">mentor</span>
     <span class="caret"></span>
   </a>
-  <ul dropdown-menu class="dropdown-menu">
+  <ul class="dropdown-menu">
     <li><a href="/{{lang}}/user/{{_user.username}}/makes" target="_blank"><span class="fa fa-th-large"></span> {{ 'My makes' | i18n }}</a></li>
     <li><a href="/{{lang}}/user/{{_user.username}}"><span class="fa fa-user"></span> {{ 'My Profile' | i18n }}</a></li>
     <li><a href="{{eventsUrl}}/user/{{_user.username}}"><span class="fa fa-flag"></span> {{ 'My Events' | i18n }}</a></li>
     <li><a href="{{accountSettingsUrl}}" target="_blank"><span class="fa fa-cog"></span> {{ 'My Settings' | i18n }}</a></li>
     <li class="divider"></li>
-    <li><a wm-logout href="#"><span class="fa fa-sign-out"></span> {{ 'Sign out' | i18n }}</a></li>
+    <li><a ng-click="logout()"><span class="fa fa-sign-out"></span> {{ 'Sign out' | i18n }}</a></li>
   </ul>
   </li>
   <li>
-    <button wm-join-webmaker wm-password-reset showcta="true" ng-cloak ng-show="!_user.email" class="btn btn-primary navbar-btn">{{ 'Join Webmaker' | i18n }}</button>
-    <button wm-signin ng-cloak ng-show="!_user.email" class="btn btn-secondary-nav navbar-btn">{{'Sign in' | i18n }}</button>
+  <button ng-cloak ng-show="!_user.email" class="btn btn-primary navbar-btn" ng-click="login()">{{'Sign in' | i18n }}</button>
   </li>
 </ul>

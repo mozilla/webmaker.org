@@ -11,8 +11,8 @@
         <h1>{{ 'Sign up for Webmaker' | i18n }}</h1>
         <p ng-bind-html="'signup_intro' | i18n"></p>
         <p>
-          <button class="btn-page-info btn btn-secondary" wm-join-webmaker showcta="true">{{ 'Create an account' | i18n }} <i class="fa fa-chevron-right fa-smaller"></i></button>
-          <a href="#" wm-signin>{{ 'Log in' | i18n }} <i class="fa fa-chevron-right fa-smaller"></i></a>
+          <button class="btn-page-info btn btn-secondary" ng-click="login()">{{ 'Create an account' | i18n }} <i class="fa fa-chevron-right fa-smaller"></i></button>
+          <a href="#" ng-click="login()">{{ 'Log in' | i18n }} <i class="fa fa-chevron-right fa-smaller"></i></a>
         </p>
       </div>
     </div>

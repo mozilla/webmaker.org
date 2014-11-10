@@ -96,7 +96,6 @@ module.exports = function (grunt) {
             'bower_components/jquery/jquery.js',
             'bower_components/web-literacy-client/dist/web-literacy-client.with-langs.js',
             'bower_components/makeapi-client/src/make-api.js',
-            'bower_components/webmaker-auth-client/dist/webmaker-auth-client.min.js',
             'bower_components/selectize/dist/js/standalone/selectize.js',
             'bower_components/webmaker-analytics/analytics.js',
 
@@ -114,6 +113,8 @@ module.exports = function (grunt) {
             'bower_components/angular-sanitize/angular-sanitize.js',
             'bower_components/moment/min/moment+langs.min.js',
             'bower_components/angular-moment/angular-moment.min.js',
+            'bower_components/webmaker-login-ux/dist/ngWebmakerLogin.js',
+            'bower_components/webmaker-login-ux/dist/templates/ngWebmakerLogin.templates.js',
 
             'bower_components/imagesloaded/imagesloaded.pkgd.js',
             'bower_components/masonry/dist/masonry.pkgd.js'
@@ -172,10 +173,12 @@ module.exports = function (grunt) {
   // For building angular js
   grunt.registerTask('build', ['uglify']);
 
+  grunt.registerTask('clean', ['jsbeautifier:modify']);
+
   grunt.registerTask('dev', ['uglify', 'express', 'watch']);
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'jsonlint', 'imagemin']);
+  grunt.registerTask('default', ['clean', 'jshint', 'jsonlint', 'imagemin']);
 
   // Verify code (Read only)
   grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint', 'gettext_finder', 'jsonlint']);

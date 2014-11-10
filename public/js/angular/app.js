@@ -1,9 +1,8 @@
 angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
-  'webmakerAngular.login', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'])
+  'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'])
   .config(['$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
     function ($routeProvider, $locationProvider, makeApiProvider, CONFIG) {
       makeApiProvider.options.apiURL = CONFIG.makeApiUrl;
-
       $routeProvider
         .when('/:locale/explore', {
           templateUrl: '/views/explore.html',

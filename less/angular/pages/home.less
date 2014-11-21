@@ -39,22 +39,30 @@
       .align-items(center);
     }
     #slide-0 {
-      background: #E1ECEE;
-      color: @green;
-      .appmaker-logo {
-        width: 70%;
-        @media (min-width: @screen-sm-min) {
-          width: 33%;
-        }
+      @media @standard-def {
+        background-image: url(/img/home/banner-skills-sharer.jpg);
       }
-      h1 {
-        @media (min-width: @screen-sm-min) {
-          font-size: 4rem;
+      @media @retina {
+        background-image: url(/img/home/banner-skills-sharer@2x.jpg);
+      }
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      .lead {
+        max-width: 50rem;
+      }
+      .btn {
+        margin: 1rem 0 0 0;
+        padding: 1.4rem 3rem;
+        font-size: 1.6rem;
+        @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+          margin: 1rem 0 0 0;
         }
-        @media (min-width: @screen-md-min) {
-          font-size: 7.2rem;
+        @media (min-width: @screen-md-min){
+          margin: 2rem 0 0 0;
+          padding: 1.7rem 6rem;
+          font-size: 2rem;
         }
-        margin: 1rem 0 2rem;
       }
     }
     #slide-1 {
@@ -98,6 +106,22 @@
       &.btn {
         text-decoration: none;
       }
+    }
+    .skill-sharer-badge {
+      width: 20%;
+      margin: -3rem 0 2rem 0;
+      @media (min-width: @screen-sm-min) and (max-width: @screen-md-min){
+        width: 11%;
+        margin: -5rem 0px 2rem;
+      }
+      @media (min-width: @screen-md-min) {
+        width: 11%;
+        margin: -5rem 0 3rem 0;
+      }
+      .animated;
+      .slideInDown;
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
     }
     .maker-party-logo {
       width: 25%;

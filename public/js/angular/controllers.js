@@ -9,9 +9,6 @@ angular
       $scope.accountSettingsUrl = config.accountSettingsUrl;
       $scope.eventsUrl = config.eventsUrl;
 
-      // login v2
-      $scope.loginV2Enabled = config.loginV2Enabled;
-
       // Start with collapsed state for navigation
       $scope.primaryCollapse = true;
       $scope.secondaryCollapse = true;
@@ -101,24 +98,17 @@ angular
       ];
     }
   ])
-  .controller('homeController', ['$rootScope', '$scope', 'wmNav', '$routeParams', 'CONFIG',
-    function ($rootScope, $scope, wmNav, $routeParams, CONFIG) {
+  .controller('homeController', ['$rootScope', '$scope', 'wmNav', '$routeParams',
+    function ($rootScope, $scope, wmNav, $routeParams) {
       wmNav.page('home');
       wmNav.section('');
       $scope.userDel = $routeParams.userDel;
 
       if ($routeParams.auth === 'login') {
-        if (CONFIG.loginV2Enabled) {
-          $rootScope.wmTokenLogin();
-        } else {
-          $rootScope.login();
-        }
+        $rootScope.login();
       } else if ($routeParams.auth === 'new-account') {
-        if (CONFIG.loginV2Enabled) {
-          $rootScope.wmCreateUser();
-        } else {
-          $rootScope.login();
-        }
+        // change this function when/if we move away from persona ?
+        $rootScope.login();
       }
     }
   ])

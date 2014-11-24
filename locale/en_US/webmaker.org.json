@@ -165,8 +165,8 @@
   "Manila, Philippines": "Manila, Philippines",
   "Me": "Me",
   "Meet some amazing mentors.": "Meet some amazing mentors.",
-  "Mentor an eager learner paragraph": "As part of Mozilla’s non-profit <a href=\"http://www.mozilla.org/about/manifesto/\">mission</a>, our goal is to spread <a href=\"/{{ lang }}/resources\"> web literacy</a> and digital skills. We believe in teaching web literacy through hands-on making and participatory learning. Webmaker Mentors <a href=\"/{{ lang }}/resources\">remix and create curriculum</a>, <a href=\"https://events.webmaker.org/#!/\">organize learning events</a>, and participate in <a href=\"http://training.webmakerprototypes.org/\">professional development</a> to better help their communities understand the mechanics, citizenship and culture of the web.",
-  "Mentor an eager learner": "Mentor an eager learner",
+  "Create a more web literate world paragraph": "We are techies, makers, educators, parents and others who want to teach digital skills and web literacy through making.",
+  "Create a more web literate world": "Create a more web literate world",
   "Mentor": "Mentor",
   "Mentors help others learn": "<a href='https://sendto.mozilla.org/page/s/mentor-signup'>Sign-up to show your interest in becoming a Webmaker Mentor.</a> We'll follow up with information on how to get involved.",
   "MIT Media Lab": "MIT Media Lab",
@@ -312,7 +312,7 @@
   "Webmaking made easy": "Webmaking made easy",
   "Webpages with Thimble": "Webpages with Thimble",
   "What are you looking for?": "What are you looking for?",
-  "Who are Webmaker mentors?": "Who are Webmaker Mentors?",
+  "Build your mentorship skills": "Build your mentorship skills",
   "Why become a mentor?": "Why become a mentor?",
   "X-Ray Desc": "See how the web works",
   "X-Ray Goggles": "X-Ray Goggles",
@@ -386,5 +386,11 @@
   "Language Preference": "Language Preference",
   "Webmaker": "Webmaker",
   "Webmaker - Sign Up": "Webmaker - Sign Up",
-  "user_deleted": "Your account has been deleted."
+  "user_deleted": "Your account has been deleted.",
+  "Browse our teaching resources": "Browse our <a href=\"https://webmaker.org/resources\">teaching resources</a> or participate in <a href=\"https://training.webmakerprototypes.org\">professional development</a>.",
+  "Join or host local events": "Join or host <a href=\"https://events.webmaker.org\">local events</a> to collaborate with peers and teach learners.",
+  "Show others how to make the web": "Show others how to make the web and collect the <a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker Skill Sharer badge</a>. When you're ready, apply for the <a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker Mentor Badge</a>.",
+  "Connect with the Community": "Connect with the Community",
+  "Join our online forum": "Join our <a href=\"https://discourse.webmakerprototypes.org/category/meet\">online forum</a> to meet other mentors like you. Share your events, activities and teaching resources using the <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> hashtag.",
+  "Introduce yourself": "Introduce yourself"
 }

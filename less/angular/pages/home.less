@@ -39,6 +39,39 @@
       .align-items(center);
     }
     #slide-0 {
+      // HOUR OF CODE
+      @media @standard-def {
+        background-image: url(/img/home/banner-HoC.jpg);
+      }
+      @media @retina {
+        background-image: url(/img/home/banner-HoC@2x.jpg);
+      }
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      h1 {
+        max-width: 112rem;
+      }
+      .lead {
+        max-width: 44rem;
+      }
+      .btn {
+        margin: 0;
+        padding: 1.4rem 6rem;
+        font-size: 1.6rem;
+        @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+          margin: 0;
+          padding: 1.7rem 10rem;
+        }
+        @media (min-width: @screen-md-min){
+          margin: 1rem 0 0 0;
+          padding: 1.7rem 11rem;
+          font-size: 2rem;
+        }
+      }
+    }
+    #slide-1 {
+      // SKILLS SHARER
       @media @standard-def {
         background-image: url(/img/home/banner-skills-sharer.jpg);
       }
@@ -59,24 +92,14 @@
           margin: 1rem 0 0 0;
         }
         @media (min-width: @screen-md-min){
-          margin: 2rem 0 0 0;
+          margin: 1.5rem 0 0 0;
           padding: 1.7rem 6rem;
           font-size: 2rem;
         }
       }
     }
-    #slide-1 {
-      @media @standard-def {
-        background-image: url(/img/home/banner-maker-party.jpg);
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-maker-party@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
     #slide-2 {
+      // TANDOG QUOTE
       @media @standard-def {
         background-image: url(/img/home/banner-tandog.jpg);
       }
@@ -88,6 +111,7 @@
       background-size: cover;
     }
     #slide-3 {
+      // STORYMAKERS QUOTE
       @media @standard-def {
         background-image: url(/img/home/banner-brooklyn.jpg)
       }
@@ -117,6 +141,22 @@
       @media (min-width: @screen-md-min) {
         width: 11%;
         margin: -5rem 0 3rem 0;
+      }
+      .animated;
+      .slideInDown;
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+    .desktop-logo {
+      width: 20%;
+      margin: -3rem 0px 1rem;
+      @media (min-width: @screen-sm-min) and (max-width: @screen-md-min){
+        width: 14%;
+        margin: -4rem 0px 1.5rem;
+      }
+      @media (min-width: @screen-md-min) {
+        width: 9%;
+        margin: -4rem 0px 1.5rem;
       }
       .animated;
       .slideInDown;

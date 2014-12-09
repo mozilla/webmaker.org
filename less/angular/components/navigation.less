@@ -1,0 +1,20 @@
+.navbar-footer {
+  background-color: @navy;
+  padding-bottom: 3rem;
+
+  ul {
+    float: left;
+    list-style: none;
+    margin-right: 5rem;
+    padding: 0;
+  }
+
+  a {
+    &:link, &:visited {
+      color: fade(@white, 80%);
+    }
+    &:hover, &:active, &:focus {
+      color: @white;
+    }
+  }
+}

@@ -44,21 +44,36 @@
     </div><!-- /.row -->
   </div>
 </footer>
-<nav class="navbar navbar-no-header-xs navbar-tertiary">
+<nav class="navbar-footer">
   <div class="container">
-    <div class="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="mailto:help@webmaker.org">{{ 'Contact' | i18n }}</a></li>
-        <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ 'Donate' | i18n }}</a></li>
-        <li><a href="/{{lang}}/privacy">{{ 'Privacy' | i18n }}</a></li>
-        <li><a href="/{{lang}}/terms">{{ 'Legal' | i18n }}</a></li>
-        <li><a href="https://support.mozilla.org/products/webmaker">{{ 'Help' | i18n }}</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://twitter.com/webmaker"><span class="fa fa-twitter"></span> @webmaker</a></li>
-        <li><a href="https://plus.google.com/u/2/communities/106022863174952221205"><span class="fa fa-google-plus"></span> {{ 'google+' | i18n }}</a></li>
-        <li><a href="http://blog.webmaker.org"><span class="fa fa-file-text-o"></span> {{ 'Blog' | i18n }}</a></li>
-      </ul>
-    </div>
+    <ul>
+      <li><a href="/{{lang}}/about">{{ 'About' | i18n }}</a></li>
+      <li><a href="https://teach.webmaker.org">{{ 'Teach' | i18n }}</a></li>
+      <li><a href="https://blog.webmaker.org">{{ 'Blog' | i18n }}</a></li>
+      <li><a href="https://twitter.com/webmaker">Twitter</a></li>
+      <li>
+        <a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">
+          {{ 'Donate' | i18n }}
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://support.mozilla.org/products/webmaker">
+          {{ 'Help' | i18n }}
+        </a>
+      </li>
+      <li><a href="mailto:help@webmaker.org">{{ 'Contact' | i18n }}</a></li>
+      <li><a href="/{{lang}}/privacy">{{ 'Privacy' | i18n }}</a></li>
+      <li><a href="/{{lang}}/terms">{{ 'Legal' | i18n }}</a></li>
+    </ul>
+    <ul class="pull-right">
+      <li>
+        <a href="https://mozilla.org/">
+          <img src="/img/logo-mozilla-white.png" alt="mozilla logo" height="50" width="124"/>
+        </a>
+      </li>
+    </ul>
+  </div>
   </div>
 </nav>

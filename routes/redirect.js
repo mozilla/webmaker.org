@@ -50,12 +50,6 @@ module.exports = function (app) {
       "/connect"
     ]
   }, {
-    route: "/make-your-own",
-    paths: [
-      "/teach",
-      "/teach-templates"
-    ]
-  }, {
     route: app.locals.EVENTS_URL + '/#!/event-guides',
     paths: [
       "/guides",
@@ -70,6 +64,11 @@ module.exports = function (app) {
     route: app.locals.EVENTS_URL,
     paths: [
       "/events"
+    ]
+  }, {
+    route: app.locals.TEACH_URL,
+    paths: [
+      "/teach"
     ]
   }, {
     route: app.locals.EVENTS_URL + '/#!/events/:event',

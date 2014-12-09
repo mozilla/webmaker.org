@@ -50,46 +50,6 @@
     ]
   },
   {
-    "id": "explore",
-    "title": "Explore",
-    "icon": "icon-random",
-    "flag": "explore",
-    "defaultUrl": "explore",
-    "pages": [
-      {
-        "id": "index",
-        "title": "Gallery",
-        "url": "gallery"
-      },
-      {
-        "id": "skill-sharer",
-        "title": "Skill Sharer Badge",
-        "url": "badges/skill-sharer"
-      },
-      {
-        "id": "webmaker-super-mentor",
-        "title": "Super Mentor Badge",
-        "url": "badges/webmaker-super-mentor"
-      },
-      {
-        "id": "hive-community-member",
-        "title": "Hive Community Badge",
-        "url": "badges/hive-community-member"
-      },
-      {
-        "id": "badges-admin",
-        "title": "Badges Admin",
-        "url": "admin/badges",
-        "isAtleastMentor": "true"
-      },
-      {
-        "id": "search",
-        "title": "Search",
-        "url": "search"
-      }
-    ]
-  },
-  {
     "id": "tools",
     "title": "Tools",
     "icon": "icon-hand-up",
@@ -124,64 +84,6 @@
     ]
   },
   {
-    "id": "teach",
-    "title": "Teach",
-    "icon": "icon-book",
-    "exclude": "explore",
-    "defaultUrl": "teach",
-    "pages": [
-      {
-        "id": "teach",
-        "title": "Teach",
-        "url": "teach"
-      },
-      {
-        "id": "make-your-own",
-        "title": "Make Your Own",
-        "url": "make-your-own"
-      },
-      {
-        "id": "literacy",
-        "title": "Documentation",
-        "url": "literacy"
-      },
-      {
-        "id": "mentor",
-        "title": "Mentor",
-        "url": "mentor"
-      }
-    ]
-  },
-  {
-    "id": "resources",
-    "title": "Resources",
-    "icon": "icon-book",
-    "defaultUrl": "resources",
-    "flag": "explore",
-    "pages": [
-      {
-        "id": "resources",
-        "title": "Resources",
-        "url": "resources"
-      },
-      {
-        "id": "make-your-own",
-        "title": "Make Your Own",
-        "url": "make-your-own"
-      },
-      {
-        "id": "literacy",
-        "title": "WebLiteracyMap",
-        "url": "literacy"
-      },
-      {
-        "id": "mentor",
-        "title": "Mentor",
-        "url": "mentor"
-      }
-    ]
-  },
-  {
     "id": "events",
     "title": "Events",
     "icon": "icon-map-marker",
@@ -210,41 +112,6 @@
         "id": "eventGuides",
         "title": "Event Guides",
         "url": "{{EVENTS_URL}}/#!/event-guides",
-        "external": "true"
-      }
-    ]
-  },
-  {
-    "id": "info",
-    "title":  "Info",
-    "icon": "icon-info",
-    "defaultUrl": "about",
-    "pages": [
-      {
-        "id": "blog",
-        "title": "Blog",
-        "url": "https://blog.webmaker.org",
-        "external": "true"
-      },
-      {
-        "id": "about",
-        "title": "About Us",
-        "url": "about"
-      },
-      {
-        "id": "getinvolved",
-        "title": "Get Involved",
-        "url": "getinvolved"
-      },
-      {
-        "id": "feedback",
-        "title": "Feedback",
-        "url": "feedback"
-      },
-      {
-        "id": "help",
-        "title": "Help",
-        "url": "https://support.mozilla.org/en-US/products/webmaker",
         "external": "true"
       }
     ]

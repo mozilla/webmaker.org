@@ -71,76 +71,10 @@ angular
               pushState: true
             },
             {
-              id: 'resources',
-              title: 'Resources',
-              icon: 'book',
-              pushState: true,
-              url: 'resources',
-              pages: [
-                {
-                  id: 'literacy',
-                  title: 'Web Literacy Map',
-                  url: 'literacy',
-                  pushState: true
-                },
-                {
-                  id: 'make-your-own',
-                  title: 'Make Your Own',
-                  url: 'make-your-own',
-                  pushState: true
-                },
-                {
-                  id: 'mentor',
-                  title: 'Mentor',
-                  url: 'mentor',
-                  pushState: true
-                }
-              ]
-            },
-            {
               id: 'events',
               url: 'events',
               title: 'Events',
               icon: 'map-marker'
-            },
-            {
-              id: 'info',
-              url: 'about',
-              title: 'Info',
-              icon: 'info',
-              pushState: true,
-              pages: [
-                {
-                  id: 'blog',
-                  title: 'Blog',
-                  url: 'https://blog.webmaker.org/',
-                  external: true
-                },
-                {
-                  id: 'about',
-                  title: 'About',
-                  url: 'about',
-                  pushState: true
-                },
-                {
-                  id: 'getinvolved',
-                  title: 'Get Involved',
-                  url: 'getinvolved',
-                  pushState: true
-                },
-                {
-                  id: 'feedback',
-                  title: 'Feedback',
-                  url: 'feedback',
-                  pushState: true
-                },
-                {
-                  id: 'help',
-                  title: 'Help',
-                  url: 'https://support.mozilla.org/' + config.lang + '/products/webmaker',
-                  external: true
-                }
-              ]
             }
           ]
         },

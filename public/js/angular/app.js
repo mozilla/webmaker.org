@@ -1,5 +1,6 @@
 angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
-  'webmakerAngular.login', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'])
+    'webmakerAngular.login', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'
+  ])
   .config(['$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
     function ($routeProvider, $locationProvider, makeApiProvider, CONFIG) {
       makeApiProvider.options.apiURL = CONFIG.makeApiUrl;
@@ -117,6 +118,27 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
   ])
   .run(['$rootScope', '$http', '$routeParams', '$location', 'CONFIG', 'weblit',
     function ($rootScope, $http, $routeParams, $location, CONFIG, weblit) {
+      function forceLocale() {
+        // matches any of these:
+        // `en`, `en-us`, `en-US` or `ady`
+        var href = $location.path();
+        var matchesLang;
+        var matches = href.match(/([a-z]{2,3})([-]([a-zA-Z]{2}))?/);
+        if (matches) {
+          if (matches[1] && matches[2]) {
+            matchesLang = matches[1].toLowerCase() + matches[2].toUpperCase();
+          } else {
+            matchesLang = matches[1].toLowerCase();
+          }
+        }
+        if ((matches && matches[0]) && CONFIG.supported_languages.indexOf(matchesLang) === -1) {
+          $location.path(CONFIG.lang + href);
+        } else if ((matches && matches[0]) && CONFIG.supported_languages.indexOf(matchesLang) !== -1) {
+          return;
+        } else {
+          $location.path(CONFIG.lang + href);
+        }
+      }
       $rootScope.title = 'Webmaker';
 
       // Set locale information
@@ -139,7 +161,8 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       $http.defaults.headers.common['X-CSRF-Token'] = CONFIG.csrf;
       $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
         // Reset the page title when route changes
-        $rootScope.title = current.$$route.title || 'Webmaker';
+        $rootScope.title = current.$$route && current.$$route.title || 'Webmaker';
+        forceLocale();
       });
 
       // Set up content for competency
@@ -162,25 +185,6 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
         .error(function (err) {
           console.log(err);
         });
-
-      // matches any of these:
-      // `en`, `en-us`, `en-US` or `ady`
-      var href = $location.path();
-      var matchesLang;
-      var matches = href.match(/([a-z]{2,3})([-]([a-zA-Z]{2}))?/);
-      if (matches) {
-        if (matches[1] && matches[2]) {
-          matchesLang = matches[1].toLowerCase() + matches[2].toUpperCase();
-        } else {
-          matchesLang = matches[1].toLowerCase();
-        }
-      }
-      if ((matches && matches[0]) && CONFIG.supported_languages.indexOf(matchesLang) === -1) {
-        $location.path(CONFIG.lang + href);
-      } else if ((matches && matches[0]) && CONFIG.supported_languages.indexOf(matchesLang) !== -1) {
-        return;
-      } else {
-        $location.path(CONFIG.lang + href);
-      }
+      forceLocale();
     }
   ]);

@@ -3,8 +3,14 @@
     "id": "explore",
     "title": "Explore",
     "icon": "icon-random",
-    "flag": "explore",
+    "exclude": "explore",
+    "defaultUrl": "",
     "pages": [
+      {
+        "id": "teachtheweb",
+        "title": "Home",
+        "url": ""
+      },
       {
         "id": "index",
         "title": "Gallery",
@@ -24,6 +30,11 @@
         "id": "hive-community-member",
         "title": "Hive Community Badge",
         "url": "badges/hive-community-member"
+      },
+      {
+        "id": "webmaker-mentor",
+        "title": "Webmaker Mentor Badge",
+        "url": "badges/webmaker-mentor"
       },
       {
         "id": "badges-admin",

@@ -63,7 +63,6 @@ angular
               title: 'Tools',
               icon: 'hand-o-up',
               pushState: true
-
             },
             {
               id: 'events',

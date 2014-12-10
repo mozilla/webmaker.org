@@ -68,37 +68,7 @@ angular
               url: 'tools',
               title: 'Tools',
               icon: 'hand-o-up',
-              pushState: true,
-              pages: [
-                {
-                  id: 'xray',
-                  icon: 'xray-icon',
-                  title: 'X-Ray Goggles',
-                  url: 'https://goggles.webmaker.org/' + config.lang,
-                  external: 'true'
-                },
-                {
-                  id: 'thimble',
-                  icon: 'thimble-icon',
-                  title: 'Thimble',
-                  url: 'https://thimble.webmaker.org/' + config.lang,
-                  external: 'true'
-                },
-                {
-                  id: 'popcorn',
-                  icon: 'popcorn-icon',
-                  title: 'Popcorn Maker',
-                  url: 'https://popcorn.webmaker.org/' + config.lang,
-                  external: 'true'
-                },
-                {
-                  id: 'appmaker',
-                  icon: 'appmaker-icon',
-                  title: 'Appmaker',
-                  url: 'https://apps.webmaker.org/designer',
-                  external: 'true'
-                }
-              ]
+              pushState: true
             },
             {
               id: 'resources',

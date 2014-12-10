@@ -6,7 +6,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       makeApiProvider.options.apiURL = CONFIG.makeApiUrl;
 
       $routeProvider
-        .when('/:locale/explore', {
+        .when('/:locale/about', {
           templateUrl: '/views/explore.html',
           controller: 'exploreController',
           title: 'Explore'
@@ -86,11 +86,6 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/getinvolved.html',
           controller: 'getinvolvedController',
           title: 'Get Involved'
-        })
-        .when('/:locale/about', {
-          templateUrl: '/views/about.html',
-          controller: 'aboutController',
-          title: 'About'
         })
         .when('/:locale/privacy', {
           templateUrl: '/views/privacy.html',

@@ -55,8 +55,6 @@ angular
   ])
   .controller('exploreController', ['$scope', 'CONFIG', 'wmNav',
     function ($scope, CONFIG, wmNav) {
-      wmNav.page('explore');
-      wmNav.section('explore');
 
       $scope.contributeBoxes = [
         {

@@ -19,16 +19,10 @@ angular
           sections: [
             {
               id: 'explore',
-              url: 'explore',
+              url: 'gallery',
               title: 'Explore',
               icon: 'random',
-              pushState: true,
               pages: [
-                {
-                  id: 'index',
-                  title: 'Gallery',
-                  url: 'gallery'
-                },
                 {
                   id: 'skill-sharer',
                   title: 'Skill Sharer Badge',

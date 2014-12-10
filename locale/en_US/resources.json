@@ -106,5 +106,41 @@
   "We have re-organized Webmaker Resources": {
     "message": "<strong>We&rsquo;ve changed!</strong> Looking for easy ways to get started? Try out our <a href=\"/{{ lang}}/tools\">Tools</a>. Or remix something in the <a href=\"/{{ lang }}/gallery\">Gallery</a>.",
     "description": "Copy for the banner alerting users to the IA changes"
+  },
+  "Browse our teaching resources": {
+    "message": "Browse our <a href=\"https://webmaker.org/resources\">teaching resources</a> or participate in <a href=\"https://training.webmakerprototypes.org\">professional development</a>.",
+    "description": "first bullet point, mentor."
+  },
+  "Join or host local events": {
+    "message": "Join or host <a href=\"https://events.webmaker.org\">local events</a> to collaborate with peers and teach learners.",
+    "description": "second bullet point, mentor."
+  },
+  "Show others how to make the web": {
+    "message": "Show others how to make the web and collect the <a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker Skill Sharer badge</a>. When you're ready, apply for the <a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker Mentor Badge</a>.",
+    "description": "third bullet point, mentor."
+  },
+  "Connect with the Community": {
+    "message": "Connect with the Community",
+    "description": "Headline, third section on mentor."
+  },
+  "Join our online forum": {
+    "message": "Join our <a href=\"http://discourse.webmaker.org/category/meet\">online forum</a> to meet other mentors like you. Share your events, activities and teaching resources using the <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> hashtag.",
+    "description": "Copy, third section on mentor."
+  },
+  "Introduce yourself": {
+    "message": "Introduce yourself",
+    "description": ""
+  },
+  "Build your mentorship skills": {
+    "message": "Build your mentorship skills",
+    "description": "Headline, second section on mentor."
+  },
+  "Create a more web literate world paragraph": {
+    "message": "We are techies, makers, educators, parents and others who want to teach digital skills and web literacy through making.",
+    "description": "first paragraph on mentor."
+  },
+  "Create a more web literate world": {
+    "message": "Create a more web literate world",
+    "description": "Headline on mentor."
   }
 }

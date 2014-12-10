@@ -1,8 +1,25 @@
 #mentor {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.4;
+
+  li {
+    margin-bottom: 2rem;
+  }
+
   .banner {
     height: auto;
     width: 100%;
   }
+
+  .row {
+    margin-bottom: 4rem;
+  }
+
+  .btn.btn-lg {
+    margin-left: 2rem;
+  }
+
   .mentor-profile {
     padding: 2rem;
     @media screen and (min-width: @screen-md-min) {
@@ -20,9 +37,17 @@
       clear: left;
     }
   }
-  .the-mentors {
-    background: fade(@blue, 15%);
-    border-radius: 0.5rem;
+
+  .resource-graphic {
+    display: block;
+    margin: 0 auto;
+    max-height: 20rem;
+    width: auto;
+    @media screen and (min-width: @screen-xs-min) {
+      float: left;
+      margin-right: 5rem;
+      margin-top: 4rem;
+    }
   }
 
   .mentor-face {
@@ -30,7 +55,7 @@
     height: auto;
     margin: 0 2rem 2rem 0;
     width: 10rem;
-    @media screen and (min-width: @screen-lg-min){
+    @media screen and (min-width: @screen-lg-min) {
       width: 13rem;
     }
   }

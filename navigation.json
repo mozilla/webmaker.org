@@ -4,6 +4,7 @@
     "title": "Explore",
     "icon": "icon-random",
     "flag": "explore",
+    "url": "gallery",
     "pages": [
       {
         "id": "index",
@@ -102,6 +103,29 @@
         "title": "Event Guides",
         "url": "{{EVENTS_URL}}/#!/event-guides",
         "external": "true"
+      }
+    ]
+  },
+  {
+    "id": "teach",
+    "title": "Teach",
+    "icon": "icon-book",
+    "url": "mentor",
+    "pages": [
+      {
+        "id": "resources",
+        "title": "Resources",
+        "url": "resources"
+      },
+      {
+        "id": "getinvolved",
+        "title": "Get Involved",
+        "url": "getinvolved"
+      },
+      {
+        "id": "badges",
+        "title": "Badges",
+        "url": "badges"
       }
     ]
   }

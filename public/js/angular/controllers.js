@@ -181,7 +181,7 @@ angular
   .controller('resourcesHomeController', ['$scope', 'weblit', 'wmNav',
     function ($scope, weblit, wmNav) {
       wmNav.page('resources');
-      wmNav.section('resources');
+      wmNav.section('teach');
 
       $scope.literacies = weblit.all();
     }
@@ -480,7 +480,7 @@ angular
   ])
   .controller('getinvolvedController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
-      wmNav.section('info');
+      wmNav.section('teach');
       wmNav.page('getinvolved');
     }
   ])
@@ -492,7 +492,7 @@ angular
   ])
   .controller('mentorController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
-      wmNav.section('resources');
+      wmNav.section('teach');
       wmNav.page('mentor');
     }
   ])

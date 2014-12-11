@@ -69,6 +69,32 @@ angular
               url: 'events',
               title: 'Events',
               icon: 'map-marker'
+            },
+            {
+              id: 'teach',
+              title: 'Teach',
+              url: 'mentor',
+              //url: 'teach',
+              icon: 'book',
+              pages: [
+                {
+                  id: 'resources',
+                  title: 'Resources',
+                  url: 'resources',
+                  pushState: true
+                },
+                {
+                  id: 'getinvolved',
+                  title: 'Get Involved',
+                  url: 'getinvolved',
+                  pushState: true
+                },
+                {
+                  id: 'badges',
+                  title: 'Badges',
+                  url: 'badges'
+                }
+              ]
             }
           ]
         },

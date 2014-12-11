@@ -81,6 +81,11 @@ module.exports = function (app) {
       "/community"
     ]
   }, {
+    route: "https://blog.webmaker.org/badges",
+    paths: [
+      "/badges"
+    ]
+  }, {
     route: "http://party.webmaker.org",
     paths: [
       "/party",

@@ -26,19 +26,19 @@
   <div class="container">
     <div class="navbar-collapse" collapse="secondaryCollapse">
       <ul class="nav navbar-nav">
-        <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id), dropdown: section.dropdown }">
+        <li ng-repeat="section in nav.sections" class="col-sm-3 nav-icon" ng-class="{ active: isActiveSection(section.id), dropdown: section.dropdown }">
 
           <a
             ng-if="!section.dropdown"
             href="{{baseUrl + section.url}}"
             push-state="{{section.pushState}}">
-            <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
+            {{ section.title | i18n }}
           </a>
           <a
             ng-if="section.dropdown"
             href="#"
             class="dropdown-toggle">
-            <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
+            {{ section.title | i18n }}
           </a>
 
           <ul ng-if="section.dropdown" class="explore-dropdown-menu dropdown-menu">
@@ -53,23 +53,7 @@
             </li>
           </ul>
         </li>
-        <li class="hidden-lg">
-          <a href="{{baseUrl}}search">
-            <span class="fa fa-search"></span>
-            <span class="sr-only">{{ 'Search' | i18n }}</span>
-          </a>
-        </li>
       </ul>
-      <form class="navbar-form navbar-right visible-lg" role="search" name="searchMakesForm">
-        <div class="form-group">
-          <input type="text" ng-model="searchInput" class="search-input form-control" placeholder="Search" required>
-        </div>
-        <button type="submit" class="btn btn-link" ng-click="isSearching=true; search(searchInput)" ng-disabled="searchMakesForm.$invalid">
-          <span ng-if="!isSearching" class="fa fa-search"></span>
-          <span ng-if="isSearching" class="fa fa-spinner fa-spin"></span>
-          <span class="sr-only">{{ 'Search' | i18n }}</span>
-        </button>
-     </form>
     </div>
   </div>
 </nav>

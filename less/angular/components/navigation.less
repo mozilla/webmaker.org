@@ -5,8 +5,12 @@
   ul {
     float: left;
     list-style: none;
-    margin-right: 5rem;
+    margin-right: 6rem;
     padding: 0;
+  }
+
+  li {
+    padding-bottom: 2rem;
   }
 
   a {
@@ -15,6 +19,29 @@
     }
     &:hover, &:active, &:focus {
       color: @white;
+    }
+  }
+  .moz-logo {
+    float: right;
+    margin-top: 1.6rem;
+    @media screen and (min-width: 25em) {
+      margin-top: 0;
+    }
+  }
+}
+
+.navbar-nav {
+  @media screen and (min-width: @screen-sm-min) {
+    float: none;
+  }
+  > li {
+    @media screen and (min-width: @screen-sm-min) {
+      text-align: center;
+    }
+    &.nav-icon {
+      > a {
+        font-size: 1.6rem;
+      }
     }
   }
 }

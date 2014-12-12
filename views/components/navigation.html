@@ -6,9 +6,9 @@
       <ul class="navigation-list navigation-wrapper">
         {% for section in navigation %}
         {% if not section.flag or flags[section.flag] %}
-          <li><a href="{% if section.instantiate %}{{section.defaultUrl | instantiate}}{% else %}/{{localeInfo.lang}}/{{section.defaultUrl}}{% endif %}"
+          <li class="col-sm-3"><a href="{% if section.instantiate %}{{section.defaultUrl | instantiate}}{% else %}/{{localeInfo.lang}}/{{section.defaultUrl}}{% endif %}"
           {% if section.id == currentSection %}class="active"{% endif %} data-section="{{section.id}}">
-            <span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a>
+            {{gettext(section.title)}}</a>
           </li>
         {% endif %}
         {% endfor %}

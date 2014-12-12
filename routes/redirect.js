@@ -66,11 +66,6 @@ module.exports = function (app) {
       "/events"
     ]
   }, {
-    route: app.locals.TEACH_URL,
-    paths: [
-      "/teach"
-    ]
-  }, {
     route: app.locals.EVENTS_URL + '/#!/events/:event',
     paths: [
       "/events/:event"
@@ -81,9 +76,19 @@ module.exports = function (app) {
       "/community"
     ]
   }, {
+    route: app.locals.TEACH_URL,
+    paths: [
+      "/_teach"
+    ]
+  }, {
     route: "https://blog.webmaker.org/badges",
     paths: [
-      "/badges"
+      "/_badges"
+    ]
+  }, {
+    route: "http://hivelearningnetworks.org/",
+    paths: [
+      "/_hive"
     ]
   }, {
     route: "http://party.webmaker.org",

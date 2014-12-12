@@ -1,6 +1,8 @@
 .navbar-footer {
-  background-color: @navy;
+  background-color: @lightnavy;
   padding-bottom: 3rem;
+  padding-top: 1.5em;
+  font-size: 1.8rem;
 
   ul {
     float: left;
@@ -34,10 +36,10 @@
 }
 
 .navbar {
+  min-height: auto;
   .container {
     .navbar-collapse {
-      padding-top: 0.4rem;
-      padding-bottom: 0.4rem;
+      padding: 0.4rem 0;
     }
   }
 }
@@ -49,12 +51,21 @@
   > li {
     @media screen and (min-width: @screen-sm-min) {
       text-align: center;
+      width: 33%
+    }
+    > a {
+      font-size: 1.8rem;
+      padding: 1.8rem 1.5rem 1.8rem 3.2rem;
+      @media screen and (min-width: @screen-sm-min) {
+        padding-left: 1.5rem;
+      }
     }
     &.nav-icon {
+      @media screen and (min-width: @screen-sm-min) {
+        width: 25%
+      }
       > a {
-        font-size: 1.8rem;
         height: auto;
-        padding: 1.8rem 1.5rem;
         &:link, &:visited {
           color: fade(@white, 80);
         }

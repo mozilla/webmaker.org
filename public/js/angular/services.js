@@ -22,40 +22,6 @@ angular
               url: 'gallery',
               title: 'Explore',
               icon: 'random',
-              pages: [
-                {
-                  id: 'skill-sharer',
-                  title: 'Skill Sharer Badge',
-                  url: 'badges/skill-sharer'
-                },
-                {
-                  id: 'super-mentor',
-                  title: 'Super Mentor Badge',
-                  url: 'badges/webmaker-super-mentor'
-                },
-                {
-                  id: 'super-mentor',
-                  title: 'Hive Community Badge',
-                  url: 'badges/hive-community-member'
-                },
-                {
-                  id: 'webmaker-mentor',
-                  title: 'Webmaker Mentor Badge',
-                  url: 'badges/webmaker-mentor'
-                },
-                {
-                  id: 'badges-admin',
-                  title: 'Badges Admin',
-                  url: 'admin/badges',
-                  pushState: true,
-                  isAtleastMentor: true
-                },
-                {
-                  id: 'search',
-                  title: 'Search',
-                  url: 'search'
-                }
-              ]
             },
             {
               id: 'tools',
@@ -76,6 +42,7 @@ angular
               url: 'mentor',
               //url: 'teach',
               icon: 'book',
+              pushState: true,
               pages: [
                 {
                   id: 'resources',
@@ -84,15 +51,14 @@ angular
                   pushState: true
                 },
                 {
-                  id: 'getinvolved',
-                  title: 'Get Involved',
-                  url: 'getinvolved',
-                  pushState: true
-                },
-                {
                   id: 'badges',
                   title: 'Badges',
-                  url: 'badges'
+                  url: '_badges'
+                },
+                {
+                  id: 'hive',
+                  title: 'Hive',
+                  url: '_hive'
                 }
               ]
             }

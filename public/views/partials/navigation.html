@@ -23,10 +23,9 @@
 
 <!-- Secondary nav -->
 <nav class="navbar navbar-inverse navbar-no-header-xs">
-  <div class="container">
     <div class="navbar-collapse" collapse="secondaryCollapse">
       <ul class="row nav navbar-nav">
-        <li ng-repeat="section in nav.sections" class="col-sm-3 nav-icon" ng-class="{ active: isActiveSection(section.id), dropdown: section.dropdown }">
+        <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id), dropdown: section.dropdown }">
 
           <a
             ng-if="!section.dropdown"
@@ -54,7 +53,6 @@
           </ul>
         </li>
       </ul>
-    </div>
   </div>
 </nav>
 

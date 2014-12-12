@@ -1,77 +1,18 @@
 [
   {
-    "id": "explore",
+    "id": "gallery",
     "title": "Explore",
     "icon": "icon-random",
     "flag": "explore",
-    "url": "gallery",
-    "pages": [
-      {
-        "id": "index",
-        "title": "Gallery",
-        "url": "gallery"
-      },
-      {
-        "id": "skill-sharer",
-        "title": "Skill Sharer Badge",
-        "url": "badges/skill-sharer"
-      },
-      {
-        "id": "webmaker-super-mentor",
-        "title": "Super Mentor Badge",
-        "url": "badges/webmaker-super-mentor"
-      },
-      {
-        "id": "hive-community-member",
-        "title": "Hive Community Badge",
-        "url": "badges/hive-community-member"
-      },
-      {
-        "id": "badges-admin",
-        "title": "Badges Admin",
-        "url": "admin/badges",
-        "isAtleastMentor": "true"
-      },
-      {
-        "id": "search",
-        "title": "Search",
-        "url": "search"
-      }
-    ]
+    "defaultUrl": "gallery",
+    "pages": []
   },
   {
     "id": "tools",
     "title": "Tools",
     "icon": "icon-hand-up",
     "defaultUrl": "tools",
-    "pages": [
-      {
-        "id": "tools",
-        "title": "Tools",
-        "url": "tools"
-      },
-      {
-        "id": "popcorn",
-        "icon": "popcorn-icon",
-        "title": "Popcorn Maker",
-        "url": "https://popcorn.webmaker.org/{{localeInfo.lang}}",
-        "external": "true"
-      },
-      {
-        "id": "thimble",
-        "icon": "thimble-icon",
-        "title": "Thimble",
-        "url": "https://thimble.webmaker.org/{{localeInfo.lang}}",
-        "external": "true"
-      },
-      {
-        "id": "xray",
-        "icon": "xray-icon",
-        "title": "X-Ray Goggles",
-        "url": "https://goggles.webmaker.org/{{localeInfo.lang}}",
-        "external": "true"
-      }
-    ]
+    "pages": []
   },
   {
     "id": "events",
@@ -79,38 +20,13 @@
     "icon": "icon-map-marker",
     "defaultUrl": "{{EVENTS_URL}}",
     "instantiate": true,
-    "pages": [
-      {
-        "id": "events-home",
-        "title": "Events Home",
-        "url": "{{EVENTS_URL}}",
-        "external": "true"
-      },
-      {
-        "id": "upcomingEvents",
-        "title": "Upcoming Events",
-        "url": "{{EVENTS_URL}}/#!/events",
-        "external": "true"
-      },
-      {
-        "id": "addEvent",
-        "title": "Add Event",
-        "url": "{{EVENTS_URL}}/#!/add",
-        "external": "true"
-      },
-      {
-        "id": "eventGuides",
-        "title": "Event Guides",
-        "url": "{{EVENTS_URL}}/#!/event-guides",
-        "external": "true"
-      }
-    ]
+    "pages": []
   },
   {
     "id": "teach",
     "title": "Teach",
     "icon": "icon-book",
-    "url": "mentor",
+    "defaultUrl": "mentor",
     "pages": [
       {
         "id": "resources",

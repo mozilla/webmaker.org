@@ -1,4 +1,6 @@
 
+@import "../../bower_components/webmaker-login-ux/dist/css/webmakerLogin.css";
+
 /*********************************************************
 * To be merged in makerstrap
 */
@@ -45,7 +47,29 @@ dd {
 * Navbar
 */
 .navbar-btn {
-  margin-right: 1em;
+  margin-right: 0.7em;
+  &:last-child {
+    margin-right: 1em;
+  }
+}
+
+.btn-secondary-nav {
+  color: #333;
+  background: none;
+  border-color: none;
+  &:hover {
+    background: #333;
+    color: @white;
+  }
+  &.active {
+    background-color: darken(#333, 8%);
+  }
+}
+
+.navbar-tertiary {
+  .btn-secondary-nav {
+    color: @white;
+  }
 }
 
 .navbar-affix-top {

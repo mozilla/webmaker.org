@@ -98,17 +98,16 @@ angular
       ];
     }
   ])
-  .controller('homeController', ['$rootScope', '$scope', 'wmNav', '$routeParams',
-    function ($rootScope, $scope, wmNav, $routeParams) {
+  .controller('homeController', ['$rootScope', '$scope', 'wmNav', '$routeParams', 'CONFIG',
+    function ($rootScope, $scope, wmNav, $routeParams, CONFIG) {
       wmNav.page('home');
       wmNav.section('');
       $scope.userDel = $routeParams.userDel;
 
       if ($routeParams.auth === 'login') {
-        $rootScope.login();
+        $rootScope.wmTokenLogin();
       } else if ($routeParams.auth === 'new-account') {
-        // change this function when/if we move away from persona ?
-        $rootScope.login();
+        $rootScope.wmCreateUser();
       }
     }
   ])

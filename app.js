@@ -103,6 +103,7 @@ require("./lib/makeapi")({
 var webmakerAuth = new WebmakerAuth({
   loginURL: env.get("LOGIN"),
   authLoginURL: env.get("LOGINAPI"),
+  loginHost: env.get('LOGIN_EMAIL_URL'),
   secretKey: env.get("SESSION_SECRET"),
   forceSSL: env.get("FORCE_SSL"),
   domain: env.get("COOKIE_DOMAIN")
@@ -229,11 +230,11 @@ app.use(webmakerAuth.cookieParser());
 app.use(webmakerAuth.cookieSession());
 
 // Adding an external JSON file to our existing one for the specified locale
-var authLocaleJSON = require("./bower_components/webmaker-auth-client/locale/en_US/create-user-form.json");
+var webmakerLoginJSON = require("./bower_components/webmaker-login-ux/locale/en_US/webmaker-login.json");
 var weblitLocaleJSON = require("./node_modules/web-literacy-client/dist/weblitmap.json");
 
 i18n.addLocaleObject({
-  "en-US": authLocaleJSON
+  "en-US": webmakerLoginJSON
 }, function (err, res) {
   if (err) {
     console.error(err);
@@ -329,9 +330,19 @@ var middleware = require("./lib/middleware");
 
 app.post('/verify', webmakerAuth.handlers.verify);
 app.post('/authenticate', webmakerAuth.handlers.authenticate);
-app.post('/create', webmakerAuth.handlers.create);
 app.post('/logout', webmakerAuth.handlers.logout);
-app.post('/check-username', webmakerAuth.handlers.exists);
+
+app.post('/auth/v2/create', webmakerAuth.handlers.createUser);
+app.post('/auth/v2/uid-exists', webmakerAuth.handlers.uidExists);
+app.post('/auth/v2/request', webmakerAuth.handlers.request);
+app.post('/auth/v2/authenticateToken', webmakerAuth.handlers.authenticateToken);
+app.post('/auth/v2/verify-password', webmakerAuth.handlers.verifyPassword);
+app.post('/auth/v2/request-reset-code', webmakerAuth.handlers.requestResetCode);
+app.post('/auth/v2/reset-password', webmakerAuth.handlers.resetPassword);
+
+// These webmaker-auth route handlers require a csrf token and a valid user session.
+app.post('/auth/v2/remove-password', webmakerAuth.handlers.removePassword);
+app.post('/auth/v2/enable-passwords', webmakerAuth.handlers.enablePasswords);
 
 app.get("/healthcheck", routes.api.healthcheck);
 

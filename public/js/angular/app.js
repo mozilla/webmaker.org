@@ -1,5 +1,5 @@
 angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
-    'webmakerAngular.login', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'
+    'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'
   ])
   .config(['$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
     function ($routeProvider, $locationProvider, makeApiProvider, CONFIG) {

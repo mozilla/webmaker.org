@@ -11,6 +11,9 @@
 
   li {
     padding-bottom: 2rem;
+    @media screen and (min-width: @screen-sm-min) {
+      padding-bottom: 0.5rem;
+    }
   }
 
   a {
@@ -30,6 +33,15 @@
   }
 }
 
+.navbar {
+  .container {
+    .navbar-collapse {
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+
 .navbar-nav {
   @media screen and (min-width: @screen-sm-min) {
     float: none;
@@ -40,7 +52,15 @@
     }
     &.nav-icon {
       > a {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        height: auto;
+        padding: 1.8rem 1.5rem;
+        &:link, &:visited {
+          color: fade(@white, 80);
+        }
+        &:hover, &:active, &:focus {
+          color: @white;
+        }
       }
     }
   }

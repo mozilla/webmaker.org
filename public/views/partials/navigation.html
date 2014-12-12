@@ -28,29 +28,10 @@
         <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id), dropdown: section.dropdown }">
 
           <a
-            ng-if="!section.dropdown"
             href="{{baseUrl + section.url}}"
             push-state="{{section.pushState}}">
             {{ section.title | i18n }}
           </a>
-          <a
-            ng-if="section.dropdown"
-            href="#"
-            class="dropdown-toggle">
-            {{ section.title | i18n }}
-          </a>
-
-          <ul ng-if="section.dropdown" class="explore-dropdown-menu dropdown-menu">
-            <li class="literacy">
-              <a href="{{baseUrl}}resources" class="color-10">{{ 'Overview' | i18n }}</a>
-            </li>
-            <li
-              ng-repeat="skill in literacies"
-              class="literacy"
-              ng-class="{ active : isActivePage(skill.tag) }">
-              <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" push-state="true" class="color-{{$index}}">{{ skill.term }}</a>
-            </li>
-          </ul>
         </li>
       </ul>
   </div>
@@ -69,25 +50,7 @@
   <div class="container" ng-class="{'show-xs':section.dropdown}">
     <div class="navbar-collapse" collapse="tertiaryCollapse">
       <ul class="nav navbar-nav">
-        <!-- Weblit dropdown -->
-        <li class="nav-icon nav-title active hidden-xs" ng-hide="!affixed">
-          <a href="{{baseUrl + section.url}}" push-state="{{section.pushState}}">
-            <span class="fa fa-{{section.icon}}"></span> {{ section.title | i18n }}
-          </a>
-        </li>
-        <li ng-if="section.id === 'resources'" class="dropdown dropdown-toc hidden-xs">
-          <a href="#" class="dropdown-toggle">{{ 'Web Literacies' | i18n }}<span class="caret"></span></a>
-          <ul class="explore-dropdown-menu dropdown-menu">
-            <li
-              ng-repeat="skill in literacies"
-              class="literacy"
-              ng-class="{ active : isActivePage(skill.tag) }">
-              <a href="{{baseUrl}}resources/literacy/{{ skill.tag }}" push-state="true" class="color-{{$index}}">{{ skill.term }}</a>
-            </li>
-          </ul>
-        </li>
-
-        <li ng-repeat="page in section.pages" ng-if="!page.isAtleastMentor || _user.isAdmin || _user.isSuperMentor || _user.isMentor">
+        <li ng-repeat="page in section.pages">
           <a href="{{page.external ? page.url : baseUrl + page.url}}" push-state="{{page.pushState}}" ng-class="{active : isActivePage(page.id)}">
             {{ page.title | i18n }}
           </a>

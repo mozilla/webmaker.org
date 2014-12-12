@@ -34,14 +34,14 @@
         "url": "resources"
       },
       {
-        "id": "getinvolved",
-        "title": "Get Involved",
-        "url": "getinvolved"
-      },
-      {
         "id": "badges",
         "title": "Badges",
         "url": "badges"
+      },
+      {
+        "id": "hive",
+        "title": "Hive",
+        "url": "_hive"
       }
     ]
   }

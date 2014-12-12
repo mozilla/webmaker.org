@@ -76,6 +76,11 @@ module.exports = function (app) {
       "/community"
     ]
   }, {
+    route: "/explore",
+    paths: [
+      "/gallery"
+    ]
+  }, {
     route: app.locals.TEACH_URL,
     paths: [
       "/_teach"

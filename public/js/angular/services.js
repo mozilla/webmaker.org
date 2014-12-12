@@ -19,7 +19,7 @@ angular
           sections: [
             {
               id: 'explore',
-              url: 'gallery',
+              url: 'explore',
               title: 'Explore',
               icon: 'random',
             },
@@ -40,7 +40,6 @@ angular
               id: 'teach',
               title: 'Teach',
               url: 'mentor',
-              //url: 'teach',
               icon: 'book',
               pushState: true,
               pages: [

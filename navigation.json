@@ -4,7 +4,7 @@
     "title": "Explore",
     "icon": "icon-random",
     "flag": "explore",
-    "defaultUrl": "gallery",
+    "defaultUrl": "explore",
     "pages": []
   },
   {

@@ -1,321 +1,187 @@
-#page-home .main {
-
-  .padded() {
-    padding: 2.5rem 0;
-    @media (min-width: @screen-sm-min) {
-      padding: 5rem 0;
-    }
+#page-home {
+  color: @grey;
+  font-size: 1.6rem;
+  h2 {
+    font-size: 4.4rem;
+    font-weight: 500;
+    text-shadow: 0 0 0.1rem fade(@black, 50);
   }
-
-  // Base font settings
-  font-size: 1.8rem;
-  line-height: 1.6;
-
-  section {
-    .padded;
-  }
-
-  .btn-home {
-    padding: 15px 24px;
-  }
-
-
-  // Carousel ---------------------
-  #home-carousel {
-    padding: 0;
-    .slide {
-      .padded;
-      height: 380px;
-      @media (min-width: @screen-md-min) {
-        height: 460px;
-      }
-      @media (min-width: @screen-lg-min) {
-        height: 536px;
-      }
-    }
-    .slide .slide-inner {
-      height: 100%;
-      .flex-display(flex);
-      .align-items(center);
-    }
-    #slide-0 {
-      // HOUR OF CODE
-      @media @standard-def {
-        background-image: url(/img/home/banner-HoC.jpg);
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-HoC@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      h1 {
-        max-width: 112rem;
-      }
-      .lead {
-        max-width: 44rem;
-      }
-      .btn {
-        margin: 0;
-        padding: 1.4rem 6rem;
-        font-size: 1.6rem;
-        @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
-          margin: 0;
-          padding: 1.7rem 10rem;
-        }
-        @media (min-width: @screen-md-min){
-          margin: 1rem 0 0 0;
-          padding: 1.7rem 11rem;
-          font-size: 2rem;
-        }
-      }
-    }
-    #slide-1 {
-      // SKILLS SHARER
-      @media @standard-def {
-        background-image: url(/img/home/banner-skills-sharer.jpg);
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-skills-sharer@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      .lead {
-        max-width: 50rem;
-      }
-      .btn {
-        margin: 1rem 0 0 0;
-        padding: 1.4rem 3rem;
-        font-size: 1.6rem;
-        @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
-          margin: 1rem 0 0 0;
-        }
-        @media (min-width: @screen-md-min){
-          margin: 1.5rem 0 0 0;
-          padding: 1.7rem 6rem;
-          font-size: 2rem;
-        }
-      }
-    }
-    #slide-2 {
-      // TANDOG QUOTE
-      @media @standard-def {
-        background-image: url(/img/home/banner-tandog.jpg);
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-tandog@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-    #slide-3 {
-      // STORYMAKERS QUOTE
-      @media @standard-def {
-        background-image: url(/img/home/banner-brooklyn.jpg)
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-brooklyn@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-    color: @white;
-    font-weight: 200;
-    a {
-      color: @white;
-      text-decoration: underline;
-      &.btn {
-        text-decoration: none;
-      }
-    }
-    .skill-sharer-badge {
-      width: 20%;
-      margin: -3rem 0 2rem 0;
-      @media (min-width: @screen-sm-min) and (max-width: @screen-md-min){
-        width: 11%;
-        margin: -5rem 0px 2rem;
-      }
-      @media (min-width: @screen-md-min) {
-        width: 11%;
-        margin: -5rem 0 3rem 0;
-      }
-      .animated;
-      .slideInDown;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
-    .desktop-logo {
-      width: 20%;
-      margin: -3rem 0px 1rem;
-      @media (min-width: @screen-sm-min) and (max-width: @screen-md-min){
-        width: 14%;
-        margin: -4rem 0px 1.5rem;
-      }
-      @media (min-width: @screen-md-min) {
-        width: 9%;
-        margin: -4rem 0px 1.5rem;
-      }
-      .animated;
-      .slideInDown;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
-    .maker-party-logo {
-      width: 25%;
-      @media (min-width: @screen-sm-min) {
-        width: 15%;
-      }
-      .animated;
-      .slideInDown;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
-    .maker-party-arrow {
-      height: 0.6em;
-    }
-    h1,
-    h3 {
-      .animated;
-      .bounceIn;
-      text-transform: uppercase;
-    }
-    h1 {
-
-      font-family: 'Lato', 'Open Sans', serif;
-      font-size: 3rem;
-      @media (min-width: @screen-md-min) {
-        font-size: 5rem;
-      }
-      @media (min-width: @screen-lg-min) {
-        line-height: 1;
-        font-size: 7.2rem;
-      }
-      font-weight: 900;
-      margin: 0;
-    }
-    h3 {
-      margin: 2rem 0;
-      font-size: 2rem;
-      @media (min-width: @screen-md-min) {
-        font-size: 3rem;
-      }
-    }
-    p {
-      .animated;
-      .bounceIn;
-      @media (min-width: @screen-lg-min) {
-        max-width: 55rem;
-      }
-      margin: 1rem auto;
-    }
-  }
-
-  // We Teach the Web ---------------------
-  #home-teach-the-web {
+  h3 {
+    font-weight: bold;
     text-align: center;
-    @media (min-width: @screen-sm-min) {
-      text-align: left;
-    }
-    background: @green;
-    color: @white;
-    font-weight: 200;
-    .btn-home {
-      margin-right: 5px;
-      &.btn-default {
-        border: none;
-        opacity: 0.95;
-        &:hover {
-          background-color: @white;
-          opacity: 1;
-        }
-      }
-      &.btn-success {
-        background-color: @darkgreen;
-        border: none;
-        &:hover {
-          background-color: darken(@darkgreen, 5%);
-        }
-      }
-    }
-    h1 {
-      @media (min-width: @screen-sm-min) {
-        font-size: 6rem;
-      }
-      font-weight: 200;
-      line-height: 1;
-    }
-    p {
-      margin: 1rem 0 1.5rem 0;
-    }
-    // cats and stuff
-    .illustration {
-      width: 60%;
-      @media (min-width: @screen-sm-min) {
-        width: 100%;
-      }
-      position: relative;
-      max-width: 360px;
-      margin: 0 auto;
-      .browser-on {
-        width: 100%;
-      }
-      .cat-on {
-        position: absolute;
-        top: 20%;
-        left: 18%;
-        width: 25%;
-      }
-    }
+    text-transform: uppercase;
   }
+  .lead {
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+  }
+}
 
-  // Explore, Resources, Get Together ---------------------
-  #home-features {
-    background: @lightgrey;
-    h2 {
+.home-blue, .home-values, .home-jump-in, .home-footer {
+  padding: 5rem 0;
+  .btn {
+    background: @yellow;
+    border: transparent;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.3rem 0 darken(@darkyellow, 10);
+    margin-top: 1rem;
+    padding: 1rem 1.8rem 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    @media screen and (min-width: @screen-sm-min) {
       margin-top: 0;
     }
-    padding-bottom: 0;
-    @media (min-width: @screen-sm-min) {
-      padding-bottom: 5rem;
+    &:active {
+      box-shadow: none;
+      top: 0.3rem;
     }
-    .feature {
-      margin-bottom: 2.5rem;
-      @media (min-width: @screen-sm-min) {
-        margin-bottom: 0;
-      }
-    }
-    .img-container {
-      margin-bottom: 1rem;
+  }
+}
+
+.home-blue {
+  color: @white;
+  @media @standard-def {
+    background-image: url('/img/home/background.png');
+  }
+  @media @retina {
+    background-image: url('/img/home/background@2x.png');
+  }
+  background-size: cover;
+  text-align: center;
+  @media screen and (min-width: @screen-sm-min) {
+    text-align: left;
+  }
+  .lead {
+    text-align: left;
+  }
+  form {
+    margin: 0 auto;
+    max-width: 40rem;
+  }
+  input[type="email"] {
+    border: transparent solid 0;
+    border-radius: 0.3rem;
+    color: @grey;
+    padding: 1rem 2rem;
+  }
+}
+
+.devices {
+  margin: 2rem auto 3rem;
+  max-width: 40rem;
+  position: relative;
+
+  @media screen and (min-width: @screen-md-min) {
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    position: absolute;
+  }
+
+  .desktop {
+    position: static;
+    @media screen and (min-width: @screen-sm-min) {
       position: relative;
-      width: 60%;
-      max-width: 266px;
-      height: 0;
-      padding-bottom: 40%;
-      display: inline-block;
-      background: center no-repeat;
-      background-size: contain;
-      &.resources {
-        background-image: url(/img/home/resources.png);
+      top: 2.5rem;
+    }
+  }
+
+  .tablet {
+    bottom: -2rem;
+    max-width: 56%;
+    right: -0.2rem;
+    @media screen and (min-width: @screen-sm-min) {
+      bottom: -3.6rem;
+      right: -1rem;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      bottom: -4rem;
+      right: -3.3rem;
+    }
+  }
+
+  .mobile {
+    bottom: -0.6rem;
+    left: 2.3rem;
+    max-width: 19%;
+    @media screen and (min-width: @screen-sm-min) {
+      left: 1.4rem;
+      bottom: -2.9rem;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      bottom: -2.8rem;
+      left: 2.5rem;
+    }
+  }
+}
+
+.home-values {
+  background: @white;
+}
+
+.values-list {
+  list-style: none;
+  padding-left: 5rem;
+  li {
+    margin-bottom: 2rem;
+    position: relative;
+    &::before {
+      left: -5rem;
+      position: absolute;
+      top: 0.4rem;
+      @media screen and (min-width: @screen-sm-min) {
+        left: -6rem;
       }
-      &.training {
-        width: 100%;
-        background-position-y: 70%;
-        background-image: url(/img/webmaker-training-wordmark.svg);
-      }
-      &.map {
-        background-image: url(/img/home/map.png);
-      }
-      &.get-together {
-        @media @standard-def {
-          background-image: url(/img/home/get-together.jpg);
-        }
-        @media @retina {
-          background-image: url(/img/home/get-together@2x.jpg);
-        }
-      }
+    }
+  }
+}
+
+.value-free {
+  &::before {
+    content: url('/img/home/free-sm-icon.svg');
+  }
+}
+
+.value-local {
+  &::before {
+    content: url('/img/home/local-sm-icon.svg');
+  }
+}
+
+.value-more-than-code {
+  &::before {
+    content: url('/img/home/morethancode-sm-icon.svg');
+  }
+}
+
+.home-globe {
+  img {
+    display: block;
+    margin: 5rem auto;
+    @media screen and (min-width: @screen-sm-min) {
+      margin: 2rem auto;
+    }
+  }
+}
+
+.home-jump-in {
+  background: darken(@white, 6.25%);
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 5rem;
+    @media screen  and (min-width: @screen-sm-min) {
+      margin-bottom: 0;
+      margin-top: 5rem;
     }
   }
 }

@@ -1,91 +1,116 @@
-<div ng-show="userDel" class="alert alert-info">{{ 'user_deleted' | i18n }}</div>
-<div class="container">
-  <div class="row home-blue">
-    <figure class="col-sm-4 col-sm-offset-1 col-md-5 devices">
-      <img src="/img/home/desktop.svg" alt="Desktop computer"/>
-      <img src="/img/home/mobile.svg" alt="Mobile phone"/>
-      <img src="/img/home/tablet.svg" alt="Tablet"/>
-    </figure>
-    <section class="col-sm-6 col-md-5">
-      <h2>{{ 'Make your own apps and websites' | i18n }}</h2>
-      <p class="lead">
-        {{ 'Mozilla’s free tools' | i18n }}
-      </p>
+<div ng-show="userDel" class="alert alert-info">{{ 'user_deleted' | i18n }}
+</div>
+<div id="page-home">
+  <div class="home-blue">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-sm-offset-1 col-md-4">
+          <figure class="devices">
+            <img src="/img/home/desktop.svg" alt="Desktop computer" class="desktop"/>
+            <img src="/img/home/mobile.svg" alt="Mobile phone" class="mobile"/>
+            <img src="/img/home/tablet.svg" alt="Tablet computer" class="tablet"/>
+          </figure>
+        </div>
+        <section class="col-sm-7 col-md-5 col-md-offset-1">
+          <h2>{{ 'Make your own apps and websites' | i18n }}</h2>
 
-      <form action="#login">
-        <input type="email" class="home-email-field" placeholder="{{ 'email address' | i18n}}"/>
-        <button>
-          {{ 'Start creating' | i18n }}
-        </button>
-      </form>
-    </section>
+          <p class="lead">
+            {{ 'Mozilla’s free tools' | i18n }}
+          </p>
+
+          <form action="#login">
+            <input type="email" class="home-email-field" placeholder="{{ 'Email address' | i18n}}"/>
+            <button class="btn btn-default">
+              {{ 'Start creating' | i18n }}
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
   </div>
-  <section class="row home-values">
-    <div class="col-xs-12">
+  <section class="home-values">
+    <div class="container-fluid">
       <h3>
         {{ 'Our values' | i18n }}
       </h3>
+
       <p class="lead">
         {{ 'Our goal is for everyone in the world' | i18n }}
       </p>
+
+      <div class="row">
+        <div class="col-sm-5 col-sm-offset-1 col-md-4">
+          <ul class="values-list">
+            <li class="value-free">
+              <h4>{{ 'Free' | i18n }}</h4>
+
+              <p>{{ 'Mozilla is a nonprofit organization' | i18n }}</p>
+            </li>
+            <li class="value-local">
+              <h4>{{ 'Local' | i18n }}</h4>
+
+              <p>{{ 'Wherever you live in the world' | i18n }}</p>
+            </li>
+            <li class="value-more-than-code">
+              <h4>{{ 'More than code' | i18n }}</h4>
+
+              <p>{{ 'Our tools, learning resources, and' | i18n}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-5 col-md-6">
+          <figure class="home-globe">
+            <img src="/img/home/globe.svg" alt="Globe" height="300" width="300"/>
+          </figure>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-5 col-sm-offset-1 col-md-4">
-      <ul class="home-values">
-        <li class="value-free">
-          <h4>{{ 'Free' | i18n }}</h4>
-          <p>{{ 'Mozilla is a nonprofit organization' | i18n }}</p>
+  </section>
+  <section class="home-jump-in">
+    <div class="container-fluid">
+      <h3>{{ 'Jump right in' | i18n }}</h3>
+
+      <p class="lead">
+        {{ 'Discover how you can build and share the web.' | i18n}}
+      </p>
+      <ul class="row">
+        <li class="col-sm-4">
+          <figure>
+            <a href="">
+              <img src="" alt=""/>
+            </a>
+          </figure>
+          <h4>{{ 'Explore Webmaker' | i18n }}</h4>
+
+          <p bind-html-unsafe="'Investigate the tools, learning resources' | i18n"></p>
         </li>
-        <li class="value-local">
-          <h4>{{ 'Local' | i18n }}</h4>
-          <p>{{ 'Wherever you live in the world' | i18n }}</p>
+        <li class="col-sm-4">
+          <figure>
+            <img src="/img/home/learntoteach-md-icon.svg" alt=""/>
+          </figure>
+          <h4>{{ 'Learn to Teach' | i18n }}</h4>
+
+          <p bind-html-unsafe="'Study at your own pace' | i18n"></p>
         </li>
-        <li class="value-more-than-code">
-          <h4>{{ 'More than code' | i18n }}</h4>
-          <p>{{ 'Our tools, learning resources, and' | i18n}}</p>
+        <li class="col-sm-4">
+          <figure>
+            <a href="https://events.webmaker.org/">
+              <img src="" alt=""/>
+            </a>
+          </figure>
+          <h4>{{ 'Get Together' | i18n }}</h4>
+
+          <p bind-html-unsafe="'Build the web with others' | i18n"></p>
         </li>
       </ul>
     </div>
-    <div class="col-sm-5 col-md-6">
-      <figure class="home-globe">
-        <img src="/img/home/globe.svg" alt="Globe"/>
-      </figure>
-    </div>
   </section>
-  <section class="row home-jump-in">
-    <div class="col-xs-12">
-      <h3>{{ 'Jump right in' | i18n }}</h3>
-      <p class="lead">
-        {{ 'Discover how you can build and share the web' | i18n}}
-      </p>
-    </div>
-    <div class="col-sm-4">
-      <figure>
-        <img src="" alt=""/>
-      </figure>
-      <h4>{{ 'Explore Webmaker' | i18n }}</h4>
-      <p>{{ 'Investigate the tools, learning resources' | i18n }}</p>
-    </div>
-    <div class="col-sm-4">
-      <figure>
-        <img src="" alt=""/>
-      </figure>
-      <h4>{{ 'Learn to Teach' | i18n }}</h4>
-      <p>{{ 'Study at your own pace' | i18n }}</p>
-    </div>
-    <div class="col-sm-4">
-      <figure>
-        <img src="" alt=""/>
-      </figure>
-      <h4>{{ 'Get Together' | i18n }}</h4>
-      <p>{{ 'Build the web with others' | i18n }}</p>
-    </div>
-  </section>
-<footer class="row">
-  <p>
-    {{ 'Build and share the web with Mozilla.' | i18n }}
-    <button>{{ 'Start Creating' | i18n }}</button>
-  </p>
-</footer>
+  <footer class="home-footer">
+    <p>
+      {{ 'Build and share the web with Mozilla.' | i18n }}
+      <button class="btn btn-default">{{ 'Start Creating' | i18n }}</button>
+    </p>
+  </footer>
 </div>
 <!-- Footer -->
 <div ng-include="'/views/partials/footer.html'"></div>

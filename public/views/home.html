@@ -2,7 +2,7 @@
 </div>
 <div id="page-home">
   <div class="home-blue">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-sm-3 col-sm-offset-1 col-md-4">
           <figure class="devices">
@@ -29,7 +29,7 @@
     </div>
   </div>
   <section class="home-values">
-    <div class="container-fluid">
+    <div class="container">
       <h3>
         {{ 'Our values' | i18n }}
       </h3>
@@ -67,7 +67,7 @@
     </div>
   </section>
   <section class="home-jump-in">
-    <div class="container-fluid">
+    <div class="container">
       <h3>{{ 'Jump right in' | i18n }}</h3>
 
       <p class="lead">
@@ -76,31 +76,48 @@
       <ul class="row">
         <li class="col-sm-4">
           <figure>
-            <a href="">
-              <img src="" alt=""/>
+            <a href="https://webmaker.org/{{ lang }}/explore/">
+              <img src="/img/home/gallery-md-icon.svg" alt="" width="154" height="120"/>
             </a>
           </figure>
           <h4>{{ 'Explore Webmaker' | i18n }}</h4>
 
-          <p bind-html-unsafe="'Investigate the tools, learning resources' | i18n"></p>
+          <p>
+            {{ 'Investigate the tools, learning resources' | i18n }}
+            <a href="https://webmaker.org/{{ lang }}/explore/">
+              {{ 'Explore now' | i18n }}
+            </a>
+          </p>
         </li>
         <li class="col-sm-4">
           <figure>
-            <img src="/img/home/learntoteach-md-icon.svg" alt=""/>
+            <a href="https://training.webmakerprototypes.org/{{ lang }}/">
+              <img src="/img/home/learntoteach-md-icon.svg" alt="" width="152" height="120"/>
+            </a>
           </figure>
           <h4>{{ 'Learn to Teach' | i18n }}</h4>
 
-          <p bind-html-unsafe="'Study at your own pace' | i18n"></p>
+          <p>
+            {{ 'Study at your own pace' | i18n }}
+            <a href="https://training.webmakerprototypes.org/{{ lang }}/">
+              {{ 'Get training' | i18n }}
+            </a>
+          </p>
         </li>
         <li class="col-sm-4">
           <figure>
             <a href="https://events.webmaker.org/">
-              <img src="" alt=""/>
+              <img src="/img/home/get-together-md-icon.svg" alt="" width="155" height="120"/>
             </a>
           </figure>
           <h4>{{ 'Get Together' | i18n }}</h4>
 
-          <p bind-html-unsafe="'Build the web with others' | i18n"></p>
+          <p>
+            {{ 'Build the web with others' | i18n }}
+            <a href="https://events.webmaker.org/{{ lang }}/">
+              {{ 'View events' | i18n }}
+            </a>
+          </p>
         </li>
       </ul>
     </div>

@@ -601,24 +601,36 @@
     "description": "headline on first topic of 'jump right in' on home page"
   },
   "Investigate the tools, learning resources": {
-    "message": "Investigate the tools, learning resources and community that Webmaker offers. <a href=\"\">Explore now</a>",
+    "message": "Investigate the tools, learning resources and community that Webmaker offers.",
     "description": "copy for first topic of 'jump right in' on home page"
+  },
+  "Explore now": {
+    "message": "Explore now",
+    "description": "link copy on home 'jump right in' section"
   },
   "Learn to Teach": {
     "message": "Learn to Teach",
     "description": "headline on second topic of 'jump right in' on home page"
   },
   "Study at your own pace": {
-    "message": "Study at your own pace to teach web literacy, digital skills, and open practices. <a href=\"\">Get training</a>",
+    "message": "Study at your own pace to teach web literacy, digital skills, and open practices.",
     "description": "copy for second topic of 'jump right in' on home page"
+  },
+  "Get training": {
+    "message": "Get training",
+    "description": "link copy on home 'jump right in' section"
   },
   "Get Together": {
     "message": "Get Together",
     "description": "headline on third topic of 'jump right in' on home page"
   },
   "Build the web with others": {
-    "message": "Build the web with others at a local event, or find the resources to host your own. <a href=\"https://events.webmaker.org/\">View events</a>",
+    "message": "Build the web with others at a local event, or find the resources to host your own.",
     "description": "copy for third topic of 'jump right in' on home page"
+  },
+  "View events": {
+    "message": "View events",
+    "description": "link copy on home 'jump right in' section"
   },
   "Build and share the web with Mozilla.": {
     "message": "Build and share the web with Mozilla.",
@@ -627,17 +639,5 @@
   "Start Creating": {
     "message": "Start Creating",
     "description": "button text on footer on home"
-  },
-  "": {
-    "message": "",
-    "description": ""
-  },
-  "": {
-    "message": "",
-    "description": ""
-  },
-  "": {
-    "message": "",
-    "description": ""
   }
 }

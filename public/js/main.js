@@ -45,7 +45,6 @@ requirejs.config({
 
 require([
   'jquery',
-  'base/cta',
   'base/marquee',
   'base/email-signup',
   'base/anchor-slide',
@@ -55,7 +54,7 @@ require([
   'selectize',
   'base/login',
   'tabzilla',
-], function ($, cta, Marquee, privacy, AnchorSlide, navigation, webmakerCampaign, languages, selectize) {
+], function ($, Marquee, privacy, AnchorSlide, navigation, webmakerCampaign, languages, selectize) {
   'use strict';
 
   var $window = $(window);
@@ -81,9 +80,6 @@ require([
 
   // Attach navigation UI
   navigation();
-
-  // Generate CTA bar in footer
-  cta.attachToCTA();
 
   // Campaign
   webmakerCampaign({

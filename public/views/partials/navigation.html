@@ -23,17 +23,19 @@
 
 <!-- Secondary nav -->
 <nav class="navbar navbar-inverse navbar-no-header-xs">
+  <div class="container">
     <div class="navbar-collapse" collapse="secondaryCollapse">
-      <ul class="row nav navbar-nav">
+      <ul class="nav navbar-nav">
         <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id), dropdown: section.dropdown }">
 
           <a
-            href="{{baseUrl + section.url}}"
-            push-state="{{section.pushState}}">
-            {{ section.title | i18n }}
+          href="{{baseUrl + section.url}}"
+          push-state="{{section.pushState}}">
+          {{ section.title | i18n }}
           </a>
         </li>
       </ul>
+    </div>
   </div>
 </nav>
 

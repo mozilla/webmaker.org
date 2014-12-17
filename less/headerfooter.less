@@ -368,7 +368,7 @@ header {
 
 .partnerWrapper {
   width: 100%;
-  background: url(../img/bkgFooter.jpg) repeat scroll 50% 0 #f9f9f9;
+  background: @navy;
 }
 
 .partners {
@@ -377,20 +377,11 @@ header {
   margin: 0 auto;
   text-align: center;
 
-  hr {
-    color: #c5c7c9;
-    opacity: 0.7;
-    width: 50%;
-    border-width: 1px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-
   .partners-header {
+    color: @white;
     font-size: 20px;
     font-family: "Open Sans Light";
     margin-left: 25px;
-    color: #96989c;
   }
 
   .refresh-sponsors {
@@ -398,6 +389,7 @@ header {
   }
 
   .sponsors {
+    color: @white;
     list-style: none;
     font-size: 14px;
     margin: 15px 0 0;
@@ -783,3 +775,114 @@ footer {
     }
   }
 }
+
+.navbar-footer {
+  background-color: @lightnavy;
+  padding-bottom: 3rem;
+  padding-top: 1.5em;
+  font-size: 1.8rem;
+  min-height: 265px;
+  @media screen and (min-width: @width-medium) {
+    min-height: 155px;
+  }
+
+  ul {
+    float: left;
+    list-style: none;
+    margin-right: 6rem;
+    padding: 0;
+  }
+
+  li {
+    padding-bottom: 2rem;
+    @media screen and (min-width: @width-medium) {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  a {
+    &:link, &:visited {
+      color: fade(@white, 80%);
+    }
+    &:hover, &:active, &:focus {
+      color: @white;
+    }
+  }
+  .moz-logo {
+    float: right;
+    margin-top: 1.6rem;
+    @media screen and (min-width: 25em) {
+      margin-top: 0;
+    }
+  }
+}
+
+.newsletter {
+  margin-bottom: 32px;
+  span {
+    color: @white;
+  }
+}
+
+#privacy-form {
+  text-align: center;
+
+  .privacy-box {
+    z-index: 2;
+    margin-top: 10px;
+    padding: 0 10px;
+    position: absolute;
+    width: 280px;
+    height: 60px;
+    top: 30px;
+    color: #7b7b7b;
+    background: #FFF;
+    .border-radius;
+    .box-shadow(1px, 1px, 9px, grey);
+    .border-box;
+    display: none;
+  }
+
+  .privacy-box-active {
+    display: block;
+  }
+
+  .checkbox {
+    float: left;
+    margin-top: 10px;
+
+    &:after {
+      font-size: 30px;
+    }
+
+    input {
+      box-shadow: none;
+    }
+  }
+}
+
+#email-updates {
+  background: transparent;
+  border: none transparent 0;
+  border-bottom: 1px solid @lightnavy;
+  box-shadow: none;
+  color: @white;
+  font-size: 16px;
+  font-weight: 300;
+  min-width: 190px;
+  padding: 0 0 3px 10px;
+  position: relative;
+}
+
+#email-submit {
+  background: transparent;
+  color: @white;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#newsletter-signup-checkbox {
+  display: none;
+}
+

@@ -57,7 +57,8 @@ angular
                 {
                   id: 'hive',
                   title: 'Hive',
-                  url: '_hive'
+                  url: '_hive',
+                  doNotTranslate: true
                 }
               ]
             }

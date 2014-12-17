@@ -3,16 +3,22 @@
 <section id="main-navigation-container" data-current-section="{{currentSection}}" data-current-page="{{currentPage}}">
 
   <nav id="navigation-primary" class="navigation-container">
-      <ul class="navigation-list navigation-wrapper">
-        {% for section in navigation %}
-        {% if not section.flag or flags[section.flag] %}
-          <li class="col-sm-3"><a href="{% if section.instantiate %}{{section.defaultUrl | instantiate}}{% else %}/{{localeInfo.lang}}/{{section.defaultUrl}}{% endif %}"
-          {% if section.id == currentSection %}class="active"{% endif %} data-section="{{section.id}}">
-            {{gettext(section.title)}}</a>
+      <div class="ui-wrapper">
+        <ul class="navigation-list navigation-wrapper">
+          {% for section in navigation %}
+          {% if not section.flag or flags[section.flag] %}
+            <li class="nav-icon">
+            <a href="{% if section.instantiate %}{{section.defaultUrl | instantiate}}{% else %}/{{localeInfo.lang}}/{{section.defaultUrl}}{% endif %}"
+            {% if section.id == currentSection %}class="active"{% endif %}
+            data-section="{{section.id}}">
+            <span class="fa {{section.icon}}"></span>
+            {{gettext(section.title)}}
+            </a>
           </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
+          {% endif %}
+          {% endfor %}
+          </ul>
+      </div>
   </nav>
 
   <nav id="navigation-secondary" class="navigation-container">
@@ -31,7 +37,7 @@
               class="active"{% endif %}
               href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}
               >
-              
+
               {{gettext(page.title)}}
             </a>
         </li>

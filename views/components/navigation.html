@@ -17,9 +17,9 @@
           </li>
           {% endif %}
           {% endfor %}
-          </ul>
+        </ul>
       </div>
-  </nav>
+    </nav>
 
   <nav id="navigation-secondary" class="navigation-container">
     {% for section in navigation %}
@@ -53,30 +53,20 @@
 
   <nav id="expanded-navigation">
     <div class="navigation-wrapper">
-    {% for section in navigation %}
-    {% if not section.flag or flags[section.flag] %}
-    {% if not section.exclude or (section.exclude and not flags[section.exclude]) %}
-      <ul class="navigation-list">
-        <li><a><span class="icon {{section.icon}}"></span> {{gettext(section.title)}}</a></li>
-        {% if section%}
-          {% for page in section.pages %}
-          {% if not page.flag or flags[page.flag] %}
-          {% if not page.adminOnly or isAdmin %}
-          {% if not page.isAtleastMentor or isAdmin or isSuperMentor or isMentor %}
-          <li>
-            <a href="{% if not page.external %}/{{localeInfo.lang}}/{% endif %}{{ page.url | instantiate }}"{% if page.external %} target="_blank"{% endif %}>
-              {{gettext(page.title)}}
+      <ul class="navigation-list navigation-wrapper">
+        {% for section in navigation %}
+        {% if not section.flag or flags[section.flag] %}
+          <li class="nav-icon">
+            <a href="{% if section.instantiate %}{{section.defaultUrl | instantiate}}{% else %}/{{localeInfo.lang}}/{{section.defaultUrl}}{% endif %}"
+            {% if section.url == currentSection %}class="active"{% endif %}
+            data-section="{{section.id}}">
+            <span class="fa {{section.icon}}"></span>
+            {{gettext(section.title)}}
             </a>
           </li>
-          {% endif %}
-          {% endif %}
-          {% endif %}
-          {% endfor %}
         {% endif %}
+        {% endfor %}
       </ul>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
     </div>
   </nav>
 

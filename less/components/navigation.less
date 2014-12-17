@@ -33,10 +33,14 @@
   color: @white;
   background-color: @navy;
   .nav-icon {
+    width: 100%;
+    text-align: left;
     display: inline-block;
-    width: 24.8%;
     margin-left: -0.4rem;
-    text-align: center;
+    @media screen and (min-width: @screen-sm-min){
+      width: 24.8%;
+      text-align: center;
+    }
     &:hover, &:active, &:focus {
       background-color: @lightnavy;
       .fa {
@@ -94,61 +98,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-  // > li {
-  //   .border-box;
-  //   .clearfix;
-  //   display: inline;
-  //   @media screen and (min-width: @screen-sm-min) {
-  //     background: @navy;
-  //     margin-bottom: 2rem;
-  //     text-align: center;
-  //     &:hover, &:active, &:focus, .active {
-  //       background: @lightnavy;
-  //     }
-  //   }
-  //   > a {
-  //     .clearfix;
-  //     font-size: 1.4rem;
-  //     padding: 1.8rem 1.5rem 1.8rem 3.2rem;
-  //     @media screen and (min-width: @screen-sm-min) {
-  //       padding-left: 1.5rem;
-  //     }
-  //   }
-  //   &.nav-icon {
-  //     .clearfix;
-  //     @media screen and (min-width: @screen-sm-min){
-  //       width: 25%;
-  //     }
-  //     > a {
-  //       height: auto;
-  //       padding: 1.2rem 1.8rem;
-  //       &:link, &:visited {
-  //         color: fade(@white, 80);
-  //       }
-  //       &:hover, &:active, &:focus {
-  //         color: @white;
-  //         text-decoration: none;
-  //       }
-  //       span.fa {
-  //         margin-right: 0.8rem;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // a {
-  //   display: block;
-  //   padding: 1.4rem 1.8rem;
-  //   color: inherit;
-  //   @media (min-width: @width-medium) {
-  //     line-height: 32px;
-  //   }
-  //   &:hover {
-  //     text-decoration: none;
-  //   }
-  // }
-// }
-
 
 #navigation-primary {
   // Don't show on mobile
@@ -181,7 +130,6 @@
     float: left;
     color: fade(@white, 60%);
     display: inline-block;
-    width: 33%;
     &:hover,
     .active {
       color: @white;
@@ -210,9 +158,8 @@
 #expanded-navigation {
   .clearfix;
   position: relative;
-  background: @lightnavy;
+  background: @navy;
   display: none;
-  padding: 20px;
   @media (min-width: @width-medium) {
     padding: 20px 0;
   }
@@ -222,79 +169,28 @@
       display: none;
     }
   }
-
   .navigation-wrapper {
     left: 0;
   }
-
   .navigation-list {
-    margin: 0 0 20px 0;
-    @media (min-width: @width-medium) {
-      float: left;
-      // Grid calculation for 5 colums with 4% gutter
-      width: ((100% - (4 * 4%)) / 5);
-      margin: 0 4% 0 0;
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-
+    background-color: @navy;
     &.collapsed {
-      li {
-        display: none;
-
-        @media (min-width: @width-medium) {
-          display: block;
-        }
-      }
-
-      li:first-child {
-        display: block;
-      }
+      display: block;
     }
-
-    &:last-child {
-      margin-bottom: 0;
-
-      &.collapsed :first-child {
-        margin-bottom: 0;
-
-        @media (min-width: @width-medium) {
-          margin-bottom: 1em;
-        }
-      }
-    }
-
     a {
       padding: 0;
       line-height: 1.2;
       display: block;
     }
-
-
     li {
       display: block;
       color: fade(@white, 80%);
-      margin-bottom: 1em;
+      padding: 1.2rem 1.8rem;
       &:hover {
         color: @white;
       }
-
-      // Section titles
-      &:first-child {
-        color: @white;
-        font-size: 18px;
-        //margin-left: -8px;
-      }
     }
-
-    .icon {
-      display: none;
-    }
-
-
   }
-
   #navigation-expanded-close {
     position: absolute;
     cursor: pointer;

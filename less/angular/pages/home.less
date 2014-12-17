@@ -14,9 +14,6 @@
   h4 {
     font-size: 2rem;
   }
-  .lead {
-    text-align: center;
-  }
   footer {
     text-align: center;
   }
@@ -24,6 +21,9 @@
 
 .home-blue, .home-values, .home-jump-in, .home-footer {
   padding: 5rem 0;
+  .lead {
+    text-align: center;
+  }
   .btn {
     background: @yellow;
     border: transparent;
@@ -36,6 +36,14 @@
     vertical-align: baseline;
     @media screen and (min-width: @screen-sm-min) {
       margin-top: 0;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      display: block;
+      margin: 1rem auto 0 5rem;
+    }
+    @media screen and (min-width: @screen-lg-min) {
+      display: inline;
+      margin: auto;
     }
     &:active {
       box-shadow: none;
@@ -133,6 +141,9 @@
   li {
     margin-bottom: 2rem;
     position: relative;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-bottom: 5rem;
+    }
     &::before {
       left: -5rem;
       position: absolute;
@@ -188,6 +199,7 @@
     }
   }
   figure {
+    height: 13rem;
     margin-bottom: 3rem;
   }
 }

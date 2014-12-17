@@ -109,6 +109,11 @@ angular
       } else if ($routeParams.auth === 'new-account') {
         $rootScope.wmCreateUser();
       }
+
+      $('#home-start-form').on('submit', function () {
+        $rootScope.joinWebmaker($('.home-email-field').val());
+      });
+
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$routeParams',

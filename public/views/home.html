@@ -18,8 +18,8 @@
             {{ 'Mozilla’s free tools' | i18n }}
           </p>
 
-          <form action="#login">
-            <input type="email" class="home-email-field" placeholder="{{ 'Email address' | i18n}}"/>
+          <form action="#login" id="home-start-form">
+            <input type="email" class="home-email-field" placeholder="{{ 'Email address' | i18n }}"/>
             <button class="btn btn-default">
               {{ 'Start creating' | i18n }}
             </button>
@@ -125,7 +125,9 @@
   <footer class="home-footer">
     <p>
       {{ 'Build and share the web with Mozilla.' | i18n }}
-      <button class="btn btn-default">{{ 'Start Creating' | i18n }}</button>
+      <button class="btn btn-default" wm-join-webmaker>
+        {{ 'Start Creating' | i18n }}
+      </button>
     </p>
   </footer>
 </div>

@@ -36,12 +36,13 @@
     width: 100%;
     text-align: left;
     display: inline-block;
-    margin-left: -0.4rem;
+    margin: 0;
     @media screen and (min-width: @screen-sm-min){
       width: 24.8%;
       text-align: center;
+      margin-left: -0.4rem;
     }
-    &:hover, &:active, &:focus {
+    &:hover, &:active, &:focus, a.active {
       background-color: @lightnavy;
       .fa {
         box-shadow: none;
@@ -69,9 +70,6 @@
       &:hover, &:active, &:focus {
         color: @white;
         text-decoration: none;
-      }
-      &.active {
-        background-color: @lightnavy;
       }
       span.fa {
         margin-right: 0.8rem;
@@ -181,11 +179,12 @@
       padding: 0;
       line-height: 1.2;
       display: block;
+      font-size: 1.4rem;
+      padding: 1.2rem 1.8rem;
     }
     li {
       display: block;
       color: fade(@white, 80%);
-      padding: 1.2rem 1.8rem;
       &:hover {
         color: @white;
       }

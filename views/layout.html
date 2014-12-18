@@ -165,30 +165,39 @@
           <ul>
             <li><a href="/{{localeInfo.lang}}/about">{{ gettext('About') }}</a></li>
             <li><a href="/{{localeInfo.lang}}/mentor">{{ gettext('Teach') }}</a></li>
-            <!--<li><a href="/_teach">{{ gettext('Teach') }}</a></li>-->
-            <li><a href="https://blog.webmaker.org">{{ gettext('Blog') }}</a>
-            </li>
-            <li><a href="https://twitter.com/webmaker">Twitter</a></li>
             <li>
               <a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">
                 {{ gettext('Donate') }}
               </a>
             </li>
-          </ul>
-          <ul>
+            <li><a href="mailto:help@webmaker.org">{{ gettext('Contact') }}</a></li>
+            <li><a href="/{{localeInfo.lang}}/privacy">{{ gettext('Privacy') }}</a></li>
+            <li><a href="/{{localeInfo.lang}}/terms">{{ gettext('Legal') }}</a></li>
             <li>
               <a href="https://support.mozilla.org/products/webmaker">
                 {{ gettext('Help') }}
               </a>
             </li>
-            <li><a href="mailto:help@webmaker.org">{{ gettext('Contact') }}</a>
-            </li>
-            <li><a href="/{{localeInfo.lang}}/privacy">{{ gettext('Privacy') }}</a></li>
-            <li><a href="/{{localeInfo.lang}}/terms">{{ gettext('Legal') }}</a></li>
           </ul>
-          <a href="https://mozilla.org/" class="moz-logo">
-            <img src="/img/logo-mozilla-white.png" alt="mozilla logo" height="50" width="124"/>
-          </a>
+
+          <ul class="secondary">
+            <li><span class="fa icon-twitter"></span>
+              <a href="https://twitter.com/webmaker">
+                @webmaker
+              </a>
+            </li>
+            <li><span class="fa icon-file-text-alt"></span>
+              <a href="https://blog.webmaker.org">
+                {{ gettext('Blog') }}
+              </a>
+            </li>
+          </ul>
+
+          <div class="moz-logo">
+            <a href="https://mozilla.org/">
+              <img src="/img/logo-mozilla-white.png" alt="mozilla logo" height="41" width="100"/>
+            </a>
+          </div>
         </div>
       </nav>
     </div>

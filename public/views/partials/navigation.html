@@ -23,17 +23,19 @@
 
 <!-- Secondary nav -->
 <nav class="navbar navbar-inverse navbar-no-header-xs">
+  <div class="container">
     <div class="navbar-collapse" collapse="secondaryCollapse">
-      <ul class="row nav navbar-nav">
+      <ul class="nav navbar-nav">
         <li ng-repeat="section in nav.sections" class="nav-icon" ng-class="{ active: isActiveSection(section.id), dropdown: section.dropdown }">
-
           <a
-            href="{{baseUrl + section.url}}"
-            push-state="{{section.pushState}}">
-            {{ section.title | i18n }}
+          href="{{baseUrl + section.url}}"
+          push-state="{{section.pushState}}">
+          <span class="fa fa-{{section.icon}}"></span>
+          {{ section.title | i18n }}
           </a>
         </li>
       </ul>
+    </div>
   </div>
 </nav>
 
@@ -50,7 +52,7 @@
   <div class="container" ng-class="{'show-xs':section.dropdown}">
     <div class="navbar-collapse" collapse="tertiaryCollapse">
       <ul class="nav navbar-nav">
-        <li ng-repeat="page in section.pages">
+        <li class="col-3" ng-repeat="page in section.pages">
           <a href="{{page.external ? page.url : baseUrl + page.url}}" push-state="{{page.pushState}}" ng-class="{active : isActivePage(page.id)}">
             <span ng-if="!page.doNotTranslate">
               {{ page.title | i18n }}

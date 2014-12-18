@@ -1,7 +1,18 @@
 @lightnavy: lighten(@navy, 6%);
+@yellow: #F5A906;
+@blue: #27AAE1;
+@red: #E5352D;
+@green: #03845C;
 
 .navigation-container {
   font-size: 14px;
+  .ui-wrapper {
+    margin-top: 0;
+  }
+}
+
+#main-navigation-container{
+  background: @navy;
 }
 
 .navigation-wrapper {
@@ -16,44 +27,77 @@
 
 .navigation-list {
   .border-box;
-  font-size: 1.8rem;
   list-style: none;
   padding: 0;
   position: relative;
   color: @white;
-
-  li {
-    .border-box;
-    display: inline;
-    @media screen and (min-width: @screen-sm-min) {
-      background: @navy;
-      margin-bottom: 2rem;
+  background-color: @navy;
+  .nav-icon {
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    @media screen and (min-width: @screen-sm-min){
+      width: 24.8%;
       text-align: center;
-      &:hover, &:active, &:focus, .active {
-        background: @lightnavy;
+      margin-left: -0.4rem;
+    }
+    &:hover, &:active, &:focus, a.active {
+      background-color: @lightnavy;
+      .fa {
+        box-shadow: none;
+      }
+      .icon-random {
+        background-color: @yellow;
+      }
+      .icon-hand-up {
+        background-color: @blue;
+      }
+      .icon-map-marker {
+        background-color: @red;
+      }
+      .icon-book {
+        background-color: @green;
       }
     }
-  }
-
-  a {
-    display: block;
-    padding: 1.4rem 1.8rem;
-    color: inherit;
-    @media (min-width: @width-medium) {
-      line-height: 32px;
-    }
-    &:hover {
-      text-decoration: none;
+    a {
+      height: auto;
+      display: block;
+      padding: 1.2rem 1.8rem;
+      &:link, &:visited {
+        color: fade(@white, 80);
+      }
+      &:hover, &:active, &:focus {
+        color: @white;
+        text-decoration: none;
+      }
+      span.fa {
+        margin-right: 0.8rem;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.2) inset;
+        color: #FFF;
+        border-radius: 20px;
+        font-size: 12px;
+        display: inline-block;
+      }
     }
   }
 }
 
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 #navigation-primary {
-  &:hover, &:active, &:focus, .active {
-    background: @lightnavy;
-  }
-
   // Don't show on mobile
   display: none;
 
@@ -112,9 +156,8 @@
 #expanded-navigation {
   .clearfix;
   position: relative;
-  background: @lightnavy;
+  background: @navy;
   display: none;
-  padding: 20px;
   @media (min-width: @width-medium) {
     padding: 20px 0;
   }
@@ -124,79 +167,29 @@
       display: none;
     }
   }
-
   .navigation-wrapper {
     left: 0;
   }
-
   .navigation-list {
-    margin: 0 0 20px 0;
-    @media (min-width: @width-medium) {
-      float: left;
-      // Grid calculation for 5 colums with 4% gutter
-      width: ((100% - (4 * 4%)) / 5);
-      margin: 0 4% 0 0;
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-
+    background-color: @navy;
     &.collapsed {
-      li {
-        display: none;
-
-        @media (min-width: @width-medium) {
-          display: block;
-        }
-      }
-
-      li:first-child {
-        display: block;
-      }
+      display: block;
     }
-
-    &:last-child {
-      margin-bottom: 0;
-
-      &.collapsed :first-child {
-        margin-bottom: 0;
-
-        @media (min-width: @width-medium) {
-          margin-bottom: 1em;
-        }
-      }
-    }
-
     a {
       padding: 0;
       line-height: 1.2;
       display: block;
+      font-size: 1.4rem;
+      padding: 1.2rem 1.8rem;
     }
-
-
     li {
       display: block;
       color: fade(@white, 80%);
-      margin-bottom: 1em;
       &:hover {
         color: @white;
       }
-
-      // Section titles
-      &:first-child {
-        color: @white;
-        font-size: 18px;
-        //margin-left: -8px;
-      }
     }
-
-    .icon {
-      display: none;
-    }
-
-
   }
-
   #navigation-expanded-close {
     position: absolute;
     cursor: pointer;

@@ -3,7 +3,6 @@
     "id": "gallery",
     "title": "Explore",
     "icon": "icon-random",
-    "flag": "explore",
     "defaultUrl": "explore",
     "pages": []
   },

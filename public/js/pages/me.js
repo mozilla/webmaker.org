@@ -22,8 +22,6 @@ define(['jquery', 'uri', 'base/ui', 'localized', 'masonry', 'base/login'],
         webmakerAuth.on('logout', reload);
       }
 
-      webmakerAuth.verify();
-
       // Do we have any makes?
       if (!$makes.length) {
         return;

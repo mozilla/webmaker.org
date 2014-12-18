@@ -29,8 +29,8 @@ requirejs.config({
     'doc-ready': '/bower_components/doc-ready',
     'eventEmitter': '/bower_components/eventEmitter',
     'matches-selector': '/bower_components/matches-selector',
-    'webmaker-auth-client': '/bower_components/webmaker-auth-client/dist/webmaker-auth-client.min',
-    'analytics': '/bower_components/webmaker-analytics/analytics'
+    'analytics': '/bower_components/webmaker-analytics/analytics',
+    'url-template': '/bower_components/url-template/lib/url-template'
   },
   shim: {
     'tabzilla': ['jquery'],
@@ -75,7 +75,6 @@ require([
     arrow: "left"
   });
 
-  //initialized language selectize -- used in signup for webmaker-auth-client
   $('#supportedLocales').selectize();
 
   // Attach navigation UI

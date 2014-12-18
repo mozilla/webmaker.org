@@ -174,7 +174,4 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "local
         window.location.search = $.param(queryKeys);
       });
     }
-
-    webmakerAuth.verify();
-
   });

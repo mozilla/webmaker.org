@@ -163,6 +163,4 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
     });
 
     doSearch();
-
-    webmakerAuth.verify();
   });

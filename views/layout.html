@@ -47,8 +47,6 @@
   <p>{{ gettext("browserUpgradeWarning") | safe }}</p>
 </div>
 
-{% include "webmaker-auth-client/create-user/create-user-form.html" %}
-
 <div class="webmaker-outer-wrapper">
 
   {% if flags.campaign %}
@@ -56,48 +54,70 @@
   {% endif %}
 
   {% block header %}
-  <header id="webmaker-nav">
-    <nav class="webmaker-nav-container">
-      <div class="ui-grid-wrapper">
-        <div class="user-nav-container">
-          <a id="logo" href="/{{localeInfo.lang}}"><img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}"></a>
-          <ul class="webmaker-nav user-info">
+  <div id="webmaker-nav">
+    <nav class="navbar navbar-webmaker">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" nav-toggle>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars fa-lg"></span>
+          </button>
+          <a href="/{{localeInfo.lang}}" class="logo webmaker-logo">
+            <img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}">
+          </a>
+        </div>
 
-            <li class="new-user">
-              <div class="ui-append ui-select ui-select-hover user">
-                <span class="ui-selected">
-                  {{ gettext("Hi") }} <span id="identity" class="user-name-container"></span>
-                  <a class="icon icon-caret-down"></a>
-                </span>
-                <div class="ui-select-menu">
-                  <ul>
-                    <li class="makes"><a href="/{{localeInfo.lang}}/me"><span class="icon icon-th-large"></span> {{ gettext("My makes") }}</a></li>
-                    <li><a href="{{ loginAPI }}/{{localeInfo.lang}}/account" id="loginURL"><span class="icon icon-gear"></span> {{ gettext("My Settings") }}</a></li>
-                    <li class="profile-link">
-                      <a href="/user/">
-                        <span class="icon icon-user"></span> {{ gettext("My Profile") }}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        <div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+            {% include "webmaker-language-picker/template/supportedLanguages.html" %}
+          </div>
+
+          <div class="navbar-form navbar-right">
+            <button class="btn btn-secondary-nav signin-button navbar-button navbar-right">{{ gettext("Sign in") }}</button>
+            <button class="btn btn-primary join-button navbar-button navbar-right">{{ gettext("Join Webmaker") }}</button>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right user-info-dropdown hidden">
+            <li class="dropdown">
+              <a class="navbar-user-info dropdown-toggle" data-toggle="dropdown">
+                <img class="user-info-avatar" data-avatar>
+                {{ gettext("Hi") }} <strong data-username></strong>
+                <span class="hidden label label-primary" data-admin>admin</span>
+                <span class="hidden label label-info" data-supermentor>supermentor</span>
+                <span class="hidden label label-warning" data-mentor>mentor</span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{{ webmaker }}/{{ localeInfo.lang }}/me">
+                    <span class="fa fa-fw fa-th-large"></span> My makes
+                  </a>
+                </li>
+                <li>
+                  <a data-profile data-href-template="{{ webmaker }}/{{ localeInfo.lang }}/user/{username}">
+                    <span class="fa fa-fw fa-user"></span> My profile
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ loginAPI }}/{{ localeInfo.lang }}/account">
+                    <span class="fa fa-fw fa-cog"></span> My settings
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a class="logout-button">
+                    <span class="fa fa-fw fa-sign-out"></span> Sign out
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <div class="webmaker-login persona-button" style="display: none;">
-                <span dir="{{localeInfo.direction}}" class="text">{{ gettext("Sign in") }}</span><span dir="{{localeInfo.direction}}" class="tip"></span>
-              </div>
-              <span class="webmaker-logout" style="display: none;">{{ gettext("Sign out") }}</span>
-            </li>
-            <li class="more-btn"><a href="#" class="navigation-more"><span class="icon-reorder"></span></a></li>
           </ul>
         </div>
-        <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
       </div>
-    </nav>
+    </div>
+  </div>
+  {% include "components/navigation.html" %}
 
-    {% include "components/navigation.html" %}
-
-  </header>
   {% endblock %}
   <div id="midbar">{% block midbar %}{% endblock %}</div>
 
@@ -161,9 +181,11 @@
   <div class="mobile"></div>
 </div>
 
+<script src="{{ personaHostname }}/include.js"></script>
+<script src="/bower_components/webmaker-login-ux/dist/min/webmakerLogin.min.js"></script>
 <script id="require-js" src="/bower_components/requirejs/require.js"
   data-main="{% block require_main %}/js/main.js{% endblock %}"
-  data-page="{% block require_page %}pages/verify{% endblock %}">
+  data-page="{% block require_page %}{% endblock %}">
 </script>
 
 {% block scripts %}{% endblock %}
@@ -174,7 +196,6 @@
   async>
 </script>
 {% endif %}
-<script src="{{ personaHostname }}/include.js"></script>
 <script src="https://cdn.optimizely.com/js/206878104.js"></script>
 </body>
 </html>

@@ -1,14 +1,15 @@
+/* globals WebmakerLogin */
+
 requirejs.config({
   baseUrl: '/js',
   paths: {
     'jquery': '../bower_components/jquery/jquery',
     'social': '../js/lib/socialmedia',
-    'localized': '../bower_components/webmaker-i18n/localized',
-    'webmaker-auth-client': '../bower_components/webmaker-auth-client/dist/webmaker-auth-client.min',
+    'localized': '../bower_components/webmaker-i18n/localized'
   }
 });
-define(['jquery', 'social', 'localized', 'webmaker-auth-client'],
-  function ($, SocialMedia, localized, WebmakerAuth) {
+define(['jquery', 'social', 'localized'],
+  function ($, SocialMedia, localized) {
     localized.ready(function () {
       var social,
         $body = $("body"),
@@ -28,10 +29,17 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client'],
         fbBtn = document.getElementById("fb-btn"),
         url = $body.data("url"),
         csrfToken = $("meta[name='csrf-token']").attr("content"),
-        webmakerAuth = new WebmakerAuth({
-          csrfToken: csrfToken,
-          handleNewUserUI: false
+        webmakerAuth = new WebmakerLogin({
+          csrfToken: $('meta[name="csrf-token"]').attr('content')
         });
+
+      webmakerAuth.on('verified', function (user) {
+        if (user) {
+          webmakerAuth.emit('login', user);
+        } else {
+          webmakerAuth.emit('logout');
+        }
+      });
 
       var socialMessage = localized.get('DetailsShareTwitterMsg');
       social = new SocialMedia({
@@ -189,7 +197,5 @@ define(['jquery', 'social', 'localized', 'webmaker-auth-client'],
       $reportNotLoggedInMsg.on("click", function () {
         openLogInWindow(reportRequest);
       });
-
-      webmakerAuth.verify();
     });
   });

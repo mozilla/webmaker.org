@@ -9,6 +9,4 @@ define(['jquery', 'base/gallery', 'base/login'],
         tags: ['webmaker:template']
       }
     });
-
-    webmakerAuth.verify();
   });

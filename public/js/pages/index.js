@@ -69,6 +69,4 @@ require(['jquery', 'base/ui', 'base/gallery', 'base/login'],
       gallery.search();
 
     });
-
-    webmakerAuth.verify();
   });

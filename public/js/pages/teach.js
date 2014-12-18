@@ -10,7 +10,4 @@ define(['jquery', 'base/ui', 'base/gallery', 'base/login'],
         tags: ['webmaker:teach']
       }
     });
-
-    webmakerAuth.verify();
-
   });

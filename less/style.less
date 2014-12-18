@@ -10,25 +10,9 @@ body {
 @import "../bower_components/font-awesome/less/font-awesome";
 @FontAwesomePath: "/bower_components/font-awesome/font";
 
-// Import some of makerstrap
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-}
-@import "../bower_components/bootstrap/less/variables";
-@import "../bower_components/bootstrap/less/mixins";
-@import "../bower_components/bootstrap/less/grid";
-@import "../bower_components/bootstrap/less/labels";
-@import "../bower_components/bootstrap/less/buttons";
-@import "../bower_components/bootstrap/less/tables";
-@import "../bower_components/makerstrap/less/variables";
-@import "../bower_components/makerstrap/less/mixins";
-@import "../bower_components/makerstrap/less/buttons";
+// Makerstrap
 @makerstrap-bower-path: "../bower_components";
+@import "../bower_components/makerstrap/less/makerstrap";
 
 @import "../bower_components/nav-global/nav.less";
 
@@ -48,7 +32,7 @@ th {
 @import "components/spinner";
 @import "components/campaign-header";
 
-@import (less) "../bower_components/webmaker-auth-client/create-user/create-user-form.css";
+@import "../bower_components/webmaker-login-ux/src/less/webmakerLogin";
 
 @import "../bower_components/webmaker-language-picker/styles/languages";
 

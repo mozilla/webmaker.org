@@ -165,6 +165,4 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       emitter.emitEvent('js-issue-badge-on');
     });
 
-    auth.verify();
-
   });

@@ -1,10 +1,16 @@
+@new-grey: #4F5F66;
+
 #page-home {
-  color: @grey;
+  color: @new-grey;
   font-size: 1.6rem;
   h2 {
     font-size: 4.4rem;
     font-weight: 500;
     text-shadow: 0 0 0.1rem fade(@black, 50);
+    letter-spacing: -0.04rem;
+    @media screen and (min-width: @screen-md-min) {
+      font-size: 5.2rem;
+    }
   }
   h3 {
     font-weight: bold;
@@ -13,6 +19,7 @@
   }
   h4 {
     font-size: 2rem;
+    margin-bottom: 0.6rem;
   }
   footer {
     text-align: center;
@@ -23,36 +30,51 @@
   padding: 5rem 0;
   .lead {
     text-align: center;
+    font-size: 1.8rem;
+    @media screen and (min-width: @screen-sm-min) {
+
+      font-size: 2rem;
+    }
   }
   .btn {
+    width: 100%;
+    position: relative;
+    margin: 1.6rem 0 0 0;
+    padding: 1.3rem 1.5rem 1.1rem 1.5rem;
     background: @yellow;
+    color: #4B5B62;
     border: transparent;
     border-radius: 0.3rem;
-    box-shadow: 0 0.3rem 0 darken(@darkyellow, 10);
-    margin-top: 1rem;
-    padding: 1rem 1.8rem 0.7rem;
-    position: relative;
+    box-shadow: 0 0.4rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255,255,255,0.5);
     text-transform: uppercase;
     vertical-align: baseline;
-    @media screen and (min-width: @screen-sm-min) {
-      margin-top: 0;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    line-height: 1.42857;
+    @media screen and (min-width: @screen-xs-min) {
+      width: auto;
+      margin: 0 0 0 1rem;
     }
-    @media screen and (min-width: @screen-md-min) {
-      display: block;
-      margin: 1rem auto 0 5rem;
+    &:hover {
+      top: 0.2rem;
+      box-shadow: 0 0.2rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255,255,255,0.5);
     }
-    @media screen and (min-width: @screen-lg-min) {
-      display: inline;
-      margin: auto;
-    }
+
     &:active {
-      box-shadow: none;
-      top: 0.3rem;
+      top: 0.4rem;
+      box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,0.2);
     }
   }
 }
 
 .home-blue {
+  padding: 6rem 0;
+  @media screen and (min-width: @screen-md-min) {
+    padding: 10rem 0;
+  }
+  @media screen and (min-width: @screen-lg-min) {
+    padding: 12rem 0;
+  }
   color: @white;
   @media @standard-def {
     background-image: url('/img/home/background.png');
@@ -66,17 +88,42 @@
     text-align: left;
   }
   .lead {
-    text-align: left;
+    max-width: 100%;
+    @media screen and (min-width: @screen-sm-min) {
+      text-align: left;
+      max-width: 38rem;
+    }
   }
   form {
     margin: 0 auto;
-    max-width: 40rem;
+    @media screen and (min-width: @screen-sm-min) {
+      margin: 0;
+    }
   }
   input[type="email"] {
+    width: 100%;
     border: transparent solid 0;
     border-radius: 0.3rem;
     color: @grey;
-    padding: 1rem 2rem;
+    padding: 1.1rem 1.5rem 1.3rem 1.5rem;
+    @media screen and (min-width: @screen-xs-min) {
+      width: auto;
+    }
+  }
+  section {
+    margin-top: 1rem;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-top: 0;
+      padding-left: 5rem;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      margin-left: 5rem;
+      padding-left: 1.5rem;
+    }
+    @media screen and (min-width: @screen-lg-min) {
+      margin-left: 2.5rem;
+      padding-left: 1.5rem;
+    }
   }
 }
 
@@ -133,6 +180,12 @@
 
 .home-values {
   background: @white;
+  .row {
+    margin-top: 0rem;
+    @media screen and (min-width: @screen-md-min) {
+      margin-top: 6rem;
+    }
+  }
 }
 
 .values-list {
@@ -145,12 +198,9 @@
       margin-bottom: 5rem;
     }
     &::before {
-      left: -5rem;
+      left: -4.5rem;
       position: absolute;
       top: 0.4rem;
-      @media screen and (min-width: @screen-sm-min) {
-        left: -6rem;
-      }
     }
   }
 }
@@ -178,7 +228,13 @@
     display: block;
     margin: 5rem auto;
     @media screen and (min-width: @screen-sm-min) {
-      margin: 2rem auto;
+      margin: 0 auto;
+      transform: translateY(55%);
+    }
+    @media screen and (min-width: @screen-md-min) {
+      // display: block;
+      margin: 0 auto;
+      transform: translateY(20%);
     }
   }
 }
@@ -186,7 +242,9 @@
 .home-jump-in {
   background: darken(@white, 6.25%);
   text-align: center;
-
+  .row {
+    margin-top: 5rem;
+  }
   ul {
     list-style: none;
     padding-left: 0;
@@ -195,11 +253,19 @@
     margin-bottom: 5rem;
     @media screen  and (min-width: @screen-sm-min) {
       margin-bottom: 0;
-      margin-top: 5rem;
     }
   }
   figure {
-    height: 13rem;
     margin-bottom: 3rem;
+  }
+}
+
+.home-footer {
+  padding: 5rem 1rem;
+  @media screen and (min-width: @screen-sm-min) {
+    padding: 5rem 0;
+  }
+  p {
+    font-size: 2rem;
   }
 }

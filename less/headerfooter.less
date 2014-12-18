@@ -187,6 +187,32 @@ header {
   }
 }
 
+#gallery-search {
+  color: @white;
+  font-size: 15px;
+  input[type="search"] {
+    background: transparent;
+    border: none;
+    border-bottom: darken(@brand-primary, 10%) dashed 2px;
+    color: @white;
+    font-size: 17px;
+    margin-left: 5px;
+    width: 70%;
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &::-webkit-input-placeholder {
+      color: @white;
+    }
+  }
+  button {
+    background: transparent;
+    border: none;
+    color: @white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
 #tools h1 {
   line-height: 1.4em;
 }
@@ -196,7 +222,7 @@ header {
   background: @green;
   float: right;
   z-index: 3;
-  padding: 0.5em 1em 1em;
+  padding: 25px 10px 30px 20px;
   .border-box;
   .width(2);
 

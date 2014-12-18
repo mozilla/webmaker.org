@@ -783,21 +783,29 @@ footer {
   font-size: 1.8rem;
 
   ul {
-    text-align: center;
+    text-align: left;
     list-style: none;
     padding: 0;
+    @media screen and (min-width: @screen-xs-min) {
+      text-align: center;
+    }
   }
 
   li {
-    display: inline-block;
-    padding: 0 1.8rem;
-    @media screen and (min-width: @screen-sm-min) {
-      padding-bottom: 0.5rem;
+    display: block;
+    
+    @media screen and (min-width: @screen-xs-min) {
+      display: inline-block;
     }
   }
 
   a {
     font-size: 1.4rem;
+    display: block;
+    padding: 1.2rem 1.8rem;
+    @media screen and (min-width: @screen-xs-min) {
+      display: inline-block;
+    }
     &:link, &:visited {
       color: fade(@white, 80%);
     }
@@ -808,8 +816,13 @@ footer {
   }
 
   .secondary {
+    li {
+      padding: 1.2rem 1.8rem;
+    }
     a {
+      padding: 0;
       font-size: 1.3rem;
+      display: inline-block;
     }
     .fa {
       color: rgba(255,255,255,0.8);
@@ -818,10 +831,14 @@ footer {
   }
 
   .moz-logo {
-    text-align: center;
+    text-align: left;
     margin: 0 0 -1rem 0;
-    @media screen and (min-width: @screen-sm-min) {
+    @media screen and (min-width: @screen-xs-min) {
+      text-align: center;
       margin: 0 0 -1rem 1.8rem;
+    }
+    a {
+      padding: 0.8rem;
     }
     img {
       opacity: 0.8;

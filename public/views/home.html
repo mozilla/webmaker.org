@@ -1,96 +1,135 @@
-<div ng-show="userDel" class="alert alert-info">{{ 'user_deleted' | i18n }}</div>
+<div ng-show="userDel" class="alert alert-info">{{ 'user_deleted' | i18n }}
+</div>
+<div id="page-home">
+  <div class="home-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-md-5">
+          <figure class="devices">
+            <img src="/img/home/desktop.svg" alt="Desktop computer" class="desktop"/>
+            <img src="/img/home/mobile.svg" alt="Mobile phone" class="mobile"/>
+            <img src="/img/home/tablet.svg" alt="Tablet computer" class="tablet"/>
+          </figure>
+        </div>
+        <section class="col-sm-8 col-md-6">
+          <h2>{{ 'Make your own apps and websites' | i18n }}</h2>
 
-<section id="home-carousel">
-  <carousel interval="-1">
-    <slide class="slide" id="slide-0">
-    <div class="slide-inner">
-      <div class="container text-center">
-        <img class="desktop-logo" src="/img/home/desktop-icon@2x.png" alt="Hour of Code Desktop">
-        <h1>{{ 'Teach an hour of code' | i18n }}</h1>
-        <p class="lead">{{ 'Create a web app while learning' | i18n }}</p>
-        <a href="https://welcome.webmaker.org/signup/hourofcode2014/" target="_blank" class="btn btn-primary">{{ 'Get started' | i18n }}</a>
-      </div>
-    </div>
-    </slide>
-    <slide class="slide" id="slide-1">
-    <div class="slide-inner">
-      <div class="container text-center">
-        <img class="skill-sharer-badge" src="/img/home/skills-sharer-badge.png" alt="Skills Sharer Badge">
-        <h1>{{ 'Do you teach the web' | i18n }}</h1>
-        <p class="lead">{{ 'Making a difference' | i18n }}</p>
-        <a href="https://sendto.mozilla.org/page/signup/skill-share-badge" target="_blank" class="btn btn-primary">{{ 'Collect your badge' | i18n }}</a>
-      </div>
-    </div>
-    </slide>
-    <slide class="slide" id="slide-2">
-      <div class="slide-inner">
-        <div class="container text-center">
-          <h1>{{ 'I hosted a maker party where women taught the wonders of the web' | i18n }}</h1>
-          <p class="lead">{{ 'J Faye Tandog, Manilla, Phillippines' | i18n }}</p>
-        </div>
-      </div>
-    </slide>
-    <slide class="slide" id="slide-3">
-      <div class="slide-inner">
-        <div class="container text-center">
-          <h1>{{ 'We remixed our favorite stories using digital media and the web' | i18n }}</h1>
-          <p class="lead">{{ 'Hive NYC Storymakers, Brooklyn Public Library, New York' | i18n }}</p>
-        </div>
-      </div>
-    </slide>
-  </carousel>
-</section>
+          <p class="lead">
+            {{ 'Mozilla’s free tools' | i18n }}
+          </p>
 
-<section id="home-teach-the-web">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-lg-4">
-        <div class="illustration">
-          <!-- <img dir="ltr" class="cat-off" src="/img/cat-off.png">
-          <img class="browser-off" src="/img/browser-off.png"> -->
-          <img class="browser-on hidden-scroll" src="/img/browser-on.png">
-          <img dir="ltr" class="cat-on hidden-scroll" src="/img/cat.gif">
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-8">
-        <h1>{{ 'We teach the web' | i18n }}</h1>
-        <p>{{ 'front-page-description' | i18n }}</p>
-        <p>
-          <a class="btn btn-default btn-home" href="/signup">{{ 'Create an account' | i18n }}</a>
-          <button class="btn btn-success btn-home" ng-click="login()">{{ 'Sign in' | i18n }}</button>
-        </p>
+          <form action="#login" id="home-start-form">
+            <input type="email" class="home-email-field" placeholder="{{ 'Email address' | i18n }}"/>
+            <button class="btn btn-default">
+              {{ 'Start creating' | i18n }}
+            </button>
+          </form>
+        </section>
       </div>
     </div>
   </div>
-</section>
+  <section class="home-values">
+    <div class="container">
+      <h3>
+        {{ 'Our values' | i18n }}
+      </h3>
 
-<section id="home-features">
-  <div class="container text-center">
-    <div class="row">
-      <div class="feature col-sm-4">
-        <a href="/{{ lang }}/explore" push-state="true">
-          <div class="img-container map"></div>
-          <h2>{{ 'Explore Webmaker' | i18n }}</h2>
-        </a>
-        <p>{{ 'See all the things Webmaker has to offer in the brand new Explore section' | i18n }}</p>
-      </div>
-      <div class="feature col-sm-4">
-        <a href="https://training.webmakerprototypes.org">
-          <div class="img-container training"></div>
-          <h2>{{ 'Learn to Teach' | i18n }}</h2>
-        </a>
-        <p>{{ 'Study at your own pace to teach web literacy, digital skills and open practices.' | i18n }} <a href="https://training.webmakerprototypes.org">{{ 'Get training.' | i18n }}</a></p>
-      </div>
-      <div class="feature col-sm-4">
-        <a href="/{{ lang }}/getinvolved">
-          <div class="img-container get-together"></div>
-          <h2>{{ 'Get Together' | i18n }}</h2>
-        </a>
-        <p>{{ 'Join others at a local event of Maker Party or collaborate online' | i18n }}</p>
+      <p class="lead">
+        {{ 'Our goal is for everyone in the world' | i18n }}
+      </p>
+
+      <div class="row">
+        <div class="col-sm-7 col-md-5 col-lg-5 col-lg-offset-1">
+          <ul class="values-list">
+            <li class="value-free">
+              <h4>{{ 'Free' | i18n }}</h4>
+
+              <p>{{ 'Mozilla is a nonprofit organization' | i18n }}</p>
+            </li>
+            <li class="value-local">
+              <h4>{{ 'Local' | i18n }}</h4>
+
+              <p>{{ 'Wherever you live in the world' | i18n }}</p>
+            </li>
+            <li class="value-more-than-code">
+              <h4>{{ 'More than code' | i18n }}</h4>
+
+              <p>{{ 'Our tools, learning resources, and' | i18n}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-sm-offset-1 col-md-7 col-md-offset-0 col-lg-6">
+          <figure class="home-globe">
+            <img src="/img/home/yellow-earth.svg" alt="Globe" height="300" width="300"/>
+          </figure>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <section class="home-jump-in">
+    <div class="container">
+      <h3>{{ 'Jump right in' | i18n }}</h3>
 
+      <p class="lead">
+        {{ 'Discover how you can build and share the web.' | i18n}}
+      </p>
+      <ul class="row">
+        <li class="col-sm-4">
+          <figure>
+            <a href="https://webmaker.org/{{ lang }}/explore/">
+              <img src="/img/home/gallery-md-icon.svg" alt="" width="154" height="120"/>
+            </a>
+          </figure>
+          <h4>{{ 'Explore Webmaker' | i18n }}</h4>
+
+          <p>
+            {{ 'Investigate the tools, learning resources' | i18n }}
+            <a href="https://webmaker.org/{{ lang }}/explore/">
+              {{ 'Explore now' | i18n }}
+            </a>
+          </p>
+        </li>
+        <li class="col-sm-4">
+          <figure>
+            <a href="https://training.webmakerprototypes.org/{{ lang }}/">
+              <img src="/img/home/learntoteach-md-icon.svg" alt="" width="152" height="120"/>
+            </a>
+          </figure>
+          <h4>{{ 'Learn to Teach' | i18n }}</h4>
+
+          <p>
+            {{ 'Study at your own pace' | i18n }}
+            <a href="https://training.webmakerprototypes.org/{{ lang }}/">
+              {{ 'Get training' | i18n }}
+            </a>
+          </p>
+        </li>
+        <li class="col-sm-4">
+          <figure>
+            <a href="https://events.webmaker.org/">
+              <img src="/img/home/get-together-md-icon.svg" alt="" width="155" height="120"/>
+            </a>
+          </figure>
+          <h4>{{ 'Get Together' | i18n }}</h4>
+
+          <p>
+            {{ 'Build the web with others' | i18n }}
+            <a href="https://events.webmaker.org/{{ lang }}/">
+              {{ 'View events' | i18n }}
+            </a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="home-footer">
+    <p>
+      {{ 'Build and share the web with Mozilla.' | i18n }}
+      <button class="btn btn-default" wm-join-webmaker>
+        {{ 'Start Creating' | i18n }}
+      </button>
+    </p>
+  </footer>
+</div>
 <!-- Footer -->
 <div ng-include="'/views/partials/footer.html'"></div>

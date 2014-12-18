@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="196px" height="139px" viewBox="0 0 196 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
+    <title>tablet</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing-Page-Bright-Pattern-Iteration-3" sketch:type="MSArtboardGroup" transform="translate(-359.000000, -611.000000)">
+            <g id="iMac-+-Browser-3-+-Group-3-+-iPad-+-Group-2" sketch:type="MSLayerGroup" transform="translate(163.000000, 481.000000)">
+                <g id="tablet" transform="translate(196.000000, 131.000000)" sketch:type="MSShapeGroup">
+                    <g id="iPad" transform="translate(98.000000, 68.500000) rotate(-270.000000) translate(-98.000000, -68.500000) translate(29.641732, -28.701117)">
+                        <path d="M0,188.397827 C0,191.71397 2.68492726,194.402235 6.00662395,194.402235 L130.709911,194.402235 C134.027278,194.402235 136.716535,191.709679 136.716535,188.397827 L136.716535,6.00440764 C136.716535,2.68826487 134.031608,0 130.709911,0 L6.00662395,0 C2.68925714,0 0,2.69255524 0,6.00440764 L0,188.397827 Z" id="Rectangle-1-copy" stroke="#7992A4" fill="#545E66"></path>
+                        <rect id="Rectangle-4" fill="#F5F8FC" x="9.61824872" y="13.0980229" width="116.79302" height="164.069971"></rect>
+                        <ellipse id="Oval-2" stroke="#82919E" fill="#545E66" cx="68.0147588" cy="184.75106" rx="4.1221066" ry="4.13621776"></ellipse>
+                        <ellipse id="Oval-3" stroke="#7992A4" fill="#545E66" cx="68.0147588" cy="6.20432664" rx="2.0610533" ry="2.06810888"></ellipse>
+                    </g>
+                    <g id="Group" transform="translate(23.149606, 16.072626)">
+                        <rect id="Rectangle-671" fill="#00CEB8" x="0.763779528" y="0" width="151.228346" height="22.9608939"></rect>
+                        <rect id="Rectangle-672" fill="#E5E8EE" x="0.763779528" y="27.5530726" width="151.228346" height="22.9608939"></rect>
+                        <rect id="Rectangle-505" fill="#00CEB8" x="0.232761905" y="57.6444086" width="71.7952756" height="5.3575419" rx="2"></rect>
+                        <rect id="Rectangle-507" fill="#00CEB8" x="80.4296123" y="57.6444086" width="71.7952756" height="5.3575419" rx="2"></rect>
+                        <rect id="Rectangle-508" fill="#E5E8EE" x="80.4296123" y="70.6555818" width="71.7952756" height="5.3575419" rx="2"></rect>
+                        <rect id="Rectangle-509" fill="#E5E8EE" x="0.232761905" y="70.6555818" width="71.7952756" height="5.3575419" rx="2"></rect>
+                        <rect id="Rectangle-510" fill="#E5E8EE" x="0.232761905" y="83.666755" width="71.7952756" height="5.3575419" rx="2"></rect>
+                        <rect id="Rectangle-511" fill="#E5E8EE" x="81.1933918" y="83.666755" width="71.7952756" height="5.3575419" rx="2"></rect>
+                        <rect id="Rectangle-512" fill="#00CEB8" x="81.1933918" y="96.6779282" width="71.7952756" height="5.3575419" rx="2"></rect>
+                        <rect id="Rectangle-513" fill="#00CEB8" x="0.232761905" y="96.6779282" width="71.7952756" height="5.3575419" rx="2"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

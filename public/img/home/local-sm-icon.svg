@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>local-sm-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing-Page-Bright-Pattern-Iteration-3" sketch:type="MSArtboardGroup" transform="translate(-193.000000, -1156.000000)" fill="#545E66">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(193.000000, 1002.000000)">
+                <g id="Aenean-lacinia-biben-+-Open-Source-+-Imported-Layers" transform="translate(0.000000, 147.000000)" sketch:type="MSShapeGroup">
+                    <g id="local-sm-icon" transform="translate(0.000000, 7.000000)">
+                        <path d="M28,0 L4,0 C1.792,0 0,1.794 0,4 L0,28 C0,30.206 1.792,32 4,32 L28,32 C30.208,32 32,30.206 32,28 L32,4 C32,1.794 30.208,0 28,0 L28,0 Z M30,28 C30,29.1 29.102,30 28,30 L4,30 C2.902,30 2,29.1 2,28 L2,10 L30,10 L30,28 L30,28 Z M30,8 L2,8 L2,4 C2,2.9 2.902,2 4,2 L28,2 C29.102,2 30,2.9 30,4 L30,8 L30,8 Z" id="Fill-1"></path>
+                        <path d="M6.5,3.5 C5.672,3.5 5,4.172 5,5 C5,5.828 5.672,6.5 6.5,6.5 C7.328,6.5 8,5.828 8,5 C8,4.172 7.328,3.5 6.5,3.5" id="Fill-2"></path>
+                        <path d="M10.5,3.5 C9.672,3.5 9,4.172 9,5 C9,5.828 9.672,6.5 10.5,6.5 C11.328,6.5 12,5.828 12,5 C12,4.172 11.328,3.5 10.5,3.5" id="Fill-3"></path>
+                        <path d="M14.5,3.5 C13.672,3.5 13,4.172 13,5 C13,5.828 13.672,6.5 14.5,6.5 C15.328,6.5 16,5.828 16,5 C16,4.172 15.328,3.5 14.5,3.5" id="Fill-4"></path>
+                        <path d="M7,18 L9,18 C9.55,18 10,17.55 10,17 L10,15 C10,14.45 9.55,14 9,14 L7,14 C6.45,14 6,14.45 6,15 L6,17 C6,17.55 6.45,18 7,18" id="Fill-5"></path>
+                        <path d="M15,18 L17,18 C17.55,18 18,17.55 18,17 L18,15 C18,14.45 17.55,14 17,14 L15,14 C14.45,14 14,14.45 14,15 L14,17 C14,17.55 14.45,18 15,18" id="Fill-6"></path>
+                        <path d="M23,18 L25,18 C25.55,18 26,17.55 26,17 L26,15 C26,14.45 25.55,14 25,14 L23,14 C22.45,14 22,14.45 22,15 L22,17 C22,17.55 22.45,18 23,18" id="Fill-7"></path>
+                        <path d="M7,26 L9,26 C9.55,26 10,25.55 10,25 L10,23 C10,22.45 9.55,22 9,22 L7,22 C6.45,22 6,22.45 6,23 L6,25 C6,25.55 6.45,26 7,26" id="Fill-8"></path>
+                        <path d="M15,26 L17,26 C17.55,26 18,25.55 18,25 L18,23 C18,22.45 17.55,22 17,22 L15,22 C14.45,22 14,22.45 14,23 L14,25 C14,25.55 14.45,26 15,26" id="Fill-9"></path>
+                        <path d="M23,26 L25,26 C25.55,26 26,25.55 26,25 L26,23 C26,22.45 25.55,22 25,22 L23,22 C22.45,22 22,22.45 22,23 L22,25 C22,25.55 22.45,26 23,26" id="Fill-10"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

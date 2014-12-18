@@ -1,321 +1,271 @@
-#page-home .main {
+@new-grey: #4F5F66;
 
-  .padded() {
-    padding: 2.5rem 0;
-    @media (min-width: @screen-sm-min) {
-      padding: 5rem 0;
+#page-home {
+  color: @new-grey;
+  font-size: 1.6rem;
+  h2 {
+    font-size: 4.4rem;
+    font-weight: 500;
+    text-shadow: 0 0 0.1rem fade(@black, 50);
+    letter-spacing: -0.04rem;
+    @media screen and (min-width: @screen-md-min) {
+      font-size: 5.2rem;
     }
   }
-
-  // Base font settings
-  font-size: 1.8rem;
-  line-height: 1.6;
-
-  section {
-    .padded;
+  h3 {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
   }
-
-  .btn-home {
-    padding: 15px 24px;
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
   }
+  footer {
+    text-align: center;
+  }
+}
 
+.home-blue, .home-values, .home-jump-in, .home-footer {
+  padding: 5rem 0;
+  .lead {
+    text-align: center;
+    font-size: 1.8rem;
+    @media screen and (min-width: @screen-sm-min) {
 
-  // Carousel ---------------------
-  #home-carousel {
-    padding: 0;
-    .slide {
-      .padded;
-      height: 380px;
-      @media (min-width: @screen-md-min) {
-        height: 460px;
-      }
-      @media (min-width: @screen-lg-min) {
-        height: 536px;
-      }
+      font-size: 2rem;
     }
-    .slide .slide-inner {
-      height: 100%;
-      .flex-display(flex);
-      .align-items(center);
+  }
+  .btn {
+    width: 100%;
+    position: relative;
+    margin: 1.6rem 0 0 0;
+    padding: 1.3rem 1.5rem 1.1rem 1.5rem;
+    background: @yellow;
+    color: #4B5B62;
+    border: transparent;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.4rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    vertical-align: baseline;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    line-height: 1.42857;
+    @media screen and (min-width: @screen-xs-min) {
+      width: auto;
+      margin: 0 0 0 1rem;
     }
-    #slide-0 {
-      // HOUR OF CODE
-      @media @standard-def {
-        background-image: url(/img/home/banner-HoC.jpg);
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-HoC@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      h1 {
-        max-width: 112rem;
-      }
-      .lead {
-        max-width: 44rem;
-      }
-      .btn {
-        margin: 0;
-        padding: 1.4rem 6rem;
-        font-size: 1.6rem;
-        @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
-          margin: 0;
-          padding: 1.7rem 10rem;
-        }
-        @media (min-width: @screen-md-min){
-          margin: 1rem 0 0 0;
-          padding: 1.7rem 11rem;
-          font-size: 2rem;
-        }
-      }
+    &:hover {
+      top: 0.2rem;
+      box-shadow: 0 0.2rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255,255,255,0.5);
     }
-    #slide-1 {
-      // SKILLS SHARER
-      @media @standard-def {
-        background-image: url(/img/home/banner-skills-sharer.jpg);
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-skills-sharer@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      .lead {
-        max-width: 50rem;
-      }
-      .btn {
-        margin: 1rem 0 0 0;
-        padding: 1.4rem 3rem;
-        font-size: 1.6rem;
-        @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
-          margin: 1rem 0 0 0;
-        }
-        @media (min-width: @screen-md-min){
-          margin: 1.5rem 0 0 0;
-          padding: 1.7rem 6rem;
-          font-size: 2rem;
-        }
-      }
-    }
-    #slide-2 {
-      // TANDOG QUOTE
-      @media @standard-def {
-        background-image: url(/img/home/banner-tandog.jpg);
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-tandog@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-    #slide-3 {
-      // STORYMAKERS QUOTE
-      @media @standard-def {
-        background-image: url(/img/home/banner-brooklyn.jpg)
-      }
-      @media @retina {
-        background-image: url(/img/home/banner-brooklyn@2x.jpg);
-      }
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-    color: @white;
-    font-weight: 200;
-    a {
-      color: @white;
-      text-decoration: underline;
-      &.btn {
-        text-decoration: none;
-      }
-    }
-    .skill-sharer-badge {
-      width: 20%;
-      margin: -3rem 0 2rem 0;
-      @media (min-width: @screen-sm-min) and (max-width: @screen-md-min){
-        width: 11%;
-        margin: -5rem 0px 2rem;
-      }
-      @media (min-width: @screen-md-min) {
-        width: 11%;
-        margin: -5rem 0 3rem 0;
-      }
-      .animated;
-      .slideInDown;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
-    .desktop-logo {
-      width: 20%;
-      margin: -3rem 0px 1rem;
-      @media (min-width: @screen-sm-min) and (max-width: @screen-md-min){
-        width: 14%;
-        margin: -4rem 0px 1.5rem;
-      }
-      @media (min-width: @screen-md-min) {
-        width: 9%;
-        margin: -4rem 0px 1.5rem;
-      }
-      .animated;
-      .slideInDown;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
-    .maker-party-logo {
-      width: 25%;
-      @media (min-width: @screen-sm-min) {
-        width: 15%;
-      }
-      .animated;
-      .slideInDown;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
-    .maker-party-arrow {
-      height: 0.6em;
-    }
-    h1,
-    h3 {
-      .animated;
-      .bounceIn;
-      text-transform: uppercase;
-    }
-    h1 {
 
-      font-family: 'Lato', 'Open Sans', serif;
-      font-size: 3rem;
-      @media (min-width: @screen-md-min) {
-        font-size: 5rem;
-      }
-      @media (min-width: @screen-lg-min) {
-        line-height: 1;
-        font-size: 7.2rem;
-      }
-      font-weight: 900;
+    &:active {
+      top: 0.4rem;
+      box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.home-blue {
+  padding: 6rem 0;
+  @media screen and (min-width: @screen-md-min) {
+    padding: 10rem 0;
+  }
+  @media screen and (min-width: @screen-lg-min) {
+    padding: 12rem 0;
+  }
+  color: @white;
+  @media @standard-def {
+    background-image: url('/img/home/background.png');
+  }
+  @media @retina {
+    background-image: url('/img/home/background@2x.png');
+  }
+  background-size: cover;
+  text-align: center;
+  @media screen and (min-width: @screen-sm-min) {
+    text-align: left;
+  }
+  .lead {
+    max-width: 100%;
+    @media screen and (min-width: @screen-sm-min) {
+      text-align: left;
+      max-width: 38rem;
+    }
+  }
+  form {
+    margin: 0 auto;
+    @media screen and (min-width: @screen-sm-min) {
       margin: 0;
     }
-    h3 {
-      margin: 2rem 0;
-      font-size: 2rem;
-      @media (min-width: @screen-md-min) {
-        font-size: 3rem;
-      }
-    }
-    p {
-      .animated;
-      .bounceIn;
-      @media (min-width: @screen-lg-min) {
-        max-width: 55rem;
-      }
-      margin: 1rem auto;
+  }
+  input[type="email"] {
+    width: 100%;
+    border: transparent solid 0;
+    border-radius: 0.3rem;
+    color: @grey;
+    padding: 1.1rem 1.5rem 1.3rem 1.5rem;
+    @media screen and (min-width: @screen-xs-min) {
+      width: auto;
     }
   }
-
-  // We Teach the Web ---------------------
-  #home-teach-the-web {
-    text-align: center;
-    @media (min-width: @screen-sm-min) {
-      text-align: left;
-    }
-    background: @green;
-    color: @white;
-    font-weight: 200;
-    .btn-home {
-      margin-right: 5px;
-      &.btn-default {
-        border: none;
-        opacity: 0.95;
-        &:hover {
-          background-color: @white;
-          opacity: 1;
-        }
-      }
-      &.btn-success {
-        background-color: @darkgreen;
-        border: none;
-        &:hover {
-          background-color: darken(@darkgreen, 5%);
-        }
-      }
-    }
-    h1 {
-      @media (min-width: @screen-sm-min) {
-        font-size: 6rem;
-      }
-      font-weight: 200;
-      line-height: 1;
-    }
-    p {
-      margin: 1rem 0 1.5rem 0;
-    }
-    // cats and stuff
-    .illustration {
-      width: 60%;
-      @media (min-width: @screen-sm-min) {
-        width: 100%;
-      }
-      position: relative;
-      max-width: 360px;
-      margin: 0 auto;
-      .browser-on {
-        width: 100%;
-      }
-      .cat-on {
-        position: absolute;
-        top: 20%;
-        left: 18%;
-        width: 25%;
-      }
-    }
-  }
-
-  // Explore, Resources, Get Together ---------------------
-  #home-features {
-    background: @lightgrey;
-    h2 {
+  section {
+    margin-top: 1rem;
+    @media screen and (min-width: @screen-sm-min) {
       margin-top: 0;
+      padding-left: 5rem;
     }
-    padding-bottom: 0;
-    @media (min-width: @screen-sm-min) {
-      padding-bottom: 5rem;
+    @media screen and (min-width: @screen-md-min) {
+      margin-left: 5rem;
+      padding-left: 1.5rem;
     }
-    .feature {
-      margin-bottom: 2.5rem;
-      @media (min-width: @screen-sm-min) {
-        margin-bottom: 0;
-      }
+    @media screen and (min-width: @screen-lg-min) {
+      margin-left: 2.5rem;
+      padding-left: 1.5rem;
     }
-    .img-container {
-      margin-bottom: 1rem;
+  }
+}
+
+.devices {
+  margin: 2rem auto 3rem;
+  max-width: 40rem;
+  position: relative;
+
+  @media screen and (min-width: @screen-md-min) {
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    position: absolute;
+  }
+
+  .desktop {
+    position: static;
+    @media screen and (min-width: @screen-sm-min) {
       position: relative;
-      width: 60%;
-      max-width: 266px;
-      height: 0;
-      padding-bottom: 40%;
-      display: inline-block;
-      background: center no-repeat;
-      background-size: contain;
-      &.resources {
-        background-image: url(/img/home/resources.png);
-      }
-      &.training {
-        width: 100%;
-        background-position-y: 70%;
-        background-image: url(/img/webmaker-training-wordmark.svg);
-      }
-      &.map {
-        background-image: url(/img/home/map.png);
-      }
-      &.get-together {
-        @media @standard-def {
-          background-image: url(/img/home/get-together.jpg);
-        }
-        @media @retina {
-          background-image: url(/img/home/get-together@2x.jpg);
-        }
-      }
+      top: 2.5rem;
     }
+  }
+
+  .tablet {
+    bottom: -2rem;
+    max-width: 56%;
+    right: -0.2rem;
+    @media screen and (min-width: @screen-sm-min) {
+      bottom: -3.6rem;
+      right: -1rem;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      bottom: -4rem;
+      right: -3.3rem;
+    }
+  }
+
+  .mobile {
+    bottom: -0.6rem;
+    left: 2.3rem;
+    max-width: 19%;
+    @media screen and (min-width: @screen-sm-min) {
+      left: 1.4rem;
+      bottom: -2.9rem;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      bottom: -2.8rem;
+      left: 2.5rem;
+    }
+  }
+}
+
+.home-values {
+  background: @white;
+  .row {
+    margin-top: 0rem;
+    @media screen and (min-width: @screen-md-min) {
+      margin-top: 6rem;
+    }
+  }
+}
+
+.values-list {
+  list-style: none;
+  padding-left: 5rem;
+  li {
+    margin-bottom: 2rem;
+    position: relative;
+    @media screen and (min-width: @screen-sm-min) {
+      margin-bottom: 5rem;
+    }
+    &::before {
+      left: -4.5rem;
+      position: absolute;
+      top: 0.4rem;
+    }
+  }
+}
+
+.value-free {
+  &::before {
+    content: url('/img/home/free-sm-icon.svg');
+  }
+}
+
+.value-local {
+  &::before {
+    content: url('/img/home/local-sm-icon.svg');
+  }
+}
+
+.value-more-than-code {
+  &::before {
+    content: url('/img/home/morethancode-sm-icon.svg');
+  }
+}
+
+.home-globe {
+  img {
+    display: block;
+    margin: 5rem auto;
+    @media screen and (min-width: @screen-sm-min) {
+      margin: 0 auto;
+      transform: translateY(55%);
+    }
+    @media screen and (min-width: @screen-md-min) {
+      // display: block;
+      margin: 0 auto;
+      transform: translateY(20%);
+    }
+  }
+}
+
+.home-jump-in {
+  background: darken(@white, 6.25%);
+  text-align: center;
+  .row {
+    margin-top: 5rem;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 5rem;
+    @media screen  and (min-width: @screen-sm-min) {
+      margin-bottom: 0;
+    }
+  }
+  figure {
+    margin-bottom: 3rem;
+  }
+}
+
+.home-footer {
+  padding: 5rem 1rem;
+  @media screen and (min-width: @screen-sm-min) {
+    padding: 5rem 0;
+  }
+  p {
+    font-size: 2rem;
   }
 }

@@ -8,8 +8,7 @@
     {% if options.length %}
     <div class="g-2 filter hide">
       <form action="/search" id="gallery-search">
-        <span class="icon-th"></span>
-        <input type="search" placeholder="Search the gallery" name="q"/>
+        <input type="search" placeholder="{{gettext('Search gallery')}}" name="q" results="5"/>
         <input type="hidden" name="type" value="all"/>
         <button type="submit" aria-label="Search">
           <span class="icon-search"></span>

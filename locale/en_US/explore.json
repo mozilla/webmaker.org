@@ -53,7 +53,7 @@
   },
   "Tools description": {
     "message": "<a href=\"/{{ lang }}/tools\">Webmaker tools</a> make it easy to create things on the web. Make your own web pages, interactive videos, remixes, mobile apps and more&mdash;learning web mechanics, code and other valuable skills as you go.",
-    "description":"a description of the webmaker tools"
+    "description": "a description of the webmaker tools"
   },
   "Event subsection header": {
     "message": "Make. Learn. Get together.",
@@ -483,7 +483,6 @@
     "message": "Welcome to Webmaker&mdash;a <a href='https://www.mozilla.org/mission/'>Mozilla</a> project dedicated to helping you create something amazing on the web.",
     "description": "/about first section first sentence"
   },
-
   "Our tools, events and teaching guides": {
     "message": "Our <a href=\"/{{ lang }}/tools\">tools</a>, <a href=\"/{{ lang }}/events\">events</a> and <a href=\"/{{ lang }}/teach\">teaching guides</a> allow webmakers to not only create the content that makes the web great, but &mdash; perhaps more importantly &mdash; understand how the web works.",
     "description": "/about first section second sentence"
@@ -639,5 +638,9 @@
   "Start Creating": {
     "message": "Start Creating",
     "description": "button text on footer on home"
+  },
+  "Search gallery": {
+    "message": "Search gallery",
+    "description": "Text for search field on gallery page"
   }
 }

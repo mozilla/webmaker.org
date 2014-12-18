@@ -259,6 +259,7 @@ app.locals({
   ga_domain: env.get("GA_DOMAIN"),
   languages: i18n.getSupportLanguages(),
   EVENTS_URL: env.get("EVENTS_URL"),
+  TEACH_URL: env.get("TEACH_URL"),
   flags: flags,
   personaHostname: env.get("PERSONA_HOSTNAME", "https://login.persona.org"),
   bower_path: "../bower_components"
@@ -350,7 +351,6 @@ app.get('/signup/:auth?', routes.angular);
 
 // Angular
 app.get('/', routes.angular);
-app.get('/explore', routes.angular);
 app.get('/resources/:section?/:competency?', routes.angular);
 app.get("/tools", routes.angular);
 app.get("/remix-your-school", routes.angular);
@@ -364,7 +364,7 @@ app.get("/about", routes.angular);
 app.get("/make-your-own", routes.angular);
 app.get('/madewithcode-*', routes.angular);
 
-app.get("/gallery", routes.gallery({
+app.get('/explore', routes.gallery({
   layout: "index",
   prefix: "p"
 }));
@@ -459,6 +459,7 @@ app.get("/strings/:lang?", i18n.stringsRoute("en-US"));
 var accountSettingsUrl = env.get('LOGIN') + '/account';
 var makeApiUrl = env.get('MAKE_ENDPOINT');
 var eventsUrl = env.get('EVENTS_URL');
+var teachUrl = env.get('TEACH_URL');
 
 app.get('/angular-config.js', function (req, res) {
   // Angular config
@@ -466,6 +467,7 @@ app.get('/angular-config.js', function (req, res) {
     accountSettingsUrl: accountSettingsUrl,
     makeApiUrl: makeApiUrl,
     eventsUrl: eventsUrl,
+    teachUrl: teachUrl,
     lang: req.localeInfo.lang,
     localeInfo: req.localeInfo,
     direction: req.localeInfo.direction,

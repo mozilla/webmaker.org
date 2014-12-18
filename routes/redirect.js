@@ -50,12 +50,6 @@ module.exports = function (app) {
       "/connect"
     ]
   }, {
-    route: "/make-your-own",
-    paths: [
-      "/teach",
-      "/teach-templates"
-    ]
-  }, {
     route: app.locals.EVENTS_URL + '/#!/event-guides',
     paths: [
       "/guides",
@@ -80,6 +74,26 @@ module.exports = function (app) {
     route: "/mentor",
     paths: [
       "/community"
+    ]
+  }, {
+    route: "/explore",
+    paths: [
+      "/gallery"
+    ]
+  }, {
+    route: app.locals.TEACH_URL,
+    paths: [
+      "/_teach"
+    ]
+  }, {
+    route: "https://blog.webmaker.org/badges",
+    paths: [
+      "/_badges"
+    ]
+  }, {
+    route: "http://hivelearningnetworks.org/",
+    paths: [
+      "/_hive"
     ]
   }, {
     route: "http://party.webmaker.org",

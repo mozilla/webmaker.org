@@ -8,6 +8,7 @@ angular
       // User urls
       $scope.accountSettingsUrl = config.accountSettingsUrl;
       $scope.eventsUrl = config.eventsUrl;
+      $scope.teachUrl = config.teachUrl;
 
       // Start with collapsed state for navigation
       $scope.primaryCollapse = true;
@@ -55,8 +56,6 @@ angular
   ])
   .controller('exploreController', ['$scope', 'CONFIG', 'wmNav',
     function ($scope, CONFIG, wmNav) {
-      wmNav.page('explore');
-      wmNav.section('explore');
 
       $scope.contributeBoxes = [
         {
@@ -109,6 +108,11 @@ angular
       } else if ($routeParams.auth === 'new-account') {
         $rootScope.wmCreateUser();
       }
+
+      $('#home-start-form').on('submit', function () {
+        $rootScope.joinWebmaker($('.home-email-field').val());
+      });
+
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$routeParams',
@@ -182,7 +186,7 @@ angular
   .controller('resourcesHomeController', ['$scope', 'weblit', 'wmNav',
     function ($scope, weblit, wmNav) {
       wmNav.page('resources');
-      wmNav.section('resources');
+      wmNav.section('teach');
 
       $scope.literacies = weblit.all();
     }
@@ -481,7 +485,7 @@ angular
   ])
   .controller('getinvolvedController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
-      wmNav.section('info');
+      wmNav.section('teach');
       wmNav.page('getinvolved');
     }
   ])
@@ -493,7 +497,7 @@ angular
   ])
   .controller('mentorController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
-      wmNav.section('resources');
+      wmNav.section('teach');
       wmNav.page('mentor');
     }
   ])

@@ -22,110 +22,13 @@ angular
               url: 'explore',
               title: 'Explore',
               icon: 'random',
-              pushState: true,
-              pages: [
-                {
-                  id: 'index',
-                  title: 'Gallery',
-                  url: 'gallery'
-                },
-                {
-                  id: 'skill-sharer',
-                  title: 'Skill Sharer Badge',
-                  url: 'badges/skill-sharer'
-                },
-                {
-                  id: 'super-mentor',
-                  title: 'Super Mentor Badge',
-                  url: 'badges/webmaker-super-mentor'
-                },
-                {
-                  id: 'super-mentor',
-                  title: 'Hive Community Badge',
-                  url: 'badges/hive-community-member'
-                },
-                {
-                  id: 'webmaker-mentor',
-                  title: 'Webmaker Mentor Badge',
-                  url: 'badges/webmaker-mentor'
-                },
-                {
-                  id: 'badges-admin',
-                  title: 'Badges Admin',
-                  url: 'admin/badges',
-                  pushState: true,
-                  isAtleastMentor: true
-                },
-                {
-                  id: 'search',
-                  title: 'Search',
-                  url: 'search'
-                }
-              ]
             },
             {
               id: 'tools',
               url: 'tools',
               title: 'Tools',
               icon: 'hand-o-up',
-              pushState: true,
-              pages: [
-                {
-                  id: 'xray',
-                  icon: 'xray-icon',
-                  title: 'X-Ray Goggles',
-                  url: 'https://goggles.webmaker.org/' + config.lang,
-                  external: 'true'
-                },
-                {
-                  id: 'thimble',
-                  icon: 'thimble-icon',
-                  title: 'Thimble',
-                  url: 'https://thimble.webmaker.org/' + config.lang,
-                  external: 'true'
-                },
-                {
-                  id: 'popcorn',
-                  icon: 'popcorn-icon',
-                  title: 'Popcorn Maker',
-                  url: 'https://popcorn.webmaker.org/' + config.lang,
-                  external: 'true'
-                },
-                {
-                  id: 'appmaker',
-                  icon: 'appmaker-icon',
-                  title: 'Appmaker',
-                  url: 'https://apps.webmaker.org/designer',
-                  external: 'true'
-                }
-              ]
-            },
-            {
-              id: 'resources',
-              title: 'Resources',
-              icon: 'book',
-              pushState: true,
-              url: 'resources',
-              pages: [
-                {
-                  id: 'literacy',
-                  title: 'Web Literacy Map',
-                  url: 'literacy',
-                  pushState: true
-                },
-                {
-                  id: 'make-your-own',
-                  title: 'Make Your Own',
-                  url: 'make-your-own',
-                  pushState: true
-                },
-                {
-                  id: 'mentor',
-                  title: 'Mentor',
-                  url: 'mentor',
-                  pushState: true
-                }
-              ]
+              pushState: true
             },
             {
               id: 'events',
@@ -134,41 +37,28 @@ angular
               icon: 'map-marker'
             },
             {
-              id: 'info',
-              url: 'about',
-              title: 'Info',
-              icon: 'info',
+              id: 'teach',
+              title: 'Teach',
+              url: 'mentor',
+              icon: 'book',
               pushState: true,
               pages: [
                 {
-                  id: 'blog',
-                  title: 'Blog',
-                  url: 'https://blog.webmaker.org/',
-                  external: true
-                },
-                {
-                  id: 'about',
-                  title: 'About',
-                  url: 'about',
+                  id: 'resources',
+                  title: 'Resources',
+                  url: 'resources',
                   pushState: true
                 },
                 {
-                  id: 'getinvolved',
-                  title: 'Get Involved',
-                  url: 'getinvolved',
-                  pushState: true
+                  id: 'badges',
+                  title: 'Badges',
+                  url: '_badges'
                 },
                 {
-                  id: 'feedback',
-                  title: 'Feedback',
-                  url: 'feedback',
-                  pushState: true
-                },
-                {
-                  id: 'help',
-                  title: 'Help',
-                  url: 'https://support.mozilla.org/' + config.lang + '/products/webmaker',
-                  external: true
+                  id: 'hive',
+                  title: 'Hive',
+                  url: '_hive',
+                  doNotTranslate: true
                 }
               ]
             }

@@ -1,64 +1,29 @@
-<footer>
-  <div class="container text-center">
-    <p class="lead hidden-xs" ng-bind-html="'Mozillians like you' | i18n"></p>
-    <ul class="sponsors list-inline hidden-xs" marquee>
-      <li>Chicago Community Trust</li>
-      <li>Chicago Instructional Technology Foundation</li>
-      <li>City of Chicago</li>
-      <li>Corporation for Public Broadcasting</li>
-      <li>U.S. Department of Energy</li>
-      <li>Ford Foundation</li>
-      <li>Google</li>
-      <li>Intel</li>
-      <li>Knight Foundation</li>
-      <li>MacArthur Foundation</li>
-      <li>National Endowment for the Arts</li>
-      <li>NESTA</li>
-      <li>The Nominet Trust</li>
-      <li>National Science Foundation</li>
-      <li>Ontario Trillium Foundation</li>
-      <li>Social Science Research Council</li>
-      <li>Alfred P. Sloan Foundation</li>
-      <li>Telefonica</li>
-      <li>ZeroDivide</li>
-    </ul>
-    <div class="row">
-      <div class="col-md-4 col-md-offset-4 text-left">
-        <form name="emailForm" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
-          <div class="input-group">
-            <span class="input-group-addon"><span class="fa fa-envelope"></span></span>
-            <input class="form-control" type="email" ng-model="emailUpdates" name="email" autocomplete="off"  required placeholder="{{ 'Sign up for email updates' | i18n }}" >
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit" ng-disabled="emailForm.$invalid || !emailPrivacy">
-                <span class="fa fa-chevron-right"></span>
-              </button>
-            </span>
-          </div><!-- /input-group -->
-          <div class="checkbox" ng-show="emailUpdates" >
-            <label for="newsletter-signup-checkbox-proxy">
-              <input id="newsletter-signup-checkbox-proxy" type="checkbox" ng-model="emailPrivacy" name="custom-1216" required> {{ "privacy-desc" | i18n }} <a href="/{{ lang }}/privacy" target="_blank">{{ "privacy policy" | i18n }}</a>.
-            </label>
-          </div>
-        </form>
-      </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
-  </div>
-</footer>
-<nav class="navbar navbar-no-header-xs navbar-tertiary">
+<nav class="navbar-footer">
   <div class="container">
-    <div class="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="mailto:help@webmaker.org">{{ 'Contact' | i18n }}</a></li>
-        <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ 'Donate' | i18n }}</a></li>
-        <li><a href="/{{lang}}/privacy">{{ 'Privacy' | i18n }}</a></li>
-        <li><a href="/{{lang}}/terms">{{ 'Legal' | i18n }}</a></li>
-        <li><a href="https://support.mozilla.org/products/webmaker">{{ 'Help' | i18n }}</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://twitter.com/webmaker"><span class="fa fa-twitter"></span> @webmaker</a></li>
-        <li><a href="https://plus.google.com/u/2/communities/106022863174952221205"><span class="fa fa-google-plus"></span> {{ 'google+' | i18n }}</a></li>
-        <li><a href="http://blog.webmaker.org"><span class="fa fa-file-text-o"></span> {{ 'Blog' | i18n }}</a></li>
-      </ul>
-    </div>
+    <ul>
+      <li><a href="/{{lang}}/about">{{ 'About' | i18n }}</a></li>
+      <li><a href="/{{lang}}/mentor">{{ 'Teach' | i18n }}</a></li>
+      <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">
+        {{ 'Donate' | i18n }}
+      </a>
+    </li>
+    <li><a href="mailto:help@webmaker.org">{{ 'Contact' | i18n }}</a></li>
+    <li><a href="/{{lang}}/privacy">{{ 'Privacy' | i18n }}</a></li>
+    <li><a href="/{{lang}}/terms">{{ 'Legal' | i18n }}</a></li>
+    <li>
+      <a href="https://support.mozilla.org/products/webmaker">
+        {{ 'Help' | i18n }}
+      </a>
+    </li>
+  </ul>
+  <ul class="secondary">
+    <li><span class="fa fa-twitter"></span><a href="https://twitter.com/webmaker">@webmaker</a></li>
+    <li><span class="fa fa-file-text-o"></span><a href="https://blog.webmaker.org">{{ 'Blog' | i18n }}</a></li>
+  </ul>
+  <div class="moz-logo">
+    <a href="https://mozilla.org/">
+      <img src="/img/logo-mozilla-white.png" alt="mozilla logo" height="26" width="100"/>
+    </a>
   </div>
+</div>
 </nav>

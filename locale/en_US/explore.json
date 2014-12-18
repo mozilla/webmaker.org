@@ -1,6 +1,6 @@
 {
   "explore_frontpage_title": {
-    "message": "Explore the world of Webmaker",
+    "message": "Welcome to Webmaker!",
     "description": "Heading for Explore page"
   },
   "Discover creative ways to teach and learn digital superpowers": {
@@ -53,7 +53,7 @@
   },
   "Tools description": {
     "message": "<a href=\"/{{ lang }}/tools\">Webmaker tools</a> make it easy to create things on the web. Make your own web pages, interactive videos, remixes, mobile apps and more&mdash;learning web mechanics, code and other valuable skills as you go.",
-    "description":"a description of the webmaker tools"
+    "description": "a description of the webmaker tools"
   },
   "Event subsection header": {
     "message": "Make. Learn. Get together.",
@@ -483,7 +483,6 @@
     "message": "Welcome to Webmaker&mdash;a <a href='https://www.mozilla.org/mission/'>Mozilla</a> project dedicated to helping you create something amazing on the web.",
     "description": "/about first section first sentence"
   },
-
   "Our tools, events and teaching guides": {
     "message": "Our <a href=\"/{{ lang }}/tools\">tools</a>, <a href=\"/{{ lang }}/events\">events</a> and <a href=\"/{{ lang }}/teach\">teaching guides</a> allow webmakers to not only create the content that makes the web great, but &mdash; perhaps more importantly &mdash; understand how the web works.",
     "description": "/about first section second sentence"
@@ -539,5 +538,109 @@
   "We recognize that innovation can come from anyone": {
     "message": "We recognize that innovation can come from anyone, anywhere, so we bring together people with diverse skills and backgrounds &mdash; teachers, filmmakers, <a href=\"http://opennews.org/\">journalists</a>, hackers, <a href=\"http://explorecreateshare.org\">youth</a>, artists, <a href=\"http://kaythaney.com/\">scientists</a> policy-makers and more  &mdash;  to collaborate online and at events around the globe.",
     "description": "/about Community section copy"
+  },
+  "Make your own apps and websites": {
+    "message": "Make your own apps and websites",
+    "description": "headline on homepage"
+  },
+  "Mozilla’s free tools": {
+    "message": "Mozilla’s free tools help you build the web while learning new skills.",
+    "description": "subhead on home"
+  },
+  "Email address": {
+    "message": "Email address",
+    "description": "placeholder on home input field"
+  },
+  "Start creating": {
+    "message": "Start creating",
+    "description": "button text on home"
+  },
+  "Our values": {
+    "message": "Our values",
+    "description": "Headline on second section of home"
+  },
+  "Our goal is for everyone in the world": {
+    "message": "Our goal is for everyone in the world to be an informed creator of the free and open web.",
+    "description": ""
+  },
+  "Free": {
+    "message": "Free",
+    "description": "first value on home page"
+  },
+  "Mozilla is a nonprofit organization": {
+    "message": "Mozilla is a non-profit organization. Our open-source tools are created by a global community. They will always be free—now and forever!",
+    "description": "Value description for free on home page"
+  },
+  "Local": {
+    "message": "Local",
+    "description": "second value on home page"
+  },
+  "Wherever you live in the world": {
+    "message": "Wherever you live in the world, Mozilla is dedicated to helping you build a web that is relevant to your friends, family, business, and community.",
+    "description": "Value description for local on home page"
+  },
+  "More than code": {
+    "message": "More than code",
+    "description": "third value on home page"
+  },
+  "Our tools, learning resources, and": {
+    "message": "Our tools, learning resources, and community netowrks empower everyone to become citizens of the web.",
+    "description": ""
+  },
+  "Jump right in": {
+    "message": "Jump right in",
+    "description": "headline for third section on home page"
+  },
+  "Discover how you can build and share the web.": {
+    "message": "Discover how you can build and share the web",
+    "description": "sub-head on third section of home page"
+  },
+  "Explore Webmaker": {
+    "message": "Explore Webmaker",
+    "description": "headline on first topic of 'jump right in' on home page"
+  },
+  "Investigate the tools, learning resources": {
+    "message": "Investigate the tools, learning resources and community that Webmaker offers.",
+    "description": "copy for first topic of 'jump right in' on home page"
+  },
+  "Explore now": {
+    "message": "Explore now",
+    "description": "link copy on home 'jump right in' section"
+  },
+  "Learn to Teach": {
+    "message": "Learn to Teach",
+    "description": "headline on second topic of 'jump right in' on home page"
+  },
+  "Study at your own pace": {
+    "message": "Study at your own pace to teach web literacy, digital skills, and open practices.",
+    "description": "copy for second topic of 'jump right in' on home page"
+  },
+  "Get training": {
+    "message": "Get training",
+    "description": "link copy on home 'jump right in' section"
+  },
+  "Get Together": {
+    "message": "Get Together",
+    "description": "headline on third topic of 'jump right in' on home page"
+  },
+  "Build the web with others": {
+    "message": "Build the web with others at a local event, or find the resources to host your own.",
+    "description": "copy for third topic of 'jump right in' on home page"
+  },
+  "View events": {
+    "message": "View events",
+    "description": "link copy on home 'jump right in' section"
+  },
+  "Build and share the web with Mozilla.": {
+    "message": "Build and share the web with Mozilla.",
+    "description": "footer text on home"
+  },
+  "Start Creating": {
+    "message": "Start Creating",
+    "description": "button text on footer on home"
+  },
+  "Search gallery": {
+    "message": "Search gallery",
+    "description": "Text for search field on gallery page"
   }
 }

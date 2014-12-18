@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="363px" height="257px" viewBox="0 0 363 257" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
+    <title>desktop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing-Page-Bright-Pattern-Iteration-3" sketch:type="MSArtboardGroup" transform="translate(-161.000000, -479.000000)">
+            <g id="iMac-+-Browser-3-+-Group-3-+-iPad-+-Group-2" sketch:type="MSLayerGroup" transform="translate(163.000000, 481.000000)">
+                <g id="desktop" sketch:type="MSShapeGroup">
+                    <g id="stand-2" transform="translate(129.000000, 223.000000)">
+                        <g id="Group" transform="translate(0.430789, 0.000000)" fill="#E8EBF0">
+                            <path d="M51.2330943,0 L51.2330943,28.8950365 L0.0113324173,28.8950365 C0.0113324173,28.8950365 6.59303887,26.2686286 10.6214855,21.6618852 C14.6499321,17.0551419 14.6499321,0 14.6499321,0 L51.2330943,0 Z" id="Rectangle-6"></path>
+                            <path d="M100.200495,0 L100.200495,28.8950365 L47.8175547,28.8950365 C47.8175547,28.8950365 54.5484659,26.2686286 58.668236,21.6618852 C62.7880059,17.0551419 62.7880059,0 62.7880059,0 L100.200495,0 Z" id="Rectangle-6" transform="translate(74.009025, 14.447518) scale(-1, 1) translate(-74.009025, -14.447518) "></path>
+                        </g>
+                        <rect id="Rectangle-6" fill="#CECFD4" x="-0.185870282" y="28.4339455" width="101.368701" height="3.41207346" rx="40"></rect>
+                        <rect id="Rectangle-17" fill="#CDCFD4" x="15.1776807" y="0" width="70.6415986" height="4.54943128"></rect>
+                    </g>
+                    <g id="iMac" stroke="#7992A4" fill="#545E66">
+                        <rect id="screen-border" x="-0.305756353" y="-0.338094043" width="360" height="224" rx="6"></rect>
+                        <path d="M185.659392,9.68445889 C187.047834,9.68445889 188.173389,8.66576574 188.173389,7.40914392 C188.173389,6.1525221 187.047834,5.13382895 185.659392,5.13382895 C184.27095,5.13382895 183.145395,6.1525221 183.145395,7.40914392 C183.145395,8.66576574 184.27095,9.68445889 185.659392,9.68445889 Z" id="camera"></path>
+                    </g>
+                    <g id="Browser" transform="translate(14.184039, 14.930132)">
+                        <rect id="Rectangle-493" fill="#F5F8FD" x="0" y="0" width="330.688935" height="194.585859"></rect>
+                        <g id="Group-2" transform="translate(31.565762, 36.710438)">
+                            <g transform="translate(154.082605, 58.490056) scale(1, -1) translate(-154.082605, -58.490056) translate(78.582605, 0.490056)">
+                                <rect id="Rectangle-504" fill="#E5E8EE" x="0.656550308" y="40.6426284" width="104.708884" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-501" fill="#00CEB8" x="0.656550308" y="106.963134" width="149.988402" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-502" fill="#00CEB8" x="0.656550308" y="0.850325222" width="149.988402" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-502" fill="#E5E8EE" x="0.656550308" y="93.6990327" width="66.0326297" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-503" fill="#E5E8EE" x="0.656550308" y="80.4349316" width="66.0326297" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-504" fill="#E5E8EE" x="0.656550308" y="27.3785274" width="66.0326297" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-505" fill="#E5E8EE" x="0.656550308" y="14.1144263" width="66.0326297" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-505" fill="#00CEB8" x="0.656550308" y="67.1708306" width="89.8159188" height="8.52692211" rx="3"></rect>
+                                <rect id="Rectangle-506" fill="#00CEB8" x="0.656550308" y="53.9067295" width="89.8159188" height="8.52692211" rx="3"></rect>
+                            </g>
+                            <rect id="Rectangle-504" fill="#00CEB8" x="0" y="1" width="64.1459831" height="35.0551242" rx="3"></rect>
+                            <rect id="Rectangle-505" fill="#E5E8EE" x="0" y="44.2365725" width="65.0893064" height="53.0564043" rx="3"></rect>
+                        </g>
+                        <path d="M311.440728,11.2608783 C311.440728,13.5008783 309.765644,15.3260635 307.709859,15.3260635 L44.1125034,15.3260635 C42.0567182,15.3260635 40.3816339,13.5008783 40.3816339,11.2608783 L40.3816339,11.0949524 C40.3816339,8.85495237 42.0567182,7.02976719 44.1125034,7.02976719 L307.709859,7.02976719 C309.765644,7.02976719 311.440728,8.85495237 311.440728,11.0949524 L311.440728,11.2608783 L311.440728,11.2608783 Z" id="Shape" fill="#FFFFFF"></path>
+                        <ellipse id="Oval" fill="#C6C6C6" cx="9.94702483" cy="10.3950813" rx="2.78002251" ry="2.91660554"></ellipse>
+                        <ellipse id="Oval" fill="#C6C6C6" cx="17.788114" cy="10.3950813" rx="2.78002251" ry="2.91660554"></ellipse>
+                        <ellipse id="Oval" fill="#C6C6C6" cx="26.3420294" cy="10.3950813" rx="2.78002251" ry="2.91660554"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,122 @@
+.navbar-footer {
+  background-color: @lightnavy;
+  padding-bottom: 3rem;
+  padding-top: 1.5em;
+  font-size: 1.8rem;
+
+  ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    @media screen and (min-width: @screen-xs-min) {
+      text-align: center;
+    }
+  }
+
+  li {
+    display: block;
+    @media screen and (min-width: @screen-xs-min) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    font-size: 1.4rem;
+    display: block;
+    padding: 1.3rem 1.8rem;
+    @media screen and (min-width: @screen-xs-min) {
+      display: inline-block;
+      padding: 0rem 1.8rem;
+    }
+    &:link, &:visited {
+      color: fade(@white, 80%);
+    }
+    &:hover, &:active, &:focus {
+      color: @white;
+      text-decoration: none;
+    }
+  }
+
+  .secondary {
+    li {
+      padding: 1.2rem 1.8rem;
+    }
+    a {
+      padding: 0;
+      font-size: 1.3rem;
+      display: inline-block;
+    }
+    .fa {
+      color: rgba(255,255,255,0.8);
+      margin-right: 0.5rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .moz-logo {
+    text-align: left;
+    margin: 0 0 -1rem 0;
+    @media screen and (min-width: @screen-xs-min) {
+      text-align: center;
+      margin: 0 0 -1rem 1.8rem;
+    }
+    a {
+      padding: 0.8rem;
+    }
+    img {
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.navbar {
+  min-height: 0;
+  .container {
+    .navbar-collapse {
+      padding: 0;
+    }
+  }
+}
+
+.navbar-nav {
+  @media screen and (min-width: @screen-sm-min) {
+    float: none;
+  }
+  .col-3 {
+    width: 33%;
+  }
+  > li {
+    @media screen and (min-width: @screen-sm-min) {
+      text-align: center;
+      width: 100%
+    }
+    > a {
+      font-size: 1.4rem;
+      padding: 1.8rem 1.5rem 1.8rem 3.2rem;
+      @media screen and (min-width: @screen-sm-min) {
+        padding-left: 1.5rem;
+      }
+    }
+    &.nav-icon {
+      @media screen and (min-width: @screen-sm-min) {
+        width: 25%
+      }
+      > a {
+        height: auto;
+        padding: 1.2rem 1.8rem;
+        &:link, &:visited {
+          color: fade(@white, 80);
+        }
+        &:hover, &:active, &:focus {
+          color: @white;
+        }
+        span.fa {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+}

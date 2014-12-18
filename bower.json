@@ -29,10 +29,12 @@
     "ngScrollSpy": "1.0.2",
     "angular-moment": "0.7.1",
     "makeapi-angular": "0.0.3",
-    "imagesloaded": "~3.1.8"
+    "imagesloaded": "~3.1.8",
+    "webmaker-auth-client": "~0.2.8"
   },
   "resolutions": {
     "angular": "1.2.14",
-    "selectize": "0.10.1"
+    "selectize": "0.10.1",
+    "webmaker-analytics": "0.1.7"
   }
 }

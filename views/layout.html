@@ -108,117 +108,59 @@
     {% block footer %}
     <div id="footer-actions">
       {% if layout %}
-      <a class="load-more">{{ gettext("Load more") }} <span class="icon-angle-down"></span></a>
+      <a class="load-more">{{ gettext("Load more") }}
+        <span class="icon-angle-down"></span></a>
       {% endif %}
     </div>
-    <section class="make-footer">
-        <div class="make-wrapper"></div>
-    </section>
     {% endblock %}
 
     <div class="partnerWrapper">
-      <section class="partners">
-        <header class="partners-header">
-          {{ gettext("Mozillians like you") | safe }}
-        </header>
+      <nav class="navbar-footer">
+        <div class="container">
+          <ul>
+            <li><a href="/{{localeInfo.lang}}/about">{{ gettext('About') }}</a></li>
+            <li><a href="/{{localeInfo.lang}}/mentor">{{ gettext('Teach') }}</a></li>
+            <li>
+              <a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">
+                {{ gettext('Donate') }}
+              </a>
+            </li>
+            <li><a href="mailto:help@webmaker.org">{{ gettext('Contact') }}</a></li>
+            <li><a href="/{{localeInfo.lang}}/privacy">{{ gettext('Privacy') }}</a></li>
+            <li><a href="/{{localeInfo.lang}}/terms">{{ gettext('Legal') }}</a></li>
+            <li>
+              <a href="https://support.mozilla.org/products/webmaker">
+                {{ gettext('Help') }}
+              </a>
+            </li>
+          </ul>
 
-        <ul class="sponsors list-unstyled">
-          <li>Chicago Community Trust</li>
-          <li>Chicago Instructional Technology Foundation</li>
-          <li>City of Chicago</li>
-          <li>Corporation for Public Broadcasting</li>
-          <li>U.S. Department of Energy</li>
-          <li>Ford Foundation</li>
-          <li>Google</li>
-          <li>Intel</li>
-          <li>Knight Foundation</li>
-          <li>MacArthur Foundation</li>
-          <li>National Endowment for the Arts</li>
-          <li>NESTA</li>
-          <li>The Nominet Trust</li>
-          <li>National Science Foundation</li>
-          <li>Ontario Trillium Foundation</li>
-          <li>Social Science Research Council</li>
-          <li>Alfred P. Sloan Foundation</li>
-          <li>Telefonica</li>
-          <li>ZeroDivide</li>
-        </ul>
+          <ul class="secondary">
+            <li><span class="fa icon-twitter"></span>
+              <a href="https://twitter.com/webmaker">
+                @webmaker
+              </a>
+            </li>
+            <li><span class="fa icon-file-text-alt"></span>
+              <a href="https://blog.webmaker.org">
+                {{ gettext('Blog') }}
+              </a>
+            </li>
+          </ul>
 
-        <div class="footerHr"></div>
-
-        <ul class="social">
-          <li><a href="//twitter.com/mozilla"><i class="footer-social icon-twitter"></i> @mozilla</a></li>
-          <li><a href="//twitter.com/webmaker"><i class="footer-social icon-twitter"></i> @webmaker</a></li>
-          <li><a href="//plus.google.com/u/2/communities/106022863174952221205"><i class="footer-social icon-google-plus"></i> google+</a></li>
-          <li><a href="http://mozillawebmaker.tumblr.com/"><i class="footer-social icon-tumblr"></i> tumblr</a></li>
-
-          <li id="email-li">
-            <div class="newsletter">
-              <form id="privacy-form" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
-                <input type="email" id="email-updates" name="email" autocomplete="off" placeholder="{{ gettext("Sign up for email updates") }}" required data-powertip='
-                  <div class="privacy-desc">
-                    <div><input type="checkbox" id="newsletter-signup-checkbox-proxy" /></div>
-                    <label for="newsletter-signup-checkbox-proxy">{{ gettext("privacy-desc") }} <a href="/{{localeInfo.lang}}/privacy" target="_blank">{{ gettext("privacy policy") }}</a>.</label>
-                  </div>'/>
-
-                <button id="email-submit" type="submit">
-                  <i class="icon-chevron-right"></i>
-                </button>
-
-                <input id="newsletter-signup-checkbox" name="custom-1216" type="checkbox" required />
-              </form>
-            </div>
-          </li>
-        </ul>
-        <ul class="links">
-          <li>
-            {% include "webmaker-language-picker/template/partial.html" %}
-          </li>
-          <li><a href="http://blog.webmaker.org">{{ gettext("Blog") }}</a></li>
-          <li><a href="/{{localeInfo.lang}}/about">{{ gettext("About Us") }}</a></li>
-          <li><a href="/{{localeInfo.lang}}/getinvolved">{{ gettext("Get Involved") }}</a></li>
-          <li><a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">{{ gettext("Donate") }}</a></li>
-          <li><a href="mailto:help@webmaker.org">{{ gettext("Contact") }}</a></li>
-          <li><a href="/{{localeInfo.lang}}/privacy">{{ gettext("Privacy") }}</a></li>
-          <li><a href="/{{localeInfo.lang}}/terms">{{ gettext("Legal") }}</a></li>
-          <li><a href="/{{localeInfo.lang}}/feedback">{{ gettext("Feedback") }}</a></li>
-          <li><a href="https://support.mozilla.org/products/webmaker">{{ gettext("Help") }}</a></li>
-        </ul>
-      </section>
+          <div class="moz-logo">
+            <a href="https://mozilla.org/">
+              <img src="/img/logo-mozilla-white.png" alt="mozilla logo" height="41" width="100"/>
+            </a>
+          </div>
+        </div>
+      </nav>
     </div>
   </footer>
 
   <div class="mobile"></div>
 </div>
 
-<script type="application/json" id="block-cta">
-  {% block CTA %}
-    [{
-      "title": "{{ gettext("Tools") }}",
-      "desc": "{{ gettext("Use our Tools Desc") }}",
-      "image": "/img/cta-Tools.jpg",
-      "url": "/{{localeInfo.lang}}/tools"
-    },
-    {
-      "title": "{{ gettext("Teach") }}",
-      "desc": "{{ gettext("Teach Desc") }}",
-      "image": "/img/cta-Teach.jpg",
-      "url": "/{{localeInfo.lang}}/teach"
-    },
-    {
-      "title": "{{ gettext("Maker Party") }}",
-      "desc": "{{ gettext("Maker Party Desc") }}",
-      "image": "/img/cta-Party.jpg",
-      "url": "http://party.webmaker.org/{{localeInfo.lang}}"
-    },
-    {
-      "title": "{{ gettext("About Us") }}",
-      "desc": "{{ gettext("About Us Desc") }}",
-      "image": "/img/cta-About-us.jpg",
-      "url": "/{{localeInfo.lang}}/about"
-    }]
-  {% endblock %}
-</script>
 <script id="require-js" src="/bower_components/requirejs/require.js"
   data-main="{% block require_main %}/js/main.js{% endblock %}"
   data-page="{% block require_page %}pages/verify{% endblock %}">

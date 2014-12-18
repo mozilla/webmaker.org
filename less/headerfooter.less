@@ -187,6 +187,32 @@ header {
   }
 }
 
+#gallery-search {
+  color: @white;
+  font-size: 15px;
+  input[type="search"] {
+    background: transparent;
+    border: none;
+    border-bottom: darken(@brand-primary, 10%) dashed 2px;
+    color: @white;
+    font-size: 17px;
+    margin-left: 5px;
+    width: 80%;
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &::-webkit-input-placeholder {
+      color: @white;
+    }
+  }
+  button {
+    background: transparent;
+    border: none;
+    color: @white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
 #tools h1 {
   line-height: 1.4em;
 }
@@ -196,7 +222,7 @@ header {
   background: @green;
   float: right;
   z-index: 3;
-  padding: 0.5em 1em 1em;
+  padding: 25px 10px 30px 20px;
   .border-box;
   .width(2);
 
@@ -368,7 +394,7 @@ header {
 
 .partnerWrapper {
   width: 100%;
-  background: url(../img/bkgFooter.jpg) repeat scroll 50% 0 #f9f9f9;
+  background: @navy;
 }
 
 .partners {
@@ -377,20 +403,11 @@ header {
   margin: 0 auto;
   text-align: center;
 
-  hr {
-    color: #c5c7c9;
-    opacity: 0.7;
-    width: 50%;
-    border-width: 1px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-
   .partners-header {
+    color: @white;
     font-size: 20px;
     font-family: "Open Sans Light";
     margin-left: 25px;
-    color: #96989c;
   }
 
   .refresh-sponsors {
@@ -398,6 +415,7 @@ header {
   }
 
   .sponsors {
+    color: @white;
     list-style: none;
     font-size: 14px;
     margin: 15px 0 0;
@@ -679,7 +697,7 @@ footer {
   .make-footer {
     height: 220px;
     width: auto;
-    
+
     .make-wrapper {
       width: 600px;
       margin-left: auto;
@@ -783,3 +801,147 @@ footer {
     }
   }
 }
+
+.navbar-footer {
+  background-color: @lightnavy;
+  padding-bottom: 3rem;
+  padding-top: 1.5em;
+  font-size: 1.8rem;
+
+  ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    @media screen and (min-width: @screen-xs-min) {
+      text-align: center;
+    }
+  }
+
+  li {
+    display: block;
+
+    @media screen and (min-width: @screen-xs-min) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    font-size: 1.4rem;
+    display: block;
+    padding: 1.3rem 1.8rem;
+    @media screen and (min-width: @screen-xs-min) {
+      display: inline-block;
+      padding: 0rem 1.8rem;
+    }
+    &:link, &:visited {
+      color: fade(@white, 80%);
+    }
+    &:hover, &:active, &:focus {
+      color: @white;
+      text-decoration: none;
+    }
+  }
+
+  .secondary {
+    li {
+      padding: 1.2rem 1.8rem;
+    }
+    a {
+      padding: 0;
+      font-size: 1.3rem;
+      display: inline-block;
+    }
+    .fa {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.3rem;
+    }
+  }
+
+  .moz-logo {
+    text-align: left;
+    margin: 0 0 -1rem 0;
+    @media screen and (min-width: @screen-xs-min) {
+      text-align: center;
+      margin: 0 0 -1rem 1.8rem;
+    }
+    a {
+      padding: 0.8rem;
+    }
+    img {
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.newsletter {
+  margin-bottom: 32px;
+  span {
+    color: @white;
+  }
+}
+
+#privacy-form {
+  text-align: center;
+
+  .privacy-box {
+    z-index: 2;
+    margin-top: 10px;
+    padding: 0 10px;
+    position: absolute;
+    width: 280px;
+    height: 60px;
+    top: 30px;
+    color: #7b7b7b;
+    background: #FFF;
+    .border-radius;
+    .box-shadow(1px, 1px, 9px, grey);
+    .border-box;
+    display: none;
+  }
+
+  .privacy-box-active {
+    display: block;
+  }
+
+  .checkbox {
+    float: left;
+    margin-top: 10px;
+
+    &:after {
+      font-size: 30px;
+    }
+
+    input {
+      box-shadow: none;
+    }
+  }
+}
+
+#email-updates {
+  background: transparent;
+  border: none transparent 0;
+  border-bottom: 1px solid @lightnavy;
+  box-shadow: none;
+  color: @white;
+  font-size: 16px;
+  font-weight: 300;
+  min-width: 190px;
+  padding: 0 0 3px 10px;
+  position: relative;
+}
+
+#email-submit {
+  background: transparent;
+  color: @white;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#newsletter-signup-checkbox {
+  display: none;
+}
+

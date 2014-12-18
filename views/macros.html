@@ -7,16 +7,13 @@
     </div>
     {% if options.length %}
     <div class="g-2 filter hide">
-      <div id="search">
-        <div class="filter-bar">
-          <label for="search-filter"><span class="icon-th"></span> {{ gettext("Filter the gallery") }}</label>
-          <select id="search-filter">
-            {% for option in options %}
-              <option value="{{ option.value | safe }}"{% if (option.default) %} selected{% endif %} title="{{ option.title | safe }}">{{ option.title | safe }}</option>
-            {% endfor %}
-          </select>
-        </div>
-      </div>
+      <form action="/search" id="gallery-search">
+        <input type="search" placeholder="{{gettext('Search gallery')}}" name="q" results="5"/>
+        <input type="hidden" name="type" value="all"/>
+        <button type="submit" aria-label="Search">
+          <span class="icon-search"></span>
+        </button>
+      </form>
     </div>
     {% endif %}
   </div>

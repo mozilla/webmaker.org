@@ -105,6 +105,15 @@
 
   <footer class="footer">
 
+    {% block footer %}
+    <div id="footer-actions">
+      {% if layout %}
+      <a class="load-more">{{ gettext("Load more") }}
+        <span class="icon-angle-down"></span></a>
+      {% endif %}
+    </div>
+    {% endblock %}
+
     <div class="partnerWrapper">
       <nav class="navbar-footer">
         <div class="container">

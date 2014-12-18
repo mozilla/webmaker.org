@@ -105,61 +105,7 @@
 
   <footer class="footer">
 
-    {% block footer %}
-    <div id="footer-actions">
-      {% if layout %}
-      <a class="load-more">{{ gettext("Load more") }}
-        <span class="icon-angle-down"></span></a>
-      {% endif %}
-    </div>
-    {% endblock %}
-
     <div class="partnerWrapper">
-      <section class="partners">
-        <header class="partners-header">
-          {{ gettext("Mozillians like you") | safe }}
-        </header>
-
-        <ul class="sponsors list-unstyled">
-          <li>Chicago Community Trust</li>
-          <li>Chicago Instructional Technology Foundation</li>
-          <li>City of Chicago</li>
-          <li>Corporation for Public Broadcasting</li>
-          <li>U.S. Department of Energy</li>
-          <li>Ford Foundation</li>
-          <li>Google</li>
-          <li>Intel</li>
-          <li>Knight Foundation</li>
-          <li>MacArthur Foundation</li>
-          <li>National Endowment for the Arts</li>
-          <li>NESTA</li>
-          <li>The Nominet Trust</li>
-          <li>National Science Foundation</li>
-          <li>Ontario Trillium Foundation</li>
-          <li>Social Science Research Council</li>
-          <li>Alfred P. Sloan Foundation</li>
-          <li>Telefonica</li>
-          <li>ZeroDivide</li>
-        </ul>
-      </section>
-
-        <div class="newsletter">
-          <form id="privacy-form" action="https://sendto.mozilla.org/page/s/webmaker" method="post" novalidate>
-            <span class="icon-envelope"></span>
-            <input type="email" id="email-updates" name="email" autocomplete="off" placeholder="{{ gettext("Sign up for email updates") }}" required data-powertip='
-            <div class="privacy-desc">
-              <div><input type="checkbox" id="newsletter-signup-checkbox-proxy" /></div>
-              <label for="newsletter-signup-checkbox-proxy">{{ gettext("privacy-desc") }} <a href="/{{localeInfo.lang}}/privacy" target="_blank">{{ gettext("privacy policy") }}</a>.</label>
-            </div>'/>
-
-            <button id="email-submit" type="submit" aria-label="submit">
-              <i class="icon-chevron-right"></i>
-            </button>
-
-            <input id="newsletter-signup-checkbox" name="custom-1216" type="checkbox" required />
-          </form>
-        </div>
-
       <nav class="navbar-footer">
         <div class="container">
           <ul>

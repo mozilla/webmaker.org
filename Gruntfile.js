@@ -130,6 +130,15 @@ module.exports = function (grunt) {
           'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js']
         },
       },
+      prod: {
+        options: {
+          sourceMap: false,
+          mangle: false
+        },
+        files: {
+          'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js']
+        },
+      },
     },
 
     watch: {
@@ -171,11 +180,11 @@ module.exports = function (grunt) {
   });
 
   // For building angular js
-  grunt.registerTask('build', ['uglify']);
+  grunt.registerTask('build', ['uglify:prod']);
 
   grunt.registerTask('clean', ['jsbeautifier:modify']);
 
-  grunt.registerTask('dev', ['uglify', 'express', 'watch']);
+  grunt.registerTask('dev', ['uglify:app', 'express', 'watch']);
 
   // Clean & verify code (Run before commit)
   grunt.registerTask('default', ['clean', 'jshint', 'jsonlint', 'imagemin']);

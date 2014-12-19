@@ -134,10 +134,7 @@ module.exports = function (grunt) {
         options: {
           sourceMap: false,
           mangle: false
-        },
-        files: {
-          'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js']
-        },
+        }
       },
     },
 

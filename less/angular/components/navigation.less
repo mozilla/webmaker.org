@@ -85,6 +85,9 @@
   @media screen and (min-width: @screen-sm-min) {
     float: none;
   }
+  @media screen and (min-width: @screen-sm-min) {
+    margin-left: -12px;
+  }
   .col-3 {
     width: 33%;
   }
@@ -92,6 +95,9 @@
     @media screen and (min-width: @screen-sm-min) {
       text-align: center;
       width: 100%
+    }
+    @media screen and (min-width: @screen-lg-min) {
+      text-align: left;
     }
     > a {
       font-size: 1.4rem;
@@ -103,6 +109,9 @@
     &.nav-icon {
       @media screen and (min-width: @screen-sm-min) {
         width: 25%
+      }
+      @media screen and (min-width: @screen-lg-min) {
+        width: 14%
       }
       > a {
         height: auto;

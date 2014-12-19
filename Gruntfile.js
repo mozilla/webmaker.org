@@ -30,6 +30,34 @@ module.exports = function (grunt) {
     'test/**/*.js'
   ];
 
+  var dependencies = [
+    'bower_components/jquery/jquery.js',
+    'bower_components/web-literacy-client/dist/web-literacy-client.with-langs.js',
+    'bower_components/makeapi-client/src/make-api.js',
+    'bower_components/selectize/dist/js/standalone/selectize.js',
+    'bower_components/webmaker-analytics/analytics.js',
+
+    'bower_components/angular/angular.js',
+
+    'bower_components/makeapi-angular/src/makeapi-angular.js',
+    'bower_components/makeapi-angular/dist/makeapi-angular.templates.js',
+
+    'bower_components/angular-bootstrap/ui-bootstrap.js',
+    'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+
+    'bower_components/ngScrollSpy/dist/ngScrollSpy.js',
+    'bower_components/angular-resource/angular-resource.js',
+    'bower_components/angular-route/angular-route.js',
+    'bower_components/angular-sanitize/angular-sanitize.js',
+    'bower_components/moment/min/moment+langs.min.js',
+    'bower_components/angular-moment/angular-moment.min.js',
+    'bower_components/webmaker-login-ux/dist/ngWebmakerLogin.js',
+    'bower_components/webmaker-login-ux/dist/templates/ngWebmakerLogin.templates.js',
+
+    'bower_components/imagesloaded/imagesloaded.pkgd.js',
+    'bower_components/masonry/dist/masonry.pkgd.js'
+  ];
+
   var allJS = clientSideJS.concat(nodeJS);
 
   grunt.initConfig({
@@ -86,55 +114,25 @@ module.exports = function (grunt) {
       }
     },
     uglify: {
-      dependencies: {
-        options: {
-          sourceMap: true,
-          mangle: false
-        },
-        files: {
-          'public/compiled/dependencies.min.js': [
-            'bower_components/jquery/jquery.js',
-            'bower_components/web-literacy-client/dist/web-literacy-client.with-langs.js',
-            'bower_components/makeapi-client/src/make-api.js',
-            'bower_components/selectize/dist/js/standalone/selectize.js',
-            'bower_components/webmaker-analytics/analytics.js',
-
-            'bower_components/angular/angular.js',
-
-            'bower_components/makeapi-angular/src/makeapi-angular.js',
-            'bower_components/makeapi-angular/dist/makeapi-angular.templates.js',
-
-            'bower_components/angular-bootstrap/ui-bootstrap.js',
-            'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-
-            'bower_components/ngScrollSpy/dist/ngScrollSpy.js',
-            'bower_components/angular-resource/angular-resource.js',
-            'bower_components/angular-route/angular-route.js',
-            'bower_components/angular-sanitize/angular-sanitize.js',
-            'bower_components/moment/min/moment+langs.min.js',
-            'bower_components/angular-moment/angular-moment.min.js',
-            'bower_components/webmaker-login-ux/dist/ngWebmakerLogin.js',
-            'bower_components/webmaker-login-ux/dist/templates/ngWebmakerLogin.templates.js',
-
-            'bower_components/imagesloaded/imagesloaded.pkgd.js',
-            'bower_components/masonry/dist/masonry.pkgd.js'
-          ],
-        },
-      },
       app: {
         options: {
           sourceMap: true,
           mangle: false
         },
         files: {
-          'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js']
+          'public/compiled/dependencies.min.js': dependencies,
+          'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js'],
         },
       },
       prod: {
         options: {
           sourceMap: false,
           mangle: false
-        }
+        },
+        files: {
+          'public/compiled/dependencies.min.js': dependencies,
+          'public/compiled/app.min.js': ['public/js/angular/**/*.js', 'lib/badges-permissions-model.js'],
+        },
       },
     },
 

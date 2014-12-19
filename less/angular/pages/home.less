@@ -24,6 +24,16 @@
   footer {
     text-align: center;
   }
+  &.variant-2, &.variant-4 {
+    .home-blue {
+      @media @standard-def {
+        background-image: url('/img/home/background-variant.jpg');
+      }
+      @media @retina {
+        background-image: url('/img/home/background-variant@2x.jpg');
+      }
+    }
+  }
 }
 
 .home-blue, .home-values, .home-jump-in, .home-footer {

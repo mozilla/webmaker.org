@@ -559,24 +559,20 @@
     "message": "Our values",
     "description": "Headline on second section of home"
   },
-  "Our goal is for everyone in the world": {
-    "message": "Our goal is for everyone in the world to be an informed creator of the free and open web.",
-    "description": ""
-  },
   "Free": {
     "message": "Free",
     "description": "first value on home page"
   },
   "Mozilla is a nonprofit organization": {
-    "message": "Mozilla is a non-profit organization. Our open-source tools are created by a global community. They will always be free—now and forever!",
+    "message": "Mozilla is a non-profit organization and these open-source tools are created by a global community. They will always be 100% free—now and forever!",
     "description": "Value description for free on home page"
   },
   "Local": {
     "message": "Local",
     "description": "second value on home page"
   },
-  "Wherever you live in the world": {
-    "message": "Wherever you live in the world, Mozilla is dedicated to helping you build a web that is relevant to your friends, family, business, and community.",
+  "We all use the web in different ways.": {
+    "message": "We all use the web in different ways. Mozilla is dedicated to helping you build a web that’s relevant to your friends, family, business or community—no matter where you live.",
     "description": "Value description for local on home page"
   },
   "More than code": {
@@ -586,6 +582,10 @@
   "Our tools, learning resources, and": {
     "message": "Our tools, learning resources, and community networks empower everyone to become citizens of the web.",
     "description": ""
+  },
+  "We believe that digital literacy is more than just learning to code.": {
+    "message": "We believe that digital literacy is more than just learning to code. Our tools, learning resources and community networks empower everyone to become citizens of the web.",
+    "description": "Value description for more than code on home page"
   },
   "Jump right in": {
     "message": "Jump right in",
@@ -642,5 +642,25 @@
   "Search gallery": {
     "message": "Search gallery",
     "description": "Text for search field on gallery page"
+  },
+  "The web is yours": {
+    "message": "The web is yours",
+    "description": "headline on home"
+  },
+  "Learn to build it with Mozilla.": {
+    "message": "Learn to build it with Mozilla.",
+    "description": "subhead on home"
+  },
+  "Webmaker helps people across the world": {
+    "message": "Webmaker helps people across the world become informed creators of a free and open web.",
+    "description": "Subehad on our values"
+  },
+  "Help us build the future of the web": {
+    "message": "Help us build the future of the web",
+    "description": "headline on home"
+  },
+  "The global Mozilla community wants everyone to be a citizen of the web": {
+    "message": "The global Mozilla community wants everyone to be a citizen of the web—including you!",
+    "description": "subhead on home"
   }
 }

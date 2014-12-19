@@ -363,6 +363,7 @@ app.get("/about", routes.angular);
 
 app.get("/make-your-own", routes.angular);
 app.get('/madewithcode-*', routes.angular);
+app.get('/home-:variant', routes.angular);
 
 app.get('/explore', routes.gallery({
   layout: "index",

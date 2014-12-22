@@ -1,10 +1,15 @@
 [
   {
-    "id": "gallery",
+    "id": "index",
     "title": "Explore",
     "icon": "icon-random",
     "defaultUrl": "explore",
-    "pages": []
+    "pages": [
+      {
+        "id": "index",
+        "url": "explore"
+      }
+    ]
   },
   {
     "id": "tools",

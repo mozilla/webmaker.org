@@ -283,3 +283,28 @@
     font-size: 2rem;
   }
 }
+
+// A/B styles
+
+#page-home {
+  .variant-2 .home-blue {
+    h2 {
+      font-size: 6.2rem;
+    }
+  }
+  .variant-4 .home-blue {
+    h2 {
+      font-size: 6.2rem;
+      max-width: 100%;
+      @media screen and (min-width: @screen-md-min) {
+        max-width: 56rem;
+      }
+    }
+    .lead {
+      max-width: 100%;
+      @media screen and (min-width: @screen-md-min) {
+        max-width: 42rem;
+      }
+    }
+  }
+}

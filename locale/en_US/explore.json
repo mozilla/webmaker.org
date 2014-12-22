@@ -644,7 +644,7 @@
     "description": "Text for search field on gallery page"
   },
   "The web is yours": {
-    "message": "The web is yours",
+    "message": "The web is yours.",
     "description": "headline on home"
   },
   "Learn to build it with Mozilla.": {
@@ -656,7 +656,7 @@
     "description": "Subehad on our values"
   },
   "Help us build the future of the web": {
-    "message": "Help us build the future of the web",
+    "message": "Help us build the future of the web.",
     "description": "headline on home"
   },
   "The global Mozilla community wants everyone to be a citizen of the web": {

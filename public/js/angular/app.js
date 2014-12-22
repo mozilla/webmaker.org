@@ -102,6 +102,13 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'homeController',
           title: 'Webmaker'
         })
+        .when('/:locale/home-:variant', {
+          templateUrl: function (params) {
+            return '/views/home-' + params.variant + '.html';
+          },
+          controller: 'homeController',
+          title: 'Webmaker'
+        })
         .otherwise({
           redirectTo: '/:locale'
         });

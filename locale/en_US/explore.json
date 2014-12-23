@@ -380,7 +380,7 @@
     "description": "line item on /getinvolved"
   },
   "You don’t need to be a wizard to teach the web.": {
-    "message": "You don’t need to be a wizard to teach the web. We’ve created <a href=\"/{{ lang }}/teach\">hackable guides</a> for teaching web literacy, webmaking, online storytelling and more. Want to create your own lesson plan? We have <a href=\"/{{ lang }}/teach-templates\">great templates</a> for that.",
+    "message": "You don’t need to be a wizard to teach the web. We’ve created <a href=\"/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">hackable guides</a> for teaching web literacy, webmaking, online storytelling and more. Want to create your own lesson plan? We have <a href=\"/{{ lang }}/make-your-own\">great templates</a> for that.",
     "description": "Teach the Web copy"
   },
   "Mentoring is a chance to share your knowledge": {

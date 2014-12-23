@@ -54,8 +54,10 @@ angular
 
     }
   ])
-  .controller('exploreController', ['$scope', 'CONFIG', 'wmNav',
-    function ($scope, CONFIG, wmNav) {
+  .controller('exploreController', ['$scope', 'CONFIG',
+    function ($scope, CONFIG) {
+
+      $scope.eventsUrl = CONFIG.eventsUrl;
 
       $scope.contributeBoxes = [
         {
@@ -215,7 +217,16 @@ angular
         $scope.userId = $rootScope._user.id;
         $scope.direction = CONFIG.direction;
       }
-      init();
+
+      // Don't fire controller until after $rootScope is ready
+      if ($rootScope._user) {
+        init();
+      } else {
+        $timeout(function () {
+          init();
+        }, 500);
+      }
+
     }
   ])
   .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',
@@ -233,7 +244,7 @@ angular
       }
 
       // Don't fire controller until after $rootScope is ready
-      if ($rootScope.mwcReady) {
+      if ($rootScope._user) {
         init();
       } else {
         $timeout(function () {

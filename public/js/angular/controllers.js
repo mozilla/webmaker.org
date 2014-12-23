@@ -489,12 +489,6 @@ angular
       wmNav.page('getinvolved');
     }
   ])
-  .controller('aboutController', ['$scope', 'wmNav',
-    function ($scope, wmNav) {
-      wmNav.section('info');
-      wmNav.page('about');
-    }
-  ])
   .controller('mentorController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
       wmNav.section('teach');

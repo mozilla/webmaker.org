@@ -12,8 +12,16 @@
     width: 100%;
   }
 
-  .row:last-child {
+  .row {
     margin-bottom: 4rem;
+
+    &:last-child {
+      margin-bottom: 8rem;
+    }
+
+    .row {
+      margin-bottom: 0;
+    }
   }
 
   .btn.btn-lg {

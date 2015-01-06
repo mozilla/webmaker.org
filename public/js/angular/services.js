@@ -45,7 +45,7 @@ angular
               pages: [
                 {
                   id: 'resources',
-                  title: 'Resources',
+                  title: 'Web Literacy',
                   url: 'resources',
                   pushState: true
                 },

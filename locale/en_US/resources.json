@@ -48,7 +48,7 @@
     "description": "Headline for section below competencies"
   },
   "Learn through hands-on making": {
-    "message": "Learn through hands-on making and doing. Then share what you&rsquo;ve learned with others. Webmaker resources are designed to make it easy and fun to teach everything from searching and navigating to coding and scripting, digital citizenship and protecting online privacy.",
+    "message": "Learn through hands-on making and doing. Then share what you&rsquo;ve learned with others. Webmaker resources are designed to make it easy and fun to teach everything from searching and navigating to coding and scripting, digital citizenship and protecting online privacy. Try <a href=\"/make-your-own\">creating your own</a> teaching kits to share with other educators and mentors around the world.",
     "description": "Main copy for section below competencies"
   },
   "Discover": {
@@ -120,7 +120,7 @@
     "description": "third bullet point, mentor."
   },
   "Connect with the Community": {
-    "message": "Connect with the community",
+    "message": "Connect with the global community",
     "description": "Headline, third section on mentor."
   },
   "Join our online forum": {
@@ -140,7 +140,31 @@
     "description": "first paragraph on mentor."
   },
   "Create a more web literate world": {
-    "message": "Create a more web literate world",
+    "message": "Create a more web-literate world",
     "description": "Headline on mentor."
+  },
+  "What is web literacy paragraph": {
+    "message": "Mozilla defines web literacy as the skills and competencies needed for reading, writing and participating on the web. Read more about why Mozilla cares about web literacy in this Webmaker Whitepaper.",
+    "description": "Paragraph about web literacy on mentor."
+  },
+  "What is web literacy": {
+    "message": "What is web literacy?",
+    "description": "Headline for web literacy on mentor."
+  },
+  "What is web literacy button": {
+    "message": "Learn more",
+    "description": "Button for web literacy on mentor"
+  },
+  "Become a catalyst paragraph": {
+    "message": "Learn more about the Hive Learning Networks model and how cities around the globe are championing digital skills and web literacy through connected learning.",
+    "description": "Paragraph about hive on mentor."
+  },
+  "Become a catalyst": {
+    "message": "Become a local community catalyst",
+    "description": "Headline for hive on mentor."
+  },
+  "Become a catalyst button": {
+    "message": "Learn more",
+    "description": "Button for hive on mentor"
   }
 }

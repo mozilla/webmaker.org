@@ -49,12 +49,11 @@ require([
   'base/email-signup',
   'base/anchor-slide',
   'base/navigation',
-  'base/webmaker-campaign',
   'languages',
   'selectize',
   'base/login',
   'tabzilla',
-], function ($, Marquee, privacy, AnchorSlide, navigation, webmakerCampaign, languages, selectize) {
+], function ($, Marquee, privacy, AnchorSlide, navigation, languages, selectize) {
   'use strict';
 
   var $window = $(window);
@@ -79,12 +78,6 @@ require([
 
   // Attach navigation UI
   navigation();
-
-  // Campaign
-  webmakerCampaign({
-    element: '.webmaker-campaign-header',
-    campaignName: 'eoy-fundraising'
-  });
 
   // Create Anchor Sliders
   $('a.anchor-slide').each(function () {

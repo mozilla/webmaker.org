@@ -69,7 +69,7 @@
             <div class="form-group">
               <label for="evidence">{{ gettext("BadgesEvidenceLabel") }}</label>
               <textarea class="form-control" name="evidence" placeholder="{{ gettext("BadgesIncludeLinks") }}" required>
-                {%- if application.evidence.length >= 1 -%} 
+                {%- if application.evidence.length >= 1 -%}
                   {{ application.evidence[0].reflection }}
                 {%- endif -%}
               </textarea>
@@ -78,7 +78,7 @@
             <div class="form-group">
               <label for="city">{{ gettext("BadgesCityLabel") }}</label>
               <textarea class="form-control" name="city" placeholder="{{ gettext("BadgesExampleCity") }}" required>
-                {%- if application.evidence.length >= 2 -%} 
+                {%- if application.evidence.length >= 2 -%}
                   {{ application.evidence[1].reflection | replace("Hive City: ", "")}}
                 {%- endif -%}
               </textarea>
@@ -102,7 +102,7 @@
       <div id="issue-badge-success" class="panel panel-info panel-badges hidden">
         <div class="panel-body">
           <h2>{{ gettext("Thanks") }}</h2>
-          <p>{{ gettext("Your badge was issued successfully.") }}</p>
+          <p>{{ gettext("IssuedBadgeSuccess") }}</p>
         </div>
       </div>
 

@@ -1,4 +1,8 @@
 {
+  "google+": {
+    "message": "google+",
+    "description": "google+ text"
+  },
   "Appmaker": {
     "message": "Appmaker",
     "description": "Appmaker title!"
@@ -48,7 +52,7 @@
     "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
   },
   "Make an app for your...": {
-    "message": "Make an app for your <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{audiences[currentSlideIndex].title | i18n}}</span>",
+    "message": "Make an app for your <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span>",
     "description": "The beginning part of the carousel phrase on the Appmaker landing page"
   },
   "students": {

@@ -1,8 +1,8 @@
 <div class="container container-push-down">
-  <h1><a href="{{baseUrl}}admin/badges">{{ "Badges Admin" | i18n }}</a> / {{ badge.name }}</h1>
+  <h1><a href="{{baseUrl}}admin/badges">{{ 'Badges Admin' | i18n }}</a> / {{ badge.name }}</h1>
 
   <div class="error badges-error alert alert-danger" ng-show="badgesError">
-    <p>{{ "BadgesError" | i18n }} <span class="error-message">{{ badgesError }}</span></p>
+    <p>{{ 'BadgesError' | i18n }} <span class="error-message">{{ badgesError }}</span></p>
   </div>
 
   <div class="row">
@@ -10,8 +10,8 @@
       <h2 class="section-header">Pending Applications</h2>
       <table class="table table-striped table-hover table-responsive">
         <thead>
-          <th><a href="" ng-click="predicate='created'; reverse=!reverse">{{ "Date" | i18n }}</a></th>
-          <th><a href="" ng-click="predicate='learner'; reverse=!reverse">{{ "Application" | i18n }}</a></th>
+          <th><a href="" ng-click="predicate='created'; reverse=!reverse">{{ 'Date' | i18n }}</a></th>
+          <th><a href="" ng-click="predicate='learner'; reverse=!reverse">{{ 'Application' | i18n }}</a></th>
         </thead>
         <tbody>
           <tr ng-repeat="application in applications | orderBy:predicate:reverse" ng-click="reviewApplication(application)">
@@ -27,23 +27,23 @@
     <div class="col-md-4 col-md-offset-1">
       <h2 class="section-header">Issued Badges</h2>
       <div class="alert alert-info">
-        <a href="https://wiki.mozilla.org/Webmaker/Badges/Issuing" target="_blank">Get advice</a> on how to issue badges ({{'English only' | i18n}})
+        <a href="https://wiki.mozilla.org/Webmaker/Badges/Issuing" target="_blank">Get advice</a> on how to issue badges ({{ 'English only' | i18n }})
       </div>
       <form class="panel panel-default">
         <div class="panel-body">
           <p>
-            <label for="issue_emails">{{ "Emails" | i18n }}</label>
+            <label for="issue_emails">{{ 'Emails' | i18n }}</label>
             <textarea name="issue_emails" ng-model="issueEmails" class="form-control" placeholder="email@domain.com"></textarea>
 
-            <label for="issue_comment" ng-show="showComment">{{ "Comment" | i18n }}</label>
+            <label for="issue_comment" ng-show="showComment">{{ 'Comment' | i18n }}</label>
             <input name="issue_comment" ng-show="showComment" ng-model="issueComment" class="form-control">
           </p>
           <button class="btn btn-success" ng-click="showComment = true" ng-hide="showComment">
-            <span class="icon icon-plus"></span> {{ "Add a comment"| i18n }}
+            <span class="icon icon-plus"></span> {{ 'Add a comment' | i18n }}
           </button>
 
           <button class="btn btn-success pull-right" ng-click="issueBadges(issueEmails, issueComment)">
-            <span class="icon icon-plus"></span> {{ "Issue new badge(s)"| i18n }}
+            <span class="icon icon-plus"></span> {{ 'Issue new badge(s)' | i18n }}
           </button>
         </div>
       </form>
@@ -51,7 +51,7 @@
       <table class="table table-issued-badges table-responsive">
         <thead>
           <tr>
-            <th>{{ "Email" | i18n }}</th>
+            <th>{{ 'Email' | i18n }}</th>
             <th></th>
           </tr>
         </thead>
@@ -59,7 +59,7 @@
           <tr ng-repeat="instance in instances">
             <td>{{ instance.email }}</td>
             <td class="text-right">
-              <button ng-if="_user.isAdmin" class="btn btn-default" ng-click="revokeBadge(instance.email)"><span class="fa fa-times"></span><span class="sr-only">{{ "Revoke" | i18n }}</span></button>
+              <button ng-if="_user.isAdmin" class="btn btn-default" ng-click="revokeBadge(instance.email)"><span class="fa fa-times"></span><span class="sr-only">{{ 'Revoke' | i18n }}</span></button>
             </td>
           </tr>
           </tbody>

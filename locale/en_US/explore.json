@@ -23,14 +23,6 @@
     "message": "Find an event",
     "description": "Find an event button"
   },
-  "Overview": {
-    "message": "Overview",
-    "description": "Overview link for resources page"
-  },
-  "Documentation": {
-    "message": "Documentation",
-    "description": "Link to literacy page"
-  },
   "Get involved with webmaker": {
     "message": "Webmaker is a part of Mozilla's <a href=\"//www.mozilla.org/en-US/mission/\">non-profit mission</a> to create a more open, web literate world.",
     "description": "Copy for first explore subsection with map"
@@ -44,7 +36,7 @@
     "description": "Heading for the second explore subsection with document stacks"
   },
   "Resources section description": {
-    "message": "The <a href=\"/{{ lang }}/resources\">resources</a> section of Webmaker is your guide to Web Literacy.   Discover new powers like coding, storytelling, protecting your online privacy and more.  Each section has links to discover, hands on projects to make and activities for teaching.",
+    "message": "The <a href=\"/{{ lang }}/resources\">resources</a> section of Webmaker is your guide to Web Literacy. Discover new powers like coding, storytelling, protecting your online privacy and more.  Each section has links to discover, hands on projects to make and activities for teaching.",
     "description": "Copy for the second explore subsection with document stacks"
   },
   "Free tools that make it easy to create and learn": {
@@ -54,14 +46,6 @@
   "Tools description": {
     "message": "<a href=\"/{{ lang }}/tools\">Webmaker tools</a> make it easy to create things on the web. Make your own web pages, interactive videos, remixes, mobile apps and more&mdash;learning web mechanics, code and other valuable skills as you go.",
     "description": "a description of the webmaker tools"
-  },
-  "Event subsection header": {
-    "message": "Make. Learn. Get together.",
-    "description": "Header for the events subsection of explore"
-  },
-  "Event subsection copy": {
-    "message": "The Webmaker community gets together at events around the world&mdash;at libraries, community centers, internet cafes, or in your own living room. <a href=\"https://events.webmaker.org/{{ lang }}/\">Find an event near you</a>, learn how to <a href=\"https://events.webmaker.org/{{ lang }}/#!/event-guides\">host your own</a>, or get involved with our global <a href=\"http://party.webmaker.org/{{ lang }}/\">Maker Party</a> (July to Sep 2014).",
-    "description": "Copy for the events subsection of explore"
   },
   "Contribute subsection copy": {
     "message": "Webmaker is open source, community-powered, and backed by Mozilla&rsquo;s non-profit <a href=\"https://mozilla.org/{{ lang }}/mission/\">mission</a> to build and protect the open web. We&rsquo;d love for you to <a href=\"/{{ lang }}/getinvolved\">get more involved</a>.",
@@ -119,18 +103,6 @@
     "message": "<a href=\"/{{lang}}/resources\">Explore the competencies</a> and see what teaching resources the Webmaker community has to offer.",
     "description": "Copy for bottom section of explore"
   },
-  "SidebarHeaderDesc": {
-    "message": "Explore our teaching resources for each skill in the Web Literacy Map. Need more info? Here's our <a href=\"/{{lang}}/literacy\">documentation</a>.",
-    "description": "Description for the sidebar header"
-  },
-  "SidebarHeaderDesc2": {
-    "message": ".",
-    "description": "Description for the sidebar header part 2. Links to /literacy"
-  },
-  "Web Literacy Skills": {
-    "message": "Web Literacy Skills",
-    "description": "Heading for sidebar"
-  },
   "Become a mentor": {
     "message": "Become a mentor",
     "description": "Button in mentors section on literacy pages, line item on /getinvolved"
@@ -143,41 +115,9 @@
     "message": "Featured Teaching Resources",
     "description": "Title for teaching resources in competency page"
   },
-  "Explore the gallery": {
-    "message": "Explore the gallery",
-    "description": "Link to additional teaching resources in competency page"
-  },
   "noStaffPick": {
     "message": "There are no featured teaching resources yet. <a href=\"#\">Submit one.</a>",
     "description": "No item in the list picked by staff and there is a submit link."
-  },
-  "Endorsement": {
-    "message": "Endorsement",
-    "description": "Endorsement"
-  },
-  "Endorsements": {
-    "message": "Endorsements",
-    "description": "Plural Endorsements"
-  },
-  "Featured Mentors": {
-    "message": "Featured Mentors",
-    "description": "Featured mentors"
-  },
-  "Nominate": {
-    "message": "Nominate",
-    "description": "Nominate"
-  },
-  "Director of Webmaker, Filmmaker": {
-    "message": "Director of Webmaker, Filmmaker",
-    "description": "Title for Brett Gaylor"
-  },
-  "Curriculum Lead, Webmaker": {
-    "message": "Curriculum Lead, Webmaker",
-    "description": "Title for Laura Hilliger"
-  },
-  "Code dude": {
-    "message": "Code dude",
-    "description": "Title for Gavin Suntop"
   },
   "Skills": {
     "message": "Skills",
@@ -186,10 +126,6 @@
   "By": {
     "message": "By",
     "description": "The byline for featured kits"
-  },
-  "Main menu": {
-    "message": "Main menu",
-    "description": "On mobile nav"
   },
   "Suggest your own links and resources": {
     "message": "This page is evolving! Suggest your own links and resources to add. <a href='/{{lang}}/get-involved'> Or get more involved</a>.</a>",
@@ -231,33 +167,9 @@
     "message": "You might also like",
     "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
   },
-  "Jump to": {
-    "message": "Jump to",
-    "description": "Heading for sidebar: Jump to... Discover, Make, Teach"
-  },
   "Submit a resource": {
     "message": "Submit a resource",
     "description": "Submit a teaching resource"
-  },
-  "a collaborative playlist": {
-    "message": "a collaborative playlist",
-    "description": ""
-  },
-  "a ping-pong tournament tracker": {
-    "message": "a ping-pong tournament tracker",
-    "description": ""
-  },
-  "a Moz-Structables creator": {
-    "message": "a Moz-Structables creator",
-    "description": ""
-  },
-  "a Quantified Self tracker": {
-    "message": "a Quantified Self tracker",
-    "description": ""
-  },
-  "a fundraising and events assistant": {
-    "message": "a fundraising and events assistant",
-    "description": ""
   },
   "and more!": {
     "message": "and more!",
@@ -274,14 +186,6 @@
   "Learn to Teach": {
     "message": "Learn to Teach",
     "description": "front page, webmaker training cta"
-  },
-  "Study at your own pace to teach web literacy, digital skills and open practices.": {
-    "message": "Study at your own pace to teach web literacy, digital skills and open practices.",
-    "description": "front page, webmaker training cta"
-  },
-  "Get training.": {
-    "message": "Get training.",
-    "description": "As in, 'Start training with Webmaker'. Found on front page, webmaker training cta"
   },
   "How are we doing?": {
     "message": "How are we doing?",
@@ -315,7 +219,7 @@
     "message": "When you file your bug, be sure to put “Feedback” in the Status Whiteboard field so we can find it.",
     "description": "explainer text for status whiteboard on Feedback"
   },
-  "Status Whiteboard": {
+  "Status Whiteboard:": {
     "message": "Status Whiteboard:",
     "description": "label for faux bugzilla field on Feedback"
   },
@@ -338,14 +242,6 @@
   "We’re always eager to learn how Webmaker is used": {
     "message": "We’re always eager to learn how Webmaker is used to teach the web to diverse audiences. If you have stories about using Webmaker in your community, please join the <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker newsgroup</a> and share your feedback by email. You can also participate in conversations on Twitter by replying to <a href=\"https://twitter.com/webmaker\">@webmaker</a> or using the hashtag <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
     "description": "copy encouraging people to get involved on Feedback"
-  },
-  "Build your first mobile app in seconds": {
-    "message": "Build your first mobile app in seconds",
-    "description": "Appmaker tagline"
-  },
-  "Try it out": {
-    "message": "Try it out",
-    "description": "Try using Appmaker"
   },
   "English only": {
     "message": "English only",
@@ -471,73 +367,41 @@
     "message": "Visit our <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">communications wiki</a> to find even more places you can reach us.",
     "description": "copy on bullet point on /getinvolved"
   },
-  "About Us": {
-    "message": "About Us",
-    "description": "text for /about title and nav description"
-  },
-  "Hello.": {
-    "message": "Hello.",
-    "description": ""
-  },
-  "Welcome to Webmaker-Mozilla": {
-    "message": "Welcome to Webmaker&mdash;a <a href='https://www.mozilla.org/mission/'>Mozilla</a> project dedicated to helping you create something amazing on the web.",
-    "description": "/about first section first sentence"
-  },
-  "Our tools, events and teaching guides": {
-    "message": "Our <a href=\"/{{ lang }}/tools\">tools</a>, <a href=\"/{{ lang }}/events\">events</a> and <a href=\"/{{ lang }}/teach\">teaching guides</a> allow webmakers to not only create the content that makes the web great, but &mdash; perhaps more importantly &mdash; understand how the web works.",
-    "description": "/about first section second sentence"
-  },
-  "With this knowledge": {
-    "message": "With this knowledge, we can make a web without limits. That’s the philosophy behind webmaker.org.",
-    "description": "/about first section third sentence"
-  },
-  "see how it works": {
-    "message": "We’ve built everything so you can see how it works, take it apart and remix it.",
-    "description": "/about first section fourth sentence"
-  },
-  "Enjoy!": {
-    "message": "Enjoy!",
-    "description": "/about first section last sentence"
-  },
-  "Our goal encourage millions of people": {
-    "message": "<strong>Our goal:</strong> encourage millions of people around the world to move beyond using the web to making it.",
-    "description": "‘our goal’ on /about"
-  },
   "Tools": {
     "message": "Tools",
     "description": "headline for section on /about"
   },
-  "Creating the web is the heart of our work": {
-    "message": "Creating the web is the heart of our work. We build tools like <a href=\"//thimble.webmaker.org/{{localeInfo.lang}}/\">Thimble</a>, <a href=\"//goggles.webmaker.org/{{localeInfo.lang}}/\">X-Ray Goggles</a> and <a href=\"//popcorn.webmaker.org/{{localeInfo.lang}}/\">Popcorn Maker</a> that allow people to create amazing content while  peeking under the hood of the internet, getting familiar with all the moving parts and getting their hands dirty with foundational elements like HTML, CSS and JavaScript.",
-    "description": "tools section copy on /about"
+  "Contribute to Webmaker": {
+    "message": "Contribute to Webmaker",
+    "description": "Contribute to Webmaker"
   },
-  "Teach &amp; Learning": {
-    "message": "Teach &amp; Learning",
-    "description": "headline for section on /about"
+  "Popcorn Maker": {
+    "message": "Popcorn Maker",
+    "description": "Popcorn Maker"
   },
-  "Learning through making": {
-    "message": "Learning through making is a core part of Mozilla's mission.",
-    "description": "/about Teach & Learning section first sentence"
+  "Popcorn Maker Desc": {
+    "message": "Create interactive videos.",
+    "description": "Create interactive videos."
   },
-  "We provide starter projects": {
-    "message": "We provide <a href=\"/{{ lang }}/resources\">starter projects</a>, <a href=\"/{{ lang }}/teach\">templates</a> and <a href=\"/{{ lang }}/guides\">event guides</a> to inspire teachers and learners at every level to create on the web and share their knowledge with others.",
-    "description": "/about Teach & Learning section second sentence"
+  "Thimble": {
+    "message": "Thimble",
+    "description": "Thimble"
   },
-  "We consider digital literacy": {
-    "message": "We consider <a href=\"/{{ lang }}/literacy\">web literacy</a> a critical skill just like reading, writing and math.",
-    "description": "/about Teach & Learning section third sentence"
+  "Thimble Desc": {
+    "message": "Make and publish your own web page.",
+    "description": "Make and publish your own web page."
   },
-  "when we understand the building blocks": {
-    "message": "After all, it’s only when we understand the building blocks of the web that we can have a hand in shaping its future.",
-    "description": "/about Teach & Learning section fourth sentence"
+  "Web Literacy": {
+    "message": "Web Literacy",
+    "description": "Web Literacy"
   },
-  "Community": {
-    "message": "Community",
-    "description": "headline for section on /about"
+  "Webmaker - Sign Up": {
+    "message": "Webmaker - Sign Up",
+    "description": "Webmaker - Sign Up"
   },
-  "We recognize that innovation can come from anyone": {
-    "message": "We recognize that innovation can come from anyone, anywhere, so we bring together people with diverse skills and backgrounds &mdash; teachers, filmmakers, <a href=\"http://opennews.org/\">journalists</a>, hackers, <a href=\"http://explorecreateshare.org\">youth</a>, artists, <a href=\"http://kaythaney.com/\">scientists</a> policy-makers and more  &mdash;  to collaborate online and at events around the globe.",
-    "description": "/about Community section copy"
+  "user_deleted": {
+    "message": "Your account has been deleted.",
+    "description": "Your account has been deleted."
   },
   "Make your own apps and websites": {
     "message": "Make your own apps and websites",
@@ -578,10 +442,6 @@
   "More than code": {
     "message": "More than code",
     "description": "third value on home page"
-  },
-  "Our tools, learning resources, and": {
-    "message": "Our tools, learning resources, and community networks empower everyone to become citizens of the web.",
-    "description": ""
   },
   "We believe that digital literacy is more than just learning to code.": {
     "message": "We believe that digital literacy is more than just learning to code. Our tools, learning resources and community networks empower everyone to become citizens of the web.",
@@ -638,10 +498,6 @@
   "Start Creating": {
     "message": "Start Creating",
     "description": "button text on footer on home"
-  },
-  "Search gallery": {
-    "message": "Search gallery",
-    "description": "Text for search field on gallery page"
   },
   "The web is yours": {
     "message": "The web is yours.",

@@ -95,8 +95,29 @@ module.exports = function (grunt) {
     gettext_finder: {
       files: ["views/*.html", "views/**/*.html"],
       options: {
-        pathToJSON: ["locale/en_US/*.json"],
+        pathToJSON: ["locale/en_US/webmaker.org.json"],
         ignoreKeys: grunt.file.readJSON("gtf-ignored-keys.json")
+      },
+    },
+    angular_i18n_finder: {
+      files: ["public/views/*.html", "public/views/**/*.html"],
+      options: {
+        format: "chromeI18n",
+        pathToJSON: ["locale/en_US/appmaker.json",
+                      "locale/en_US/badges.json",
+                      "locale/en_US/explore.json",
+                      "locale/en_US/feedback.json",
+                      "locale/en_US/make-your-own.json",
+                      "locale/en_US/mentor.json",
+                      "locale/en_US/music-video.json",
+                      "locale/en_US/private-eye.json",
+                      "locale/en_US/remix-your-school.json",
+                      "locale/en_US/resources.json",
+                      "locale/en_US/signup.json",
+                      "locale/en_US/tools.json",
+                      "locale/en_US/user-box.json"
+                    ],
+        ignoreKeys: grunt.file.readJSON("angular-i18n-ignoreKeys.json")
       },
     },
     imagemin: {

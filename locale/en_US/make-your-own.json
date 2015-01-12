@@ -1,0 +1,34 @@
+{
+  "activity": {
+    "message": "Activity",
+    "description": "Activity"
+  },
+  "teachingkit": {
+    "message": "Teaching Kit",
+    "description": "Teaching Kit"
+  },
+  "teachtemplateActivityDesc": {
+    "message": "Create a smaller, bite-sized activity",
+    "description": "Create a smaller, bite-sized activity"
+  },
+  "teachtemplateDesc": {
+    "message": "Create an <strong>entire lesson plan</strong> – or just a bite-sized <strong>individual activity</strong>, then share them with other educators and mentors around the world.",
+    "description": "teach template description"
+  },
+  "teachtemplateHeader": {
+    "message": "Make and share your own kits for teaching the web.<br>",
+    "description": "Make and share your own kits for teaching the web."
+  },
+  "teachtemplateHelpCopy": {
+    "message": "<strong>Need help?</strong> Check out our <a href='https://support.mozilla.org/kb/top-tips-creating-great-teaching-kits'>Top Tips</a> for creating great teaching resources.",
+    "description": ""
+  },
+  "teachtemplateKitDesc": {
+    "message": "Create a lesson plan or session outline",
+    "description": ""
+  },
+  "TeachTemplates": {
+    "message": "Teach Templates",
+    "description": ""
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "Email": {
+    "message": "Email",
+    "description": "Email"
+  },
+  "Emails": {
+    "message": "Emails (one per line, or comma-separated)",
+    "description": "Emails (one per line, or comma-separated)"
+  },
+  "Issue new badge(s)": {
+    "message": "Issue new badge(s)",
+    "description": "Issue new badge(s)"
+  },
+  "Comment": {
+    "message": "Comment",
+    "description": "Comment"
+  },
+  "Add a comment": {
+    "message": "Add a comment",
+    "description": "Add a comment"
+  },
+  "Revoke": {
+    "message": "Revoke",
+    "description": "Revoke"
+  },
+  "Badges Admin": {
+    "message": "Badges Admin",
+    "description": "Badges Admin"
+  },
+  "ChooseABadge": {
+    "message": "Choose a badge to issue it and see users who have received it.",
+    "description": "Choose a badge to issue it and see users who have received it."
+  },
+  "Date": {
+    "message": "Date",
+    "description": "Date"
+  },
+  "Application": {
+    "message": "Application",
+    "description": "Application"
+  }
+}

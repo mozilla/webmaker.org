@@ -1,0 +1,30 @@
+{
+  "admin": {
+    "message": "admin",
+    "description": "admin"
+  },
+  "supermentor": {
+    "message": "supermentor",
+    "description": "supermentor"
+  },
+  "My makes": {
+    "message": "My makes",
+    "description": "My makes"
+  },
+  "My Profile": {
+    "message": "My Profile",
+    "description": "My Profile"
+  },
+  "My Events": {
+    "message": "My Events",
+    "description": "My Events"
+  },
+  "My Settings": {
+    "message": "My Settings",
+    "description": "My Settings"
+  },
+  "Sign out": {
+    "message": "Sign out",
+    "description": "Sign out"
+  }
+}

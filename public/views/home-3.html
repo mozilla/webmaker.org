@@ -1,6 +1,6 @@
 <div ng-show="userDel" class="alert alert-info">{{ 'user_deleted' | i18n }}
 </div>
-<div id="home-splash">
+<div id="home-splash"  class="variant-3">
   <div class="home-blue home-panel">
     <div class="container">
       <div class="row">
@@ -28,6 +28,70 @@
       </div>
     </div>
   </div>
+  <section class="home-privacy-day">
+    <div class="container">
+      <figure class="privacy-eye privacy-svg">
+        <div class="front">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+            <style type="text/css">
+              .st0 {
+                fill: #1B1E27;
+              }
+
+              .st1 {
+                fill: #FFFFFF;
+              }
+
+              .st2 {
+                fill: #443F27;
+              }
+            </style>
+            <g id="eye-white">
+              <g>
+                <path class="st1" d="M68.6,43.5c0,15.5-12.5,28.1-28,28.1c-15.5,0-28.1-12.5-28.1-28c0-15.5,12.5-28.1,28-28.1C55.9,15.5,68.5,28,68.6,43.5"/>
+              </g>
+            </g>
+            <g id="iris-pupil">
+              <g>
+                <path class="st2" d="M57.5,43.6c0,9.4-7.6,17-17,17.1c-9.4,0-17-7.6-17.1-17c0-9.4,7.6-17,17-17.1C49.9,26.5,57.5,34.2,57.5,43.6" />
+                <path class="st0" d="M48.9,44.1c0,5-4,9-9,9c-5,0-9-4-9-9c0-5,4-9,9-9C44.8,35.1,48.9,39.1,48.9,44.1"/>
+                <path class="st1" d="M46.6,37.2c0,1.8-1.4,3.2-3.2,3.2c-1.8,0-3.2-1.4-3.2-3.2c0-1.8,1.4-3.2,3.2-3.2S46.6,35.4,46.6,37.2"/>
+              </g>
+            </g>
+            </svg>
+        </div>
+        <a href="/{{ lang }}/private-eye/?source=eyeball">
+          <figcaption class="back">
+            <h6>{{'Privacy matters' | i18n}}</h6>
+
+            <p>{{'Learn more' | i18n}}</p>
+          </figcaption>
+        </a>
+      </figure>
+      <figure class="privacy-eye privacy-gif">
+        <div class="front">
+          <div class="eyelid">
+            <div class="sclera">
+              <div class="iris">
+                <div class="pupil">
+                  &nbsp;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </figure>
+      <h2>{{'Get smart on privacy' | i18n}}</h2>
+
+      <h4>
+        {{'Understanding your privacy on the web' | i18n}}
+      </h4>
+      <a class="btn btn-primary" href="/{{ lang }}/private-eye/">
+        {{'Learn more' | i18n}}
+      </a>
+
+    </div>
+  </section>
   <section class="home-values">
     <div class="container">
       <h3>

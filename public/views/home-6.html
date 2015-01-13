@@ -1,22 +1,47 @@
 <div ng-show="userDel" class="alert alert-info">{{ 'user_deleted' | i18n }}
 </div>
-<div id="home-splash" class="variant-2">
-  <div class="home-blue home-panel">
+<div id="home-splash" class="variant-6">
+  <div class="home-green home-panel">
     <div class="container">
       <div class="row">
-        <section class="col-sm-12 col-md-7">
-          <h2>{{ 'The web is yours' | i18n }}</h2>
-
-          <p class="lead">
-            {{ 'Learn to build it with Mozilla.' | i18n }}
-          </p>
-
-          <form id="home-start-form">
-            <input type="email" class="home-email-field" placeholder="{{ 'Email address' | i18n }}"/>
-            <button class="btn btn-default">
-              {{ 'Start creating' | i18n }}
-            </button>
-          </form>
+        <section class="onboarding-section">
+          <div class="onboarding-step-1">
+            <div class="onboarding-text-content">
+              <div>{{ 'I ' | i18n }}<img src="/img/home/Heart.png"></div>
+              <div class="onboarding-input-container">
+                <input type="text" class="onboarding-input"></input>
+                <div class="onboaring-input-underline"></div>
+              </div>
+            </div>
+            <div class="onboarding-tooltip-container">
+              <img class="onboarding-arrow" src="/img/home/arrow.svg">
+              <span class="onboarding-tooltip">{{ 'What do you love on the web?' | i18n }}</span>
+            </div>
+            <button class="onboarding-next-button btn btn-default">{{ 'next' | i18n }}</button>
+          </div>
+          <div class="onboarding-step-2 hidden">
+            <div class="onboarding-published-content">
+              <img src="/img/home/HeartPreview@2x.png"/>
+              <div class="onboarding-published-text"></div>
+            </div>
+            <div class="onboarding-left-panel">
+              <span class="hidden">
+                <h2>{{ 'Good start!' | i18n }}</h2>
+                <div class="onboarding-final-message">{{ 'Now, learn to craft and share more of your favorite things on the web.' | i18n }}</div>
+              </span>
+              <form id="home-start-form">
+                <input type="email" class="home-email-field" placeholder="{{ 'Email address' | i18n }}"/>
+                <button class="btn btn-default">
+                  {{ 'Start creating' | i18n }}
+                </button>
+                <div class="onboarding-checkbox-container">
+                  <input id="onboarding-checkbox" type="checkbox"/>
+                  <label for="onboarding-checkbox" bind-unsafe-html="'Mozilla privacy policy agreement' | i18n" ></label>
+                </div>
+              </form>
+            </div>
+          </div>
+          
         </section>
       </div>
     </div>
@@ -48,14 +73,14 @@
               <h4>{{ 'More than code' | i18n }}</h4>
 
               <p>
-                {{ 'We believe that digital literacy is more than just learning to code.' | i18n }}
+                {{ 'We believe that digital literacy is more than just learning to code.' | i18n}}
               </p>
             </li>
           </ul>
         </div>
         <div class="col-sm-4 col-sm-offset-1 col-md-7 col-md-offset-0 col-lg-6">
           <figure class="home-globe">
-            <img src="/img/home/yellow-earth.svg" alt="Globe" height="300" width="300"/>
+            <img src="/img/home/lightgrey-earth.svg" alt="Globe" height="300" width="300"/>
           </figure>
         </div>
       </div>
@@ -66,7 +91,7 @@
       <h3>{{ 'Jump right in' | i18n }}</h3>
 
       <p class="lead">
-        {{ 'Discover how you can build and share the web.' | i18n }}
+        {{ 'Discover how you can build and share the web.' | i18n}}
       </p>
       <ul class="row">
         <li class="col-sm-4">

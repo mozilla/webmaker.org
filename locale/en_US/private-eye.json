@@ -54,5 +54,13 @@
   "Find out more": {
     "message": "Find out more",
     "description": "Find out more"
+  },
+  "Privacy matters.": {
+    "message": "Privacy matters.",
+    "description": "headline on footer of private-eye"
+  },
+  "Learn more about what you can do": {
+    "message": "Learn more about what you can do to protect your privacy online.",
+    "description": "headline on footer of private-eye"
   }
 }

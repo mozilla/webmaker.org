@@ -15,6 +15,18 @@
     "message": "Mobile apps made easy",
     "description": "A pithy phrase about Appmaker"
   },
+  "students": {
+    "message": "students",
+    "description": "students"
+  },
+  "business": {
+    "message": "business",
+    "description": "business"
+  },
+  "friends": {
+    "message": "friends",
+    "description": "friends"
+  },
   "Appmaker Desc": {
     "message": "Make apps for your phone.",
     "description": "A very short explanation for what Appmaker is"
@@ -23,7 +35,7 @@
     "message": "Discover Appmaker",
     "description": "Title for Appmaker landing page"
   },
-  "Don't know where to start?": {
+  "Dont know where to start?": {
     "message": "Looking for an easy way to get started? Remix one of these templates to make your very own app.",
     "description": "Catch the imagination of users at the top of the page."
   },

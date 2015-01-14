@@ -56,14 +56,15 @@
   },
   "devDependencies": {
     "colors": "0.6.2",
+    "grunt-angular-i18n-finder": "0.0.6",
+    "grunt-contrib-concat": "^0.4.0",
     "grunt-contrib-imagemin": "0.3.0",
     "grunt-contrib-jshint": "0.7.1",
-    "grunt-gettext-finder": "0.0.2",
-    "grunt-jsbeautifier": "0.2.2",
-    "grunt-shell": "0.6.1",
-    "grunt-contrib-concat": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "^0.4.13",
-    "grunt-jsonlint": "^1.0.4"
+    "grunt-gettext-finder": "0.0.2",
+    "grunt-jsbeautifier": "0.2.2",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-shell": "0.6.1"
   }
 }

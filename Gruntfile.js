@@ -206,7 +206,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean', 'jshint', 'jsonlint', 'imagemin']);
 
   // Verify code (Read only)
-  grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint', 'gettext_finder', 'jsonlint']);
+  grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint', 'gettext_finder', 'jsonlint', 'angular_i18n_finder']);
 
   // Run through all pages and test for JS errors
   // * Requires global install of PhantomJS *

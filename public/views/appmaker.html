@@ -3,7 +3,7 @@
     <carousel interval="5000">
       <slide class="slide" ng-repeat="audience in audiences" active="slide.active">
         <div class="container text-center">
-          <img ng-src="{{audience.image}}" alt="{{audience.title | i18n}}">{{setActiveSlide(slide.active, $index)}}
+          <img ng-src="{{audience.image}}" alt="{{ audience.title | i18n }}">{{setActiveSlide(slide.active, $index)}}
         </div>
       </slide>
       <div id="front-phone-container">
@@ -13,24 +13,24 @@
       </div>
     </carousel>
     <div class="container text-center">
-      <h1><span bind-unsafe-html="'Make an app for your...' | i18n">{{'Make an app for your...' | i18n}}</span>.</h1>
-      <p class="lead" id="sub-heading">{{'Appmaker Description' | i18n}}</p>
+      <h1><span bind-unsafe-html="'Make an app for your...' | i18n">{{ 'Make an app for your...' | i18n }}</span>.</h1>
+      <p class="lead" id="sub-heading">{{ 'Appmaker Description' | i18n }}</p>
       <p>
-        <a href="#starter-apps" class="btn btn-success btn-lg">{{'Pick a template' | i18n}}</a>
-        <a href="//apps.webmaker.org/{{lang}}/designer" class="btn btn-info btn-lg">{{'Start from scratch' | i18n}}</a>
+        <a href="#starter-apps" class="btn btn-success btn-lg">{{ 'Pick a template' | i18n }}</a>
+        <a href="//apps.webmaker.org/{{lang}}/designer" class="btn btn-info btn-lg">{{ 'Start from scratch' | i18n }}</a>
       </p>
     </div>
   </section>
   <section name="starter-apps" id="starter-apps">
     <div class="container">
-      <p class="lead text-center">{{'Don\'t know where to start?' | i18n}}</p>
+      <p class="lead text-center">{{ 'Dont know where to start?' | i18n }}</p>
       <div class="row">
         <div class="col-sm-4" ng-repeat="make in makes">
           <div class="make sample-make">
             <div class="thumbnail-wrapper" ng-style="{'background-image':'url('+ make.image + ')'}"></div>
             <div class="caption">
-              <h3>{{make.title | i18n}}</h3>
-              <p>{{(make.title + ' Description') | i18n}}</p>
+              <h3>{{ make.title | i18n }}</h3>
+              <p>{{ (make.title + ' Description') | i18n }}</p>
               <p>
                 <a href="{{make.remixUrl}}" class="btn btn-primary" role="button">
                   <span class="fa fa-code-fork"></span> Remix
@@ -48,39 +48,39 @@
       </div>
     </div>
     <div id="gallery-actions">
-      <a class="load-more" href="/{{lang}}/gallery/list/53fe24bc21d4817b6c000aad">{{'See more' | i18n}} <span class="icon-angle-down"></span></a>
+      <a class="load-more" href="/{{lang}}/gallery/list/53fe24bc21d4817b6c000aad">{{ 'See more' | i18n }} <span class="icon-angle-down"></span></a>
     </div>
   </section>
   <section>
     <div class="container">
       <div class="row">
         <div class="col-sm-4 text-center">
-          <img class="maker-party-logo" src="/img/appmaker/teach.svg" alt="{{'Teach' | i18n}}">
-          <h2>{{'Teach' | i18n}}</h2>
-          <p>{{'Teach Description' | i18n}}</p>
+          <img class="maker-party-logo" src="/img/appmaker/teach.svg" alt="{{ 'Teach' | i18n }}">
+          <h2>{{ 'Teach' | i18n }}</h2>
+          <p>{{ 'Teach Description' | i18n }}</p>
           <p>
             <a href="https://jess.makes.org/thimble/MTMyMzM2ODQ0OA==/mobile-design-kit" class="btn btn-info" role="button">
-              {{'See how' | i18n}}
+              {{ 'See how' | i18n }}
             </a>
           </p>
         </div>
         <div class="col-sm-4 text-center">
-          <img class="maker-party-logo" src="/img/appmaker/contribute.svg" alt="{{'Contribute' | i18n}}">
-          <h2>{{'Contribute' | i18n}}</h2>
-          <p>{{'Contribute Description' | i18n}}</p>
+          <img class="maker-party-logo" src="/img/appmaker/contribute.svg" alt="{{ 'Contribute' | i18n }}">
+          <h2>{{ 'Contribute' | i18n }}</h2>
+          <p>{{ 'Contribute Description' | i18n }}</p>
           <p>
             <a href="//github.com/mozilla-appmaker/appmaker/wiki/How-to-Contribute" class="btn btn-info" role="button">
-              {{'Get started' | i18n}}
+              {{ 'Get started' | i18n }}
             </a>
           </p>
         </div>
         <div class="col-sm-4 text-center">
-          <img class="maker-party-logo" src="/img/appmaker/imagine.svg" alt="{{'Imagine' | i18n}}">
-          <h2>{{'Imagine' | i18n}}</h2>
-          <p>{{'Imagine Description' | i18n}}</p>
+          <img class="maker-party-logo" src="/img/appmaker/imagine.svg" alt="{{ 'Imagine' | i18n }}">
+          <h2>{{ 'Imagine' | i18n }}</h2>
+          <p>{{ 'Imagine Description' | i18n }}</p>
           <p>
             <a href="//mozilla.github.io/mobile-opportunity/" class="btn btn-info" role="button">
-              {{'Learn more' | i18n}}
+              {{ 'Learn more' | i18n }}
             </a>
           </p>
         </div>

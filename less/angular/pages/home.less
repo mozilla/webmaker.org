@@ -333,7 +333,7 @@
     div {
       display: inline-block;
       width: 100%;
-      @media screen and (min-width: @screen-xs-min) {
+      @media screen and (min-width: @screen-sm-min) {
         width: auto;
       }
     }
@@ -462,22 +462,22 @@
       .onboarding-text-content {
         font-family: "Fira Sans";
         font-size: 6.4rem;
+
         font-weight: bold;
         line-height: 1;
         display: block;
         div {
-          @media screen and (min-width: @screen-xs-min) {
+          @media screen and (min-width: @screen-sm-min) {
             float: left;
           }
         }
         .onboarding-input-container {
           position: relative;
           height: 6.1rem;
-
           width: 26.3rem;
           @media screen and (min-width: @screen-xs-min) {
             width: 30.3rem;
-            margin-left: 4.2rem;
+            margin-left: 1rem;
           }
           @media screen and (min-width: @screen-sm-min) {
             width: 57.3rem;
@@ -493,9 +493,17 @@
             background: transparent;
             width: 100%;
             text-align: center;
+            height: 10.1rem;
+            margin-top: -2.2rem;
+            font-size: 3.4rem;
 
-            @media screen and (min-width: @screen-xs-min) {
+            @media screen and (min-width: @screen-sm-min) {
               text-align: left;
+            }
+
+            @media screen and (min-width: @screen-sm-min) {
+              font-size: 6.4rem;
+              margin-top: -9rem;
             }
           }
           .onboaring-input-underline {
@@ -511,7 +519,7 @@
       }
       .onboarding-next-button {
         margin-top: 3.4rem;
-        @media screen and (min-width: @screen-xs-min) {
+        @media screen and (min-width: @screen-sm-min) {
           float: right;
           margin-top: 1.8rem;
         }

@@ -143,7 +143,7 @@ angular
         function inputTextCharacter() {
           input.val(input.val() + inputText[currentLength++]);
           if (currentLength < inputText.length) {
-            timeout = setTimeout(inputTextCharacter, 500);
+            timeout = setTimeout(inputTextCharacter, 200);
           } else {
             $('.onboarding-tooltip-container').addClass("fade-in");
           }

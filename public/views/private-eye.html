@@ -59,18 +59,18 @@
       </div>
     </div>
   </div>
-  <footer class="wiz-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2 col-md-offset-4">
-          <img src="/img/remix_your_school/img-badge-Remix.svg" alt="remix your school badge" >
-        </div>
-        <div class="col-md-5">
-          <h2>{{ 'Claim the Privacy Badge' | i18n }}</h2>
-          <p bind-unsafe-html="'wizard-footer-badge' | i18n"></p>
-          <a href="/badges/privacy-maker" class="btn btn-success wiz-footer-btn">{{ 'Find out more' | i18n }}</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 </div>
+<footer class="private-eye-footer">
+  <h2>
+    {{ 'Privacy matters.' | i18n }}
+  </h2>
+
+  <p>
+    {{'Learn more about what you can do' | i18n }}
+  </p>
+
+  <button class="btn btn-default" wm-join-webmaker>
+    {{ 'Join Webmaker' | i18n }}
+  </button>
+</footer>
+<div ng-include="'/views/partials/footer.html'"></div>

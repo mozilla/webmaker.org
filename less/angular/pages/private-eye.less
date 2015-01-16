@@ -1,0 +1,44 @@
+.private-eye-footer {
+  text-align: center;
+  padding-bottom: 6rem;
+  h2 {
+    font-size: 4.4rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 200;
+
+  }
+  button {
+    width: 100%;
+    position: relative;
+    margin: 1.6rem 0 0 0;
+    padding: 1.3rem 1.5rem 1.1rem 1.5rem;
+    background: @yellow;
+    color: #4B5B62;
+    border: transparent;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.4rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    vertical-align: baseline;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    line-height: 1.42857;
+    @media screen and (min-width: @screen-xs-min) {
+      width: auto;
+      margin: 0 0 0 1rem;
+    }
+    &:hover, &:focus {
+      background-color: @yellow;
+      box-shadow: 0 0.2rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255, 255, 255, 0.5);
+      top: 0.2rem;
+    }
+
+    &:active {
+      background-color: @yellow;
+      box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+      top: 0.4rem;
+    }
+  }
+}

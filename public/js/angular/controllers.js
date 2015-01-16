@@ -126,7 +126,8 @@ angular
         }
         $(window).resize(setFontSize);
 
-        function showPageTwo(text) {
+        $('.onboarding-next-button').click(function () {
+          var text = input.val();
           $('.onboarding-step-1').addClass("hidden");
           $('.onboarding-step-2').removeClass("hidden");
           $('.home-panel').addClass('home-blue');
@@ -135,11 +136,12 @@ angular
             setFontSize();
             publishedText.text(text);
           }
-        }
-        $('.onboarding-next-button').click(function () {
-          showPageTwo(input.val());
         });
 
+        function cancelInput() {
+          clearTimeout(timeout);
+          $('.onboarding-tooltip-container').addClass("fade-in");
+        }
         function inputTextCharacter() {
           input.val(input.val() + inputText[currentLength++]);
           if (currentLength < inputText.length) {
@@ -148,16 +150,10 @@ angular
             $('.onboarding-tooltip-container').addClass("fade-in");
           }
         }
-        input.click(function () {
-          clearTimeout(timeout);
-          $('.onboarding-tooltip-container').addClass("fade-in");
-        });
+        input.click(cancelInput);
+        input.on("input", cancelInput);
         input.focus();
         timeout = setTimeout(inputTextCharacter, 1000);
-        if ($routeParams.auth) {
-          clearTimeout(timeout);
-          showPageTwo();
-        }
       }
 
       if ($routeParams.variant === "6") {

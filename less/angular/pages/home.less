@@ -36,7 +36,7 @@
   }
 }
 
-.home-blue, .home-values, .home-jump-in, .home-footer {
+.home-panel, .home-values, .home-jump-in, .home-footer {
   padding: 5rem 0;
   .lead {
     text-align: center;
@@ -78,6 +78,24 @@
 }
 
 .home-blue {
+  @media @standard-def {
+    background-image: url('/img/home/background.jpg');
+  }
+  @media @retina {
+    background-image: url('/img/home/background@2x.jpg');
+  }
+}
+
+.home-green {
+  @media @standard-def {
+    background-image: url('/img/home/green-background.jpg');
+  }
+  @media @retina {
+    background-image: url('/img/home/green-background@2x.png');
+  }
+}
+
+.home-panel {
   padding: 6rem 0;
   @media screen and (min-width: @screen-md-min) {
     padding: 10rem 0;
@@ -86,12 +104,6 @@
     padding: 12rem 0;
   }
   color: @white;
-  @media @standard-def {
-    background-image: url('/img/home/background.jpg');
-  }
-  @media @retina {
-    background-image: url('/img/home/background@2x.jpg');
-  }
   background-size: cover;
   text-align: center;
   @media screen and (min-width: @screen-sm-min) {
@@ -287,12 +299,12 @@
 // A/B styles
 
 #page-home {
-  .variant-2 .home-blue {
+  .variant-2 .home-panel {
     h2 {
       font-size: 6.2rem;
     }
   }
-  .variant-4 .home-blue {
+  .variant-4 .home-panel {
     h2 {
       font-size: 6.2rem;
       max-width: 100%;
@@ -304,6 +316,206 @@
       max-width: 100%;
       @media screen and (min-width: @screen-md-min) {
         max-width: 42rem;
+      }
+    }
+  }
+  .variant-6 .home-panel {
+    padding: 0;
+    .container {
+      width: 100%;
+      padding: 0;
+    }
+    text-align: center;
+    .onboarding-section {
+      padding: 0;
+      margin: 0;
+    }
+    div {
+      display: inline-block;
+      width: 100%;
+      @media screen and (min-width: @screen-xs-min) {
+        width: auto;
+      }
+    }
+    .onboarding-step-2 {
+      padding: 0 2rem;
+      margin-bottom: 2rem;
+      @media screen and (min-width: @screen-xs-min) {
+        padding: 0 5rem;
+        width: 52.2rem;
+      }
+      @media screen and (min-width: @screen-md-min) {
+        width: auto;
+        padding: 5rem;
+      }
+      .onboarding-published-content {
+        img {
+          visibility: hidden;
+        }
+        font-size: 0.08rem;
+        .onboarding-published-text {
+          position: absolute;
+          font-family: "Fira Sans";
+          font-size: 6.4rem;
+          font-weight: bold;
+          line-height: 1;
+          left: 22%;
+          top: 43.5%;
+          right: 10%;
+          margin: 0;
+          text-align: left;
+          width: auto;
+          bottom: 46%;
+        }
+        position: relative;
+        background: url('/img/home/HeartPreview@2x.png');
+        background-size: cover;
+        width: 100%;
+        @media screen and (min-width: @screen-md-min) {
+          width: 32.2rem;
+        }
+      }
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+      .onboarding-checkbox-container {
+        position: relative;
+        text-align: left;
+
+        @media screen and (min-width: @screen-xs-min) {
+          display: block;
+        }
+        input {
+          cursor: pointer;
+        }
+        div,
+        label {
+          position: absolute;
+          width: auto;
+          padding: 0 2.3rem 0 1rem;
+          margin: 0;
+          font-size: 1.3rem;
+          @media screen and (min-width: @screen-xs-min) {
+            font-size: 1.7rem;
+          }
+        }
+      }
+      form {
+        margin-top: 3rem;
+      }
+      div {
+        margin: 3rem 0;
+        font-size: 1.7rem;
+        &.onboarding-final-message {
+          margin-top: 1rem;
+          margin: 0;
+        }
+        &.onboarding-left-panel {
+          margin: 0;
+          @media screen and (min-width: @screen-xs-min) {
+            text-align: left;
+            width: 42.2rem;
+          }
+          @media screen and (min-width: @screen-md-min) {
+            float: left;
+            margin-right: 15rem;
+          }
+        }
+      }
+    }
+    .onboarding-step-1 {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+      @media screen and (min-width: @screen-xs-min) {
+        padding-top: 13rem;
+        padding-bottom: 6.5rem;
+      }
+      .onboarding-tooltip-container {
+        opacity: 0;
+        transition: opacity 1s;
+        &.fade-in {
+          opacity: 1;
+        }
+      }
+      .onboarding-tooltip {
+        font-size: 2.1rem;
+        width: auto;
+        margin-top: 3rem;
+        color: #FFCD36;
+        font-weight: bold;
+        display: inline-block;
+        width: 19rem;
+
+        @media screen and (min-width: @screen-sm-min) {
+          width: auto;
+        }
+      }
+      .onboarding-arrow {
+        margin-top: -9.8rem;
+
+        @media screen and (min-width: @screen-sm-min) {
+          margin-top: -3.8rem;
+          margin-right: 1rem;
+        }
+      }
+      .onboarding-text-content {
+        font-family: "Fira Sans";
+        font-size: 6.4rem;
+        font-weight: bold;
+        line-height: 1;
+        display: block;
+        div {
+          @media screen and (min-width: @screen-xs-min) {
+            float: left;
+          }
+        }
+        .onboarding-input-container {
+          position: relative;
+          height: 6.1rem;
+
+          width: 26.3rem;
+          @media screen and (min-width: @screen-xs-min) {
+            width: 30.3rem;
+            margin-left: 4.2rem;
+          }
+          @media screen and (min-width: @screen-sm-min) {
+            width: 57.3rem;
+          }
+          @media screen and (min-width: @screen-md-min) {
+            width: 67.3rem;
+          }
+          @media screen and (min-width: @screen-lg-min) {
+            width: 87.3rem;
+          }
+          .onboarding-input {
+            border: none;
+            background: transparent;
+            width: 100%;
+            text-align: center;
+
+            @media screen and (min-width: @screen-xs-min) {
+              text-align: left;
+            }
+          }
+          .onboaring-input-underline {
+            position: absolute;
+            height: 1px;
+            background: white;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.7;
+          }
+        }
+      }
+      .onboarding-next-button {
+        margin-top: 3.4rem;
+        @media screen and (min-width: @screen-xs-min) {
+          float: right;
+          margin-top: 1.8rem;
+        }
+        width: 9rem;
       }
     }
   }

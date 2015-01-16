@@ -518,5 +518,33 @@
   "The global Mozilla community wants everyone to be a citizen of the web": {
     "message": "The global Mozilla community wants everyone to be a citizen of the web—including you!",
     "description": "subhead on home"
+  },
+  "I ": {
+    "message": "I ",
+    "description": "I heart"
+  },
+  "What do you love on the web?": {
+    "message": "What do you love on the web?",
+    "description": "What do you love on the web?"
+  },
+  "next": {
+    "message": "next",
+    "description": "next button"
+  },
+  "Good start!": {
+    "message": "Good start!",
+    "description": "Good start!"
+  },
+  "Now, learn to craft and share more of your favorite things on the web.": {
+    "message": "Now, learn to craft and share more of your favorite things on the web.",
+    "description": "Now, learn to craft and share more of your favorite things on the web."
+  },
+  "Mozilla privacy policy agreement": {
+    "message": "I agree to Mozilla Webmaker's <a href=\"https://webmaker.org/terms\">Terms</a> and <a href=\"https://webmaker.org/privacy\">Privacy Policy</a>.",
+    "description": "Mozilla privacy policy agreement"
+  },
+  "sharing": {
+    "message": "sharing",
+    "description": "onboarding interactive text input"
   }
 }

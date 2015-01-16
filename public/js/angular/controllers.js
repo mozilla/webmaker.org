@@ -99,8 +99,8 @@ angular
       ];
     }
   ])
-  .controller('homeController', ['$rootScope', '$scope', 'wmNav', '$routeParams', 'CONFIG',
-    function ($rootScope, $scope, wmNav, $routeParams, CONFIG) {
+  .controller('homeController', ['$rootScope', '$scope', 'wmNav', '$routeParams', 'localize', 'CONFIG',
+    function ($rootScope, $scope, wmNav, $routeParams, localize, CONFIG) {
       wmNav.page('home');
       wmNav.section('');
       $scope.userDel = $routeParams.userDel;
@@ -111,10 +111,62 @@ angular
         $rootScope.wmCreateUser();
       }
 
-      $('#home-start-form').on('submit', function () {
-        $rootScope.joinWebmaker($('.home-email-field').val());
-      });
+      function onboardingExperience() {
+        $('#home-start-form').on('submit', function () {
+          $rootScope.joinWebmaker($('.home-email-field').val(), "", $('#onboarding-checkbox').prop('checked'));
+        });
+        var input = $('.onboarding-input');
+        var inputText = localize.getLocalizedString('sharing');
+        var currentLength = 0;
+        var publishedText = $('.onboarding-published-text');
+        var timeout;
 
+        function setFontSize() {
+          publishedText.css('font-size', publishedText.height() + "em");
+        }
+        $(window).resize(setFontSize);
+
+        function showPageTwo(text) {
+          $('.onboarding-step-1').addClass("hidden");
+          $('.onboarding-step-2').removeClass("hidden");
+          $('.home-panel').addClass('home-blue');
+          $('.home-panel').removeClass('home-green');
+          if (text) {
+            setFontSize();
+            publishedText.text(text);
+          }
+        }
+        $('.onboarding-next-button').click(function () {
+          showPageTwo(input.val());
+        });
+
+        function inputTextCharacter() {
+          input.val(input.val() + inputText[currentLength++]);
+          if (currentLength < inputText.length) {
+            timeout = setTimeout(inputTextCharacter, 500);
+          } else {
+            $('.onboarding-tooltip-container').addClass("fade-in");
+          }
+        }
+        input.click(function () {
+          clearTimeout(timeout);
+          $('.onboarding-tooltip-container').addClass("fade-in");
+        });
+        input.focus();
+        timeout = setTimeout(inputTextCharacter, 1000);
+        if ($routeParams.auth) {
+          clearTimeout(timeout);
+          showPageTwo();
+        }
+      }
+
+      if ($routeParams.variant === "6") {
+        onboardingExperience();
+      } else {
+        $('#home-start-form').on('submit', function () {
+          $rootScope.joinWebmaker($('.home-email-field').val());
+        });
+      }
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$routeParams',

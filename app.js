@@ -350,7 +350,7 @@ app.get("/healthcheck", routes.api.healthcheck);
 app.get('/signup/:auth?', routes.angular);
 
 // Angular
-app.get('/', routes.angular);
+app.get('/', middleware.homePageRedirect, routes.angular);
 app.get('/resources/:section?/:competency?', routes.angular);
 app.get("/tools", routes.angular);
 app.get("/remix-your-school", routes.angular);
@@ -363,7 +363,7 @@ app.get("/about", routes.angular);
 
 app.get("/make-your-own", routes.angular);
 app.get('/madewithcode-*', routes.angular);
-app.get('/home-:variant', routes.angular);
+app.get('/home-:variant', middleware.homePageRedirect, routes.angular);
 
 app.get('/explore', routes.gallery({
   layout: "index",

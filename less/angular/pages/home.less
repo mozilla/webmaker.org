@@ -432,6 +432,7 @@
         padding-bottom: 3.6rem;
       }
       .onboarding-tooltip-container {
+        position: relative;
         opacity: 0;
         transition: opacity 1s;
         &.fade-in {
@@ -445,19 +446,18 @@
         color: #FFCD36;
         font-weight: bold;
         display: inline-block;
-        width: 19rem;
+        max-width: 19rem;
+        margin-left: 2.6rem;
 
         @media screen and (min-width: @screen-sm-min) {
           width: auto;
+          margin-left: 3rem;
+          max-width: none;
         }
       }
       .onboarding-arrow {
-        margin-top: -9.8rem;
-
-        @media screen and (min-width: @screen-sm-min) {
-          margin-top: -3.8rem;
-          margin-right: 1rem;
-        }
+        position: absolute;
+        top: 1rem;
       }
       .onboarding-text-content {
         font-family: "Fira Sans";
@@ -474,19 +474,19 @@
         .onboarding-input-container {
           position: relative;
           height: 6.1rem;
-          width: 26.3rem;
+          max-width: 26.3rem;
           @media screen and (min-width: @screen-xs-min) {
-            width: 30.3rem;
+            max-width: 30.3rem;
             margin-left: 1rem;
           }
           @media screen and (min-width: @screen-sm-min) {
-            width: 57.3rem;
+            max-width: 57.3rem;
           }
           @media screen and (min-width: @screen-md-min) {
-            width: 67.3rem;
+            max-width: 67.3rem;
           }
           @media screen and (min-width: @screen-lg-min) {
-            width: 87.3rem;
+            max-width: 87.3rem;
           }
           .onboarding-input {
             border: none;

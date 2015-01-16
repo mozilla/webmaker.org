@@ -142,6 +142,7 @@ angular
           clearTimeout(timeout);
           $('.onboarding-tooltip-container').addClass("fade-in");
         }
+
         function inputTextCharacter() {
           input.val(input.val() + inputText[currentLength++]);
           if (currentLength < inputText.length) {

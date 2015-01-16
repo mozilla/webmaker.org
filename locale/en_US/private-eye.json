@@ -43,10 +43,6 @@
     "message": "Nice work! Now you know more about protecting your privacy online",
     "description": "Nice work! Now you know more about protecting your privacy online"
   },
-  "Claim the Privacy Badge": {
-    "message": "Claim the Privacy Badge",
-    "description": "Claim the Privacy Badge"
-  },
   "wizard-footer-badge": {
     "message": "Once you complete this activity, submit a link to what you made to claim the <a href=\"\">Remix badge.</a> You earned it!",
     "description": "footer section for activity completion"

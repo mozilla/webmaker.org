@@ -138,7 +138,7 @@ angular
           }
         });
 
-        function cancelInput() {
+        function cancelAutoInput() {
           clearTimeout(timeout);
           $('.onboarding-tooltip-container').addClass("fade-in");
         }
@@ -151,8 +151,11 @@ angular
             $('.onboarding-tooltip-container').addClass("fade-in");
           }
         }
-        input.click(cancelInput);
-        input.on("input", cancelInput);
+        input.click(function () {
+          input[0].setSelectionRange(0, input.val().length);
+          cancelAutoInput();
+        });
+        input.on("input", cancelAutoInput);
         input.focus();
         timeout = setTimeout(inputTextCharacter, 1000);
       }

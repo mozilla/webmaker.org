@@ -158,7 +158,11 @@ angular
       }
 
       if ($routeParams.variant === "6") {
-        onboardingExperience();
+        if (localize.resourceFileLoaded) {
+          onboardingExperience();
+        } else {
+          $rootScope.$on('localizeResourcesUpdated', onboardingExperience);
+        }
       } else {
         $('#home-start-form').on('submit', function () {
           $rootScope.joinWebmaker($('.home-email-field').val());

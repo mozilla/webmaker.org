@@ -57,7 +57,8 @@ define(['jquery', 'url-template', 'selectize'], function ($, urlTemplate) {
   });
 
   var auth = new WebmakerLogin({
-    csrfToken: $('meta[name="csrf-token"]').attr('content')
+    csrfToken: $('meta[name="csrf-token"]').attr('content'),
+    showCTA: true
   });
 
   joinEl.click(function () {

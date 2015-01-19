@@ -30,7 +30,8 @@ define(['jquery', 'social', 'localized'],
         url = $body.data("url"),
         csrfToken = $("meta[name='csrf-token']").attr("content"),
         webmakerAuth = new WebmakerLogin({
-          csrfToken: $('meta[name="csrf-token"]').attr('content')
+          csrfToken: $('meta[name="csrf-token"]').attr('content'),
+          showCTA: true
         });
 
       webmakerAuth.on('verified', function (user) {

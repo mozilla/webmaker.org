@@ -140,15 +140,13 @@ angular
 
         function cancelAutoInput() {
           clearTimeout(timeout);
-          $('.onboarding-tooltip-container').addClass("fade-in");
+          $('.onboarding-tooltip-container').removeClass("fade-in");
         }
 
         function inputTextCharacter() {
           input.val(input.val() + inputText[currentLength++]);
           if (currentLength < inputText.length) {
             timeout = setTimeout(inputTextCharacter, 200);
-          } else {
-            $('.onboarding-tooltip-container').addClass("fade-in");
           }
         }
         input.click(function () {
@@ -156,6 +154,9 @@ angular
           cancelAutoInput();
         });
         input.on("input", cancelAutoInput);
+        input.on("blur", function () {
+          $('.onboarding-tooltip-container').addClass("fade-in");
+        });
         input.focus();
         timeout = setTimeout(inputTextCharacter, 1000);
       }

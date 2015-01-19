@@ -417,7 +417,7 @@
           margin: 0;
           @media screen and (min-width: @screen-xs-min) {
             text-align: left;
-            width: 42.3rem;
+            width: 43.3rem;
           }
           @media screen and (min-width: @screen-md-min) {
             float: left;
@@ -434,7 +434,6 @@
         padding-bottom: 3.6rem;
       }
       .onboarding-tooltip-container {
-        position: relative;
         opacity: 0;
         transition: opacity 1s;
         &.fade-in {
@@ -442,6 +441,7 @@
         }
       }
       .onboarding-tooltip {
+        position: relative;
         font-size: 2.1rem;
         width: auto;
         margin-top: 3rem;
@@ -459,12 +459,13 @@
       }
       .onboarding-arrow {
         position: absolute;
-        top: 1rem;
+        top: -1.9rem;
+        left: -3rem;
       }
       .onboarding-text-content {
         font-family: "Fira Sans";
         font-size: 6.4rem;
-
+        min-height: 6.4rem;
         font-weight: bold;
         line-height: 1;
         display: block;

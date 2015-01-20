@@ -158,7 +158,7 @@ angular
           $('.onboarding-tooltip-container').addClass("fade-in");
         });
         input.focus();
-        timeout = setTimeout(inputTextCharacter, 1000);
+        timeout = setTimeout(inputTextCharacter, 2000);
       }
 
       if ($routeParams.variant === "6") {

@@ -545,7 +545,7 @@
 @privacyyellow: #efefef;
 
 .home-privacy-day {
-  background: @lightgrey;
+  background: darken(@white, 6.25%);
   color: @privacyred;
   padding: 5rem 0 6rem;
   text-align: center;
@@ -709,6 +709,20 @@
 }
 
 @media screen and (min-width: @screen-md-min) {
+  .home-privacy-day {
+    padding: 4.5rem 0 5rem;
+
+    h2 {
+      margin: 0;
+    }
+    h4 {
+      margin-top: 1.4rem;
+      font-weight: 400;
+    }
+    .btn-primary {
+      margin-top: 2rem;
+    }
+  }
   .privacy-gif {
     display: none;
   }

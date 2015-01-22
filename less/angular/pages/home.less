@@ -609,6 +609,17 @@
     }
   }
 
+  svg {
+    height: 7.5rem;
+    position: relative;
+    left: -0.4rem;
+    top: -2.2rem;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
   .front {
     background-color: @privacyred;
     float: none;
@@ -632,17 +643,6 @@
       border-top: 2.15rem solid @privacyred;
       bottom: -2rem;
       left: 0;
-    }
-
-    svg {
-      height: 7.5rem;
-      position: relative;
-      left: -0.4rem;
-      top: -2.2rem;
-      width: 100%;
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      backface-visibility: hidden;
     }
   }
   .back {
@@ -718,6 +718,7 @@
   }
 
   .privacy-eye {
+    height: 8rem;
     float: left;
     position: absolute;
     top: 9rem;
@@ -733,6 +734,28 @@
         -moz-transform: rotate(0deg);
         transform: rotate(0deg);
       }
+    }
+    .front, .back {
+      width: 8rem;
+      height: 5rem;
+
+      &::before, &::after {
+        border-left-width: 4rem;
+        border-right-width: 4rem;
+      }
+      &::before {
+        border-bottom-width: 2.4rem;
+        top: -2.3rem;
+      }
+      &::after {
+        border-top-width: 2.4rem;
+        bottom: -2.3rem;
+      }
+    }
+    svg {
+      width: 8rem;
+      left: -0.1rem;
+      top: -1.9rem;
     }
   }
 }

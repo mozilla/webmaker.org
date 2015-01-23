@@ -61,8 +61,8 @@ angular
       };
     }
   ])
-  .directive('remixLink', ['$window', '$timeout', 'makeapi',
-    function ($window, $timeout, makeapi) {
+  .directive('remixLink', ['$window', 'makeapi',
+    function ($window, makeapi) {
       return {
         restrict: 'A',
         link: function (scope, el, attrs) {

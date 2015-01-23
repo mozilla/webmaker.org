@@ -204,8 +204,28 @@ angular
         document.getElementById('iris-pupil').setAttribute('transform', 'translate(' + coords.x + ', ' + coords.y + ')');
       }
 
+      var mousemoveTime = Date.now();
+      var eyeGif = document.querySelector('.privacy-gif');
+      var eyeSVG = document.querySelector('.privacy-svg');
+
+      function checkMovement() {
+        var nowTime = Date.now();
+        var diffTime = (nowTime - mousemoveTime) / 1000;
+        if (diffTime > 3) {
+          eyeSVG.classList.remove('show');
+          eyeGif.classList.remove('hide');
+        }
+
+        setTimeout(checkMovement, 1000);
+      }
+
+      checkMovement();
+
       if (document.getElementById('iris-pupil')) {
         window.onmousemove = function (e) {
+          mousemoveTime = Date.now();
+          eyeSVG.classList.add('show');
+          eyeGif.classList.add('hide');
           measureThings();
           translatePupil(doMaths(e.pageX - center.x, e.pageY - center.y, radius));
         };

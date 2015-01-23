@@ -585,7 +585,6 @@
 .privacy-eye {
   height: 7.5rem;
   margin: 1.5rem auto;
-  perspective: 45rem;
   position: relative;
   z-index: 300;
   width: 7.5rem;
@@ -617,10 +616,6 @@
     left: -0.4rem;
     top: -2.2rem;
     width: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform: translateZ(0.2rem);
   }
 
   .front {
@@ -657,9 +652,6 @@
     top: 0;
     width: inherit;
     z-index: -1;
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
 
     &::before, &::after {
       left: 0;
@@ -686,14 +678,6 @@
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 0.4rem;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
     &::before, &::after {
       content: '';
       background-color: transparent;
@@ -740,21 +724,43 @@
     position: absolute;
     top: 9rem;
     right: 1%;
-    &:hover {
-      .front {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-      }
-      .back {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        transform: rotate(0deg);
+
+    svg {
+      width: 8rem;
+      left: -0.1rem;
+      top: -1.9rem;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .front {
+      -webkit-transform: rotateY(0deg) translateZ(0.1rem);
+      -moz-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    .back {
+      -webkit-transform: rotateY(-180deg) translateZ(0.1rem);
+      -moz-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+
+      h6, p {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
       }
     }
     .front, .back {
       width: 8rem;
       height: 5rem;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: all 400ms ease-in-out;
+      -moz-transition: all 400ms ease-in-out;
+      transition: all 400ms ease-in-out;
 
       &::before, &::after {
         border-left-width: 4rem;
@@ -769,10 +775,18 @@
         bottom: -2.3rem;
       }
     }
-    svg {
-      width: 8rem;
-      left: -0.1rem;
-      top: -1.9rem;
+
+    &:hover {
+      .front {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      .back {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
     }
   }
   a {

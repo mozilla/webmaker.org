@@ -201,7 +201,7 @@ angular
       }
 
       function translatePupil(coords) {
-        document.getElementById('iris-pupil').style.transform = 'translate(' + coords.x + 'px, ' + coords.y + 'px)';
+        document.getElementById('iris-pupil').setAttribute('transform', 'translate(' + coords.x + ', ' + coords.y + ')');
       }
 
       if (document.getElementById('iris-pupil')) {

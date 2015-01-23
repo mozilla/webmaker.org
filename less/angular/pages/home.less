@@ -542,10 +542,17 @@
 // Privacy day!
 
 @privacyred: #dd4d58;
-@privacyyellow: #efefef;
+@privacygrey: #efefef;
 
 .home-privacy-day {
-  background: darken(@white, 6.25%);
+  background-color: darken(@white, 6.25%);
+  background-size: 30rem;
+  @media @standard-def {
+    background-image: url('/img/home/background-privacy.png');
+  }
+  @media @retina {
+    background-image: url('/img/home/background-privacy@2x.png');
+  }
   color: @privacyred;
   padding: 5rem 0 6rem;
   text-align: center;
@@ -644,7 +651,7 @@
     }
   }
   .back {
-    background-color: @privacyyellow;
+    background-color: @privacygrey;
     float: none;
     left: 0;
     height: inherit;
@@ -659,12 +666,12 @@
     }
 
     &::before {
-      border-bottom: 2.15rem solid @privacyyellow;
+      border-bottom: 2.15rem solid @privacygrey;
       top: -2rem;
     }
 
     &::after {
-      border-top: 2.15rem solid @privacyyellow;
+      border-top: 2.15rem solid @privacygrey;
       bottom: -2rem;
     }
   }

@@ -3,6 +3,10 @@
     "message": "Activity",
     "description": "Activity"
   },
+  "Made with Code": {
+    "message": "Made with Code",
+    "description": "Made with Code"
+  },
   "teachingkit": {
     "message": "Teaching Kit",
     "description": "Teaching Kit"

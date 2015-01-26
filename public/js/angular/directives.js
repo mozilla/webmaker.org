@@ -66,14 +66,19 @@ angular
       return {
         restrict: 'A',
         link: function (scope, el, attrs) {
-          makeapi.makeapi
-            .id(attrs.remixLink)
-            .then(function (err, makes) {
-              if (err) {
-                console.error(err);
-              }
-              el.prop('href', makes[0].remixurl);
-            });
+          // $observe here to wait for attrs to /actually/ be ready...
+          attrs.$observe('remixLink', function (val) {
+            if (val && val.length > 0) {
+              makeapi.makeapi
+                .id(attrs.remixLink)
+                .then(function (err, makes) {
+                  if (err) {
+                    console.error(err);
+                  }
+                  el.prop('href', makes[0].remixurl);
+                });
+            }
+          });
         }
       };
     }])

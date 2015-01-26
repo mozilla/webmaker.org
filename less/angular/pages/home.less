@@ -587,6 +587,12 @@
   z-index: 300;
   width: 7.5rem;
 
+  h6, p {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
   h6 {
     font-size: 0.9em;
     font-weight: 600;
@@ -611,9 +617,12 @@
   svg {
     height: 7.5rem;
     position: relative;
-    left: -0.4rem;
-    top: -2.2rem;
-    width: 100%;
+    left: -0.1rem;
+    top: -1.9rem;
+    width: 8rem;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .front {
@@ -625,6 +634,9 @@
     left: 0;
     text-align: center;
     width: inherit;
+    -webkit-transform: rotateY(0deg) translateZ(0.1rem);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
 
     &::before, &::after {
       z-index: -1;
@@ -650,6 +662,9 @@
     top: 0;
     width: inherit;
     z-index: -1;
+    -webkit-transform: rotateY(-180deg) translateZ(0.1rem);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 
     &::before, &::after {
       left: 0;
@@ -668,19 +683,36 @@
   }
 
   .front, .back {
-    width: 7.5rem;
-    height: 4.33rem;
-    margin: 2.165rem 0;
     border-style: solid;
     border-width: 0;
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 0.4rem;
+    margin: 2.165rem 0;
+    height: 5rem;
+    width: 8rem;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+
+    &::before {
+      border-bottom-width: 2.4rem;
+      top: -2.3rem;
+    }
+    &::after {
+      border-top-width: 2.4rem;
+      bottom: -2.3rem;
+    }
     &::before, &::after {
       content: '';
       background-color: transparent;
-      border-left: 3.75rem solid transparent;
-      border-right: 3.75rem solid transparent;
+      border-left: 4rem solid transparent;
+      border-right: 4rem solid transparent;
       left: 0;
       height: 0;
       position: absolute;
@@ -699,73 +731,6 @@
   display: block;
   &.hide {
     display: none;
-  }
-}
-
-
-.privacy-eye {
-  svg {
-    width: 8rem;
-    left: -0.1rem;
-    top: -1.9rem;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-
-  .front {
-    -webkit-transform: rotateY(0deg) translateZ(0.1rem);
-    -moz-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  .back {
-    -webkit-transform: rotateY(-180deg) translateZ(0.1rem);
-    -moz-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-
-    h6, p {
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-  }
-  .front, .back {
-    width: 8rem;
-    height: 5rem;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition: all 400ms ease-in-out;
-    -moz-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out;
-
-    &::before, &::after {
-      border-left-width: 4rem;
-      border-right-width: 4rem;
-    }
-    &::before {
-      border-bottom-width: 2.4rem;
-      top: -2.3rem;
-    }
-    &::after {
-      border-top-width: 2.4rem;
-      bottom: -2.3rem;
-    }
-  }
-
-  &:hover {
-    .front {
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-    }
-    .back {
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
   }
 }
 
@@ -790,6 +755,18 @@
     position: absolute;
     top: 9rem;
     right: 1%;
+    &:hover {
+      .front {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      .back {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+    }
   }
 
   a {

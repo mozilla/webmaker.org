@@ -1,4 +1,8 @@
 {
+  "Private Eye": {
+    "message": "Private Eye",
+    "description": "title for Private Eye page"
+  },
   "private-eye-01": {
     "message": "Private Eye: See who’s tracking you online",
     "description": "Private Eye: See who’s tracking you online"

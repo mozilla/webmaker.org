@@ -546,5 +546,21 @@
   "sharing": {
     "message": "sharing",
     "description": "onboarding interactive text input"
+  },
+  "Privacy matters": {
+    "message": "Privacy matters",
+    "description": "Text on back side of privacy day eyeball on home"
+  },
+  "Learn more": {
+    "message": "Learn more",
+    "description": "Button text on home page"
+  },
+  "Get smart on privacy": {
+    "message": "Get smart on privacy",
+    "description": "Headline of Privacy Day section on home"
+  },
+  "Understanding your privacy on the web": {
+    "message": "Understanding your privacy on the web is the best way to start controlling it.",
+    "description": "Text on Privacy Day section on home"
   }
 }

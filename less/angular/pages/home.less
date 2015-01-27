@@ -794,16 +794,34 @@
 }
 
 .eyelid {
-  border-radius: 50%;
   height: 110%;
   margin: 0 auto;
   position: relative;
   width: 69%;
   overflow: hidden;
-  -webkit-animation: blinking-eye 7s infinite;
-  -o-animation: blinking-eye 7s infinite;
-  -moz-animation: blinking-eye 7s infinite;
-  animation: blinking-eye 7s infinite;
+
+  &::before, &::after {
+    background: @privacyred;
+    border: 0 solid transparent;
+    border-radius: 33%;
+    content: '';
+    display: block;
+    left: -11.5%;
+    height: 50%;
+    position: absolute;
+    width: 121%;
+    -webkit-animation: real-eyelids 7s infinite;
+    -o-animation: real-eyelids 7s infinite;
+    -moz-animation: real-eyelids 7s infinite;
+    animation: real-eyelids 7s infinite;
+  }
+  &::before {
+    top: 0;
+    z-index: 100;
+  }
+  &::after {
+    bottom: 0;
+  }
 }
 
 .sclera {
@@ -849,47 +867,39 @@
   right: 10%;
 }
 
-@-webkit-keyframes blinking-eye {
+@-webkit-keyframes real-eyelids {
   0%, 90%, 100% {
-    height: 110%;
-    top: -4%;
+    height: 0;
   }
   95% {
-    height: 2%;
-    top: 44%;
+    height: 60%;
   }
 }
 
-@-o-keyframes blinking-eye {
+@-o-keyframes real-eyelids {
   0%, 90%, 100% {
-    height: 110%;
-    top: -4%;
+    height: 0;
   }
   95% {
-    height: 2%;
-    top: 44%;
+    height: 60%;
   }
 }
 
-@-moz-keyframes blinking-eye {
+@-moz-keyframes real-eyelids {
   0%, 90%, 100% {
-    height: 110%;
-    top: -4%;
+    height: 0;
   }
   95% {
-    height: 2%;
-    top: 44%;
+    height: 60%;
   }
 }
 
-@keyframes blinking-eye {
+@keyframes real-eyelids {
   0%, 90%, 100% {
-    height: 110%;
-    top: -4%;
+    height: 0;
   }
   95% {
-    height: 2%;
-    top: 44%;
+    height: 60%;
   }
 }
 

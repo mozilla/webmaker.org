@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "colors": "0.6.2",
-    "grunt-angular-i18n-finder": "0.0.6",
+    "grunt-angular-i18n-finder": "0.0.7",
     "grunt-contrib-concat": "^0.4.0",
     "grunt-contrib-imagemin": "0.3.0",
     "grunt-contrib-jshint": "0.7.1",

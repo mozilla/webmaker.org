@@ -7,6 +7,7 @@ module.exports = {
   badges: require("./badges"),
   details: require("./details"),
   gallery: require("./gallery"),
+  gallery_old: require("./gallery_old"),
   me: require("./me"),
   page: function (view) {
     return require("./page")(view);

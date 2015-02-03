@@ -367,19 +367,19 @@ app.get('/home-:variant', middleware.homePageRedirect, routes.angular);
 
 app.get('/explore', routes.gallery({
   layout: "index",
-  prefix: "p"
+  noPrefix: true
 }));
 
-app.get("/gallery/list/:list", routes.gallery({
+app.get("/gallery/list/:list", routes.gallery_old({
   layout: "index",
   prefix: "p"
 }));
 
-app.get("/editor", middleware.checkAdmin, routes.gallery({
+app.get("/editor", middleware.checkAdmin, routes.gallery_old({
   page: "editor"
 }));
 
-app.get("/privacy-makes", routes.gallery({
+app.get("/privacy-makes", routes.gallery_old({
   layout: "privacy-makes",
   prefix: "privacy",
   limit: 20

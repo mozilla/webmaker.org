@@ -349,6 +349,13 @@ app.get("/healthcheck", routes.api.healthcheck);
 
 app.get('/signup/:auth?', routes.angular);
 
+// Literacy content got moved again
+var moreLiteracyRedirect = function (req, res) {
+  res.redirect(301, req.path.replace('resources', 'resources/literacy'));
+};
+
+app.get('/resources/weblit-*', moreLiteracyRedirect);
+
 // Angular
 app.get('/', middleware.homePageRedirect, routes.angular);
 app.get('/resources/:section?/:competency?', routes.angular);

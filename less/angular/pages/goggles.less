@@ -1,0 +1,223 @@
+.goggles-backgrounded {
+
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  padding: 0;
+
+  .term {
+    font-style: italic;
+  }
+
+  &.goggles-xray-image {
+    padding-bottom: 3em;
+
+    img {
+      position: absolute;
+      z-index: 0;
+      padding: 0;
+      min-height: 700px;
+      min-width: 950px;
+      width: 100%;
+    }
+  }
+
+  .goggles-header {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    background: @white;
+    width: 100%;
+    padding: 3em 0 2em;
+
+    h1 {
+      flex: auto;
+      align-self: stretch;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .goggles-bookmark {
+      flex: 0 1 auto;
+      align-self: stretch;
+      text-align: right;
+      white-space: nowrap;
+
+      p {
+        text-align: center;
+      }
+
+      .goggles-bookmark-link {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:link, &:hover, &:active, &:visited, &:focus {
+          color: black;
+          text-decoration: none;
+        }
+
+        span {
+          display: inline-block;
+          border: none;
+          background: @yellow;
+          height: 2em;
+          vertical-align: middle;
+          font-size: 120%;
+          line-height: 2em;
+          padding: 0 0.75em;
+
+          &:first-child {
+            border-right: 2px solid rgba(255,255,255,0.5);
+            border-radius: 0.552em 0 0 0.552em;
+          }
+
+          &:last-child {
+            border-radius: 0 0.552em 0.552em 0;
+          }
+        }
+      }
+    }
+  }
+
+  .goggles-box {
+    position: relative;
+    z-index: 1;
+  }
+
+  .goggles-main-box {
+    background: @white;
+    width: 30%;
+    min-width: 15em;
+    margin: 1em auto;
+    padding: 2rem;
+
+    h1 {
+      margin: 0.25em 0 1em;
+      text-align: left;
+      font-size: 3rem;
+    }
+
+    .goggles-activate-button {
+      border: none;
+      background: @yellow;
+      border-radius: 1em;
+      padding: 0.4em 1em;
+      margin-top: -1rem;
+
+      &:focus, &:hover {
+        background: darken(@yellow, 10%);
+      }
+    }
+
+    ol.goggles-listing {
+      counter-reset: goggles-item;
+      list-style: none;
+      text-indent: none;
+      margin: none;
+
+      li {
+        position: relative;
+        counter-increment: goggles-item;
+        margin-left: 1rem;
+
+        & + li {
+          margin-top: 2em;
+        }
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: -3.5rem;
+          content: counter(goggles-item);
+          background: rgba(63,181,142,0.67);
+          color: @white;
+          font-family: Arial;
+          font-weight: bold;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 1em;
+          line-height: 1.5em;
+          text-align: center;
+          padding: 0 0.2em;
+        }
+      }
+    }
+
+    button.goggles-help-button {
+      border: none;
+      background: inherit;
+      color: @brand-info;
+      font-size: 80%;
+      font-variant: small-caps;
+
+      &:before {
+        display: inline-block;
+        content: "i";
+        background: @brand-info;
+        color: @white;
+        font-weight: normal;
+        font-variant: normal;
+        text-align: center;
+        width: 1em;
+        height: 1em;
+        border-radius: 1em;
+        margin-right: 0.2em;
+        line-height: 1em;
+      }
+    }
+
+    .goggles-help-toggled.hidden {
+      display: none;
+    }
+  }
+
+  .goggles-sub-box {
+    background: @white;
+    width: 30%;
+    min-width: 15em;
+    margin: 4em auto 2em;
+    padding: 2rem 2rem 1rem;
+    font-size: 92%;
+  }
+
+  .goggles-video {
+    position: relative;
+    width: 100%;
+    height:100%;
+    margin: 0 auto 1em;
+
+    .goggles-video-ratio {
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    iframe {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
+  }
+}
+
+@media (max-width: 37rem) {
+  .goggles-backgrounded {
+    .goggles-header {
+      display: block;
+      h1 {
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .goggles-bookmark {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

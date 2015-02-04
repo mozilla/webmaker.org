@@ -449,6 +449,16 @@ app.get("/terms", routes.angular);
 app.get("/privacy", routes.angular);
 app.get("/languages", routes.page("languages"));
 
+// goggles onboard, with special image routing for lowest-threshold onboarding
+app.get("/goggles", routes.angular);
+app.get("/goggles/install", routes.angular);
+["Shapes", "Shapes2", "Blur", "Blur2"].forEach(function (img) {
+  img = img + ".jpg";
+  app.get("/" + img, function (req, res) {
+    res.redirect("/img/goggles/" + img);
+  });
+});
+
 app.get("/sitemap.xml", function (req, res) {
   res.type("xml");
   res.render("sitemap.xml");
@@ -461,6 +471,7 @@ var accountSettingsUrl = env.get('LOGIN') + '/account';
 var makeApiUrl = env.get('MAKE_ENDPOINT');
 var eventsUrl = env.get('EVENTS_URL');
 var teachUrl = env.get('TEACH_URL');
+var gogglesUrl = env.get('XRAY_GOGGLES_URL');
 
 app.get('/angular-config.js', function (req, res) {
   // Angular config
@@ -477,7 +488,8 @@ app.get('/angular-config.js', function (req, res) {
     supported_languages: i18n.getSupportLanguages(),
     langmap: i18n.getAllLocaleCodes(),
     csrf: req.csrfToken(),
-    wlcPoints: res.locals.wlcPoints
+    wlcPoints: res.locals.wlcPoints,
+    gogglesUrl: gogglesUrl
   };
 
   res.setHeader('Content-type', 'text/javascript');

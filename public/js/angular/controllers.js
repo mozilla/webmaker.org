@@ -603,6 +603,26 @@ angular
       };
     }
   ])
+  .controller('gogglesController', ['CONFIG',
+    function (config) {
+
+      // activate the x-ray goggles on this page
+      $('.goggles-activate-button').click(function () {
+        document.head.appendChild(
+          $('<script>')
+          .addClass('webxray')
+          .attr("src", config.gogglesUrl + "/en-US/webxray.js")
+          .attr("data-baseuri", config.gogglesUrl + "/en-US")[0]
+        );
+      });
+
+      // toggle additional help text
+      $('.goggles-help-button').click(function () {
+        this.remove();
+        $('.goggles-help-toggled').toggleClass('hidden');
+      });
+    }
+  ])
   .controller('feedbackController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
       wmNav.section('info');

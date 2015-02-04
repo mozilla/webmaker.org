@@ -603,8 +603,9 @@ angular
       };
     }
   ])
-  .controller('gogglesController', ['CONFIG',
-    function (config) {
+  .controller('gogglesController', ['$scope', 'CONFIG',
+    function ($scope, config) {
+      $scope.gogglesUrl = config.gogglesUrl;
 
       // activate the x-ray goggles on this page
       $('.goggles-activate-button').click(function () {

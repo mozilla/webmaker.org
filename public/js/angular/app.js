@@ -1,8 +1,12 @@
 angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
     'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'
   ])
-  .config(['$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
-    function ($routeProvider, $locationProvider, makeApiProvider, CONFIG) {
+  .config(['$compileProvider', '$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
+    function ($compileProvider, $routeProvider, $locationProvider, makeApiProvider, CONFIG) {
+
+      // determines which protocols are allowed in <a href> attributes
+      $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|javascript):/);
+
       makeApiProvider.options.apiURL = CONFIG.makeApiUrl;
 
       $routeProvider

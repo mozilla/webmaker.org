@@ -1,23 +1,22 @@
 <div class="goggles-backgrounded goggles-xray-image">
 
-      <img src="/Shapes.jpg">
+      <img src="/shapes.jpg">
 
       <div class="goggles-main-box goggles-box">
-        <h1>Remix this page</h1>
+        <h1>{{ 'Remix this page' | i18n }}</h1>
         <ol class="goggles-listing">
-          <li><p><button class="goggles-activate-button">Activate X-ray Goggles</button></p></li>
-          <li><p>Tap the background image</p></li>
-          <li><p>Change the image’s <span class="term">source</span> from Shapes.jpg to Blur.jpg
-              <button class="goggles-help-button">help</button>
-              <p class="goggles-help-toggled hidden">In HTML, the &lt;img&gt; tag identifies an image with src="file_name".</p>
-              <p class="goggles-help-toggled hidden">Change &lt;img src="/Shapes.jpg"&gt; to &lt;img src="/Blur.jpg"&gt;</p>
+          <li><p><button class="goggles-activate-button"><span>{{ 'Activate X-ray Goggles' | i18n }}</span></button></p></li>
+          <li><p>{{ 'Click the background image' | i18n }}</p></li>
+          <li><p>{{ 'Change the image’s' | i18n }} <span class="term">{{ 'source' | i18n }}</span> {{ 'from shapes.jpg to blur.jpg' | i18n }}
+              <button class="goggles-help-button">{{ 'help' | i18n }}</button>
+              <p class="goggles-help-toggled hidden">{{ 'gogglesHelp1' | i18n }}</p>
+              <p class="goggles-help-toggled hidden">{{ 'gogglesHelp2' | i18n }}</p>
           </li>
         </ol>
       </div>
 
       <div class="goggles-sub-box goggles-box">
-        <p>Set up <a ng-href="/{{ lang }}/goggles/install">X-ray Goggles</a> and get the power to view and edit the
-           code behind any website on the Internet.</p>
+        <p>{{ 'gogglesSetup1' | i18n }} <a ng-href="/{{ lang }}/goggles/install">{{ 'gogglesSetup2' | i18n }}</a> {{ 'gogglesSetup3' | i18n }}</p>
       </div>
 
 </div>

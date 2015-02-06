@@ -1,0 +1,62 @@
+{
+  "Remix this page": {
+    "message": "Remix this page",
+    "description": "CTA header"
+  },
+  "Activate X-ray Goggles": {
+    "message": "Activate X-ray Goggles",
+    "description": "Goggles activation button"
+  },
+  "Click the background image": {
+    "message": "Click the background image",
+    "description": "First goggles instruction"
+  },
+  "Change the image’s": {
+    "message": "Change the image’s",
+    "description": "Second goggles instruction, first part"
+  },
+  "source": {
+    "message": "source",
+    "description": "Second goggles instruction, term"
+  },
+  "from shapes.jpg to blur.jpg": {
+    "message": "from shapes.jpg to blur.jpg",
+    "description": "Second goggles instruction, last part"
+  },
+  "help": {
+    "message": "help",
+    "description": "Help link"
+  },
+  "gogglesHelp1": {
+    "message": "In HTML, the <img> tag identifies an image with src=\"file_name\".",
+    "description": "Goggles help text, first part"
+  },
+  "gogglesHelp2": {
+    "message": "Change <img src=\"/shapes.jpg\"> to <img src=\"/blur.jpg\">",
+    "description": "Goggles help text, second part"
+  },
+  "gogglesSetup1": {
+    "message": "Set up",
+    "description": "Goggles setup text, first part"
+  },
+  "gogglesSetup2": {
+    "message": "X-ray Goggles",
+    "description": "Goggles help text, install link"
+  },
+  "gogglesSetup3": {
+    "message": "and get the power to view and edit the code behind any website on the Internet.",
+    "description": "Goggles setup text, last part"
+  },
+  "Set up X-ray Goggles": {
+    "message": "Set up X-ray Goggles",
+    "description": "Install page title"
+  },
+  "X-ray Goggles": {
+    "message": "X-ray Goggles",
+    "description": "Goggles button text on install page"
+  },
+  "Drag to Bookmarks bar": {
+    "message": "Drag to Bookmarks bar",
+    "description": "Help text for goggles button on install page"
+  }
+}

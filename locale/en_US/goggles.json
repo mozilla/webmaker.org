@@ -36,7 +36,7 @@
     "description": "Goggles help text, second part"
   },
   "gogglesSetup1": {
-    "message": "Set up",
+    "message": "Install the",
     "description": "Goggles setup text, first part"
   },
   "gogglesSetup2": {
@@ -44,7 +44,7 @@
     "description": "Goggles help text, install link"
   },
   "gogglesSetup3": {
-    "message": "and get the power to view and edit the code behind any website on the Internet.",
+    "message": "and get the power to view and edit the code behind any website.",
     "description": "Goggles setup text, last part"
   },
   "Set up X-ray Goggles": {

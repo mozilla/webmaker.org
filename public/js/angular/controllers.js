@@ -603,10 +603,19 @@ angular
       };
     }
   ])
-  .controller('gogglesController', ['$scope', 'CONFIG',
-    function ($scope, config) {
-      $scope.gogglesUrl = config.gogglesUrl;
+  .controller('gogglesController', ['$scope', 'CONFIG', 'wmAnalytics',
+    function ($scope, config, analytics) {
 
+      if ($scope.$parent.currentPath.indexOf('/install') === -1) {
+        //User is on goggles landing page
+        analytics.event('Goggles landing page');
+      }
+      else {
+        //User is on goggles install page
+        analytics.event('Goggles install page');
+      }
+
+      $scope.gogglesUrl = config.gogglesUrl;
       // activate the x-ray goggles on this page
       $('.goggles-activate-button').click(function () {
         document.head.appendChild(
@@ -615,12 +624,23 @@ angular
           .attr("src", config.gogglesUrl + "/en-US/webxray.js")
           .attr("data-baseuri", config.gogglesUrl + "/en-US")[0]
         );
+        analytics.event('Goggles activated');
       });
 
       // toggle additional help text
       $('.goggles-help-button').click(function () {
+        analytics.event('Goggles help button clicked');
         this.remove();
         $('.goggles-help-toggled').toggleClass('hidden');
+      });
+
+      $('.goggles-install-link').click(function () {
+        analytics.event('Goggles install link clicked');
+      });
+
+      // On goggles install page
+      $('.goggles-bookmark-link').on('dragstart', function () {
+        analytics.event('Goggles bookmark dragged');
       });
     }
   ])

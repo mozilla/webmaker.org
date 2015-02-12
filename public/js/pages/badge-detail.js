@@ -96,6 +96,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       $logoutOnly.removeClass('hidden');
     });
 
+    auth.wmLogin.verify();
     $claimCodeInput.on('change', function (e) {
       if ($claimCodeInput.val().length) {
         $applicationInputs.removeAttr('required');

@@ -82,6 +82,10 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       $applicationOff.removeClass('hidden');
     });
 
+    $logoutOnly.on('click', function () {
+      auth.login();
+    });
+
     auth.on('login', function () {
       $loginOnly.removeClass('hidden');
       $logoutOnly.addClass('hidden');

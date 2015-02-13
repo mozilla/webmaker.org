@@ -605,16 +605,6 @@ angular
   ])
   .controller('gogglesController', ['$scope', 'CONFIG', 'wmAnalytics',
     function ($scope, config, analytics) {
-
-      if ($scope.$parent.currentPath.indexOf('/install') === -1) {
-        //User is on goggles landing page
-        analytics.event('Goggles landing page');
-      }
-      else {
-        //User is on goggles install page
-        analytics.event('Goggles install page');
-      }
-
       $scope.gogglesUrl = config.gogglesUrl;
       // activate the x-ray goggles on this page
       $('.goggles-activate-button').click(function () {

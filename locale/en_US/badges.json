@@ -38,5 +38,9 @@
   "Application": {
     "message": "Application",
     "description": "Application"
+  },
+  "Create a Badge": {
+    "message": "Create a Badge",
+    "description": "Create a Badge"
   }
 }

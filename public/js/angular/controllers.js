@@ -276,6 +276,50 @@ angular
         });
     }
   ])
+  .controller('createBadgeController', ['$rootScope', '$scope', '$http', 'wmNav',
+    function ($rootScope, $scope, $http, wmNav) {
+      wmNav.page('create-badge');
+      wmNav.section('explore');
+
+      // This holds all the values for the new badge
+      $scope.data = {
+        badge: {},
+        image: '',
+        tags: '',
+        criteria: [{description: ''}]
+      };
+
+      $scope.addCriterion = function () {
+        $scope.data.criteria.push({description: ''});
+      };
+
+      $scope.prepare = function (data) {
+        var output = {};
+
+        // Badge
+        output.badge = angular.copy(data.badge);
+        // Badgekit api requires both, but we want them to be the same.
+        output.badge.consumerDescription = data.badge.earnerDescription;
+
+        // Tags
+        output.tags = data.tags.split(/[\s,]+/);
+
+        // Criteria
+        output.criteria = data.criteria.map(function (criterion) {
+          criterion.required = 1;
+          return criterion;
+        });
+
+        return output;
+      };
+
+      $scope.createBadge = function (data) {
+        
+      };
+
+
+    }
+  ])
   .controller('badgesAdminBadgeController', ['$scope', '$http', '$window', '$routeParams', '$modal', 'wmNav',
     function ($scope, $http, $window, $routeParams, $modal, wmNav) {
       wmNav.page('badges-admin');

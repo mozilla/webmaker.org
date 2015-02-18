@@ -1,0 +1,69 @@
+<div class="container container-push-down">
+  <h1>Create a New Badge</h1>
+
+  <h2>Basic information</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label>Name</label>
+        <input ng-model="data.badge.name" class="form-control" >
+        <p class="help-block">e.g. Webmaker Mentor</p>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label>Slug</label>
+        <input ng-model="data.badge.slug" class="form-control" >
+        <p class="help-block">e.g. webmaker-mentor</p>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label>Image</label>
+        <input ng-model="data.image" class="form-control" >
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label>Issuer URL</label>
+        <input ng-model="data.badge.issuerUrl" class="form-control" >
+        <p class="help-block">e.g. https://webmaker.org</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Details</h2>
+  <div class="form-group">
+    <label>Short description</label>
+    <textarea ng-model="data.badge.strapline" class="form-control"></textarea>
+    <p class="help-block">Should be less than 140 characters</p>
+  </div>
+  <div class="form-group">
+    <label>Longer description</label>
+    <textarea ng-model="data.badge.earnerDescription" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Tags</label>
+    <input ng-model="data.tags" class="form-control">
+    <p class="help-block">e.g. fun, awesome, cool</p>
+  </div>
+
+  <h2>Criteria</h2>
+  <div class="form-group" ng-repeat="criterion in data.criteria">
+    <label>Description</label>
+    <div class="row">
+      <div class="col-sm-6">
+        <textarea class="form-control" ng-model="criterion.description"></textarea>
+      </div>
+      <div class="col-sm-6" ng-bind-html="criterion.description | markdown"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default btn-sm" ng-click="addCriterion()">Add Criterion</button>
+  </div>
+  <div class="form-group text-right">
+    <button class="btn btn-success btn-lg" ng-click="createBadge(prepare(data))">Create Badge</button>
+  </div>
+</div>
+
+

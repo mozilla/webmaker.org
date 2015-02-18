@@ -346,6 +346,13 @@ module.exports = function (env) {
         }
         return res.send(200, 'Success');
       });
+    },
+    create: function (req, res, next) {
+      var context = {
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.params.badge
+      };
+
     }
   };
 };

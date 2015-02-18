@@ -29,7 +29,8 @@
     "angular-moment": "0.7.1",
     "makeapi-angular": "0.0.3",
     "imagesloaded": "~3.1.8",
-    "url-template": "2.0.4"
+    "url-template": "2.0.4",
+    "angular-markdown-filter": "~1.1.0"
   },
   "resolutions": {
     "angular": "1.2.14",

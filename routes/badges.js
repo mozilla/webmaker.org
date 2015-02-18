@@ -82,6 +82,15 @@ module.exports = function (env) {
         res.json(badges);
       });
     },
+    getBadge: function (req, res, next) {
+      badgeClient.getBadge({
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.params.badge
+      }, function (err, data) {
+        if (err) return res.send(500, err.message);
+        return res.send(data);
+      });
+    },
     getInstances: function (req, res, next) {
       badgeClient.getBadgeInstances({
         system: env.get('BADGES_SYSTEM'),
@@ -350,9 +359,26 @@ module.exports = function (env) {
     create: function (req, res, next) {
       var context = {
         system: env.get('BADGES_SYSTEM'),
-        badge: req.params.badge
+        badge: req.body
       };
-
+      badgeClient.createBadge(context, function (err, badge) {
+        if (err) {
+          return res.send(500, err.message);
+        }
+        return res.send(200, badge);
+      });
+    },
+    update: function (req, res, next) {
+      var context = {
+        system: env.get('BADGES_SYSTEM'),
+        badge: req.body
+      };
+      badgeClient.updateBadge(context, function (err, badge) {
+        if (err) {
+          return res.send(500, err.message);
+        }
+        return res.send(200, badge);
+      });
     }
   };
 };

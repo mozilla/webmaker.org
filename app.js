@@ -395,10 +395,13 @@ app.get('/badges/:badge?', badgesRoutes.details);
 app.get('/admin/badges', badgesRoutes.middleware.atleast('isMentor'), routes.angular);
 app.get('/admin/create-badge', badgesRoutes.middleware.atleast('isMentor'), routes.angular);
 app.get('/admin/badges/:badge', badgesRoutes.middleware.hasPermissions('viewInstances'), routes.angular);
+app.get('/admin/badges/:badge/update', badgesRoutes.middleware.atleast('isAdmin'), routes.angular);
 
 // Badges API
 app.get("/api/badges", badgesRoutes.getAll);
-app.get("/api/badges/create", badgesRoutes.create);
+app.post("/api/badges/create", badgesRoutes.create);
+app.get("/api/badges/:badge", badgesRoutes.getBadge);
+app.post("/api/badges/:badge/update", badgesRoutes.update);
 app.post("/api/badges/:badge/apply", badgesRoutes.apply);
 app.post("/api/badges/:badge/claim", badgesRoutes.claim);
 app.post("/api/badges/:badge/issue", badgesRoutes.middleware.hasPermissions('issue'), badgesRoutes.issue);

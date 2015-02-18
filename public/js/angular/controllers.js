@@ -276,47 +276,72 @@ angular
         });
     }
   ])
-  .controller('createBadgeController', ['$rootScope', '$scope', '$http', 'wmNav',
-    function ($rootScope, $scope, $http, wmNav) {
+  .controller('createUpdateBadgeController', ['$rootScope', '$scope', '$http', '$routeParams', 'wmNav',  'CONFIG',
+    function ($rootScope, $scope, $http, $routeParams, wmNav, config) {
       wmNav.page('create-badge');
       wmNav.section('explore');
 
-      // This holds all the values for the new badge
-      $scope.data = {
-        badge: {},
-        image: '',
-        tags: '',
-        criteria: [{description: ''}]
-      };
+      // Update or create?
+      $scope.view = $routeParams.badge ? 'update' : 'create';
+
+      if ($scope.view === 'update') {
+        $http
+          .get('/api/badges/' + $routeParams.badge)
+          .success(function (data) {
+            console.log(data.tags);
+            data.tags = data.tags.map(function (obj) {
+              return obj.value;
+            }).join(', ');
+            $scope.badge = data;
+          })
+          .error(function (err) {
+            console.log(err);
+          });
+      } else {
+        // This holds all the values for the new badge
+        $scope.badge = {
+          criteria: [{description: ''}]
+        };
+      }
 
       $scope.addCriterion = function () {
-        $scope.data.criteria.push({description: ''});
+        $scope.badge.criteria.push({description: ''});
       };
 
-      $scope.prepare = function (data) {
-        var output = {};
+      function prepareBadge(data) {
+        var badge = angular.copy(data);
 
-        // Badge
-        output.badge = angular.copy(data.badge);
         // Badgekit api requires both, but we want them to be the same.
-        output.badge.consumerDescription = data.badge.earnerDescription;
+        badge.consumerDescription = data.earnerDescription;
+        badge.criteriaUrl = 'https://webmaker.org/badges/' + badge.slug;
+        badge.unique = 0;
+        badge.type = 'Skill';
 
         // Tags
-        output.tags = data.tags.split(/[\s,]+/);
+        badge.tags = data.tags.split(/[\s,]+/);
 
         // Criteria
-        output.criteria = data.criteria.map(function (criterion) {
+        badge.criteria = data.criteria.map(function (criterion) {
           criterion.required = 1;
           return criterion;
         });
 
-        return output;
-      };
+        return badge;
+      }
 
-      $scope.createBadge = function (data) {
-        
+      $scope.submit = function (badge) {
+        var url = '/api/badges/' + ($routeParams.badge ? $routeParams.badge + '/' + $scope.view : 'create');
+        badge = prepareBadge(badge);
+        console.log(badge);
+        $http
+          .post(url, badge)
+          .success(function (data) {
+            console.log('Success!', data);
+          })
+          .error(function (err) {
+            console.log(err);
+          });
       };
-
 
     }
   ])

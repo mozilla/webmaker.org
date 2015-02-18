@@ -42,5 +42,9 @@
   "Create a Badge": {
     "message": "Create a Badge",
     "description": "Create a Badge"
+  },
+  "Update a Badge": {
+    "message": "Update a Badge",
+    "description": "Update a Badge"
   }
 }

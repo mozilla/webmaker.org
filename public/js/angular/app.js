@@ -58,9 +58,14 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           title: 'Badges Admin'
         })
         .when('/:locale/admin/create-badge', {
-          templateUrl: '/views/admin/create-badge.html',
-          controller: 'createBadgeController',
+          templateUrl: '/views/admin/create-update-badge.html',
+          controller: 'createUpdateBadgeController',
           title: 'Create a Badge'
+        })
+        .when('/:locale/admin/badges/:badge/update', {
+          templateUrl: '/views/admin/create-update-badge.html',
+          controller: 'createUpdateBadgeController',
+          title: 'Update a Badge'
         })
         .when('/:locale/admin/badges/:badge', {
           templateUrl: '/views/admin/badges-badge.html',

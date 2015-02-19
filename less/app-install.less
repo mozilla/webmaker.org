@@ -1,0 +1,193 @@
+@app-install-header-size-mobile: 24px;
+@app-install-header-size-desktop: 52px;
+@app-install-text-size-mobile: 16px;
+@app-install-text-size-desktop: 20px;
+@app-install-spacing-mobile: 32px;
+@app-install-spacing-desktop: 46px;
+@btn-height: 49px;
+
+.install-webmaker-app {
+  .navbar-header,
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .create-something,
+  .build-something,
+  .share-something,
+  .download-app {
+
+
+    @media (max-width: @screen-md-max) {
+      padding-top: @app-install-spacing-mobile;
+      padding-bottom: @app-install-spacing-mobile;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      padding-top: @app-install-spacing-desktop;
+      padding-bottom: @app-install-spacing-desktop;
+    }
+
+    .section-content {
+      @media (min-width: @screen-lg-min) {
+        &.push-down {
+          top: 100px;
+        }
+      }
+      .desktop-install-app {
+        @media (max-width: @screen-md-max) {
+          display: none;
+        }
+      }
+    }
+
+    .section-header,
+    .section-text {
+      color: @white;
+      line-height: 24px;
+      .text-center();
+      @media (min-width: @screen-lg-min) {
+        .text-left();
+      }
+    }
+
+    .section-header {
+      font-size: @app-install-header-size-mobile;
+      margin-bottom: 12px;
+      @media (min-width: @screen-lg-min) {
+        font-size: @app-install-header-size-desktop;
+        margin-top: 140px;
+        margin-bottom: @app-install-spacing-desktop;
+      }
+      font-family: "Fira Sans";
+      font-weight: 500;
+    }
+    .section-text {
+      font-size: @app-install-text-size-mobile;
+      &.add-margin {
+        margin-bottom: @app-install-spacing-mobile;
+      }
+      @media (min-width: @screen-lg-min) {
+        font-size: @app-install-text-size-desktop;
+      }
+      font-family: "Fira Sans";
+      font-weight: normal;
+    }
+
+    .cellphone {
+      @media (max-width: @screen-md-max) {
+        margin-top: @app-install-spacing-mobile;
+      }
+
+      img {
+        @media (min-width: @screen-lg-min) {
+          height: 600px;
+          width: auto;
+        }
+        .center-block();
+      }
+    }
+  }
+
+  .app-download-button {
+    height: @btn-height;
+    >button {
+      height: 100%;
+      width: 100%;
+      background-color: #FACD34;
+      color: #4B5B62;
+      font-family: "Open Sans";
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      display: none;
+    }
+
+  }
+
+  .pull-left {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .desktop-install-app-btn-wrapper {
+    height: @btn-height;
+
+    .desktop-install-app-btn {
+      height: 100%;
+      width: 100%;
+      background-color: #FACD34;
+      color: #4B5B62;
+      font-family: "Fira Sans";
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .send-install-link-container {
+    .phone-number-label {
+      font-family: "Fira Sans";
+      font-size: 14px;
+      color: @white;
+      text-overflow: nowrap;
+    }
+
+    .phone-num-input {
+      height: 50px;
+      width: 100%;
+      font-family: "Fira Sans";
+      font-style: italic;
+      font-size: 14px;
+    }
+    .send-sms-btn {
+      height: 50px;
+      width: 100%;
+      background-color: #FACD34;
+      color: #4B5B62;
+      font-family: "Fira Sans";
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .message-sent-container,
+    .message-sent-error-container {
+      color: @white;
+      font-family: "Fira Sans";
+      font-weight: normal;
+      font-size: @app-install-text-size-mobile;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .create-something {
+    background-color: #64A8EE;
+  }
+
+  .build-something {
+    background-color: #EE8950;
+  }
+
+  .share-something {
+    background-color: #F0C233;
+  }
+
+  .download-app {
+    background-color: #8796ED;
+    @media (min-width: @screen-lg-min) {
+      display: none;
+    }
+  }
+
+  .install-footer {
+    margin-top: 0;
+  }
+}

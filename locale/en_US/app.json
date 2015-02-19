@@ -1,0 +1,54 @@
+{
+  "Become a Maker": {
+    "message": "Become a Maker",
+    "description": "Call to action to become a Maker using Webmaker's app"
+  },
+  "Strips away complexity": {
+    "message": "Webmaker takes the best part of the web — creating — and strips away the complexity.",
+    "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+  },
+  "Build the Perfect App": {
+    "message": "Build the Perfect App",
+    "description": "Header describing what Webmaker's app can be used for - building your own apps"
+  },
+  "Exactly what you need": {
+    "message": "Create exactly what you need: A website for your business, a chat app for your friends, a lesson plan for your students.",
+    "description": "A description about what kind of apps you can make"
+  },
+  "Share It with the World": {
+    "message": "Share It with the World",
+    "description": "Header describing how apps can be shared"
+  },
+  "Meant to be seen": {
+    "message": "Webmaker creations are meant to be seen, heard and used. Share your project with friends and colleagues",
+    "description": "A description about the sharing capabilities of Webmaker"
+  },
+  "Download Webmaker": {
+    "message": "Download Webmaker",
+    "description": "Action text for Downloading the Webmaker app"
+  },
+  "Get App": {
+    "message": "Get App >",
+    "description": "Action text for triggering the SMS backed get download link tool"
+  },
+  "Enter your phone number": {
+    "message": "Enter your phone number:",
+    "description": "Label text for the phone number input"
+  },
+  "Send Text": {
+    "message": "Send Text >",
+    "description": "Label text for the phone number input"
+  },
+  "install webmaker sms text": {
+    "message": "Install the Mozilla Webmaker app by following this link: http://mzl.la/installwm",
+    "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+  },
+  "message sent" : {
+    "message": "Sweet! A text message has been sent to your phone.",
+    "description": "Success text displayed after submitting a phone number"
+  },
+  "message sent error" : {
+    "message": "Uh oh! We're having trouble sending you the install link, try reloading the page and submitting your number again.",
+    "description": "Error text displayed if submitting a phone number fails"
+  }
+}

@@ -1,35 +1,25 @@
 <div class="container container-push-down">
-  <h1>Create a New Badge</h1>
+  <h1>{{title}}</h1>
 
   <h2>Basic information</h2>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label>Name</label>
-        <input ng-model="badge.name" class="form-control" >
-        <p class="help-block">e.g. Webmaker Mentor</p>
-      </div>
-    </div>
-<!--     <div class="col-sm-6">
-      <div class="form-group">
-        <label>Slug</label>
-        <input ng-model="badge.slug" class="form-control" >
-        <p class="help-block">e.g. webmaker-mentor</p>
-      </div>
-    </div> -->
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label>Image</label>
-        <input ng-model="badge.imageUrl" class="form-control" >
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label>Issuer URL</label>
-        <input ng-model="badge.issuerUrl" class="form-control" >
-        <p class="help-block">e.g. https://webmaker.org</p>
-      </div>
-    </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input ng-model="badge.name" class="form-control" >
+    <p class="help-block">e.g. Webmaker Mentor</p>
+  </div>
+  <div class="form-group" ng-if="badge.slug">
+    <label>URL</label>
+    <p><a ng-if="badge.slug" class="btn btn-default btn-block btn-left" href="/badges/{{badge.slug}}">webmaker.org/badges/{{badge.slug}}</a></p>
+    <p class="help-block">Unfortunately, due to limitations in badgekit-api, you are currently unable to change this.</p>
+  </div>
+  <div class="form-group">
+    <label>Image URL</label>
+    <input ng-model="badge.imageUrl" class="form-control" >
+  </div>
+  <div class="form-group">
+    <label>Issuer URL</label>
+    <input ng-model="badge.issuerUrl" class="form-control" >
+    <p class="help-block">e.g. https://webmaker.org</p>
   </div>
 
   <h2>Details</h2>
@@ -49,20 +39,29 @@
   </div>
 
   <h2>Criteria</h2>
-  <div class="form-group" ng-repeat="criterion in badge.criteria">
-    <label>Description</label>
-    <div class="row">
-      <div class="col-sm-6">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group badges-criteria" ng-repeat="criterion in badge.criteria">
+        <label>Criterion {{$index + 1}} [<a ng-click="removeCriterion($index)" class="small">remove</a>]</label>
         <textarea class="form-control" ng-model="criterion.description"></textarea>
       </div>
-      <div class="col-sm-6" ng-bind-html="criterion.description | markdown"></div>
+      <p><a class="btn btn-default btn-sm" ng-click="addCriterion()">Add Criterion</a></p>
+    </div>
+    <div class="col-sm-6 preview">
+      <label>Preview</label>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ol class="list-badges-requirements list-unstyled">
+            <li ng-bind-html="criteriaPreview() | markdown"></li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
+
   <div class="form-group">
-    <button class="btn btn-default btn-sm" ng-click="addCriterion()">Add Criterion</button>
-  </div>
-  <div class="form-group text-right">
-    <button class="btn btn-success btn-lg" ng-click="submit(badge)">Create Badge</button>
+    <button class="btn btn-success btn-lg" ng-click="submit(badge)">Submit</button>
   </div>
 </div>
 

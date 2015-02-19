@@ -87,7 +87,9 @@ module.exports = function (env) {
         system: env.get('BADGES_SYSTEM'),
         badge: req.params.badge
       }, function (err, data) {
-        if (err) return res.send(500, err.message);
+        if (err) {
+          return res.send(500, err.message);
+        }
         return res.send(data);
       });
     },
@@ -97,7 +99,7 @@ module.exports = function (env) {
         badge: req.params.badge
       }, function (err, instances) {
 
-        // Errors
+        // errorString
         if (err) {
           return res.send(500, err.message);
         }

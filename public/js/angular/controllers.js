@@ -276,19 +276,19 @@ angular
         });
     }
   ])
-  .controller('createUpdateBadgeController', ['$rootScope', '$scope', '$http', '$routeParams', 'wmNav',  'CONFIG',
-    function ($rootScope, $scope, $http, $routeParams, wmNav, config) {
+  .controller('createUpdateBadgeController', ['$rootScope', '$scope', '$http', '$routeParams', '$location', 'wmNav', 'CONFIG',
+    function ($rootScope, $scope, $http, $routeParams, $location, wmNav, config) {
       wmNav.page('create-badge');
       wmNav.section('explore');
 
       // Update or create?
       $scope.view = $routeParams.badge ? 'update' : 'create';
+      $scope.title = $routeParams.badge ? 'Update Badge' : 'Create a New Badge';
 
       if ($scope.view === 'update') {
         $http
           .get('/api/badges/' + $routeParams.badge)
           .success(function (data) {
-            console.log(data.tags);
             data.tags = data.tags.map(function (obj) {
               return obj.value;
             }).join(', ');
@@ -300,12 +300,30 @@ angular
       } else {
         // This holds all the values for the new badge
         $scope.badge = {
-          criteria: [{description: ''}]
+          criteria: [{
+            description: '# This is an example\n* point 1\n* point 2\n* point 3'
+          }]
         };
       }
 
+      $scope.criteriaPreview = function () {
+        if (!$scope.badge || !$scope.badge.criteria) {
+          return '';
+        }
+        var result = $scope.badge.criteria.map(function (item) {
+          return item.description;
+        }).join('\n\n');
+        return result;
+      };
+
       $scope.addCriterion = function () {
-        $scope.badge.criteria.push({description: ''});
+        $scope.badge.criteria.push({
+          description: ''
+        });
+      };
+
+      $scope.removeCriterion = function (index) {
+        $scope.badge.criteria.splice(index, 1);
       };
 
       function prepareBadge(data) {
@@ -318,7 +336,9 @@ angular
         badge.type = 'Skill';
 
         // Tags
-        badge.tags = data.tags.split(/[\s,]+/);
+        badge.tags = data.tags.split(/[\s,]+/).filter(function (item) {
+          return item;
+        });
 
         // Criteria
         badge.criteria = data.criteria.map(function (criterion) {
@@ -332,11 +352,12 @@ angular
       $scope.submit = function (badge) {
         var url = '/api/badges/' + ($routeParams.badge ? $routeParams.badge + '/' + $scope.view : 'create');
         badge = prepareBadge(badge);
-        console.log(badge);
+        console.log('Sending...', badge);
         $http
           .post(url, badge)
           .success(function (data) {
             console.log('Success!', data);
+            $location.path('/badges/' + data.slug);
           })
           .error(function (err) {
             console.log(err);

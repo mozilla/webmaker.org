@@ -1,5 +1,5 @@
 angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
-    'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular'
+    'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular', 'markdown'
   ])
   .config(['$compileProvider', '$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
     function ($compileProvider, $routeProvider, $locationProvider, makeApiProvider, CONFIG) {
@@ -60,6 +60,16 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           templateUrl: '/views/admin/badges-main.html',
           controller: 'badgesAdminController',
           title: 'Badges Admin'
+        })
+        .when('/:locale/admin/create-badge', {
+          templateUrl: '/views/admin/create-update-badge.html',
+          controller: 'createUpdateBadgeController',
+          title: 'Create a Badge'
+        })
+        .when('/:locale/admin/badges/:badge/update', {
+          templateUrl: '/views/admin/create-update-badge.html',
+          controller: 'createUpdateBadgeController',
+          title: 'Update a Badge'
         })
         .when('/:locale/admin/badges/:badge', {
           templateUrl: '/views/admin/badges-badge.html',

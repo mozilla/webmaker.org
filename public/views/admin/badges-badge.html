@@ -1,5 +1,6 @@
 <div class="container container-push-down">
-  <h1><a href="{{baseUrl}}admin/badges">{{ 'Badges Admin' | i18n }}</a> / {{ badge.name }}</h1>
+  <h1><a href="{{baseUrl}}admin/badges">{{ 'Badges Admin' | i18n }}</a> / {{ badge.name }} 
+  <span class="small" ng-if="_user.isAdmin">[<a href="/admin/badges/{{badge.slug}}/update">edit</a> ]</span></h1>
 
   <div class="error badges-error alert alert-danger" ng-show="badgesError">
     <p>{{ 'BadgesError' | i18n }} <span class="error-message">{{ badgesError }}</span></p>

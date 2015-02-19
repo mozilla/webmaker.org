@@ -391,6 +391,110 @@ angular
         });
     }
   ])
+  .controller('createUpdateBadgeController', ['$rootScope', '$scope', '$http', '$routeParams', '$location', 'wmNav', 'CONFIG',
+    function ($rootScope, $scope, $http, $routeParams, $location, wmNav, config) {
+      wmNav.page('create-badge');
+      wmNav.section('explore');
+
+      // Update or create?
+      $scope.view = $routeParams.badge ? 'update' : 'create';
+      $scope.title = $routeParams.badge ? 'Update Badge' : 'Create a New Badge';
+
+      if ($scope.view === 'update') {
+        $http
+          .get('/api/badges/' + $routeParams.badge)
+          .success(function (data) {
+            data.tags = data.tags.map(function (obj) {
+              return obj.value;
+            }).join(', ');
+            $scope.badge = data;
+          })
+          .error(function (err) {
+            console.log(err);
+          });
+      } else {
+        // This holds all the values for the new badge
+        $scope.badge = {
+          criteria: [{
+            description: '# This is an example\n* point 1\n* point 2\n* point 3'
+          }]
+        };
+      }
+
+      $scope.hasError = function (formEl) {
+        return {
+          'has-error': ($scope.submitAttempt || formEl.$dirty) && formEl.$invalid
+        };
+      };
+
+      $scope.criteriaPreview = function () {
+        if (!$scope.badge || !$scope.badge.criteria) {
+          return '';
+        }
+        var result = $scope.badge.criteria.map(function (item) {
+          return item.description;
+        }).join('\n\n');
+        return result;
+      };
+
+      $scope.addCriterion = function () {
+        $scope.badge.criteria.push({
+          description: ''
+        });
+      };
+
+      $scope.removeCriterion = function (index) {
+        $scope.badge.criteria.splice(index, 1);
+      };
+
+      function prepareBadge(data) {
+        var badge = angular.copy(data);
+
+        // Badgekit api requires both, but we want them to be the same.
+        badge.consumerDescription = data.earnerDescription;
+        badge.criteriaUrl = 'https://webmaker.org/badges/' + badge.slug;
+        badge.unique = 0;
+        badge.type = 'Skill';
+
+        // Tags
+        if (badge.tags) {
+          badge.tags = data.tags.split(/[\s,]+/).filter(function (item) {
+            return item;
+          });
+        } else {
+          delete badge.tags;
+        }
+
+        // Criteria
+        badge.criteria = data.criteria.map(function (criterion) {
+          criterion.required = 1;
+          return criterion;
+        });
+
+        return badge;
+      }
+
+      $scope.submit = function (isValid, badge) {
+        $scope.submitAttempt = true;
+        if (!isValid) {
+          return;
+        }
+        var url = '/api/badges/' + ($routeParams.badge ? $routeParams.badge + '/' + $scope.view : 'create');
+        badge = prepareBadge(badge);
+        console.log('Sending...', badge);
+        $http
+          .post(url, badge)
+          .success(function (data) {
+            console.log('Success!', data);
+            window.location = '/' + config.lang + '/badges/' + data.slug;
+          })
+          .error(function (err) {
+            console.log(err);
+          });
+      };
+
+    }
+  ])
   .controller('badgesAdminBadgeController', ['$scope', '$http', '$window', '$routeParams', '$modal', 'wmNav',
     function ($scope, $http, $window, $routeParams, $modal, wmNav) {
       wmNav.page('badges-admin');

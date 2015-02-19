@@ -1,0 +1,70 @@
+<div class="container container-push-down">
+  <h1>{{title}}</h1>
+
+  <form name="badgeForm">
+    <h2>Basic information</h2>
+    <div class="form-group" ng-class="hasError(badgeForm.name)">
+      <label>Name</label>
+      <input name="name" ng-model="badge.name" class="form-control" required>
+      <p class="help-block">e.g. Webmaker Mentor</p>
+    </div>
+    <div class="form-group" ng-if="badge.slug">
+      <label>URL</label>
+      <p><a ng-if="badge.slug" class="btn btn-default btn-block btn-left" href="/badges/{{badge.slug}}">webmaker.org/badges/{{badge.slug}}</a></p>
+      <p class="help-block">Unfortunately, due to limitations in badgekit-api, you are currently unable to change this.</p>
+    </div>
+    <div class="form-group" ng-class="hasError(badgeForm.imageUrl)">
+      <label>Image URL</label>
+      <input name="imageUrl" ng-model="badge.imageUrl" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Issuer URL</label>
+      <input ng-model="badge.issuerUrl" class="form-control" >
+      <p class="help-block">e.g. https://webmaker.org</p>
+    </div>
+
+    <h2>Details</h2>
+    <div class="form-group" ng-class="hasError(badgeForm.strapline)">
+      <label>Short description</label>
+      <textarea name="strapline" ng-model="badge.strapline" class="form-control" required></textarea>
+      <p class="help-block">Should be less than 140 characters</p>
+    </div>
+    <div class="form-group" ng-class="hasError(badgeForm.description)">
+      <label>Longer description</label>
+      <textarea name="description" ng-model="badge.earnerDescription" class="form-control" required></textarea>
+    </div>
+    <div class="form-group">
+      <label>Tags</label>
+      <input ng-model="badge.tags" class="form-control">
+      <p class="help-block">e.g. fun, awesome, cool</p>
+    </div>
+
+    <h2>Criteria</h2>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group badges-criteria" ng-repeat="criterion in badge.criteria">
+          <label>Criterion {{$index + 1}} [<a ng-click="removeCriterion($index)" class="small">remove</a>]</label>
+          <textarea class="form-control" ng-model="criterion.description"></textarea>
+        </div>
+        <p><a class="btn btn-default btn-sm" ng-click="addCriterion()">Add Criterion</a></p>
+      </div>
+      <div class="col-sm-6 preview">
+        <label>Preview</label>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ol class="list-badges-requirements list-unstyled">
+              <li ng-bind-html="criteriaPreview() | markdown"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-success btn-lg" ng-click="submit(badgeForm.$valid, badge)">Submit</button>
+    </div>
+  </form>
+</div>
+
+

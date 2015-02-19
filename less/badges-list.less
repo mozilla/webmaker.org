@@ -1,0 +1,51 @@
+// Lists
+.list-badges-requirements {
+  counter-reset: badges-number;
+  > li {
+    margin: (@grid-gutter-width * 2) 0;
+  }
+
+  // Major bullets
+  // Since this is parsed from markdown, include h1, h2, h3 just in case.
+  > li  {
+    > h1, h2, h3 {
+      font-weight: normal;
+      font-size: 1.6em;
+      margin-bottom: @grid-gutter-width;
+      color: @green;
+      &:before {
+        counter-increment: badges-number;
+        content: counter(badges-number)'. ';
+      }
+    }
+  }
+
+  // Minor bullets with check marks
+  > li > ul {
+    background: #F5F5F5;
+    list-style: none;
+    padding: @grid-gutter-width;
+    border-top: 1px solid darken(#F5F5F5, 5%);
+    border-bottom: 1px solid darken(#F5F5F5, 5%);
+    > li {
+      padding-left: 2em;
+      margin-bottom: 1em;
+      position: relative;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:before {
+        .icon(@ok);
+        color: @green;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+}
+
+// For editor preview
+.preview .list-badges-requirements > li {
+  margin: 0;
+}

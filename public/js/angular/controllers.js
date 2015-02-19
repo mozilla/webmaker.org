@@ -306,6 +306,12 @@ angular
         };
       }
 
+      $scope.hasError = function (formEl) {
+        return {
+          'has-error': ($scope.submitAttempt || formEl.$dirty) && formEl.$invalid
+        };
+      };
+
       $scope.criteriaPreview = function () {
         if (!$scope.badge || !$scope.badge.criteria) {
           return '';
@@ -336,9 +342,13 @@ angular
         badge.type = 'Skill';
 
         // Tags
-        badge.tags = data.tags.split(/[\s,]+/).filter(function (item) {
-          return item;
-        });
+        if (badge.tags) {
+          badge.tags = data.tags.split(/[\s,]+/).filter(function (item) {
+            return item;
+          });
+        } else {
+          delete badge.tags;
+        }
 
         // Criteria
         badge.criteria = data.criteria.map(function (criterion) {
@@ -349,7 +359,11 @@ angular
         return badge;
       }
 
-      $scope.submit = function (badge) {
+      $scope.submit = function (isValid, badge) {
+        $scope.submitAttempt = true;
+        if (!isValid) {
+          return;
+        }
         var url = '/api/badges/' + ($routeParams.badge ? $routeParams.badge + '/' + $scope.view : 'create');
         badge = prepareBadge(badge);
         console.log('Sending...', badge);
@@ -357,7 +371,7 @@ angular
           .post(url, badge)
           .success(function (data) {
             console.log('Success!', data);
-            $location.path('/badges/' + data.slug);
+            window.location = '/' + config.lang + '/badges/' + data.slug;
           })
           .error(function (err) {
             console.log(err);

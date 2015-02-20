@@ -9,6 +9,8 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $issueBadgeBtn = $('#js-badge-issuing');
     var $applicationForm = $('#submit-badge-application');
     var $application = $('#application');
+    var $claimCodeButtonLogin = $('.claim-code-button-login');
+    var $claimCodeButtonLogout = $('.claim-code-button-logout');
     var $claimCodeInput = $applicationForm.find('[name="claimcode"]');
     var $evidenceInput = $applicationForm.find('[name="evidence"]');
     var $cityInput = $applicationForm.find('[name="city"]');
@@ -22,6 +24,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     var $applicationOn = $('.application-on');
     var $applicationOff = $('.application-off');
     var $issueBadgeOn = $('.js-issue-badge-on');
+    var $claimCodContainer = $('.claim-code-container');
     var $issue = $('#issue');
     var $issueForm = $('#issue-form');
     var $claimCodeQuestion = $('#claim-code-explainer');
@@ -67,31 +70,63 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     });
 
     emitter.on('application-on', function () {
+      $issueBadgeOn.addClass('hidden');
+      $claimCodContainer.addClass('hidden');
       $applicationOn.removeClass('hidden');
       $applicationOff.addClass('hidden');
+      $claimCodeButtonLogin.removeClass('hidden');
+    });
+
+    emitter.on('claim-code-button-click', function () {
+      $applicationOn.addClass('hidden');
+      $issueBadgeOn.addClass('hidden');
+      $claimCodContainer.removeClass('hidden');
+      $applicationOff.removeClass('hidden');
+      $claimCodeButtonLogin.addClass('hidden');
     });
 
     emitter.on('js-issue-badge-on', function () {
+      $applicationOn.addClass('hidden');
+      $claimCodContainer.addClass('hidden');
       $issueBadgeOn.removeClass('hidden');
       $applicationOff.addClass('hidden');
+      $claimCodeButtonLogin.removeClass('hidden');
     });
 
     emitter.on('application-off', function () {
       $applicationOn.addClass('hidden');
       $issueBadgeOn.addClass('hidden');
+      $claimCodContainer.addClass('hidden');
       $applicationOff.removeClass('hidden');
+      $claimCodeButtonLogin.removeClass('hidden');
     });
 
     $logoutOnly.on('click', function () {
       auth.login();
     });
 
+    var fireClaimCode = false;
+    $claimCodeButtonLogout.on('click', function (e) {
+      e.preventDefault();
+      fireClaimCode = true;
+      auth.login();
+    });
     auth.on('login', function () {
+      $claimCodeButtonLogin.removeClass('hidden');
+      $claimCodeButtonLogout.addClass('hidden');
+
+      if (fireClaimCode) {
+        fireClaimCode = false;
+        emitter.emitEvent('claim-code-button-click');
+      }
+
       $loginOnly.removeClass('hidden');
       $logoutOnly.addClass('hidden');
     });
-
     auth.on('logout', function () {
+      $claimCodeButtonLogin.addClass('hidden');
+      $claimCodeButtonLogout.removeClass('hidden');
+
       $loginOnly.addClass('hidden');
       $logoutOnly.removeClass('hidden');
     });
@@ -165,9 +200,12 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       e.preventDefault();
       emitter.emitEvent('application-off');
     });
+    $claimCodeButtonLogin.on('click', function (e) {
+      e.preventDefault();
+      emitter.emitEvent('claim-code-button-click');
+    });
     $issueBadgeBtn.on('click', function (e) {
       e.preventDefault();
       emitter.emitEvent('js-issue-badge-on');
     });
-
   });

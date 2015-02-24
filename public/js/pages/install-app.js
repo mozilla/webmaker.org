@@ -80,12 +80,11 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
     phoneNumberInputError.addClass("off");
   });
 
-  phoneNumberInput.blur(function() {
+  phoneNumberInput.blur(function () {
     if (phoneNumberInput.intlTelInput("isValidNumber")) {
-      phoneNumberInput.removeClass("invalid")
+      phoneNumberInput.removeClass("invalid");
       phoneNumberInputError.addClass("off");
-    }
-    else if (phoneNumberInput.val().trim().length > 0) {
+    } else if (phoneNumberInput.val().trim().length > 0) {
       phoneNumberInput.addClass("invalid");
       phoneNumberInputError.removeClass("off");
     }

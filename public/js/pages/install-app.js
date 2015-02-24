@@ -3,24 +3,35 @@ requirejs.config({
   paths: {
     "analytics": "/bower_components/webmaker-analytics/analytics",
     "jquery": "/bower_components/jquery/jquery.min",
-    "intl-tel-input": "/bower_components/intl-tel-input/build/js/intlTelInput.min"
+    "intl-tel-input": "/bower_components/intl-tel-input/build/js/intlTelInput.min",
+    "ua-parser-js": "/bower_components/ua-parser-js/dist/ua-parser.min"
   }
 });
 
-require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
+require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, analytics, UA) {
   "use strict";
   var downloadButtons = $(".download-app-btn"),
     sendInstallAppButtonContainer = $(".desktop-install-app-btn-wrapper"),
     sendInstallLinkContainer = $(".send-install-link-container"),
     smsPrivacyMessageContainer = $(".sms-privacy-message"),
     phoneNumberLabel = $(".phone-number-label"),
-    getAppBtn = $(".desktop-install-app-btn"),
+    getAppBtn = $("#get-app"),
+    mobileFooter = $(".download-app"),
     phoneNumberInput = $(".phone-num-input"),
-    phoneNumberInputError = $(".phone-error-popup"),
+    phoneNumberInputError = $(".phone-error"),
     sendSmsButton = $(".send-sms-btn"),
-    messageSent = $(".message-sent-container"),
+    messageSent = $("#message-sent"),
     messageSentError = $(".message-sent-error-container"),
-    csrfToken = $("meta[name='csrf-token']").attr("content");
+    csrfToken = $("meta[name='csrf-token']").attr("content"),
+    smsForm = $("#sms-form");
+  var parser = new UAParser();
+  var ua = parser.getResult();
+  var isMobile = ua.device.type === "mobile";
+  if (isMobile) {
+    $(".mobile-only").removeClass("mobile-only");
+  } else {
+    $(".desktop-only").removeClass("desktop-only");
+  }
 
   function sendSMS() {
     sendSmsButton.attr("disabled", true);
@@ -41,17 +52,11 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
         "X-CSRF-Token": csrfToken
       },
       error: function () {
-        phoneNumberLabel.addClass("hidden");
-        phoneNumberInput.addClass("hidden");
-        sendSmsButton.addClass("hidden");
-        $(".intl-tel-input").addClass("hidden");
+        smsForm.addClass("hidden");
         messageSentError.removeClass("hidden");
       },
       success: function () {
-        phoneNumberLabel.addClass("hidden");
-        phoneNumberInput.addClass("hidden");
-        sendSmsButton.addClass("hidden");
-        $(".intl-tel-input").addClass("hidden");
+        smsForm.addClass("hidden");
         messageSent.removeClass("hidden");
         analytics.event("SMS Send Success", {
           nonInteraction: true
@@ -64,14 +69,12 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
 
   downloadButtons.click(function () {
     analytics.event("Download Beta App");
-    window.open("http://mzl.la/installwm", "_blank");
   });
 
   getAppBtn.click(function () {
     analytics.event("Click Get App Button");
-    sendInstallAppButtonContainer.addClass("hidden");
-    sendInstallLinkContainer.removeClass("hidden");
-    smsPrivacyMessageContainer.removeClass("hidden");
+    smsForm.removeClass("hidden");
+    getAppBtn.addClass("hidden");
   });
 
   phoneNumberInput.intlTelInput();
@@ -84,16 +87,16 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
 
   phoneNumberInput.focus(function () {
     phoneNumberInput.removeClass("invalid");
-    phoneNumberInputError.addClass("off");
+    phoneNumberInputError.addClass("hidden");
   });
 
   phoneNumberInput.blur(function () {
     if (phoneNumberInput.intlTelInput("isValidNumber")) {
       phoneNumberInput.removeClass("invalid");
-      phoneNumberInputError.addClass("off");
+      phoneNumberInputError.addClass("hidden");
     } else if (phoneNumberInput.val().trim().length > 0) {
       phoneNumberInput.addClass("invalid");
-      phoneNumberInputError.removeClass("off");
+      phoneNumberInputError.removeClass("hidden");
     }
   });
 

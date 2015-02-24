@@ -28,7 +28,7 @@
     "description": "Action text for Downloading the Webmaker app"
   },
   "Get App": {
-    "message": "Get the App >",
+    "message": "Get the App",
     "description": "Action text for triggering the SMS backed get download link tool"
   },
   "Enter your phone number": {
@@ -36,7 +36,7 @@
     "description": "Label text for the phone number input"
   },
   "Send Text": {
-    "message": "Send Text >",
+    "message": "Send Text",
     "description": "Label text for the phone number input"
   },
   "install webmaker sms text": {
@@ -56,7 +56,7 @@
     "description": "Error text displayed if phone number is invalid"
   },
   "sms privacy message": {
-    "message": "Text messages are sent to your phone via a company called Twilio. This information will be stored for no more than 30 days, and will not be used for any other purposes. For more information, see <a href=\"https://www.twilio.com/legal/privacy\">Twilio's privacy policy</a>.",
+    "message": "Text messages are sent to your phone via a company called Twilio. This information will be stored for no more than 30 days, and will not be used for any other purposes. For more information, see <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\">Twilio's privacy policy</a>.",
     "description": "Warning message about Mozilla and Twilio's privacy policies"
   }
 }

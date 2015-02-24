@@ -12,6 +12,7 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
   var downloadButtons = $(".download-app-btn"),
     sendInstallAppButtonContainer = $(".desktop-install-app-btn-wrapper"),
     sendInstallLinkContainer = $(".send-install-link-container"),
+    smsPrivacyMessageContainer = $(".sms-privacy-message"),
     phoneNumberLabel = $(".phone-number-label"),
     getAppBtn = $(".desktop-install-app-btn"),
     phoneNumberInput = $(".phone-num-input"),
@@ -62,6 +63,7 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
     analytics.event("Click Get App Button");
     sendInstallAppButtonContainer.addClass("hidden");
     sendInstallLinkContainer.removeClass("hidden");
+    smsPrivacyMessageContainer.removeClass("hidden");
   });
 
   phoneNumberInput.intlTelInput();

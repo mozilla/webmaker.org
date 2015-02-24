@@ -4,7 +4,8 @@
 @app-install-text-size-desktop: 20px;
 @app-install-spacing-mobile: 32px;
 @app-install-spacing-desktop: 46px;
-@btn-height: 49px;
+@corner-radius: 6px;
+@sms-height: 40px;
 
 .install-webmaker-app {
   .navbar-header,
@@ -65,6 +66,8 @@
     }
     .section-text {
       font-size: @app-install-text-size-mobile;
+      text-align: justify;
+
       &.add-margin {
         margin-bottom: @app-install-spacing-mobile;
       }
@@ -91,21 +94,9 @@
   }
 
   .app-download-button {
-    height: @btn-height;
-    >button {
-      height: 100%;
-      width: 100%;
-      background-color: #FACD34;
-      color: #4B5B62;
-      font-family: "Open Sans";
-      font-weight: bold;
-      font-size: 12px;
-    }
-
     @media (min-width: @screen-lg-min) {
       display: none;
     }
-
   }
 
   .pull-left {
@@ -114,48 +105,32 @@
   }
 
   .desktop-install-app-btn-wrapper {
-    height: @btn-height;
-
-    .desktop-install-app-btn {
-      height: 100%;
-      width: 100%;
-      background-color: #FACD34;
-      color: #4B5B62;
-      font-family: "Fira Sans";
-      font-size: 18px;
-      font-weight: 500;
-      text-transform: uppercase;
-    }
     &.hidden {
       display: none;
     }
   }
 
   .send-install-link-container {
+    padding-bottom: 1em;
+
     .phone-number-label {
       font-family: "Fira Sans";
       font-size: 14px;
       color: @white;
-      text-overflow: nowrap;
+      white-space: nowrap;
+      padding-bottom: 10px;
     }
 
     .phone-num-input {
-      height: 50px;
+      height: @sms-height;
       width: 100%;
       font-family: "Fira Sans";
       font-style: italic;
       font-size: 14px;
+      border-radius: @corner-radius;
+      border: 2px solid rgb(150, 150, 150);
     }
-    .send-sms-btn {
-      height: 50px;
-      width: 100%;
-      background-color: #FACD34;
-      color: #4B5B62;
-      font-family: "Fira Sans";
-      font-size: 18px;
-      font-weight: 500;
-      text-transform: uppercase;
-    }
+
     .message-sent-container,
     .message-sent-error-container {
       color: @white;
@@ -163,6 +138,7 @@
       font-weight: normal;
       font-size: @app-install-text-size-mobile;
     }
+
     &.hidden {
       display: none;
     }
@@ -190,4 +166,57 @@
   .install-footer {
     margin-top: 0;
   }
+
+  .intl-tel-input {
+    width: 100%;
+  }
+
+  .sms-privacy-message {
+    color: @white;
+    font-size: .9rem;
+    a {
+      color: @white;
+      text-decoration: underline;
+    }
+  }
+
+  .btn {
+    background-color: #FACD34;
+    color: #4B5B62;
+
+    position: relative;
+    padding: 1.3rem 1.5rem 1.1rem 1.5rem;
+
+    border: transparent;
+    border-radius: @corner-radius;
+    box-shadow: 0 0.4rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    vertical-align: baseline;
+    font-weight: 600;
+    line-height: 1;
+
+    &:active {
+      top: 0.4rem;
+      box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,0.2);
+    }
+
+    &.btn-block {
+      width: auto;
+    }
+
+    &.download-app-btn {
+      margin: 0 auto;
+    }
+
+    &.desktop-install-app-btn {
+      padding: 20px 40px
+    }
+
+    &.send-sms-btn {
+      height: @sms-height - 0.4rem;
+      width: 100%;
+    }
+
+  }
+
 }

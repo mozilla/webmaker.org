@@ -51,6 +51,10 @@
     "message": "Uh oh! We're having trouble sending you the install link, try reloading the page and submitting your number again.",
     "description": "Error text displayed if submitting a phone number fails"
   },
+  "phone format error" : {
+    "message": "Make sure you've entered a valid phone number.",
+    "description": "Error text displayed if phone number is invalid"
+  },
   "sms privacy message": {
     "message": "Text messages are sent to your phone via a company called Twilio. This information will be stored for no more than 30 days, and will not be used for any other purposes. For more information, see <a href=\"https://www.twilio.com/legal/privacy\">Twilio's privacy policy</a>.",
     "description": "Warning message about Mozilla and Twilio's privacy policies"

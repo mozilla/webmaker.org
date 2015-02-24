@@ -61,6 +61,7 @@
           </div>
           <div class="col-lg-4 pull-left">
             <input class="phone-num-input" type="tel" name="" value="">
+            <div class="phone-error-popup">{{ gettext("phone format error") }}</div>
           </div>
           <div class="col-lg-4">
             <button class="btn btn-block send-sms-btn">{{ gettext("Send Text")}}</button>
@@ -70,6 +71,11 @@
           </div>
           <div class="col-lg-12 message-sent-error-container hidden pull-left">
             <span>{{ gettext("message sent error") }}</span>
+          </div>
+        </div>
+        <div class="col-lg-12 pull-left">
+          <div class="col-lg-8 pull-left">
+            <div class="phone-error-popup off">{{ gettext("phone format error") }}</div>
           </div>
         </div>
         <div class="col-lg-12 sms-privacy-message pull-left hidden">

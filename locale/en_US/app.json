@@ -12,7 +12,7 @@
     "description": "Header describing what Webmaker's app can be used for - building your own apps"
   },
   "Exactly what you need": {
-    "message": "Create exactly what you need: A website for your business, a chat app for your friends, a lesson plan for your students.",
+    "message": "Create exactly what you need: a website for your business, a chat app for your friends, or a lesson plan for your students.",
     "description": "A description about what kind of apps you can make"
   },
   "Share It with the World": {
@@ -20,7 +20,7 @@
     "description": "Header describing how apps can be shared"
   },
   "Meant to be seen": {
-    "message": "Webmaker creations are meant to be seen, heard and used. Share your project with friends and colleagues",
+    "message": "Webmaker creations are meant to be seen, heard and used. Share your project with friends and colleagues.",
     "description": "A description about the sharing capabilities of Webmaker"
   },
   "Download Webmaker": {
@@ -28,7 +28,7 @@
     "description": "Action text for Downloading the Webmaker app"
   },
   "Get App": {
-    "message": "Get App >",
+    "message": "Get the App >",
     "description": "Action text for triggering the SMS backed get download link tool"
   },
   "Enter your phone number": {

@@ -23,8 +23,12 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
 
   function sendSMS() {
     sendSmsButton.attr("disabled", true);
-    analytics.event("Send SMS Link for Beta App");
     var phoneNumber = phoneNumberInput.intlTelInput("getNumber", window.intlTelInputUtils.numberFormat.INTERNATIONAL);
+
+    analytics.event("Click Send SMS Link for Beta App", {
+      label: phoneNumberInput.intlTelInput("getSelectedCountryData").iso2
+    });
+
     $.ajax({
       type: "POST",
       url: "/app/send-download-link",
@@ -48,6 +52,9 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
         sendSmsButton.addClass("hidden");
         $(".intl-tel-input").addClass("hidden");
         messageSent.removeClass("hidden");
+        analytics.event("SMS Send Success", {
+          nonInteraction: true
+        });
       }
     });
   }

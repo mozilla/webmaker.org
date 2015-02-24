@@ -454,6 +454,9 @@ app.get("/terms", routes.angular);
 app.get("/privacy", routes.angular);
 app.get("/languages", routes.page("languages"));
 
+app.get("/app", routes.app);
+app.post("/app/send-download-link", routes.api.sendSMS);
+
 // goggles onboard, with special image routing for lowest-threshold onboarding
 app.get("/goggles", routes.angular);
 app.get("/goggles/install", routes.angular);

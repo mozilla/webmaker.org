@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- For sharing & search engines -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://webmaker.org/img/logo-og.png" />
+  <meta property="og:image:width" content="1400" />
+  <meta property="og:image:height" content="1400" />
+  <meta property="og:site_name" content="Webmaker" />
+  <meta property="og:locale" content="{{ localeInfo.lang | replace('-', '_') }}" />
+  {% for language in languages %}
+  <meta property="og:locale:alternate" content="{{ language | replace('-', '_') }}" />{% endfor %}
+  <meta property="og:title" content="{{ gettext("Download Webmaker") }}" />
+  <meta property="og:description" content="{{ gettext("Strips away complexity") }}" />
+  <meta property="og:url" content="https://webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+
+  <link rel="canonical" href="https://webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+  <meta property="description" content="{{ gettext("Strips away complexity") }}" />
+  <!-- /sharing -->
+
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/style.{{ localeInfo.direction }}.css">
+
+  <meta name="csrf-token" content="{{ csrf }}">
+
+  <title>{{ gettext("Download Webmaker") }}</title>
+
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+</head>
+<body class="install-webmaker-app">
+
+<div id="webmaker-nav">
+  <nav class="navbar navbar-webmaker">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/{{localeInfo.lang}}" class="logo webmaker-logo">
+          <img src="/img/logo.png" alt="{{ gettext("Mozilla Webmaker") }}">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content create-something">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-0 col-lg-push-6 section-content">
+      <div class="col-xs-12 section-header">{{ gettext("Become a Maker") }}</div>
+      <div class="col-xs-12 col-lg-8 section-text add-margin">{{ gettext("Strips away complexity") }}</div>
+      <div class="col-lg-12 desktop-install-app">
+        <div class="col-lg-3 desktop-install-app-btn-wrapper pull-left">
+          <button class="btn btn-block desktop-install-app-btn">{{ gettext("Get App")}}</button>
+        </div>
+        <div class="col-lg-12 send-install-link-container hidden pull-left">
+          <div class="col-lg-12 phone-number-label pull-left">
+            <div class="col-lg-4 pull-left">
+              <i class="fa icon-mobile-phone"></i> {{ gettext("Enter your phone number")}}
+            </div>
+          </div>
+          <div class="col-lg-4 pull-left">
+            <input class="phone-num-input" type="tel" name="" value="" placeholder="+1 (555) 555-5555">
+          </div>
+          <div class="col-lg-4">
+            <button class="btn btn-block send-sms-btn">{{ gettext("Send Text")}}</button>
+          </div>
+          <div class="col-lg-12 message-sent-container hidden pull-left">
+            <span>{{ gettext("message sent") }}</span>
+          </div>
+          <div class="col-lg-12 message-sent-error-container hidden pull-left">
+            <span>{{ gettext("message sent error") }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-xs-offset-3 app-download-button">
+      <button class="btn btn-block download-app-btn">{{ gettext("Download Webmaker")}}</button>
+    </div>
+    <div class="col-xs-8 col-xs-offset-2 col-lg-4 col-lg-pull-6 col-lg-offset-1 cellphone">
+      <img src="/img/cellphone.svg" alt="Cellphone">
+    </div>
+  </div>
+</div>
+<div class="content build-something">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 col-lg-5 col-lg-offset-1 section-content push-down">
+      <div class="col-xs-12 section-header">{{ gettext("Build the Perfect App") }}</div>
+      <div class="col-xs-12 col-lg-8 section-text">{{ gettext("Exactly what you need") }}</div>
+    </div>
+    <div class="col-xs-10 col-xs-offset-1 col-lg-4 col-lg-offset-0 cellphone">
+      <img src="/img/cellphone.svg" alt="Cellphone">
+    </div>
+  </div>
+</div>
+<div class="content share-something">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-0 col-lg-push-6 section-content push-down">
+      <div class="col-xs-12 section-header">{{ gettext("Share It with the World") }}</div>
+      <div class="col-xs-12 col-lg-8 section-text">{{ gettext("Meant to be seen") }}</div>
+    </div>
+    <div class="col-xs-8 col-xs-offset-2 col-lg-4 col-lg-pull-6 col-lg-offset-1 cellphone">
+      <img src="/img/cellphone.svg" alt="Cellphone">
+    </div>
+  </div>
+</div>
+<div class="content download-app">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 app-download-button">
+      <button class="btn btn-block download-app-btn">{{ gettext("Download Webmaker")}}</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer install-footer">
+  <div class="partnerWrapper">
+    <nav class="navbar-footer">
+      <div class="container">
+        <ul>
+          <li><a href="/{{localeInfo.lang}}/about">{{ gettext("About") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/mentor">{{ gettext("Teach") }}</a></li>
+          <li>
+            <a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">
+              {{ gettext("Donate") }}
+            </a>
+          </li>
+          <li><a href="mailto:help@webmaker.org">{{ gettext("Contact") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/privacy">{{ gettext("Privacy") }}</a></li>
+          <li><a href="/{{localeInfo.lang}}/terms">{{ gettext("Legal") }}</a></li>
+          <li>
+            <a href="https://support.mozilla.org/products/webmaker">
+              {{ gettext("Help") }}
+            </a>
+          </li>
+        </ul>
+
+        <ul class="secondary">
+          <li><span class="fa icon-twitter"></span>
+            <a href="https://twitter.com/webmaker">
+              @webmaker
+            </a>
+          </li>
+          <li><span class="fa icon-file-text-alt"></span>
+            <a href="https://blog.webmaker.org">
+              {{ gettext("Blog") }}
+            </a>
+          </li>
+        </ul>
+
+        <div class="moz-logo">
+          <a href="https://mozilla.org/">
+            <img src="/img/logo-mozilla-white.png" alt="mozilla logo" height="41" width="100"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script id="require-js" src="/bower_components/requirejs/require.js"
+  data-main="/js/pages/install-app.js"
+  async>
+</script>
+
+{% if ga_account %}
+<script id="google-analytics-js" src="/js/lib/google-analytics.js"
+  data-ga-account="{{ ga_account }}"
+  data-ga-domain="{{ ga_domain }}"
+  async>
+</script>
+{% endif %}
+</body>
+</html>

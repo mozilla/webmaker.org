@@ -16,6 +16,7 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
     phoneNumberLabel = $(".phone-number-label"),
     getAppBtn = $(".desktop-install-app-btn"),
     phoneNumberInput = $(".phone-num-input"),
+    phoneNumberInputError = $(".phone-error-popup"),
     sendSmsButton = $(".send-sms-btn"),
     messageSent = $(".message-sent-container"),
     messageSentError = $(".message-sent-error-container"),
@@ -79,6 +80,21 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
 
   phoneNumberInput.keyup(function () {
     sendSmsButton.attr("disabled", !phoneNumberInput.intlTelInput("isValidNumber"));
+  });
+
+  phoneNumberInput.focus(function () {
+    phoneNumberInput.removeClass("invalid");
+    phoneNumberInputError.addClass("off");
+  });
+
+  phoneNumberInput.blur(function () {
+    if (phoneNumberInput.intlTelInput("isValidNumber")) {
+      phoneNumberInput.removeClass("invalid");
+      phoneNumberInputError.addClass("off");
+    } else if (phoneNumberInput.val().trim().length > 0) {
+      phoneNumberInput.addClass("invalid");
+      phoneNumberInputError.removeClass("off");
+    }
   });
 
   sendSmsButton.click(sendSMS);

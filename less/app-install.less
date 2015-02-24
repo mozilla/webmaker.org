@@ -129,6 +129,10 @@
       font-size: 14px;
       border-radius: @corner-radius;
       border: 2px solid rgb(150, 150, 150);
+
+      &.invalid {
+        border-color: @red;
+      }
     }
 
     .message-sent-container,
@@ -177,6 +181,18 @@
     a {
       color: @white;
       text-decoration: underline;
+    }
+  }
+
+  .phone-error-popup {
+    color: @white;
+    padding-bottom: 5px;
+    opacity: 1;
+
+    transition: opacity .2s;
+
+    &.off {
+      opacity: 0;
     }
   }
 

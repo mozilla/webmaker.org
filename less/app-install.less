@@ -6,6 +6,7 @@
 @app-install-spacing-desktop: 46px;
 @corner-radius: 6px;
 @sms-height: 40px;
+@phone-content-start: 70px;
 
 .install-webmaker-app {
   .navbar-header,
@@ -83,12 +84,52 @@
         margin-top: @app-install-spacing-mobile;
       }
 
-      img {
-        @media (min-width: @screen-lg-min) {
-          height: 600px;
-          width: auto;
+      .phone-container {
+        height: 645px;
+        width: 305px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: 0 @phone-content-start;
+        background-size: 100%;
+        background-color: transparent;
+
+        &.make-step {
+          background-image: url('/img/app-install/make.jpg');
         }
-        .center-block();
+
+        &.build-step {
+          background-image: url('/img/app-install/share.jpg');
+        }
+
+        &.share-step {
+          background-image: url('/img/app-install/build.jpg');
+        }
+
+        img {
+          width: 100%;
+        }
+
+        &:before,
+        &:after {
+          display: block;
+          content: '';
+          width: 100%;
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+
+        &:before {
+          height: @phone-content-start;
+          background-image: url('/img/app-install/phone-top.png');
+        }
+
+        &:after {
+          position: absolute;
+          bottom: 0;
+          height: 85px;
+          background-image: url('/img/app-install/phone-bottom.png');
+        }
       }
     }
   }

@@ -85,7 +85,7 @@ require(["jquery", "analytics", "intl-tel-input"], function ($, analytics) {
       phoneNumberInput.removeClass("invalid")
       phoneNumberInputError.addClass("off");
     }
-    else {
+    else if (phoneNumberInput.val().trim().length > 0) {
       phoneNumberInput.addClass("invalid");
       phoneNumberInputError.removeClass("off");
     }

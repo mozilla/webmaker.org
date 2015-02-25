@@ -24,6 +24,11 @@
             <p>{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
             {% endif %}
             <p>{{ badge.earnerDescription | markdown | safe }}</p>
+            <div>
+              <button class="claim-code-button-login button-link hidden">{{ gettext("HaveClaimCode") }}</button>
+              <button class="claim-code-button-logout button-link hidden">{{ gettext("Login to claim") }}</button>
+            </div>
+
             {% if assertionUrl %}
               <h3>Congratulations <span class="username">{{ username }}</span>, you've earned this badge!</h3>
               <a href="/user/{{username}}/badges" class="btn btn-lg btn-success pull-left">{{ gettext("ViewOnProfile") }}</a>
@@ -34,11 +39,40 @@
             {% endif %}
           </div>
         </div>
+        <div class="container claim-code-container hidden">
+          <div class="login-only">
+
+            <div id="claim-badge-success" class="panel panel-info panel-badges hidden">
+              <div class="panel-body">
+                <h2>{{ gettext("ClaimSuccess") }}</h2>
+                <p>{{ gettext("ClaimSuccessDetails") | safe }}</p>
+              </div>
+            </div>
+            <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}" data-application-slug="{{ application.slug if application else null }}">
+              <div class="panel-body">
+                <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>
+                <h2>{{ gettext("Claim this badge") }}
+                  <span id="claim-code-explainer" class="icon-question-sign" title="For example, if you are awarded a badge for attending an event, the organizer of the event may provide you with a claim code."></span>
+                </h2>
+                <div class="submit-badge-error alert alert-danger hidden">
+                  <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
+                </div>
+                <form id="submit-badge-application">
+                  <div class="form-inline">
+                    <input class="form-control" name="claimcode" placeholder="Enter claim code">
+                    <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+{% if hasCriteria or canIssue %}
 <section id="requirements">
 
   <div class="container application-on hidden">
@@ -48,13 +82,6 @@
         <div class="panel-body">
           <h2>{{ gettext("GotApplication") }}</h2>
           <p>{{ gettext("ReplyToEmail") | safe }}</p>
-        </div>
-      </div>
-
-      <div id="claim-badge-success" class="panel panel-info panel-badges hidden">
-        <div class="panel-body">
-          <h2>{{ gettext("ClaimSuccess") }}</h2>
-          <p>{{ gettext("ClaimSuccessDetails") | safe }}</p>
         </div>
       </div>
 
@@ -85,9 +112,6 @@
             </div>
             {% endif %}
             <div class="form-inline">
-              <label for="claimcode">{{ gettext("HaveClaimCode") }}</label>
-              <span id="claim-code-explainer" class="icon-question-sign" title="For example, if you are awarded a badge for attending an event, the organizer of the event may provide you with a claim code."></span>
-              <input class="form-control" name="claimcode" placeholder="e.g. 1234Z764HGZIHBHZ">
               <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
             </div>
           </form>
@@ -132,8 +156,8 @@
   </div>
 
   <div class="container">
-    <h2>{{ gettext("Badge Requirements") }}
-      <span class="application-off">
+    <h2 class="clearfix">{{ gettext("Badge Requirements") }}
+      <span class="application-off pull-right">
         {% if not assertionUrl %}
           <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">
             {%- if not application -%}
@@ -157,6 +181,7 @@
   </div>
 
 </section>
+{% endif %}
 
 {% endblock %}
 {% block footer %}{% endblock %}

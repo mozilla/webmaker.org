@@ -204,11 +204,18 @@ module.exports = function (env) {
           // Do we want to ask which Hive city the earner is affiliated with?
           var requestCity = (req.params.badge === 'hive-community-member');
 
+          // Check if we have any criteria to display.
+          var hasCriteria = true;
+          if (badge.criteria.length === 1 && badge.criteria[0].description === '') {
+            hasCriteria = false;
+          }
+
           res.render('badge-detail.html', {
             page: req.params.badge,
             view: 'badges',
             badge: badge,
             canIssue: canIssue,
+            hasCriteria: hasCriteria,
             requestCity: requestCity,
             backpackUrl: env.get('BACKPACK_PUSH_URL'),
             assertionUrl: instance ? instance.assertionUrl : null,

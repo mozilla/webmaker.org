@@ -11,12 +11,7 @@ requirejs.config({
 require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, analytics, UA) {
   "use strict";
   var downloadButtons = $(".download-app-btn"),
-    sendInstallAppButtonContainer = $(".desktop-install-app-btn-wrapper"),
-    sendInstallLinkContainer = $(".send-install-link-container"),
-    smsPrivacyMessageContainer = $(".sms-privacy-message"),
-    phoneNumberLabel = $(".phone-number-label"),
     getAppBtn = $("#get-app"),
-    mobileFooter = $(".download-app"),
     phoneNumberInput = $(".phone-num-input"),
     phoneNumberInputError = $(".phone-error"),
     sendSmsButton = $(".send-sms-btn"),
@@ -24,7 +19,7 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
     messageSentError = $(".message-sent-error-container"),
     csrfToken = $("meta[name='csrf-token']").attr("content"),
     smsForm = $("#sms-form");
-  var parser = new UAParser();
+  var parser = new window.UAParser();
   var ua = parser.getResult();
   var isMobile = ua.device.type === "mobile";
   if (isMobile) {

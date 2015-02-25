@@ -72,7 +72,6 @@
   </div>
 </section>
 
-{% if hasCriteria or canIssue %}
 <section id="requirements">
 
   <div class="container application-on hidden">
@@ -158,7 +157,7 @@
   <div class="container">
     <h2 class="clearfix">{{ gettext("Badge Requirements") }}
       <span class="application-off pull-right">
-        {% if not assertionUrl %}
+        {% if not assertionUrl and canApply %}
           <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">
             {%- if not application -%}
               {{ gettext("Apply") }}
@@ -170,7 +169,9 @@
         {% if canIssue %}
           <button id="js-badge-issuing" class="btn btn-lg btn-success pull-right">Issue this badge</button>
         {% endif %}
+        {% if canApply %}
         <button class="btn btn-lg btn-success pull-right logout-only hidden webmaker-login">{{ gettext("Login to apply") }}</button>
+        {% endif %}
       </span>
     </h2>
     <ol class="list-badges-requirements list-unstyled">
@@ -181,7 +182,6 @@
   </div>
 
 </section>
-{% endif %}
 
 {% endblock %}
 {% block footer %}{% endblock %}

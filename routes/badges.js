@@ -205,9 +205,12 @@ module.exports = function (env) {
           var requestCity = (req.params.badge === 'hive-community-member');
 
           // Check if we have any criteria to display.
-          var hasCriteria = true;
-          if (badge.criteria.length === 1 && badge.criteria[0].description === '') {
-            hasCriteria = false;
+          var canApply = true;
+          switch (badge.name) {
+            case 'Data Trail Timeline':
+            case 'Privacy Coach':
+            case 'IP Address Tracer':
+              canApply = false;
           }
 
           res.render('badge-detail.html', {
@@ -215,7 +218,7 @@ module.exports = function (env) {
             view: 'badges',
             badge: badge,
             canIssue: canIssue,
-            hasCriteria: hasCriteria,
+            canApply: canApply,
             requestCity: requestCity,
             backpackUrl: env.get('BACKPACK_PUSH_URL'),
             assertionUrl: instance ? instance.assertionUrl : null,

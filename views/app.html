@@ -20,7 +20,6 @@
   <link rel="canonical" href="https://webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
   <meta property="description" content="{{ gettext("Strips away complexity") }}" />
   <!-- /sharing -->
-
   <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="/css/style.{{ localeInfo.direction }}.css">
 
@@ -44,85 +43,80 @@
   </div>
 </div>
 
-<div class="content create-something">
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-0 col-lg-push-6 section-content">
-      <div class="col-xs-12 section-header">{{ gettext("Become a Maker") }}</div>
-      <div class="col-xs-12 col-lg-8 section-text add-margin">{{ gettext("Strips away complexity") }}</div>
-      <div class="col-lg-12 desktop-install-app">
-        <div class="col-lg-3 desktop-install-app-btn-wrapper pull-left">
-          <button class="btn btn-block desktop-install-app-btn">{{ gettext("Get App")}}</button>
-        </div>
-        <div class="col-lg-12 send-install-link-container hidden pull-left">
-          <div class="col-lg-12 phone-number-label pull-left">
-            <div class="col-lg-4 pull-left">
-              <i class="fa icon-mobile-phone"></i> {{ gettext("Enter your phone number")}}
-            </div>
+{% macro preview(image) %}
+<div class="phone-preview">
+  <img src="/img/app-install/top-phone.png">
+  <img src="{{image}}">
+  <img src="/img/app-install/bottom-phone.png">
+</div>
+{% endmacro %}
+
+<div class="outer first">
+  <div class="flex-container">
+    <div class="left">
+      {{ preview('/img/app-install/templates@2x.gif') }}
+    </div>
+    <div class="right">
+      <h2>{{ gettext("Become a Maker") }}</h2>
+      <p class="lead">{{ gettext("Strips away complexity") }}</p>
+      <div class="nudge">
+        <button id="get-app" class="btn btn-neue desktop-only">
+          {{ gettext("Get App") }}</span>
+        </button>
+        <a href="http://mzl.la/installwm" class="btn btn-neue mobile-only">
+          {{ gettext("Download Webmaker")}}
+        </a>
+        <div id="sms-form" class="hidden">
+          <p class="text-left">{{ gettext("Enter your phone number")}}</p>
+          <div class="input-group">
+            <input class="form-control phone-num-input" type="tel" name="" value="">
+            <span class="input-group-btn">
+              <button class="btn btn-neue send-sms-btn">{{ gettext("Send Text") }}</button>
+            </span>
           </div>
-          <div class="col-lg-4 pull-left">
-            <input class="phone-num-input" type="tel" name="" value="">
-          </div>
-          <div class="col-lg-4">
-            <button class="btn btn-block send-sms-btn">{{ gettext("Send Text")}}</button>
-          </div>
-          <div class="col-lg-12 message-sent-container hidden pull-left">
-            <span>{{ gettext("message sent") }}</span>
-          </div>
-          <div class="col-lg-12 message-sent-error-container hidden pull-left">
-            <span>{{ gettext("message sent error") }}</span>
-          </div>
-        </div>
-        <div class="col-lg-12 pull-left">
-          <div class="col-lg-8 pull-left">
-            <div class="phone-error-popup off">{{ gettext("phone format error") }}</div>
-          </div>
-        </div>
-        <div class="col-lg-12 sms-privacy-message pull-left hidden">
-          <div class="col-lg-8 pull-left">
-            {{ gettext("sms privacy message") | safe }}
-          </div>
+          <p class="help-text phone-error hidden">{{ gettext("phone format error") }}</p>
+          <p class="small">{{ gettext("sms privacy message") | safe }}</p>
         </div>
       </div>
-    </div>
-    <div class="col-xs-6 col-xs-offset-3 app-download-button">
-      <button class="btn btn-block download-app-btn">{{ gettext("Download Webmaker")}}</button>
-    </div>
-    <div class="col-xs-8 col-xs-offset-2 col-lg-4 col-lg-pull-6 col-lg-offset-1 cellphone">
-      <div class="phone-container make-step"><img src="/img/app-install/templates@2x.gif"></div>
-    </div>
-  </div>
-</div>
-<div class="content build-something">
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2 col-lg-5 col-lg-offset-1 section-content push-down">
-      <div class="col-xs-12 section-header">{{ gettext("Build the Perfect App") }}</div>
-      <div class="col-xs-12 col-lg-8 section-text">{{ gettext("Exactly what you need") }}</div>
-    </div>
-    <div class="col-xs-10 col-xs-offset-1 col-lg-4 col-lg-offset-0 cellphone">
-      <div class="phone-container build-step"><img src="/img/app-install/editor@2x.gif"></div>
-    </div>
-  </div>
-</div>
-<div class="content share-something">
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-0 col-lg-push-6 section-content push-down">
-      <div class="col-xs-12 section-header">{{ gettext("Share It with the World") }}</div>
-      <div class="col-xs-12 col-lg-8 section-text">{{ gettext("Meant to be seen") }}</div>
-    </div>
-    <div class="col-xs-8 col-xs-offset-2 col-lg-4 col-lg-pull-6 col-lg-offset-1 cellphone">
-      <div class="phone-container share-step"><img src="/img/app-install/share@2x.gif"></div>
-    </div>
-  </div>
-</div>
-<div class="content download-app">
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2 app-download-button">
-      <button class="btn btn-block download-app-btn">{{ gettext("Download Webmaker")}}</button>
+      <p class="message-sent-error-container hidden">{{ gettext("message sent error") }}</p>
+      <p id="message-sent" class="hidden">
+        {{ gettext("message sent") }}
+      </p>
     </div>
   </div>
 </div>
 
-<footer class="footer install-footer">
+<div class="outer second">
+  <div class="flex-container">
+    <div class="left">
+      <h2>{{ gettext("Build the Perfect App") }}</h1>
+      <p class="lead">{{ gettext("Exactly what you need") }}</p>
+    </div>
+    <div class="right text-right">
+      {{ preview('/img/app-install/editor@2x.gif') }}
+    </div>
+  </div>
+</div>
+
+<div class="outer third">
+  <div class="flex-container">
+    <div class="left">
+      {{ preview('/img/app-install/share@2x.gif') }}
+    </div>
+    <div class="right">
+      <h2>{{ gettext("Share It with the World") }}</h1>
+      <p class="lead">{{ gettext("Meant to be seen") }}</p>
+    </div>
+  </div>
+  <div class="bottom-download-btn mobile-only nudge text-center">
+    <a href="http://mzl.la/installwm" class="btn btn-neue">
+      {{ gettext("Download Webmaker")}}
+    </a>
+  </div>
+</div>
+
+
+<footer class="footer">
   <div class="partnerWrapper">
     <nav class="navbar-footer">
       <div class="container">

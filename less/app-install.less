@@ -1,279 +1,169 @@
-@app-install-header-size-mobile: 24px;
-@app-install-header-size-desktop: 52px;
-@app-install-text-size-mobile: 16px;
-@app-install-text-size-desktop: 20px;
-@app-install-spacing-mobile: 32px;
-@app-install-spacing-desktop: 46px;
-@corner-radius: 6px;
-@sms-height: 40px;
-@phone-content-start: 70px;
-
 .install-webmaker-app {
-  .navbar-header,
-  .row {
-    margin-right: 0;
-    margin-left: 0;
+  @_breakpoint: 740px;
+
+  .navbar-webmaker {
+    border-bottom: none;
   }
 
-  .create-something,
-  .build-something,
-  .share-something,
-  .download-app {
-
-
-    @media (max-width: @screen-md-max) {
-      padding-top: @app-install-spacing-mobile;
-      padding-bottom: @app-install-spacing-mobile;
-    }
-
-    @media (min-width: @screen-lg-min) {
-      padding-top: @app-install-spacing-desktop;
-      padding-bottom: @app-install-spacing-desktop;
-    }
-
-    .section-content {
-      @media (min-width: @screen-lg-min) {
-        &.push-down {
-          top: 100px;
-        }
-      }
-      .desktop-install-app {
-        @media (max-width: @screen-md-max) {
-          display: none;
-        }
-      }
-    }
-
-    .section-header,
-    .section-text {
-      color: @white;
-      line-height: 24px;
-      .text-center();
-      @media (min-width: @screen-lg-min) {
-        .text-left();
-      }
-    }
-
-    .section-header {
-      font-size: @app-install-header-size-mobile;
-      margin-bottom: 12px;
-      @media (min-width: @screen-lg-min) {
-        font-size: @app-install-header-size-desktop;
-        margin-top: 140px;
-        margin-bottom: @app-install-spacing-desktop;
-      }
-      font-family: "Fira Sans";
-      font-weight: 500;
-    }
-    .section-text {
-      font-size: @app-install-text-size-mobile;
-      text-align: justify;
-
-      &.add-margin {
-        margin-bottom: @app-install-spacing-mobile;
-      }
-      @media (min-width: @screen-lg-min) {
-        font-size: @app-install-text-size-desktop;
-      }
-      font-family: "Fira Sans";
-      font-weight: normal;
-    }
-
-    .cellphone {
-      @media (max-width: @screen-md-max) {
-        margin-top: @app-install-spacing-mobile;
-      }
-
-      .phone-container {
-        height: 645px;
-        width: 305px;
-        margin: 0 auto;
-        background-repeat: no-repeat;
-        position: relative;
-        background-position: 0 @phone-content-start;
-        background-size: 100%;
-        background-color: transparent;
-
-        &.make-step {
-          background-image: url('/img/app-install/make.jpg');
-        }
-
-        &.build-step {
-          background-image: url('/img/app-install/share.jpg');
-        }
-
-        &.share-step {
-          background-image: url('/img/app-install/build.jpg');
-        }
-
-        img {
-          width: 100%;
-        }
-
-        &:before,
-        &:after {
-          display: block;
-          content: '';
-          width: 100%;
-          background-size: 100%;
-          background-repeat: no-repeat;
-        }
-
-        &:before {
-          height: @phone-content-start;
-          background-image: url('/img/app-install/phone-top.png');
-        }
-
-        &:after {
-          position: absolute;
-          bottom: 0;
-          height: 85px;
-          background-image: url('/img/app-install/phone-bottom.png');
-        }
-      }
-    }
+  /*********************************************************
+  * Type
+  */
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  h2, strong {
+    font-weight: 500;
   }
-
-  .app-download-button {
-    @media (min-width: @screen-lg-min) {
-      display: none;
-    }
-  }
-
-  .pull-left {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .desktop-install-app-btn-wrapper {
-    &.hidden {
-      display: none;
-    }
-  }
-
-  .send-install-link-container {
-    padding-bottom: 1em;
-
-    .phone-number-label {
-      font-family: "Fira Sans";
-      font-size: 14px;
-      color: @white;
-      white-space: nowrap;
-      padding-bottom: 10px;
-    }
-
-    .phone-num-input {
-      height: @sms-height;
-      width: 100%;
-      font-family: "Fira Sans";
-      font-style: italic;
-      font-size: 14px;
-      border-radius: @corner-radius;
-      border: 2px solid rgb(150, 150, 150);
-
-      &.invalid {
-        border-color: @red;
-      }
-    }
-
-    .message-sent-container,
-    .message-sent-error-container {
-      color: @white;
-      font-family: "Fira Sans";
-      font-weight: normal;
-      font-size: @app-install-text-size-mobile;
-    }
-
-    &.hidden {
-      display: none;
-    }
-  }
-
-  .create-something {
-    background-color: #64A8EE;
-  }
-
-  .build-something {
-    background-color: #EE8950;
-  }
-
-  .share-something {
-    background-color: #F0C233;
-  }
-
-  .download-app {
-    background-color: #8796ED;
-    @media (min-width: @screen-lg-min) {
-      display: none;
-    }
-  }
-
-  .install-footer {
+  h2 p {
     margin-top: 0;
   }
-
-  .intl-tel-input {
-    width: 100%;
+  .lead {
+    // This looks a little better ~tablet
+    max-width: 360px;
+    display: inline-block;
+    @media (min-width: @_breakpoint) {
+      max-width: none;
+    }
+  }
+  @media (min-width: 400px) {
+    h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .lead {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .nudge {
+    padding-bottom: 23px;
   }
 
-  .sms-privacy-message {
-    color: @white;
-    font-size: .9rem;
+  /*********************************************************
+  * Grid/Responsive
+  */
+  .mobile-only,
+  .desktop-only {
+    display: none !important;
+  }
+  @media (min-width: @_breakpoint) {
+    .bottom-download-btn {
+      display: none;
+    }
+  }
+
+  .first,
+  .third {
+    .flex-container {
+      .flex-direction(column-reverse);
+    }
+  }
+  .second .flex-container {
+    .flex-direction(column);
+  }
+  .outer .flex-container {
+    .flex-display();
+    .align-items(center);
+    .justify-content(center);
+    text-align: center;
+    max-width: 960px;
+    padding: 20px;
+    margin: 0 auto;
+    @media (min-width: @_breakpoint) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      text-align: left;
+      .flex-direction(row);
+    }
+  }
+
+  .outer {
+    color: white;
     a {
-      color: @white;
+      color: inherit;
       text-decoration: underline;
     }
   }
+  .first { background: #64A8EE; }
+  .second { background: #76A0EA; }
+  .third { background: #8D8FED; }
 
-  .phone-error-popup {
-    color: @white;
-    padding-bottom: 5px;
-    opacity: 1;
-
-    transition: opacity .2s;
-
-    &.off {
-      opacity: 0;
+  .left, .right {
+    @media (min-width: @_breakpoint) {
+      margin-bottom: 0;
+      width: 50%;
     }
   }
 
-  .btn {
-    background-color: #FACD34;
-    color: #4B5B62;
-
-    position: relative;
-    padding: 1.3rem 1.5rem 1.1rem 1.5rem;
-
-    border: transparent;
-    border-radius: @corner-radius;
-    box-shadow: 0 0.4rem 0 #C4A74F, inset 0 0.1rem 0 rgba(255,255,255,0.5);
-    text-transform: uppercase;
-    vertical-align: baseline;
-    font-weight: 600;
-    line-height: 1;
-
-    &:active {
-      top: 0.4rem;
-      box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,0.2);
-    }
-
-    &.btn-block {
-      width: auto;
-    }
-
-    &.download-app-btn {
-      margin: 0 auto;
-    }
-
-    &.desktop-install-app-btn {
-      padding: 20px 40px
-    }
-
-    &.send-sms-btn {
-      height: @sms-height - 0.4rem;
+  /*********************************************************
+  * UI
+  */
+  .phone-preview {
+    display: inline-block;
+    max-width: 300px;
+    img {
       width: 100%;
     }
-
   }
 
+  .btn.btn-neue {
+    position: relative;
+    background: #FFCD36;
+    color: #4B5B62;
+    box-shadow: 0 3px 0 0 #C4A74F;
+    border-radius: 3px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 500;
+
+    font-size: 15px;
+    padding: 15px 30px;
+    height: 50px;
+    text-decoration: none;
+
+    &:active {
+      border: none;
+      color: #4B5B61;
+      box-shadow: inset 0px 2px 5px rgba(0,0,0,0.2);
+      top: 3px;
+    }
+  }
+
+  /*********************************************************
+  * SMS Form
+  */
+  #sms-form {
+    max-width: 450px;
+    margin: 0 auto;
+    @media (min-width: @_breakpoint) {
+      margin: 0;
+    }
+  }
+  .phone-error {
+    background: #EB5C52;
+    color: @white;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  .intl-tel-input {
+    display: table-cell;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .input-group .form-control:first-child {
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    &.invalid {
+      color: #EB5C52;
+    }
+  }
+  .input-group-btn {
+    padding-left: 10px;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
 }

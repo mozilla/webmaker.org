@@ -36,7 +36,7 @@
     "description": "Label text for the phone number input"
   },
   "Send Text": {
-    "message": "Send Text",
+    "message": "Send",
     "description": "Label text for the phone number input"
   },
   "install webmaker sms text": {

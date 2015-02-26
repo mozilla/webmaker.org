@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="{{ localeInfo.lang }}" dir="{{ localeInfo.direction }}">
+<head>
+  <meta charset="utf-8">
+  {{ newrelic.getBrowserTimingHeader() | safe }}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- For sharing & search engines -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://webmaker.org/img/logo-og.png" />
+  <meta property="og:image:width" content="1400" />
+  <meta property="og:image:height" content="1400" />
+  <meta property="og:site_name" content="Webmaker" />
+  <meta property="og:determiner" content="" />
+  <meta property="og:locale" content="{{ localeInfo.lang | replace('-', '_') }}" />
+  {% for language in languages %}
+  <meta property="og:locale:alternate" content="{{ language | replace('-', '_') }}" />{% endfor %}
+  <meta property="og:title" content="{{ gettext('MOI splash page metadata title') }}" />
+  <meta property="og:description" content="{{ gettext('MOI splash page metadata description') }}" />
+  <meta property="og:url" content="https://webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+
+  <link rel="canonical" href="https://webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+  <meta property="description" content="{{ gettext('MOI splash page metadata description') }}" />
+  <!-- /sharing -->
+
+  <title>{{ gettext('MOI splash page metadata title') }}</title>
+  {% block css %}{% endblock %}
+  <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.{{ localeInfo.direction }}.css">
+
+  <!--[if lte IE 9]><link rel="stylesheet" href="/css/warning.css"><![endif]-->
+
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <!-- For JS error tracking purposes -->
+  <script src="/js/lib/error-track.js" async></script>
+</head>
+
+<body id="moi-splash" {% if view %}class="{{ view }}"{% endif %}>
+
+  <div id="browser-warning">
+    <p>{{ gettext("browserUpgradeWarning") | safe }}</p>
+  </div>
+
+  <div class="webmaker-outer-wrapper">
+
+    <main id="content" class="content {% if page != 'events' %} clearfix {% endif %}">
+
+      <!-- Big hero banner section ===== -->
+      <div>
+        <div id="moi-panel">
+          <div id="moi-nav">
+            <nav class="navbar navbar-webmaker">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moi-nav-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a href="/{{localeInfo.lang}}" class="logo webmaker-logo">
+                        <img src="img/moi/webmaker-wordmark.png" alt="{{ gettext("Mozilla Webmaker") }}">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="navbar-collapse collapse" id="moi-nav-collapse">
+                      <div class="navbar-form">
+                        <select class="form-control" id="langPicker"></select>
+                      </div>
+                    </div>
+                    <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="container">
+            <div class="row">
+
+            </div>
+            <div class="row big-head-row">
+              <section class="col-sm-7">
+                <h1>{{ gettext("Empowering the next billion citizens of the web") }}</h1>
+                <p class="lead">
+                  {{ gettext("Mozilla is working to ensure") }}
+                </p>
+              </section>
+              <div class="col-sm-offset-1 col-sm-4">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <a class="btn btn-default moi-btn go-to-anchor-btn" href="#partner">
+                  <!-- <i class="fa fa-users"></i> -->
+                  <img src="img/moi/font-awesome-fa-users.png" alt="FontAwesome users icon">
+                  {{ gettext("Partner with us") }}
+                </a>
+                <a class="btn btn-default moi-btn try-the-open-beta-btn" href="http://mzl.la/webmaker">
+                  <i class="fa icon-share"></i>
+                  {{ gettext("Try the open beta") }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Video section ===== -->
+        <section id="moi-video">
+          <div class="container">
+            <div class="row section-header">
+              <div class="col-sm-12">
+                <h3>{{ gettext("The Opportunity: A Locally Relevant Web") }}</h3>
+                <h5 style="color: yellow;">( <u><b>PLACEHOLDER</b></u> background & video )</h5>
+                <div class="text-center play-icon">
+                  <a href="https://www.youtube.com/watch?v=SqEQCU_pvKs" class="moi-video-link" id="moi-video-play-btn"><i class="fa icon-play-sign icon-5x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Enabling Digital Creativity section ===== -->
+        <section id="moi-enabling-digital-creativity">
+          <div class="container">
+            <div class="row section-header">
+              <div class="hidden-sm hidden-md hidden-lg col-sm-12">
+                <figure class="pic-creativity">
+                  <img src="/img/moi/creativity.jpg" alt="Creativity" class="round" width="250" />
+                </figure>
+              </div>
+              <div class="col-sm-12">
+                <h3>{{ gettext("Enabling Digital Creativity") }}</h3>
+                <p class="lead">
+                  {{ gettext("Mozilla is building Webmaker") }}
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>
+                  {{ gettext("Webmaker helps smartphone users") }}
+                </p>
+                <p>
+                  {{ gettext("Webmaker is available in over 20 languages") }}
+                </p>
+                <div class="moi-btn-container">
+                  <a class="btn btn-primary moi-btn try-the-open-beta-btn" href="http://mzl.la/webmaker">
+                    <i class="fa icon-share"></i>
+                    {{ gettext("Try the open beta") }}
+                  </a>
+                </div>
+              </div>
+              <div class="hidden-xs col-sm-offset-1 col-sm-4">
+                <figure class="pic-creativity">
+                  <img src="/img/moi/creativity.jpg" alt="Creativity" class="round" width="250" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Understanding Users section ===== -->
+        <section id="moi-understanding-users">
+          <div class="container">
+            <div class="row section-header">
+              <div class="col-sm-12">
+                <h3>{{ gettext("Understanding Users") }}</h3>
+                <p class="lead">
+                  {{ gettext("Mozilla is leading a research program") }}
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-offset-1 col-sm-4 text-center">
+                <figure>
+                  <img src="/img/moi/global-users.png" alt="Global Users">
+                </figure>
+              </div>
+              <div class="col-sm-offset-1 col-sm-6">
+                <div id="moi-webmaker-research-reports">
+                  <a class="header report-links" href="http://mzl.la/research" data-report-name="Webmaker early research report">
+                    <div class="icon">
+                      <i class="fa icon-file-text icon-3x"></i>
+                    </div>
+                    <div class="text">
+                      <div class="the-title">
+                        {{ gettext("A Locally Relevant Web: Early Research & Recommendations") }}
+                      </div>
+                      <p>
+                        <em>{{ gettext("In 2014 and 2015, we conducted on-the-ground studies in Bangladesh, India and Kenya.") }}</em>
+                      </p>
+                    </div>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="http://mzl.la/bangladesh" class="report-links" data-report-name="Webmaker Bangladesh research report">{{ gettext("Webmaker Bangladesh research report") }}</a>
+                    </li>
+                    <li>
+                      <a href="http://mzl.la/kenya" class="report-links" data-report-name="Webmaker Kenya research report">{{ gettext("Webmaker Kenya research report") }}</a>
+                    </li>
+                    <li>
+                      <a href="http://mzl.la/india" class="report-links" data-report-name="Webmaker India research report">{{ gettext("Webmaker India research report") }}</a>
+                    </li>
+                    <li>
+                      <a href="http://blog.mozilla.org/m4d/" class="report-links" data-report-name="Webmaker mobile for development blog">{{ gettext("Webmaker mobile for development blog") }}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Partner with Mozilla section ===== -->
+        <div id="partner"> <!-- to enable #partner on page anchor -->
+          <section id="moi-partner-with-mozilla">
+            <div class="container">
+              <div class="row section-header">
+                <div class="col-sm-12">
+                  <h2>{{ gettext("Partner with Mozilla") }}</h2>
+                  <p class="lead">
+                  {{ gettext("Let’s ensure the next generation of web users") | safe }}
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-bd"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Bangladesh") }}
+                    </div>
+                    <div class="language">বাংলা</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-br"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Brazil") }}
+                    </div>
+                    <div class="language">português do Brasil</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-kh"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Cambodia") }}
+                    </div>
+                    <div class="language">ខេមរភាសា</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-co"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Colombia") }}
+                    </div>
+                    <div class="language">español</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-in"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla India") }}
+                    </div>
+                    <div class="language">हिन्दी</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-id"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Indonesia") }}
+                    </div>
+                    <div class="language">Bahasa Indonesia</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-ke"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Kenya") }}
+                    </div>
+                    <div class="language">Swahili</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-ng"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Nigeria") }}
+                    </div>
+                    <div class="language">English</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-ph"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Philippines") }}
+                    </div>
+                    <div class="language">English</div>
+                  </div>
+                  <div class="country-container">
+                    <div class="flag-container">
+                      <span class="flag-icon flag-icon-rw"></span>
+                    </div>
+                    <div class="name">
+                      {{ gettext("Mozilla Rwanda") }}
+                    </div>
+                    <div class="language">français</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 text-center">
+                  <a class="btn btn-default moi-btn" href="mailto:mobileopportunity@mozilla.org">
+                    <i class="fa fa-users"></i>
+                    {{ gettext("Get in touch") }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Partners section ===== -->
+        <section id="moi-partners">
+          <div class="container">
+            <div class="row section-header">
+              <div class="col-sm-12">
+                <h3>{{ gettext("Partners") }}</h3>
+                <p class="lead">
+                  {{ gettext("Mozilla is proud to partner") }}
+                </p>
+              </div>
+            </div>
+            <div class="row text-center tier-one-partners-section">
+              <div class="col-xs-6 col-sm-offset-3 col-sm-3 tier-one-partners">
+                <a href="https://mozilla.org"><img src="img/moi/mozilla-wordmark.png" alt="Mozilla Wordmark"></a>
+              </div>
+              <div class="col-xs-6 col-sm-3 tier-one-partners">
+                <a href="http://gsma.com/"><img src="img/moi/GSMA-logo.png" alt="GSMA wordmark"></a>
+              </div>
+            </div>
+            <div class="row text-center tier-two-partners-section">
+              <div class="col-xs-offset-0 col-xs-12 col-sm-offset-2 col-sm-8">
+                <div class="row">
+                  <div class="col-xs-4 col-sm-4">
+                    <div class="tier-two-partners">
+                       <a href="http://a2i.pmo.gov.bd/">
+                        <img src="img/moi/a2i-logo.png" alt="a2i logo">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-4">
+                    <div class="tier-two-partners">
+                      <a href="http://www.dnet.org.bd/">
+                        <img src="img/moi/dnet-logo.png" alt="dnet logo">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-4">
+                    <div class="tier-two-partners">
+                      <a href="http://www.m4dimpact.com/">
+                        <img src="img/moi/GSMA-M4D-logo.png" alt="GSMA M4D logo">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4 col-sm-4">
+                    <div class="tier-two-partners">
+                      <a href="http://equitygroupfoundation.com/">
+                        <img src="img/moi/EGF-logo.png" alt="Equity Group Foundation logo">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-4">
+                    <div class="tier-two-partners">
+                      <a href="http://souktel.org/development">
+                        <img src="img/moi/SoukTel-logo.jpg" alt="SoukTel logo">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-4">
+                    <div class="tier-two-partners">
+                      <a href="http://www.telefonica.com/">
+                        <img src="img/moi/Telefonica-logo.png" alt="Telefónica logo">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Quotes section ===== -->
+        <section id="moi-quotes">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-offset-1 col-sm-10">
+                <div id="quote-carousel" class="carousel slide" data-interval="8000">
+                  <div class="carousel-inner">
+                    <div class="quote-container item active">
+                      <div class="the-quote">
+                        <p>
+                          {{ gettext("Quote 1 Quote") }}
+                        </p>
+                      </div>
+                      <a href="http://thenextweb.com/insider/2014/11/05/mozilla-partners-gsma-bring-web-next-4-billion-people/" class="logo"><img src="img/moi/TheNextWeb-logo.png" alt="The Next Web Wordmark" width="100"></a>
+                      <div><div class="author">{{ gettext("Quote 1 Author") }}</div></div>
+                    </div>
+                    <div class="quote-container item">
+                      <div class="the-quote">
+                        <p>
+                          {{ gettext("Quote 2 Quote") }}
+                        </p>
+                      </div>
+                      <a href="https://gigaom.com/2014/11/05/mozilla-and-mobile-operators-want-to-make-the-web-more-global-and-diverse/" class="logo"><img src="img/moi/Gigaom-logo.png" alt="Gigaom Wordmark" width="130"></a>
+                      <div><div class="author">{{ gettext("Quote 2 Author") }}</div></div>
+                    </div>
+                    <div class="quote-container item">
+                      <div class="the-quote">
+                        <p>
+                          {{ gettext("Quote 3 Quote") }}
+                        </p>
+                      </div>
+                      <a href="http://venturebeat.com/2014/11/04/mozilla-teams-up-with-gsma-to-bring-localized-mobile-web-content-to-poor-countries/" class="logo"><img src="img/moi/VentureBeat-logo.png" alt="Venture Beat Wordmark" width="160"></a>
+                      <div><div class="author">{{ gettext("Quote 3 Author") }}</div></div>
+                    </div>
+                  </div>
+                  <div class="the-carousel-controls">
+                    <a class="left carousel-control" href="#quote-carousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                      <li data-target="#quote-carousel" data-slide-to="0" class="quote-container active"></li>
+                      <li data-target="#quote-carousel" data-slide-to="1" class="quote-container"></li>
+                      <li data-target="#quote-carousel" data-slide-to="2" class="quote-container"></li>
+                    </ol>
+                    <a class="right carousel-control" href="#quote-carousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+
+      {% block footer %}
+      <div id="footer-actions">
+        {% if layout %}
+        <a class="load-more">{{ gettext("Load more") }}
+          <span class="icon-angle-down"></span></a>
+        {% endif %}
+      </div>
+      {% endblock %}
+
+      <div class="partnerWrapper">
+        <nav class="navbar-footer">
+          <div class="container">
+            <ul>
+              <li><a href="/{{localeInfo.lang}}/about">{{ gettext('About') }}</a></li>
+              <li><a href="/{{localeInfo.lang}}/mentor">{{ gettext('Teach') }}</a></li>
+              <li>
+                <a href="https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link">
+                  {{ gettext('Donate') }}
+                </a>
+              </li>
+              <li><a href="mailto:help@webmaker.org">{{ gettext('Contact') }}</a></li>
+              <li><a href="/{{localeInfo.lang}}/privacy">{{ gettext('Privacy') }}</a></li>
+              <li><a href="/{{localeInfo.lang}}/terms">{{ gettext('Legal') }}</a></li>
+              <li>
+                <a href="https://support.mozilla.org/products/webmaker">
+                  {{ gettext('Help') }}
+                </a>
+              </li>
+            </ul>
+            <div class="moz-logo">
+              <a href="https://mozilla.org/">
+                <img src="/img/logo-mozilla-white.png" alt="mozilla logo" height="41" width="100"/>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="/{{ localeInfo.lang }}/angular-config.js"></script>
+  <script id="require-js" src="/bower_components/requirejs/require.js"
+    data-main="{% block require_main %}/js/pages/localweb.js{% endblock %}"
+    data-page="{% block require_page %}{% endblock %}">
+  </script>
+
+  {% block scripts %}{% endblock %}
+
+  {% if ga_account %}
+  <script id="google-analytics-js" src="/js/lib/google-analytics.js"
+    data-ga-account="{{ ga_account }}"
+    data-ga-domain="{{ ga_domain }}"
+    async>
+  </script>
+  {% endif %}
+  <script src="https://cdn.optimizely.com/js/206878104.js"></script>
+</body>
+</html>

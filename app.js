@@ -415,6 +415,9 @@ app.post("/api/submit-resource", routes.api.submitResource);
 app.get("/mentor", routes.angular);
 app.get("/search", routes.search);
 
+// MOI splash page
+app.get("/localweb", routes.page("localweb"));
+
 // Old route - turned into a 301 (perm. redirect) on 2014-02-11.
 // This route should not be removed until sufficient time
 // has passed for search engines to index the new URL.

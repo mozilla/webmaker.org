@@ -32,7 +32,7 @@
     "description": "Action text for triggering the SMS backed get download link tool"
   },
   "Enter your phone number": {
-    "message": "Enter your phone number:",
+    "message": "Enter your phone number to receive a download link:",
     "description": "Label text for the phone number input"
   },
   "Send Text": {

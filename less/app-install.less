@@ -18,11 +18,15 @@
   h2, strong {
     font-weight: 500;
   }
-  h2 p {
+  h2, p {
     margin-top: 0;
+  }
+  p.small {
+    margin: 0;
   }
   .lead {
     // This looks a little better ~tablet
+    margin-bottom: 10px;
     max-width: 360px;
     display: inline-block;
     @media (min-width: @_breakpoint) {
@@ -43,7 +47,10 @@
     }
   }
   .nudge {
-    padding-bottom: 23px;
+    padding-bottom: 13px;
+    @media (min-width: 400px) {
+      padding-bottom: 23px;
+    }
   }
 
   /*********************************************************

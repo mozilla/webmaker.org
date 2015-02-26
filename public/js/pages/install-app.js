@@ -18,8 +18,10 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
     messageSent = $("#message-sent"),
     messageSentError = $(".message-sent-error-container"),
     csrfToken = $("meta[name='csrf-token']").attr("content"),
-    smsForm = $("#sms-form");
-  var initialVewportHeight = window.document.documentElement.clientHeight;
+    smsForm = $("#sms-form"),
+    initialVewportHeight = window.document.documentElement.clientHeight,
+    getAppContainer = $(".get-app-container");
+
   var parser = new window.UAParser();
   var ua = parser.getResult();
   var isMobile = ua.device.type === "mobile";
@@ -59,7 +61,7 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
         messageSentError.removeClass("hidden");
       },
       success: function () {
-        smsForm.addClass("hidden");
+        getAppContainer.addClass("hidden");
         messageSent.removeClass("hidden");
         analytics.event("SMS Send Success", {
           nonInteraction: true

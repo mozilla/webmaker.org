@@ -111,9 +111,10 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
       fireClaimCode = true;
       auth.login();
     });
-    auth.on('login', function () {
+    auth.on('login', function (user) {
       $claimCodeButtonLogin.removeClass('hidden');
       $claimCodeButtonLogout.addClass('hidden');
+      $(".webmaker-email-placeholder").text(user.email);
 
       if (fireClaimCode) {
         fireClaimCode = false;
@@ -126,6 +127,7 @@ define(['jquery', 'eventEmitter/EventEmitter', 'base/login'],
     auth.on('logout', function () {
       $claimCodeButtonLogin.addClass('hidden');
       $claimCodeButtonLogout.removeClass('hidden');
+      $(".webmaker-email-placeholder").text("");
 
       $loginOnly.addClass('hidden');
       $logoutOnly.removeClass('hidden');

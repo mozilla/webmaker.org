@@ -1,11 +1,6 @@
 .install-webmaker-app {
   @_breakpoint: 740px;
 
-  .country-list {
-    color: @black;
-    text-align: left;
-  }
-
   .navbar-webmaker {
     border-bottom: none;
   }
@@ -28,6 +23,8 @@
     @media (min-width: @_breakpoint) {
       max-width: none;
     }
+
+    font-style: italic;
   }
   @media (min-width: 400px) {
     h2 {
@@ -66,6 +63,7 @@
   .second .flex-container {
     .flex-direction(column);
   }
+
   .outer .flex-container {
     .flex-display();
     .align-items(center);
@@ -73,6 +71,7 @@
     text-align: center;
     max-width: 960px;
     padding: 20px;
+    padding-bottom: 50px;
     margin: 0 auto;
     @media (min-width: @_breakpoint) {
       padding-top: 40px;
@@ -80,6 +79,10 @@
       text-align: left;
       .flex-direction(row);
     }
+  }
+
+  .third .flex-container {
+    padding-bottom: 20px;
   }
 
   .outer {
@@ -148,6 +151,18 @@
       text-align: left;
     }
   }
+
+  .intl-tel-input .flag-dropdown {
+    right: 0;
+    left: 0;
+
+    .country-list {
+      color: @black;
+      text-align: left;
+      width: 100%;
+    }
+  }
+
   .phone-error {
     background: #EB5C52;
     color: @white;

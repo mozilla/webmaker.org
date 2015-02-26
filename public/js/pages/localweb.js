@@ -20,38 +20,43 @@ requirejs.config({
   }
 });
 
-require(["jquery", "analytics", "languages", "selectize", "transition", "collapse", "carousel", "magnific-popup"], function ($, analytics, languages, selectize ) {
+require(["jquery", "analytics", "languages", "selectize", "transition", "collapse", "carousel", "magnific-popup"], function ($, analytics, languages) {
   "use strict";
-  var $window = $(window);
   var TIME_DELAYED_REDIRECT = 500; // in milliseconds
   // analytics
-  var delayRedirect = function(url) {
-    setTimeout(function() {
+  var delayRedirect = function (url) {
+    setTimeout(function () {
       window.location.href = url;
     }, TIME_DELAYED_REDIRECT);
   };
-  $(".try-the-open-beta-btn").click(function(event) {
+  $(".try-the-open-beta-btn").click(function (event) {
     event.preventDefault();
     analytics.event("Try the Open Beta");
     delayRedirect($(this).attr("href"));
   });
-  $("#moi-video-play-btn").click(function() {
-    analytics.event("Play Video", {label: "MOI Partner Opportunity"});
+  $("#moi-video-play-btn").click(function () {
+    analytics.event("Play Video", {
+      label: "MOI Partner Opportunity"
+    });
   });
-  $(".report-links").click(function(event) {
+  $(".report-links").click(function (event) {
     event.preventDefault();
-    analytics.event("Download Report", {label: $(this).data("report-name")});
+    analytics.event("Download Report", {
+      label: $(this).data("report-name")
+    });
     delayRedirect($(this).attr("href"));
   });
-  $("#mobile-webmaker-partners-link").click(function() {
+  $("#mobile-webmaker-partners-link").click(function () {
     event.preventDefault();
     analytics.event("Click on Partner with Us PDF link");
     delayRedirect($(this).attr("href"));
   });
   //parallax
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var yPos = -($(window).scrollTop() / 50);
-    $("#moi-video").css({ backgroundPosition: "50% "+ yPos + "px" });
+    $("#moi-video").css({
+      backgroundPosition: "50% " + yPos + "px"
+    });
   });
   // video lightbox
   $(".moi-video-link").magnificPopup({
@@ -60,10 +65,10 @@ require(["jquery", "analytics", "languages", "selectize", "transition", "collaps
   // quote carousel
   $("#quote-carousel").carousel();
   // smooth scrolling to anchors. modified from http://css-tricks.com/snippets/jquery/smooth-scrolling/
-  $(".go-to-anchor-btn").click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  $(".go-to-anchor-btn").click(function () {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html,body').animate({
           scrollTop: target.offset().top

@@ -19,6 +19,7 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
     messageSentError = $(".message-sent-error-container"),
     csrfToken = $("meta[name='csrf-token']").attr("content"),
     smsForm = $("#sms-form");
+  var initialVewportHeight = window.document.documentElement.clientHeight;
   var parser = new window.UAParser();
   var ua = parser.getResult();
   var isMobile = ua.device.type === "mobile";
@@ -27,6 +28,13 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
   } else {
     $(".desktop-only").removeClass("desktop-only");
   }
+
+  $(window).scroll(function checkScroll() {
+    if (window.scrollY >= initialVewportHeight) {
+      $(window).off("scroll", checkScroll);
+      analytics.event("Scrolled Past Initial Viewport Height");
+    }
+  });
 
   function sendSMS() {
     sendSmsButton.attr("disabled", true);

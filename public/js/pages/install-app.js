@@ -30,9 +30,9 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
   }
 
   $(window).scroll(function checkScroll() {
-    if ( window.scrollY >= initialVewportHeight ) {
+    if (window.scrollY >= initialVewportHeight) {
       $(window).off("scroll", checkScroll);
-      analytics.event("Scrolled Page");
+      analytics.event("Scrolled Past Initial Viewport Height");
     }
   });
 

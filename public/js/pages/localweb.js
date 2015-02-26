@@ -16,11 +16,12 @@ requirejs.config({
   shim: {
     'transition': ['jquery'],
     'collapse': ['jquery'],
-    'carousel': ['jquery']
+    'carousel': ['jquery'],
+    'tabzilla': ['jquery']
   }
 });
 
-require(["jquery", "analytics", "languages", "tabzilla", "selectize", "transition", "collapse", "carousel", "magnific-popup"], function ($, analytics, languages) {
+require(["jquery", "analytics", "languages", "selectize", "transition", "collapse", "carousel", "magnific-popup", "tabzilla"], function ($, analytics, languages) {
   "use strict";
   var TIME_DELAYED_REDIRECT = 500; // in milliseconds
   // analytics

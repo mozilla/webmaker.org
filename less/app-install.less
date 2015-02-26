@@ -1,6 +1,11 @@
 .install-webmaker-app {
   @_breakpoint: 740px;
 
+  .country-list {
+    color: @black;
+    text-align: left;
+  }
+
   .navbar-webmaker {
     border-bottom: none;
   }
@@ -137,6 +142,10 @@
     margin: 0 auto;
     @media (min-width: @_breakpoint) {
       margin: 0;
+    }
+
+    .twilio-privacy-message {
+      text-align: left;
     }
   }
   .phone-error {

@@ -80,7 +80,9 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
     getAppBtn.addClass("hidden");
   });
 
-  phoneNumberInput.intlTelInput();
+  phoneNumberInput.intlTelInput({
+    defaultCountry: "ES"
+  });
 
   phoneNumberInput.intlTelInput("loadUtils", "/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js");
 

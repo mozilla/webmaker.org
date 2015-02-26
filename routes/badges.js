@@ -207,10 +207,10 @@ module.exports = function (env) {
           // Check if we have any criteria to display.
           var canApply = true;
           switch (badge.name) {
-            case 'Data Trail Timeline':
-            case 'Privacy Coach':
-            case 'IP Address Tracer':
-              canApply = false;
+          case 'Data Trail Timeline':
+          case 'Privacy Coach':
+          case 'IP Address Tracer':
+            canApply = false;
           }
 
           res.render('badge-detail.html', {

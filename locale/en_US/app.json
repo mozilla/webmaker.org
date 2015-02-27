@@ -23,12 +23,16 @@
     "message": "Webmaker creations are meant to be seen, heard and used. Share your project with friends and colleagues.",
     "description": "A description about the sharing capabilities of Webmaker"
   },
+  "Available for": {
+    "message": "Available for FirefoxOS 2.1+ and Android 4.4+",
+    "description": "The platforms and versions that Webmaker can be installed on"
+  },
   "Download Webmaker": {
-    "message": "Download Webmaker",
+    "message": "Download Webmaker Beta",
     "description": "Action text for Downloading the Webmaker app"
   },
   "Get App": {
-    "message": "Get the App",
+    "message": "Get Webmaker Beta",
     "description": "Action text for triggering the SMS backed get download link tool"
   },
   "Enter your phone number": {

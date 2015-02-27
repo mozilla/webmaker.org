@@ -92,6 +92,10 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
     sendSmsButton.attr("disabled", !phoneNumberInput.intlTelInput("isValidNumber"));
   });
 
+  phoneNumberInput.change(function () {
+    sendSmsButton.attr("disabled", !phoneNumberInput.intlTelInput("isValidNumber"));
+  });
+
   phoneNumberInput.focus(function () {
     phoneNumberInput.removeClass("invalid");
     phoneNumberInputError.addClass("hidden");

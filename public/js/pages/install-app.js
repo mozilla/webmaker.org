@@ -24,11 +24,10 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
 
   var parser = new window.UAParser();
   var ua = parser.getResult();
-  var isMobile = ua.device.type === "mobile";
-  if (isMobile) {
-    $(".mobile-only").removeClass("mobile-only");
-  } else {
+  if (["desktop", "tablet"].indexOf(ua.device.type) !== -1) {
     $(".desktop-only").removeClass("desktop-only");
+  } else {
+    $(".mobile-only").removeClass("mobile-only");
   }
 
   $(window).scroll(function checkScroll() {

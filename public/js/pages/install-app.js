@@ -24,10 +24,28 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
 
   var parser = new window.UAParser();
   var ua = parser.getResult();
-  if (["desktop", "tablet"].indexOf(ua.device.type) !== -1) {
-    $(".desktop-only").removeClass("desktop-only");
-  } else {
+
+  function isValidFFOS() {
+     return ua.os.name === 'Firefox OS' && parseInt(ua.browser.major, 10) >= 32;
+  }
+
+  function isValidAndroid() {
+      if (ua.os.name !== 'Android') return false;
+      var version = ua.os.version && ua.os.version.split('.').map(function (n) {
+          return parseInt(n, 10);
+      });
+      if (!version) return true;
+
+      if (version[0] < 4 ) return false;
+      if (version[0] === 4 && version[1] < 4) return false;
+
+      return true;
+  }
+
+  if (isValidFFOS() || isValidAndroid()) {
     $(".mobile-only").removeClass("mobile-only");
+  } else {
+    $(".desktop-only").removeClass("desktop-only");
   }
 
   $(window).scroll(function checkScroll() {

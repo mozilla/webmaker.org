@@ -30,14 +30,22 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
   }
 
   function isValidAndroid() {
-    if (ua.os.name !== 'Android') return false;
+    if (ua.os.name !== 'Android') {
+      return false;
+    }
     var version = ua.os.version && ua.os.version.split('.').map(function (n) {
       return parseInt(n, 10);
     });
-    if (!version) return true;
+    if (!version) {
+      return true;
+    }
 
-    if (version[0] < 4) return false;
-    if (version[0] === 4 && version[1] < 4) return false;
+    if (version[0] < 4) {
+      return false;
+    }
+    if (version[0] === 4 && version[1] < 4) {
+      return false;
+    }
 
     return true;
   }

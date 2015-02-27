@@ -26,20 +26,20 @@ require(["jquery", "analytics", "intl-tel-input", "ua-parser-js"], function ($, 
   var ua = parser.getResult();
 
   function isValidFFOS() {
-     return ua.os.name === 'Firefox OS' && parseInt(ua.browser.major, 10) >= 32;
+    return ua.os.name === 'Firefox OS' && parseInt(ua.browser.major, 10) >= 32;
   }
 
   function isValidAndroid() {
-      if (ua.os.name !== 'Android') return false;
-      var version = ua.os.version && ua.os.version.split('.').map(function (n) {
-          return parseInt(n, 10);
-      });
-      if (!version) return true;
+    if (ua.os.name !== 'Android') return false;
+    var version = ua.os.version && ua.os.version.split('.').map(function (n) {
+      return parseInt(n, 10);
+    });
+    if (!version) return true;
 
-      if (version[0] < 4 ) return false;
-      if (version[0] === 4 && version[1] < 4) return false;
+    if (version[0] < 4) return false;
+    if (version[0] === 4 && version[1] < 4) return false;
 
-      return true;
+    return true;
   }
 
   if (isValidFFOS() || isValidAndroid()) {

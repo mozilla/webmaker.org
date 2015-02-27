@@ -52,13 +52,6 @@ require(["jquery", "analytics", "languages", "selectize", "transition", "collaps
     analytics.event("Click on Partner with Us PDF link");
     delayRedirect($(this).attr("href"));
   });
-  //parallax
-  $(window).scroll(function () {
-    var yPos = -($(window).scrollTop() / 50);
-    $("#moi-video").css({
-      backgroundPosition: "50% " + yPos + "px"
-    });
-  });
   // video lightbox
   $(".moi-video-link").magnificPopup({
     type: "iframe"

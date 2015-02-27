@@ -331,10 +331,9 @@
   background: linear-gradient(
                 rgba(red(@lightnavy),green(@lightnavy),blue(@lightnavy), .8),
                 rgba(red(@lightnavy),green(@lightnavy),blue(@lightnavy), .8)
-              ),
-              url("/img/moi/moi-video-preview.png") fixed;
-  background-size: cover;
-
+              ) 0 0,
+              url("/img/moi/moi-video-preview.jpg") fixed 50% 0;
+  background-size: cover, cover;
   color: @white;
   a.moi-video-link {
     color: @white;
@@ -422,6 +421,13 @@
       margin-left: -3.5rem;
       margin-right: 2rem;
       line-height: 2;
+    }
+    li.disabled {
+      color: fade(@body-grey, 40%);
+      a {
+        pointer-events: none;
+        color: fade(@body-grey, 40%);
+      }
     }
   }
 }

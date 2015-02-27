@@ -24,10 +24,10 @@
             <p>{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
             {% endif %}
             <p>{{ badge.earnerDescription | markdown | safe }}</p>
-            <div>
+            {% if not assertionUrl %}
               <button class="claim-code-button-login button-link hidden">{{ gettext("HaveClaimCode") }}</button>
               <button class="claim-code-button-logout button-link hidden">{{ gettext("Login to claim") }}</button>
-            </div>
+            {% endif %}
 
             {% if assertionUrl %}
               <h3>Congratulations <span class="username">{{ username }}</span>, you've earned this badge!</h3>

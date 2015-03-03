@@ -28,10 +28,10 @@ define(['jquery', 'analytics'], function ($, analytics) {
       analytics.event('Search all Clicked', {
         label: searchInputVal
       });
-      $searchTrigger.find('.icon-search')
-        .removeClass('icon-search')
-        .addClass('icon-spinner')
-        .addClass('icon-spin');
+      $searchTrigger.find('.fa-search')
+        .removeClass('fa-search')
+        .addClass('fa-spinner')
+        .addClass('fa-spin');
       window.location = '/' + lang + '/search/?type=all&q=' + searchInputVal;
     }
 

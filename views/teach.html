@@ -7,7 +7,7 @@
 
 {% set header = gettext("teachHeader")  %}
 {% set des = gettext("teachDesc")  %}
-{% set desc = des + "<a href='/{{localeInfo.lang}}/literacy'><br><button class='ui-blue-btn'><i class='icon-file'></i>{{ gettext('TeachWebLitButton') }}</button></a> <a href='https://sendto.mozilla.org/page/s/mentor-signup'><button class='ui-blue-btn'>{{ gettext('Sign up') }}</button></a>" %}
+{% set desc = des + "<a href='/{{localeInfo.lang}}/literacy'><br><button class='ui-blue-btn'><i class='fa fa-file'></i>{{ gettext('TeachWebLitButton') }}</button></a> <a href='https://sendto.mozilla.org/page/s/mentor-signup'><button class='ui-blue-btn'>{{ gettext('Sign up') }}</button></a>" %}
 
 {{ galleryHeader(header, desc) }}
 {% endblock %}

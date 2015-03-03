@@ -9,7 +9,7 @@
     "angular-sanitize": "1.2.14",
     "cookie-js": "0.0.1",
     "flag-icon-css": "0.6.4",
-    "font-awesome": "3.2.1",
+    "font-awesome": "4.1.0",
     "intl-tel-input": "^5.1.7",
     "jquery": "2.0.3",
     "jquery-ui": "1.10.3",
@@ -38,6 +38,7 @@
   },
   "resolutions": {
     "angular": "1.2.14",
-    "selectize": "0.10.1"
+    "selectize": "0.10.1",
+    "font-awesome": "4.1.0"
   }
 }

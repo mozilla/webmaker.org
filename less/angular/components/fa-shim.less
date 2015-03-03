@@ -1,35 +1,14 @@
 // Variables
 // -------------
 
-@fa-chevron-right: "\f054";
-@fa-chevron-left: "\f053";
-@fa-random: "\f074";
-@fa-hand-o-up: "\f0a6";
-@fa-book: "\f02d";
-@fa-suitcase: "\f0f2";
-@fa-th: "\f00a";
-@fa-file-text-o: "\f0f6";
-@fa-check: "\f00c";
-@fa-bug: "\f188";
-@fa-group: "\f0c0";
-@fa-comments: "\f086";
-
-
-// Mixins
-// ------
-
-// I actually dk if these are included in fa 4 anymore but they're *incredibly*
-// useful so we may want to move them back into mixins when we upgrade
-
-.icon(@icon) {
-  .icon-FontAwesome();
-  content: @icon;
-}
-
-.icon-FontAwesome() {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-}
+@fa-chevron-right: @fa-var-chevron-right;
+@fa-chevron-left: @fa-var-chevron-left;
+@fa-random: @fa-var-random;
+@fa-hand-o-up: @fa-var-hand-o-up;
+@fa-book: @fa-var-book;
+@fa-suitcase: @fa-var-suitcase;
+@fa-th: @fa-var-th;
+@fa-file-text-o: @fa-var-file-text-o;
+@fa-bug: @fa-var-bug;
+@fa-group: @fa-var-group;
+@fa-comments: @fa-var-comments;

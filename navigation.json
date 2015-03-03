@@ -2,7 +2,7 @@
   {
     "id": "index",
     "title": "Explore",
-    "icon": "icon-random",
+    "icon": "fa-random",
     "defaultUrl": "explore",
     "pages": [
       {
@@ -14,14 +14,14 @@
   {
     "id": "tools",
     "title": "Tools",
-    "icon": "icon-hand-up",
+    "icon": "fa-hand-o-up",
     "defaultUrl": "tools",
     "pages": []
   },
   {
     "id": "events",
     "title": "Events",
-    "icon": "icon-map-marker",
+    "icon": "fa-map-marker",
     "defaultUrl": "{{EVENTS_URL}}",
     "instantiate": true,
     "pages": []
@@ -29,7 +29,7 @@
   {
     "id": "teach",
     "title": "Teach",
-    "icon": "icon-book",
+    "icon": "fa-book",
     "defaultUrl": "mentor",
     "pages": [
       {

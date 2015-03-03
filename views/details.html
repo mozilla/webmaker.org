@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="csrf-token" content="{{ csrf }}">
-  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
   <link media="screen" rel="stylesheet" href="/css/style.css">
   <link media="screen" rel="stylesheet" href="/css/make-details.css">
 </head>
@@ -58,7 +57,7 @@
                   <span data-make-id="{{ id }}"
                         title="Report Inappropriate Make"
                         id="make-report-toggle"
-                        class="{{ 'icon-flag' if userReported else 'icon-flag-alt' }}">
+                        class="fa {{ 'fa-flag' if userReported else 'fa-flag-o' }}">
                     <span id="report-not-logged-in" class="tooltip hide">{{ gettext("Log in to report") }}</span>
                     <span id="make-reported-message" class="tooltip hide">{{ gettext("Make successfully reported") | safe }}</span>
                     <span id="make-report-error" class="tooltip hide">{{ gettext("Reporting error") | safe }}</span>
@@ -68,8 +67,8 @@
 
                 <span class="social-media">
                 {% set tweetText = gettext("TweetText") %}
-                   <a href="https://plus.google.com/share?url={{url}}" id="share-gplus" target="_blank" class="btn"><span class="icon-google-plus icon"></span> {{ gettext("Share") }}</a>
-                   <a id="share-twitter" href="https://twitter.com/intent/tweet?text={{tweetText }}{{url}}&hashtags=Webmaker&related=webmaker&url={{url}}" target="_blank" class="share btn"><span class="icon-twitter icon"></span> {{ gettext("Share") }}</a>
+                   <a href="https://plus.google.com/share?url={{url}}" id="share-gplus" target="_blank" class="btn"><span class="fa fa-google-plus icon"></span> {{ gettext("Share") }}</a>
+                   <a id="share-twitter" href="https://twitter.com/intent/tweet?text={{tweetText }}{{url}}&hashtags=Webmaker&related=webmaker&url={{url}}" target="_blank" class="share btn"><span class="fa fa-twitter"></span> {{ gettext("Share") }}</a>
                   <span id="share-container" class="hidden">
                     <a target="_blank" id="google-btn"></a>
                     <a target="_blank" id="twitter-btn"></a>
@@ -84,7 +83,7 @@
               <span class="icon-{{tool}}"></span>
               <a target="_blank" href="{{remixurl}}" class="tool-name">{{ tool }}</a>
               <span data-make-id="{{ id }}"
-                    class="make-like-toggle details-page-icon make-like-details {{ 'icon-heart' if hasBeenLiked else 'icon-heart-empty' }}" >
+                    class="fa make-like-toggle details-page-icon make-like-details {{ 'fa-heart' if hasBeenLiked else 'fa-heart-o' }}" >
                 <span id="like-not-logged-in" class="tooltip hide">{{ gettext("Log in to like") }}</span>
               </span>
               <span class="like-count">{{ likes.length }} </span>

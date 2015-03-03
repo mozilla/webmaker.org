@@ -2,10 +2,10 @@
 * Search
 */
 
-div.filter-list.ui-select-menu [class^="icon-"], [class*=" icon-"] {
+div.filter-list.ui-select-menu .fa {
   vertical-align: middle;
 }
-span.icon-caret-down {
+span.fa-caret-down {
   padding-right: 10px;
 }
 #search,
@@ -161,6 +161,18 @@ span.icon-caret-down {
     text-decoration: none;
     border: none;
     background: none;
+
+    .search-icon  {
+      display: none;
+    }
+    &.icon-all .fa-th,
+    &.icon-tags .fa-tags,
+    &.icon-title .fa-th-list,
+    &.icon-user .fa-user,
+    &.icon-description .fa-align-left {
+      display: inline-block;
+    }
+
     &:hover {
         border-radius: 10px 10px 0 0;
         color: @grey;
@@ -170,7 +182,7 @@ span.icon-caret-down {
           display: block;
         }
       }
-    .icon-caret-down {
+    .fa-caret-down {
       font-size: 0.5em;
     }
     .filter-list {
@@ -183,7 +195,7 @@ span.icon-caret-down {
         padding: 0 1em;
         line-height: 4;
         span {
-          font-size: 1.5em;
+          font-size: 1.4em;
           margin-right: 0.5em;
         }
         &:last-of-type {

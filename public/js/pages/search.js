@@ -71,7 +71,7 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "local
         makeID = $this.data("make-id"),
         method;
 
-      if ($this.hasClass("icon-heart")) {
+      if ($this.hasClass("fa-heart")) {
         method = "/unlike";
       } else {
         method = "/like";
@@ -84,7 +84,7 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "local
           $count = $this.parent().parent().find(".like-count"),
           $text = $this.parent().parent().find(".like-text");
 
-        $this.toggleClass("icon-heart icon-heart-empty");
+        $this.toggleClass("fa-heart fa-heart-o");
         $count.html(newLen);
         if (newLen === 0) {
           $text.html(localized.get("Like-0"));
@@ -98,7 +98,7 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "local
           webmakerAuth.login();
         } else {
           // already like/unliked, update UI to reflect.
-          $this.toggleClass("icon-heart icon-heart-empty");
+          $this.toggleClass("fa-heart fa-heart-o");
         }
       });
     }
@@ -136,7 +136,7 @@ define(["jquery", "uri", "base/ui", "masonry", "base/login", "analytics", "local
       searchType = $this.attr("data-value");
 
       $searchFilter.find("[name=type]").val(searchType);
-      $searchFilter.find("[data-selected] > span").attr("class", "icon-" + searchType);
+      $searchFilter.attr("class", "search-filter icon-" + searchType);
       $searchFilter.find(".ui-on").removeClass("ui-on");
       $this.addClass("ui-on");
       if (!tagSuggestionEnabled && searchType === "tags") {

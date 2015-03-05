@@ -5,7 +5,6 @@ angular
       return {
         restrict: 'EA',
         link: function (scope, el, attrs) {
-
           var elHeight = attrs.offsetHeight;
           var elTop = attrs.offsetTop;
 
@@ -32,7 +31,6 @@ angular
     '$anchorScroll',
     '$route',
     function ($location, $anchorScroll, $route) {
-
       return {
         restrict: 'E',
         link: function (scope, el, attrs) {
@@ -81,7 +79,8 @@ angular
           });
         }
       };
-    }])
+    }
+  ])
   .directive('masonryGallery', ['$timeout', '$rootScope',
     function ($timeout, $rootScope) {
       return {
@@ -103,7 +102,8 @@ angular
           });
         }
       };
-    }])
+    }
+  ])
   .directive('retinaImage', ['$window',
     function ($window) {
       'use strict';
@@ -213,7 +213,6 @@ angular
               self.$items.eq(itemIndex).fadeTo(self.options.fadeInSpeed, 1);
             }, i * (self.options.fadeInSpeed / 4));
           });
-
         },
 
         /**
@@ -330,4 +329,5 @@ angular
         restrict: 'EA',
         templateUrl: '/views/partials/competency-media-gen.html'
       };
-    }]);
+    }
+  ]);

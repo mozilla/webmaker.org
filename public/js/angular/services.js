@@ -10,59 +10,49 @@ angular
     '$rootScope',
     'CONFIG',
     function ($rootScope, config) {
-
       var activePage = '';
       var activeSection = '';
 
       return {
         nav: {
-          sections: [
-            {
-              id: 'explore',
-              url: 'explore',
-              title: 'Explore',
-              icon: 'random',
-            },
-            {
-              id: 'tools',
-              url: 'tools',
-              title: 'Tools',
-              icon: 'hand-o-up',
+          sections: [{
+            id: 'explore',
+            url: 'explore',
+            title: 'Explore',
+            icon: 'random'
+          }, {
+            id: 'tools',
+            url: 'tools',
+            title: 'Tools',
+            icon: 'hand-o-up',
+            pushState: true
+          }, {
+            id: 'events',
+            url: 'events',
+            title: 'Events',
+            icon: 'map-marker'
+          }, {
+            id: 'teach',
+            title: 'Teach',
+            url: 'mentor',
+            icon: 'book',
+            pushState: true,
+            pages: [{
+              id: 'resources',
+              title: 'Web Literacy',
+              url: 'resources',
               pushState: true
-            },
-            {
-              id: 'events',
-              url: 'events',
-              title: 'Events',
-              icon: 'map-marker'
-            },
-            {
-              id: 'teach',
-              title: 'Teach',
-              url: 'mentor',
-              icon: 'book',
-              pushState: true,
-              pages: [
-                {
-                  id: 'resources',
-                  title: 'Web Literacy',
-                  url: 'resources',
-                  pushState: true
-                },
-                {
-                  id: 'badges',
-                  title: 'Badges',
-                  url: '_badges'
-                },
-                {
-                  id: 'hive',
-                  title: 'Hive',
-                  url: '_hive',
-                  doNotTranslate: true
-                }
-              ]
-            }
-          ]
+            }, {
+              id: 'badges',
+              title: 'Badges',
+              url: '_badges'
+            }, {
+              id: 'hive',
+              title: 'Hive',
+              url: '_hive',
+              doNotTranslate: true
+            }]
+          }]
         },
         page: function (page) {
           if (page || page === '') {
@@ -95,7 +85,6 @@ angular
   ])
   .factory('makeapi', ['$q', '$window',
     function ($q, $window) {
-
       var makeapi = new $window.Make({
         apiURL: 'https://makeapi.webmaker.org'
       });
@@ -123,6 +112,5 @@ angular
           return deferred.promise;
         }
       };
-
     }
   ]);

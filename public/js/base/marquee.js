@@ -1,5 +1,4 @@
 define(['jquery'], function ($) {
-
   /**
    * Marquee Constructor
    * @param  {object} target jQuery or native element reference
@@ -92,7 +91,6 @@ define(['jquery'], function ($) {
           self.$items.eq(itemIndex).fadeTo(self.options.fadeInSpeed, 1);
         }, i * (self.options.fadeInSpeed / 4));
       });
-
     },
 
     /**
@@ -130,5 +128,4 @@ define(['jquery'], function ($) {
   };
 
   return Marquee;
-
 });

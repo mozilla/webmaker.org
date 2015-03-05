@@ -1,105 +1,104 @@
 module.exports = function (app) {
-
   var redirectMap = [{
-    route: "/",
+    route: '/',
     paths: [
-      "/projects",
-      "/projects/:id",
-      "/support",
-      "/videos",
-      "/hall-of-fame",
-      "/ITU",
-      "/ITU/*",
-      "/new",
-      "/login"
+      '/projects',
+      '/projects/:id',
+      '/support',
+      '/videos',
+      '/hall-of-fame',
+      '/ITU',
+      '/ITU/*',
+      '/new',
+      '/login'
     ]
   }, {
-    route: "/tools",
+    route: '/tools',
     paths: [
-      "/tools/x-ray-goggles",
-      "/tools/x-ray-goggles/install"
+      '/tools/x-ray-goggles',
+      '/tools/x-ray-goggles/install'
     ]
   }, {
-    route: "/party",
+    route: '/party',
     paths: [
-      "/partners"
+      '/partners'
     ]
   }, {
     // Switch to SSL after Bug 883370 lands.
-    route: "http://blog.webmaker.org",
+    route: 'http://blog.webmaker.org',
     paths: [
-      "/news"
+      '/news'
     ]
   }, {
-    route: "/resources",
+    route: '/resources',
     paths: [
-      "/network",
-      "/kits",
-      "/kit-prototypes",
-      "/starter-makes"
+      '/network',
+      '/kits',
+      '/kit-prototypes',
+      '/starter-makes'
     ]
   }, {
-    route: "/getinvolved",
+    route: '/getinvolved',
     paths: [
-      "/build",
-      "/get-involved"
+      '/build',
+      '/get-involved'
     ]
   }, {
-    route: "/mentor",
+    route: '/mentor',
     paths: [
-      "/connect"
+      '/connect'
     ]
   }, {
     route: app.locals.EVENTS_URL + '/#!/event-guides',
     paths: [
-      "/guides",
-      "/event-guides"
+      '/guides',
+      '/event-guides'
     ]
   }, {
-    route: "https://support.mozilla.org/kb/translate-webmaker",
+    route: 'https://support.mozilla.org/kb/translate-webmaker',
     paths: [
-      "/translate"
+      '/translate'
     ]
   }, {
     route: app.locals.EVENTS_URL,
     paths: [
-      "/events"
+      '/events'
     ]
   }, {
     route: app.locals.EVENTS_URL + '/#!/events/:event',
     paths: [
-      "/events/:event"
+      '/events/:event'
     ]
   }, {
-    route: "/mentor",
+    route: '/mentor',
     paths: [
-      "/community"
+      '/community'
     ]
   }, {
-    route: "/explore",
+    route: '/explore',
     paths: [
-      "/gallery"
+      '/gallery'
     ]
   }, {
     route: app.locals.TEACH_URL,
     paths: [
-      "/_teach"
+      '/_teach'
     ]
   }, {
-    route: "https://blog.webmaker.org/badges",
+    route: 'https://blog.webmaker.org/badges',
     paths: [
-      "/_badges"
+      '/_badges'
     ]
   }, {
-    route: "http://hivelearningnetworks.org/",
+    route: 'http://hivelearningnetworks.org/',
     paths: [
-      "/_hive"
+      '/_hive'
     ]
   }, {
-    route: "http://party.webmaker.org",
+    route: 'http://party.webmaker.org',
     paths: [
-      "/party",
-      "/makerparty"
+      '/party',
+      '/makerparty'
     ]
   }];
 

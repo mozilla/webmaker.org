@@ -1,31 +1,31 @@
-var async = require("async"),
-  make = require("../lib/makeapi").readOnly;
+var async = require('async'),
+  make = require('../lib/makeapi').readOnly;
 
 module.exports = function (options) {
   return function (req, res, next) {
-    var DEFAULT_PREFIX = "p",
-      DEFAULT_LAYOUT = "index",
+    var DEFAULT_PREFIX = 'p',
+      DEFAULT_LAYOUT = 'index',
       DEFAULT_STICKY_LIMIT = 24, // Larger to account for possible duplicates
       DEFAULT_LIMIT = 12,
       layouts = {
         index: {
-          template: "make-teach.html",
+          template: 'make-teach.html',
           tags: ['webmaker:recommended']
         },
         teach: {
-          template: "make-teach.html",
+          template: 'make-teach.html',
           tags: ['webmaker:teach']
         },
         starterMakes: {
-          template: "make-starter-make.html",
-          tags: ["webmaker:template"]
+          template: 'make-starter-make.html',
+          tags: ['webmaker:template']
         },
         teachtheweb: {
-          tags: ["webmaker:frontpage"]
+          tags: ['webmaker:frontpage']
         },
-        "privacy-makes": {
-          template: "make-starter-make.html",
-          tags: ["webmaker:privacy"]
+        'privacy-makes': {
+          template: 'make-starter-make.html',
+          tags: ['webmaker:privacy']
         }
       };
 
@@ -33,7 +33,7 @@ module.exports = function (options) {
 
     // prefix: Set the app-tag prefix for our intial layout settings
     var prefix = options.prefix || (req.query.prefix || DEFAULT_PREFIX).toString(),
-      stickyPrefix = "webmaker:" + (prefix + "-");
+      stickyPrefix = 'webmaker:' + (prefix + '-');
 
     // layout: Choose a layout - should it look like the home or teach page?
     // Sets the processing function and template piece
@@ -74,7 +74,7 @@ module.exports = function (options) {
     var stickyOptions = {
       tagPrefix: stickyPrefix,
       limit: stickyLimit,
-      sortByField: ["createdAt", "desc"]
+      sortByField: ['createdAt', 'desc']
     };
 
     var normalOptions = {
@@ -83,7 +83,7 @@ module.exports = function (options) {
         tags: layout.tags
       },
       limit: limit,
-      sortByField: ["createdAt", "desc"]
+      sortByField: ['createdAt', 'desc']
     };
 
     async.map([stickyOptions, normalOptions], getMakes, function (err, data) {
@@ -107,7 +107,7 @@ module.exports = function (options) {
       // Send warning messages to editor about missing stickies
       for (var i = 0; i < limit; i++) {
         if (!sticky[i]) {
-          warnings.push("No sticky set for " + stickyPrefix + (i + 1));
+          warnings.push('No sticky set for ' + stickyPrefix + (i + 1));
         }
       }
 
@@ -120,7 +120,7 @@ module.exports = function (options) {
         all = layout.process(all);
       }
 
-      res.render(page + ".html", {
+      res.render(page + '.html', {
         makes: all,
         totalHits: totalNormalHits,
         limit: limit,

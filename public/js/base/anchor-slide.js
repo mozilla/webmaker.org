@@ -1,5 +1,4 @@
 define(['jquery'], function ($) {
-
   var AnchorSlide = function (target, options) {
     var self = this;
 

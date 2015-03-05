@@ -12,25 +12,25 @@ define(['jquery', 'social', 'localized'],
   function ($, SocialMedia, localized) {
     localized.ready(function () {
       var social,
-        $body = $("body"),
-        $shareBtn = $("#share-btn"),
-        $shareContainer = $("#share-container"),
-        $likeBtn = $(".make-like-toggle"),
-        $likeCount = $(".like-count"),
-        $likeText = $(".like-text"),
-        $likeNotLoggedInMsg = $("#like-not-logged-in"),
-        $reportButton = $("#make-report-toggle"),
-        $reportedText = $("#make-reported-text"),
-        $reportNotLoggedInMsg = $("#report-not-logged-in"),
-        $reportError = $("#make-report-error"),
-        $makeReportedMsg = $("#make-reported-message"),
-        googleBtn = document.getElementById("google-btn"),
-        twitterBtn = document.getElementById("twitter-btn"),
-        fbBtn = document.getElementById("fb-btn"),
-        url = $body.data("url"),
-        csrfToken = $("meta[name='csrf-token']").attr("content"),
+        $body = $('body'),
+        $shareBtn = $('#share-btn'),
+        $shareContainer = $('#share-container'),
+        $likeBtn = $('.make-like-toggle'),
+        $likeCount = $('.like-count'),
+        $likeText = $('.like-text'),
+        $likeNotLoggedInMsg = $('#like-not-logged-in'),
+        $reportButton = $('#make-report-toggle'),
+        $reportedText = $('#make-reported-text'),
+        $reportNotLoggedInMsg = $('#report-not-logged-in'),
+        $reportError = $('#make-report-error'),
+        $makeReportedMsg = $('#make-reported-message'),
+        googleBtn = document.getElementById('google-btn'),
+        twitterBtn = document.getElementById('twitter-btn'),
+        fbBtn = document.getElementById('fb-btn'),
+        url = $body.data('url'),
+        csrfToken = $('meta[name=\'csrf-token\']').attr('content'),
         webmakerAuth = new WebmakerLogin({
-          csrfToken: $('meta[name="csrf-token"]').attr('content'),
+          csrfToken: $('meta[name=\'csrf-token\']').attr('content'),
           showCTA: true
         });
 
@@ -45,33 +45,33 @@ define(['jquery', 'social', 'localized'],
       var socialMessage = localized.get('DetailsShareTwitterMsg');
       social = new SocialMedia({
         message: socialMessage,
-        via: "webmaker"
+        via: 'webmaker'
       });
 
       function shareOnClick() {
         social.hotLoad(twitterBtn, social.twitter, url);
         social.hotLoad(googleBtn, social.google, url);
         social.hotLoad(fbBtn, social.facebook, url);
-        $shareBtn.addClass("hidden");
-        $shareContainer.removeClass("hidden");
-        $shareBtn.off("click", shareOnClick);
+        $shareBtn.addClass('hidden');
+        $shareContainer.removeClass('hidden');
+        $shareBtn.off('click', shareOnClick);
       }
 
-      $shareBtn.on("click", shareOnClick);
+      $shareBtn.on('click', shareOnClick);
 
       function openLogInWindow(actionCallback) {
         function onLogin() {
-          webmakerAuth.off("login", onLogin);
-          webmakerAuth.off("error", onError);
+          webmakerAuth.off('login', onLogin);
+          webmakerAuth.off('error', onError);
           actionCallback();
         }
 
         function onError() {
-          webmakerAuth.off("login", onLogin);
-          webmakerAuth.off("error", onError);
+          webmakerAuth.off('login', onLogin);
+          webmakerAuth.off('error', onError);
         }
-        webmakerAuth.on("login", onLogin);
-        webmakerAuth.on("error", onError);
+        webmakerAuth.on('login', onLogin);
+        webmakerAuth.on('error', onError);
         webmakerAuth.login();
       }
 
@@ -79,33 +79,33 @@ define(['jquery', 'social', 'localized'],
         var timer;
 
         function hideTooltip(e) {
-          window.removeEventListener("click", clickCallback);
+          window.removeEventListener('click', clickCallback);
           window.clearTimeout(timer);
-          $tooltipElem.addClass("hide");
+          $tooltipElem.addClass('hide');
         }
 
         function clickCallback(e) {
-          if (e.target === $tooltipElem.find("a")[0]) {
+          if (e.target === $tooltipElem.find('a')[0]) {
             return true;
           }
           hideTooltip();
         }
 
-        $tooltipElem.removeClass("hide");
+        $tooltipElem.removeClass('hide');
         timer = window.setTimeout(hideTooltip, delay);
-        window.addEventListener("click", clickCallback);
+        window.addEventListener('click', clickCallback);
       }
 
       // Like event handlers
 
       function likeRequest() {
-        var makeID = $likeBtn.data("make-id"),
+        var makeID = $likeBtn.data('make-id'),
           method;
 
-        if ($likeBtn.hasClass("fa-heart")) {
-          method = "/unlike";
+        if ($likeBtn.hasClass('fa-heart')) {
+          method = '/unlike';
         } else {
-          method = "/like";
+          method = '/like';
         }
 
         $.post(method, {
@@ -113,7 +113,6 @@ define(['jquery', 'social', 'localized'],
           _csrf: csrfToken
         }, function (res) {
           updateLikes(res.likes.length);
-
         }).fail(function (res) {
           if (res.status === 401) {
             displayTooltip($likeNotLoggedInMsg, 5000);
@@ -125,20 +124,20 @@ define(['jquery', 'social', 'localized'],
       }
 
       function updateLikes(newLen) {
-        $likeBtn.toggleClass("fa-heart fa-heart-o");
-        if (typeof newLen === "undefined") {
+        $likeBtn.toggleClass('fa-heart fa-heart-o');
+        if (typeof newLen === 'undefined') {
           return;
         } else if (newLen === 0) {
-          $likeText.html(localized.get("Like-0"));
+          $likeText.html(localized.get('Like-0'));
         } else if (newLen === 1) {
-          $likeText.html(localized.get("Like-1"));
+          $likeText.html(localized.get('Like-1'));
         } else {
-          $likeText.html(localized.get("Like-n"));
+          $likeText.html(localized.get('Like-n'));
         }
         $likeCount.html(newLen);
       }
 
-      $likeBtn.on("click", function (e) {
+      $likeBtn.on('click', function (e) {
         if (e.target !== $likeBtn[0]) {
           return;
         }
@@ -146,20 +145,20 @@ define(['jquery', 'social', 'localized'],
         likeRequest();
       });
 
-      $likeNotLoggedInMsg.on("click", function () {
+      $likeNotLoggedInMsg.on('click', function () {
         openLogInWindow(likeRequest);
       });
 
       // Report Event Handlers
 
       function reportRequest() {
-        var makeID = $reportButton.data("make-id"),
+        var makeID = $reportButton.data('make-id'),
           method;
 
-        if ($reportButton.hasClass("fa-flag")) {
-          method = "/cancelReport";
+        if ($reportButton.hasClass('fa-flag')) {
+          method = '/cancelReport';
         } else {
-          method = "/report";
+          method = '/report';
         }
 
         $.post(method, {
@@ -180,14 +179,14 @@ define(['jquery', 'social', 'localized'],
       }
 
       function updateReport(method) {
-        $reportButton.toggleClass("fa-flag fa-flag-o");
-        $reportedText.toggleClass("hide");
-        if (method === "/report") {
+        $reportButton.toggleClass('fa-flag fa-flag-o');
+        $reportedText.toggleClass('hide');
+        if (method === '/report') {
           displayTooltip($makeReportedMsg, 10000);
         }
       }
 
-      $reportButton.on("click", function (e) {
+      $reportButton.on('click', function (e) {
         if (e.target !== $reportButton[0]) {
           return;
         }
@@ -195,7 +194,7 @@ define(['jquery', 'social', 'localized'],
         reportRequest();
       });
 
-      $reportNotLoggedInMsg.on("click", function () {
+      $reportNotLoggedInMsg.on('click', function () {
         openLogInWindow(reportRequest);
       });
     });

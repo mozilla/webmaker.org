@@ -1,9 +1,8 @@
 angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services',
-    'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular', 'markdown'
-  ])
+  'ngWebmakerLogin', 'localization', 'ngScrollSpy', 'angularMoment', 'wmMakeApiAngular', 'markdown'
+])
   .config(['$compileProvider', '$routeProvider', '$locationProvider', 'makeApiProvider', 'CONFIG',
     function ($compileProvider, $routeProvider, $locationProvider, makeApiProvider, CONFIG) {
-
       // determines which protocols are allowed in <a href> attributes
       $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|javascript):/);
 
@@ -177,7 +176,7 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
       $rootScope.baseUrl = '/' + $rootScope.lang + '/';
 
       $rootScope.direction = CONFIG.direction;
-      $rootScope.arrowDir = CONFIG.direction === 'rtl' ? "left" : "right";
+      $rootScope.arrowDir = CONFIG.direction === 'rtl' ? 'left' : 'right';
 
       // feed supported langs to meta
       $rootScope.languages = CONFIG.supported_languages;

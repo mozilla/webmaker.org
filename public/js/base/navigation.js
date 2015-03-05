@@ -1,6 +1,5 @@
 define(['jquery', 'analytics'], function ($, analytics) {
   return function navigation() {
-
     var $mainNavContainer = $('#main-navigation-container');
     var currentPage = $mainNavContainer.data('current-page');
     var currentSection = $mainNavContainer.data('current-section');
@@ -19,7 +18,7 @@ define(['jquery', 'analytics'], function ($, analytics) {
       $activeNavItems.toggleClass('active');
       $expandedNavTriggers.toggleClass('active');
       analytics.event('Expand Menu', {
-        label: $expandedNav.hasClass('on') ? "Expand" : "Collapse"
+        label: $expandedNav.hasClass('on') ? 'Expand' : 'Collapse'
       });
     }
 
@@ -70,6 +69,5 @@ define(['jquery', 'analytics'], function ($, analytics) {
         doSearch();
       }
     });
-
   };
 });

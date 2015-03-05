@@ -12,7 +12,7 @@ requirejs.config({
     'jquery.powertip': '/js/lib/jquery.powertip',
     'moment': '/bower_components/moment/min/moment+langs.min',
     'social': '/js/lib/socialmedia',
-    'selectize': "/bower_components/selectize/dist/js/standalone/selectize.min",
+    'selectize': '/bower_components/selectize/dist/js/standalone/selectize.min',
     'uri': '/js/lib/uri',
     'tabzilla': 'https://mozorg.cdn.mozilla.net/tabzilla/tabzilla',
     'nunjucks': '/bower_components/nunjucks/browser/nunjucks',
@@ -52,7 +52,7 @@ require([
   'languages',
   'selectize',
   'base/login',
-  'tabzilla',
+  'tabzilla'
 ], function ($, Marquee, privacy, AnchorSlide, navigation, languages, selectize) {
   'use strict';
 
@@ -70,8 +70,8 @@ require([
 
   // Call this when the element is ready
   languages.ready({
-    position: "top",
-    arrow: "left"
+    position: 'top',
+    arrow: 'left'
   });
 
   $('#supportedLocales').selectize();

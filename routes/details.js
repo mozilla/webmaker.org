@@ -1,9 +1,9 @@
 module.exports = function (req, res) {
   var MAX_REMIXES = 5;
-  var make = require("../lib/makeapi").authenticated;
+  var make = require('../lib/makeapi').authenticated;
 
   function renderError(message) {
-    return res.render("details.html", {
+    return res.render('details.html', {
       error: message
     });
   }
@@ -12,29 +12,29 @@ module.exports = function (req, res) {
   var searchOptions = {},
     searchCriteria;
   if (req.query.id) {
-    searchCriteria = "id";
+    searchCriteria = 'id';
     searchOptions.id = req.query.id;
   } else if (req.query.url) {
-    searchCriteria = "url";
+    searchCriteria = 'url';
     searchOptions.url = decodeURIComponent(req.query.url);
   } else {
-    return renderError("No URL or ID was passed");
+    return renderError('No URL or ID was passed');
   }
 
   make.setLang(req.localeInfo.momentLang);
   make.find(searchOptions).process(function (err, data) {
     if (err) {
-      return renderError("Looks like there is a problem with the make API");
+      return renderError('Looks like there is a problem with the make API');
     }
     if (data && !data.length) {
-      return renderError("No make was found :(");
+      return renderError('No make was found :(');
     }
     var makeData = data[0];
 
     // Prep remixes, max of 10
     makeData.remixes(function (err, remixData, totalHits) {
       if (err) {
-        return renderError("Looks like there is a problem with the make API");
+        return renderError('Looks like there is a problem with the make API');
       }
       makeData.remixList = [];
 
@@ -46,9 +46,9 @@ module.exports = function (req, res) {
       }
 
       if (totalHits === 1) {
-        makeData.remixCount = "1 remix";
+        makeData.remixCount = '1 remix';
       } else {
-        makeData.remixCount = totalHits + " remixes";
+        makeData.remixCount = totalHits + ' remixes';
       }
 
       if (req.session.user && makeData.reports && makeData.reports.length) {
@@ -61,7 +61,7 @@ module.exports = function (req, res) {
       if (makeData.remixedFrom) {
         make[searchCriteria](makeData.remixedFrom).then(function (err, remixedFromData) {
           if (err) {
-            return renderError("Looks like there is a problem with the make API");
+            return renderError('Looks like there is a problem with the make API');
           }
 
           if (remixedFromData && remixedFromData.length) {
@@ -69,10 +69,10 @@ module.exports = function (req, res) {
             makeData.remixedFromData.url = remixedFromData[0].url;
             makeData.remixedFromData.username = remixedFromData[0].username;
           }
-          res.render("details.html", makeData);
+          res.render('details.html', makeData);
         });
       } else {
-        res.render("details.html", makeData);
+        res.render('details.html', makeData);
       }
     });
   }, req.session.user ? req.session.user.id : '');

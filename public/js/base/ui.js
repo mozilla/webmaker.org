@@ -1,41 +1,40 @@
-define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
-  "use strict";
+define(['jquery', 'text!html/ui-fragments.html'], function ($, _fragments) {
+  'use strict';
 
   var UI = {},
-    $fragments = $(document.createElement("div")).html(_fragments);
+    $fragments = $(document.createElement('div')).html(_fragments);
 
   UI.select = function (select, fn) {
+    $('.filter').removeClass('hide');
 
-    $(".filter").removeClass("hide");
-
-    var $el = $(".ui-select", $fragments).clone(true),
-      $toggleBtn = $el.find(".icon"),
-      $selectedEl = $el.find(".ui-selected"),
-      $menuContainer = $el.find(".ui-select-menu"),
-      $menu = $menuContainer.find("ul"),
-      $li = $menu.find("li");
+    var $el = $('.ui-select', $fragments).clone(true),
+      $toggleBtn = $el.find('.icon'),
+      $selectedEl = $el.find('.ui-selected'),
+      $menuContainer = $el.find('.ui-select-menu'),
+      $menu = $menuContainer.find('ul'),
+      $li = $menu.find('li');
 
     var $select = $(select),
-      $options = $("option", select),
-      id = $select.attr("id");
+      $options = $('option', select),
+      id = $select.attr('id');
 
     fn = fn || function () {};
 
     $options.each(function (i, option) {
       var val = $(option).val(),
         html = $(option).text(),
-        title = $(option).attr("title"),
+        title = $(option).attr('title'),
         $newLi = $li.clone();
-      $newLi.attr("data-value", val);
+      $newLi.attr('data-value', val);
       $newLi.html(html);
-      $newLi.attr("title", title);
-      if ($(option).attr("selected")) {
-        $newLi.attr("data-selected", true);
-        $selectedEl.html(html).attr("title", title);
+      $newLi.attr('title', title);
+      if ($(option).attr('selected')) {
+        $newLi.attr('data-selected', true);
+        $selectedEl.html(html).attr('title', title);
       }
       $newLi.click(function () {
-        $menu.find("[data-selected]").removeAttr("data-selected");
-        $(this).attr("data-selected", true);
+        $menu.find('[data-selected]').removeAttr('data-selected');
+        $(this).attr('data-selected', true);
         $selectedEl.text(html);
         $menuContainer.hide();
         fn(val);
@@ -51,8 +50,8 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
       $menuContainer.toggle();
     });
 
-    $el.attr("id", id);
-    $select.removeAttr("id");
+    $el.attr('id', id);
+    $select.removeAttr('id');
 
     $li.remove();
     $el.insertAfter($select);
@@ -60,10 +59,10 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
   };
 
   UI.pagination = function (page, total, limit, callback) {
-    var $pagination = $(".pagination"),
-      $ul = $pagination.find("ul"),
-      $_li = $("<li></li>"),
-      $li,
+    var $pagination = $('.pagination'),
+      $ul = $pagination.find('ul'),
+      $li = $('<li></li>'),
+      $pageBtn,
       MAX_NUMS = 4,
       totalPages = total ? Math.ceil(total / limit) : 0,
       set = Math.floor((page - 1) / MAX_NUMS),
@@ -76,8 +75,8 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
       $pagination.hide();
     }
 
-    var $prevBtn = $_li.clone().html("<span class=\"fa fa-chevron-left\"></span>"),
-      $nextBtn = $_li.clone().html("<span class=\"fa fa-chevron-right\"></span>");
+    var $prevBtn = $li.clone().html('<span class="fa fa-chevron-left"></span>'),
+      $nextBtn = $li.clone().html('<span class="fa fa-chevron-right"></span>');
 
     function pageSearch(page) {
       return function () {
@@ -94,20 +93,20 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
     }
     // Iterate over all pages;
     for (var i = startPage; i <= endPage; i++) {
-      $li = $_li.clone();
-      $li.text(i);
+      $pageBtn = $li.clone();
+      $pageBtn.text(i);
       if (i === page) {
-        $li.addClass("active");
+        $pageBtn.addClass('active');
       }
-      $li.click(pageSearch(i));
-      $ul.append($li);
+      $pageBtn.click(pageSearch(i));
+      $ul.append($pageBtn);
     }
     if (totalPages > endPage) {
-      $li = $_li.clone();
-      $li.text(totalPages);
-      $li.click(pageSearch(totalPages));
-      $ul.append("<li class=\"ellipsis\"></li>");
-      $ul.append($li);
+      $pageBtn = $li.clone();
+      $pageBtn.text(totalPages);
+      $pageBtn.click(pageSearch(totalPages));
+      $ul.append('<li class=\'ellipsis\'></li>');
+      $ul.append($pageBtn);
     }
     if (page < totalPages) {
       $ul.append($nextBtn);
@@ -116,5 +115,4 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
   };
 
   return UI;
-
 });

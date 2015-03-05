@@ -2,7 +2,7 @@ var hatchet = require('hatchet');
 
 module.exports = function (req, res) {
   if (!req.session.user) {
-    return res.send(401, new Error("You must be logged in to submit a resource"));
+    return res.send(401, new Error('You must be logged in to submit a resource'));
   }
   var data = req.body;
   hatchet.send('suggest_featured_resource', {

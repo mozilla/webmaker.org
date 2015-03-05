@@ -1,8 +1,7 @@
 var BadgeClient = require('badgekit-api-client');
-var async = require("async");
+var async = require('async');
 
 module.exports = function (env) {
-
   // Error messages
   var errorHandlers = {
     unauthorized: function () {
@@ -11,7 +10,10 @@ module.exports = function (env) {
       return err;
     },
     forbidden: function () {
-      var err = new Error('You are not authorized to access this area. If you think you are supposed to have permissions, try logging out and in again, or contact help@webmaker.org');
+      var errorString = 'You are not authorized to access this area. ' +
+        'If you think you are supposed to have permissions, ' +
+        'try logging out and in again, or contact help@webmaker.org';
+      var err = new Error(errorString);
       err.status = 403;
       return err;
     }
@@ -33,7 +35,8 @@ module.exports = function (env) {
         return function (req, res, next) {
           var user = req.session.user;
           if (!level || levels.indexOf(level) <= -1) {
-            var err = new Error('There is a problem with the permissions model: ' + level + ' is not a valid type of user.');
+            var problem = level + ' is not a valid type of user.';
+            var err = new Error('There is a problem with the permissions model: ' + problem);
             return next(err);
           } else if (!user) {
             return next(errorHandlers.unauthorized());
@@ -68,7 +71,6 @@ module.exports = function (env) {
           } else {
             return next();
           }
-
         };
       }
     },
@@ -98,7 +100,6 @@ module.exports = function (env) {
         system: env.get('BADGES_SYSTEM'),
         badge: req.params.badge
       }, function (err, instances) {
-
         // errorString
         if (err) {
           return res.send(500, err.message);
@@ -117,7 +118,6 @@ module.exports = function (env) {
             instances: instances
           });
         });
-
       });
     },
     deleteInstance: function (req, res, next) {
@@ -206,10 +206,7 @@ module.exports = function (env) {
 
           // Check if we have any criteria to display.
           var canApply = true;
-          switch (badge.name) {
-          case 'Data Trail Timeline':
-          case 'Privacy Coach':
-          case 'IP Address Tracer':
+          if (['Data Trail Timeline', 'Privacy Coach', 'IP Address Tracer'].indexOf(badge.name) >= 0) {
             canApply = false;
           }
 
@@ -246,7 +243,12 @@ module.exports = function (env) {
         slug: applicationSlug
       };
 
-      var apiFunction = applicationSlug ? badgeClient.updateApplication.bind(badgeClient) : badgeClient.addApplication.bind(badgeClient);
+      var apiFunction;
+      if (applicationSlug) {
+        apiFunction = badgeClient.updateApplication.bind(badgeClient);
+      } else {
+        apiFunction = badgeClient.addApplication.bind(badgeClient);
+      }
 
       apiFunction({
         system: env.get('BADGES_SYSTEM'),
@@ -260,7 +262,6 @@ module.exports = function (env) {
       });
     },
     issue: function (req, res, next) {
-
       var apiFunction;
       var query = {
         system: env.get('BADGES_SYSTEM'),
@@ -291,7 +292,6 @@ module.exports = function (env) {
       });
     },
     claim: function (req, res, next) {
-
       var codeQuery = {
         system: env.get('BADGES_SYSTEM'),
         badge: req.params.badge,

@@ -15,32 +15,32 @@ define(['jquery', 'url-template', 'selectize'], function ($, urlTemplate) {
   var profileEl = userInfoDropdown.find('a[data-profile]');
 
   function enable(user) {
-    joinEl.addClass("hidden");
-    loginEl.addClass("hidden");
+    joinEl.addClass('hidden');
+    loginEl.addClass('hidden');
 
-    avatarEl.attr("src", user.avatar);
+    avatarEl.attr('src', user.avatar);
     usernameEl.text(user.username);
 
-    adminEl.addClass("hidden");
-    supermentorEl.addClass("hidden");
-    mentorEl.addClass("hidden");
+    adminEl.addClass('hidden');
+    supermentorEl.addClass('hidden');
+    mentorEl.addClass('hidden');
     if (user.isAdmin) {
-      adminEl.removeClass("hidden");
+      adminEl.removeClass('hidden');
     } else if (user.isSuperMentor) {
-      supermentorEl.removeClass("hidden");
+      supermentorEl.removeClass('hidden');
     } else if (user.isMentor) {
-      mentorEl.removeClass("hidden");
+      mentorEl.removeClass('hidden');
     }
 
-    profileEl.attr("href", urlTemplate.parse(profileEl.attr("data-href-template")).expand(user));
+    profileEl.attr('href', urlTemplate.parse(profileEl.attr('data-href-template')).expand(user));
 
-    userInfoDropdown.removeClass("hidden");
+    userInfoDropdown.removeClass('hidden');
   }
 
   function disable() {
-    joinEl.removeClass("hidden");
-    loginEl.removeClass("hidden");
-    userInfoDropdown.addClass("hidden");
+    joinEl.removeClass('hidden');
+    loginEl.removeClass('hidden');
+    userInfoDropdown.addClass('hidden');
   }
 
   $('#webmaker-nav .dropdown').each(function (index, el) {

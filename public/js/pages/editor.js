@@ -1,48 +1,48 @@
-define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi", "masonry", "base/login"],
+define(['jquery', 'localized', 'nunjucks', 'base/ui', 'moment', 'uri', 'makeapi', 'masonry', 'base/login'],
   function ($, localized, nunjucks, UI, moment, URI, Make, Masonry, webmakerAuth) {
-    "use strict";
+    'use strict';
 
-    var MAKE_VIEW = "make-templates/make-admin-search.html",
-      MAKE_URL = $("body").data("endpoint"),
+    var MAKE_VIEW = 'make-templates/make-admin-search.html',
+      MAKE_URL = $('body').data('endpoint'),
       LIMIT = 12,
-      $loading = $(".loading-cat"),
-      stampBanner = document.querySelector(".stamp"),
-      mainGallery = document.querySelector(".main-gallery"),
+      $loading = $('.loading-cat'),
+      stampBanner = document.querySelector('.stamp'),
+      mainGallery = document.querySelector('.main-gallery'),
       $mainGallery = $(mainGallery),
-      $sidebar = $(".admin-sidebar "),
-      $adminSearch = $("#admin-search-input"),
-      searchResults = document.getElementById("search-results"),
+      $sidebar = $('.admin-sidebar '),
+      $adminSearch = $('#admin-search-input'),
+      searchResults = document.getElementById('search-results'),
       $searchResults = $(searchResults),
       lastQuery,
-      makeAPIUrl = $("body").data("endpoint"),
+      makeAPIUrl = $('body').data('endpoint'),
       makeAPIUrlHost = URI.parse(makeAPIUrl).host,
       queryKeys = URI.parse(window.location.href).queryKey,
       lang = $('html').attr('lang');
 
     moment.lang(localized.langToMomentJSLang(lang));
 
-    nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader("/templates", true));
+    nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader('/templates', true));
 
     // Making a custom filter to use it for the client-side l10n
     // Using this filter will help reduce the number of adding
     // variables to the global nunjucks variable.
-    // The usage will be "{{ "some string" | gettext }}"
+    // The usage will be '{{ 'some string' | gettext }}'
     nunjucks.env.addFilter('gettext', function (data) {
       return localized.get(data);
     });
 
     // Set up masonry
     var masonry = new Masonry(mainGallery, {
-      itemSelector: "div.make",
-      gutter: ".gutter-sizer"
+      itemSelector: 'div.make',
+      gutter: '.gutter-sizer'
     });
 
-    masonry.on("layoutComplete", function () {
-      $(".gallery-hide", $mainGallery).removeClass("gallery-hide");
+    masonry.on('layoutComplete', function () {
+      $('.gallery-hide', $mainGallery).removeClass('gallery-hide');
     });
 
     var searchMasonry = new Masonry(searchResults, {
-      itemSelector: "div.make",
+      itemSelector: 'div.make',
       gutter: 10
     });
 
@@ -53,19 +53,21 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
 
     function generateGravatar(hash) {
       // TODO: Combine with makeapi-webmaker.js into universal module
-      var DEFAULT_AVATAR = "https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png",
-        DEFAULT_SIZE = 44;
-      return "https://secure.gravatar.com/avatar/" + hash + "?s=" + DEFAULT_SIZE + "&d=" + DEFAULT_AVATAR;
+      var defaultAvatar = 'https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png',
+        defaultSize = 44;
+      return 'https://secure.gravatar.com/avatar/' + hash + '?s=' + defaultSize + '&d=' + defaultAvatar;
     }
 
     function resultsCallback(err, data, total) {
-      var oldMakes = searchResults.querySelectorAll(".make");
-      var showingString = total ? ("Showing pg. " + lastQuery.page + " of " + total) : "No";
+      var oldMakes = searchResults.querySelectorAll('.make');
+      var showingString = total ? ('Showing pg. ' + lastQuery.page + ' of ' + total) : 'No';
       if (oldMakes.length) {
         searchMasonry.remove(oldMakes);
       }
       $loading.hide();
-      $(".search-summary").html(showingString + " results for " + lastQuery.field + " = " + lastQuery.value + " on " + "<a href=\"" + makeAPIUrl + "/admin\">" + makeAPIUrlHost + "</a>");
+      showingString += ' results for ' + lastQuery.field + ' = ' + lastQuery.value + ' on ';
+      showingString += '<a href=\'' + makeAPIUrl + '/admin\'>' + makeAPIUrlHost + '</a>';
+      $('.search-summary').html(showingString);
       UI.pagination(lastQuery.page, total, LIMIT, function (page) {
         lastQuery.page = page;
         doSearch(lastQuery);
@@ -78,8 +80,8 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
           data[i].avatar = generateGravatar(data[i].emailHash);
           data[i].updatedAt = moment(data[i].updatedAt).fromNow();
           data[i].createdAt = moment(data[i].createdAt).fromNow();
-          if (data[i].contentType !== "Appmaker") {
-            data[i].remixurl = data[i].url + "/remix";
+          if (data[i].contentType !== 'Appmaker') {
+            data[i].remixurl = data[i].url + '/remix';
           }
           var $item = $($.parseHTML(nunjucks.env.render(MAKE_VIEW, {
             make: data[i]
@@ -100,20 +102,20 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
     $(window).scroll(function () {
       var windowTop = $(window).scrollTop();
       if (windowTop > scrollTop) {
-        $sidebar.css("top", "0");
+        $sidebar.css('top', '0');
       } else {
-        $sidebar.css("top", scrollTop - windowTop);
+        $sidebar.css('top', scrollTop - windowTop);
       }
     });
 
     function doSearch(options) {
       options = options || {};
 
-      options.field = options.field || $(".search-type label.active").data("field");
+      options.field = options.field || $('.search-type label.active').data('field');
       options.value = options.value || $adminSearch.val();
       options.limit = options.limit || LIMIT;
-      options.sortByField = options.sortByField || "createdAt";
-      options.sortByDirection = options.sortByDirection || "desc";
+      options.sortByField = options.sortByField || 'createdAt';
+      options.sortByDirection = options.sortByDirection || 'desc';
       options.page = options.page || 1;
 
       lastQuery = options;
@@ -130,34 +132,34 @@ define(["jquery", "localized", "nunjucks", "base/ui", "moment", "uri", "makeapi"
       });
     }
 
-    //Choosing field
-    $(".search-type label").click(function () {
-      $(".search-type label.active").removeClass("active");
-      $(this).addClass("active");
+    // Choosing field
+    $('.search-type label').click(function () {
+      $('.search-type label.active').removeClass('active');
+      $(this).addClass('active');
       doSearch({
-        field: $(this).data("field")
+        field: $(this).data('field')
       });
     });
 
-    UI.select("#filter", function (val) {
+    UI.select('#filter', function (val) {
       lastQuery.sortByField = val;
       lastQuery.page = 1;
       doSearch(lastQuery);
     });
 
-    UI.select("#prefix-select", function (val) {
+    UI.select('#prefix-select', function (val) {
       queryKeys.prefix = val;
       window.location.search = $.param(queryKeys);
     });
 
-    UI.select("#layout-select", function (val) {
+    UI.select('#layout-select', function (val) {
       queryKeys.layout = val;
       window.location.search = $.param(queryKeys);
     });
 
-    $adminSearch.bind("keypress", function (e) {
+    $adminSearch.bind('keypress', function (e) {
       var code = (e.keyCode ? e.keyCode : e.which);
-      if (code === 13) { //Enter keycode
+      if (code === 13) { // Enter keycode
         doSearch();
       }
     });

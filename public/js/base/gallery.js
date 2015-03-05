@@ -1,6 +1,5 @@
 define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'masonry', 'base/login'],
   function ($, nunjucks, UI, moment, Make, localized, Masonry, auth) {
-
     var DEFAULT_LIMIT = 12;
     var lang = $('html').attr('lang');
     moment.lang(localized.langToMomentJSLang(lang));
@@ -13,7 +12,8 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
       options.gutterSize = options.gutterSize || '.gutter-sizer';
       options.hiddenClass = options.hiddenClass || 'gallery-hide';
       options.makeView = options.makeView || 'make-teach.html';
-      options.makeUrl = options.makeUrl || $('meta[name="make-endpoint"]').attr('content') || 'https://makeapi.webmaker.org';
+      options.makeUrl = options.makeUrl || $('meta[name=\'make-endpoint\']').attr('content') ||
+        'https://makeapi.webmaker.org';
       options.defaultSearch = options.defaultSearch || 'webmaker:recommended';
 
       var banner = document.querySelector(options.banner),
@@ -75,56 +75,55 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
 
       function generateGravatar(hash) {
         // TODO: Combine with makeapi-webmaker.js into universal module
-        var DEFAULT_AVATAR = "https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png",
+        var DEFAULT_AVATAR = 'https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png',
           DEFAULT_SIZE = 44;
-        return "https://secure.gravatar.com/avatar/" + hash + "?s=" + DEFAULT_SIZE + "&d=" + DEFAULT_AVATAR;
+        return 'https://secure.gravatar.com/avatar/' + hash + '?s=' + DEFAULT_SIZE + '&d=' + DEFAULT_AVATAR;
       }
 
       function likeClickCallback(e) {
         e.preventDefault();
         e.stopPropagation();
         var $this = $(this),
-          makeID = $this.data("make-id"),
+          makeID = $this.data('make-id'),
           method;
 
-        if ($this.hasClass("fa-heart")) {
-          method = "/unlike";
+        if ($this.hasClass('fa-heart')) {
+          method = '/unlike';
         } else {
-          method = "/like";
+          method = '/like';
         }
         $.post(method, {
           makeID: makeID,
-          _csrf: $("meta[name='csrf-token']").attr("content")
+          _csrf: $('meta[name=\'csrf-token\']').attr('content')
         }, function (res) {
           var newLen = res.likes.length,
-            $count = $this.parent().parent().find(".like-count"),
-            $text = $this.parent().parent().find(".like-text");
+            $count = $this.parent().parent().find('.like-count'),
+            $text = $this.parent().parent().find('.like-text');
 
-          $this.toggleClass("fa-heart fa-heart-o");
+          $this.toggleClass('fa-heart fa-heart-o');
           $count.html(newLen);
           if (newLen === 0) {
-            $text.html(localized.get("Like-0"));
+            $text.html(localized.get('Like-0'));
           } else if (newLen === 1) {
-            $text.html(localized.get("Like-1"));
+            $text.html(localized.get('Like-1'));
           } else {
-            $text.html(localized.get("Like-n"));
+            $text.html(localized.get('Like-n'));
           }
         }).fail(function (res) {
           if (res.status === 401) {
             auth.login();
           } else {
             // already like/unliked, update UI to reflect.
-            $this.toggleClass("fa-heart fa-heart-o");
+            $this.toggleClass('fa-heart fa-heart-o');
           }
         });
       }
 
       function resultsCallback(err, data, total) {
-
         var isStickySearch = (searchOptions.tagPrefix === options.stickyPrefix),
           itemString = '',
           frag = document.createElement('div'),
-          makerID = $("meta[name='maker-id']").attr("content"),
+          makerID = $('meta[name=\'maker-id\']').attr('content'),
           allItems,
           i,
           l;
@@ -140,7 +139,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
         if (isStickySearch) {
           searchOptions.tags = options.defaultSearch;
           searchOptions.page = 0;
-          isLastPage = false; //We always want to load more for stickies.
+          isLastPage = false; // We always want to load more for stickies.
         }
 
         function hasUserLikedCheck(like) {
@@ -159,12 +158,12 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
             data[i].avatar = generateGravatar(data[i].emailHash);
             data[i].updatedAt = moment(data[i].updatedAt).fromNow();
             data[i].createdAt = moment(data[i].createdAt).fromNow();
-            if (data[i].contentType !== "Appmaker") {
+            if (data[i].contentType !== 'Appmaker') {
               data[i].remixurl = data[i].url + '/remix';
             }
             data[i].hasBeenLiked = data[i].likes.some(hasUserLikedCheck);
             if (isStickySearch && FRONTPAGE_LARGE.indexOf(i) > -1) {
-              data[i].size = "large";
+              data[i].size = 'large';
             }
             itemString += nunjucks.env.render(makeView, {
               make: data[i]
@@ -174,9 +173,9 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
         frag.innerHTML = itemString;
         allItems = frag.querySelectorAll(options.itemSelector);
         $(allItems)
-          .find(".make-like-toggle")
-          .off("click")
-          .on("click", likeClickCallback);
+          .find('.make-like-toggle')
+          .off('click')
+          .on('click', likeClickCallback);
         $mainGallery.append(allItems);
         masonry.appended(allItems);
         masonry.layout();
@@ -207,9 +206,9 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
       masonry.layout();
 
       localized.ready(function () {
-        $(".make-like-toggle")
-          .off("click")
-          .on("click", likeClickCallback);
+        $('.make-like-toggle')
+          .off('click')
+          .on('click', likeClickCallback);
       });
 
       // Set up load more
@@ -220,9 +219,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
           sticky: false
         });
       });
-
     };
 
     return Gallery;
-
   });

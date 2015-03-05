@@ -1,5 +1,4 @@
 define(['jquery', 'jquery.powertip'], function ($) {
-
   // Element references -------------------------------------------------------
 
   var $input = $('#email-updates');
@@ -65,8 +64,9 @@ define(['jquery', 'jquery.powertip'], function ($) {
   // Functions ----------------------------------------------------------------
 
   function validateEmail(email) {
+    // jscs:disable maximumLineLength
     var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+    // jscs:enable maximumLineLength
     return emailRegex.test(email);
   }
 
@@ -110,5 +110,4 @@ define(['jquery', 'jquery.powertip'], function ($) {
     showTip: showTip,
     hideTip: hideTip
   };
-
 });

@@ -1,12 +1,12 @@
-var make = require("../lib/makeapi").readOnly;
+var make = require('../lib/makeapi').readOnly;
 
 module.exports = function (options) {
   return function (req, res, next) {
-    var DEFAULT_LAYOUT = "index",
+    var DEFAULT_LAYOUT = 'index',
       DEFAULT_LIMIT = 12,
       layouts = {
         index: {
-          template: "make-teach.html",
+          template: 'make-teach.html',
           tags: ['webmaker:featured']
         }
       };
@@ -33,10 +33,10 @@ module.exports = function (options) {
           tags: layout.tags
         },
         limit: limit,
-        sortByField: ["createdAt", "desc"]
+        sortByField: ['createdAt', 'desc']
       })
       .process(function (err, makes, totalHits) {
-        res.render(page + ".html", {
+        res.render(page + '.html', {
           makes: makes,
           totalHits: totalHits,
           limit: limit,

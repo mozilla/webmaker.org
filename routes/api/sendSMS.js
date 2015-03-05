@@ -5,13 +5,13 @@ module.exports = function (req, res) {
 
   if (!body.to) {
     return res.json(400, {
-      error: "Missing to parameter"
+      error: 'Missing to parameter'
     });
   }
 
   hatchet.send('send_sms', {
     to: body.to,
-    body: req.gettext("install webmaker sms text")
+    body: req.gettext('install webmaker sms text')
   });
   res.json(200);
 };

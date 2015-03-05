@@ -9,5 +9,4 @@ define(['jquery', 'base/gallery'],
         tags: ['webmaker:privacy']
       }
     });
-
   });

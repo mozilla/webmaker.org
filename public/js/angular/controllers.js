@@ -51,52 +51,43 @@ angular
       $scope.search = function (input) {
         window.location = '/' + config.lang + '/search?type=all&q=' + input;
       };
-
     }
   ])
   .controller('exploreController', ['$scope', 'CONFIG',
     function ($scope, CONFIG) {
-
       $scope.eventsUrl = CONFIG.eventsUrl;
 
-      $scope.contributeBoxes = [
-        {
-          icon: 'book',
-          title: 'Teaching kits',
-          description: 'Teaching kits desc',
-          target: '/' + CONFIG.lang + '/make-your-own'
-        },
-        {
-          icon: 'map-marker',
-          title: 'Events',
-          description: 'Events desc',
-          target: 'https://events.webmaker.org/' + CONFIG.lang
-        },
-        {
-          icon: 'globe',
-          title: 'Translate',
-          description: 'Translate desc',
-          target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/translate-webmaker'
-        },
-        {
-          icon: 'picture-o',
-          title: 'Design',
-          description: 'Design desc',
-          target: 'https://wiki.mozilla.org/Webmaker/Design'
-        },
-        {
-          icon: 'code',
-          title: 'Code',
-          description: 'Code desc',
-          target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/contribute-webmaker-code'
-        },
-        {
-          icon: 'rocket',
-          title: 'Partner',
-          description: 'Partner desc',
-          target: 'http://party.webmaker.org/' + CONFIG.lang + '/partners'
-        }
-      ];
+      $scope.contributeBoxes = [{
+        icon: 'book',
+        title: 'Teaching kits',
+        description: 'Teaching kits desc',
+        target: '/' + CONFIG.lang + '/make-your-own'
+      }, {
+        icon: 'map-marker',
+        title: 'Events',
+        description: 'Events desc',
+        target: 'https://events.webmaker.org/' + CONFIG.lang
+      }, {
+        icon: 'globe',
+        title: 'Translate',
+        description: 'Translate desc',
+        target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/translate-webmaker'
+      }, {
+        icon: 'picture-o',
+        title: 'Design',
+        description: 'Design desc',
+        target: 'https://wiki.mozilla.org/Webmaker/Design'
+      }, {
+        icon: 'code',
+        title: 'Code',
+        description: 'Code desc',
+        target: 'https://support.mozilla.org/' + CONFIG.lang + '/kb/contribute-webmaker-code'
+      }, {
+        icon: 'rocket',
+        title: 'Partner',
+        description: 'Partner desc',
+        target: 'http://party.webmaker.org/' + CONFIG.lang + '/partners'
+      }];
     }
   ])
   .controller('homeController', ['$rootScope', '$scope', 'wmNav', '$routeParams', 'localize', 'CONFIG',
@@ -113,7 +104,7 @@ angular
 
       function onboardingExperience() {
         $('#home-start-form').on('submit', function () {
-          $rootScope.joinWebmaker($('.home-email-field').val(), "", $('#onboarding-checkbox').prop('checked'));
+          $rootScope.joinWebmaker($('.home-email-field').val(), '', $('#onboarding-checkbox').prop('checked'));
         });
         var input = $('.onboarding-input');
         var inputText = localize.getLocalizedString('sharing');
@@ -122,14 +113,14 @@ angular
         var timeout;
 
         function setFontSize() {
-          publishedText.css('font-size', publishedText.height() + "em");
+          publishedText.css('font-size', publishedText.height() + 'em');
         }
         $(window).resize(setFontSize);
 
         $('.onboarding-next-button').click(function () {
           var text = input.val();
-          $('.onboarding-step-1').addClass("hidden");
-          $('.onboarding-step-2').removeClass("hidden");
+          $('.onboarding-step-1').addClass('hidden');
+          $('.onboarding-step-2').removeClass('hidden');
           $('.home-panel').addClass('home-blue');
           $('.home-panel').removeClass('home-green');
           if (text) {
@@ -140,7 +131,7 @@ angular
 
         function cancelAutoInput() {
           clearTimeout(timeout);
-          $('.onboarding-tooltip-container').removeClass("fade-in");
+          $('.onboarding-tooltip-container').removeClass('fade-in');
         }
 
         function inputTextCharacter() {
@@ -153,15 +144,15 @@ angular
           input[0].setSelectionRange(0, input.val().length);
           cancelAutoInput();
         });
-        input.on("input", cancelAutoInput);
-        input.on("blur", function () {
-          $('.onboarding-tooltip-container').addClass("fade-in");
+        input.on('input', cancelAutoInput);
+        input.on('blur', function () {
+          $('.onboarding-tooltip-container').addClass('fade-in');
         });
         input.focus();
         timeout = setTimeout(inputTextCharacter, 2000);
       }
 
-      if ($routeParams.variant === "6") {
+      if ($routeParams.variant === '6') {
         if (localize.resourceFileLoaded) {
           onboardingExperience();
         } else {
@@ -201,7 +192,8 @@ angular
       }
 
       function translatePupil(coords) {
-        document.getElementById('iris-pupil').setAttribute('transform', 'translate(' + coords.x + ', ' + coords.y + ')');
+        var transform = 'translate(' + coords.x + ', ' + coords.y + ')';
+        document.getElementById('iris-pupil').setAttribute('transform', transform);
       }
 
       var mousemoveTime = Date.now();
@@ -254,32 +246,35 @@ angular
       $scope.weblit = weblit;
 
       $scope.wlcPoints = CONFIG.wlcPoints;
-
     }
   ])
   .controller('competencyMediaGenController', ['$scope', '$sce',
     function ($scope, $sce) {
       function safeUrl(media) {
-        switch (media.type) {
-        case 'youtube':
-          return $sce.trustAsResourceUrl('https://www.youtube-nocookie.com/embed/' + media.content + '?enablejsapi=1&amp;wmode=transparent&amp;autohide=1&amp;autoplay=0&amp;rel=0&amp;fs=1&amp;hd=1&amp;rel=0&amp;showinfo=0&amp;start=&amp;theme=dark');
-        case 'vimeo':
-          return $sce.trustAsResourceUrl('https://player.vimeo.com/video/' + media.content + '?title=0&amp;byline=0&amp;portrait=0&amp;color=eb6933');
-        case 'ted':
-          return $sce.trustAsResourceUrl('https://embed-ssl.ted.com/talks/' + media.content + '.html');
-        case 'popcorn':
-          return $sce.trustAsResourceUrl(media.content);
-        default:
+        // jscs:disable maximumLineLength
+        var youtubeQueryStringParams = 'enablejsapi=1&amp;wmode=transparent&amp;autohide=1&amp;autoplay=0&amp;rel=0&amp;fs=1&amp;hd=1&amp;rel=0&amp;showinfo=0&amp;start=&amp;theme=dark';
+        // jscs:enable maximumLineLength
+        var vimeoQueryStringParams = 'title=0&amp;byline=0&amp;portrait=0&amp;color=eb6933';
+        var sources = {
+          'youtube': 'https://www.youtube-nocookie.com/embed/' + media.content + '?' + youtubeQueryStringParams,
+          'vimeo': 'https://player.vimeo.com/video/' + media.content + '?' + vimeoQueryStringParams,
+          'ted': 'https://embed-ssl.ted.com/talks/' + media.content + '.html',
+          'popcorn': media.content
+        };
+        var source = sources[media.type];
+        if (source) {
+          return $sce.trustAsResourceUrl(source);
+        } else {
           return media.content;
         }
       }
       $scope.safeUrl = safeUrl;
-    }])
+    }
+  ])
   .controller('resourceFormController', ['$scope', '$http', 'wmAnalytics',
     function ($scope, $http, analytics) {
       $scope.formData = {};
       $scope.submit = function (form) {
-
         var data = $scope.formData;
         data.username = $scope._user.username;
         data.email = $scope._user.email;
@@ -316,7 +311,8 @@ angular
       $scope.strands = weblit.strands();
       $scope.litMap = weblit.allByStrand();
       $scope.wlcPoints = CONFIG.wlcPoints;
-    }])
+    }
+  ])
   .controller('toolsController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
       wmNav.page('tools');
@@ -341,7 +337,6 @@ angular
           init();
         }, 500);
       }
-
     }
   ])
   .controller('mwcController', ['$rootScope', '$scope', '$routeParams', '$timeout', 'wmNav',
@@ -391,7 +386,14 @@ angular
         });
     }
   ])
-  .controller('createUpdateBadgeController', ['$rootScope', '$scope', '$http', '$routeParams', '$location', 'wmNav', 'CONFIG',
+  .controller('createUpdateBadgeController', [
+    '$rootScope',
+    '$scope',
+    '$http',
+    '$routeParams',
+    '$location',
+    'wmNav',
+    'CONFIG',
     function ($rootScope, $scope, $http, $routeParams, $location, wmNav, config) {
       wmNav.page('create-badge');
       wmNav.section('explore');
@@ -492,7 +494,6 @@ angular
             console.log(err);
           });
       };
-
     }
   ])
   .controller('badgesAdminBadgeController', ['$scope', '$http', '$window', '$routeParams', '$modal', 'wmNav',
@@ -532,7 +533,7 @@ angular
 
       // This revokes badges
       $scope.revokeBadge = function (email) {
-        var ok = $window.confirm('Are you sure you want to delete ' + email + "'s badge?");
+        var ok = $window.confirm('Are you sure you want to delete ' + email + '\'s badge?');
         if (ok) {
           $http
             .delete('/api/badges/' + currentBadge + '/instance/email/' + email)
@@ -628,45 +629,36 @@ angular
   ])
   .controller('appmakerController', ['$scope', '$rootScope', '$timeout',
     function ($scope, $rootScope, $timeout) {
+      $scope.audiences = [{
+        title: 'students',
+        image: '/img/appmaker/appmaker-hero-blue.svg'
+      }, {
+        title: 'business',
+        image: '/img/appmaker/appmaker-hero-red.svg'
+      }, {
+        title: 'friends',
+        image: '/img/appmaker/appmaker-hero-yellow.svg'
+      }];
 
-      $scope.audiences = [
-        {
-          title: 'students',
-          image: '/img/appmaker/appmaker-hero-blue.svg'
-        },
-        {
-          title: 'business',
-          image: '/img/appmaker/appmaker-hero-red.svg'
-        },
-        {
-          title: 'friends',
-          image: '/img/appmaker/appmaker-hero-yellow.svg'
-        }
-      ];
-
-      $scope.makes = [
-        {
-          title: 'Music App',
-          image: '/img/appmaker/music-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://magical-profit-510.webmak.es/app',
-          installUrl: '//magical-profit-510.webmak.es/install',
-          appUrl: '//magical-profit-510.webmak.es/app'
-        },
-        {
-          title: 'Chat App',
-          image: '/img/appmaker/chat-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://scattered-reading-531.webmak.es/app',
-          installUrl: '//scattered-reading-531.webmak.es/install',
-          appUrl: '//scattered-reading-531.webmak.es/app'
-        },
-        {
-          title: 'Fireworks App',
-          image: '/img/appmaker/fireworks-app.jpg',
-          remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://neat-rate-866.webmak.es/app',
-          installUrl: '//neat-rate-866.webmak.es/install',
-          appUrl: '//neat-rate-866.webmak.es/app'
-        }
-      ];
+      $scope.makes = [{
+        title: 'Music App',
+        image: '/img/appmaker/music-app.jpg',
+        remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://magical-profit-510.webmak.es/app',
+        installUrl: '//magical-profit-510.webmak.es/install',
+        appUrl: '//magical-profit-510.webmak.es/app'
+      }, {
+        title: 'Chat App',
+        image: '/img/appmaker/chat-app.jpg',
+        remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://scattered-reading-531.webmak.es/app',
+        installUrl: '//scattered-reading-531.webmak.es/install',
+        appUrl: '//scattered-reading-531.webmak.es/app'
+      }, {
+        title: 'Fireworks App',
+        image: '/img/appmaker/fireworks-app.jpg',
+        remixUrl: '//apps.webmaker.org/' + $scope.lang + '/designer?remix=http://neat-rate-866.webmak.es/app',
+        installUrl: '//neat-rate-866.webmak.es/install',
+        appUrl: '//neat-rate-866.webmak.es/app'
+      }];
 
       // Properties the view needs to see
       $scope.showAudienceTitle = $scope.audiences[0].title;
@@ -715,8 +707,8 @@ angular
         document.head.appendChild(
           $('<script>')
           .addClass('webxray')
-          .attr("src", config.gogglesUrl + "/en-US/webxray.js")
-          .attr("data-baseuri", config.gogglesUrl + "/en-US")[0]
+          .attr('src', config.gogglesUrl + '/en-US/webxray.js')
+          .attr('data-baseuri', config.gogglesUrl + '/en-US')[0]
         );
         analytics.event('Goggles activated');
       });
@@ -759,16 +751,18 @@ angular
   .controller('localebannerController', ['$scope', 'CONFIG', '$http', '$location',
     function ($scope, config, $http, $location) {
       $http.get('/localeInfo').success(function (localeInfo) {
-
         $scope.listLang = [];
         $scope.langmap = config.langmap;
         localeInfo.otherLangPrefs.map(function (item) {
-          if (config.supportLang.indexOf(item) !== -1 && $scope.listLang.indexOf(item) !== 1 && $scope.listLang.length < 1 && item.match(/^[a-z]{2}/) && config.lang.match(/^[a-z]{2}/) && item.match(/^[a-z]{2}/)[0] !== config.lang.match(/^[a-z]{2}/)[0]) {
+          if (config.supportLang.indexOf(item) !== -1 &&
+            $scope.listLang.indexOf(item) !== 1 && $scope.listLang.length < 1 &&
+            item.match(/^[a-z]{2}/) && config.lang.match(/^[a-z]{2}/) &&
+            item.match(/^[a-z]{2}/)[0] !== config.lang.match(/^[a-z]{2}/)[0]) {
             $scope.listLang.push(item);
           }
         });
 
-        var el = document.getElementById("locale-banner");
+        var el = document.getElementById('locale-banner');
         if (!$scope.listLang.length) {
           $scope.bannerBool = true;
           el.remove();

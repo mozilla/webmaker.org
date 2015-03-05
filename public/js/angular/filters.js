@@ -28,27 +28,18 @@ angular
   .filter('likesText', function () {
     return function (likes) {
       if (likes) {
-        var likesText;
-
-        switch (likes.length) {
-        case 0:
-          likesText = 'Like-0';
-          break;
-        case 1:
-          likesText = 'Like-1';
-          break;
-        default:
-          likesText = 'Like-n';
+        if (likes.length < 2) {
+          return 'Like-' + likes.length;
         }
-        return likesText;
+        return 'Like-n';
       }
     };
   })
   .filter('generateGravatar', function () {
     return function (hash) {
       var
-      default_avatar = "https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png",
-        default_size = 44;
-      return "https://secure.gravatar.com/avatar/" + hash + "?s=" + default_size + "&d=" + default_avatar;
+      defaultAvatar = 'https%3A%2F%2Fstuff.webmaker.org%2Favatars%2Fwebmaker-avatar-44x44.png',
+        defaultSize = 44;
+      return 'https://secure.gravatar.com/avatar/' + hash + '?s=' + defaultSize + '&d=' + defaultAvatar;
     };
   });

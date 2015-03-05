@@ -22,41 +22,28 @@ require(['jquery', 'base/ui', 'base/gallery', 'base/login'],
     });
 
     UI.select('#search-filter', function (val) {
-
       var makes = document.querySelectorAll('.make');
 
-      switch (val) {
-      case 'featured':
-        gallery.searchOptions.tags = {
-          tags: ['webmaker:featured']
-        };
-        gallery.searchOptions.sortByField = ['createdAt', 'desc'];
+      gallery.searchOptions.tags = {
+        tags: ['webmaker:featured']
+      };
+
+      gallery.searchOptions.sortByField = [
+        'createdAt',
+        'desc'
+      ];
+
+      var contentTypes = {
+        'popcorn': 'application/x-popcorn',
+        'thimble': 'application/x-thimble',
+        'appmaker': 'Appmaker'
+      };
+
+      var contentType = contentTypes[val];
+      if (contentType) {
+        gallery.searchOptions.contentType = contentType;
+      } else if (val === 'featured') {
         delete gallery.searchOptions.contentType;
-        break;
-
-      case 'popcorn':
-        gallery.searchOptions.tags = {
-          tags: ['webmaker:featured']
-        };
-        gallery.searchOptions.sortByField = ['createdAt', 'desc'];
-        gallery.searchOptions.contentType = 'application/x-popcorn';
-        break;
-
-      case 'thimble':
-        gallery.searchOptions.tags = {
-          tags: ['webmaker:featured']
-        };
-        gallery.searchOptions.sortByField = ['createdAt', 'desc'];
-        gallery.searchOptions.contentType = 'application/x-thimble';
-        break;
-
-      case 'appmaker':
-        gallery.searchOptions.tags = {
-          tags: ['webmaker:featured']
-        };
-        gallery.searchOptions.sortByField = ['createdAt', 'desc'];
-        gallery.searchOptions.contentType = 'Appmaker';
-        break;
       }
 
       // Reset and set to page 1
@@ -67,6 +54,5 @@ require(['jquery', 'base/ui', 'base/gallery', 'base/login'],
       }
 
       gallery.search();
-
     });
   });

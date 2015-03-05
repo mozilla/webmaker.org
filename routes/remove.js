@@ -1,5 +1,5 @@
 module.exports = function (req, res) {
-  var make = require("../lib/makeapi").authenticated;
+  var make = require('../lib/makeapi').authenticated;
   var id = req.body.makeID;
 
   make.id(id).then(function (err, data) {
@@ -8,7 +8,7 @@ module.exports = function (req, res) {
     }
 
     if (data && !data.length) {
-      return res.send("Sorry, we couldn't find a make with that id!");
+      return res.send('Sorry, we couldn\'t find a make with that id!');
     }
 
     var username = data[0].username;
@@ -23,7 +23,7 @@ module.exports = function (req, res) {
       });
     } else {
       res.json({
-        error: "You do not have permission to delete this make"
+        error: 'You do not have permission to delete this make'
       });
     }
   });

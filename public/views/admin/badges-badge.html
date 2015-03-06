@@ -40,11 +40,11 @@
             <input name="issue_comment" ng-show="showComment" ng-model="issueComment" class="form-control">
           </p>
           <button class="btn btn-success" ng-click="showComment = true" ng-hide="showComment">
-            <span class="icon icon-plus"></span> {{ 'Add a comment' | i18n }}
+            <span class="fa fa-plus"></span> {{ 'Add a comment' | i18n }}
           </button>
 
           <button class="btn btn-success pull-right" ng-click="issueBadges(issueEmails, issueComment)">
-            <span class="icon icon-plus"></span> {{ 'Issue new badge(s)' | i18n }}
+            <span class="fa fa-plus"></span> {{ 'Issue new badge(s)' | i18n }}
           </button>
         </div>
       </form>

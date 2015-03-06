@@ -1,7 +1,7 @@
 {% macro makeTags() %}
   {% if make.rawTags.length %}
   <div class="tag-container">
-    <span class="icon-tags" title="tags"></span>
+    <span class="fa fa-tags" title="tags"></span>
     {% for tag in make.prettyTags %}
       {%- if loop.index <= 10 %}
       <a class="tag" href="/t/{{tag}}">{{tag}}</a>
@@ -24,8 +24,8 @@
 
 {% macro likeIcon() %}
   {% if make.hasBeenLiked %}
-    <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart"></span>
+    <span data-make-id="{{ make.id }}" class="make-like-toggle fa fa-heart"></span>
   {% else %}
-    <span data-make-id="{{ make.id }}" class="make-like-toggle icon-heart-empty"></span>
+    <span data-make-id="{{ make.id }}" class="make-like-toggle fa fa-heart-o"></span>
   {% endif %}
 {% endmacro %}

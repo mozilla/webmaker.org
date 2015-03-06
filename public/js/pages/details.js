@@ -102,7 +102,7 @@ define(['jquery', 'social', 'localized'],
         var makeID = $likeBtn.data("make-id"),
           method;
 
-        if ($likeBtn.hasClass("icon-heart")) {
+        if ($likeBtn.hasClass("fa-heart")) {
           method = "/unlike";
         } else {
           method = "/like";
@@ -125,7 +125,7 @@ define(['jquery', 'social', 'localized'],
       }
 
       function updateLikes(newLen) {
-        $likeBtn.toggleClass("icon-heart icon-heart-empty");
+        $likeBtn.toggleClass("fa-heart fa-heart-o");
         if (typeof newLen === "undefined") {
           return;
         } else if (newLen === 0) {
@@ -156,7 +156,7 @@ define(['jquery', 'social', 'localized'],
         var makeID = $reportButton.data("make-id"),
           method;
 
-        if ($reportButton.hasClass("icon-flag")) {
+        if ($reportButton.hasClass("fa-flag")) {
           method = "/cancelReport";
         } else {
           method = "/report";
@@ -180,7 +180,7 @@ define(['jquery', 'social', 'localized'],
       }
 
       function updateReport(method) {
-        $reportButton.toggleClass("icon-flag icon-flag-alt");
+        $reportButton.toggleClass("fa-flag fa-flag-o");
         $reportedText.toggleClass("hide");
         if (method === "/report") {
           displayTooltip($makeReportedMsg, 10000);

@@ -10,7 +10,7 @@
           <div class="col-sm-3">
             <div id="badge" class="badge"><img src="{{ badge.imageUrl }}"></div>
             <p class="badge-tags">
-              <span class="icon-tags"></span>
+              <span class="fa fa-tags"></span>
               {% for tag in badge.tags %}
               <a href="/{{localeInfo.lang}}/search?type=tags&q={{ tag.value }}" class="badge-tag">{{ tag.value }}</a>
               {% endfor %}
@@ -50,9 +50,9 @@
             </div>
             <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}" data-application-slug="{{ application.slug if application else null }}">
               <div class="panel-body">
-                <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>
+                <button id="" class="js-close-panel close-panel btn"><span class="fa fa-times"></span></button>
                 <h2>{{ gettext("Claim this badge") }}
-                  <span id="claim-code-explainer" class="icon-question-sign" title="For example, if you are awarded a badge for attending an event, the organizer of the event may provide you with a claim code."></span>
+                  <span id="claim-code-explainer" class="fa fa-question-circle" title="For example, if you are awarded a badge for attending an event, the organizer of the event may provide you with a claim code."></span>
                 </h2>
                 <div class="submit-badge-error alert alert-danger hidden">
                   <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
@@ -86,7 +86,7 @@
 
       <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}" data-application-slug="{{ application.slug if application else null }}">
         <div class="panel-body">
-          <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>
+          <button id="" class="js-close-panel close-panel btn"><span class="fa fa-times"></span></button>
           <h2>{{ gettext("Apply for this badge") }}</h2>
           <div class="submit-badge-error alert alert-danger hidden">
             <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
@@ -131,7 +131,7 @@
 
       <div id="issue" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}">
         <div class="panel-body">
-          <button id="" class="js-close-panel close-panel btn"><span class="icon-remove"></span></button>
+          <button id="" class="js-close-panel close-panel btn"><span class="fa fa-times"></span></button>
           <h2>Issue this badge</h2>
           <div class="submit-badge-error alert alert-danger hidden">
             <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>

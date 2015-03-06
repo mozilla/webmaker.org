@@ -87,7 +87,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
           makeID = $this.data("make-id"),
           method;
 
-        if ($this.hasClass("icon-heart")) {
+        if ($this.hasClass("fa-heart")) {
           method = "/unlike";
         } else {
           method = "/like";
@@ -100,7 +100,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
             $count = $this.parent().parent().find(".like-count"),
             $text = $this.parent().parent().find(".like-text");
 
-          $this.toggleClass("icon-heart icon-heart-empty");
+          $this.toggleClass("fa-heart fa-heart-o");
           $count.html(newLen);
           if (newLen === 0) {
             $text.html(localized.get("Like-0"));
@@ -114,7 +114,7 @@ define(['jquery', 'nunjucks', 'base/ui', 'moment', 'makeapi', 'localized', 'maso
             auth.login();
           } else {
             // already like/unliked, update UI to reflect.
-            $this.toggleClass("icon-heart icon-heart-empty");
+            $this.toggleClass("fa-heart fa-heart-o");
           }
         });
       }

@@ -76,8 +76,8 @@ define(["jquery", "text!html/ui-fragments.html"], function ($, _fragments) {
       $pagination.hide();
     }
 
-    var $prevBtn = $_li.clone().html("<span class=\"icon-chevron-left\"></span>"),
-      $nextBtn = $_li.clone().html("<span class=\"icon-chevron-right\"></span>");
+    var $prevBtn = $_li.clone().html("<span class=\"fa fa-chevron-left\"></span>"),
+      $nextBtn = $_li.clone().html("<span class=\"fa fa-chevron-right\"></span>");
 
     function pageSearch(page) {
       return function () {

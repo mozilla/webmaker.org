@@ -3,7 +3,7 @@ define(['jquery', 'localized', 'nunjucks', 'base/ui', 'moment', 'uri', 'makeapi'
     'use strict';
 
     var MAKE_VIEW = 'make-templates/make-admin-search.html',
-      MAKE_URL = $('body').data('endpoint'),
+      MAKE_URL = $('meta[name="make-endpoint"]').attr('content'),
       LIMIT = 12,
       $loading = $('.loading-cat'),
       stampBanner = document.querySelector('.stamp'),
@@ -21,7 +21,7 @@ define(['jquery', 'localized', 'nunjucks', 'base/ui', 'moment', 'uri', 'makeapi'
 
     moment.lang(localized.langToMomentJSLang(lang));
 
-    nunjucks.env = new nunjucks.Environment(new nunjucks.HttpLoader('/templates', true));
+    nunjucks.env = new nunjucks.Environment(new nunjucks.WebLoader('/templates', true));
 
     // Making a custom filter to use it for the client-side l10n
     // Using this filter will help reduce the number of adding

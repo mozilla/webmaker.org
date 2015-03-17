@@ -1,8 +1,6 @@
 define(['jquery', 'analytics'], function ($, analytics) {
   return function navigation() {
     var $mainNavContainer = $('#main-navigation-container');
-    var currentPage = $mainNavContainer.data('current-page');
-    var currentSection = $mainNavContainer.data('current-section');
     var lang = $('html').attr('lang') || 'en-US';
 
     var $expandedNavTriggers = $('.navbar-toggle');
@@ -13,11 +11,32 @@ define(['jquery', 'analytics'], function ($, analytics) {
 
     function toggleExpandedMenu(e) {
       e.preventDefault();
-      $navSecondary.toggleClass('collapse');
-      $navPrimary.toggleClass('collapse');
+
       analytics.event('Expand Menu', {
-        label: $navPrimary.hasClass('collapse') ? 'Collapse' : 'Expand'
+        label: $navPrimary.hasClass('collapse') ? 'Expand' : 'Collapse'
       });
+
+      // expand
+      if ($navPrimary.hasClass('collapse')) {
+        $navSecondary.removeClass('collapse');
+        $navPrimary.removeClass('collapse');
+        $navSecondary.addClass('collapsing');
+        $navPrimary.addClass('collapsing');
+        setTimeout(function () {
+          $navSecondary.removeClass('collapsing');
+          $navPrimary.removeClass('collapsing');
+        }, 350);
+        // collapse
+      } else {
+        $navSecondary.addClass('collapsing');
+        $navPrimary.addClass('collapsing');
+        setTimeout(function () {
+          $navSecondary.addClass('collapse');
+          $navPrimary.addClass('collapse');
+          $navSecondary.removeClass('collapsing');
+          $navPrimary.removeClass('collapsing');
+        });
+      }
     }
 
     function doSearch() {

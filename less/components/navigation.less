@@ -105,25 +105,28 @@
 }
 
 #navigation-secondary {
-  height: 135px;
+  &.collapsing {
+    height: 119px;
+  }
 }
 #navigation-primary {
-  height: 216px;
+  &.collapsing {
+    height: 216px;
+  }
 }
 
 #navigation-secondary,
 #navigation-primary {
 
+  height: auto;
   overflow: hidden;
   transition: height 0.35s ease 0s;
+  display: block;
 
-  @media (min-width: @width-medium) {
-    display: block;
-  }
-
-  &.collapse {
-    display: block;
-    height: 0;
+  @media (max-width: @width-medium) {
+    &.collapse {
+      height: 0;
+    }
   }
 }
 

@@ -104,60 +104,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+#navigation-secondary {
+  height: 135px;
+}
 #navigation-primary {
-  // Don't show on mobile
-  display: none;
-
-  @media (min-width: @width-medium) {
-    display: block;
-  }
-
+  height: 216px;
 }
 
-#navigation-secondary {
-  font-size: 13px;
-  background: @lightnavy;
-  display: none;
+#navigation-secondary,
+#navigation-primary {
+
+  overflow: hidden;
+  transition: height 0.35s ease 0s;
+
   @media (min-width: @width-medium) {
     display: block;
   }
 
-  .navigation-list {
-    .clearfix;
-     display: none;
-    &.active {
-      display: block;
-    }
-  }
-
-  li {
-    position: relative;
-    float: left;
-    color: fade(@white, 60%);
-    display: inline-block;
-    &:hover,
-    .active {
-      color: @white;
-    }
-  }
-
-  li a {
-   position: relative;
-  }
-
-  li a.active:after {
-    content: "";
+  &.collapse {
     display: block;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid @lightnavy;
-    margin-left: -10px;
   }
 }
 

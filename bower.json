@@ -30,7 +30,7 @@
     "animate.css": "~3.1.0",
     "ngScrollSpy": "1.0.2",
     "angular-moment": "0.7.1",
-    "makeapi-angular": "0.0.3",
+    "makeapi-angular": "0.0.5",
     "imagesloaded": "~3.1.8",
     "url-template": "2.0.4",
     "angular-markdown-filter": "~1.1.0",

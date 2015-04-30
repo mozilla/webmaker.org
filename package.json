@@ -43,7 +43,7 @@
     "proxy-middleware": "0.5.0",
     "rtltr-for-less": "0.0.6",
     "sequelize": "1.7.0-rc1",
-    "sqlite3": "2.1.17",
+    "sqlite3": "^3.0.5",
     "time-grunt": "^0.3.1",
     "uuid": "1.4.x",
     "web-literacy-client": "1.1.1",

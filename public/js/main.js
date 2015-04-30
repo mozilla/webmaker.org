@@ -22,6 +22,7 @@ requirejs.config({
     'list': '/bower_components/listjs/dist/list.min',
     'fuzzySearch': '/bower_components/list.fuzzysearch.js/dist/list.fuzzysearch.min',
     'masonry': '/bower_components/masonry/masonry',
+    'fizzy-ui-utils/utils': '/bower_components/fizzy-ui-utils/utils',
     'outlayer': '/bower_components/outlayer',
     'get-size': '/bower_components/get-size',
     'get-style-property': '/bower_components/get-style-property',

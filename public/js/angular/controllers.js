@@ -163,65 +163,6 @@ angular
           $rootScope.joinWebmaker($('.home-email-field').val());
         });
       }
-
-      var
-      rectangle,
-        radius = 9,
-        center;
-
-      function measureThings() {
-        rectangle = document.getElementById('iris-pupil').getBoundingClientRect();
-        center = {
-          x: (rectangle.width / 2) + (rectangle.left),
-          y: (rectangle.height / 2) + (rectangle.top)
-        };
-      }
-
-      function doMaths(x, y, radius) {
-        var
-        pythagoras = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)),
-          coordinates = {
-            x: x,
-            y: y
-          };
-        if (pythagoras !== 0) {
-          coordinates.x = x * radius / pythagoras;
-          coordinates.y = y * radius / pythagoras;
-        }
-        return coordinates;
-      }
-
-      function translatePupil(coords) {
-        var transform = 'translate(' + coords.x + ', ' + coords.y + ')';
-        document.getElementById('iris-pupil').setAttribute('transform', transform);
-      }
-
-      var mousemoveTime = Date.now();
-      var eyeGif = document.querySelector('.privacy-gif');
-      var eyeSVG = document.querySelector('.privacy-svg');
-
-      function checkMovement() {
-        var nowTime = Date.now();
-        var diffTime = (nowTime - mousemoveTime) / 1000;
-        if (diffTime > 3) {
-          eyeSVG.classList.remove('show');
-          eyeGif.classList.remove('hide');
-        }
-
-        setTimeout(checkMovement, 1000);
-      }
-
-      checkMovement();
-
-      if (document.getElementById('iris-pupil')) {
-        window.onmousemove = function (e) {
-          mousemoveTime = Date.now();
-          eyeSVG.classList.add('show');
-          eyeGif.classList.add('hide');
-          measureThings();
-          translatePupil(doMaths(e.pageX - center.x, e.pageY - center.y, radius));
-        };
-      }
     }
   ])
   .controller('competencyController', ['$rootScope', '$scope', '$routeParams',

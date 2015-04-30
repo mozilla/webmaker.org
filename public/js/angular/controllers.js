@@ -66,7 +66,7 @@ angular
         icon: 'map-marker',
         title: 'Events',
         description: 'Events desc',
-        target: 'https://events.webmaker.org/' + CONFIG.lang
+        target: 'https://events.webmaker.org/'
       }, {
         icon: 'globe',
         title: 'Translate',

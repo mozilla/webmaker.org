@@ -554,5 +554,17 @@
   "Learn more": {
     "message": "Learn more",
     "description": "Button text on home page"
+  },
+  "Want to teach the web to others?": {
+    "message": "Want to teach the web to others?",
+    "description": "Teach site referral heading on Home page"
+  },
+  "Join Mozillas community of educators": {
+    "message": "Join Mozilla's community of educators who teach digital skills and web literacy.",
+    "description": "Teach site referral description on Home page"
+  },
+  "Start Teaching": {
+    "message": "Start Teaching",
+    "description": "Teach site referral button text on Home page"
   }
 }

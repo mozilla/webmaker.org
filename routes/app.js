@@ -1,3 +1,3 @@
 module.exports = function (req, res) {
-  res.render('app.html');
+  res.redirect('https://beta.webmaker.org/');
 };

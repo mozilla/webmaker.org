@@ -95,7 +95,7 @@ module.exports = function (app) {
       '/_hive'
     ]
   }, {
-  route: 'https://teach.mozilla.org/events',
+    route: 'https://teach.mozilla.org/events',
     paths: [
       '/party',
       '/makerparty'
@@ -106,7 +106,7 @@ module.exports = function (app) {
       '/resources/*',
       '/literacy/*'
     ]
-  },{
+  }, {
     route: 'https://teach.mozilla.org',
     paths: [
       '/mentor'

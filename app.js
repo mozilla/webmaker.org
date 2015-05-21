@@ -348,16 +348,8 @@ app.get('/healthcheck', routes.api.healthcheck);
 
 app.get('/signup/:auth?', routes.angular);
 
-// Literacy content got moved again
-var moreLiteracyRedirect = function (req, res) {
-  res.redirect(301, req.path.replace('resources', 'resources/literacy'));
-};
-
-app.get('/resources/weblit-*', moreLiteracyRedirect);
-
 // Angular
 app.get('/', middleware.homePageRedirect, routes.angular);
-app.get('/resources/:section?/:competency?', routes.angular);
 app.get('/tools', routes.angular);
 app.get('/remix-your-school', routes.angular);
 app.get('/music-video', routes.angular);
@@ -426,7 +418,6 @@ app.delete('/api/badges/:badge/instance/email/:email',
 
 app.post('/api/submit-resource', routes.api.submitResource);
 
-app.get('/mentor', routes.angular);
 app.get('/search', routes.search);
 
 // MOI splash page
@@ -441,11 +432,6 @@ var literacyRedirect = function (req, res) {
 app.get('/standard', literacyRedirect);
 app.get('/standard/*', literacyRedirect);
 
-app.get('/literacy', routes.angular);
-
-app.get('/literacy/exploring', routes.page('literacy-exploring'));
-app.get('/literacy/building', routes.page('literacy-building'));
-app.get('/literacy/connecting', routes.page('literacy-connecting'));
 app.get('/style-guide', routes.page('style-guide'));
 
 app.get('/details', middleware.removeXFrameOptions, routes.details);

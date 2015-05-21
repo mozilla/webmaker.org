@@ -95,10 +95,21 @@ module.exports = function (app) {
       '/_hive'
     ]
   }, {
-    route: 'http://party.webmaker.org',
+  route: 'https://teach.mozilla.org/events',
     paths: [
       '/party',
       '/makerparty'
+    ]
+  }, {
+    route: 'https://teach.mozilla.org/teach-like-mozilla/web-literacy',
+    paths: [
+      '/resources/*',
+      '/literacy/*'
+    ]
+  },{
+    route: 'https://teach.mozilla.org',
+    paths: [
+      '/mentor'
     ]
   }];
 

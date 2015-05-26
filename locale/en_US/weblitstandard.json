@@ -100,11 +100,6 @@
   "StandardExploringWMPoint1": "Using and understanding the differences between URLs, IP addresses and search terms",
   "StandardExploringWMPoint2": "Managing information from various sources on the web",
   "StandardExploringWMPoint3": "Demonstrating the difference between the results of varying search strategies",
-  "StandardFooterButton": "Get involved!",
-  "StandardFooterTranslate": "Translate the Web Literacy Map into your language.",
-  "StandardMainDesc1": "Mozilla defines web literacy as the skills and competencies needed for reading, writing and participating on the web.",
-  "StandardMainDesc2": "To chart these skills and competencies, Mozilla worked alongside a <a href=\"https://wiki.mozilla.org/Learning/WebLiteracyMap/Contributors\">community of stakeholders</a> to create the Web Literacy Map.",
-  "StandardMainDesc3": "Read more about why Mozilla cares about web literacy in this <a href=\"https://mozilla.github.io/webmaker-whitepaper/\">Webmaker Whitepaper</a>.",
   "StandardMainHeader": "The Web Literacy Map <span class='weblit-spec'>(specification)</span>",
   "WebLiteracyMap": "Web Literacy Map"
 }

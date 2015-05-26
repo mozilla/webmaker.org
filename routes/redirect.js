@@ -103,6 +103,7 @@ module.exports = function (app) {
   }, {
     route: 'https://teach.mozilla.org/teach-like-mozilla/web-literacy',
     paths: [
+      '/resources',
       '/resources/*',
       '/literacy',
       '/literacy/*'

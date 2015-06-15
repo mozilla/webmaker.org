@@ -349,7 +349,6 @@ app.get('/healthcheck', routes.api.healthcheck);
 app.get('/signup/:auth?', routes.angular);
 
 // Angular
-app.get('/', middleware.homePageRedirect, routes.angular);
 app.get('/tools', routes.angular);
 app.get('/remix-your-school', routes.angular);
 app.get('/music-video', routes.angular);

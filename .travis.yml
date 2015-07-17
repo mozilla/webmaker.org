@@ -1,5 +1,16 @@
 language: node_js
 node_js:
-  - "0.10"
-before_script:
-  - npm install -g grunt-cli
+- '0.12'
+sudo: false
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: "g5Uo7vasySMBtOQuX6WZhxe7f+UiBSLFO6SSS6/rpwF+de3bgz1n+eLdQ/EYZv3klNKFUn9hziF6hT3W4p60FpnVstC7GtWmfnPt4nkX5rVoiVQPr8sst1wPa1ylWh4/JUXp1uNC+qKuK1e8U8uN03o2k+ZNlUDC/Somb0t51SA="
+  app:
+    old: old-webmaker-org-production
+  on:
+    repo: mozilla/webmaker.org
+    node: '0.12'

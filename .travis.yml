@@ -4,6 +4,7 @@ node_js:
 sudo: false
 cache:
   directories:
+  - bower_components
   - node_modules
 deploy:
   provider: heroku

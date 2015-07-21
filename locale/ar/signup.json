@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "حفظ و اشهارمع ادوات ويب ميكر  <span class=\"green-text\">  يحتاج حساب span>Webmaker />",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "استخدام <Webmaker <a href=\"/{{lang}}/tools\">tools</a على الانترنت لإنشاء المحتوى الخاص بك",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "Webmaker حر إلى الأبد، لذلك يمكنك استخدام الأدوات والأحداث والموارد التعليمية دون أي تكلفة، أينما كنت، ومهما كان مستوى المهارة الخاص بك . فقط قم بالتسجيل للحصول على حساب لحفظ ونشر الاعمال التي تقوم بها.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "ماذا يوفر Webmaker لكم  ؟",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "إنشاء ملف التعريف الخاص بك، والحصول على URL الخاص بك  <span class=\"green-text\">  يحتاج حساب span>Webmaker />",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "التحق بـWebmaker",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "التسجيل",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "سجل في ويب مايكر",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "انشاء و اشهار حدث<span class=\"green-text\">  يحتاج حساب span>Webmaker/>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

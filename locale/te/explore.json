@@ -1,0 +1,562 @@
+{
+    "Popcorn Maker": {
+        "message": "Popcorn Maker",
+        "description": "Popcorn Maker"
+    },
+    "Tools description": {
+        "message": "<a href=\"/{{ lang }}/tools\">Webmaker tools</a>సులభమైన  వెబ్ విషయాలు సృష్టించేందుకు దోహదపడుతుంది. మీరు వెళ్ళి మీ స్వంత వెబ్ పేజీలను, ఇంటరాక్టివ్ వీడియోలు, రీమిక్స్, మొబైల్ అనువర్తనాలు మరియు మరింత లెర్నింగ్ వెబ్ మెకానిక్స్, కోడ్ మరియు ఇతర విలువైన నైపుణ్యాలు తాయారు చేస్కొండి.",
+        "description": "a description of the webmaker tools"
+    },
+    "Please support our work": {
+        "message": "Please <a href=\"https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link\">support our work</a>.",
+        "description": "donate link"
+    },
+    "Contribute a guide or resource": {
+        "message": "ఒక గైడును లేదా వనరును కంట్రీబ్యూట్ చేయండి",
+        "description": "line item on /getinvolved"
+    },
+    "Submit a resource": {
+        "message": "ఒక వనరు సమర్పించండి",
+        "description": "Submit a teaching resource"
+    },
+    "Sign up for Webmaker announcement list": {
+        "message": "Sign up for the <a href=\"https://sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup\">Webmaker announcement list</a></strong>.",
+        "description": "Communicate line item on /getinvolved"
+    },
+    "Web Literacy Map": {
+        "message": "వెబ్ అక్షరాస్యత పటం",
+        "description": "The title of the explore section"
+    },
+    "Resources for teaching the web": {
+        "message": "వెబ్ బోధించుటకు కావలసిన వనరులు",
+        "description": "Heading for the second explore subsection with document stacks"
+    },
+    "Suggest your own links and resources": {
+        "message": "ఈ పేజీకి విశ్లేషిస్తున్నారు! జోడించడానికి మీ సొంత లింకులు మరియు వనరులను సూచించండి. <a href='/{{lang}}/get-involved'>↵Or మరింత పాల్గొనడానికి</a> .",
+        "description": "Submit a teaching resource"
+    },
+    "Visit our communications wiki": {
+        "message": "Visit our <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">communications wiki</a> to find even more places you can reach us.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "success resource banner": {
+        "message": "<strong> ధన్యవాదములు!</strong>  మీరు సూచించిన  వనరులు మాకు  చేరాయి.",
+        "description": "Banner for form success submission."
+    },
+    "Webmaker - Sign Up": {
+        "message": "Webmaker - Sign Up",
+        "description": "Webmaker - Sign Up"
+    },
+    "Jump right in": {
+        "message": "Jump right in",
+        "description": "headline for third section on home page"
+    },
+    "Find or host an event": {
+        "message": "కార్యక్రమాన్ని కనుగోండి లేదా ప్రారంభించండి",
+        "description": "line item on /getinvolved"
+    },
+    "How are we doing?": {
+        "message": "మేము ఎలా చేస్తున్నము?",
+        "description": "headline on Feedback"
+    },
+    "Explore Webmaker": {
+        "message": "Explore Webmaker",
+        "description": "headline on first topic of 'jump right in' on home page"
+    },
+    "More Resources": {
+        "message": "మరిన్ని వనరులు ",
+        "description": "See more kits in a search"
+    },
+    "Start Teaching": {
+        "message": "Start Teaching",
+        "description": "Teach site referral button text on Home page"
+    },
+    "Connect through social media": {
+        "message": "<strong>Connect through social media</strong> and see what people are making, follow events from around the world and check out new Webmaker projects by visiting our <a href=\"https://mozillawebmaker.tumblr.com/\">Tumblr</a>, <a href=\"https://twitter.com/webmaker\">Twitter</a>, <a href=\"https://www.facebook.com/mozilla\">Facebook</a>, <a href=\"https://www.flickr.com/photos/mozilladrumbeat/favorites/\">Flickr</a>, <a href=\"https://www.youtube.com/mozillawebmakers\">YouTube</a> and <a href=\"https://blog.webmaker.org/\">our blog</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Communicate": {
+        "message": "సంభాషించు",
+        "description": ""
+    },
+    "Teaching kits": {
+        "message": "టీచింగ్ సామగ్రి",
+        "description": "First square in contribute grid on explore"
+    },
+    "Teaching kits desc": {
+        "message": "డిజిటల్ నైపుణ్యాలను బోధించే వనరులను బోధించి వ్యాప్తి చేయండి.",
+        "description": "Copy for first square in contribute grid on explore"
+    },
+    "Receive occasional email updates": {
+        "message": "Receive occasional email updates only about the most important stuff&mdash;about once a month.",
+        "description": "communicate line item description"
+    },
+    "Help with beta-testing & quality assurance": {
+        "message": "బీటా పరీక్ష మరియు నాణ్యత హామీ తో సహాయం",
+        "description": "line item on /getinvolved"
+    },
+    "Build the web with others": {
+        "message": "Build the web with others at a local event, or find the resources to host your own.",
+        "description": "copy for third topic of 'jump right in' on home page"
+    },
+    "Making is the basis of everything we do.": {
+        "message": "Making is the basis of everything we do. Try remixing one of our <a href=\"/{{ lang }}/resources\">starter resources</a>, or make something from scratch using <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, or <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Then share it with the world using hashtag <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+        "description": "Make something copy"
+    },
+    "Email address": {
+        "message": "Email address",
+        "description": "placeholder on home input field"
+    },
+    "Learn to build it with Mozilla.": {
+        "message": "Learn to build it with Mozilla.",
+        "description": "subhead on home"
+    },
+    "Receiving your opinions on the Webmaker experience": {
+        "message": " వెబ్ మేకర్క అనుభవం మీ అభిప్రాయాలు అందుకుంటోంది మాకు ముఖ్యం. నిజానికి, మీ అభిప్రాయాన్ని మేము సైట్లో భవిష్యత్తులో మెరుగుదలలు ప్లాన్ చేసినప్పుడు మేము పరిగణనలోకి తీసుకోకపోతే మొదటి విషయం. మీరు సైట్ గురించి ఇష్టం మాకు చెప్పడానికి ఒక నిమిషం దయచేసి, మీరు ఏమి అది మంచి కావచ్చు అంచనా ఎలా పని లేదు ఏమి.",
+        "description": "copy on Feedback"
+    },
+    "Mozilla is a nonprofit organization": {
+        "message": "Mozilla is a non-profit organization and these open-source tools are created by a global community. They will always be 100% free—now and forever!",
+        "description": "Value description for free on home page"
+    },
+    "Privacy matters": {
+        "message": "Privacy matters",
+        "description": "Text on back side of privacy day eyeball on home"
+    },
+    "Mozilla’s free tools": {
+        "message": "Mozilla’s free tools help you build the web while learning new skills.",
+        "description": "subhead on home"
+    },
+    "I ": {
+        "message": "I ",
+        "description": "I heart"
+    },
+    "We believe that digital literacy is more than just learning to code.": {
+        "message": "We believe that digital literacy is more than just learning to code. Our tools, learning resources and community networks empower everyone to become citizens of the web.",
+        "description": "Value description for more than code on home page"
+    },
+    "Learn to Teach": {
+        "message": "బోధించడం  నేర్చుకోండి ",
+        "description": "headline on second topic of 'jump right in' on home page"
+    },
+    "Free": {
+        "message": "Free",
+        "description": "first value on home page"
+    },
+    "Add an event": {
+        "message": "కార్యక్రమం జోడించడం",
+        "description": "Add an event button"
+    },
+    "What language is your resource link?": {
+        "message": "మీ వనరు లింక్ ఏ బాష లో ఉంది?",
+        "description": "Label for language name for resource link"
+    },
+    "Partner desc": {
+        "message": "Partner with Mozilla to help teach the web.",
+        "description": "Copy for sixth square in contribute grid on explore"
+    },
+    "Discover": {
+        "message": "కనుగొనండి",
+        "description": "Section in competency pages"
+    },
+    "Resources section description": {
+        "message": "The <a href=\"/{{ lang }}/resources\">resources</a> section of Webmaker is your guide to Web Literacy. Discover new powers like coding, storytelling, protecting your online privacy and more.  Each section has links to discover, hands on projects to make and activities for teaching.",
+        "description": "Copy for the second explore subsection with document stacks"
+    },
+    "Translate": {
+        "message": "అనువాదించండి/అనువాదించు",
+        "description": "Third square in contribute grid on explore"
+    },
+    "Get involved with webmaker": {
+        "message": "Webmaker is a part of Mozilla's <a href=\"//www.mozilla.org/en-US/mission/\">non-profit mission</a> to create a more open, web literate world.",
+        "description": "Copy for first explore subsection with map"
+    },
+    "Skills": {
+        "message": "నైపుణ్యాలు",
+        "description": "Title for list of web literacy skills"
+    },
+    "Thimble": {
+        "message": "థింబుల్",
+        "description": "Thimble"
+    },
+    "Design": {
+        "message": "డిజైన్",
+        "description": "Fourth square in contribute grid on explore"
+    },
+    "Start Creating": {
+        "message": "Start Creating",
+        "description": "button text on footer on home"
+    },
+    "As a non-profit organization, we depend on": {
+        "message": "నాన్-ప్రాఫిట్ ఆర్గాన్యిసేషన్ లో బాగంగా ,మేము ఆదరపడేది ప్రజల యొక్క ఔదార్యము మీద ఎలా అంటే నువ్వు అందించే నిధి మన లక్షo లక్షలాది ప్రజలను ప్రపంచ నలువిపుల నుండి ప్రోస్తహించాలీ కదలి రావళి వెబ్ ని  విన్యోఘిచడం నుంచి తయార్ చేయడానికి..",
+        "description": "copy for Donate to Webmaker"
+    },
+    "All Webmaker tools are open source.": {
+        "message": "అన్ని వెబ్మేకర్ వనరుల్లన్నీ ఓపెన్ సోర్స్. ఐడియాలను, ప్యాచెస్లను బగ్స్ అధించండి లేదా మీ స్వంత డెమొ మరియు ప్రోటోటైప్స్ ఇవ్వండి. యాక్సెస్ డాక్యుమెంటేషన్, సమస్య గుర్తించేవి మరియు మరింత.",
+        "description": "copy for contribute code on /getinvolved"
+    },
+    "Want to teach the web to others?": {
+        "message": "Want to teach the web to others?",
+        "description": "Teach site referral heading on Home page"
+    },
+    "Study at your own pace": {
+        "message": "Study at your own pace to teach web literacy, digital skills, and open practices.",
+        "description": "copy for second topic of 'jump right in' on home page"
+    },
+    "Tools": {
+        "message": "పనిముట్లు",
+        "description": "headline for section on /about"
+    },
+    "View events": {
+        "message": "View events",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Become a mentor": {
+        "message": "ఒక సలహాదారుడు అవ్వండి ",
+        "description": "Button in mentors section on literacy pages, line item on /getinvolved"
+    },
+    "sharing": {
+        "message": "sharing",
+        "description": "onboarding interactive text input"
+    },
+    "When you file your bug, be sure to use feedback": {
+        "message": "When you file your bug, be sure to put “Feedback” in the Status Whiteboard field so we can find it.",
+        "description": "explainer text for status whiteboard on Feedback"
+    },
+    "Make something": {
+        "message": "ఏమైనా తయారు చేయండి.",
+        "description": "line item on /getinvolved"
+    },
+    "Footer header": {
+        "message": "ఎక్కడి నుండి మొదలు పెట్టాలో తెలియట్లేదు?",
+        "description": "Header for bottom section of explore"
+    },
+    "Our team uses an issue tracker called Bugzilla": {
+        "message": "Our team uses an issue tracker called <a href=\"https://bugzilla.mozilla.org/\">Bugzilla</a> for filing bugs and monitoring fixes. Anyone can submit a bug. And just because it’s called a “bug” doesn’t necessarily mean there’s something wrong; it can be an idea you have for a feature, a note about how much you like something or a non-technical suggestion for improvements.",
+        "description": "description for bugzilla"
+    },
+    "noStaffPick": {
+        "message": "ఏ విధమైన ఫీచర్ బోధన వనరులను ఇంకా లేవు.<a href=\"#\">మీరు ఒకటి సమర్పించండి.</a>",
+        "description": "No item in the list picked by staff and there is a submit link."
+    },
+    "Partner": {
+        "message": "భాగస్వామి",
+        "description": "Sixth square in contribute grid on explore"
+    },
+    "Submit a bug now": {
+        "message": "బగ్ ను ఇప్పుడు సమర్పించండి",
+        "description": "button text on Feedback"
+    },
+    "Find an event": {
+        "message": "కార్యక్రమం కనుగొను",
+        "description": "Find an event button"
+    },
+    "Learn more": {
+        "message": "మరింత తెలుసుకోండి",
+        "description": "Button text on home page"
+    },
+    "Submit a bug on Bugzilla": {
+        "message": "బుగ్జిల్ల న \"బగ్\" సమర్పించు ",
+        "description": ""
+    },
+    "The global Mozilla community wants everyone to be a citizen of the web": {
+        "message": "The global Mozilla community wants everyone to be a citizen of the web—including you!",
+        "description": "subhead on home"
+    },
+    "Start creating": {
+        "message": "Start creating",
+        "description": "button text on home"
+    },
+    "Featured Teaching Resources": {
+        "message": "ఆకారముగల విద్యను బోధించే వనరులు ",
+        "description": "Title for teaching resources in competency page"
+    },
+    "9 Ways to Get Involved with Webmaker": {
+        "message": "ఆధారితం వెబ్ మేకర్ లో పాల్గొనడానికి 9 విధాలు ",
+        "description": "headline on /getinvolved"
+    },
+    "Footer copy": {
+        "message": "<a href=\"/{{lang}}/resources\">ఇంటర్ అన్వేషించండి</a>మరియు ఆధారితం వేబ్మకేర్ కమ్యూనిటీ అందించే ఏ బోధన వనరులను చూడండి.",
+        "description": "Copy for bottom section of explore"
+    },
+    "Mozilla privacy policy agreement": {
+        "message": "I agree to Mozilla Webmaker's <a href=\"https://webmaker.org/terms\">Terms</a> and <a href=\"https://webmaker.org/privacy\">Privacy Policy</a>.",
+        "description": "Mozilla privacy policy agreement"
+    },
+    "explore_frontpage_title": {
+        "message": "వేబ్మకేర్ కు స్వాగతం!",
+        "description": "Heading for Explore page"
+    },
+    "Donate to Webmaker": {
+        "message": "వెబ్ మేకర్ కు విరాళం ఇవ్వండి",
+        "description": "line item on /getinvolved"
+    },
+    "Get inspired by examples like these": {
+        "message": "ఇలాంటి ఉదాహరణలు ద్వారా ప్రేరణ పొందండి(<a href=\"https://webmaker.org/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">more</a>)",
+        "description": "Paragraph copy for gallery section of Make Your Own"
+    },
+    "Help us build the future of the web": {
+        "message": "Help us build the future of the web.",
+        "description": "headline on home"
+    },
+    "Participate in community testing sessions": {
+        "message": "కమ్యూనిటీ పరీక్ష సెషన్స్ పాల్గొనండి",
+        "description": "Headline for community testing session on Feedback"
+    },
+    "You might also like": {
+        "message": "మీకు కూడా నచ్చుతుంది ",
+        "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
+    },
+    "By": {
+        "message": "వలన",
+        "description": "The byline for featured kits"
+    },
+    "Get training": {
+        "message": "శిక్షణ పొందండి",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Mozilla Webmaker creates software, projects and events": {
+        "message": "Mozilla Webmaker creates software, projects and events that promote web literacy through making and sharing. We’re an open source project powered by makers, mentors and community leaders. We’d love you to get involved.",
+        "description": "copy for ‘9 ways to get involved’"
+    },
+    "Teach the web": {
+        "message": "వెబ్ గురించి నేర్పండి",
+        "description": "line item on /getinvolved"
+    },
+    "Join our community call": {
+        "message": "మా సంఘం కాల్స్ ప్రతి మంగళవారంన చేరండి.అందరు ఆహ్వానితులే!, ప్రశ్నలు అడగండి మా సంఘం మరియు సిబ్బంది అనుగుణంగా మరియు మీరు అవసరం వనరులు కనుగొనేందుకు.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "next": {
+        "message": "next",
+        "description": "next button"
+    },
+    "Code desc": {
+        "message": "బగ్స్ ను ఫైల్ చేయండి, పాచెస్ ను సమర్పించండి, లేదా మన MakeAPI తో హాక్ చేయండి.",
+        "description": "Copy for fifth square in contribute grid on explore"
+    },
+    "Build and share the web with Mozilla.": {
+        "message": "Build and share the web with Mozilla.",
+        "description": "footer text on home"
+    },
+    "Submit a bug for Popcorn Maker": {
+        "message": "పాప్కార్న్ మేకర్ కు బగ్ ను సమర్పించండి",
+        "description": "quick links list item on Feedback"
+    },
+    "Say hello on a Webmaker community call": {
+        "message": "Say hello on a <a href=\"https://wiki.mozilla.org/Webmakers/Community_Calls\">Webmaker Community call</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Join the Webmaker newsgroup": {
+        "message": "Join the <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker newsgroup.</a>",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Now, learn to make and share more of your favorite things on the web.": {
+        "message": "Now, learn to make and share more of your favorite things on the web.",
+        "description": "Now, learn to make and share more of your favorite things on the web."
+    },
+    "Contribute to Webmaker": {
+        "message": "వెబ్ మేకర్ కు దొహథ పడుట",
+        "description": "Contribute to Webmaker"
+    },
+    "Make your own apps and websites": {
+        "message": "Make your own apps and websites",
+        "description": "headline on homepage"
+    },
+    "Submit a bug for Webmaker.org": {
+        "message": "వెబ్ మేకర్క .orgకు బగ్ ను సమర్పించండి",
+        "description": "quick links list item on Feedback"
+    },
+    "Explore now": {
+        "message": "Explore now",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Discover how you can build and share the web.": {
+        "message": "Discover how you can build and share the web",
+        "description": "sub-head on third section of home page"
+    },
+    "Contribute code": {
+        "message": "కోడ్ దోహదం",
+        "description": "line item on /getinvolved"
+    },
+    "More than code": {
+        "message": "More than code",
+        "description": "third value on home page"
+    },
+    "Design desc": {
+        "message": "సహ డిజైన్ పాల్గొనండి లేదా మీ డిజైన్ సమీక్ష నైపుణ్యాలను సమం చేయండి.",
+        "description": "Copy for fourth square in contribute grid on explore"
+    },
+    "make-learn-teach-section-info": {
+        "message": "వెబ్ మేకర్క మ్యూనిటీ లైబ్రరీలు, కమ్యూనిటీ సెంటర్లు, ఇంటర్నెట్ కేఫ్లు వద్ద ప్రపంచంలో, లేదా మీ స్వంత గదిలో చుట్టూ ఈవెంట్స్ కలిసి పొందుతాడు. మీరు సమీపంలో ఒక సంఘటన కనుగొను, మీ స్వంత ఆతిథ్యం, ​​లేదా మా ప్రపంచ మేకర్క పార్టీ (సెప్టెంబర్ 2014 జూలై) తో పాల్గొనడానికి ఎలా తెలుసుకోవడానికి. ",
+        "description": "Make Learn Teach information section"
+    },
+    "Link:": {
+        "message": "లింక్:",
+        "description": "Label form for Link submission"
+    },
+    "connect in many ways.": {
+        "message": "We’re a big community and we connect in many ways.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Participate in user testing": {
+        "message": "Participate in user testing, give feedback, or help with QA. Your testing and ideas will make Mozilla Webmaker products better and help shape their future.",
+        "description": "copy for QA on /getinvolved, line 2"
+    },
+    "Status Whiteboard:": {
+        "message": "స్థితి వైట్బోర్డ్:",
+        "description": "label for faux bugzilla field on Feedback"
+    },
+    "Web Literacy": {
+        "message": "Web Literacy",
+        "description": "Web Literacy"
+    },
+    "Share community experiences": {
+        "message": "భాగస్వామ్యం కమ్యూనిటీ అనుభవాలు",
+        "description": ""
+    },
+    "Wait, there’s more!": {
+        "message": "Wait, there’s more!",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "new Webmaker tools and projects": {
+        "message": "Be the first to try out new <a href=\"/{{ lang }}/tools\">Webmaker tools</a> and projects.",
+        "description": "copy for QA on /getinvolved, line 1"
+    },
+    "Code": {
+        "message": "కోడ్",
+        "description": "Fifth square in contribute grid on explore"
+    },
+    "Login to submit a resource": {
+        "message": "వనరులని నివేదించడానికి లాగిన్ అవండి",
+        "description": "A button Login to submit a resource."
+    },
+    "Contribute subsection copy": {
+        "message": "Webmaker అనేది ఓపెన్ సోర్స్ ,కమ్యూనిటీ వలన నడిచేది,mozilla మదతు వుంది మరియు లాభాపేక్షలేనిధి <a href=\"https://mozilla.org/{{ lang }}/mission/\">mission</a> .ఓపెన్ వెబ్ నిర్మించడానికి మరియు రక్షించడానికి.మీ కొరకు <a href=\"/{{ lang }}/getinvolved\">get more involved</a>.",
+        "description": "Copy for the contribute subsection of explore"
+    },
+    "Investigate the tools, learning resources": {
+        "message": "Investigate the tools, learning resources and community that Webmaker offers.",
+        "description": "copy for first topic of 'jump right in' on home page"
+    },
+    "Webmaker helps people across the world": {
+        "message": "Webmaker helps people across the world become informed creators of a free and open web.",
+        "description": "Subehad on our values"
+    },
+    "Free tools that make it easy to create and learn": {
+        "message": "సృష్టించడానికి మరియు తెలుసుకోవడానికి సులభం చేసే ఉచిత టూల్స్",
+        "description": "Header for section that includes description of webmaker tools"
+    },
+    "or remix someone elses": {
+        "message": "లేదా వేరే వారివి రీమిక్స్ చేయండి  ",
+        "description": "headline for gallery section of Make Your Own"
+    },
+    "Good start!": {
+        "message": "Good start!",
+        "description": "Good start!"
+    },
+    "user_deleted": {
+        "message": "మీ ఖాతా తొలగించబడింది.",
+        "description": "Your account has been deleted."
+    },
+    "English only": {
+        "message": "English only",
+        "description": ""
+    },
+    "Local": {
+        "message": "Local",
+        "description": "second value on home page"
+    },
+    "Submit": {
+        "message": "సమర్పించండి",
+        "description": "Submit button"
+    },
+    "You don’t need to be a wizard to teach the web.": {
+        "message": "You don’t need to be a wizard to teach the web. We’ve created <a href=\"/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">hackable guides</a> for teaching web literacy, webmaking, online storytelling and more. Want to create your own lesson plan? We have <a href=\"/{{ lang }}/make-your-own\">great templates</a> for that.",
+        "description": "Teach the Web copy"
+    },
+    "Join Mozillas community of educators": {
+        "message": "Join Mozilla's community of educators who teach digital skills and web literacy.",
+        "description": "Teach site referral description on Home page"
+    },
+    "and more!": {
+        "message": "ఇంకా ఎన్నో!",
+        "description": ""
+    },
+    "Our values": {
+        "message": "Our values",
+        "description": "Headline on second section of home"
+    },
+    "From hack jams to pop ups to the global Maker Party": {
+        "message": "From hack jams to pop ups to the global <a href=\"https://party.webmaker.org\">Maker Party</a>, there’s an event to suit every interest. Search for one near you or host your own — we have <a href=\"/{{ lang }}/event-guides\">guides</a> to show you how.",
+        "description": "Find or host an event copy"
+    },
+    "Translate desc": {
+        "message": "వెబ్ మేకర్ స్థానీకరణకు మరియు అనువదించడానికి సహాయ పడండి.",
+        "description": "Copy for third square in contribute grid on explore"
+    },
+    "What do you love on the web?": {
+        "message": "What do you love on the web?",
+        "description": "What do you love on the web?"
+    },
+    "Make. Learn. Get together.": {
+        "message": "చేయండి. తెలుసుకోండి. కలిసి పొందండి.",
+        "description": "Make. Learn. Get together. Header section"
+    },
+    "Get Together": {
+        "message": "కలిసి పొందండి",
+        "description": "headline on third topic of 'jump right in' on home page"
+    },
+    "Submit a bug for Thimble": {
+        "message": "థింబుల్ కోసం ఒక తప్పు సమర్పించండి",
+        "description": "quick links list item on Feedback"
+    },
+    "Events desc": {
+        "message": "మీ ఊరిలో వెబ్ మేకర్ కార్యక్రమం నిర్వహించండి.",
+        "description": "Copy for second square in contribute grid on explore"
+    },
+    "Mentoring is a chance to share your knowledge": {
+        "message": "గురువుగా మీ జ్ఞానాన్ని పంచుకోవడానికి మరియు డిజిటల్ నైపుణ్యాలు కోసం ఆకలితో ప్రపంచవ్యాప్తంగా అన్ని వయస్సుల అభ్యాసకులు నేరుగా చూడు అందించడానికి అవకాశం ఉంది.",
+        "description": "Become a mentor copy on /getinvolved"
+    },
+    "Opportunities to get involved": {
+        "message": "The Webmaker team periodically posts opportunities for people to test our site, tools and training resources. To get involved participate in one of our many community testing sessions, <a href=\"https://wiki.mozilla.org/Webmaker/TeachTheWeb/Testing\">visit the wiki page</a> for more information.",
+        "description": "copy to encourage people to get involved in testing"
+    },
+    "Discover creative ways to teach and learn digital superpowers": {
+        "message": "డిజిటల్ అగ్రరాజ్యాలు బోధించటానికి మరియు తెలుసుకోవడానికి సృజనాత్మక మార్గాలు కనుగొనండి ",
+        "description": "Heading for first explore subsection with map"
+    },
+    "Suggest a resource for": {
+        "message": "{{ skill.term }} కి వనరులని సూచించండి.",
+        "description": "Title for suggesting resource form"
+    },
+    "Thimble Desc": {
+        "message": "మీ వెబ్ పేజి ను సొంతంగా తయారుచేసి ప్రచురించండి.",
+        "description": "Make and publish your own web page."
+    },
+    "We all use the web in different ways.": {
+        "message": "We all use the web in different ways. Mozilla is dedicated to helping you build a web that’s relevant to your friends, family, business or community—no matter where you live.",
+        "description": "Value description for local on home page"
+    },
+    "The web is yours": {
+        "message": "The web is yours.",
+        "description": "headline on home"
+    },
+    "We’re always eager to learn how Webmaker is used": {
+        "message": "We’re always eager to learn how Webmaker is used to teach the web to diverse audiences. If you have stories about using Webmaker in your community, please join the <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker newsgroup</a> and share your feedback by email. You can also participate in conversations on Twitter by replying to <a href=\"https://twitter.com/webmaker\">@webmaker</a> or using the hashtag <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "copy encouraging people to get involved on Feedback"
+    },
+    "Popcorn Maker Desc": {
+        "message": "పరస్పర వీడియోలను సృష్టించు.",
+        "description": "Create interactive videos."
+    },
+    "active daily discussion paragraph": {
+        "message": "మీరు ఆధారితం వెబ్ మేకర్ ప్రాజెక్టు దిశలో రూపాన్ని ఇక్కడ మరింత చురుకైన రోజువారీ చర్చ లో చూడచ్చు.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Do you have a web literacy project?": {
+        "message": "Do you have a web literacy project? We’d love to hear about it and potentially share it on Webmaker.org.",
+        "description": "Contribute a guide copy"
+    }
+}

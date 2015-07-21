@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "با ابزار وب‌میکر بسازید و منتشر کنید <span class='green-text'> نیاز به حساب وب‌میکر دارد</a>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "از <a href='/{{lang}}/tools'>ابزار</a> آنلاین وب‌میکر برای ساختن محتوای خودتان استفاده کنید",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "وب اپ میکر برای همیشه رایگان خواهد بود بنا بر این شما می توانید از ابراز ها و رویداد ها و منابع آمورشی به رایگان استفاده کنید ، هرجا که هستید ، با هر سطح  مهراتی که دارید .برای اینکار کافیست ثبت نام کنید تا چیز هایی را که فکر می کنید ذخیره و منتشر کنید",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "<a href=\"/{{lang}}/events\">رویداد‌های</a> نزدیک خود پیدا کنید و به آنها بپیوندید!",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "وب‌میکر چه چیزی در اختیار شما قرار می‌دهد؟",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "پروفایلی بسازید و آدرس اینترنتی دلخواهتان را بگیرید <span class='green-text'> نیاز به حساب وب‌میکر دارد</a>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "به وب اپ میکر بپیونید",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "ورود",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "ثبت نام در وب‌میکر",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "رویدادی بسازید و منتشر کنید <span class='green-text'> نیاز به حساب وب‌میکر دارد</a>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

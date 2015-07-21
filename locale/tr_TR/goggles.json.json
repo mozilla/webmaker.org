@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "HTML dilinde, <img> kodu src=\"dosya_adı\" ile birlikte bir görsel eklenmesini sağlar.",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "uygulamasını yükle ve herhangi bir web sitesini oluşturan kodları görüp değiştir.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-Işını Gözlüğü",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "kaynak",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Bu",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-Işını Gözlüğü",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Yer İmleri Çubuğuna Sürükle",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "yardım",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "shapes.jpg -> blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Bu sayfayı yeniden kar",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "X-Işını Gözlüğünü Tak",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "<img src=\"/shapes.jpg\"> kodunu <img src=\"/blur.jpg\"> olarak değiştir",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Görseli değiştir",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Artalan görseline tıkla",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "X-Işını Gözlüğü Kurulumu",
+        "description": "Install page title"
+    }
+}

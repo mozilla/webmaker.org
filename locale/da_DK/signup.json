@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Gem og udgiv med Webmaker-værktøjer <span class=\"green-text\">Kræver en Webmaker-konto</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Brug Webmakers online <a href=\"/{{lang}}/tools\">værktøjer</a> til at skabe dit eget indhold",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker vil altid være gratis,</span> så du kan bruge værktøjerne, begivenhederne og læringsressourcer ganske gratis, hvor som helst, uanset om du er nybegynder eller ekspert. Du skal blot tilmelde dig for at få en konto, så du kan gemme og udgive de ting, du laver.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Find og deltag i <a href=\"/{{lang}}/events\">begivenheder</a> nær dig",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Optjen <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for dine web-kundskaber <span class=\"green-text\">Kræver en Webmaker-konto</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Hvad kan Webmaker tilbyde dig?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Brug <a href=\"/{{lang}}/resources\">ressourcer</a> og skabeloner, som er blevet gennemgået",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Opret din profil og få din egen, personlige URL <span class=\"green-text\">Kræver en Webmaker-konto</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Meld dig til Webmaker",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Log ind",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Meld dig til Webmaker",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Lav og udgiv en begivenhed <span class=\"green-text\">Kræver en Webmaker-konto</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

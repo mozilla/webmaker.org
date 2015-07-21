@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Materializando a web",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Remixagem de vídeos e código aberto para jovens",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mentor de jovens",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma realizou uma <a href=\"/makerparty\">Maker Party</a> para crianças de 10 a 12 anos no laboratório de informática de sua universidade local, em Victoria, no Canadá. Agora ela está trabalhando com outros mentores para criar um clube do Webmaker e continuar a ensinar os jovens sobre o valor de práticas abertas.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati participou da nossa <a href=\"/makerparty\">Maker Party</a> em 2012, na qual ela aprendeu a remixar suas próprias páginas web usando Thimble e Popcorn. Agora ela compartilha seu conhecimento ensinando seus amigos, familiares e colegas de sala HTML básico e como participar online.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organizou uma <a href=\"/makerparty\">Maker Party</a> de 48 horas em Dundee, Scotland, convidando seus estudantes a explorar tudo, desde um “Pássaro do Twitter” feito de papel e arames até conectar um joystick de fliperama ao Google Maps.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Associada ao Webmaker, professora e artista de remix",
+        "description": ""
+    }
+}

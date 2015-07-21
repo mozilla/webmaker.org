@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Los recursos educacionales de Webmaker están respaldados por el <a href=\"/{{ lang }}/literacy\">Mapa de alfabetización web de Mozilla</a>, en el que se aborda el conjunto completo de habilidades que se necesitan para prosperar en el mundo digital de la actualidad.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Creando para la Web",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Descubre el modelo Hive Learning Networks y cómo las ciudades de todo el mundo están defendiendo las competencias digitales y alfabetización web a través del aprendizaje conectado.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Navegar en la Web",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Únete a nuestro <a href=\"http://discourse.webmaker.org/category/meet\">forum online</a> para encontrarte con otros mentores como tú. Comparte tus eventos,  actividades y rescursos didáctivos usando el hashtag <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Nuestra comunidad global está aquí para ayudar",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Presentate a los demàs",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Mapa de alfabetización web",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Más información",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Conviértete en un catalizador de la comunidad local",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Show others how to make the web and collect the <a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker Skill Sharer badge</a>. When you're ready, apply for the <a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker Mentor Badge</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Mójate los pies.</strong> Involúcrate rápidamente en nuevas habilidades digitales a través de cosas divertidas para leer, ver, escuchar o compartir.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Participando en la Web",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Recursos para enseñar y aprender",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Descubre",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Más información",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>¡Nosotros hemos cambiado!</strong> ¿Buscas maneras fáciles de comenzar? Intenta utilizar nuestras <a href=\"/{{ lang}}/tools\">Herramientas</a>. O desarrolla un remix de algo en la <a href=\"/{{ lang }}/gallery\">Galería</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Exploración",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Descubre nuevas habilidades. Entonces compártelas con otros.",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Conexión",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "¿Que es la alfabetización web?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Comparte lo que conoces.</strong> Cualquiera puede enseñar con Webmaker. Independientemente de si eres un educador en el salón de clases, un mentor entusiasta, padre o amigo, tenemos actividades y guías de enseñanza que te pueden ayudar.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Explora la galería de comunidades y observa lo que otros webmakers están creando.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Construcción",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Ensúciate las manos.</strong>¡La mejor manera de aprender es a través de actividades prácticas creando y construyendo! Crea páginas web, videos multimedia, o remixes que te ayuden a aprender habilidades prácticas en el camino.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Conecta con la comunidad global",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Learn through hands-on making and doing. Then share what you&rsquo;ve learned with others. Webmaker resources are designed to make it easy and fun to teach everything from searching and navigating to coding and scripting, digital citizenship and protecting online privacy. Try <a href=\"/make-your-own\">creating your own</a> teaching kits to share with other educators and mentors around the world.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Construye tus destrezas como mentor",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker es diferente.</strong> Nosotros somos un proyecto de código abierto construído por y para la comunidad global de educatores, expertos en tecnología y personas como tú. Nosotros amamos la web y queremos difundir su potencial creativo para todos. Nos encantaría colaborar contigo o que <a href=\"/{{ lang }}/getinvolved\">te involucres más</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "El mapa de alfabetización web te ayuda a ampliar la alfabetización en la exploración, construcción y compartición de la Web.",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Crea un mundo web mas alfabetizado.",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Enseña",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla define la alfabetización web como las competencias y habilidades necesarias para leer, escribir y participar, leer y participar en la web. Lea más acerca de por qué Mozilla se preocupa por la alfabetización web en este doocumento de Webmaker.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Únete o hospeda<a href=\"https://events.webmaker.org\">eventos locales</a> para colaborar con compañeros y enseñan a alumnos.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Browse our <a href=\"https://webmaker.org/resources\">teaching resources</a> or participate in <a href=\"https://training.webmakerprototypes.org\">professional development</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Involucrarse",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Crea",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Comparte tus propios recursos didácticos, ayuda a traducir, programa y mucho más.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "Somos fanáticos de la tecnología, creadores, educadores, padres y otras personas que quieren enseñar habilidades digitales y la alfabetización web creando.",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Únete a nuestro curso en línea gratuito sobre cómo enseñar la web.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Obtén entrenamiento",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>Habilidades digitales para enseñar y aprender y material web</strong>. Las páginas de esta sección están llenas de cosas divertidas por descubrir, crear y enseñar.Nuestra comunidad global esta añadiendo continuamente nuevas actividades, planes de lecciones y tutoriales por web que hacen facil el aprendizaje creando cosas.  Cualquiera puede usar estos recursos educativos, son gratuitos, libres y apoyado por <a href=\"https://mozilla.org/{{ lang }}/mission/\">Mozilla&rsquo;s non-profit mission</a>.",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

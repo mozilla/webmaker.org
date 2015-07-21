@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Webmaker educational resources are backed by <a href=\"/{{ lang }}/literacy\">Mozilla&rsquo;s Web Literacy Map</a>, covering the complete set of skills people need to thrive in today&rsquo;s digital world.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "ವೆಬ್ ಗಾಗಿ ನಿರ್ಮಿಸಿ",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "ಹ್ಞವ್ ಲರ್ನಿಂಗ್ ನೆಟ್ ವರ್ಕ್ ಮಾಡೆಲ್ ಬಗ್ಗೆ ಹೆಚ್ಚು ತಿಳಿಯಿರಿ ಮತ್ತು ತಿಳಿಯಿರಿ ಹೇಗೆ ಜಗತ್ತಿನಾದ್ಯಂತ ನಗರಗಳು ಕೂಡಿ ಕಲಿಯುವಿಕೆಯಿಂದ ಗಣಕ ಕೌಶಲ್ಯದಲ್ಲಿ ಮತ್ತು ಅಂತರ್ಜಾಲ ಸಾಕ್ಷರತೆಯಲ್ಲಿ ಮುಂದಡಿಯಿಡುತ್ತಿವೆ ಎಂದು.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "ವೆಬ್ ನಲ್ಲಿ ಸಂಚರಿಸಿ",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Join our <a href=\"http://discourse.webmaker.org/category/meet\">online forum</a> to meet other mentors like you. Share your events, activities and teaching resources using the <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> hashtag.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "ನಮ್ಮ ಜಾಗತಿಕ ಸಮುದಾಯದ ಸಹಾಯ ಇಲ್ಲಿದೆ",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "ನಿಮ್ಮನ್ನು ಪರಿಚಯಿಸಿ",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "ಅಂತರ್ಜಾಲ ಸಾಕ್ಷರತಾ ನಕ್ಷೆ",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "ಹೆಚ್ಚು ಕಲಿಯಿರಿ",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "ಸ್ಥಳೀಯ ಸಂಘದ ಕಾರ್ಯಪ್ರಚೋದಕರಾಗಿ",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Show others how to make the web and collect the <a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker Skill Sharer badge</a>. When you're ready, apply for the <a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker Mentor Badge</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Get your feet wet.</strong> Introduce yourself to new digital skills quickly through fun things to read, watch, listen or share.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "ವೆಬ್ ನಲ್ಲಿ ಭಾಗವಹಿಸುವುದು",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "ಕಲಿಯಲು ಹಾಗೂ ಕಲಿಸಲು ಸಂಪನ್ಮೂಲಗಳು",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "ಕಂಡುಹಿಡಿಯಿರಿ",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "ಹೆಚ್ಚು ಕಲಿಯಿರಿ",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>We&rsquo;ve changed!</strong> Looking for easy ways to get started? Try out our <a href=\"/{{ lang}}/tools\">Tools</a>. Or remix something in the <a href=\"/{{ lang }}/gallery\">Gallery</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "ಅನ್ವೇಷಿಸು",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "ಹೊಸ ಕೌಶಲ್ಯಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ ಹಾಗೂ ಇತರರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿದೆ",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "ಅಂತರ್ಜಾಲ ಸಾಕ್ಷರತೆ ಎಂದರೇನು?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>ನಿಮಗೆ ತಿಳಿದಿರುವುದನ್ನು ಹಂಚಿಕೊಳ್ಳಿ</strong> ವೆಬ್ ಮೇಕರ್ ಮೂಲಕ ಯಾರಾದರೂ ಕಲಿಸಬಹುದು. ನೀವು ತರಗತಿಯಲ್ಲಿ ಕಲಿಸುವವರೋ ಅಥವಾ ಉತ್ಸಾಹಭರಿತ ಮಾರ್ಗದರ್ಶಕರೋ,ಪೋಷಕರೋ ಅಥವಾ ಸ್ನೇಹಿತರೋ, ನಮ್ಮಲ್ಲಿನ ಕಲಿಸುವ ಚಟುವಟಿಕೆ ಮತ್ತು ಮಾಹಿತಿಗಳು ಸಹಕರಿಸುತ್ತವೆ.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "ಇತರ ವೆಬ್ ಮೇಕರ್ ಗಳ ಕೆಲಸದ ಬಗ್ಗೆ ನಮ್ಮ ಸಮುದಾಯ ಗ್ಯಾಲರಿಯಲ್ಲಿ ಅನ್ವೇಷಿಸಿ",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "ನಿರ್ಮಿಸುವುದು",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Get your hands dirty.</strong> The best way to learn is through hands-on making and building! Create web pages, multimedia videos, or remixes that help you learn practical skills as you go.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "ಜಾಗತಿಕ ಒಕ್ಕೂಟದೊಂದಿಗೆ ಸೇರಿರಿ",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Learn through hands-on making and doing. Then share what you&rsquo;ve learned with others. Webmaker resources are designed to make it easy and fun to teach everything from searching and navigating to coding and scripting, digital citizenship and protecting online privacy. Try <a href=\"/make-your-own\">creating your own</a> teaching kits to share with other educators and mentors around the world.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "ಮಾರ್ಗದರ್ಷಕ ಗುಣಗಳನ್ನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಿ",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker is different.</strong> We&rsquo;re an open source project built by and for a global community of educators, techies and people like you. We love the web and want to spread its creative potential to all. We&rsquo;d love to collaborate with you or have you <a href=\"/{{ lang }}/getinvolved\">get more involved</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "ವೆಬ್ ಸಾಕ್ಷರತಾ ನಕ್ಷೆಯು ಅಂತರ್ಜಾಲದಲ್ಲಿ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಅನ್ವೇಷಿಸಿ ನಿರ್ಮಿಸಿಲು ಸಹಾಯವಾಗುತ್ತದೆ ",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "ಉತ್ತಮ ಅಂತರ್ಜಾಲ-ಸಾಕ್ಷರತಾ ಜಗತ್ತನ್ನು ನಿರ್ಮಿಸಿ",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "ಕಲಿಸು",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "ಮೊಜ್ಹಿಲ್ಲಾ ವಿವರಿಸುವ ಪ್ರಕಾರ ವೆಬ್ ನಲ್ಲಿ ಓದಲು,ಬರೆಯಲು ಮತ್ತು ಭಾಗವಹಿಸಲುಅಂತರ್ಜಾಲ ಸಾಕ್ಷರತೆ ಒಂದು ಪ್ರಮುಖ ಕೌಶಲ್ಯ ಮತ್ತು ಅವಶ್ಯಕ  ಅಂಶ. ಮೊಜ್ಹಿಲ್ಲಾ ಯಾಕೆ ಅಂತರ್ಜಾಲ ಸಾಕ್ಷರತೆಯನ್ನು ಪೋಷಿಸುತ್ತಿದೆ ಎನ್ನುವುದನ್ನು ತಿಳಿಯಲು ಈ ವೆಬ್ ಮೇಕರ್ ವೈಟ್ ಪೇಪರ್ ಓದಿ.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Join or host <a href=\"https://events.webmaker.org\">local events</a> to collaborate with peers and teach learners.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Browse our <a href=\"https://webmaker.org/resources\">teaching resources</a> or participate in <a href=\"https://training.webmakerprototypes.org\">professional development</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "ತೊಡಗಿಸಿಕೊಳ್ಳಿ",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "ಮಾಡು",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "ನಿಮ್ಮ ಸ್ವಂತ ಭೋದನಾ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಹಂಚಿಕೊಂಡು, ಅನುವಾದಕ್ಕೆ ಸಹಾಯ ಮಾಡಿ ಹಾಗೂ ಕೋಡ್ ಗಾಗಿ ಹೆಚ್ಚು ಕೊಡುಗೆಯನ್ನು ನೀಡಿರಿ",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "ನಾವೇ ಪೋಷಕರು,ಶಿಕ್ಷಕರು,ಕಲಿಯುವವರು,ತಾಂತ್ರಿಕರು,ಇತರರು ಹಾಗೂ ನಾವೇ ಕಲಿಯುವ ಮೂಲಕ ಗಣಕ ಕೌಶಲ್ಯ ಮತ್ತು ಅಂತರ್ಜಾಲ ಸಾಕ್ಷರತೆ ಕಲಿಸುವವರು.",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "ವೆಬ್ ಕಲಿಸಲು ನಮ್ಮ ಉಚಿತ ಮುಕ್ತ ಆನ್ಲೈನ್ ಕೋರ್ಸನ್ನು ಸೇರಿರಿ",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "ತರಬೇತಿ ಪಡೆಯಿರಿ",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>Teach and learn digital skills and web literacy</strong>.  The pages in this section are full of fun things to discover, make and teach. Our global community is continually adding new activities, lesson plans and tutorials from across the web that make it easy to learn by doing. Anyone can use these educational resources&mdash;they&rsquo;re free, open and backed by <a href=\"https://mozilla.org/{{ lang }}/mission/\">Mozilla&rsquo;s non-profit mission</a>.",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

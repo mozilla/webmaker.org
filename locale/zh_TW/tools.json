@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "個人化的賀卡",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "創作爭議網頁的另一種版本",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "包含音效的動態 GIF",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble 讓打造、分享網頁超級簡單，不可思議！在瀏覽器裡編撰 HTML 與 CSS，同時直接預覽成果，並單鍵發佈、分享完成的作品到網路上。適合初學與進階使用者。",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "看看網頁背後的原理",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Web 視訊超級加強版",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "一個你死黨們最愛的網站所組成的趣味合集",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "用免費Webmaker工具集，建立並重組 Web",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "您可以打造:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker 讓您輕鬆將網路影片、音訊、和圖片重組成為混搭作品，並可將作品嵌入其它網站。所有動作都在瀏覽器內即可完成，只要從網路上拖曳內容進來，接著加上您自己的想法和連結就好了！動態、連結、獨一無二。",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "您最愛的電影的線上海報",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "一個幽默的哏圖",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "編輯網頁，快速上手",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "從頭開始",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "立刻試用 X-Goggles",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "含有動態連結內容的紀錄片",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles 提供查看網站基本架構的功能。啟動後可以查看網頁原始碼，輕鬆點點滑鼠就能更改圖片、文字及重組其他網頁元素。",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "還有更多！",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "重組一件作品",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "一段自我介紹影片，將自己介紹給全世界",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "獨家自訂版的蘋果日報首頁",
+        "description": ""
+    }
+}

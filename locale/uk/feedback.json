@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Швидке посилання",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Початок роботи з Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Стан дошки:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Якщо ви не бачите поле дошки, переконайтесь, що додаткові параметри відображаються.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Зворотній зв'язок",
+        "description": "Feedback"
+    }
+}

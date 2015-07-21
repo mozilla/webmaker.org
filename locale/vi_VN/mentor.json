@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Làm cho web có dáng hình",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Video remixing and open source for youth",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Cố vấn",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Cố vấn",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma điều hành một <a href=\"/makerparty\">Maker Party</a> cho những người 10-12 tuổi tại phòng máy tại trường đại học của cô ở Victoria, Canada. Hiện tại, cô ấy đang làm việc với nhuwgx cố vấn để điều hành Câu lạc bộ Webmaster để tiếp tục dạy cho thanh thiếu niên về giá trị của những hoạt động mở.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati gia nhập <a href=\"/makerparty\">Maker Party</a> chúng tôi năm 2012 nơi cô đã học cách tự tạo lập trang web riêng của mình sử dụng Thimble và Popcorn. Hiện tại, cô ấy đang chia sẻ kiến thức của mình bằng việc dạy nững người bạn, gia đình và bạn học về HTML cơ bản và cách để tham gia trực tuyến.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon quản lí một <a href=\"/makerparty\">Maker Party</a> 48-giờ tại Dundee, Scotland, mời những học sinh đến khám phá mọi thứ từ \"con chim Twitter\" làm bằng giấy và dây điện.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Bạn đồng hành Wemaker, giáo viên và nghệ sĩ remix",
+        "description": ""
+    }
+}

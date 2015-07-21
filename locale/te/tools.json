@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "ఒక వ్యక్తిగతీకరించిన గ్రీటింగ్ కార్డు",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "ఒక వివాదాస్పద పేజీ యొక్క ప్రత్యామ్నాయ వెర్షన్",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "శబ్ధముతో కూడిన animated gif",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "వెబ్ ఎలా పనిచేస్తాదో చూడండి",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "వెబ్ వీడియో పెంచండి",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "మీ స్నేహితుని ఇష్టమైన సైట్ యొక్క ఒక తమాషా రీమిక్స్",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Create and remix the web with free Webmaker tools.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "మీరు నిర్మించవచ్చు:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "మీ ఇష్టమైన చిత్రం కోసం ఒక ఆన్లైన్ పోస్టర్",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "ఒక సంతోషమైన పోటిలో",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "వెబ్మేకింగ్ సులువుగా తయారుచేయబడింది",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "మొదటి నుండి ప్రారంభించండి",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "ఇప్పుడు గాగుల్స్ ప్రయత్నించండి",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "x-కిరణాల అద్ధాలు",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "డైనమిక్ లింకులు తో ఒక డాక్యుమెంటరీ",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-రే Goggles మీరు ఇంటర్నెట్ లో వెబ్ సైట్లు తయారు చేసే బిల్డింగ్ బ్లాక్స్ చూడటానికి అనుమతిస్తుంది. ఏదైనా వెబ్ పేజీని శోధించడానికి గాగుల్సును క్రియాశీలము చేయండి, ఆ తరువాత ఎలిమెంట్సును సింగిల్ క్లిక్ తో రీమిక్స్ చేయండి, మీ స్వంత టెక్స్ట్, చిత్రాలు మారియు చాలావాటీని స్వాపింగ్ చేయండి.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "ఇంకా ఎన్నో!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "ఒక మేక్ ను రీమిక్స్  చేయవచ్చు",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "ప్రపంచానికి మిమ్మల్ని మీరె పరిచయం చేసుకునేందుకు ఒక వీడియో ప్రొఫైల్",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "న్యూయార్క్ టైమ్స్ కోసం ఒక కస్టమ్ హోమ్ పేజి",
+        "description": ""
+    }
+}

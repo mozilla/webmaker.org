@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "我的资料",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "管理员",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "我的设置",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "我的活动",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "超级版主",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "退出",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "我的创作",
+        "description": "My makes"
+    }
+}

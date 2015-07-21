@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "Datum",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Kommentar",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Bitte wählen Sie ein Abzeichen aus, um es zu verleihen und zu sehen wer dieses Abzeichen erhalten hat.",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "Anwendung",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Ein Abzeichen aktualisieren",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Abzeichen Admin",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "E-Mail",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Erzeuge ein Abzeichen",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Kommentar hinzufügen",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Neue(s) Abzeichen vergeben",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Wiederrufen",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Emails (eine pro Zeile oder komma-separiert)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

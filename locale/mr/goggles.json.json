@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "In HTML, the <img> tag identifies an image with src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "and get the power to view and edit the code behind any website.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-ray गॉगल्स.\n",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "मूळ.",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "स्थापित करा",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-ray गॉगल्स",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "बुकमार्क बार ड्रॅग करा",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "मदत",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "आकार.jpg पासून डाग.jpg करण्यासाठी.",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "हे पृष्ठ रीमिक्स करा\n",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "गूग्ले क्ष-किरण चष्मा सक्रिय करा\n\n",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Change <img src=\"/shapes.jpg\"> to <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "प्रतिमाना बदला",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Click the background image",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "सेट अप X-ray  गॉगल्स",
+        "description": "Install page title"
+    }
+}

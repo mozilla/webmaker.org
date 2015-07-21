@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Webmaker のツールを保存する <span class=\"green-text\">Webmaker アカウントが必要</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Webmaker のオンライン <a href=\"/{{lang}}/tools\">ツール</a> を使用して自分のコンテンツを作成する",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker は永久に無料です。</span>そのため、ツールやイベントや教材は、どこにいても、どんなスキルレベルであっても無料で利用できます。アカウントを作成して、あなたの作品を公開しましょう。",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "近隣の <a href=\"/{{lang}}/events\">イベント</a> を見つけて参加する",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Web リテラシースキルの <a href=\"/{{lang}}/badges/webmaker-super-mentor\">バッジ</a> を入手する <span class=\"green-text\">Webmaker アカウントが必要</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Webmaker が提供するものは？",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Webmaker で検査された <a href=\"/{{lang}}/resources\">教育リソース</a> を使用する",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "プロフィールを作成し、URL を取得する <span class=\"green-text\">Webmaker アカウントが必要</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Webmaker に参加する",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "ログイン",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Webmaker にサインアップ",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "イベントを作成する <span class=\"green-text\">Webmaker アカウントが必要</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

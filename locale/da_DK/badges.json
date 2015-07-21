@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "Dato",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Kommentar",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Vælg en badge for at udstede den og se de brugere, der har modtaget den.",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "Ansøgning",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Opdater et badge",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Badge-administrator",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "Mail",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Opret et badge",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Tilføj en kommentar",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Udsted nye badges",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Tilbagekald",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Mails (en per linje, eller adskilt af kommaer)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

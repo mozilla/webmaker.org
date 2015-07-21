@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Pikalinkit:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Alkuun pääseminen Bugzillan kanssa",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Tilataulu:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Jos et näe tilataulukenttää, varmista, että lisävalitsimet ovat näkyvissä.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Palaute",
+        "description": "Feedback"
+    }
+}

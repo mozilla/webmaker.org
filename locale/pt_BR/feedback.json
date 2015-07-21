@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Links rápidos:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Iniciando com o Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Status do Quadro Branco:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Se o campo Quadro Branco não estiver visível, verifique se as opções avançadas estão sendo exibidas.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Feedback",
+        "description": "Feedback"
+    }
+}

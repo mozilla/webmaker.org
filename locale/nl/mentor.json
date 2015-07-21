@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Maak het web fysiek",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Video remixen en opensource voor de jeugd",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Jeugdmentor",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma organiseerde een <a href=\"/makerparty\">Maker Party</a> voor kinderen van 10-12 jaar in het computerlab van haar universiteit in Victoria, Canada. Ze werkt nu met verschillende mentoren aan het opzetten van een Webmaker Club om de jeugd verder te onderwijzen over de waarden van open werkmethodieken.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati leerde om haar eigen webpagina’s te remixen met Thimble en Popcorn tijdens onze <a href=\"/makerparty\">Maker Party</a> in 2012. Zij leert nu haar familie, kennissen en klasgenoten de basis-HTML-vaardigheden.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organiseerde een 48-uur durende  <a href=\"/makerparty\">Maker Party</a> in Dundee, Schotland, waarbij alles van een Twitter-vogel van papier en draad tot het aansluiten van Google Maps aan een spelcomputerjoystick aan de orde kwam.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Webmaker, onderwijzer en remix-artiest",
+        "description": ""
+    }
+}

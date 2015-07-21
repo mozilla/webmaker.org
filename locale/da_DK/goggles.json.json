@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "I HTML, vælger <img> tag'et et billede med src=\"filnavn\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "og få mulighed for at se og redigere koden bag et hvert websted.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "kilde",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Installer",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-Ray Goggles",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Træk til bogmærkelinje",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "hjælp",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "fra shapes.jpg til blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Remix denne side",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Aktivér X-Ray Goggles",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Skift <img src=\"/shapes.jpg\"> til <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Skift billedets",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Klik på baggrundsbilledet",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Installer X-Ray Goggles",
+        "description": "Install page title"
+    }
+}

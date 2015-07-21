@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "HTML এ, <img> ট্যাগটি  src=\"ফাইলের_নাম\" দিয়ে একটি ছবি চিহ্নিত করে।",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "এবং যে কোন ওয়েবসাইটের পিছনে কোডটি দেখা ও সম্পাদনা করার ক্ষমতা পান।",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "এক্স-রে চশমা",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "উৎস",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "ইনস্টল করুন",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "এক্স-রে চশমা",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "বুকমার্কস বারে টেনে নিয়ে যান",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "সাহায্য ",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "shapes.jpg থেকে blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "এই পেজ পুনর্মিশ্রন করুন",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "এক্স-রে চশমা সক্রিয় করুন",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "পরিবর্তন করুন <img src=\"/shapes.jpg\"> থেকে <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "পরিবর্তন করুন ছবির",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "ব্যাকগ্রাউন্ড ছবি ক্লিক করুন",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "এক্স-রে চশমা উপস্থাপন করুন",
+        "description": "Install page title"
+    }
+}

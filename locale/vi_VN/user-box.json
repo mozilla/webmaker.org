@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Hồ sơ cá nhân",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "quản trị",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Thiết lập",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Sự kiện của tôi",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Thoát",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Những tác phẩm của tôi",
+        "description": "My makes"
+    }
+}

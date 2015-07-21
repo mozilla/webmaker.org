@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "روابط سريعة:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "الشروع في استخدام بجزيلّا",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "اللوح الأبيض الخاص بالحالة.",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": ".إذا لم ترى حقل السبورة ، تأكد من ظهور الخيارات المتقدمة ",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "تقييم",
+        "description": "Feedback"
+    }
+}

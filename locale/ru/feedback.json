@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Быстрые ссылки:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Начать работу с Багзиллой",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Статус белой доски:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Если Вы не видите поле \"Доска\", удостоверьтесь, что отображаются \"дополнительные параметры\".",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Обратная связь",
+        "description": "Feedback"
+    }
+}

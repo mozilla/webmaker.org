@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Profili Im",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "administrator",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Konfigurimi im",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Evenimentet e mia",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "kujdestar i shkëlqyer",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Dilni",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Projektet e mia",
+        "description": "My makes"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Webmaker araçları ile kaydet ve yayınla <span class=\"green-text\">Bir Webmaker hesabın olmalıdır</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Kendi içeriğini oluşturmak için çevrimiçi Webmaker çevrimiçi <a href=\"/{{lang}}/tools\">araçlarını</a> kullan",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker sonsuza kadar ücretsiz olacak.</span> Buradaki araçları, etkinlikleri ve eğitim kaynaklarını, nerede ve hangi beceri düzeyinde olursan ol, herhangi bir ücret ödemeden kullanabilirsin. Yapacağın şeyleri kaydedip paylaşmak için gerek duyacağın tek şey bir hesap açmak.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Yakınındaki <a href=\"/{{lang}}/events\">etkinlikleri</a> bul ve katıl",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Web okuryazarlığı becerilerine göre çeşitli <a href=\"/{{lang}}/badges/webmaker-super-mentor\">ünvanlar</a> kazan <span class=\"green-text\">Bir Webmaker hesabın olmalıdır</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Webmaker ne sunar?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Webmaker-laştırılmıl eğitim <a href=\"/{{lang}}/resources\">kaynaklarını</a> ve kalıpları kullan",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Profilini oluştur ve sana özel İnternet adresini al <span class=\"green-text\">Bir Webmaker hesabın olmalıdır</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Webmaker Topluluğuna Katıl",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Oturum aç",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Webmaker hesabı aç",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Bir etkinlik oluştur ve yayınla <span class=\"green-text\">Bir Webmaker hesabın olmalıdır</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

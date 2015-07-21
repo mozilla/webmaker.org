@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "ملفي الشخصي",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "مدير النّضام",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "اعداداتي",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "فعالياتي",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "افضل مرشد",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "اخرج",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "ابداعاتي",
+        "description": "My makes"
+    }
+}

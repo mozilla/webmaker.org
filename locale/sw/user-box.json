@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Profaili yangu",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "msimamizi",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Mipangilio yangu",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Tukio zangu",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "mshauri wa kiwango cha juu",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Jiuzulu",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Aina zangu tofauti",
+        "description": "My makes"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "वेबमेकर टूल्स के साथ जमा करे और प्रकाशित करे | <span class=\"green-text\">वेबमेकर अकाउंट की आवशयकता</span> है |",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "वेबमेकर के ऑनलाइन<a href=\"/{{lang}}/tools\">टूल्स</a>का उपयोग खुद की सामग्री बनाने के लिए करें l ",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\"> Webmaker </ span>, हमेशा के लिए मुफ्त है आप कर रहे हैं जहाँ भी कोई कीमत, जो कुछ भी अपने कौशल के स्तर पर उपकरण, घटनाओं और शिक्षण संसाधनों का उपयोग कर सकते हैं। बस को बचाने और आप चीजों को प्रकाशित करने के लिए एक खाते के लिए साइन अप।",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "ढूँढें और भाग ले आप के पास के <a href=\"/{{lang}}/events\"> घटनाओं </a> में",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "अपने वेब साक्षर दक्षताओ के लिए <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> कमाए | <span class=\"green-text\">वेबमेकर अकाउंट की आवशयकता</span> है | ",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Webmaker आपको क्या पेश करता है?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "वेबमेकर पुनरीक्षित शिक्षण <a href=\"/{{lang}}/resources\">संसाधनों</a> और टेम्पलेट्स का उपयोग करे ",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "अपनी प्रोफाइल बनाये और अपनी बनाई हुई खुद की यू आर एल प्राप्त करे | <span class=\"green-text\">वेबमेकर अकाउंट की आवशयकता</span> है |",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Webmaker से जुड़े|",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "लॉग इन करें",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "वेबमेकर के लिए साइन-अप करे ",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "एक समारोह को बनाये और प्रकाशित करे | वेबमेकर अकाउंट की आवशयकता है |",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

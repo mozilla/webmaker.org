@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "một thiệp chào hỏi cá nhân",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "một phiên bản thay thế cho việc quản lí trang web",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "ảnh động gif với âm thanh",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "See how the web works",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Supercharge web video",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "một bản chế lại vui nhộn về website ưa thích của bạn thân",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Create and remix the web with free Webmaker tools.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "Bạn có thể làm:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "một quảng cáo trực tuyến cho bộ phim ưa thích của bạn",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "một chú thích vui nhộn",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Webmaking made easy",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "Bắt đầu từ con số 0",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "Try the Goggles now",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "Kính X-Ray",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "tài liệu với các liên kết động",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "Kính lồi X-Ray cho phép bạn nhìn xuyên qua các tòa nhà làm nên các trang web trên internet. Kích hoạt những kính lồi để kiểm tra đoạn mã đằng sau bất kì trang web nào, sau đó trộn những thành tố với một cú click chuột, trao đổi bằng câu chữ, hình ảnh của chính bạn và hơn thế nữa.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "và hơn thế nữa!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "Phối lại tác phẩm",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "một đoạn phim giới thiệu bạn với thế giới",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "một trang chủ tùy chọn cho New York Times.",
+        "description": ""
+    }
+}

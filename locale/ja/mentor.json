@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "メンター",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "ジョン",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "web をフィジカルにする",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "若者向けのビデオリミックスとオープンソース",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "メンター",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "ユースメンター",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "カナダのビクトリアで Emma は10から12歳向けの <a href=\"/makerparty\">Maker Party</a> を地元の大学のコンピュータ室で開きました。現在、彼女は他のメンターと一緒に Webmaker Club を運営し、若い世代にオープンプラクティスの価値を教え続けています。",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati は 2012 年に <a href=\"/makerparty\">Maker Party</a> に参加し、Thimble と Popcorn を使って自分のWeb ページをリミックスする事を学びました。彼女は今、基本的な HTML やどうやってオンラインに参加するか彼女の知識を、友達や家族、クラスメイトに広めています。",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon は、Schotland の Dundee で 48 時間の<a href=\"/makerparty\">Maker Party</a> を企画しました。招待された彼の学生たちは、紙から\"Twitter bird\" を作ったりGoogle Map にアーケードゲームのジョイスティックをつないだりさまざまな体験をしました。",
+        "description": ""
+    },
+    "Emma": {
+        "message": "エマ",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Webmaker フェロー、教員、remix アーティスト",
+        "description": ""
+    }
+}

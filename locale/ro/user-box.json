@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Profilul meu",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Setările mele",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Evenimentele mele",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Deconectare",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Creațiile mele",
+        "description": "My makes"
+    }
+}

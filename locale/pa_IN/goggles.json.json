@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "ਵਿੱਚ HTML, the <img> tag identifies an image with src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "ਅਟੇ ਕਿਸੇ ਵੀ ਵੈੱਬਸਾਈਟ ਦੇ ਪਿੱਛੇ ਕੋਡ ਵੇਖਣ ਅਤੇ ਸੋਧਣ ਲਈ ਸ਼ਕਤੀ ਉੱਤੇ ਜਾਓ।",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "ਐਕਸ-ਰੇ ਚਸ਼ਮਾ",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "ਸਰੋਤ",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "ਇੰਸਟਾਲ ਕਰੋ",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "ਐਕਸ-ਰੇ ਚਸ਼ਮਾ",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "ਬੁੱਕਮਾਰਕ ਬਾਰ ਖਿੱਚੋ",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "ਮੱਦਦ",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "jpg ਤੋਂ ਬਲੂਰ jpg ਤੋਂ ਅਕਾਰ",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "ਇਹ ਪੇਜ ਰੀਮੈਕਸ",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "ਐਕਸ-ਰੇਅ ਚਸ਼ਮਾਂ ਲਾਗੂ",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "ਬਦਲੋ <img src=\"/shapes.jpg\"> to <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "ਤਸਵੀਰ ਦਾ ਬਦਲਾਅ",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "ਬੈਕਰਾਂਊਡ ਚਿਤਰ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "ਐਕਸ-ਰੇ ਚਸ਼ਮਾਂ ਸੈੱਟ ਕਰੋ",
+        "description": "Install page title"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "എന്റെ പ്രൊഫൈല്‍",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "എന്റെ ക്രമീകരണങ്ങള്‍",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "My Events",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "പുറത്ത് പോവുക",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "എന്റെ മേക്കുകള്‍",
+        "description": "My makes"
+    }
+}

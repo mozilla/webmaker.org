@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "Päivämäärä",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Kommentti",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Valitse ansiomerkki sen jakamiseksi ja näytä käyttäjät, jotka ovat saaneet sen.",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "Sovellus",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Päivitä ansiomerkkiä",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Ansiomerkkien ylläpitäjä",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "Sähköpostiosoite",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Luo ansiomerkki",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Lisää kommentti",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Jaa uusi ansiomerkki/-merkit",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Kumoa",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Sähköpostiosoitteet (yksi per rivi tai pilkulla eroteltuna)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

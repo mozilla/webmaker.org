@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "Ser máis",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "negocio",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "Descobre Appmaker",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "Imaxina",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "App de fogos artificiais",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "ppmaker é unha ferramenta gratuíta para facer aplicacións móbiles gratuítas, inda que non saibas programar! Combina bloques para facer e compartir aplicacións móbiles feitas por ti no teu navegador.",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "Fai apps para o teu teléfono",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "As aplicacións móbiles son doadas de facer",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "unha app para facer música",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "App de conversa",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "unha app para falar cos teus amigos",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "Procuras unha maneira doada para empezar? Modifica unha destas plantillas para facer a túa propia app.",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "google+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "Appmaker",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "Emprega instrumentos e un secuenciador para facer unha app que meta ruxido.",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "Contribúe",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "Aprender máis",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "Fai unha app para o teu <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span>",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "Únete a nós para empoderar a unha nova xeración de usuarias de teléfonos intelixentes que faga e distribúa contido móbil relevante de xeito local.",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "Queres ensinar a outras persoas a facer aplicacións móbiles? Queres que a xente pense no deseño móbil? Bótalle un ollo ao noso material de ensinanza!",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "estudantes",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "Mira como",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "Clebra unha meta ou simplemente fai ruxído disparando fogos de artificio.",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "Escole unha plantilla",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "Ensina",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "Comparte mensaxes con amigos usando esta sala de chat feita por ti.",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "Gústache Appmaker? Tes dúbidas? Queres involucrarte? Queres saber máis?",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "Comezar",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "Axúdanos a converter Appmaker nalgo realmente alucinante contribuíndo co teu tempo e a túa habilidade no proxecto.",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "App de  música",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "un rexistro de metas persoais",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "amigos",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

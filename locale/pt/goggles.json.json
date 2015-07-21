@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "Em HTML, a <img> etiqueta identifica um imagem com src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "e obtenha o poder para ver e editar o código por detrás de qualquer sítio da Web..",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-ray Goggles",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "imagem",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Instale o",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-ray Goggles",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Arraste para a barra de Marcadores",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "ajuda",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "de shapes.jpg para blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Remisturar esta página",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Ativar X-ray Goggles",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Altere <img src=\"/shapes.jpg\"> para <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Altere a fonte da",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Clique na imagem de fundo",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Configurar o X-ray Goggles",
+        "description": "Install page title"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "میری پروفائل",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "میری ترتیب",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "My Events",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "سائن آؤٹ",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "میرے  کام ",
+        "description": "My makes"
+    }
+}

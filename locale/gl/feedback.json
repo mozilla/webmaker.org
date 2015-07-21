@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Enlaces rápidos",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Comezar con Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Pizarra de estado",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Se non ves o campo Pizarra, asegúrate que se mostran as opcións avanzadas.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Retroalimentación",
+        "description": "Feedback"
+    }
+}

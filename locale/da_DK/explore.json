@@ -1,0 +1,562 @@
+{
+    "Popcorn Maker": {
+        "message": "Popcorn Maker",
+        "description": "Popcorn Maker"
+    },
+    "Tools description": {
+        "message": "Webmaker-værktøjer gør det nemt at skabe ting på webbet. Lav dine egne websider, interaktive videoer, remixes, mobil-apps og meget mere &ndash; lær om web-mekanik, skriv kode og andre værdifulde færdigheder.",
+        "description": "a description of the webmaker tools"
+    },
+    "Please support our work": {
+        "message": "<a href=\"https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link\">Støt vores arbejde</a>.",
+        "description": "donate link"
+    },
+    "Contribute a guide or resource": {
+        "message": "Bidrag med en vejledning eller ressource",
+        "description": "line item on /getinvolved"
+    },
+    "Submit a resource": {
+        "message": "Indsend en ressource",
+        "description": "Submit a teaching resource"
+    },
+    "Sign up for Webmaker announcement list": {
+        "message": "Tilmeld dig <a href=\"https://sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup\">listen med nyheder fra Webmaker</a></strong>.",
+        "description": "Communicate line item on /getinvolved"
+    },
+    "Web Literacy Map": {
+        "message": "Kort over web-færdigheder",
+        "description": "The title of the explore section"
+    },
+    "Resources for teaching the web": {
+        "message": "Ressourcer til at undervise om webbet",
+        "description": "Heading for the second explore subsection with document stacks"
+    },
+    "Suggest your own links and resources": {
+        "message": "Denne side er under udvikling! Foreslå dine egne links og ressourcer som skal tilføjes. <a href='/{{lang}}/get-involved'>↵Eller engager dig mere</a>.</a>",
+        "description": "Submit a teaching resource"
+    },
+    "Visit our communications wiki": {
+        "message": "Besøg vores <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">kommunikations-wiki</a> for at finde endnu flere måder at komme i kontakt med os.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "success resource banner": {
+        "message": "<strong>Tak!</strong> Vi har modtaget den ressource, du foreslog.",
+        "description": "Banner for form success submission."
+    },
+    "Webmaker - Sign Up": {
+        "message": "Webmaker - Tilmeld",
+        "description": "Webmaker - Sign Up"
+    },
+    "Jump right in": {
+        "message": "Spring ud i det",
+        "description": "headline for third section on home page"
+    },
+    "Find or host an event": {
+        "message": "Find eller afhold en begivenhed",
+        "description": "line item on /getinvolved"
+    },
+    "How are we doing?": {
+        "message": "Gør vi det godt nok?",
+        "description": "headline on Feedback"
+    },
+    "Explore Webmaker": {
+        "message": "Udforsk Webmaker",
+        "description": "headline on first topic of 'jump right in' on home page"
+    },
+    "More Resources": {
+        "message": "Flere ressourcer",
+        "description": "See more kits in a search"
+    },
+    "Start Teaching": {
+        "message": "Begynd at undervis",
+        "description": "Teach site referral button text on Home page"
+    },
+    "Connect through social media": {
+        "message": "<strong>Hold forbindelsen gennem sociale medier</strong> og se hvad andre skaber, følg begivenheder fra hele verden og se nye Webmaker-projekter ved at besøge os på <a href=\"https://mozillawebmaker.tumblr.com/\">Tumblr</a>, <a href=\"https://twitter.com/webmaker\">Twitter</a>, <a href=\"https://www.facebook.com/mozilla\">Facebook</a>, <a href=\"https://www.flickr.com/photos/mozilladrumbeat/favorites/\">Flickr</a>, <a href=\"https://www.youtube.com/mozillawebmakers\">YouTube</a> og <a href=\"https://blog.webmaker.org/\">vores blog</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Communicate": {
+        "message": "Kommunikér",
+        "description": ""
+    },
+    "Teaching kits": {
+        "message": "Undervisnings-kits",
+        "description": "First square in contribute grid on explore"
+    },
+    "Teaching kits desc": {
+        "message": "Skab eller del en ressource der kan bruges til at undervise i digitale færdigheder.",
+        "description": "Copy for first square in contribute grid on explore"
+    },
+    "Receive occasional email updates": {
+        "message": "Modtag mail, når der er nyt om de vigtigste ting. Vi sender mails ud cirka en gang om måneden.",
+        "description": "communicate line item description"
+    },
+    "Help with beta-testing & quality assurance": {
+        "message": "Hjælp med at beta-teste og kvalitetssikre",
+        "description": "line item on /getinvolved"
+    },
+    "Build the web with others": {
+        "message": "Byg webbet med andre ved en lokal begivenhed, eller find ressourcer til at afholde din egen.",
+        "description": "copy for third topic of 'jump right in' on home page"
+    },
+    "Making is the basis of everything we do.": {
+        "message": "At skabe er det grundlæggende i alt hvad vi gør. Prøv at remixe en af vores <a href=\"/{{ lang }}/resources\">begynder-ressourcer</a>, eller lav noget fra bunden med <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, eller <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Del det så med resten af verdenen med hashtag'et <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+        "description": "Make something copy"
+    },
+    "Email address": {
+        "message": "Mailadresse",
+        "description": "placeholder on home input field"
+    },
+    "Learn to build it with Mozilla.": {
+        "message": "Lær at bygge det med Mozilla.",
+        "description": "subhead on home"
+    },
+    "Receiving your opinions on the Webmaker experience": {
+        "message": "Det er vigtigt for os at høre om dine oplevelser med Webmaker. Vores brugeres tilbagemeldinger er det allerførste, vi tænker på, når vi planlægger forbedringer. Så det ville betyde meget for os, hvis du bruger et par minutter på at fortælle os, hvad du synes godt om ved Webmaker, hvad der ikke virker som du havde forventet og hvad der kan blive bedre.",
+        "description": "copy on Feedback"
+    },
+    "Mozilla is a nonprofit organization": {
+        "message": "Mozilla er en non-profit organisation og open source værktøjerne er skabt af et globalt fællesskab. De vil altid være 100% gratis!",
+        "description": "Value description for free on home page"
+    },
+    "Privacy matters": {
+        "message": "Privatliv er vigtigt",
+        "description": "Text on back side of privacy day eyeball on home"
+    },
+    "Mozilla’s free tools": {
+        "message": "Mozilla's gratis værktøjer hjælper dig med at bygge webbet, mens du lærer nye færdigheder.",
+        "description": "subhead on home"
+    },
+    "I ": {
+        "message": "Jeg ",
+        "description": "I heart"
+    },
+    "We believe that digital literacy is more than just learning to code.": {
+        "message": "Vi mener, at digital kundskab er mere end bare at lære, hvordan man skriver kode. Vores værktøjer, læringsressourcer og netværk af fællesskaber styrker alle til at blive medborgere på webbet.",
+        "description": "Value description for more than code on home page"
+    },
+    "Learn to Teach": {
+        "message": "Lær at undervise andre",
+        "description": "headline on second topic of 'jump right in' on home page"
+    },
+    "Free": {
+        "message": "Gratis",
+        "description": "first value on home page"
+    },
+    "Add an event": {
+        "message": "Tilføj en begivenhed",
+        "description": "Add an event button"
+    },
+    "What language is your resource link?": {
+        "message": "På hvilket sprog er dit ressource-link?",
+        "description": "Label for language name for resource link"
+    },
+    "Partner desc": {
+        "message": "Bliv partner med Mozilla for at hjælpe med at undervise om webbet.",
+        "description": "Copy for sixth square in contribute grid on explore"
+    },
+    "Discover": {
+        "message": "Opdag",
+        "description": "Section in competency pages"
+    },
+    "Resources section description": {
+        "message": "Afsnittet <a href=\"/{{ lang }}/resources\">ressourcer</a> er din guide til web-kyndighed. Opdag nye evner såsom at skrive kode, historiefortælling, hvordan du beskytter dit privatliv på nettet og meget mere. Hvert afsnit har links, hvor du kan lære mere, finde praktiske projekter at give dig i kast med og lærings-aktiviteter.",
+        "description": "Copy for the second explore subsection with document stacks"
+    },
+    "Translate": {
+        "message": "Oversæt",
+        "description": "Third square in contribute grid on explore"
+    },
+    "Get involved with webmaker": {
+        "message": "Webmaker er en del af Mozillas <a href=\"//www.mozilla.org/da/mission/\">non-profit mission</a> der går ud på at skabe en mere åben, web-kyndig verden.",
+        "description": "Copy for first explore subsection with map"
+    },
+    "Skills": {
+        "message": "Færdigheder",
+        "description": "Title for list of web literacy skills"
+    },
+    "Thimble": {
+        "message": "Thimble",
+        "description": "Thimble"
+    },
+    "Design": {
+        "message": "Design",
+        "description": "Fourth square in contribute grid on explore"
+    },
+    "Start Creating": {
+        "message": "Kom i gang",
+        "description": "button text on footer on home"
+    },
+    "As a non-profit organization, we depend on": {
+        "message": "Som non-profit organisation er vi afhængige af bidrag fra folk som dig til at finansiere vores mål: at opfordre millioner af folk over hele verden til at tage skridtet videre fra at bruge webbet, til selv at skabe det.",
+        "description": "copy for Donate to Webmaker"
+    },
+    "All Webmaker tools are open source.": {
+        "message": "Alle Webmaker-værktøjer er open source. Bidrag med ideer, rettelser, bugs eller dine egne demoer og prototyper. Få adgang til dokumentation, issue trackers og mere.",
+        "description": "copy for contribute code on /getinvolved"
+    },
+    "Want to teach the web to others?": {
+        "message": "Vil du undervise andre om webbet?",
+        "description": "Teach site referral heading on Home page"
+    },
+    "Study at your own pace": {
+        "message": "Arbejd i dit eget tempo for at undervise i web-kundskab, digitale færdigheder og åbne praksisser.",
+        "description": "copy for second topic of 'jump right in' on home page"
+    },
+    "Tools": {
+        "message": "Værktøjer",
+        "description": "headline for section on /about"
+    },
+    "View events": {
+        "message": "Vis begivenheder",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Become a mentor": {
+        "message": "Bliv mentor",
+        "description": "Button in mentors section on literacy pages, line item on /getinvolved"
+    },
+    "sharing": {
+        "message": "deling",
+        "description": "onboarding interactive text input"
+    },
+    "When you file your bug, be sure to use feedback": {
+        "message": "Når du indsender din bug, så sørg for at skrive “Feedback” i Status Whiteboard-feltet, så vi kan finde den.",
+        "description": "explainer text for status whiteboard on Feedback"
+    },
+    "Make something": {
+        "message": "Skab noget",
+        "description": "line item on /getinvolved"
+    },
+    "Footer header": {
+        "message": "Ved du ikke hvor du skal begynde?",
+        "description": "Header for bottom section of explore"
+    },
+    "Our team uses an issue tracker called Bugzilla": {
+        "message": "Holdet bag Webmaker bruger en såkaldt \"bug tracker\" - <a href=\"https://bugzilla.mozilla.org/\">Bugzilla</a> - til at indrapportere fejl, mangler, gode idéer, osv. og til at holde øje med at der bliver taget hånd om tingene. Alle kan indsende “bugs”, så tøv ikke med at komme med gode forslag eller råbe op, hvis du støder på noget, der ikke fungerer som det skal. NB at \"bugs\" helst skal indsendes på engelsk.",
+        "description": "description for bugzilla"
+    },
+    "noStaffPick": {
+        "message": "Der er ingen udvalgte undervisningsmaterialer lige nu. <a href=\"#\">Indsend en</a>.",
+        "description": "No item in the list picked by staff and there is a submit link."
+    },
+    "Partner": {
+        "message": "Bliv partner",
+        "description": "Sixth square in contribute grid on explore"
+    },
+    "Submit a bug now": {
+        "message": "Indsend en bug nu",
+        "description": "button text on Feedback"
+    },
+    "Find an event": {
+        "message": "Find en begivenhed",
+        "description": "Find an event button"
+    },
+    "Learn more": {
+        "message": "Lær mere",
+        "description": "Button text on home page"
+    },
+    "Submit a bug on Bugzilla": {
+        "message": "Indsend en “bug” på Bugzilla",
+        "description": ""
+    },
+    "The global Mozilla community wants everyone to be a citizen of the web": {
+        "message": "Det globale Mozilla-fællesskab ønsker at alle skal være web-borgere — også dig!",
+        "description": "subhead on home"
+    },
+    "Start creating": {
+        "message": "Kom i gang",
+        "description": "button text on home"
+    },
+    "Featured Teaching Resources": {
+        "message": "Udvalgte undervisningsmaterialer",
+        "description": "Title for teaching resources in competency page"
+    },
+    "9 Ways to Get Involved with Webmaker": {
+        "message": "9 måder at blive engageret i Webmaker",
+        "description": "headline on /getinvolved"
+    },
+    "Footer copy": {
+        "message": "<a href=\"/{{lang}}/resources\">Udforsk kompetencerne</a> og se, hvilke undervisningsmaterialer Webmaker-fællesskabet kan tilbyde.",
+        "description": "Copy for bottom section of explore"
+    },
+    "Mozilla privacy policy agreement": {
+        "message": "Jeg accepterer Mozilla Webmakers <a href=\"https://webmaker.org/terms\">vilkår</a> og <a href=\"https://webmaker.org/privacy\">privatlivspolitik</a>.",
+        "description": "Mozilla privacy policy agreement"
+    },
+    "explore_frontpage_title": {
+        "message": "Velkommen til Webmaker!",
+        "description": "Heading for Explore page"
+    },
+    "Donate to Webmaker": {
+        "message": "Doner til Webmaker",
+        "description": "line item on /getinvolved"
+    },
+    "Get inspired by examples like these": {
+        "message": "Bliv inspireret af eksempler som disse (<a href=\"https://webmaker.org/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">flere</a>)",
+        "description": "Paragraph copy for gallery section of Make Your Own"
+    },
+    "Help us build the future of the web": {
+        "message": "Hjælp os til at bygge webbets fremtid.",
+        "description": "headline on home"
+    },
+    "Participate in community testing sessions": {
+        "message": "Deltag i test-sessioner med fællesskabet",
+        "description": "Headline for community testing session on Feedback"
+    },
+    "You might also like": {
+        "message": "Du vil måske også synes om",
+        "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
+    },
+    "By": {
+        "message": "Af",
+        "description": "The byline for featured kits"
+    },
+    "Get training": {
+        "message": "Modtag undervisning",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Mozilla Webmaker creates software, projects and events": {
+        "message": "Mozilla Webmaker laver software, projekter og begivenheder, der fremmer web-kyndighed, ved at skabe og dele. Vi er et open source-projekt bestående af skabere, mentorer og fællesskabs-ledere. Vi vil blive glade, hvis du vil være med.",
+        "description": "copy for ‘9 ways to get involved’"
+    },
+    "Teach the web": {
+        "message": "Undervis om webbet",
+        "description": "line item on /getinvolved"
+    },
+    "Join our community call": {
+        "message": "Deltag i vores fællesskabs-samtale hver tirsdag. Alle er velkommen til at deltage! Stil spørgsmål, mød fællesskabet og de ansatte - og find de ressourcer, du har brug for.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "next": {
+        "message": "næste",
+        "description": "next button"
+    },
+    "Code desc": {
+        "message": "Rapportér bugs, indsend rettelser eller hack med vores MakeAPI.",
+        "description": "Copy for fifth square in contribute grid on explore"
+    },
+    "Build and share the web with Mozilla.": {
+        "message": "Byg og del webbet med Mozilla.",
+        "description": "footer text on home"
+    },
+    "Submit a bug for Popcorn Maker": {
+        "message": "Indsend en bug om Popcorn Maker",
+        "description": "quick links list item on Feedback"
+    },
+    "Say hello on a Webmaker community call": {
+        "message": "Hils på os i en <a href=\"https://wiki.mozilla.org/Webmakers/Community_Calls\">Webmaker-fællesskabs-samtale</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Join the Webmaker newsgroup": {
+        "message": "Deltag i <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker-mailinglisten</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Now, learn to make and share more of your favorite things on the web.": {
+        "message": "Lær at skabe og dele mere af dine yndlingsting på webbet.",
+        "description": "Now, learn to make and share more of your favorite things on the web."
+    },
+    "Contribute to Webmaker": {
+        "message": "Bidrag til Webmaker",
+        "description": "Contribute to Webmaker"
+    },
+    "Make your own apps and websites": {
+        "message": "Skab dine egne apps og websteder",
+        "description": "headline on homepage"
+    },
+    "Submit a bug for Webmaker.org": {
+        "message": "Indsend en bug om Webmaker.org",
+        "description": "quick links list item on Feedback"
+    },
+    "Explore now": {
+        "message": "Begynd at udforske",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Discover how you can build and share the web.": {
+        "message": "Opdag hvordan du kan bygge og dele webbet",
+        "description": "sub-head on third section of home page"
+    },
+    "Contribute code": {
+        "message": "Bidrag med kode",
+        "description": "line item on /getinvolved"
+    },
+    "More than code": {
+        "message": "Mere end blot kode",
+        "description": "third value on home page"
+    },
+    "Design desc": {
+        "message": "Design sammen med andre eller bliv bedre til at vurdere designs.",
+        "description": "Copy for fourth square in contribute grid on explore"
+    },
+    "make-learn-teach-section-info": {
+        "message": "Fællesskabet bag Webmaker mødes ved begivenheder overalt i verden &mdash; på biblioteker, internet-caféer, i medborgerhuse og privat. Find en begivenhed i nærheden, lær hvordan du kan afholde din egen begivenhed eller engager dig i vores globale Maker Party.",
+        "description": "Make Learn Teach information section"
+    },
+    "Link:": {
+        "message": "Link:",
+        "description": "Label form for Link submission"
+    },
+    "connect in many ways.": {
+        "message": "Vi er et stort fællesskab og vi holder forbindelsen på mange måder.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Participate in user testing": {
+        "message": "Deltag i brugerundersøgelser, giv feedback, eller hjælp med spørgsmål og svar. Dine tests og ideer vil forbedre produkterne på Mozilla Webmaker og hjælpe med at forme deres fremtid.",
+        "description": "copy for QA on /getinvolved, line 2"
+    },
+    "Status Whiteboard:": {
+        "message": "Status Whiteboard:",
+        "description": "label for faux bugzilla field on Feedback"
+    },
+    "Web Literacy": {
+        "message": "Web-kundskab",
+        "description": "Web Literacy"
+    },
+    "Share community experiences": {
+        "message": "Del oplevelser fra fællesskabet",
+        "description": ""
+    },
+    "Wait, there’s more!": {
+        "message": "Vent, der er mere!",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "new Webmaker tools and projects": {
+        "message": "Vær den første til at prøve vores nye <a href=\"/{{ lang }}/tools\">Webmaker-værktøjer</a> og projekter.",
+        "description": "copy for QA on /getinvolved, line 1"
+    },
+    "Code": {
+        "message": "Skriv kode",
+        "description": "Fifth square in contribute grid on explore"
+    },
+    "Login to submit a resource": {
+        "message": "Log ind for at indsende en ressource",
+        "description": "A button Login to submit a resource."
+    },
+    "Contribute subsection copy": {
+        "message": "Webmaker er open source, drevet af fællesskabet, og bakket op af Mozillas non-profit <a href=\"https://mozilla.org/{{ lang }}/mission/\">mission</a> der går ud på at skabe og beskytte det åbne internet. Vi ville blive glade, hvis du <a href=\"/{{ lang }}/getinvolved\">hjalp med</a>.",
+        "description": "Copy for the contribute subsection of explore"
+    },
+    "Investigate the tools, learning resources": {
+        "message": "Gør brug af værktøjerne, undervisningsmaterialer og det fællesskab som Webmaker tilbyder.",
+        "description": "copy for first topic of 'jump right in' on home page"
+    },
+    "Webmaker helps people across the world": {
+        "message": "Webmaker hjælper folk over hele verden med at blive velorienterede skabere af et frit og åbent net.",
+        "description": "Subehad on our values"
+    },
+    "Free tools that make it easy to create and learn": {
+        "message": "Gratis værktøjer, der gør det nemt at skabe og lære",
+        "description": "Header for section that includes description of webmaker tools"
+    },
+    "or remix someone elses": {
+        "message": "...eller remix en andens",
+        "description": "headline for gallery section of Make Your Own"
+    },
+    "Good start!": {
+        "message": "God start!",
+        "description": "Good start!"
+    },
+    "user_deleted": {
+        "message": "Din konto er blevet slettet.",
+        "description": "Your account has been deleted."
+    },
+    "English only": {
+        "message": "Kun på engelsk",
+        "description": ""
+    },
+    "Local": {
+        "message": "Lokal",
+        "description": "second value on home page"
+    },
+    "Submit": {
+        "message": "Send",
+        "description": "Submit button"
+    },
+    "You don’t need to be a wizard to teach the web.": {
+        "message": "Du behøver ikke at være en troldmand for at undervise om webbet. Vi har lavet <a href=\"/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">vejledninger, der kan hackes</a> for at undervise i web-kundskab, webmaking, online storytelling og meget mere. Vil du lave din egen lektionsplan? Vi har <a href=\"/{{ lang }}/make-your-own\">gode skabeloner</a> til det.",
+        "description": "Teach the Web copy"
+    },
+    "Join Mozillas community of educators": {
+        "message": "Tilmeld dig Mozilla's fællesskab af undervisere som underviser i digitale færdigheder og web-kundskab.",
+        "description": "Teach site referral description on Home page"
+    },
+    "and more!": {
+        "message": "og mere!",
+        "description": ""
+    },
+    "Our values": {
+        "message": "Vores værdier",
+        "description": "Headline on second section of home"
+    },
+    "From hack jams to pop ups to the global Maker Party": {
+        "message": "Fra lokale sammenkomster til de globale <a href=\"https://party.webmaker.org\">Maker Party</a> - der findes en begivenhed for alle interesser. Søg efter en i nærheden af dig eller afhold din eget — vi har <a href=\"/{{ lang }}/event-guides\">vejledninger</a>, så du kan se hvordan du gør.",
+        "description": "Find or host an event copy"
+    },
+    "Translate desc": {
+        "message": "Hjælp med at oversætte Webmaker.",
+        "description": "Copy for third square in contribute grid on explore"
+    },
+    "What do you love on the web?": {
+        "message": "Hvad elsker du på webbet?",
+        "description": "What do you love on the web?"
+    },
+    "Make. Learn. Get together.": {
+        "message": "Skab, Lær. Mød hinanden.",
+        "description": "Make. Learn. Get together. Header section"
+    },
+    "Get Together": {
+        "message": "Mød hinanden",
+        "description": "headline on third topic of 'jump right in' on home page"
+    },
+    "Submit a bug for Thimble": {
+        "message": "Indsend en bug om Thimble",
+        "description": "quick links list item on Feedback"
+    },
+    "Events desc": {
+        "message": "Afhold en Webmaker-begivenhed i din hjemby.",
+        "description": "Copy for second square in contribute grid on explore"
+    },
+    "Mentoring is a chance to share your knowledge": {
+        "message": "At være mentor er en chance for at dele din viden og give feedback direkte til mennesker i alle aldre verden over, der er ivrige efter at lære digitale færdigheder.",
+        "description": "Become a mentor copy on /getinvolved"
+    },
+    "Opportunities to get involved": {
+        "message": "Holdet bag Webmaker leder med jævne mellemrum efter personer til at teste vores websted, værktøjer og undervisningsmaterialer. Hvis du vil deltage i én af vores test-sessioner, kan du læse mere på <a href=\"https://wiki.mozilla.org/Webmaker/TeachTheWeb/Testing\">vores wiki</a>.",
+        "description": "copy to encourage people to get involved in testing"
+    },
+    "Discover creative ways to teach and learn digital superpowers": {
+        "message": "Opdag kreative måder at undervise på og lær, hvordan du får digitale superkræfter",
+        "description": "Heading for first explore subsection with map"
+    },
+    "Suggest a resource for": {
+        "message": "Foreslå en ressource til {{ skill.term }}",
+        "description": "Title for suggesting resource form"
+    },
+    "Thimble Desc": {
+        "message": "Skab og udgiv din egen webside.",
+        "description": "Make and publish your own web page."
+    },
+    "We all use the web in different ways.": {
+        "message": "Alle bruger webbet på hver deres måde. Mozilla hjælper dig med at bygge et web, der er relevant for dine venner, familie, forretning eller fællesskab — uanset hvor du bor.",
+        "description": "Value description for local on home page"
+    },
+    "The web is yours": {
+        "message": "Webbet er dit.",
+        "description": "headline on home"
+    },
+    "We’re always eager to learn how Webmaker is used": {
+        "message": "Vi vil altid gerne høre om, hvordan Webmaker bliver brugt til at lære forskellige målgrupper om webbet. Hvis du har interessante erfaringer med/om at bruge Webmaker omkring dig, så vil vi blive glade for at høre mere om dem i <a href=\"https://lists.mozilla.org/listinfo/webmaker\">mailinglisten for Webmaker</a>. Du kan også deltage i diskussionen på Twitter ved at svare på tweets fra <a href=\"https://twitter.com/webmaker\">@webmaker</a> eller ved at bruge hashtag'et <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "copy encouraging people to get involved on Feedback"
+    },
+    "Popcorn Maker Desc": {
+        "message": "Skab interaktive videoer.",
+        "description": "Create interactive videos."
+    },
+    "active daily discussion paragraph": {
+        "message": "Dette er en mere aktiv, daglig diskussion hvor du kan hjælpe med at forme den retning som Webmaker-projektet skal tage.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Do you have a web literacy project?": {
+        "message": "Har du et web-kundskabs-projekt? Vi vil gerne høre om det og muligvis dele det på Webmaker.org.",
+        "description": "Contribute a guide copy"
+    }
+}

@@ -1,0 +1,162 @@
+{
+    "Webmaker is available in over 20 languages": {
+        "message": "Webmaker est disponible dans plus de 20 langues et soutenu par une communauté croissante de mentors volontaires dans le domaine des compétences numériques. L'outil sera disponible pour Android, Firefox OS et des navigateurs mobiles modernes plus tard dans l'année.",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Quote 3 Quote": {
+        "message": "Mozilla ne se contente pas d'être préoccupé par les gens dans les pays en développement qui n'ont pas de bon contenu local sur leurs dispositifs mobiles. Il agit pour eux.",
+        "description": "Quote #3"
+    },
+    "Mozilla Rwanda": {
+        "message": "Mozilla Rwanda",
+        "description": "Mozilla Rwanda"
+    },
+    "Enabling Digital Creativity": {
+        "message": "Encourager la création numérique",
+        "description": "Headline of Enabling Digital Creativity section on /localweb"
+    },
+    "MOI splash page metadata title": {
+        "message": "Webmaker : construisons un Web utile localement",
+        "description": "MOI splash page metadata title"
+    },
+    "Mozilla Indonesia": {
+        "message": "Mozilla Indonésie",
+        "description": "Mozilla Indonesia"
+    },
+    "Quote 3 Author": {
+        "message": "Mark Sullivan",
+        "description": "Quote #3 Author"
+    },
+    "Quote 2 Author": {
+        "message": "David Meyer",
+        "description": "Quote #2 Author"
+    },
+    "The Opportunity: A Locally Relevant Web": {
+        "message": "Offrir la possibilité d'un Web utile localement",
+        "description": "Headline of The Opportunity: A Locally Relevant Web on /localweb"
+    },
+    "Let’s ensure the next generation of web users": {
+        "message": "Faisons en sorte de doter la prochaine génération d'utilisateurs du Web des compétences nécessaires pour construire un Web utile localement. <b>Nous sommes un mouvement mondial avec des bénévoles dans plus de 30 pays</b>. Si vous êtes un opérateur mobile ou une ONG, <a href=\"https://stuff.webmaker.org/mobile_webmaker_partners.pdf\">devenez notre partenaire</a> pour offrir de la formation aux compétences numériques à vos utilisateurs les plus engagés.",
+        "description": "Subhead of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Colombia": {
+        "message": "Mozilla Colombie",
+        "description": "Mozilla Colombia"
+    },
+    "Mozilla is building Webmaker": {
+        "message": "Mozilla a créé Webmaker, un contenu mobile gratuit et libre pour la création d'applications.",
+        "description": "Subhead of Enabling Digital Creativity section on /localweb"
+    },
+    "Webmaker Kenya research report": {
+        "message": "Rapport de recherche de Webmaker au Kenya",
+        "description": "Link text to Webmaker Kenya research report"
+    },
+    "Mozilla Nigeria": {
+        "message": "Mozilla Nigéria",
+        "description": "Mozilla Nigeria"
+    },
+    "Mozilla Kenya": {
+        "message": "Mozilla Kenya",
+        "description": "Mozilla Kenya"
+    },
+    "Mozilla Philippines": {
+        "message": "Mozilla Philippines",
+        "description": "Mozilla Philippines"
+    },
+    "Partner with us": {
+        "message": "Faites équipe avec nous",
+        "description": "Partner with us button text"
+    },
+    "Quote 1 Author": {
+        "message": "Abhimanyu Ghoshal",
+        "description": "Quote #1 Author"
+    },
+    "Webmaker India research report": {
+        "message": "Rapport de recherche de Webmaker en Inde",
+        "description": "Link text to Webmaker India research report"
+    },
+    "Understanding Users": {
+        "message": "Comprendre les utilisateurs",
+        "description": "Headline of Understanding Users section on /localweb"
+    },
+    "Quote 2 Quote": {
+        "message": "Mozilla et les opérateurs mobiles veulent rendre le web plus mondial et diversifié",
+        "description": "Quote #2"
+    },
+    "Mozilla is leading a research program": {
+        "message": "Mozilla conduit un programme de recherche dont le but est d'étudier quelles approches en matière de technologie et de design favorisent une meilleure contribution à la vie numérique et encouragent la création de contenu local.",
+        "description": "Subhead of Understanding Users section on /localweb"
+    },
+    "Partners": {
+        "message": "Partenaires",
+        "description": "Headline of Partners section on /localweb"
+    },
+    "Empowering the next billion citizens of the web": {
+        "message": "Donnons des atouts au prochain milliard de citoyens du Web",
+        "description": "Big headline on /localweb"
+    },
+    "Mozilla is working to ensure": {
+        "message": "Mozilla s'efforce de veiller à ce que le prochain milliard de personnes à venir en ligne pour la première fois à travers leurs smartphones découvre un Web ouvert, participatif et qui favorise la créativité.",
+        "description": "This is a description to the value string"
+    },
+    "In 2014 and 2015, we conducted on-the-ground studies in Bangladesh, India and Kenya.": {
+        "message": "En 2014 et 2015, nous avons conduit des études sur le terrain au Bangladesh, en Inde et au Kenya.",
+        "description": "Subhead of the research report subsection on /localweb"
+    },
+    "MOI splash page metadata description": {
+        "message": "Webmaker permet aux utilisateurs de tirer parti de tout le potentiel du web en supprimant toutes les complications habituelles de la création, et en renforçant leurs compétences pour construire un web utile localement.",
+        "description": "MOI splash page metadata description"
+    },
+    "A Locally Relevant Web: Early Research & Recommendations": {
+        "message": "Un Web utile localement : retour d'expérience et recommandations",
+        "description": "Headline of the research report subsection on /localweb"
+    },
+    "Get in touch": {
+        "message": "Nous contacter",
+        "description": "Get in touch button text"
+    },
+    "Mozilla India": {
+        "message": "Mozilla Inde",
+        "description": "Mozilla India"
+    },
+    "Try the open beta": {
+        "message": "Essayez la version bêta ouverte",
+        "description": "Try the open beta button text"
+    },
+    "Mozilla Bangladesh": {
+        "message": "Mozilla Bangladesh",
+        "description": "Mozilla Bangladesh"
+    },
+    "Quote 1 Quote": {
+        "message": "Mozilla et GSMA établissent un partenariat pour apporter le web mobile et ses outils de création aux prochains 4 milliards d'internautes",
+        "description": "Quote #1"
+    },
+    "Mozilla is proud to partner": {
+        "message": "Mozilla est fier d'établir un partenariat avec ces opérateurs mobiles, enseignants, institutions de développement internationales et ONG qui s'intéressent positivement à l'avenir du Web mobile et veulent y contribuer.",
+        "description": "Subhead of Partners section on /localweb"
+    },
+    "Webmaker mobile for development blog": {
+        "message": "Blog de Webmaker mobile pour le développement",
+        "description": "Link text to Webmaker mobile for development blog"
+    },
+    "Webmaker Bangladesh research report": {
+        "message": "Rapport de recherche de Webmaker au Bangladesh",
+        "description": "Link text to Webmaker Bangladesh research report"
+    },
+    "Webmaker helps smartphone users": {
+        "message": "Webmaker aide les utilisateurs de smartphones à devenir les créateurs d'un Web qui améliore leur vie et leur communauté, en concevant des applications simples pour des choses comme la promotion d'une petite entreprise, le partage de nouvelles communautaires, ou la construction d'un plan de cours pour des étudiants.",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Mozilla Brazil": {
+        "message": "Mozilla Brésil",
+        "description": "Mozilla Brazil"
+    },
+    "Partner with Mozilla": {
+        "message": "Faites équipe avec Mozilla",
+        "description": "Headline of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Cambodia": {
+        "message": "Mozilla Cambodge",
+        "description": "Mozilla Cambodia"
+    }
+}

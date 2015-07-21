@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "日期",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "評論",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "選擇要授予他人的徽章，或看看有多少人獲得該徽章。",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "申請",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "更新徽章",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "徽章管理",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "Email",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "建立徽章",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "留下評論",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "授予新徽章",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "撤銷",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Email（以換行或半形逗號分隔）",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

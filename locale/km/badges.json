@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "កាល​បរិច្ឆេទ",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "អនុសាសន៍",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "ជ្រើស​ស្លាក​សម្គាល់​ដែល​ត្រូវ​ចេញ​ឲ្យ និង​មើល​អ្នកប្រើ​ណា​ខ្លះ​ដែល​ទទួល​បាន​វា។",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "កម្មវិធី",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Update a Badge",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "អ្នក​គ្រប់​គ្រង​ផ្លាក​សញ្ញា",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "អ៊ីមែល",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Create a Badge",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "បន្ថែមអនុសាសន៍",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "ចេញនូវ​ផ្លាកសញ្ញាថ្មី(s)",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "ដកសិទ្ធិ",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "អ៊ីមែល(​មួយក្នុង​មួយ​តំណភ្ជាប់ ឬក៏អាចប្រើសញ្ញា , បែង​ចែក​)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

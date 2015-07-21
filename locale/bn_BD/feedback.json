@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "দ্রুত লিংক:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "বাগজিলায় শুরু করুন",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": " হোয়াইটবোর্ডের অবস্থা:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "যদি আপনি লেখার জন্য হোয়াইটবোর্ড না দেখে থাকেন তাহলে প্রথমে নিশ্চিত হয়ে নিন বিস্তারিত অপশন দেখাচ্ছে কিনা।",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "প্রতিক্রিয়া",
+        "description": "Feedback"
+    }
+}

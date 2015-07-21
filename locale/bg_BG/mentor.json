@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "ментор",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Йон",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Making the web physical",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Video remixing and open source for youth",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Ментор",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Ментор на младежи",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Ема организира <a href=\"/makerparty\">Мейкър парти</a> за 10-12 годишни в компютърната лаборатория при местния университет във Виктория, Канада. Сега тя работи със другите ментори, за да продължи обучението на младите, в рамките на Клуба на Уебмейкър",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Унати участваше в нашето <a href=\"/makerparty\">Мейкър парти</a> през 2012 година, където научи да прави ремикси на собствените си страници използвайки Тимбъл и Попкорн. Сега тя споделя знанията си, учейки приятели, роднини и съученици на основите на HTML и как да се участват онлайн.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Йон организира 48-часово <a href=\"/makerparty\">Мейкър парти</a> в Дънди, Шотландия, канейки студентите си да изследват всичко, започвайки с «Птичка на Туитър» направена от хартия и свързана с картите на Гугъл и чак до джойстик от игрален автомат.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Ема",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Унати",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Ами Бурвал, колега в Уебмейкър, учител и художник по ремиксите",
+        "description": ""
+    }
+}

@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Sumber daya terkait edukasi Webmaker ditunjang oleh <a href=\"/{{ lang }}/literacy\">Peta Literasi Web Mozilla</a>, meliputi seperangkat keterampilan lengkap yang dibutuhkan orang-orang untuk berkembang di dunia digital hari ini.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Membuat untuk Web",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Ketahui lebih jauh mengenai model Jejaring Pembelajaran Hive dan bagaimana kota-kota di seluruh dunia merajai kemampuan digital dan literasi web melalui pembelajaran terpadu.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Menjelajahi Web",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Bergabung dengan <a href=\"http://discourse.webmaker.org/category/meet\">forum daring</a> untuk bertemu dengan mentor lain seperti anda. Bagikan acara, aktivitas dan sumber pengajaranmu menggunakan tagar <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Komunitas global kami hadir untuk membantu",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Perkenalkan diri anda",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Peta Literasi Web",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Pelajari lebih lanjut",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Jadilah ko",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Tunjukkan pada orang lain bagaimana cara membuat web dan kumpulkan <a href=\"https://webmaker.org/badges/skill-sharer\">Lencana Pembagi Kemampuan Webmaker</a>. Jika sudah siap, mendaftarlah untuk mendapatkan <a href=\"https://webmaker.org/badges/webmaker-mentor\">Lencana Mentor Webmaker</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Libatkan Dirimu</strong> Dengan cepat perkenalkan Dirimu dengan Kemampuan digital baru melalui bacaan, tontonan, suara dan hal hal menyenangkan lainnya",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Berkontribusi di Web",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Sumber daya untuk mengajar dan belajar",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Jajaki",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Pelajari lebih lanjut",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>Kami berubah!</strong> Mau memulai dengan cara gampang? Cobalah <a href=\"/{{ lang}}/tools\">Perkakas</a> kami. Atau olah ulang sesuatu di <a href=\"/{{ lang }}/gallery\">Galeri</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Berjelajah",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Temukan skill baru. Lalu sebarkan dengan lainnya.",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Menghubungkan",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "Apakah literasi web?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Bagikan pengetahuanmu.</strong> Siapapun dapat emngajar dengan Webmaker. Apakah anda seorang pendidik di kelas atau mentor yang antusias, orang tua atau teman, kami memiliki aktivitas dan panduan mengajar yang dapat membantu.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Temukan galeri komunitas dan lihat apa yang webmakers lakukan.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Membangun",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong> Berani kotor itu baik </strong>cara terbaik untuk belajar adalah dengan cara melakukannya, buat Dan bangun! Buat halaman web,video multimedia dan remix yang membantu kamu untuk mempraktekkan semua Kemampuan yang ada.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Terhubung ke komunitas global",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Belajar dengan mencoba dan menggunakan tanganmu. Lalu bagikan apa yang telah anda pelajari dengan orang lain. Sumber-sumber Webmaker dirancang agar dapat digunakan untuk mengajar segala hal dengan mudah dan menyenangkan, mulai dari pencarian dan navigasi hingga penulisan kode dan naskah, kewarganegaraan digital dan perlindungan keamanan daring. Coba <a href=\"/make-your-own\">buat sendiri</a> panduan mengajarmu untuk dibagi dengan pendidik dan mentor lainnya di seluruh dunia.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Bangun keahlian bimbingan Anda",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker berbeda.</strong> Kami adalah proyek sumber terbuka yang dibangun oleh dan untuk komunitas global yang terdiri dari pengajar, penggiat teknologi, dan orang-orang seperti Anda. Kami cinta web dan ingin menyebarluaskan potensi kreatifnya ke semua orang. Kami senang dapat berkolaborasi dengan Anda atau membantu Anda <a href=\"/{{ lang }}/getinvolved\">lebih berperan</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Peta Web Literatur membantu anda membuat literatur dalam menemukan, membangun, dan membagikan Web.",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Ciptakan dunia yang lebih melek web",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Ajarkan",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla mendefinisikan web literasi sebagai kemampuan dan kompetensi yang diperlukan untuk membaca, menulis dan berpartisipasi dalam web. Bacalah lebih jauh mengenai mengapa Mozilla paduli pada literasi web dalam Webmaker Whitepaper. ",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Bergabung atau buatlah <a href=\"https://events.webmaker.org\">acara lokal</a> untuk berkolaborasi dengan sesama teman dan mengajarlah.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Telusuri <a href=\"https://webmaker.org/resources\">sumber pembelajaran</a> kami atau berpartisipasi dalam <a href=\"https://training.webmakerprototypes.org\">pengembangan profesional</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Mari Berperan",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Berkarya",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Bagikan bahan mengajar anda, bantu dengan penerjemahan, bantu me-code atau lebih.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "Kami adalah penggiat teknologi, pencipta, pendidik, orang tua dan lainnya yang ingin mengajarkan kemampuan digital dan literasi web melalui praktik. ",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Bergabung dengan kursus online gratis di bagaimana untuk mengajar web.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Dapatkan pelatihan",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "Belajar-Mengajar untuk terampil digital dan melek web.\nLaman-laman pada bagian ini berisi hal-hal seru untuk ditemukan, diajarkan dan dibuat. Komunitas global kita terus menambahkan kegiatan baru, rencana pelajaran dan tutorial dari segala penjuru web yang memudahkan upaya belajar sambil mencoba. Siapa pun dapat menggunakan sumber daya yang tersedia",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

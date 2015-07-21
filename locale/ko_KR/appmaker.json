@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "더 보기",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "사업",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "앱 메이커 살펴보기",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "상상하기",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "불꽃놀이 앱",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "앱메이커는 모바일 개인 어플을 만들기 위한 무료 툴 입니다. 코드를 모르더라도 말이죠! 웹 브라우저안에서 각각의 조각을 합쳐 맞춤 모바일 어플을 만들고 공유하세요.",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "스마트폰 앱 만들기",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "모바일 앱 쉽게 만들기",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "음악 만들기 어플",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "채팅 어플",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "친구와 채팅할 수 있는 어플",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "쉽게 시작하실 수 있습니다. 현재 템플릿을 리믹스해서 바로 앱을 만들 수 있습니다.",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "google+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "앱메이커",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "앱 제작 순서 및 도구 사용",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "공헌하기",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "자세히 보기",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "당신의 <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span> 을/를 위해서 앱을 만들어 보세요",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "신규 스마트폰 사용자를 위한 모바일 콘텐츠 제작 배포를 위한 차세대 프로그램에 참여하세요.",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "모바일 앱 만드는 방법을 보고 싶으세요? 모바일 디자인에 대한 다른 사람들의 생각을 알고 싶으시면, 교육 자료를 참고하세요.",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "학생",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "방법 보기",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "불꽃놀이를 보여 줄 수 있는 앱 만들기",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "템플릿 선택",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "교육",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "DIY 채팅방을 사용하여 친구들에게 메시지를 보내보세요.",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "앱메이커가 마음에 드시나요? 질문사항이 있나요? 더 참여하고 싶나요? 더 자세히 알고 싶나요?",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "시작하기",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "앱 메이커에 대해 전문 프로젝트 및 공헌을 통해 많은 도움을 부탁드립니다.",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "음악 어플",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "개인 목표 추적",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "친구",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

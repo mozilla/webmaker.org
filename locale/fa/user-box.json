@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "نمایه‌ی من",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "ادمین",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "تنظیمات من",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "رویداد های من",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "خروج",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "ساخته‌های من",
+        "description": "My makes"
+    }
+}

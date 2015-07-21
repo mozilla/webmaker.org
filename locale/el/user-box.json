@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Το προφίλ μου",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "Διαχειριστής",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Ρυθμίσεις",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Οι εκδηλώσεις μου",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Έξοδος",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Οι δημιουργίες μου",
+        "description": "My makes"
+    }
+}

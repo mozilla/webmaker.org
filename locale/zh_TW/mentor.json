@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "指導員",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "將 Web 實體化",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "重混影片及青少年開放原始碼",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "輔導員",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "青年輔導員",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma 在她位於加拿大維多利亞的大學電腦教室裡，為 10 到 12 歲的學童舉辦了 <a href=\"/makerparty\">Maker Party</a>。現在，她正與其他輔導員創立 Webmaker 社團，持續投入教育青年開放文化的事務。 ",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati 參加過 2012 年舉辦的 <a href=\"/makerparty\">Maker Party</a>，學習如何以 Thimble 和 Popcorn 重組 Web。現在，她將這些知識傳授給朋友、家庭成員及同學，讓他們了解基本的 HTML，以及如何在線上參與活動。",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon 在蘇格蘭的鄧迪舉辦了長達 48 小時的 <a href=\"/makerparty\">Maker Party</a>，邀請學生體驗用紙做成的「推特鳥」，以及用遊樂器搖桿操作的 Google 地圖等作品。",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Webmaker 成員、教師、重混藝術家<br> Amy Burvall",
+        "description": ""
+    }
+}

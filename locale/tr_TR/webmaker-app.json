@@ -1,0 +1,542 @@
+{
+    "Show this app in the Discover Gallery": {
+        "message": "Bu uygulama Keşif Galerisinde görüntülensin",
+        "description": "Option on detail view to share app to Discover gallery"
+    },
+    "Single Line Text": {
+        "message": "Tek Satır Metin",
+        "description": "Item in the select box"
+    },
+    "Newest": {
+        "message": "En Yeni",
+        "description": "Newest app tab"
+    },
+    "No data has been stored yet!": {
+        "message": "Henüz bir veri kaydedilmemiş!",
+        "description": "No data has been stored yet!"
+    },
+    "Add a Brick": {
+        "message": "Bir Tuğla Ekle",
+        "description": "Title for the add a brick page"
+    },
+    "Featured": {
+        "message": "Öne Çıkanlar",
+        "description": "Featured apps tab"
+    },
+    "My App": {
+        "message": "Uygulamam",
+        "description": "The Mobile app I am viewing"
+    },
+    "Separator": {
+        "message": "Ayraç",
+        "description": "Separator label"
+    },
+    "You haven't created any apps yet.": {
+        "message": "Bir uygulama yapmamışsın...henüz.",
+        "description": "Message on profile view if no apps have been created yet"
+    },
+    "Guest Explanation": {
+        "message": "Ziyaretçiler uygulama oluştabilir, ama yayımlayamaz.",
+        "description": "Explains the effect of using the app as a not signed in guest."
+    },
+    "Send SMS": {
+        "message": "SMS Gönder",
+        "description": "Send SMS text"
+    },
+    "Publishing...": {
+        "message": "Yayınlanıyor...",
+        "description": "Shows up below header when the app is being published or a publish is in progress"
+    },
+    "Open": {
+        "message": "Aç",
+        "description": "Open an app"
+    },
+    "Create": {
+        "message": "Oluştur",
+        "description": "Create an app"
+    },
+    "My Profile": {
+        "message": "Profilim",
+        "description": "Title for profile page"
+    },
+    "An active connection is needed to display the Discover Gallery": {
+        "message": "Keşif Galerisine bakmak için çalışan bir İnternet bağlantısı gerekir",
+        "description": "Explains the message communicating a lack of connection"
+    },
+    "Start Building": {
+        "message": "Yapıma Başla",
+        "description": "Start Building button for creating an app"
+    },
+    "No Data available": {
+        "message": "Kullanılabilecek bir veri yok",
+        "description": "No Data available"
+    },
+    "Business": {
+        "message": "İş Dünyası",
+        "description": "Title for an app for business owners"
+    },
+    "Get Started": {
+        "message": "Başla",
+        "description": "Button meaning: Get started making apps"
+    },
+    "Delete App": {
+        "message": "Uygulamayı Sil",
+        "description": "Button to delete entire app"
+    },
+    "Share Community News": {
+        "message": "Topluluk Haberlerini Paylaş",
+        "description": "title for template"
+    },
+    "Choose Contacts": {
+        "message": "Kişileri Seç",
+        "description": "Prompt to select contacts from mobile phone contact list"
+    },
+    "Back to My Apps": {
+        "message": "Uygulamalarına Dön",
+        "description": "Option on slide-out menu"
+    },
+    "Join Webmaker": {
+        "message": "Webmaker Sitesine Katıl",
+        "description": "Button label for creating an account"
+    },
+    "Preview": {
+        "message": "Önizleme",
+        "description": "Button that, if clicked, shows the end product of the app"
+    },
+    "URL": {
+        "message": "İnternet Adresi",
+        "description": "Label for URL input"
+    },
+    "Text Color": {
+        "message": "Metin Rengi",
+        "description": "Label for attribute of text block: the colour of the text"
+    },
+    "Minimum Number": {
+        "message": "En Küçük Sayı",
+        "description": "Minimum Number label"
+    },
+    "Increment by": {
+        "message": "Artım",
+        "description": "Increment by label"
+    },
+    "Head over to Make to start creating your very own app.": {
+        "message": "Kendi uygulamanı <strong>Yapmaya</strong> başla.",
+        "description": "Message encouraging 'make'ing an app when device is offline"
+    },
+    "Maximum Number": {
+        "message": "En Büyük Sayı",
+        "description": "Maximum Number label"
+    },
+    "Image": {
+        "message": "Görsel",
+        "description": "Type of block that can be added to the app"
+    },
+    "Sign In": {
+        "message": "Oturum Aç",
+        "description": "Sign In button label (logs user into Webmaker Mobile)"
+    },
+    "Safety": {
+        "message": "Güvenlik",
+        "description": "Title for a safety app"
+    },
+    "Discover": {
+        "message": "Keşfet",
+        "description": "Title for the Discover page (a listing of apps users can choose from)"
+    },
+    "errorAppNotFound": {
+        "message": "Maalesef, bu uygulama bulunamadı. <a href='/profile'> Profiline</a> geri dönebilirsin.",
+        "description": "Error message for app details/editing/play view when the app is not found"
+    },
+    "Name": {
+        "message": "Ad",
+        "description": "Label on the profile page, e.g. Name: Kate, Location: Canada"
+    },
+    "Are you sure you want to delete this magnificent creation": {
+        "message": "Bu harika yapımı silmek istediğine emin misin?",
+        "description": "Warning on modal to delete app"
+    },
+    "The Internet fell asleep!": {
+        "message": "İnternet uyumuş!",
+        "description": "Message on Discover view when device is online"
+    },
+    "noDataInfoSub": {
+        "message": "Kullanıcıların seninle veri paylaşmasını istiyorsan, uygulamana bir sayaç ve gönder düğmesi ekle.",
+        "description": "If you'd like to let users share data with you, try adding a Counter and a Submit button to your app."
+    },
+    "Title": {
+        "message": "Başlık",
+        "description": "Title label"
+    },
+    "Choosing this option will allow you to create your own app without a preset template.": {
+        "message": "Bu seçenk ile herhangi bir başlangıç kalıbı kullanmadan kendi uygulamanı oluşturmaya başlayabilirsin.",
+        "description": "description for template"
+    },
+    "Share App": {
+        "message": "Uygulamayı Paylaş",
+        "description": "Text on publish footer"
+    },
+    "Done": {
+        "message": "Tamam",
+        "description": "Done button"
+    },
+    "You need to connect to the Internet.": {
+        "message": "İnternete bağlantısı olmalı.",
+        "description": "Shows up below header when the app can't be published due to connection issues"
+    },
+    "This action cannot be undone": {
+        "message": "Bu işlem geri alınamaz.",
+        "description": "Footer in warning if user wants to delete their app"
+    },
+    "Delete": {
+        "message": "Sil",
+        "description": "Button for removing (deleting) a block or an app"
+    },
+    "Phone": {
+        "message": "Telefon",
+        "description": "Type of block - creates a button that calls a number"
+    },
+    "Initial Number": {
+        "message": "Başlangıç Sayısı",
+        "description": "Initial Number label"
+    },
+    "Share Via": {
+        "message": "Şuradan Paylaş",
+        "description": "Title for share view"
+    },
+    "SMS": {
+        "message": "SMS",
+        "description": "Acronym for text messaging"
+    },
+    "Gather information from your users by creating a survey.": {
+        "message": "Bir anket oluşturarak kullanıcılarından bilgi toplayabilirsin.",
+        "description": "description for template"
+    },
+    "Create a Blog": {
+        "message": "Blog Oluştur",
+        "description": "title for template"
+    },
+    "App Data": {
+        "message": "Uygulama Verisi",
+        "description": "Form data submitted for my app"
+    },
+    "Source": {
+        "message": "Kaynak",
+        "description": "Source of the image"
+    },
+    "Long Text": {
+        "message": "Uzun Metin",
+        "description": "Item in the select box"
+    },
+    "I am some text": {
+        "message": "Ben örnek bir metinim",
+        "description": "Value in the text area"
+    },
+    "share_message": {
+        "message": "Mozilla Webmaker ile yaptığım uygulamaya bir gözat",
+        "description": "Message that gets sent when a published app is shared to friends"
+    },
+    "Make and share the web": {
+        "message": "Yap ve web üzerinden paylaş",
+        "description": "sign-in view headline"
+    },
+    "Blogger": {
+        "message": "Blog yazarı",
+        "description": "Title for an app for bloggers"
+    },
+    "My {{template}} App": {
+        "message": "{{template}} Uygulamam",
+        "description": "Title for a newly created app from a template"
+    },
+    "Counter": {
+        "message": "Sayaç",
+        "description": "Button for create new block"
+    },
+    "Create a Survey": {
+        "message": "Anket Oluştur",
+        "description": "title for template"
+    },
+    "Add to Homescreen": {
+        "message": "Ana Ekrana Ekle",
+        "description": "Install message on publish footer"
+    },
+    "Button Color": {
+        "message": "Düğme Rengi",
+        "description": "Button Color label"
+    },
+    "name from location": {
+        "message": " <strong>{{name}}</strong><span v-if=\"location\"><br/></span><strong>{{location}}</strong>",
+        "description": "E.g. Kate from Canada, sorry for all the html"
+    },
+    "Select all": {
+        "message": "Tümünü seç",
+        "description": "Select all"
+    },
+    "Tap the plus sign to begin adding content.": {
+        "message": "İçerik eklemeye başlamak için artı simgesine dokun.",
+        "description": "Tap the plus sign to begin adding content."
+    },
+    "Add contacts": {
+        "message": "Kişi ekle",
+        "description": "Title on share view to add contacts from device"
+    },
+    "Teacher": {
+        "message": "Eğitmen",
+        "description": "Title for an app for teachers"
+    },
+    "Start from Scratch": {
+        "message": "Sıfırdan Başla",
+        "description": "title for template"
+    },
+    "Remix App": {
+        "message": "Uygulama Kar",
+        "description": "Option on detail view to remix an app"
+    },
+    "Offline Mode Explanation": {
+        "message": "Bu aygıtın İnternet bağlantısı olmadığından herhangi bir uygulama yayınlanamaz.",
+        "description": "Explains effect of using the app without an internet connection"
+    },
+    "Message": {
+        "message": "İleti",
+        "description": "Message you want to send"
+    },
+    "Share photos and write articles and about your local community": {
+        "message": "Yerel topluluğun ile ilgili fotoğrafları ve yazdığın makaleleri paylaşabilirsin",
+        "description": "description for template"
+    },
+    "noContactsError": {
+        "message": "SMS gönderilecek bir ya da bir kaç kullanıcıyı seç.",
+        "description": "Error if user tries to send an SMS without choosing any contacts"
+    },
+    "Open App": {
+        "message": "Uygulama Aç",
+        "description": "Option to open/play an app you don't own"
+    },
+    "by _": {
+        "message": "yapan {{name}}",
+        "description": "For apps, e.g. My Cool App, by {{name}}"
+    },
+    "Make an App": {
+        "message": "Bir Uygulama Oluştur",
+        "description": "Button label for action to make a new app"
+    },
+    "Sign Out": {
+        "message": "Oturumu Kapat",
+        "description": "Button label for button that logs user out of Webmaker Mobile"
+    },
+    "Delete my Apps": {
+        "message": "Uygulamalarımı Sil",
+        "description": "Button to delete all of a user's apps"
+    },
+    "App Name": {
+        "message": "Uygulama Adı",
+        "description": "Label for app name field"
+    },
+    "Journalist": {
+        "message": "Gazeteci",
+        "description": "Title for an app for journalists"
+    },
+    "Show in Discover Gallery": {
+        "message": "Keşfet Galerisinde Görüntülensin",
+        "description": "Option to show app within the discover gallery"
+    },
+    "Text Value": {
+        "message": "Metin Değeri",
+        "description": "Label for attribute of text block: the text value"
+    },
+    "My Apps": {
+        "message": "Uygulamalarım",
+        "description": "Mobile apps I have created"
+    },
+    "Tap the plus sign to add more content.": {
+        "message": "İçerik eklemek için artı simgesine dokun.",
+        "description": "Tap the plus sign to add more content."
+    },
+    "Cancel": {
+        "message": "İptal",
+        "description": "Cancel button"
+    },
+    "Try in Offline Mode": {
+        "message": "Çevrimdışı Kipte Dene",
+        "description": "Label for action that allows a user to use the app without signing in when the device is not connected to the internet."
+    },
+    "Guest": {
+        "message": "Ziyaretçi",
+        "description": "Label for author when the user is in trial mode"
+    },
+    "Try as Guest": {
+        "message": "Ziyaretçi Olarak Dene",
+        "description": "Label for action that allows a user to use the app without signing in."
+    },
+    "Text Box Type": {
+        "message": "Metin Kutusu Tipi",
+        "description": "Text Box Type label"
+    },
+    "No Apps Message": {
+        "message": "Henüz hiç uygulamanız yok.",
+        "description": "Message that is displayed in the profile when current user has no apps"
+    },
+    "Data": {
+        "message": "Veri",
+        "description": "Look at the data collected by an app"
+    },
+    "errorNoText": {
+        "message": "Bir metin değeri yazmalısınız",
+        "description": "No text in the textarea"
+    },
+    "Select Color": {
+        "message": "Renk Seç",
+        "description": "Title for the color picker"
+    },
+    "Edit": {
+        "message": "Düzenle",
+        "description": "Button for allowing user to edit the app"
+    },
+    "Phone #": {
+        "message": "Telefon No",
+        "description": "Label for Phone # attribute on call/sms block"
+    },
+    "Link Text": {
+        "message": "Bağlantı Metni",
+        "description": "Label for Link Text input"
+    },
+    "Save": {
+        "message": "Kaydet",
+        "description": "Button label (save changes)"
+    },
+    "Create a Safety App": {
+        "message": "Güvenlik Uygulaması Oluştur",
+        "description": "title for template"
+    },
+    "Publish": {
+        "message": "Yayınla",
+        "description": "Button label for publishing the current app"
+    },
+    "errorDefault": {
+        "message": "Malesef bir hata oluştu. <a href='/profile'>Profiline</a> geri dönebilirsin.",
+        "description": "Default error message for alert component"
+    },
+    "Button Text": {
+        "message": "Düğme Metni",
+        "description": "Button Text label"
+    },
+    "Label": {
+        "message": "Etiket",
+        "description": "The label on a button (for sms/calling)"
+    },
+    "Create a How To Guide": {
+        "message": "Nasıl Yapılır Belgesi Hazırla",
+        "description": "title for template"
+    },
+    "Submit": {
+        "message": "Gönder",
+        "description": "Button for create new block"
+    },
+    "Have something to share with the world? Start a blog, customize to make it yours and start writing!": {
+        "message": "Dünya ile paylaşacakların varsa kendine özel bir blog tasarlayarak yazmaya başlayabilirsin. ",
+        "description": "description for template"
+    },
+    "Edit my Profile": {
+        "message": "Profilini Düzenle",
+        "description": "Button label for action to edit users profile"
+    },
+    "Font Size": {
+        "message": "Yazı Boyutu",
+        "description": "Font Size label"
+    },
+    "Make": {
+        "message": "Yap",
+        "description": "Label for all available make templates"
+    },
+    "Open my app": {
+        "message": "Uygulamanı aç",
+        "description": "Option on detail (as admin) view to open app"
+    },
+    "Place call": {
+        "message": "Konum arama",
+        "description": "Button for placing a call"
+    },
+    "If you've got unique skills you'd like to share with others, try making a How To guide.": {
+        "message": "Başkaları ile paylaşmak istediğin özel yöntemlerin varsa Nasıl Yapılır Belgesi hazırlayabilirsin:",
+        "description": "description for template"
+    },
+    "Add a map, a emergency call button, and other tips to keep safe in your community": {
+        "message": "Topluluğunu güvende tutmak için bir harita, acil çağrı düğmesi ve diğer ipuçlarını ekleyebilirsin",
+        "description": "description for template"
+    },
+    "App": {
+        "message": "Uygulama",
+        "description": "Title for app detail page"
+    },
+    "Make Your Own App": {
+        "message": "Kendi Uygulamanı Yap",
+        "description": "Title for app templates, starter projects/styles to create new apps"
+    },
+    "Text Box": {
+        "message": "Metin Kutusu",
+        "description": "Type of block"
+    },
+    "App Name & Icon": {
+        "message": "Uygulama Adı ve Simgesi",
+        "description": "Title within app editor for page where user can change the app name and icon"
+    },
+    "Make your own app at": {
+        "message": "Şurada kendi uygulamalarını yap",
+        "description": "Text on footer of publish view"
+    },
+    "Share": {
+        "message": "Paylaş",
+        "description": "Share an app"
+    },
+    "Promote your Business": {
+        "message": "İşini Geliştir",
+        "description": "title for template"
+    },
+    "Show off your products and give customers an easy way to reach you.": {
+        "message": "Ürünlerini sunarak müşterilerin seni kolayca bulabilmesini sağlayabilirsin.",
+        "description": "description for template"
+    },
+    "same as minimum number": {
+        "message": "en küçük sayı ile aynı",
+        "description": "place holder for Initial number field"
+    },
+    "Text": {
+        "message": "Metin",
+        "description": "Type of block that can be added to the app"
+    },
+    "Link": {
+        "message": "Bağlantı:",
+        "description": "Link label"
+    },
+    "From Scratch": {
+        "message": "Sıfırdan",
+        "description": "Title for a blank app template. 'From Scratch' is an idiom that describes making something from the beginning with basic ingredients."
+    },
+    "error404": {
+        "message": "Maalesef, bu sayfa bulunamadı. <a href='/sign-in'>Baştan</a> başlamak ister misin?",
+        "description": "Error message for 404"
+    },
+    "toucanspeak": {
+        "message": "Biraz metin ekleyerek başlayalım.",
+        "description": "Let's start by adding some text."
+    },
+    "Made with Mozilla Webmaker": {
+        "message": "Mozilla Webmaker ile yapılmıştır.",
+        "description": "Text to toggle footer on publish view"
+    },
+    "Menu": {
+        "message": "Menü",
+        "description": "Title on slide-out menu"
+    },
+    "Color": {
+        "message": "Renk",
+        "description": "Color label"
+    },
+    "How To": {
+        "message": "Nasıl Yapılır",
+        "description": "Title for a how-to app"
+    },
+    "Title Text Color": {
+        "message": "Başlık Metni Rengi",
+        "description": "Title Text Color label"
+    }
+}

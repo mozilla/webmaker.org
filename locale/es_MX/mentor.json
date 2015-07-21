@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Hacer física la web",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Remezcla de videos y código abierto para la juventud",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mentor de jóvenes",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma organizó un <a href=\"/makerparty\">Maker Party</a> para jóvenes de 10 a 12 años en el laboratorio mediático de la universidad de Victoria, en Canadá. Ahora está trabajando con otros mentores para crear un club Webmaker y así continuar enseñando a los jóvenes la importancia de las prácticas abiertas.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati participó en nuestro Maker Party 2012 donde aprendió a remezclar sus propias páginas web usando Thimble y Popcorn. Ahora comparte sus conocimientos con amigos, familiares y compañeros de clase a través de la enseñanza del HTML básico y de la participación en línea.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organizó un Maker Party de 48 horas en Dundee, Escocia. Invitó a sus estudiantes a crear cualquier cosa, desde una imagen del pájaro de Twitter hecho con papel y alambre, hasta conectar los mapas de Google por medio de la palanca de control de una máquina de juegos.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, miembro de Webmaker, maestra y artista de remezclas",
+        "description": ""
+    }
+}

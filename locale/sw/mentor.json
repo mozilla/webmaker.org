@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "Mshauri",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Kufanya mtandao iwe hai",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Video remixing na chanzo wazi kwa ajili ya vijana",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mshauri",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mshauri wa Vijana",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma aliendesha <a href=\"/makerparty\">Maker Party</a> kwa miaka 10-12 katika mitaa maabara ya kompyuta ya chuo kikuu yake katika mji wa Victoria, Canada. Sasa yeye yuafanya kazi na washauri wengine kuendesha Webmaker Club kuendelea kufundisha vijana kuhusu umuhimu wa mazoea ya wazi.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati alishiriki katika <a href=\"/makerparty\"> Maker Party </a> mwaka 2012 ambapo alijifunza remix kurasa zake za mtandao kwa kutumia mtondoo na Popcorn. Yeye sasa anashiriki maarifa yake kwa kufundisha marafiki, familia na wanafunzi HTML ya msingi na jinsi ya kushiriki online.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon aliandaa mkutano wa masaa 48 <a href=\"/makerparty\"> maker Party </a> kule Dundee, Scotland, akiwakaribisha wanafunzi wake kuchunguza kila kitu kutoka \" ndege ya Twitta\" ilyoundwa kwa karatasi na waya na kuunganisha Google Maps juu ya Arcade joystick.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Mwananchi wa Webmaker, mwalimu na msanii wa remix",
+        "description": ""
+    }
+}

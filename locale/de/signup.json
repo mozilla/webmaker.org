@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Sichere und ver&ouml;ffentliche mit den Webmaster-Tools <span class=\"green-text\">Ben&ouml;tigt einen Webmaker-Account</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Benutze Webmaker's <a href=\"/{{lang}}/tools\">Onlinewerkzeuge</a> um deine eigene Inhalte zu erstellen",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker ist f&uuml;r immer kostenlos,</span> das hei&szlig;t du kannst die Werkzeuge, Events und Lehrmaterialien ohne jegliche Kosten benutzen, egal wo du bist oder wie fortgeschritten. Melde dich einfach an um deine Arbeit zu sichern und zu ver&ouml;ffentlichen.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Finde und nehme teil an <a href=\"/{{lang}}/events\">Veranstaltungen</a> in deiner N&auml;he.",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Verdiene <a href=\"/{{lang}}/badges/webmaker-super-mentor\">Abzeichen</a> f&uuml;r deine Web-F&auml;higkeiten <span class=\"green-text\">Ben&ouml;tigt einen Webmaker-Account</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Was bietet dir Webmaker?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Verwende Webmaker-gepr&uuml;fte <a href=\"/{{lang}}/resources\">Lehrmaterialien</a> und Entwurfsmuster.",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Erstelle dein eigenes Profil und erhalte eine pers&ouml;nliche URL <span class=\"green-text\">Ben&ouml;tigt einen Webmaker Account</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Webmaker beitreten",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Einloggen",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Registriere dich f&uuml;r Webmaker",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Erstelle und ver&ouml;ffentliche eine Veranstaltung <span class=\"green-text\">Ben&ouml;tigt einen Webmaker-Account</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Образовательные ресурсы Вебмейкера, размещённые на <a href=\"/{{ lang }}/literacy\">Карте Веб-грамотности Mozilla</a>, покрывают полный набор человеческих навыков, необходимых для процветания в современном цифровом мире.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Создавайте для веб",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Прочтите больше о модели Сетей Совместного Обучения и о том, как большие города по всему миру отстаивают цифровые навыки и веб-грамотность с помощью совместного обучения. ",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Навигация по веб",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Присоединяйтесь к нашему <a href=\"http://discourse.webmaker.org/category/meet\">онлайн-форуму</a>, чтобы встретить других учителей, как вы. Сообщайте о своих мероприятиях, деятельности и образовательных материалах с помощью хеш-тега <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> в Твиттере.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Наше глобальное сообщество здесь чтобы помочь.",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Представьтесь",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Стандарт веб-грамотности",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Побробнее",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Станьте катализатором в местном сообществе",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Покажите другим, как создавать веб и собирайте <a href=\"https://webmaker.org/badges/skill-sharer\">знаки отличия Вебмейкера</a> за распространение опыта. Когда получите достаточно опыта в этом, то получите и <a href=\"https://webmaker.org/badges/webmaker-mentor\">знак Учителя на Вебмейкере</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Опробуйте свои навыки.</strong> Нырните в мир цифрового опыта быстро через просмотр, чтение, прослушивание и распространение интересных вещей.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Принимайте участие в развитии веб",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Ресурсы для преподавания и изучения",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Исследуйте",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Побробнее",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>Мы изменились!</strong> Ищете, как быстро начать? Попробуйте наши <a href=\"/{{ lang}}/tools\">Инструменты</a>. Или переделайте что-нибудь в <a href=\"/{{ lang }}/gallery\">Галерее</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Исследование",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Приобретай новые навыки. А затем делись ими с другими.",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Соединение",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "Что такое веб-грамотность?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Поделитесь своими знаниями.</strong> Каждый может обучать с помощью Webmaker. Независимо от того, являетесь ли вы преподавателем или наставником, родителем или другом, вы можете принимать активное участие и создавать обучающие материалы, которые будут полезны другим людям.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Исследуйте галерею сообщества и посмотрите, что создают другие вебмейкеры.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Разработка",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Вовлеките себя во все детали изучения.</strong> Лучший способ что-либо изучить заключается в том, чтоб попробовать сделать это собственными руками! Создавайте веб-страницы, мультимедийные видео и ремиксы, которые помогут получить вам практические навыки по мере того, как вы создаёте.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Свяжитесь с мировым сообществом",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Учитесь через личное использование и создание. Затем распространяйте изученное вами среди других людей. Материалы Вебмейкера постороены так, что здесь легко и весело изучать что-угодно от поиска и навигации до создания программ и скриптов, цифрового гражданства и защиты онлайн-конфиденциальности. Попробуйте и вы <a href=\"/make-your-own\">создать свои</a> обучающие подборки, чтобы они распространялись среди воспителей и наставников по всему свету.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Увеличивайте свои навыки учителя",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Вебмейкер от Mozilla не такой, как другие.</strong> Мы проект с открытым кодом, построенный с помощью и для глобального сообщества учителей, технарей и людей таких, как вы. Мы любим веб и хотим распространять его креативный потенциал ради всех. Нам будет приятно сотрудничать с вами и <a href=\"/{{ lang }}/getinvolved\">вовлечь ещё больше</a>  в общее дело.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Карта Веб-грамотности поможет вам преуспеть в навыках исследования, распространения и создания Веба. ",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Создавайте более опытный и грамотный веб-мир",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Учите",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla определяет веб-грамотность как навыки и опытность, необходимые для чтения, написания и взаимодействия в вебе. Прочтите больше о том, почему Mozilla беспокоится о веб-грамотности, в этом техническом описании на Вебмейкере. ",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Создавайте свои либо присоединяйтесь к проходящим <a href=\"https://events.webmaker.org\">местным мероприятиям</a> , чтобы сотрудничать с другими создателями и обучать изучающих.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Просмотрите наши <a href=\"https://webmaker.org/resources\">обучающие материалы</a> или учавствуйте в <a href=\"https://training.webmakerprototypes.org\">профессиональном развитии</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Присоединяйтесь",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Сделайте",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Поделись собственным учебным ресурсом, помоги с переводом, внеси вклад в код и другое.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "Мы создатели, технари, воспитатели, родители и другие, которые хотят получать технические цифровые навыки и веб-грамотность путём личной практики. ",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Присоединяйся к нашим открытым онлайн курсам о том, как преподавать web.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Поупражняться",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>Обучайтесь и получайте навыки цифровой и веб-грамотности</strong>. Страницы в этом разделе полны прикольных вещей, делайте и учите. Наше мировое сообщество постоянно добавляет новые занятия, планы уроков и обучающие материалы со всего интернета, что делает практическое обучение лёгким. Каждый может испольовать эти образовательные ресурсы &mdash; они бесплатны, открыты и размещены при поддержке <a href=\"https://mozilla.org/{{ lang }}/mission/\">некоммерческой миссии Mozilla</a>.",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

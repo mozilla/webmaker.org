@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "În HTML, tag-ul <img> identifică o imagine cu src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "şi obţine permisiunea de a vizualiza şi edita codul din spatele oricărui website.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "sursa imaginii",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Instalați",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-Ray Goggles",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Trageți în bara de marcaje",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "Ajutor",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "din shapes.jpg în blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Remixare pagină",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Activare X-Ray Googles",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Schimbă <img src=\"/shapes.jpg\"> în <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Schimbă",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Apăsați pe imaginea de fundal",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Configurați X-Ray Googles",
+        "description": "Install page title"
+    }
+}

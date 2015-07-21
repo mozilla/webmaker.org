@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "எனது சுயவிவரம்",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "என் அமைப்புகள்",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "My Events",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "வெளியேறு",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "என் உருவாக்கங்கள்",
+        "description": "My makes"
+    }
+}

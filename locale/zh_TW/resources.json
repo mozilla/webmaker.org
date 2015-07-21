@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Webmaker 教育資源基於 <a href=\"/{{ lang }}/litercy\">Mozilla 的 Web 素養一覽</a>，覆蓋了現今人們所需要在數位世界生存的完整技能。",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "為 Web 創作",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Learn more about the Hive Learning Networks model and how cities around the globe are championing digital skills and web literacy through connected learning.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "探索 Web",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Join our <a href=\"http://discourse.webmaker.org/category/meet\">online forum</a> to meet other mentors like you. Share your events, activities and teaching resources using the <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> hashtag.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "我們的全球社群在此幫助您",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "介紹你自己",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Web 素養一覽",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "深入了解",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "成為一個在地社群的推動者",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Show others how to make the web and collect the <a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker Skill Sharer badge</a>. When you're ready, apply for the <a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker Mentor Badge</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Get your feet wet.</strong> Introduce yourself to new digital skills quickly through fun things to read, watch, listen or share.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "參與 Web",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "教與學的資源",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "探索 Appmaker",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "深入了解",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>We&rsquo;ve changed!</strong> Looking for easy ways to get started? Try out our <a href=\"/{{ lang}}/tools\">Tools</a>. Or remix something in the <a href=\"/{{ lang }}/gallery\">Gallery</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "探索",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "探索新技能，然後與其他人分享。",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "連結",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "什麼是 web 素養?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong> 分享你知道的 </strong> 誰都可以用 Webmaker 來教學。無論你是課堂講師或有熱忱的輔導員，父母或朋友，我們都可提供有助益的教學活動和教學指南。",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Explore the community gallery and see what other webmakers are making.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "打造",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Get your hands dirty.</strong> The best way to learn is through hands-on making and building! Create web pages, multimedia videos, or remixes that help you learn practical skills as you go.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "連接國際社群",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Learn through hands-on making and doing. Then share what you&rsquo;ve learned with others. Webmaker resources are designed to make it easy and fun to teach everything from searching and navigating to coding and scripting, digital citizenship and protecting online privacy. Try <a href=\"/make-your-own\">creating your own</a> teaching kits to share with other educators and mentors around the world.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "建立你的輔導員技能",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker is different.</strong> We&rsquo;re an open source project built by and for a global community of educators, techies and people like you. We love the web and want to spread its creative potential to all. We&rsquo;d love to collaborate with you or have you <a href=\"/{{ lang }}/getinvolved\">get more involved</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Web 素養一覽能協助您建立探索、建立與分享網路經驗的能力。",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "創造一個更具網路素養的世界",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "教學",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla defines web literacy as the skills and competencies needed for reading, writing and participating on the web. Read more about why Mozilla cares about web literacy in this Webmaker Whitepaper.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Join or host <a href=\"https://events.webmaker.org\">local events</a> to collaborate with peers and teach learners.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Browse our <a href=\"https://webmaker.org/resources\">teaching resources</a> or participate in <a href=\"https://training.webmakerprototypes.org\">professional development</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "參與我們",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "創作",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "分享您的教學資源、幫助翻譯、貢獻程式碼等等。",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "We are techies, makers, educators, parents and others who want to teach digital skills and web literacy through making.",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "加入我們關於傳授 Web 技能的免費線上開放課程。",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "接受訓練",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>教與學習數位技能與 web 素養</strong>。\n此章節的頁面裡有很多好玩的東西讓您來發掘、製造與教學。我們全球的社群持續地透過網頁增加新的活動、課程計畫與教學，讓從做中學變得更容易。任何人都可以用這些教育資源 &mdash; 因為它們都是自由、開放的，並且有 <a href=\"https://mozilla.org/{{ lang}}/mission/\">Mozilla 的非營利目標</a>做後盾。\n",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

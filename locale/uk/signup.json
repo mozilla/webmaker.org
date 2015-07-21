@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Зберігайте та опубліковуйте з інструментами Webmaker <span class=\"green-text\">Потрібен аккаунт Webmaker</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Використовуйте онлайн <a href=\"/{{lang}}/tools\">інструменти</a> Webmaker щоб створювати власний контент",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">WebMaker безкоштовен назавжди,</span> тому ви можете використовувати інструменти, події та навчальні матеріали на безоплатній основі, де б ви не знаходились, незалежно від рівня вашої майстерності. Просто створіть аккаунт і публікуйте все те, що ви робите.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Знайдіть та відвідайте <a href=\"/{{lang}}/events\">захід</a> біля Вас",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Щоб заробити <a href=\"/{{lang}}/badges/webmaker-super-mentor\">значки</a> веб-грамотності <span class=\"green-text\">потрібно мати WebMaker-аккаунт</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Що може Вам запропонувати Webmaker?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Використовуйте перевірені WebMaker'ом навчальні <a href=\"/{{lang}}/resources\">ресурси</a> і шаблони",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Створіть профіль та отримайте свій власний URL <span class=\"green-text\">Потрібен аккаунт Webmaker</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Приєднатись до Webmaker",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Увійти",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Реєстрація в Webmaker",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Створіть та опублікуйте захід <span class=\"green-text\">Потрібен аккаунт Webmaker</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

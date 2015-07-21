@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Burimet arsimuese të Webmaker-it mbështeten prej <a href=\"/{{ lang }}/literacy\">Hartës së Arsimimit mbi Web-in të Mozilla-s</a>, duke përfshirë tërësinë e aftësive që njerëzit duhet të zhvillojnë në botën e sotme digjtale.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Të krijosh për Web-in",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Mësoni më shumë mbi shabllonin e Rrjeteve të Mësimit Hive dhe sesi qytetet përreth globit po përhapin aftësitë digjitale dhe të mësuarit mbi web-in, përmes të mësuarit në linjë.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Lundrimi në Web",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Bashkojuni <a href=\"http://discourse.webmaker.org/category/meet\">forumit tonë në linjë</a>, që të takoni kujdestarë të tjerë si ju. Bashkëndajini evenimentet, veprimtaritë dhe burimet tuaja të mësimdhënies, duke përdorur thurje-etiketimin <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Bashkësia jonë globale është këtu për të ndihmuar",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Prezantohuni",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Harta e Arsimimit mbi Web-in",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Mësoni më shumë",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Bëhuni një katalizator i bashkësisë lokale",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Tregojuni të tjerëve sesi ta bëjnë web-in dhe të fitojnë <a href=\"https://webmaker.org/badges/skill-sharer\">Stemën e Bashkëndarësit të Aftësive rreth Webmaker-it</a>. Kur të jeni gati, aplikoni për <a href=\"https://webmaker.org/badges/webmaker-mentor\">Stemën e Kujdestarit të Webmaker-it</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Filloni të merrni pjesë.</strong>Njihuni me shpejtësi me aftësitë tona digjitale, përmes gjërave dëfryese për t'u lexuar, shikuar, dëgjuar ose bashkëndarë.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Pjesëmarrje në Web",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Burime për mësimdhënie dhe për të mësuar",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Zbuloni",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Mësoni më shumë",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>Ne ndryshuam!</strong> Po kërkoni mënyra të thjeshta për t'ia nisur? Provoni <a href=\"/{{ lang}}/tools\">Veglat</a> tona. Ose përzieni diçka në <a href=\"/{{ lang }}/gallery\">Galeri</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Eksplorim",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Zbuloni aftësi të reja. Më pas bashkëndajini ato me të tjerët",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Lidhje",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "Ç'është të mësuarit e Web-it?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Bashkëndani çfarë dini.</strong> Çdokush mund të japë mësim me Webmaker-in. Pavarësisht nëse jeni një edukator në klasë apo një kujdestar entuziast, prind apo mik, ne kemi veprimtari dhe udhëzuesa për mësimdhënien, që mund t'ju ndihmojnë.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Eksploroni galerinë e bashkësisë dhe shihni se ç'po bëjnë webmakers-at e tjerë.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Ndërtim",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Përvishini mëngët.</strong> Mënyra më e mirë për të mësuar është përfshirja përmes projektimit dhe ndërtimit! Krijoni webfaqe, video shumëmediale, ose përzierje që ju ndihmojnë të mësoni aftësitë praktike, ndërkohë që praktikoheni.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Lidhuni me bashkësinë globale",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Mësoni përmes përfshirjes në projektim dhe bërje. Më pas bashkëndajeni me të tjerët atë që keni mësuar. Burimet e Webmaker-it janë menduar që ta bëjnë të lehtë dhe dëfryese të mësuarit e gjithçkaje, që nga kërkimi dhe lundrimi e deri tek shifrimi dhe skriptimi, qytetaria digjitale, si dhe mbrojtja e privatësinë në linjë. Provoni <a href=\"/make-your-own\">të krijoni pajisje tuaja</a> për mësimdhënie, që t'i bashkëndani me të tjerë edukatorë e kujdestarë në mbarë botën.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Ndërtoni aftësitë tuaja si kujdestar",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker është ndryshe.</strong> Ne jemi një projekt i burimit të hapur, i ndërtuar nga dhe për një bashkësi globale edukatorësh, mësuesish dhe njerëzish si ju. Ne e duam web-in dhe dëshirojmë ta përhapim potencialin e tij krijues tek të gjithë. Dëshirojmë të bashkëpunojmë me ju, ose t'ju shohim <a href=\"/{{ lang }}/getinvolved\">të përfshirë edhe më</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Harta a Arsimimit mbi Web-in ju ndihmon që të aftësoheni në eksplorimin, ndërtimin dhe bashkëndarjen e web-it.",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Krijoni një botë edhe më të arsimuar rreth web-it",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Mësimdhënie",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla e përcakton arsimimin mbi web-in si \"aftësitë dhe kompetencat e nevojshme për të lexuar, shkruar dhe marrë pjesë në web. Lexoni më shumë përse Mozilla kujdeset për arsimimin mbi web-in në Webmaker Whitepaper.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Bashkojuni ose organizoni <a href=\"https://events.webmaker.org\">evenimente lokale</a> që të bashkëpunoni me kolegët tuaj dhe të mësoni nxënësit.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Shfletojini <a href=\"https://webmaker.org/resources\">burimet tona të mësimdhënies</a> ose merrni pjesë në <a href=\"https://training.webmakerprototypes.org\">zhvillimin profesional</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Përfshihuni",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Projekt",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Bashkëndajini burimet tuaja të mësimdhënies, ndihmoni me përkthimin, kontribuoni për kodin apo për më tepër.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "Ne jemi mësues, projektues, edukatorë, prindër, etj., që përmes projektimit dëshirojmë t'u mësojmë të tjerëve aftësitë digjitale dhe t'i arsimojmë mbi web-in, ",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Bashkojuni kursit tonë të hapur në linjë sesi t'ua mësoni web-in të tjerëve.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Stërvituni",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>Instruktoni të tjerët dhe mësoni mbi aftësitë digjitale dhe arsimimin në web</strong>.  Faqet në këtë ndarje janë plot me gjëra dëfryese për t'u zbuluar, bërë dhe instruktuar të tjerët me to. Bashkësia jonë globale po shton vazhdimisht veprimtari të reja, plane mësimore dhe instruksione nga i gjithë web-i, çka e bën të lehtë të mësosh duke bërë. Çdokush mund t'i përdorë këto burime arsimuese: ato janë pa pagesë, të hapura dhe të mbështetura nga <a href=\"https://mozilla.org/{{ lang }}/mission/\">misioni jofitimprurës i Mozilla-s</a>.",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

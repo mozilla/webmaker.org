@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "ਮਿਤੀ",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "ਟਿੱਪਣੀ",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "ਇਸ ਨੂੰ ਜਾਰੀ ਕਰਨ ਲਈ ਇੱਕ ਬੈਜ ਚੁਣੋ ਅਤੇ ਉਪਭੋਗੀਆਂ ਨੂੰ ਵੇਖੋ ਜਿਹਨਾਂ ਨੂੰ ਇਹ ਪ੍ਰਾਪਤ ਹੋਇਆ।",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "ਐਪਲੀਕੇਸ਼ਨ",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "ਬੈਜ ਅੱਪਡੇਟ ਕਰੋ",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "ਬੈਜ ਐਡਮਿਨ",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "ਈਮੇਲ",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "ਇੱਕ ਬੈਜ ਬਣਾਓ",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "ਇੱਕ ਟਿੱਪਣੀ ਜੋੜੋ",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "ਨਵਾਂ ਬੈਜ ਜਾਰੀ ਕਰੋ",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "ਮਨਸੂਖ",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "ਈਮੇਲ (ਇੱਕ ਪ੍ਰਤੀ ਲਾਈਨ, ਜਾਂ ਪੈਰਾ-ਵੱਖ)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

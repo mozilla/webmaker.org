@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Min profil",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Mina inställningar",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Mina Evenemang ",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Logga ut",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Mina projekt",
+        "description": "My makes"
+    }
+}

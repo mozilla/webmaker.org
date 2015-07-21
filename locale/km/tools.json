@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "កាត​ស្វាគមន៍​ដោយ​ផ្ទាល់​",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "កំណែ​ដែល​អាច​ជំនួស​គ្នា​នៃ​តំបន់​បណ្ដាញ​ដែល​មានការ​ប្រកួតប្រជែង",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "ធ្វើ​ឲ្យ gif មាន​ចលនា​ដោយ​មាន​សំឡេង",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble ធ្វើ​ឲ្យ​វា​​មាន​ភាព​សាមញ្ញ ដើម្បី​បង្កើត និង​ចែករំលែក​ទំព័រ​បណ្ដាញ​ផ្ទាល់​ខ្លួន​របស់​អ្នក។ សរសេរ និង​កែសម្រួល HTML ហើយ​នឹង CSS ក្នុង​កម្មវិធី​អ៊ីនធឺណិត​ត្រឹមត្រូវ, បន្ទាប់​មក​មើល​ជាមុន​ការ​ងារ​របស់​អ្នក​ភ្លាមៗ។ បង្ហោះ និង​ចែករំលែក​គម្រោង​ដែល​បាន​បញ្ចប់​របស់​អ្នក​​ដោយ​ចុច​។ ត្រឹមត្រូវ​សម្រាប់​អ្នក​ចាប់ផ្ដើម និង​​ជំនាញ​ស្រដៀង​ៗគ្នា។",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "មើល​របៀប​​ដំណើរការ​បណ្ដាញ",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "វីដេអូ​បណ្ដាញ Supercharge",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "រីករាយ​ជាមួយ​តំបន់​បណ្ដាញ​​ដល់​ពេល​និយម​របស់​មិត្តភ័ក្ដិ​ល្អ​របស់​អ្នក។",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Create and remix the web with free Webmaker tools.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "អ្នក​អាច​បង្កើត៖",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker ជួយ​អ្នក​​បញ្ចូល​​​គ្នា​វីដេអូ​បណ្ដាញ​ដោយ​ងាយស្រួល, អូឌីយ៉ូ និង​រូបភាព​ទៅ​ជា cool mashups ដែល​អ្នក​អាច​​បង្កប់​នៅ​លើ​បណ្ដាញ​ផ្សេងៗ​ទៀត។ អូស ហើយ​ទម្លាក់​មាតិកា​ពី​បណ្ដាញ, បន្ទាប់​មក​បន្ថែម​មតិ​យោបល់​ផ្ទាល់​ខ្លួន​របស់​​អ្នក​ និង​តំណ —ទាំងអស់​នៅ​ក្នុង​កម្មវិធី​អ៊ីនធឺណិត​របស់​អ្នក។ វីដេអូ Popcorn Maker ប្រែប្រួល, តំណ​ពេញ​លេញ និង​មាន​តែមួយ​ជាមួយ​គ្រប់​ទិដ្ឋភាព។",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "ខិត្តប័ណ្ណ​លើ​បណ្ដាញ​សម្រាប់​ភាពយន្ត​ដែល​អ្នក​ចូល​ចិត្ត",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "រូប​កំប្លែង",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Webmaking បង្កើត​ភាព​ងាយស្រួល",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "ចាប់ផ្ដើម​ពី​ការ​បោះបង់",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "សាកល្បង​ឥឡូវ​នេះ​ជាមួយ Goggles",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "ឯកសារ​ដែល​មាន​តំណ​ប្រែប្រួល",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles អនុញ្ញាត​ឲ្យ​អ្នក​មើល​ការ​ទប់ស្កាត់​ដែល​​​បង្កើត​ឡើង​តំបន់​បណ្ដាញ​នៅ​លើ​អ៊ីនធឺណិត។ ធ្វើ​ឲ្យ​សកម្ម​ការ​បើក/បិទ ដើម្បី​ត្រួតពិនិត្យ​កូដ​ខាងក្រោម​បណ្ដាញ, បន្ទាប់​​មក​បញ្ចូល​ធាតុ​ចូល​គ្នា​ឡើង​វិញ​ដោយ​ចុច, ប្ដូរ​នៅ​ក្នុង​អត្ថបទ​ផ្ទាល់​ខ្លួន​របស់​អ្នក, រូបភាព និង​ច្រើន​ទៀត។",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "និង​អ្វី​ច្រើន​ទៀត!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "បញ្ចូល​គ្នា​​ការ​បង្កើត",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "ប្រវត្តិរូប​ជា​​វីដេអូ​​ដែល​ត្រូវ​ណែនាំ​​​​​ទៅ​ពិភពលោក",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "គេហទំព័រ​ផ្ទាល់ខ្លួន​សម្រាប់​ពេលវេលា​នៅ​ញូវយ៉ក",
+        "description": ""
+    }
+}

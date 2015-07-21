@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "প্রোফাইল",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "অ্যাডমিন",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "আমার সেটিং",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "আমার ইভেন্টস",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "সর্বচ্চপরিচালক ",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "সাইন আউট ",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "আমার সৃষ্টি",
+        "description": "My makes"
+    }
+}

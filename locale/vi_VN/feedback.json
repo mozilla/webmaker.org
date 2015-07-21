@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Link nhanh:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Bắt đầu với Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Status Whiteboard:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Nếu bạn không thấy trường trống, hãy chắc chắn rằng tuỳ chọn nâng cao đang hiện ra.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Phản hồi",
+        "description": "Feedback"
+    }
+}

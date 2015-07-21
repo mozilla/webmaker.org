@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "త్వరిత లింకులు:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "బగ్జిల్లాతో ప్రారంభించండి",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "స్థితి వైట్బోర్డ్:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "మీరు వైట్బోర్డు రంగంలో చూడకపోతే, అధునాతన ఎంపికలు చూపిస్తున్నాము నిర్ధారించుకోండి.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "మీ అభిప్రాయం",
+        "description": "Feedback"
+    }
+}

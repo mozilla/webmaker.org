@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Ruani dhe publikoni me veglat e Webmaker-it <span class=\"green-text\">Lypset një llogari Webmaker-i</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Përdorini <a href=\"/{{lang}}/tools\">veglat</a> e Webmaker-it në linjë, që të krijoni përmbajtjen tuaj",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker-i do të jetë gjithmonë pa pagesë,</span> ndaj mund t'i përdorni veglat, evenimentet dhe burimet e mësimdhënies pa asnjë kosto, kudo ku ndodheni dhe për çfarëdo niveli aftësie që të keni. Thjesht regjistrohuni për një llogari, që të ruani dhe botoni ato çka bëni.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Gjeni <a href=\"/{{lang}}/events\">evenimentee</a> afër jush dhe merrni pjesë në to",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Fitoni <a href=\"/{{lang}}/badges/webmaker-super-mentor\">stemat</a> për aftësitë tuaja të mësimit të web-it <span class=\"green-text\">Lypset një llogari Webmaker-i</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Ç'ju ofron Webmaker-i?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Përdorini <a href=\"/{{lang}}/resources\">burimet</a> dhe modelet e verifikuara nga Webmaker-i për mësimdhënie",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Krijoni profilin tuaj dhe merrni URL-në tuaj të personalizuar <span class=\"green-text\">Lypset një llogari Webmaker-i</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Bashkojuni Webmaker-it",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Hyni",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Regjistrohui tek Webmaker-i",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Krijoni dhe publikoni një eveniment <span class=\"green-text\">Lypset një llogari Webmaker-i</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

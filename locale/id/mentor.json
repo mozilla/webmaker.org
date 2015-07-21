@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Membuat web secara fisik",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Pengolahan kembali video dan sumber terbuka untuk generasi muda",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mentor muda",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma telah adakan <a href=\"/makerparty\">Maker Party</a> untuk anak berumur 10-12 tahun di laboratorium komputer universitas setempatnya di Victoria, Kanada. Sekarang dia bekerja dengan mentor lain untuk menjalankan Klub Webmaker untuk terus mengajar pemuda tentang nilai praktek terbuka.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati berpartisipasi dalam <a href=\"/makerparty\">Maker Party</a> kami pada tahun 2012 dimana dia belajar untuk memadu ulang halaman-halaman web pribadinya menggunakan Thimble dan Popcorn. Kini dia membagikan pengetahuannya dengan cara mengajar dasar-dasar HTML pada teman-teman, keluarga dan rekan sekelasnya dan bagaimana berpartisipasi secara online.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon mengorganisir sebuah <a href=\"/makerparty\">Maker Party</a> selama 48 jam di Dundee, Skotlandia, yang mengundang mahasiswanya untuk menjelajahi apapun mulai dari \"burung Twitter\" terbuat dari kertas dan kawat hingga mengaitkan Google Maps dengan sebuah tuas kontrol arkade.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Webmaker Fellow, guru, dan seniman olah ulang (remix)",
+        "description": ""
+    }
+}

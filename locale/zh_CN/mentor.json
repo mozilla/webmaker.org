@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "导师",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "乔恩",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "让网络实体化",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "视频重组并开放资源给青年",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "辅导员",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "青年辅导员",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma曾在加拿大维多利亚当地的大学计算机实验室办了10-12岁孩子的<a href=\"/makerparty\">开发者俱乐部</a>。现在她和其他的导师一起举办Webmaker俱乐部继续告诉年轻人开放练习的价值。",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "在2012年的<a href=\"/makerparty\">Maker Party</a>中，Unnati 学习了用 Thimble 和 Popcorn 重构她自己的网页。 目前她用自己的知识来指导自己的朋友，家人和学生学习基本的 HTML 和怎样参与在线活动。",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "在苏格兰邓迪， 乔恩组织了一个48小时的<a href=\"/makerparty\">Maker Party</a>，他邀请了他的学生去探索一切从\"推特鸟\"制造来饿纸张和线来把谷歌地图连结到街机摇杆上。",
+        "description": ""
+    },
+    "Emma": {
+        "message": "艾玛",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "进步",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall是 Webmaker 研究员，老师和重组艺术家",
+        "description": ""
+    }
+}

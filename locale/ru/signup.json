@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Сохранить и опубликовать при помощи Webmaker <span class=\"green-text\">Необходима учетная запись Webmaker</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Используйте онлайн <a href=\"/{{lang}}/tools\">инструменты</a>Webmaker для создания вашего собственного контента",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker полностью бесплатен,</span> поэтому любой человек может использовать инструменты, мероприятия и обучающие ресурсы совершенно бесплатно, независимо от уровня знаний. Необходимо лишь зарегистрировать учетную запись для сохранения и публикации материалов, которые вы создадите.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Найдите и посетите <a href=\"/{{lang}}/events\">мероприятия</a> рядом с вами",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Достигайте новых<a href=\"/{{lang}}/badges/webmaker-super-mentor\">уровней знаний</a> для повышения ваших навыков веб-грамотности<span class=\"green-text\">Необходима учетная запись Webmaker</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Что Webmaker предлагает вам?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Используйте учебные <a href=\"/{{lang}}/resources\">ресурсы</a> и шаблоны, проверенные Webmaker",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Создайте ваш профиль и получите ваш собственный URL <span class=\"green-text\">Необходима учетная запись Webmaker</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Зарегистрироваться",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Войти",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Войти в Webmaker",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Запланировать и опубликовать данные о мероприятии <span class=\"green-text\">Необходима учетная запись Webmaker</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

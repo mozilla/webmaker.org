@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "ментор",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Джон",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Сделать веб физическим",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Видео-ремиксинг и открытый исходный код для молодёжи",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Наставник",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Молодёжный наставник",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Эмма провела <a href=\"/makerparty\">Maker Party</a> для 10-12 летних детей в компьютерной лаборатории ее местного университета в городе Виктория в Канаде. Теперь она работает с другими наставниками над открытием Webmaker Club для продолжения обучения молодежи, в котором большую роль играет открытая практика.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati participated in our <a href=\"/makerparty\">Maker Party</a> in 2012 where she learned to remix her own web pages using Thimble and Popcorn. She now shares her knowledge by teaching her friends, family and classmates basic HTML and how to participate online.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organized a 48-hour <a href=\"/makerparty\">Maker Party</a> in Dundee, Scotland, inviting his students to explore everything from a “Twitter bird” made out of paper and wire to hooking Google Maps up to an arcade joystick.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Эмма",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Уннати",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Эми Бервол, сотрудница Вебмейкера, учитель и ремикс-художник",
+        "description": ""
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "تاريخ",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "تعليق",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "إختر شارة لتصدرها وانظر من حصل عليها من المستخدمين",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "التطبيق",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "تحديث شارة",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "مدير التّطبيق",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "البريد الالكتروني",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "إنشاء شارة",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "إظافة تعليق",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "إصدار شارة جديدة ",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "ألغي",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "رسائل البريد الإلكتروني (واحد في كل سطر، أو مفصولة بفواصل)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

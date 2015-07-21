@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "ดูเพิ่มเติม",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "ธุรกิจ",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "ค้นพบ Appmaker",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "ลองนึกภาพ",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "แอพดอกไม้ไฟ",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "Appmaker คือเครื่องมือฟรี ใช้สำหรับการสร้างแอพส่วนตัวบนมือถือ ถึงแม้ว่าคุณจะไม่รู้วิธีการโค๊ด! รวมบล็อคด้วยกันเพื่อที่จะสร้างและแบ่งปันแอพบนเว็บเบราเซอร์",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "สร้างแอพสำหรับโทรศัพท์ของคุณ",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "แอพบนมือถือสร้างง่ายดาย",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "แอพสร้างเพลง",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "แชทแอพ",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "แอพสำหรับการแชทกับเพื่อน",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "กำลังค้นหาวิธีเริ่มต้นแบบง่ายๆ? เรียบเรียงหนึ่งในแม่แบบที่ใช้สร้างแอพของคุณเอง",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "google+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "Appmaker",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "ใช้เครื่องมือและลำดับในการสร้างแอพที่ทำเสียง",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "สนับสนุน",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "เรียนรู้เพิ่มเติม",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "สร้างแอปพลิเคชั่นเพื่อ <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span> ของคุณ",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "ร่วมกับเราในการเสริมสร้างศักยภาพของผู้ใช้มาร์ทโฟนใหม่ในการสร้างและเผยแพร่เนื้อหามือถือที่เกี่ยวข้องในท้องถิ่น",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "ต้องการที่จะแสดงคนอื่นๆ วิธีที่จะทำแอพพลิเคชั่นบนมือถือ? ต้องการที่จะให้คนอื่นๆนึกถึงการออกแบบบนมือถือ? ตรวจสอบวัสดุการเรียนการสอนของเรา!",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "นักเรียน",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "ดูว่าอย่างไร",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "ฉลองเป้าหมายหรือสร้างเสียงโดยการยิงพลุ",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "เลือกแม่แบบ",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "สอน",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "แบ่งปันข้อความกับเพื่อนโดยใช้แชท DIY นี้",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "ชอบ Appmaker? มีคำถาม? ต้องการที่จะมีส่วนร่วม? ต้องการที่จะเรียนรู้เพิ่มเติม?",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "เริ่มต้นใช้งาน",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "ช่วยให้เราทำให้ Appmaker เป็นสิ่งที่น่าตื่นตาตื่นโดยการสละเวลาและความเชี่ยวชาญของคุณกับโครงการ",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "เพลงแอพ",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "ติดตามเป้าหมายส่วนตัว",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "เพื่อน",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

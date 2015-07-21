@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "Melihat lebih lanjut",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "perusahaan",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "Telusuri Appmaker",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "Bayangkan",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "Aplikasi Kembang Api",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "Appmaker adalah perangkat gratis untuk membuat aplikasi ponsel pribadi, bahkan jika Anda tidak tahu kode! Kombinasikan balok individu untuk membuat dan berbagi aplikasi ponsel kustom langsung di peramban web Anda.",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "Buat aplikasi untuk telepon Anda.",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "Aplikasi seluler dipermudah",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "Aplikasi untuk membuat musik",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "Aplikasi obrolan",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "Sebuah aplikasi untuk berbicara dengan temanmu.",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "Mencari cara mudah untuk memulai? Campur salah satu template ini untuk membuat aplikasi Anda sendiri.",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "google+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "Appmaker",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "Pemakai <em>instruments</em> dan <em>sequencer</em> untuk membuat aplikasi yang menciptakan suara.",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "Berkontribusi",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "Pelajari lebih lanjut",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "Buat sebuah aplikasi untuk anda <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span>",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "Bergabunglah dengan kami dalam memberdayakan generasi baru pengguna ponsel pintar untuk membuat dan mendistribusikan konten ponsel lokal yang relevan.",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "Ingin menunjukkan kepada orang lain bagaimana cara membuat aplikasi mobile? Ingin agar orang lain berpikir tentang desain mobile? pelajari materi pembelajaran kami!",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "pelajar",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "Lihat caranya",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "Rayakan pencapaian atau hanya ingin membuat suara denga menembakkan kembang api!",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "Pilih salah satu kerangka",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "Mengajar",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "Bagikan pesan kepada teman menggunakan chatroom buatan sendiri",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "Suka Appmaker? Punya pertanyaan? Ingin berkontribusi? Ingin tahu lebih lanjut?",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "Mulai",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "Bantulah kami mengubah Appmaker menjadi sesuatu yang benar-benar menakjubkan dengan menyumbangkan waktu dan keahlian Anda di proyek ini.",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "Aplikasi Musik",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "Pencatat tujuan/capaian pribadi",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "teman",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

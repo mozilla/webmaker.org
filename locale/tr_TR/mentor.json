@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "danışman",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Fiziksel web yapmak",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Gençler için görüntü karma ve açık kaynak",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Danışman",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Gençlik danışmanı",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma, Victoria Kanada'da bulunan yerel üniversitesinin bilgisayar laboratuvarında 10-12 yaşındakiler için bir <a href=\"/makerparty\">Yapımcı Partisi</a> düzenledi. Şimdilerde diğer danışmanlarla birlikte çalışarak, gençlere açık uygulamaların değerini öğreten bir Webmaker Klubü çalışması yapıyor.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati, 2012 yılında düzenlediğimiz <a href=\"/makerparty\">Yapımcı Partisine</a> katılarak, Thimble ve Popcorn kullanmayı ve kendi sayfalarını karmayı öğrendi. Şimdi temel HTML ve çevrimiçi katılımcı olma yolları hakkında edindiği bilgileri arkadaşları, ailesi ve diğer öğrenciler ile paylaşıyor.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon, Dundee İskoçya'da 48 saat süren bir <a href=\"/makerparty\">Yapımcı Partisi</a> düzenledi. Öğrencilerini çağırarak kağıttan yapılmış bir \"Twitter kuşu\"ndan bir oyun çubuğuna bağlı olarak asılmış Google Haritalarına kadar pek çok şeyi keşfetmelerini sağladı.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Webmaker dostu, eğitimcisi ve karma sanatçısı",
+        "description": ""
+    }
+}

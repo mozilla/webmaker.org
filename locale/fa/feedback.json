@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "لینک‌های دم دستی",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "شروع به کار با Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "تخته‌ی وضعیت:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "اگر تخته سفید را نمیبینید، مطمئن شوید که تنظیمات پیشرفته فعال هستند.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "بازخورد",
+        "description": "Feedback"
+    }
+}

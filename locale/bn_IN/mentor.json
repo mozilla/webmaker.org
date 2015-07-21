@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "প্রশিক্ষক ",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "জন",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "বাস্তব ওয়েব বানানো হচ্ছে ",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "তরুণদের জন্য ভিডিও রিমিক্সিং এবং উনমুক্ত সোর্স",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "প্রশিক্ষক ",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "যুব মেন্টর ",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "ভিক্টোরিয়া, কানাডা-তে এমা তার বিশ্ববিদ্যালয়য়ের কম্পিউটার ল্যাবে ১০-১২ বছর বয়সীদের জন্য একটি <a href=\"/makerparty\">মেকার পার্টি</a>র আয়োজন করেছিল। এখন সে উন্মুক্ত চর্চার মূল্য সম্পর্কে তরুণদের সচেতন করতে অন্যান্য মেন্টরদের সাথে একটি ওয়েব মেকার ক্লাব চালানোর জন্য কাজ করছে।",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "উন্নাতি 2012 সালে আমাদের <a href=\"/makerparty\"> মেকার পার্টি </a> অংশগ্রহণ করেন যেখানে তিনি Thimble ও Popcorn  ব্যবহার করে তার নিজের ওয়েবপেজ পুনঃমিশ্রণ করতে শেখেন। তিনি এখন তার বন্ধু, পরিবার এবং সহপাঠীদের মধ্যে মৌলিক HTML অধ্যাপনা এবং কিভাবে অনলাইন অংশগ্রহণ করতে হয় তা ভাগ করে দিচ্ছেন।",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "স্কটল্যান্ডের ডান্ডিতে, জন ৪৮ ঘণ্টা ব্যাপি একটি <a href=\"/makerparty\">মেকার পার্টি</a>র আয়োজন করে। সে তার ছাত্রদের একটি কাগজের পাখি তৈরি করা থেকে শুরু করে গেমের জয়স্টিক দিয়ে গুগল ম্যাপ ব্যবহার করা শিখিয়েছিল।",
+        "description": ""
+    },
+    "Emma": {
+        "message": "এমা",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "উন্নাতি",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "এমি বারভেল, Webmaker সহযোগী, শিক্ষক এবং রিমিক্স শিল্পী",
+        "description": ""
+    }
+}

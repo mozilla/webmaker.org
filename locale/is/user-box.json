@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Prófíllinn minn",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Stillingarnar mínar",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Mínir viðburðir",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Útskrá",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "M'inar smíðar",
+        "description": "My makes"
+    }
+}

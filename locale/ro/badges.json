@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "data",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Comentează",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Alege o insignă pentru a o remite şi a vedea utilizatorii care au primit-o.",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "aplicații",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Actualizează o insignă",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Administrator insigne",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "Email",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Creează o Insignă",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Adaugă un comentariu",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Remite insigne noi",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Revocă",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Emailuri (câte unul pe linie sau separate prin virgulă)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

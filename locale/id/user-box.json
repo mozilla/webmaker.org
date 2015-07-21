@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Profil Saya",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Setelan Saya",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Acara Saya",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Log-keluar",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Karya saya",
+        "description": "My makes"
+    }
+}

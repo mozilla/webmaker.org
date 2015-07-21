@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Tallenna ja julkaise Webmakerin työkaluilla <span class=\"green-text\">Vaatii Webmaker-tilin</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Käytä Webmakerin <a href=\"/{{lang}}/tools\">verkkotyökaluja</a> oman sisältösi luomiseksi",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker on aina ilmainen</span>, joten voit käyttää työkaluja, tapahtumia ja opetusresursseja ilmaiseksi, missä tahansa oletkin ja taitotasostasi riippumatta. Rekisteröi itsellesi tunnus, jotta voit tallentaa ja julkaista luomuksesi.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Etsi ja osallistu lähelläsi järjestettäviin <a href=\"/{{lang}}/events\">tapahtumiin</a>",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Ansaitse <a href=\"/{{lang}}/badges/webmaker-super-mentor\">merkkejä</a> verkkotaidoistasi <span class=\"green-text\">Vaatii Webmaker-tilin</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Mitä Webmaker tarjoaa?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Käytä Webmakerille räätälöityjä <a href=\"/{{lang}}/resources\">opetusresursseja</a> ja mallipohjia",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Luo profiilisi ja oma verkko-osoitteesi <span class=\"green-text\">Vaatii Webmaker-tilin</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Liity Webmakeriin",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Kirjaudu",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Liity Webmakeriin",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Luo ja julkaise tapahtumia <span class=\"green-text\">Vaatii Webmaker-tilin</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Facendo a web física",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Mestura de video e código aberto para a xente moza",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mentor de mozos",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Enma deu unha  <a href=\"/makerparty\">Maker Party</a> para nenos entre 10-12 anos no laboratorio de informática da súa universidade en Victoria, Canada. Agora traballa con outros mentores para facer un Club Wemaker para seguir ensinando á mocidade sobre o valor das prácticas libres.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati participated in our <a href=\"/makerparty\">Maker Party</a> in 2012 where she learned to remix her own web pages using Thimble and Popcorn. She now shares her knowledge by teaching her friends, family and classmates basic HTML and how to participate online.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organizou una <a href=\"/makerparty\">Maker Party</a> de 48 horas en Dundee, Escocia, invitando aos seus estudantes a exploralo todo, dende o páxaro de Twiter feito de papel  e cables ate conectar o Google Maps a un joystick de xogos Arcade.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, membro de Webmaker, mestre e artista de mesturas",
+        "description": ""
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "I HTML <img> identifierar en bild med src=\"filnamn\"",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "och få kraft att visa och redigera koden bakom en webbplats.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "Röntgen-glasögon",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "källa",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Installera",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "Röntgen-glasögon",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Dra till bokmärkesraden ",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "hjälp",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "från shapes.jpg till blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Remixa denna sida",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Aktivera Röntgen-glasögon",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Ändra <img src=\"/shapes.jpg\"> till <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Ändra bilden's",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Klicka på bakgrundsbilden",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Konfigurera Röntgen-glasögon",
+        "description": "Install page title"
+    }
+}

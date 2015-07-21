@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Quick links:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Getting Started with Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Status Whiteboard:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "If you don’t see the Whiteboard field, make sure the advanced options are showing.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Povratna informacija",
+        "description": "Feedback"
+    }
+}

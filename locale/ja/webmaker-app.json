@@ -1,0 +1,542 @@
+{
+    "Show this app in the Discover Gallery": {
+        "message": "Discover Gallery にこのアプリを展示する",
+        "description": "Option on detail view to share app to Discover gallery"
+    },
+    "Single Line Text": {
+        "message": "1 行のテキスト",
+        "description": "Item in the select box"
+    },
+    "Newest": {
+        "message": "新着",
+        "description": "Newest app tab"
+    },
+    "No data has been stored yet!": {
+        "message": "何も保存されていません！",
+        "description": "No data has been stored yet!"
+    },
+    "Add a Brick": {
+        "message": "Brick を追加",
+        "description": "Title for the add a brick page"
+    },
+    "Featured": {
+        "message": "注目",
+        "description": "Featured apps tab"
+    },
+    "My App": {
+        "message": "マイアプリ",
+        "description": "The Mobile app I am viewing"
+    },
+    "Separator": {
+        "message": "セパレーター",
+        "description": "Separator label"
+    },
+    "You haven't created any apps yet.": {
+        "message": "まだアプリを作っていません。",
+        "description": "Message on profile view if no apps have been created yet"
+    },
+    "Guest Explanation": {
+        "message": "ゲストアカウントでは、アプリの作成はできますが、公開はできません。",
+        "description": "Explains the effect of using the app as a not signed in guest."
+    },
+    "Send SMS": {
+        "message": "SMS のテキスト送信",
+        "description": "Send SMS text"
+    },
+    "Publishing...": {
+        "message": "公開中・・・",
+        "description": "Shows up below header when the app is being published or a publish is in progress"
+    },
+    "Open": {
+        "message": "開く",
+        "description": "Open an app"
+    },
+    "Create": {
+        "message": "作成",
+        "description": "Create an app"
+    },
+    "My Profile": {
+        "message": "プロフィール",
+        "description": "Title for profile page"
+    },
+    "An active connection is needed to display the Discover Gallery": {
+        "message": "Discover Gallery の表示にはアクティブなインターネット接続が必要です",
+        "description": "Explains the message communicating a lack of connection"
+    },
+    "Start Building": {
+        "message": "作り始める",
+        "description": "Start Building button for creating an app"
+    },
+    "No Data available": {
+        "message": "利用できるデータがありません",
+        "description": "No Data available"
+    },
+    "Business": {
+        "message": "ビジネス",
+        "description": "Title for an app for business owners"
+    },
+    "Get Started": {
+        "message": "はじめよう",
+        "description": "Button meaning: Get started making apps"
+    },
+    "Delete App": {
+        "message": "アプリを削除",
+        "description": "Button to delete entire app"
+    },
+    "Share Community News": {
+        "message": "コミュニティのお知らせを共有する",
+        "description": "title for template"
+    },
+    "Choose Contacts": {
+        "message": "コンタクトを選択",
+        "description": "Prompt to select contacts from mobile phone contact list"
+    },
+    "Back to My Apps": {
+        "message": "枚アプリに戻る",
+        "description": "Option on slide-out menu"
+    },
+    "Join Webmaker": {
+        "message": "Webmaker に参加する",
+        "description": "Button label for creating an account"
+    },
+    "Preview": {
+        "message": "プレビュー",
+        "description": "Button that, if clicked, shows the end product of the app"
+    },
+    "URL": {
+        "message": "URL",
+        "description": "Label for URL input"
+    },
+    "Text Color": {
+        "message": "文字の色",
+        "description": "Label for attribute of text block: the colour of the text"
+    },
+    "Minimum Number": {
+        "message": "最小値",
+        "description": "Minimum Number label"
+    },
+    "Increment by": {
+        "message": "増加値",
+        "description": "Increment by label"
+    },
+    "Head over to Make to start creating your very own app.": {
+        "message": "<strong>Make</strong>からあなたのオリジナルアプリ製作をはじめましょう",
+        "description": "Message encouraging 'make'ing an app when device is offline"
+    },
+    "Maximum Number": {
+        "message": "最大値",
+        "description": "Maximum Number label"
+    },
+    "Image": {
+        "message": "画像",
+        "description": "Type of block that can be added to the app"
+    },
+    "Sign In": {
+        "message": "サインイン",
+        "description": "Sign In button label (logs user into Webmaker Mobile)"
+    },
+    "Safety": {
+        "message": "セーフティー",
+        "description": "Title for a safety app"
+    },
+    "Discover": {
+        "message": "見つける",
+        "description": "Title for the Discover page (a listing of apps users can choose from)"
+    },
+    "errorAppNotFound": {
+        "message": "このアプリは見つかりませんでした。あなたの <a href='/profile'>プロフィール</a> のページへ戻りますか？",
+        "description": "Error message for app details/editing/play view when the app is not found"
+    },
+    "Name": {
+        "message": "名前",
+        "description": "Label on the profile page, e.g. Name: Kate, Location: Canada"
+    },
+    "Are you sure you want to delete this magnificent creation": {
+        "message": "この素晴らしい作品を本当に削除してもよろしいですか？",
+        "description": "Warning on modal to delete app"
+    },
+    "The Internet fell asleep!": {
+        "message": "インターネットは寝ています！",
+        "description": "Message on Discover view when device is online"
+    },
+    "noDataInfoSub": {
+        "message": "ユーザーがあなたとデータを共有するために、カウンターと送信ボタンをあなたのアプリに追加してみましょう。",
+        "description": "If you'd like to let users share data with you, try adding a Counter and a Submit button to your app."
+    },
+    "Title": {
+        "message": "タイトル",
+        "description": "Title label"
+    },
+    "Choosing this option will allow you to create your own app without a preset template.": {
+        "message": "このオプションを選択すると、テンプレートを使わずにアプリを作ることができます。",
+        "description": "description for template"
+    },
+    "Share App": {
+        "message": "アプリを共有",
+        "description": "Text on publish footer"
+    },
+    "Done": {
+        "message": "完了",
+        "description": "Done button"
+    },
+    "You need to connect to the Internet.": {
+        "message": "インターネット接続が必要です。",
+        "description": "Shows up below header when the app can't be published due to connection issues"
+    },
+    "This action cannot be undone": {
+        "message": "このアクションは取り消すことができません。",
+        "description": "Footer in warning if user wants to delete their app"
+    },
+    "Delete": {
+        "message": "削除",
+        "description": "Button for removing (deleting) a block or an app"
+    },
+    "Phone": {
+        "message": "通話",
+        "description": "Type of block - creates a button that calls a number"
+    },
+    "Initial Number": {
+        "message": "初期値",
+        "description": "Initial Number label"
+    },
+    "Share Via": {
+        "message": "で共有",
+        "description": "Title for share view"
+    },
+    "SMS": {
+        "message": "SMS",
+        "description": "Acronym for text messaging"
+    },
+    "Gather information from your users by creating a survey.": {
+        "message": "アンケートを作成して、ユーザーから情報を収集する。",
+        "description": "description for template"
+    },
+    "Create a Blog": {
+        "message": "ブログを作る",
+        "description": "title for template"
+    },
+    "App Data": {
+        "message": "アプリデータ",
+        "description": "Form data submitted for my app"
+    },
+    "Source": {
+        "message": "画像の URL",
+        "description": "Source of the image"
+    },
+    "Long Text": {
+        "message": "長文テキスト",
+        "description": "Item in the select box"
+    },
+    "I am some text": {
+        "message": "サンプルテキスト",
+        "description": "Value in the text area"
+    },
+    "share_message": {
+        "message": "Mozilla Webmaker で作った私のアプリを見てください",
+        "description": "Message that gets sent when a published app is shared to friends"
+    },
+    "Make and share the web": {
+        "message": "作る&amp; webをシェアする",
+        "description": "sign-in view headline"
+    },
+    "Blogger": {
+        "message": "ブロガー",
+        "description": "Title for an app for bloggers"
+    },
+    "My {{template}} App": {
+        "message": "サンプル {{template}} アプリ",
+        "description": "Title for a newly created app from a template"
+    },
+    "Counter": {
+        "message": "カウンタ",
+        "description": "Button for create new block"
+    },
+    "Create a Survey": {
+        "message": "アンケートを作成する",
+        "description": "title for template"
+    },
+    "Add to Homescreen": {
+        "message": "ホームスクリーンの追加",
+        "description": "Install message on publish footer"
+    },
+    "Button Color": {
+        "message": "ボタンの色",
+        "description": "Button Color label"
+    },
+    "name from location": {
+        "message": " <strong>{{name}}</strong><span v-if=\"location\"><br/></span><strong>{{location}}</strong>",
+        "description": "E.g. Kate from Canada, sorry for all the html"
+    },
+    "Select all": {
+        "message": "すべて選択",
+        "description": "Select all"
+    },
+    "Tap the plus sign to begin adding content.": {
+        "message": "プラスサインをタップしてコンテンツの追加をはじめましょう。",
+        "description": "Tap the plus sign to begin adding content."
+    },
+    "Add contacts": {
+        "message": "コンタクトの追加",
+        "description": "Title on share view to add contacts from device"
+    },
+    "Teacher": {
+        "message": "教師",
+        "description": "Title for an app for teachers"
+    },
+    "Start from Scratch": {
+        "message": "スクラッチから作り始める",
+        "description": "title for template"
+    },
+    "Remix App": {
+        "message": "アプリをリミックス",
+        "description": "Option on detail view to remix an app"
+    },
+    "Offline Mode Explanation": {
+        "message": "端末がインターネットに接続されていないため、アプリの公開はできません。",
+        "description": "Explains effect of using the app without an internet connection"
+    },
+    "Message": {
+        "message": "メッセージ",
+        "description": "Message you want to send"
+    },
+    "Share photos and write articles and about your local community": {
+        "message": "あなたの地域のコミュニティの写真を共有し記事を書きましょう。",
+        "description": "description for template"
+    },
+    "noContactsError": {
+        "message": "SMS を送信するには、相手の連絡先を選択してください。",
+        "description": "Error if user tries to send an SMS without choosing any contacts"
+    },
+    "Open App": {
+        "message": "アプリを開く",
+        "description": "Option to open/play an app you don't own"
+    },
+    "by _": {
+        "message": "作者: {{name}}",
+        "description": "For apps, e.g. My Cool App, by {{name}}"
+    },
+    "Make an App": {
+        "message": "アプリを作る",
+        "description": "Button label for action to make a new app"
+    },
+    "Sign Out": {
+        "message": "サインアウト",
+        "description": "Button label for button that logs user out of Webmaker Mobile"
+    },
+    "Delete my Apps": {
+        "message": "すべてのアプリを削除",
+        "description": "Button to delete all of a user's apps"
+    },
+    "App Name": {
+        "message": "アプリの名前",
+        "description": "Label for app name field"
+    },
+    "Journalist": {
+        "message": "ジャーナリスト",
+        "description": "Title for an app for journalists"
+    },
+    "Show in Discover Gallery": {
+        "message": "Discover Gallery での展示",
+        "description": "Option to show app within the discover gallery"
+    },
+    "Text Value": {
+        "message": "テキストブロック",
+        "description": "Label for attribute of text block: the text value"
+    },
+    "My Apps": {
+        "message": "マイアプリ",
+        "description": "Mobile apps I have created"
+    },
+    "Tap the plus sign to add more content.": {
+        "message": "プラスサインをタップしてもっとたくさんのコンテンツを追加しましょう。",
+        "description": "Tap the plus sign to add more content."
+    },
+    "Cancel": {
+        "message": "キャンセル",
+        "description": "Cancel button"
+    },
+    "Try in Offline Mode": {
+        "message": "オフラインモードで試す",
+        "description": "Label for action that allows a user to use the app without signing in when the device is not connected to the internet."
+    },
+    "Guest": {
+        "message": "ゲスト",
+        "description": "Label for author when the user is in trial mode"
+    },
+    "Try as Guest": {
+        "message": "ゲストアカウントで試す",
+        "description": "Label for action that allows a user to use the app without signing in."
+    },
+    "Text Box Type": {
+        "message": "テキストボックスの種類",
+        "description": "Text Box Type label"
+    },
+    "No Apps Message": {
+        "message": "アプリはまだありません。",
+        "description": "Message that is displayed in the profile when current user has no apps"
+    },
+    "Data": {
+        "message": "データ",
+        "description": "Look at the data collected by an app"
+    },
+    "errorNoText": {
+        "message": "テキストを記入してください。",
+        "description": "No text in the textarea"
+    },
+    "Select Color": {
+        "message": "色選択",
+        "description": "Title for the color picker"
+    },
+    "Edit": {
+        "message": "編集",
+        "description": "Button for allowing user to edit the app"
+    },
+    "Phone #": {
+        "message": "電話番号",
+        "description": "Label for Phone # attribute on call/sms block"
+    },
+    "Link Text": {
+        "message": "リンクテキスト",
+        "description": "Label for Link Text input"
+    },
+    "Save": {
+        "message": "保存",
+        "description": "Button label (save changes)"
+    },
+    "Create a Safety App": {
+        "message": "セーフティアプリを作りましょう",
+        "description": "title for template"
+    },
+    "Publish": {
+        "message": "公開",
+        "description": "Button label for publishing the current app"
+    },
+    "errorDefault": {
+        "message": "エラーが発生しました。あなたの <a href='/profile'>プロフィール</a> のページへ戻りますか？",
+        "description": "Default error message for alert component"
+    },
+    "Button Text": {
+        "message": "ボタンのラベル",
+        "description": "Button Text label"
+    },
+    "Label": {
+        "message": "ラベル",
+        "description": "The label on a button (for sms/calling)"
+    },
+    "Create a How To Guide": {
+        "message": "手順を作成する",
+        "description": "title for template"
+    },
+    "Submit": {
+        "message": "送信",
+        "description": "Button for create new block"
+    },
+    "Have something to share with the world? Start a blog, customize to make it yours and start writing!": {
+        "message": "何か世界に共有したいことはありますか？ブログをスタートしましょう。あなた好みにカスタマイズして書き始めましょう！",
+        "description": "description for template"
+    },
+    "Edit my Profile": {
+        "message": "プロフィールを編集",
+        "description": "Button label for action to edit users profile"
+    },
+    "Font Size": {
+        "message": "フォントサイズ",
+        "description": "Font Size label"
+    },
+    "Make": {
+        "message": "作る",
+        "description": "Label for all available make templates"
+    },
+    "Open my app": {
+        "message": "マイアプリを開く",
+        "description": "Option on detail (as admin) view to open app"
+    },
+    "Place call": {
+        "message": "電話をかける",
+        "description": "Button for placing a call"
+    },
+    "If you've got unique skills you'd like to share with others, try making a How To guide.": {
+        "message": "他の人々に共有したいユニークなスキルがあるなら、How to ガイドを書いてみましょう。",
+        "description": "description for template"
+    },
+    "Add a map, a emergency call button, and other tips to keep safe in your community": {
+        "message": "地図、緊急通報ボタン等あなたの地域で安全で居られるようにしましょう",
+        "description": "description for template"
+    },
+    "App": {
+        "message": "アプリ",
+        "description": "Title for app detail page"
+    },
+    "Make Your Own App": {
+        "message": "あなたのアプリを作りましょう",
+        "description": "Title for app templates, starter projects/styles to create new apps"
+    },
+    "Text Box": {
+        "message": "テキストボックス",
+        "description": "Type of block"
+    },
+    "App Name & Icon": {
+        "message": "アプリの名前とアイコン",
+        "description": "Title within app editor for page where user can change the app name and icon"
+    },
+    "Make your own app at": {
+        "message": "自分のアプリを作る",
+        "description": "Text on footer of publish view"
+    },
+    "Share": {
+        "message": "共有",
+        "description": "Share an app"
+    },
+    "Promote your Business": {
+        "message": "あなたのビジネスをプロモーションする",
+        "description": "title for template"
+    },
+    "Show off your products and give customers an easy way to reach you.": {
+        "message": "あなたの製品の展示とお客様が簡単にあなたに連絡できるようにしましょう。",
+        "description": "description for template"
+    },
+    "same as minimum number": {
+        "message": "最小値と同じ",
+        "description": "place holder for Initial number field"
+    },
+    "Text": {
+        "message": "テキスト",
+        "description": "Type of block that can be added to the app"
+    },
+    "Link": {
+        "message": "リンク",
+        "description": "Link label"
+    },
+    "From Scratch": {
+        "message": "スクラッチから作る",
+        "description": "Title for a blank app template. 'From Scratch' is an idiom that describes making something from the beginning with basic ingredients."
+    },
+    "error404": {
+        "message": "このページを見つけられませんでした。<a href='/sign-in'>最初のページ</a> へお戻りください。",
+        "description": "Error message for 404"
+    },
+    "toucanspeak": {
+        "message": "テキストの追加からはじめてみましょう。",
+        "description": "Let's start by adding some text."
+    },
+    "Made with Mozilla Webmaker": {
+        "message": "Made with Mozilla Webmaker",
+        "description": "Text to toggle footer on publish view"
+    },
+    "Menu": {
+        "message": "メニュー",
+        "description": "Title on slide-out menu"
+    },
+    "Color": {
+        "message": "色",
+        "description": "Color label"
+    },
+    "How To": {
+        "message": "入門",
+        "description": "Title for a how-to app"
+    },
+    "Title Text Color": {
+        "message": "タイトルテキストの色",
+        "description": "Title Text Color label"
+    }
+}

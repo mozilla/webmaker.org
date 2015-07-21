@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Profilim",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "yönetici",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Ayarlarım",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Etkinliklerim",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "süperdanışman",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Oturumu kapat",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Yapımlarım",
+        "description": "My makes"
+    }
+}

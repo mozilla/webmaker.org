@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Guardar y publicar con herramientas Webmaker <span class=\"green-text\"> Necesita una cuenta Webmaker</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Utiliza las herramientas online <a href=\"/{{lang}}/tools\"></a> para crear tu propio contenido",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker es gratuito para siempre,</span> para que puedas utilizar las herramientas, eventos y recursos de enseñanza sin costo, donde quiera que est&eacute;s, sin importar tu nivel de habilidad. Simplemente registra una cuenta para guardar y publicar las cosas que hagas.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Encuentra y asiste a <a href=\"/{{lang}}/events\">eventos</a> cerca de ti",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Gana <a href=\"/{{lang}}/badges/webmaker-super-mentor\">insignias</a> por tus habilidades de alfabetizaci&oacute;n Web. <span class=\"green-text\">Requiere una cuenta de Webmaker</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "¿Que te ofrece Webmaker?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Usa <a href=\"/{{lang}}/resources\">recursos</a> y plantillas didácticas basadas en Webmaker.",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Crear tu perfil y conseguir tu propia URL personalizada <span class=\"green-text\">Necesita una cuenta Webmaker</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Unirse a Webmaker",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Iniciar sesión",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Registrarse para Webmaker",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Crear y publicar un evento <span class=\"green-text\"> Necesita una cuenta Webmaker </span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

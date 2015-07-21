@@ -1,0 +1,542 @@
+{
+    "Show this app in the Discover Gallery": {
+        "message": "Diese App in der Gallerie anzeigen",
+        "description": "Option on detail view to share app to Discover gallery"
+    },
+    "Single Line Text": {
+        "message": "Einzeiliger Text",
+        "description": "Item in the select box"
+    },
+    "Newest": {
+        "message": "Neueste",
+        "description": "Newest app tab"
+    },
+    "No data has been stored yet!": {
+        "message": "Es wurden noch keine Daten gespeichert!",
+        "description": "No data has been stored yet!"
+    },
+    "Add a Brick": {
+        "message": "F&uuml;ge einen Baustein dazu",
+        "description": "Title for the add a brick page"
+    },
+    "Featured": {
+        "message": "Ausgewählte",
+        "description": "Featured apps tab"
+    },
+    "My App": {
+        "message": "Meine App",
+        "description": "The Mobile app I am viewing"
+    },
+    "Separator": {
+        "message": "Trennzeichen",
+        "description": "Separator label"
+    },
+    "You haven't created any apps yet.": {
+        "message": "Du hast noch keine Anwendungen erzeugt...bis jetzt.",
+        "description": "Message on profile view if no apps have been created yet"
+    },
+    "Guest Explanation": {
+        "message": "Gäste können Apps erstellen, aber nicht veröffentlichen.",
+        "description": "Explains the effect of using the app as a not signed in guest."
+    },
+    "Send SMS": {
+        "message": "SMS senden",
+        "description": "Send SMS text"
+    },
+    "Publishing...": {
+        "message": "Wird veröffentlicht...",
+        "description": "Shows up below header when the app is being published or a publish is in progress"
+    },
+    "Open": {
+        "message": "Öffnen",
+        "description": "Open an app"
+    },
+    "Create": {
+        "message": "Erstellen",
+        "description": "Create an app"
+    },
+    "My Profile": {
+        "message": "Mein Profil",
+        "description": "Title for profile page"
+    },
+    "An active connection is needed to display the Discover Gallery": {
+        "message": "Zum Anzeigen der Gallerie wird eine aktive Internetverbindung benötigt",
+        "description": "Explains the message communicating a lack of connection"
+    },
+    "Start Building": {
+        "message": "Mit dem Erstellen beginnen",
+        "description": "Start Building button for creating an app"
+    },
+    "No Data available": {
+        "message": "Keine Daten verfügbar",
+        "description": "No Data available"
+    },
+    "Business": {
+        "message": "Geschäft",
+        "description": "Title for an app for business owners"
+    },
+    "Get Started": {
+        "message": "Jetzt loslegen",
+        "description": "Button meaning: Get started making apps"
+    },
+    "Delete App": {
+        "message": "App löschen",
+        "description": "Button to delete entire app"
+    },
+    "Share Community News": {
+        "message": "Community News teilen",
+        "description": "title for template"
+    },
+    "Choose Contacts": {
+        "message": "Kontakte wählen",
+        "description": "Prompt to select contacts from mobile phone contact list"
+    },
+    "Back to My Apps": {
+        "message": "Zurück zu meinen Apps",
+        "description": "Option on slide-out menu"
+    },
+    "Join Webmaker": {
+        "message": "Webmaker beitreten",
+        "description": "Button label for creating an account"
+    },
+    "Preview": {
+        "message": "Vorschau",
+        "description": "Button that, if clicked, shows the end product of the app"
+    },
+    "URL": {
+        "message": "URL",
+        "description": "Label for URL input"
+    },
+    "Text Color": {
+        "message": "Textfarbe",
+        "description": "Label for attribute of text block: the colour of the text"
+    },
+    "Minimum Number": {
+        "message": "Minimum",
+        "description": "Minimum Number label"
+    },
+    "Increment by": {
+        "message": "Erhöhen um",
+        "description": "Increment by label"
+    },
+    "Head over to Make to start creating your very own app.": {
+        "message": "Gehen Sie zu <strong>Verfassen</strong>, um damit zu beginnen, Ihre eigene App zu erstellen.",
+        "description": "Message encouraging 'make'ing an app when device is offline"
+    },
+    "Maximum Number": {
+        "message": "Maximum",
+        "description": "Maximum Number label"
+    },
+    "Image": {
+        "message": "Bild",
+        "description": "Type of block that can be added to the app"
+    },
+    "Sign In": {
+        "message": "Einloggen",
+        "description": "Sign In button label (logs user into Webmaker Mobile)"
+    },
+    "Safety": {
+        "message": "Sicherheit",
+        "description": "Title for a safety app"
+    },
+    "Discover": {
+        "message": "Entdecke",
+        "description": "Title for the Discover page (a listing of apps users can choose from)"
+    },
+    "errorAppNotFound": {
+        "message": "Entschuldigung, diese App konnte nicht gefunden werden. Zurück zum <a href='/profile'>Profil</a>?",
+        "description": "Error message for app details/editing/play view when the app is not found"
+    },
+    "Name": {
+        "message": "Name",
+        "description": "Label on the profile page, e.g. Name: Kate, Location: Canada"
+    },
+    "Are you sure you want to delete this magnificent creation": {
+        "message": "Sind Sie sicher, dass Sie dieses tolle Werk löschen möchten?",
+        "description": "Warning on modal to delete app"
+    },
+    "The Internet fell asleep!": {
+        "message": "Das Internet ist eingeschlafen!",
+        "description": "Message on Discover view when device is online"
+    },
+    "noDataInfoSub": {
+        "message": "Wenn Sie es anderen Nutzern ermöglichen möchten, Daten mit Ihnen zu teilen, fügen Sie Ihrer App einen Zähler und einen Zähler und eine Schaltfläche zum Absenden hinzu.",
+        "description": "If you'd like to let users share data with you, try adding a Counter and a Submit button to your app."
+    },
+    "Title": {
+        "message": "Titel",
+        "description": "Title label"
+    },
+    "Choosing this option will allow you to create your own app without a preset template.": {
+        "message": "Diese Option erlaubt dir eine App zu erstellen ohne ein Template zu verwenden.",
+        "description": "description for template"
+    },
+    "Share App": {
+        "message": "Verbreite die App",
+        "description": "Text on publish footer"
+    },
+    "Done": {
+        "message": "Fertig",
+        "description": "Done button"
+    },
+    "You need to connect to the Internet.": {
+        "message": "Du musst mit dem Internet verbunden sein.",
+        "description": "Shows up below header when the app can't be published due to connection issues"
+    },
+    "This action cannot be undone": {
+        "message": "Diese Aktion kann nicht rückgängig gemacht werden.",
+        "description": "Footer in warning if user wants to delete their app"
+    },
+    "Delete": {
+        "message": "Löschen",
+        "description": "Button for removing (deleting) a block or an app"
+    },
+    "Phone": {
+        "message": "Telefon",
+        "description": "Type of block - creates a button that calls a number"
+    },
+    "Initial Number": {
+        "message": "Anfangszahl",
+        "description": "Initial Number label"
+    },
+    "Share Via": {
+        "message": "Verbreiten über",
+        "description": "Title for share view"
+    },
+    "SMS": {
+        "message": "SMS",
+        "description": "Acronym for text messaging"
+    },
+    "Gather information from your users by creating a survey.": {
+        "message": "Erhalten Sie Informationen von Ihren Nutzern, indem Sie eine Umfrage erstellen.",
+        "description": "description for template"
+    },
+    "Create a Blog": {
+        "message": "Blog erstellen",
+        "description": "title for template"
+    },
+    "App Data": {
+        "message": "Appdaten",
+        "description": "Form data submitted for my app"
+    },
+    "Source": {
+        "message": "Quelle",
+        "description": "Source of the image"
+    },
+    "Long Text": {
+        "message": "Langer Text",
+        "description": "Item in the select box"
+    },
+    "I am some text": {
+        "message": "Ich bin ein Text",
+        "description": "Value in the text area"
+    },
+    "share_message": {
+        "message": "Sieh dir die App an die ich mit dem Mozilla Webmaker erschaffen hab",
+        "description": "Message that gets sent when a published app is shared to friends"
+    },
+    "Make and share the web": {
+        "message": "Verfassen &amp; teilen Sie das Internet",
+        "description": "sign-in view headline"
+    },
+    "Blogger": {
+        "message": "Blogger",
+        "description": "Title for an app for bloggers"
+    },
+    "My {{template}} App": {
+        "message": "Meine {{template}} App",
+        "description": "Title for a newly created app from a template"
+    },
+    "Counter": {
+        "message": "Zähler",
+        "description": "Button for create new block"
+    },
+    "Create a Survey": {
+        "message": "Eine Umfrage erstellen",
+        "description": "title for template"
+    },
+    "Add to Homescreen": {
+        "message": "Zum Startbildschirm hinzuf&uuml;gen",
+        "description": "Install message on publish footer"
+    },
+    "Button Color": {
+        "message": "Button-Farbe",
+        "description": "Button Color label"
+    },
+    "name from location": {
+        "message": " <strong>{{name}}</strong><span v-if=\"location\"><br/> von <br/></span><strong>{{location}}</strong>",
+        "description": "E.g. Kate from Canada, sorry for all the html"
+    },
+    "Select all": {
+        "message": "Alles auswählen",
+        "description": "Select all"
+    },
+    "Tap the plus sign to begin adding content.": {
+        "message": "Tippe auf das Plus um Inhalte hinzuzufügen.",
+        "description": "Tap the plus sign to begin adding content."
+    },
+    "Add contacts": {
+        "message": "Kontakt hinzuf&uuml;gen",
+        "description": "Title on share view to add contacts from device"
+    },
+    "Teacher": {
+        "message": "Lehrer",
+        "description": "Title for an app for teachers"
+    },
+    "Start from Scratch": {
+        "message": "Fange neu an",
+        "description": "title for template"
+    },
+    "Remix App": {
+        "message": "App neu mischen",
+        "description": "Option on detail view to remix an app"
+    },
+    "Offline Mode Explanation": {
+        "message": "Es besteht keine Internetverbindung, deshalb wird es nicht möglich sein Apps zu veröffentlichen.",
+        "description": "Explains effect of using the app without an internet connection"
+    },
+    "Message": {
+        "message": "Nachricht",
+        "description": "Message you want to send"
+    },
+    "Share photos and write articles and about your local community": {
+        "message": "Teilen Sie Fotos und schreiben Sie Artikel über Ihre lokale Gemeinschaft",
+        "description": "description for template"
+    },
+    "noContactsError": {
+        "message": "Wähle einen oder mehrere Kontakte um eine SMS zu senden.",
+        "description": "Error if user tries to send an SMS without choosing any contacts"
+    },
+    "Open App": {
+        "message": "App öffnen",
+        "description": "Option to open/play an app you don't own"
+    },
+    "by _": {
+        "message": "von {{name}}",
+        "description": "For apps, e.g. My Cool App, by {{name}}"
+    },
+    "Make an App": {
+        "message": "Erstellen Sie eine App",
+        "description": "Button label for action to make a new app"
+    },
+    "Sign Out": {
+        "message": "Ausloggen",
+        "description": "Button label for button that logs user out of Webmaker Mobile"
+    },
+    "Delete my Apps": {
+        "message": "Meine Apps löschen",
+        "description": "Button to delete all of a user's apps"
+    },
+    "App Name": {
+        "message": "App-Name",
+        "description": "Label for app name field"
+    },
+    "Journalist": {
+        "message": "Journalist",
+        "description": "Title for an app for journalists"
+    },
+    "Show in Discover Gallery": {
+        "message": "In Gallerie anzeigen",
+        "description": "Option to show app within the discover gallery"
+    },
+    "Text Value": {
+        "message": "Textwert",
+        "description": "Label for attribute of text block: the text value"
+    },
+    "My Apps": {
+        "message": "Meine Apps",
+        "description": "Mobile apps I have created"
+    },
+    "Tap the plus sign to add more content.": {
+        "message": "Tippe auf das Plus um weitere Inhalte hinzuzufügen.",
+        "description": "Tap the plus sign to add more content."
+    },
+    "Cancel": {
+        "message": "Abbrechen",
+        "description": "Cancel button"
+    },
+    "Try in Offline Mode": {
+        "message": "Im Offline-Modus versuchen",
+        "description": "Label for action that allows a user to use the app without signing in when the device is not connected to the internet."
+    },
+    "Guest": {
+        "message": "Gast",
+        "description": "Label for author when the user is in trial mode"
+    },
+    "Try as Guest": {
+        "message": "Als Gast versuchen",
+        "description": "Label for action that allows a user to use the app without signing in."
+    },
+    "Text Box Type": {
+        "message": "Art der Textbox",
+        "description": "Text Box Type label"
+    },
+    "No Apps Message": {
+        "message": "Sie haben noch keine Apps.",
+        "description": "Message that is displayed in the profile when current user has no apps"
+    },
+    "Data": {
+        "message": "Daten",
+        "description": "Look at the data collected by an app"
+    },
+    "errorNoText": {
+        "message": "Es muss ein Text enthalten sein",
+        "description": "No text in the textarea"
+    },
+    "Select Color": {
+        "message": "Farbe auswählen",
+        "description": "Title for the color picker"
+    },
+    "Edit": {
+        "message": "Bearbeiten",
+        "description": "Button for allowing user to edit the app"
+    },
+    "Phone #": {
+        "message": "Telefonnummer",
+        "description": "Label for Phone # attribute on call/sms block"
+    },
+    "Link Text": {
+        "message": "Link Text",
+        "description": "Label for Link Text input"
+    },
+    "Save": {
+        "message": "Sichern",
+        "description": "Button label (save changes)"
+    },
+    "Create a Safety App": {
+        "message": "Erstelle eine Sicherheits-App",
+        "description": "title for template"
+    },
+    "Publish": {
+        "message": "Veröffentlichen",
+        "description": "Button label for publishing the current app"
+    },
+    "errorDefault": {
+        "message": "Hoppla! Ein Fehler ist aufgetreten. Zurück zum <a href='/profile'>Profil</a>?",
+        "description": "Default error message for alert component"
+    },
+    "Button Text": {
+        "message": "Button-Text",
+        "description": "Button Text label"
+    },
+    "Label": {
+        "message": "Bezeichnung",
+        "description": "The label on a button (for sms/calling)"
+    },
+    "Create a How To Guide": {
+        "message": "Erstelle eine Anleitung",
+        "description": "title for template"
+    },
+    "Submit": {
+        "message": "Absenden",
+        "description": "Button for create new block"
+    },
+    "Have something to share with the world? Start a blog, customize to make it yours and start writing!": {
+        "message": "Hast du etwas mit der Welt zu teilen? Starte deinen eigenen Blog, passe ihn deinen W&uuml;nschen an und fange an zu schreiben!",
+        "description": "description for template"
+    },
+    "Edit my Profile": {
+        "message": "Mein Profil bearbeiten",
+        "description": "Button label for action to edit users profile"
+    },
+    "Font Size": {
+        "message": "Schriftgröße",
+        "description": "Font Size label"
+    },
+    "Make": {
+        "message": "Erstellen",
+        "description": "Label for all available make templates"
+    },
+    "Open my app": {
+        "message": "Meine App öffnen",
+        "description": "Option on detail (as admin) view to open app"
+    },
+    "Place call": {
+        "message": "Anrufen",
+        "description": "Button for placing a call"
+    },
+    "If you've got unique skills you'd like to share with others, try making a How To guide.": {
+        "message": "Wenn Sie spezielle Fähigkeiten haben, die Sie mit anderen teilen möchten, schreiben Sie eine Anleitung.",
+        "description": "description for template"
+    },
+    "Add a map, a emergency call button, and other tips to keep safe in your community": {
+        "message": "Eine Karte hinzufügen, eine Notrufschaltfläche hinzufügen und weitere Tipps, um in Ihrer Gemeinschaft sicher zu bleiben",
+        "description": "description for template"
+    },
+    "App": {
+        "message": "App",
+        "description": "Title for app detail page"
+    },
+    "Make Your Own App": {
+        "message": "Eigene App erstellen",
+        "description": "Title for app templates, starter projects/styles to create new apps"
+    },
+    "Text Box": {
+        "message": "Textbox",
+        "description": "Type of block"
+    },
+    "App Name & Icon": {
+        "message": "App Name & Icon",
+        "description": "Title within app editor for page where user can change the app name and icon"
+    },
+    "Make your own app at": {
+        "message": "Erstellen Sie Ihre eigene App:",
+        "description": "Text on footer of publish view"
+    },
+    "Share": {
+        "message": "Teilen",
+        "description": "Share an app"
+    },
+    "Promote your Business": {
+        "message": "Bewerbe dein Gesch&auml;ft",
+        "description": "title for template"
+    },
+    "Show off your products and give customers an easy way to reach you.": {
+        "message": "Präsentieren Sie Ihre Werke und bieten Sie Nutzern eine einfache Möglichkeit, Sie zu erreichen.",
+        "description": "description for template"
+    },
+    "same as minimum number": {
+        "message": "gleich dem Minimum",
+        "description": "place holder for Initial number field"
+    },
+    "Text": {
+        "message": "Text",
+        "description": "Type of block that can be added to the app"
+    },
+    "Link": {
+        "message": "Link",
+        "description": "Link label"
+    },
+    "From Scratch": {
+        "message": "Von Grund auf",
+        "description": "Title for a blank app template. 'From Scratch' is an idiom that describes making something from the beginning with basic ingredients."
+    },
+    "error404": {
+        "message": "Entschuldigung, wir konnten diese Seite nicht finden. Zurück <a href='/sign-in'>zum Anfang</a>?",
+        "description": "Error message for 404"
+    },
+    "toucanspeak": {
+        "message": "Starte mit dem hinzuf&uuml;gen von Text.",
+        "description": "Let's start by adding some text."
+    },
+    "Made with Mozilla Webmaker": {
+        "message": "Mit Mozilla Webmaker erstellt",
+        "description": "Text to toggle footer on publish view"
+    },
+    "Menu": {
+        "message": "Menü",
+        "description": "Title on slide-out menu"
+    },
+    "Color": {
+        "message": "Farbe",
+        "description": "Color label"
+    },
+    "How To": {
+        "message": "Kurzanleitung",
+        "description": "Title for a how-to app"
+    },
+    "Title Text Color": {
+        "message": "Titel Textfarbe",
+        "description": "Title Text Color label"
+    }
+}

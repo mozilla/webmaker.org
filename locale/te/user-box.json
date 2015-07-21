@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "నా రేఖా సూచన చిత్రం",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "అడ్మిన్",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "నా అమరికలు",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "నా కార్యక్రమాలు",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "సైన్ ఔట్ ",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "నా తయారీ",
+        "description": "My makes"
+    }
+}

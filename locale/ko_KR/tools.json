@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "개인 감사 카드",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "논란이 많은 웹페이지의 대체 버전",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "소리나는 애니메이션 gif",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble은 여러분 자신의 웹페이지를 만들고 공유하는 일을 우수울 정도로 쉽게 해줍니다. 브라우저에 바로 HTML과 CSS를 작성하고, 즉시 여러분의 작품을 검토하세요. 단 한번의 클릭으로 완성된 프로젝트를 호스팅하고 공유해줍니다. 초보자부터 전문가까지, 모두에게 완벽한 도구입니다.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "웹 작동 원리 살펴보기",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "내맘대로 편집하는 동영상",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "친한 친구가 좋아하는 사이트의 재미난 리믹스",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Webmaker 도구들을 무료로 사용하여 웹을 만들고 리믹스 해보세요.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "다음과 같은 것을 만들 수 있습니다:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker는 웹 영상, 소리, 그림을 멋진 매쉬업으로 쉽게 리믹스하게 도와줍니다. 여러분이 만든 작품은 원하는 웹사이트 어디에든 넣을 수 있습니다. 웹에서 콘텐츠를 드래그 앤 드랍하고, 여러분 자신만의 코멘트와 링크를 추가하세요 - 이 모든 것이 웹 브라우저 안에서 가능합니다. 여러분이 만든 Popcorn Maker는 역동적이며, 인터넷과 연결되어 있으며 독창적인 영상이 될 것입니다.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "좋아하는 영화 온라인 포스터",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "재미 요소",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "쉬운 웹 만들기",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "새로 시작 하기",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "지금 Goggles 시도하기",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "엑스레이고글",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "동적 링크를 가진 다큐멘터리",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles을 쓰면 인터넷에 있는 웹사이트들의 내부 구성 요소들을 볼 수 있습니다. 고글을 실행시켜 웹페이지 속의 코드를 조사하고, 단 한번의 클릭으로 글자나 이미지를 바꾸어 리믹스하세요.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "그리고 무엇이든!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "작품 리믹스하기",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "자기 소개 동영상 프로필",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "나만의 New York Times 홈페이지",
+        "description": ""
+    }
+}

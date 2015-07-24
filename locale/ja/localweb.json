@@ -1,0 +1,162 @@
+{
+    "Webmaker is available in over 20 languages": {
+        "message": "Webmaker は 20 か国語以上で利用でき、デジタルスキルメンターのコミュニティに支えられています。Android、Firefox OS、その他の最近のモダンなモバイルブラウザで使用できます。",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Quote 3 Quote": {
+        "message": "Mozilla は発展途上国の人々をモバイルデバイス向けのローカルなコンテンツがない状態で単純につないでいるのではありません。私たちはそれをなんとかしようとしています。",
+        "description": "Quote #3"
+    },
+    "Mozilla Rwanda": {
+        "message": "Mozilla Rwanda",
+        "description": "Mozilla Rwanda"
+    },
+    "Enabling Digital Creativity": {
+        "message": "デジタルなものづくりを可能にする",
+        "description": "Headline of Enabling Digital Creativity section on /localweb"
+    },
+    "MOI splash page metadata title": {
+        "message": "Webmaker: 地域に関連した web を作ろう",
+        "description": "MOI splash page metadata title"
+    },
+    "Mozilla Indonesia": {
+        "message": "Mozilla Indonesia",
+        "description": "Mozilla Indonesia"
+    },
+    "Quote 3 Author": {
+        "message": "Mark Sullivan",
+        "description": "Quote #3 Author"
+    },
+    "Quote 2 Author": {
+        "message": "David Meyer",
+        "description": "Quote #2 Author"
+    },
+    "The Opportunity: A Locally Relevant Web": {
+        "message": "機会：地域に関連したWeb ",
+        "description": "Headline of The Opportunity: A Locally Relevant Web on /localweb"
+    },
+    "Let’s ensure the next generation of web users": {
+        "message": "次世代の Web ユーザは、ローカル Web を作成するスキルを持っています。<b>30 か国を超えるボランティアと共に世界規模活動しています</b>。モバイルオペレータや NGO ならば、<a href=\"https://stuff.webmaker.org/mobile_webmaker_partners.pdf\" id=\"mobile-webmaker-partners-link\">我々とパートナーになって</a>、デジタルスキルの教育をユーザに提供しましょう。",
+        "description": "Subhead of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Colombia": {
+        "message": "Mozilla Colombia",
+        "description": "Mozilla Colombia"
+    },
+    "Mozilla is building Webmaker": {
+        "message": "Mozilla は、無料でオープンソースであるモバイルコンテンツ作成アプリの Webmaker を開発しています。",
+        "description": "Subhead of Enabling Digital Creativity section on /localweb"
+    },
+    "Webmaker Kenya research report": {
+        "message": "Webmaker ケニア調査レポート",
+        "description": "Link text to Webmaker Kenya research report"
+    },
+    "Mozilla Nigeria": {
+        "message": "Mozilla Nigeria",
+        "description": "Mozilla Nigeria"
+    },
+    "Mozilla Kenya": {
+        "message": "Mozilla Kenya",
+        "description": "Mozilla Kenya"
+    },
+    "Mozilla Philippines": {
+        "message": "Mozilla Philippines",
+        "description": "Mozilla Philippines"
+    },
+    "Partner with us": {
+        "message": "パートナーになる",
+        "description": "Partner with us button text"
+    },
+    "Quote 1 Author": {
+        "message": "Abhimanyu Ghoshal",
+        "description": "Quote #1 Author"
+    },
+    "Webmaker India research report": {
+        "message": "Webmaker インド調査レポート",
+        "description": "Link text to Webmaker India research report"
+    },
+    "Understanding Users": {
+        "message": "ユーザを理解する",
+        "description": "Headline of Understanding Users section on /localweb"
+    },
+    "Quote 2 Quote": {
+        "message": "Mozilla とモバイル事業者は、Web をもっとグローバルで多様的にしたいと思っています",
+        "description": "Quote #2"
+    },
+    "Mozilla is leading a research program": {
+        "message": "モバイルのデジタルライフに参加でき、ローカルコンテンツの作成を育成する研究技術やデザインアプローチを目的とする研究プログラムをリードしています。",
+        "description": "Subhead of Understanding Users section on /localweb"
+    },
+    "Partners": {
+        "message": "パートナー",
+        "description": "Headline of Partners section on /localweb"
+    },
+    "Empowering the next billion citizens of the web": {
+        "message": "新たな Web のユーザに力を",
+        "description": "Big headline on /localweb"
+    },
+    "Mozilla is working to ensure": {
+        "message": "Mozilla は次の何十億人の人々がスマートフォンを使ってオンラインになったときに、Web がオープンで参加可能なものでクリエイティビティを発揮できる場であるために活動しています。",
+        "description": "This is a description to the value string"
+    },
+    "In 2014 and 2015, we conducted on-the-ground studies in Bangladesh, India and Kenya.": {
+        "message": "2014 年と 2015 年に、バングラデシュ、インド、ケニアで現地調査を実施しました。",
+        "description": "Subhead of the research report subsection on /localweb"
+    },
+    "MOI splash page metadata description": {
+        "message": "Webmaker はユーザーが web の全てのポテンシャルを認識するのを、伝統的なコンテンツ制作の複雑さを取り除き、地域に関連した web を作るスキルを伝えて支援します。",
+        "description": "MOI splash page metadata description"
+    },
+    "A Locally Relevant Web: Early Research & Recommendations": {
+        "message": "地域に関連した Web ： 初期の研究とおすすめ",
+        "description": "Headline of the research report subsection on /localweb"
+    },
+    "Get in touch": {
+        "message": "連絡する",
+        "description": "Get in touch button text"
+    },
+    "Mozilla India": {
+        "message": "Mozilla India",
+        "description": "Mozilla India"
+    },
+    "Try the open beta": {
+        "message": "オープンベータを試す",
+        "description": "Try the open beta button text"
+    },
+    "Mozilla Bangladesh": {
+        "message": "Mozilla Bangladesh",
+        "description": "Mozilla Bangladesh"
+    },
+    "Quote 1 Quote": {
+        "message": "Mozilla と GSMA は 40 億人にモバイル Web とコンテンツを提供するパートナーです",
+        "description": "Quote #1"
+    },
+    "Mozilla is proud to partner": {
+        "message": "Mozilla は、モバイル Web の未来を積極的に形成しようとするモバイル事業者、教育機関、国際開発機関や NGO とパートナーとなっていることを誇りに思っています。",
+        "description": "Subhead of Partners section on /localweb"
+    },
+    "Webmaker mobile for development blog": {
+        "message": "Webmaker モバイルでブログ開発",
+        "description": "Link text to Webmaker mobile for development blog"
+    },
+    "Webmaker Bangladesh research report": {
+        "message": "Webmaker バングラデシュ調査レポート",
+        "description": "Link text to Webmaker Bangladesh research report"
+    },
+    "Webmaker helps smartphone users": {
+        "message": "Webmaker は、スマートフォンユーザが、小さなビジネスを宣伝したり、コミュニティのお知らせを共有したり、学生の教育プランを作ったりする単純なアプリを作成し、生活やコミュニティを改善する Web の製作者になることを手助けします。",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Mozilla Brazil": {
+        "message": "Mozilla Brazil",
+        "description": "Mozilla Brazil"
+    },
+    "Partner with Mozilla": {
+        "message": "Mozilla とパートナーになる",
+        "description": "Headline of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Cambodia": {
+        "message": "Mozilla Cambodia",
+        "description": "Mozilla Cambodia"
+    }
+}

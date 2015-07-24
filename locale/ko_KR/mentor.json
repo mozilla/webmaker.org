@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "멘토",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "웹 조련사",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "청소년을 위한 비디오 리믹싱과 오픈 소스",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "멘토",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "청소년 멘토",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma는 캐나다 빅토리아 지역의 대학교 컴퓨터 랩에서 10-12세 아이들을 위한 <a href=\"/makerparty\">메이커 파티</a>를 열었습니다. Webmaker 클럽을 운영하기 위해 이제 그녀는 다른 멘토들과 일을 합니다. 열린 실천의 가치를 아이들에게 가르치는 일을 계속해나가고 있습니다.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati는 2012년 <a href=\"/makerparty\">메이커 파티</a>에 참여했습니다. 파티에서 그녀는 Thimble과 Popcorn을 사용하여 웹 페이지를 리믹스하는 법을 배웠습니다. 그녀는 이제 친구, 가족들에게 기본 HTML과 온라인으로 참여하는 방법을 가르치며 자신이 얻은 지식들을 공유합니다.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon은 스코틀랜드, 던디에서 48시간짜리 <a href=\"/makerparty\">메이커 파티</a>를 열었습니다. 학생들을 초대하여 종이로 만든 \"트위터 새\"를 모두 들러보고 구글 지도에 조이스틱으로 연결하게 했습니다.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "우나티",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Webmaker 연구원, 교사, 리믹스 아티스트",
+        "description": ""
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "Ottieni Webmaker Beta",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "Perfetto! Un messaggio di testo è stato inviato al tuo telefono.",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "Webmaker prende la parte migliore del web - la creazione - ed elimina la complessità.",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "Inserisci il tuo numero di telefono per ricevere un link per il download:",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "Assicurati di aver inserito un numero di telefono corretto.",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "I messaggi di testo vengono inviati al tuo telefono tramite la società denominata Twilio. Queste informazioni verranno conservate per non più di 30 giorni e non saranno utilizzate per altri scopi. Per ulteriori informazioni, consulta <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\"> l'informativa sulla privacy di Twilio </a> ",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "Diventa un Produttore",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "Ops! Stiamo incontrando difficoltà ad inviare il link di installazione, prova a ricaricare la pagina e reinserisci il tuo numero di telefono.",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "Costruisci l'Applicazione perfetta",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "Invia",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "Disponibile per FirefoxOS 2.1+ e Android 4.4+",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "Crea esattamente quello che ti serve: un sito web per la tua azienda, una chat per i tuoi amici  o un programma di studio per i tuoi studenti.",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "Installa Mozilla Webmaker al seguente indirizzo: http://mzl.la/installwm",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "Scarica Webmaker Beta",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "Ciò che crei con WebMaker è fatto per essere visto, ascoltato ed utilizzato. Condividi il tuo progetto con amici e colleghi.",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "Condividilo con il Mondo",
+        "description": "Header describing how apps can be shared"
+    }
+}

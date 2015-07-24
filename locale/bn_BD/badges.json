@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "তারিখ",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "মন্তব্য",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "ইস্যু করার জন্য একটি ব্যাজ নির্বাচন করুন এবং দেখুন যে, আরও কারা কারা পেয়েছে।",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "অ্যাপলিকেশন",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "ব্যাজটি নতুনরুপে তৈরি করুন",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "ব্যাজের এডমিন",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "ইমেইল",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "একটি ব্যাজ তৈরি করুন",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "মন্তব্য যোগ করুন",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "ব্যাজ ইস্যু করা",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "বাতিল",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "ইমেইল ( প্রতি লাইনে একটা, অথবা কমা দিয়ে আলাদা করা )",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

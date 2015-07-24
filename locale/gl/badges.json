@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "Data",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Comentario",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Escolle unha crachá para asignala e ver que usuarias a recibiron",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "Aplicación",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Actualizar a crachá",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Administrar crachás",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "Enderezo de correo-e",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Crear a crachá",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Engadir comentario",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Asignar nova crachá",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Anular",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Enderezos electrónicos (un por liña, ou separados por comas)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Мой профиль",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "администратор",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Мои установки",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Мои мероприятия",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "суперментор",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Выйти",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Мои мейки",
+        "description": "My makes"
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "Hae Webmaker Beta",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "Hienoa! Tekstiviesti on lähetetty puhelimeesi.",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "Webmaker ottaa verkon parhaan osan — luomisen — ja poistaa siitä mutkikkuuden.",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "Kirjoita puhelinnumerosi ja saat viestissä latauslinkin:",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "Varmista, että annoit oikean puhelinnumeron.",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "Tekstiviestit lähetetään puhelimeesi Twilio-yrityksen kautta. Tiedot säilytetään enintään 30 päivää eikä niitä käytetä muihin tarkoituksiin. Voit lukea lisätietoja <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\">Twilion yksityisyydensuojasta</a>.",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "Ryhdy luojaksi",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "Voi ei! Asennuslinkin lähettämisessä havaittiin ongelmia, yritä sivun päivitystä ja lähetä numerosi uudelleen.",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "Rakenna täydellinen sovellus",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "Lähetä",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "Saatavilla alustoille Firefox OS 2.1+ ja Android 4.4+",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "Luo juuri se, mitä tarvitset: verkkosivun liiketoimintaasi varten, juttelusovelluksen ystävillesi tai opintosuunnitelman opiskelijoillesi.",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "Asenna Mozillan Webmaker-sovellus tästä linkistä: http://mzl.la/installwm",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "Lataa Webmaker Beta",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "Webmaker-luomukset on tarkoitettu nähtäväksi, kuultavaksi ja käytettäväksi. Jaa projektisi ystäviesi ja kollegoidesi kanssa.",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "Jaa se maailman kanssa",
+        "description": "Header describing how apps can be shared"
+    }
+}

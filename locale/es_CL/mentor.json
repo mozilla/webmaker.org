@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Haciendo de la web algo físico",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Mezcla de videos y código abierto para la juventud",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mentor de la juventud",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma organizó una <a href=\"/makerparty\">Maker Party</a> para gente de 10-12 años en el laboratorio de computación de su universidad en Victoria, Canadá.\nAhora está trabajando con otros mentores para organizar un Club Webmaker para seguir enseñando a los jóvenes acerca del valor de las prácticas abiertas.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati participó en nuestra <a href=\"/makerparty\">Maker Party</a> en 2012 donde aprendió a mezclar sus propias páginas web usando Thimble y Popcorn. Ella ahora comparte sus conocimientos enseñando a sus amigos, familia y compañeros HTML básico y como participar en línea.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organizó una <a href=\"/makerparty\">Maker Party</a> de 48 horas en Dundee, Escocia, invitando a sus estudiantes a explorar todo, desde un \"pájaro de Twitter\" hecho de papel y alambre hasta controlar Google Maps con un control de arcade.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, miembro de Webmaker, profesora y artista de mezclas",
+        "description": ""
+    }
+}

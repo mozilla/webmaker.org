@@ -1,0 +1,542 @@
+{
+    "Show this app in the Discover Gallery": {
+        "message": "在“发现”长廊中显示此应用",
+        "description": "Option on detail view to share app to Discover gallery"
+    },
+    "Single Line Text": {
+        "message": "单行文本",
+        "description": "Item in the select box"
+    },
+    "Newest": {
+        "message": "最新",
+        "description": "Newest app tab"
+    },
+    "No data has been stored yet!": {
+        "message": "尚无已存储数据！",
+        "description": "No data has been stored yet!"
+    },
+    "Add a Brick": {
+        "message": "添加一个砖块",
+        "description": "Title for the add a brick page"
+    },
+    "Featured": {
+        "message": "精选",
+        "description": "Featured apps tab"
+    },
+    "My App": {
+        "message": "我的应用",
+        "description": "The Mobile app I am viewing"
+    },
+    "Separator": {
+        "message": "分隔器",
+        "description": "Separator label"
+    },
+    "You haven't created any apps yet.": {
+        "message": "您尚未创建任何应用。",
+        "description": "Message on profile view if no apps have been created yet"
+    },
+    "Guest Explanation": {
+        "message": "访客可以建立但不能发布应用。",
+        "description": "Explains the effect of using the app as a not signed in guest."
+    },
+    "Send SMS": {
+        "message": "发送短信",
+        "description": "Send SMS text"
+    },
+    "Publishing...": {
+        "message": "发布中...",
+        "description": "Shows up below header when the app is being published or a publish is in progress"
+    },
+    "Open": {
+        "message": "打开",
+        "description": "Open an app"
+    },
+    "Create": {
+        "message": "创建",
+        "description": "Create an app"
+    },
+    "My Profile": {
+        "message": "我的资料",
+        "description": "Title for profile page"
+    },
+    "An active connection is needed to display the Discover Gallery": {
+        "message": "需要一个有效的连接以显示“发现长廊”",
+        "description": "Explains the message communicating a lack of connection"
+    },
+    "Start Building": {
+        "message": "开始建造",
+        "description": "Start Building button for creating an app"
+    },
+    "No Data available": {
+        "message": "无可用数据",
+        "description": "No Data available"
+    },
+    "Business": {
+        "message": "商务",
+        "description": "Title for an app for business owners"
+    },
+    "Get Started": {
+        "message": "开始吧",
+        "description": "Button meaning: Get started making apps"
+    },
+    "Delete App": {
+        "message": "删除应用",
+        "description": "Button to delete entire app"
+    },
+    "Share Community News": {
+        "message": "分享社区新闻",
+        "description": "title for template"
+    },
+    "Choose Contacts": {
+        "message": "选择联系人",
+        "description": "Prompt to select contacts from mobile phone contact list"
+    },
+    "Back to My Apps": {
+        "message": "返回我的应用",
+        "description": "Option on slide-out menu"
+    },
+    "Join Webmaker": {
+        "message": "加入 Webmaker",
+        "description": "Button label for creating an account"
+    },
+    "Preview": {
+        "message": "预览",
+        "description": "Button that, if clicked, shows the end product of the app"
+    },
+    "URL": {
+        "message": "URL",
+        "description": "Label for URL input"
+    },
+    "Text Color": {
+        "message": "文字颜色",
+        "description": "Label for attribute of text block: the colour of the text"
+    },
+    "Minimum Number": {
+        "message": "最小数量",
+        "description": "Minimum Number label"
+    },
+    "Increment by": {
+        "message": "增量",
+        "description": "Increment by label"
+    },
+    "Head over to Make to start creating your very own app.": {
+        "message": "接触 <strong>Make</strong> 开始创建你自己的应用。",
+        "description": "Message encouraging 'make'ing an app when device is offline"
+    },
+    "Maximum Number": {
+        "message": "最大数量",
+        "description": "Maximum Number label"
+    },
+    "Image": {
+        "message": "图像",
+        "description": "Type of block that can be added to the app"
+    },
+    "Sign In": {
+        "message": "登录",
+        "description": "Sign In button label (logs user into Webmaker Mobile)"
+    },
+    "Safety": {
+        "message": "安全",
+        "description": "Title for a safety app"
+    },
+    "Discover": {
+        "message": "发现",
+        "description": "Title for the Discover page (a listing of apps users can choose from)"
+    },
+    "errorAppNotFound": {
+        "message": "抱歉，找不到此应用。返回您的<a href='/profile'>资料</a>页面？",
+        "description": "Error message for app details/editing/play view when the app is not found"
+    },
+    "Name": {
+        "message": "名称",
+        "description": "Label on the profile page, e.g. Name: Kate, Location: Canada"
+    },
+    "Are you sure you want to delete this magnificent creation": {
+        "message": "您确定要删除这个宏伟的作品吗？",
+        "description": "Warning on modal to delete app"
+    },
+    "The Internet fell asleep!": {
+        "message": "互联网睡着了！",
+        "description": "Message on Discover view when device is online"
+    },
+    "noDataInfoSub": {
+        "message": "如果您想让用户与您分享数据，尝试添加一个计数器和一个提交按钮到您的应用。",
+        "description": "If you'd like to let users share data with you, try adding a Counter and a Submit button to your app."
+    },
+    "Title": {
+        "message": "标题",
+        "description": "Title label"
+    },
+    "Choosing this option will allow you to create your own app without a preset template.": {
+        "message": "选择此选项，您将不使用预设的模板创建您自己的应用。",
+        "description": "description for template"
+    },
+    "Share App": {
+        "message": "分享应用",
+        "description": "Text on publish footer"
+    },
+    "Done": {
+        "message": "完成",
+        "description": "Done button"
+    },
+    "You need to connect to the Internet.": {
+        "message": "您需要连接到互联网。",
+        "description": "Shows up below header when the app can't be published due to connection issues"
+    },
+    "This action cannot be undone": {
+        "message": "此操作不可撤销。",
+        "description": "Footer in warning if user wants to delete their app"
+    },
+    "Delete": {
+        "message": "删除",
+        "description": "Button for removing (deleting) a block or an app"
+    },
+    "Phone": {
+        "message": "手机",
+        "description": "Type of block - creates a button that calls a number"
+    },
+    "Initial Number": {
+        "message": "初始数量",
+        "description": "Initial Number label"
+    },
+    "Share Via": {
+        "message": "分享通过",
+        "description": "Title for share view"
+    },
+    "SMS": {
+        "message": "短信",
+        "description": "Acronym for text messaging"
+    },
+    "Gather information from your users by creating a survey.": {
+        "message": "创建一个调查，收集您的用户的信息。",
+        "description": "description for template"
+    },
+    "Create a Blog": {
+        "message": "创建一个博客",
+        "description": "title for template"
+    },
+    "App Data": {
+        "message": "应用数据",
+        "description": "Form data submitted for my app"
+    },
+    "Source": {
+        "message": "源代码",
+        "description": "Source of the image"
+    },
+    "Long Text": {
+        "message": "长文本",
+        "description": "Item in the select box"
+    },
+    "I am some text": {
+        "message": "示例文本",
+        "description": "Value in the text area"
+    },
+    "share_message": {
+        "message": "快来看看我用 Mozilla Webmaker 制作的应用",
+        "description": "Message that gets sent when a published app is shared to friends"
+    },
+    "Make and share the web": {
+        "message": "制作和分享网络",
+        "description": "sign-in view headline"
+    },
+    "Blogger": {
+        "message": "博客主",
+        "description": "Title for an app for bloggers"
+    },
+    "My {{template}} App": {
+        "message": "我的 {{template}} 应用",
+        "description": "Title for a newly created app from a template"
+    },
+    "Counter": {
+        "message": "计数器",
+        "description": "Button for create new block"
+    },
+    "Create a Survey": {
+        "message": "创建一个调查",
+        "description": "title for template"
+    },
+    "Add to Homescreen": {
+        "message": "添加到主屏幕",
+        "description": "Install message on publish footer"
+    },
+    "Button Color": {
+        "message": "按钮颜色",
+        "description": "Button Color label"
+    },
+    "name from location": {
+        "message": " <strong>{{name}}</strong><span v-if=\"location\"><br/> 来自 <br/></span><strong>{{location}}</strong>",
+        "description": "E.g. Kate from Canada, sorry for all the html"
+    },
+    "Select all": {
+        "message": "全选",
+        "description": "Select all"
+    },
+    "Tap the plus sign to begin adding content.": {
+        "message": "点按加号开始添加内容。",
+        "description": "Tap the plus sign to begin adding content."
+    },
+    "Add contacts": {
+        "message": "添加联系人",
+        "description": "Title on share view to add contacts from device"
+    },
+    "Teacher": {
+        "message": "教师",
+        "description": "Title for an app for teachers"
+    },
+    "Start from Scratch": {
+        "message": "从头开始",
+        "description": "title for template"
+    },
+    "Remix App": {
+        "message": "重组应用",
+        "description": "Option on detail view to remix an app"
+    },
+    "Offline Mode Explanation": {
+        "message": "此设备没有连接到互联网，所以您不能发布任何应用。",
+        "description": "Explains effect of using the app without an internet connection"
+    },
+    "Message": {
+        "message": "消息",
+        "description": "Message you want to send"
+    },
+    "Share photos and write articles and about your local community": {
+        "message": "分享照片和写出文章，介绍您的本地社区",
+        "description": "description for template"
+    },
+    "noContactsError": {
+        "message": "若要发送短信，请选择一个或多个联系人。",
+        "description": "Error if user tries to send an SMS without choosing any contacts"
+    },
+    "Open App": {
+        "message": "打开应用",
+        "description": "Option to open/play an app you don't own"
+    },
+    "by _": {
+        "message": "由 {{name}}",
+        "description": "For apps, e.g. My Cool App, by {{name}}"
+    },
+    "Make an App": {
+        "message": "制作一个应用",
+        "description": "Button label for action to make a new app"
+    },
+    "Sign Out": {
+        "message": "退出",
+        "description": "Button label for button that logs user out of Webmaker Mobile"
+    },
+    "Delete my Apps": {
+        "message": "删除我的应用",
+        "description": "Button to delete all of a user's apps"
+    },
+    "App Name": {
+        "message": "应用名称",
+        "description": "Label for app name field"
+    },
+    "Journalist": {
+        "message": "新闻记者",
+        "description": "Title for an app for journalists"
+    },
+    "Show in Discover Gallery": {
+        "message": "在发现长廊中显示",
+        "description": "Option to show app within the discover gallery"
+    },
+    "Text Value": {
+        "message": "文本值",
+        "description": "Label for attribute of text block: the text value"
+    },
+    "My Apps": {
+        "message": "我的应用",
+        "description": "Mobile apps I have created"
+    },
+    "Tap the plus sign to add more content.": {
+        "message": "点按加号添加更多内容。",
+        "description": "Tap the plus sign to add more content."
+    },
+    "Cancel": {
+        "message": "取消",
+        "description": "Cancel button"
+    },
+    "Try in Offline Mode": {
+        "message": "尝试进入离线模式",
+        "description": "Label for action that allows a user to use the app without signing in when the device is not connected to the internet."
+    },
+    "Guest": {
+        "message": "访客",
+        "description": "Label for author when the user is in trial mode"
+    },
+    "Try as Guest": {
+        "message": "尝试作为访客",
+        "description": "Label for action that allows a user to use the app without signing in."
+    },
+    "Text Box Type": {
+        "message": "文本框类型",
+        "description": "Text Box Type label"
+    },
+    "No Apps Message": {
+        "message": "您还没有任何应用。",
+        "description": "Message that is displayed in the profile when current user has no apps"
+    },
+    "Data": {
+        "message": "数据",
+        "description": "Look at the data collected by an app"
+    },
+    "errorNoText": {
+        "message": "您必须包括一个文本值",
+        "description": "No text in the textarea"
+    },
+    "Select Color": {
+        "message": "选择颜色",
+        "description": "Title for the color picker"
+    },
+    "Edit": {
+        "message": "编辑",
+        "description": "Button for allowing user to edit the app"
+    },
+    "Phone #": {
+        "message": "手机 #",
+        "description": "Label for Phone # attribute on call/sms block"
+    },
+    "Link Text": {
+        "message": "链接文本",
+        "description": "Label for Link Text input"
+    },
+    "Save": {
+        "message": "保存",
+        "description": "Button label (save changes)"
+    },
+    "Create a Safety App": {
+        "message": "创建一个安全应用",
+        "description": "title for template"
+    },
+    "Publish": {
+        "message": "发布",
+        "description": "Button label for publishing the current app"
+    },
+    "errorDefault": {
+        "message": "糟糕！发生错误。返回您的<a href='/profile'>资料</a>页面？",
+        "description": "Default error message for alert component"
+    },
+    "Button Text": {
+        "message": "按钮文本",
+        "description": "Button Text label"
+    },
+    "Label": {
+        "message": "标签",
+        "description": "The label on a button (for sms/calling)"
+    },
+    "Create a How To Guide": {
+        "message": "创建一个“如何做”指南",
+        "description": "title for template"
+    },
+    "Submit": {
+        "message": "提交",
+        "description": "Button for create new block"
+    },
+    "Have something to share with the world? Start a blog, customize to make it yours and start writing!": {
+        "message": "有什么想与世界分享的吗？开建一个博客、定制并开始书写吧！",
+        "description": "description for template"
+    },
+    "Edit my Profile": {
+        "message": "编辑我的资料",
+        "description": "Button label for action to edit users profile"
+    },
+    "Font Size": {
+        "message": "字体大小",
+        "description": "Font Size label"
+    },
+    "Make": {
+        "message": "创作",
+        "description": "Label for all available make templates"
+    },
+    "Open my app": {
+        "message": "打开我的应用",
+        "description": "Option on detail (as admin) view to open app"
+    },
+    "Place call": {
+        "message": "拨打电话",
+        "description": "Button for placing a call"
+    },
+    "If you've got unique skills you'd like to share with others, try making a How To guide.": {
+        "message": "如果您有独特的技能并且想与他人分享，来试试做一个“如何做”指南。",
+        "description": "description for template"
+    },
+    "Add a map, a emergency call button, and other tips to keep safe in your community": {
+        "message": "添加一个地图、一个紧急呼叫按钮，以及其他技巧，保护你的社区安全",
+        "description": "description for template"
+    },
+    "App": {
+        "message": "应用",
+        "description": "Title for app detail page"
+    },
+    "Make Your Own App": {
+        "message": "制作你自己的应用",
+        "description": "Title for app templates, starter projects/styles to create new apps"
+    },
+    "Text Box": {
+        "message": "文本框",
+        "description": "Type of block"
+    },
+    "App Name & Icon": {
+        "message": "应用名称和图标",
+        "description": "Title within app editor for page where user can change the app name and icon"
+    },
+    "Make your own app at": {
+        "message": "制作您自己的应用，就在",
+        "description": "Text on footer of publish view"
+    },
+    "Share": {
+        "message": "分享",
+        "description": "Share an app"
+    },
+    "Promote your Business": {
+        "message": "促进您的业务",
+        "description": "title for template"
+    },
+    "Show off your products and give customers an easy way to reach you.": {
+        "message": "秀出您的产品，给客户一个简单的方式找到你。",
+        "description": "description for template"
+    },
+    "same as minimum number": {
+        "message": "同最小数量",
+        "description": "place holder for Initial number field"
+    },
+    "Text": {
+        "message": "文本",
+        "description": "Type of block that can be added to the app"
+    },
+    "Link": {
+        "message": "链接",
+        "description": "Link label"
+    },
+    "From Scratch": {
+        "message": "从头开始",
+        "description": "Title for a blank app template. 'From Scratch' is an idiom that describes making something from the beginning with basic ingredients."
+    },
+    "error404": {
+        "message": "抱歉，我们无法找到此页面。您想<a href='/sign-in'>返回开始的地方</a>吗？",
+        "description": "Error message for 404"
+    },
+    "toucanspeak": {
+        "message": "让我们添加一些文本吧。",
+        "description": "Let's start by adding some text."
+    },
+    "Made with Mozilla Webmaker": {
+        "message": "采用 Mozilla Webmaker 制作",
+        "description": "Text to toggle footer on publish view"
+    },
+    "Menu": {
+        "message": "菜单",
+        "description": "Title on slide-out menu"
+    },
+    "Color": {
+        "message": "颜色",
+        "description": "Color label"
+    },
+    "How To": {
+        "message": "如何",
+        "description": "Title for a how-to app"
+    },
+    "Title Text Color": {
+        "message": "标题文本颜色",
+        "description": "Title Text Color label"
+    }
+}

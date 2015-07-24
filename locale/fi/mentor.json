@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentori",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Tehdään verkosta fyysistä",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Videoiden uudelleenmiksaus ja avoin lähdekoodi nuorille",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentori",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Nuorisomentori",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma ohjasi <a href=\"/makerparty\">Maker-kutsut</a> 10-12-vuotiaille paikallisen yliopistonsa tietokoneluokassa Victoriassa, Kanadassa. Nyt hän työskentelee muiden mentorien kanssa ohjaten Webmaker-klubia, joka jatkaa avoimien käytäntöjen arvon opettamista nuorille.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati otti vuonna 2012 osaa <a href=\"/makerparty\">Maker-kutsuihimme</a>, joissa hän oppi uudelleenmiksaamaan omat verkkosivunsa Thimble- ja Popcorn -sovelluksilla. Hän jakaa nyt taitoaan ystävilleen, perheelleen ja luokkatovereilleen opettaen perus-HTML:ää ja sitä, kuinka osallistutaan netissä.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organisoi 48-tunnin <a href=\"/makerparty\">Maker-kutsut</a> Dundeessa, Skotlannissa, kutsuen oppilaitaan tutkimaan kaikkea aina paperista ja vaijerista tehdystä “Twitter-linnusta” Google Mapsiin kytkettyyn pelihalliohjaimeen.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Webmaker-käyttäjä, opettaja ja remiksausartisti",
+        "description": ""
+    }
+}

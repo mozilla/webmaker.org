@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "ইন HTML, the <img> tag ইডেন্টিফাইস এন ইমেজ উইথ src=\"file_name\"",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "এবং কোন ওয়েবসাইট এর পিছনের কোড দেখতে এবং ইডিট করার পাওয়ার অর্জন করুন",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "এক্স-রে গুগ্লস",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "সোর্স ",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "ইন্সটল দ্যা ",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "এক্স-রে গুগল ",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "বুকমার্ক এর বার এ ড্রাগ করুন",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "সাহায্য",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "ফ্রম shapes.jpg টু blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "এই পাতাটি পুনর্মিশ্রিত করুন",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "গুগল এক্স-রে সক্রিয় করুন",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "চেঞ্জ <img src=\"/shapes.jpg\"> টু <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "ইমেজগুলো পরিবর্তন করুন",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "বেকগ্রউন্ড ইমেজ ক্লিক করুন",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "সেট আপ এক্স-রে গুগ্লস ",
+        "description": "Install page title"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Profiilini",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "ylläpito",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Asetukseni",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Tapahtumani",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentori",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Kirjaudu ulos",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Luomukseni",
+        "description": "My makes"
+    }
+}

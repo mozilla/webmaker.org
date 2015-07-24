@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Moj profil",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Moje nastavitve",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "Moji dogodki",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Odjavite se",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Moji izdelki",
+        "description": "My makes"
+    }
+}

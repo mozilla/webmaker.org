@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "在 HTML, 這 <img> 標籤識別圖像 src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "並獲得查看和編輯任何網站背後原始碼的權力。",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-ray Goggles",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "來源",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "安裝",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-ray Goggles",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "拖曳到書籤工具列",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "說明",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "從 shapes.jpg 到 blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "重組這個頁面",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "啟動 X-ray Goggles",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "變更 <img src=\"/shapes.jpg\"> 到 <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "變更圖片",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "點擊背景圖片",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "設定 X-ray Goggles",
+        "description": "Install page title"
+    }
+}

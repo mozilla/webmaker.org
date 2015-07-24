@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "Zobrazit více",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "společnost",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "Objevte Appmaker",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "Představte si",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "Fireworks App",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "Appmaker je bezplaný nástroj na tvorbu osobních mobilních aplikací, i bez nutnosti znalosti kódu! Smíchejte jednotlivé prvky k vytvoření a sdílení mobilních aplikací, přímo ve vašem prohlížeči.",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "Vytvořte aplikace pro svůj telefon.",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "Mobilni aplikace snadno",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "aplikace k tvorbě hudby",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "Chatovací aplikace",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "aplikace pro chatování s vašimi přáteli",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "Hledáte jednoduchý způsob, jak začít? Pozměňte některé z našich existujících předloh a vytvořte svou vlastní aplikaci.",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "google+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "Appmaker",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "Use instruments and a sequencer to build an app that makes noise.",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "Přispět",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "Dozvědět se více",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "Make an app for your <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span>",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "Přidejte se k nám pro posílení generaci nových uživatelů chytrých telefonů pro vytváření a distribuci místního mobilního obsahu.",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "Chcete ukázat ostatním, jak se dělá mobilní aplikace? Chcete přimět lidi přemýšlet o mobilním designu? Podívejte se na náš výukový materiál!",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "studenti",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "Podívejte se, jak",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "Oslavit cíl nebo jen udělat hluk ohňostrojem!",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "Vyberte si šablonu",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "Učte",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "Share messages with friends using this DIY chatroom.",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "Líbí se vám Appmaker? Máte otázky? Chcete se zapojit? Chcete vědět více?",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "Začínáme",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "Help us turn Appmaker into something truly amazing by contributing your time and expertise to the project.",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "Hudební aplikace",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "a personal goal tracker",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "přátelé",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "Mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Das Web zum Anfassen",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Video Remixing und Open Source für Jugendliche",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Jugendmentor",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma veranstaltete eine Hack-Party für 10-12 Jährige in ihrem örtlichen Universitäts-Computerraum in Victoria, Kanada. Jetzt arbeitet sie mit anderen Mentoren, um den Webmaker Club weiterzuführen und damit Jugendlichen den Wert von offenen Praktiken zu lehren.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati nahm an unserer Maker Party 2012 teil, wo sie gelernt hat, mit Thimble und Popcorn ihre eigenen Webseiten zu erstellen. Sie teilt nun ihr Wissen, indem sie ihren Freunden, ihrer Familie und Mitschülern einfaches HTML beibringt.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon hat eine 48-Stunden-Hack-Jam in Dundee, Schottland, organisiert, bei der alles mögliche ausprobiert wurde, von einem \"Twitter-Vogel\" aus Papier und Draht bis zu einem an Google Maps angeschlossenen Spielhallen-Joystick.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Webmaker Fellow, Lehrer und Remix-Künstler",
+        "description": ""
+    }
+}

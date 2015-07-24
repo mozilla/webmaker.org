@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Webmakers utbildningsmaterial stöds av <a href=\"/{{ lang }}/literacy\">Mozilla&rsquo;s Web Literacy Map</a>, och inkluderar alla de färdigheter som man behöver för att frodas i dagens digitala värld.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Skapa för webben",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Läs mer om modellen Hive Learning Networks och hur städer runt om i världen kämpar för digital kompetens och webbkunskaper genom uppkopplad inlärning.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Navigera på webben",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Gå med i vårat <a href=\"http://discourse.webmaker.org/category/meet\"> online forum</a> för att träffa andra mentorer som dig. Dela dina event, aktiviteter och undervisningsresurser genom att använda <a href=\"https://twitter.com/search?q=%23teachtheweb\"> #techtheweb</a> hashtaggen på twitter.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Vårt globala community är här för att hjälpa.",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Presentera dig själv",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Upptäck  Web Literacy Map",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Lär dig mer",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Bli en lokal intressegruppsfrämjare",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Visa andra hur man skapar webben och samla emblemet  <a href=\"https://webmaker.org/badges/skill-sharer\">WebMaker Skill Sharer</a>. När du är redo, ansöka om emblemet <a href=\"https://webmaker.org/badges/webmaker-mentor\">WebMaker Mentor</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Få dina fötter våta.</strong> Presentera dig för nya digitala färdigheter snabbt genom roliga saker att läsa, titta på, lyssna på eller dela med dig.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Delta på webben",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Resurser för undervisning och lärande ",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Upptäck",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Lär dig mer",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>Vi har blivit bättre!!</strong> Letar du efter enkla sätt att komma igång? Prova våra <a href=\"/{{ lang}}/tools\">Verktyg</a>. Eller utgå ifrån något i <a href=\"/{{ lang }}/gallery\">Galleriet</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Upptäck",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Upptäck nya färdigheter. Dela de sen med andra.",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Ansluter ",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "Vad är webbkunskap?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Dela med dig av dina kunskaper.</strong> Alla kan lära ut med Webmaker. Oavsett om du är lärare i skolan eller en entusiastisk mentor, förälder eller vän så har vi aktiviteter och undervisningsguider som hjälper dig.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Utforska samhällsgallerier och se vad andra webmakers gör.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Bygga",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Sätt igång.</strong> Bästa sättet att lära sig är genom att själva bygga och utforma rent praktiskt. Skapa webbplatser, multimediavideor eller remixer och utveckla dina praktiska kunskaper medan du håller på.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Anslut med det globala samhället",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Lär dig genom att praktiskt skapade. Dela sedan med dig av det du lärt dig till andra. Webmakers resurser är designade för att det ska vara enkelt och roligt att lära sig allt från att söka och navigera till att programmera och skripta, digitalt medborgarskap och hur man skyddar sin integritet online. Prova att <a href=\"/make-your-own\">skapa ditt egna</a> studiematerial att dela med andra utbildare och mentorer i hela världen.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Bygg dina mentors egenskaper",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker är annorlunda.</strong> Vi är ett open source-projekt, skapat av och för en global gemenskap av utbildare, teknikfolk och människor som du. Vi älskar webben och vill sprida dess kreativa potential till alla. Vi skulle bli mycket glada att få samarbeta med dig eller se dig <a href=\"/{{ lang }}/getinvolved\">engagera dig</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Web Literacy Map hjälper dig att få färdigheter i att utforska, bygga och dela webben",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Skapa en mer webbvänlig värld",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Lär ut",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla definierar webb kompetens som de kunskaper och färdigheter som behövs för att läsa, skriva och delta på nätet. Läs mer om varför Mozilla bryr sig om web kompetens i detta Webmaker informationsblad.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Gå med eller var värd för <a href=\"https://events.webmaker.org\">lokala evenemang</a> för att samarbeta med kollegor och undervisa studerande.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Bläddra bland våra <a href=\"https://webmaker.org/resources\">utbilningsresurser</a> eller delta i <a href=\"https://training.webmakerprototypes.org\">professionell utveckling</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Involvera dig",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Skapa",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Dela dina egna undervisningsresurser, hjälp med översättning, bidra med kod eller annat.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "Vi är tekniknördar, skapare, lärare, föräldrar och andra som vill lära ut digitala kompetenser och webbkunskaper genom skapande.",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Delta i våra fria, öppna nätkurser om hur man undervisar webben.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Webmaker Träning",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong> Undervisa och lär dig digitala färdigheter och web literacy</strong>\nSidorna i den här sektionen är fulla med roliga saker att upptäcka, göra och lära. Vår globala gemenskap lägger till nya aktiviteter, lektionsplaneringar och guider från webben fortlöpande som gör det lätt att lära genom att göra. Alla kan använda dessa undervisningsresurserna &mdash;de är gratis, öppna och har stöd av <a href=\"https://mozilla.org/{{ lang }}/mission/\">Mozilla&rsquo;s ideella verksamhet</a>",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

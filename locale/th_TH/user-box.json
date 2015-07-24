@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "โปรไฟล์ของฉัน",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "ผู้ดูแล",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "การตั้งค่าของฉัน",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "กิจกรรมของฉัน",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "ออกจากระบบ",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "สิ่งที่ฉันสร้าง",
+        "description": "My makes"
+    }
+}

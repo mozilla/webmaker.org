@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "快速鏈結:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Bugzilla 新手上路",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "狀態白板:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "如果您沒看到 Whiteboard 欄位，請打開顯示進階欄位選項（Show Advanced Fields）。",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "意見回饋",
+        "description": "Feedback"
+    }
+}

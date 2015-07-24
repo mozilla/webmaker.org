@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "त्वरित लिंक्स:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Bugzilla के साथ शुरुआत करे",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "स्थिति व्हाइटबोर्ड:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "अगर आप को व्हाइटबोर्ड क्षेत्र नहीं दिख रहा हे तो सुनिश्चित करें की उन्नत विकल्प दिख रहा हे.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": " जानकारी देना",
+        "description": "Feedback"
+    }
+}

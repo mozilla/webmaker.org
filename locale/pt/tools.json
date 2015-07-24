@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "um cartão de saudações personalizado",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "uma versão alternativa de uma página da Web controversa",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "um gif animado com som",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "O Thimble torna ridiculamente simples o processo de criação e compartilhamento de suas páginas web. Escreva e edite HTML e CSS diretamente do navegador, então visualize instantaneamente suas mudanças. Hospede e compartilhe seus projetos com um simples clique. Perfeito para iniciantes e especialistas.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "Veja como a Web funciona",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Turbine vídeos na web",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "uma remistura engraçada do sítio favorito dos seus melhores amigos",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Crie e remisture a Web com as ferramentas gratuitas do Webmaker.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "Pode criar:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "O Popcorn Maker ajuda você a facilmente remixar vídeos, sons e imagens da web, criando montagens que você pode integrar em outros sites. Arraste e solte conteúdos da web, adicione seus comentários e links — tudo a partir do seu navegador. Os vídeos criados com o Popcorn Maker são dinâmicos, cheios de links e únicos a cada visualização.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "um cartaz on-line para o seu filme favorito",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "um meme divertido",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Criação da Web tornada fácil",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "Começar de Novo",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "Testar Agora Goggles",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "um documentário com hiperligações dinâmicas",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles permite que você veja as partes constituintes de um site. Ative os goggles para inspecionar o código por trás de qualquer página web, então remixe elementos com um simples clique, modificando-a com seus próprios textos, imagens e mais.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "e muito mais!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "Remisturar Uma Criação",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "um perfil em vídeo para se apresentar ao mundo",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "uma página principal personalizada para o New York Times",
+        "description": ""
+    }
+}

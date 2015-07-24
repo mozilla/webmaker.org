@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Snelle koppelingen:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Starten met Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Status Whiteboard:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Als u het Notitiebordveld niet ziet, controleer dan of de geavanceerde opties worden weergegeven.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Feedback",
+        "description": "Feedback"
+    }
+}

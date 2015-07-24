@@ -1,0 +1,162 @@
+{
+    "Webmaker is available in over 20 languages": {
+        "message": "ওয়েবমেকার 20টি ভাষায় রয়েছে এবং এটি একটি তথ্যপ্রযুক্তিতে দক্ষ কম্যুনিটি দ্বারা সমর্থিত রয়েছে। এটি এন্ড্রয়েড, ফায়ারফক্স ওএস, এবং অন্যান্য আধুনিক মোবাইল ব্রাউজারের জন্য এ বছরের শেষ নাগাদ পাওয়া যাবে।",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Quote 3 Quote": {
+        "message": "মজিলা শুধুমাত্র উন্নয়নশীল দেশগুলোর মানুষের মোবাইল ডিভাইসে মানসম্পন্ন স্থানীয় বিষয়বস্তু নেই -  এ ব্যাপারটি নিয়ে চিন্তিত নয়। এটি এ সম্পর্কে কাজও করে যাচ্ছে।",
+        "description": "Quote #3"
+    },
+    "Mozilla Rwanda": {
+        "message": "মজিলা রোয়ান্ডা",
+        "description": "Mozilla Rwanda"
+    },
+    "Enabling Digital Creativity": {
+        "message": "ডিজিটাল সৃজনশীলতার সুযোগ তৈরি",
+        "description": "Headline of Enabling Digital Creativity section on /localweb"
+    },
+    "MOI splash page metadata title": {
+        "message": "ওয়েবমেকারঃ আঞ্চলিকভাবে প্রয়োজন এমন ওয়েব তৈরি করা",
+        "description": "MOI splash page metadata title"
+    },
+    "Mozilla Indonesia": {
+        "message": "মজিলা ইন্দোনেশিয়া",
+        "description": "Mozilla Indonesia"
+    },
+    "Quote 3 Author": {
+        "message": "মার্ক সাল্লিভান",
+        "description": "Quote #3 Author"
+    },
+    "Quote 2 Author": {
+        "message": "ডেভিড মেয়ার",
+        "description": "Quote #2 Author"
+    },
+    "The Opportunity: A Locally Relevant Web": {
+        "message": "সুযোগঃ আপনার এলাকার সাথে সামঞ্জস্যপূর্ণ একটি ওয়েব",
+        "description": "Headline of The Opportunity: A Locally Relevant Web on /localweb"
+    },
+    "Let’s ensure the next generation of web users": {
+        "message": "চলুন নিশ্চিত করি, পরবর্তী  জেনারেশনের ওয়েব ব্যবহারকারীদের যাতে আঞ্চলিকভাবে প্রয়োজন আছে এমন ওয়েব তৈরি করার স্কিল থাকে। <b> আমরা ৩০ টিরও বেশী দেশের ভলান্টিয়ারদের নিয়ে হওয়া একটি বিশ্ব ব্যাপী আন্দোলন।</b> আপনি যদি একজন মোবাইল অপারেটর অথবা NGO হয়ে থাকেন, আপনার সাথে বেশী জড়িত ব্যবহারকারীদের ডিজিটাল স্ক্লিল প্রশিক্ষণ দিতে <a href=\"https://stuff.webmaker.org/mobile_webmaker_partners.pdf\" id=\"mobile-webmaker-partners-link\">আমাদের সঙ্গী হওন</a>।",
+        "description": "Subhead of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Colombia": {
+        "message": "মজিলা কলম্বিয়া",
+        "description": "Mozilla Colombia"
+    },
+    "Mozilla is building Webmaker": {
+        "message": "মজিলা তৈরি করছে ওয়েবমেকার, একটি ফ্রী এবং মুক্ত সোর্স মোবাইল কন্টেন্ট তৈরি করার অ্যাপ।",
+        "description": "Subhead of Enabling Digital Creativity section on /localweb"
+    },
+    "Webmaker Kenya research report": {
+        "message": "কেনিয়া ওয়েবমেকার গবেষণা প্রতিবেদন",
+        "description": "Link text to Webmaker Kenya research report"
+    },
+    "Mozilla Nigeria": {
+        "message": "মজিলা নাইজেরিয়া",
+        "description": "Mozilla Nigeria"
+    },
+    "Mozilla Kenya": {
+        "message": "মজিলা কেনিয়া",
+        "description": "Mozilla Kenya"
+    },
+    "Mozilla Philippines": {
+        "message": "মজিলা ফিলিপাইন",
+        "description": "Mozilla Philippines"
+    },
+    "Partner with us": {
+        "message": "আমাদের সঙ্গী হোন",
+        "description": "Partner with us button text"
+    },
+    "Quote 1 Author": {
+        "message": "অভিমন্যু ঘোষাল",
+        "description": "Quote #1 Author"
+    },
+    "Webmaker India research report": {
+        "message": "ভারত ওয়েবমেকার গবেষণা প্রতিবেদন",
+        "description": "Link text to Webmaker India research report"
+    },
+    "Understanding Users": {
+        "message": "ব্যবহারকারীদের বুঝতে পারা",
+        "description": "Headline of Understanding Users section on /localweb"
+    },
+    "Quote 2 Quote": {
+        "message": "মজিলা এবং মোবাইল অপারেটর ওয়েবকে আরও সার্বজনীন এবং বৈচিত্র্যপূর্ণ করতে চায়",
+        "description": "Quote #2"
+    },
+    "Mozilla is leading a research program": {
+        "message": "মজিলা একটি গবেষণা প্রোগ্রাম পরিচালনা করছে যার লক্ষ্য হচ্ছে প্রযুক্তি নিয়ে আরো জানা এবং উপায় চিন্তা করা যার মাধ্যমে মোবাইলের ডিজিটাল জীবনে আরো বড় সংখ্যার মানুষের অংশগ্রহণের সুযোগ সৃষ্টি হবে এবং আঞ্চলিক ভাবে কন্টেন্ট বেড়ে যাবে।",
+        "description": "Subhead of Understanding Users section on /localweb"
+    },
+    "Partners": {
+        "message": "অংশীদারগণ",
+        "description": "Headline of Partners section on /localweb"
+    },
+    "Empowering the next billion citizens of the web": {
+        "message": "ওয়েবের পরবর্তী বিলিয়ন ব্যাবহারকারীকে ক্ষমতায়ন করা",
+        "description": "Big headline on /localweb"
+    },
+    "Mozilla is working to ensure": {
+        "message": "নেক্সট বিলিওয়ন সংখ্যক মানুশ যারা তাদের স্মার্টফোনের মাধ্যমে প্রথমবারের মত অনলাইনে আসবে, তারা যাতে একটি ওপেন, অংশ নেয়ার মত সুযোগ আছে এবং সৃজনশীলতাকে উৎসাহিত করে, এমন ওয়েব পায়, মজিলা সে জন্য কাজ করে যাচ্ছে।",
+        "description": "This is a description to the value string"
+    },
+    "In 2014 and 2015, we conducted on-the-ground studies in Bangladesh, India and Kenya.": {
+        "message": "২০১৪ ও ২০১৫ তে আমরা বাংলাদেশ, ভারত ও কেনিয়া-তে মাঠ পর্যায়ে গবেষণা করছি।",
+        "description": "Subhead of the research report subsection on /localweb"
+    },
+    "MOI splash page metadata description": {
+        "message": "ঐতিহ্যের সাথে চলমান ওয়েবের কন্টেন্ট সৃষ্টির জটিল উপায়কে দূর করে, ওয়েবমেকার ওয়েবের ব্যবহারকারীদের ওয়েবের পূর্ণ সম্ভাবনা বুঝতে সাহায্য করে এবং তাদেরকে বিভিন্ন স্কিলের সাহায্য ক্ষমতা দেয় যাতে আঞ্চলিকভাবে প্রয়োজন এমন ওয়েব তৈরি করতে পারে।",
+        "description": "MOI splash page metadata description"
+    },
+    "A Locally Relevant Web: Early Research & Recommendations": {
+        "message": "স্থানীয়ভাবে প্রাসঙ্গিক ওয়েব: প্রাথমিক গবেষণা ও সুপারিশ",
+        "description": "Headline of the research report subsection on /localweb"
+    },
+    "Get in touch": {
+        "message": "সংযুক্ত থাকুন",
+        "description": "Get in touch button text"
+    },
+    "Mozilla India": {
+        "message": "মজিলা ইন্ডিয়া",
+        "description": "Mozilla India"
+    },
+    "Try the open beta": {
+        "message": "ওপেন বেটা ব্যবহার করে দেখুন",
+        "description": "Try the open beta button text"
+    },
+    "Mozilla Bangladesh": {
+        "message": "মজিলা বাংলাদেশ",
+        "description": "Mozilla Bangladesh"
+    },
+    "Quote 1 Quote": {
+        "message": "আগামী ৪ বিলিয়ন ব্যবহারকারীর কাছে মোবাইল ওয়েব এবং কন্টেন্ট তৈরি করার টুলস নিয়ে আসছে মজিলা এবং তার GSMA অংশীদার ",
+        "description": "Quote #1"
+    },
+    "Mozilla is proud to partner": {
+        "message": "মজিলা এসকল মোবাইল অপারেটর, প্রশিক্ষক, আন্তর্জাতিক উন্নয়ন প্রতিষ্ঠান এবং এনজিও, যারা মোবাইল ওয়েবের ভবিষ্যৎ উন্নতিতে আগ্রহী তাদের সাথে সম্পর্ক স্থাপন করে গর্বিত। ",
+        "description": "Subhead of Partners section on /localweb"
+    },
+    "Webmaker mobile for development blog": {
+        "message": "ডেভেলপমেন্ট ব্লগ এর জন্য ওয়েবমেকার মোবাইল ",
+        "description": "Link text to Webmaker mobile for development blog"
+    },
+    "Webmaker Bangladesh research report": {
+        "message": "বাংলাদেশ ওয়েবমেকার গবেষণা প্রতিবেদন",
+        "description": "Link text to Webmaker Bangladesh research report"
+    },
+    "Webmaker helps smartphone users": {
+        "message": "ওয়েবমেকারের মাধ্যমে ক্ষুদ্র ব্যবসার বিজ্ঞাপন, সামাজিক খবর অথবা পাঠ্যক্রমের জন্য ছোট ও সরল অ্যাপ তৈরি করা যায়, যা দিয়ে স্মার্টফোন ব্যবহারকারীরা তাদের জীবন ও সমাজ উন্নয়নে সমর্থ একটি ওয়েব গঠন করতে পারবে।",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Mozilla Brazil": {
+        "message": "মজিলা ব্রাজিল",
+        "description": "Mozilla Brazil"
+    },
+    "Partner with Mozilla": {
+        "message": "মজিলার সাথে পার্টনার হোন",
+        "description": "Headline of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Cambodia": {
+        "message": "মজিলা কম্বোডিয়া",
+        "description": "Mozilla Cambodia"
+    }
+}

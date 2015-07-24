@@ -1,0 +1,562 @@
+{
+    "Popcorn Maker": {
+        "message": "Popcorn Maker",
+        "description": "Popcorn Maker"
+    },
+    "Tools description": {
+        "message": "<a href=\"/{{ lang }}/tools\">Webmaker 工具</a> 把網路上的創作方式變簡單了。打造你自己的網頁、互動影片、混搭作品、行動應用程式與更多其他東西，並在實作中學習 Web 原理與操作、程式編寫及其他重要技能。",
+        "description": "a description of the webmaker tools"
+    },
+    "Please support our work": {
+        "message": "Please <a href=\"https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link\">support our work</a>.",
+        "description": "donate link"
+    },
+    "Contribute a guide or resource": {
+        "message": "貢獻教學指南或其他資源",
+        "description": "line item on /getinvolved"
+    },
+    "Submit a resource": {
+        "message": "送交資源",
+        "description": "Submit a teaching resource"
+    },
+    "Sign up for Webmaker announcement list": {
+        "message": "Sign up for the <a href=\"https://sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup\">Webmaker announcement list</a></strong>.",
+        "description": "Communicate line item on /getinvolved"
+    },
+    "Web Literacy Map": {
+        "message": "Web 素養一覽",
+        "description": "The title of the explore section"
+    },
+    "Resources for teaching the web": {
+        "message": "傳授 Web 技能的資源",
+        "description": "Heading for the second explore subsection with document stacks"
+    },
+    "Suggest your own links and resources": {
+        "message": "這個頁面已經進化了！將您的連結及資源加入建議清單內。 <a href='/{{lang}}/get-involved'>\n或者更深入參與</a>。</a>",
+        "description": "Submit a teaching resource"
+    },
+    "Visit our communications wiki": {
+        "message": "Visit our <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">communications wiki</a> to find even more places you can reach us.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "success resource banner": {
+        "message": "<strong>感謝您！</strong> 我們已經收到您的資源建議。",
+        "description": "Banner for form success submission."
+    },
+    "Webmaker - Sign Up": {
+        "message": "Webmaker - 註冊",
+        "description": "Webmaker - Sign Up"
+    },
+    "Jump right in": {
+        "message": "馬上跳進來",
+        "description": "headline for third section on home page"
+    },
+    "Find or host an event": {
+        "message": "尋找或舉辦活動",
+        "description": "line item on /getinvolved"
+    },
+    "How are we doing?": {
+        "message": "我們做得如何？",
+        "description": "headline on Feedback"
+    },
+    "Explore Webmaker": {
+        "message": "探索 Webmaker",
+        "description": "headline on first topic of 'jump right in' on home page"
+    },
+    "More Resources": {
+        "message": "更多資源",
+        "description": "See more kits in a search"
+    },
+    "Start Teaching": {
+        "message": "Start Teaching",
+        "description": "Teach site referral button text on Home page"
+    },
+    "Connect through social media": {
+        "message": "<strong>Connect through social media</strong> and see what people are making, follow events from around the world and check out new Webmaker projects by visiting our <a href=\"https://mozillawebmaker.tumblr.com/\">Tumblr</a>, <a href=\"https://twitter.com/webmaker\">Twitter</a>, <a href=\"https://www.facebook.com/mozilla\">Facebook</a>, <a href=\"https://www.flickr.com/photos/mozilladrumbeat/favorites/\">Flickr</a>, <a href=\"https://www.youtube.com/mozillawebmakers\">YouTube</a> and <a href=\"https://blog.webmaker.org/\">our blog</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Communicate": {
+        "message": "聯絡",
+        "description": ""
+    },
+    "Teaching kits": {
+        "message": "教材包",
+        "description": "First square in contribute grid on explore"
+    },
+    "Teaching kits desc": {
+        "message": "創造或分享數位技能的教材資源。",
+        "description": "Copy for first square in contribute grid on explore"
+    },
+    "Receive occasional email updates": {
+        "message": "接收電子郵件新訊通知，僅含最重要的訊息，大約每月一次。",
+        "description": "communicate line item description"
+    },
+    "Help with beta-testing & quality assurance": {
+        "message": "協助 Beta 版測試 & 品管檢測",
+        "description": "line item on /getinvolved"
+    },
+    "Build the web with others": {
+        "message": "Build the web with others at a local event, or find the resources to host your own.",
+        "description": "copy for third topic of 'jump right in' on home page"
+    },
+    "Making is the basis of everything we do.": {
+        "message": "Making is the basis of everything we do. Try remixing one of our <a href=\"/{{ lang }}/resources\">starter resources</a>, or make something from scratch using <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, or <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Then share it with the world using hashtag <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+        "description": "Make something copy"
+    },
+    "Email address": {
+        "message": "Email 地址",
+        "description": "placeholder on home input field"
+    },
+    "Learn to build it with Mozilla.": {
+        "message": "跟 Mozillla 一起學習如何塑造它",
+        "description": "subhead on home"
+    },
+    "Receiving your opinions on the Webmaker experience": {
+        "message": "能得到您使用 Webmaker 的經驗與意見對我們很重要。實際上，您的回饋將會是我們在規劃未來改善計畫時首先要考慮的。請花一點時間告訴我們，您喜歡這個站的哪些地方，又有哪些地方是您覺得不對的，或是可以更好的。",
+        "description": "copy on Feedback"
+    },
+    "Mozilla is a nonprofit organization": {
+        "message": "Mozilla is a non-profit organization and these open-source tools are created by a global community. They will always be 100% free—now and forever!",
+        "description": "Value description for free on home page"
+    },
+    "Privacy matters": {
+        "message": "隱私問題",
+        "description": "Text on back side of privacy day eyeball on home"
+    },
+    "Mozilla’s free tools": {
+        "message": "Mozilla’s free tools help you build the web while learning new skills.",
+        "description": "subhead on home"
+    },
+    "I ": {
+        "message": "我",
+        "description": "I heart"
+    },
+    "We believe that digital literacy is more than just learning to code.": {
+        "message": "We believe that digital literacy is more than just learning to code. Our tools, learning resources and community networks empower everyone to become citizens of the web.",
+        "description": "Value description for more than code on home page"
+    },
+    "Learn to Teach": {
+        "message": "學習教學",
+        "description": "headline on second topic of 'jump right in' on home page"
+    },
+    "Free": {
+        "message": "免費",
+        "description": "first value on home page"
+    },
+    "Add an event": {
+        "message": "舉辦活動",
+        "description": "Add an event button"
+    },
+    "What language is your resource link?": {
+        "message": "這份資源連結是什麼語言？",
+        "description": "Label for language name for resource link"
+    },
+    "Partner desc": {
+        "message": "跟 Mozilla 一起幫助傳授 Web 技能。",
+        "description": "Copy for sixth square in contribute grid on explore"
+    },
+    "Discover": {
+        "message": "發現",
+        "description": "Section in competency pages"
+    },
+    "Resources section description": {
+        "message": "Webmaker 的<a href=\"/{{ lang }}/resources\">資源</a>區是您的 Web 素養指南。發掘如寫程式、講故事、保護自身線上隱私及其他的新能力！每一區都有方便深入探索的鏈結、有實作專題可以動手，還有更多教學活動。",
+        "description": "Copy for the second explore subsection with document stacks"
+    },
+    "Translate": {
+        "message": "翻譯",
+        "description": "Third square in contribute grid on explore"
+    },
+    "Get involved with webmaker": {
+        "message": "Webmaker 是 Mozilla <a href=\"//www.mozilla.org/zh-TW/mission/\">非營利任務</a> 之一，目的在創造一個更開放、更具 Web 素養的網路世界。",
+        "description": "Copy for first explore subsection with map"
+    },
+    "Skills": {
+        "message": "技能",
+        "description": "Title for list of web literacy skills"
+    },
+    "Thimble": {
+        "message": "Thimble",
+        "description": "Thimble"
+    },
+    "Design": {
+        "message": "設計",
+        "description": "Fourth square in contribute grid on explore"
+    },
+    "Start Creating": {
+        "message": "開始創作",
+        "description": "button text on footer on home"
+    },
+    "As a non-profit organization, we depend on": {
+        "message": "作為非營利組織，我們需要您解囊相助，支持我們的目標 -- 鼓勵全球上千萬民眾從「逛網站」進而「做網站」。",
+        "description": "copy for Donate to Webmaker"
+    },
+    "All Webmaker tools are open source.": {
+        "message": "所有 Webmaker 工具都是開放原始碼。貢獻您的想法、程式補綴或回報程式錯誤，也可以提供自己的測試演示或原型。請參考文件、問題追蹤系統與其他資訊。",
+        "description": "copy for contribute code on /getinvolved"
+    },
+    "Want to teach the web to others?": {
+        "message": "Want to teach the web to others?",
+        "description": "Teach site referral heading on Home page"
+    },
+    "Study at your own pace": {
+        "message": "Study at your own pace to teach web literacy, digital skills, and open practices.",
+        "description": "copy for second topic of 'jump right in' on home page"
+    },
+    "Tools": {
+        "message": "工具",
+        "description": "headline for section on /about"
+    },
+    "View events": {
+        "message": "檢視活動",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Become a mentor": {
+        "message": "成為輔導員",
+        "description": "Button in mentors section on literacy pages, line item on /getinvolved"
+    },
+    "sharing": {
+        "message": "分享",
+        "description": "onboarding interactive text input"
+    },
+    "When you file your bug, be sure to use feedback": {
+        "message": "當您回報程式錯誤時，記得在 Status Whiteboard 欄位加註 \"Feedback\" 字樣，我們比較容易搜尋。",
+        "description": "explainer text for status whiteboard on Feedback"
+    },
+    "Make something": {
+        "message": "做點東西",
+        "description": "line item on /getinvolved"
+    },
+    "Footer header": {
+        "message": "不曉得從哪裡開始嗎？",
+        "description": "Header for bottom section of explore"
+    },
+    "Our team uses an issue tracker called Bugzilla": {
+        "message": "我們團隊使用 <a href=\"https://bugzilla.mozilla.org/\">Bugzilla</a> 做問題的回報與追蹤系統。所有人都可以來提交所發現的問題。雖然說是「問題」，但不一定非得是發生錯誤才能回報；如果您有功能上的需求或想法，或是一些非關技術的喜好與改善建議也可以提出。",
+        "description": "description for bugzilla"
+    },
+    "noStaffPick": {
+        "message": "目前還沒有精選教學資源，<a href=\"#\">提供一份吧</a>。",
+        "description": "No item in the list picked by staff and there is a submit link."
+    },
+    "Partner": {
+        "message": "合作夥伴",
+        "description": "Sixth square in contribute grid on explore"
+    },
+    "Submit a bug now": {
+        "message": "立刻回報程式錯誤",
+        "description": "button text on Feedback"
+    },
+    "Find an event": {
+        "message": "尋找活動",
+        "description": "Find an event button"
+    },
+    "Learn more": {
+        "message": "深入了解",
+        "description": "Button text on home page"
+    },
+    "Submit a bug on Bugzilla": {
+        "message": "到 Bugzilla 回報程式錯誤",
+        "description": ""
+    },
+    "The global Mozilla community wants everyone to be a citizen of the web": {
+        "message": "The global Mozilla community wants everyone to be a citizen of the web—including you!",
+        "description": "subhead on home"
+    },
+    "Start creating": {
+        "message": "開始創作",
+        "description": "button text on home"
+    },
+    "Featured Teaching Resources": {
+        "message": "精選教學資源",
+        "description": "Title for teaching resources in competency page"
+    },
+    "9 Ways to Get Involved with Webmaker": {
+        "message": "參與 Webmaker 的 9 種方法",
+        "description": "headline on /getinvolved"
+    },
+    "Footer copy": {
+        "message": "<a href=\"/{{lang}}/resources\">探索各種能力</a>，並看看 Webmaker 社群提供了什麼教學資源。 ",
+        "description": "Copy for bottom section of explore"
+    },
+    "Mozilla privacy policy agreement": {
+        "message": "I agree to Mozilla Webmaker's <a href=\"https://webmaker.org/terms\">Terms</a> and <a href=\"https://webmaker.org/privacy\">Privacy Policy</a>.",
+        "description": "Mozilla privacy policy agreement"
+    },
+    "explore_frontpage_title": {
+        "message": "歡迎來到 Webmaker！",
+        "description": "Heading for Explore page"
+    },
+    "Donate to Webmaker": {
+        "message": "捐款給 Webmaker",
+        "description": "line item on /getinvolved"
+    },
+    "Get inspired by examples like these": {
+        "message": "得到了這些例子的啟發 (<a href=\"https://webmaker.org/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">更多</a>)",
+        "description": "Paragraph copy for gallery section of Make Your Own"
+    },
+    "Help us build the future of the web": {
+        "message": "協助我們建立網路的未來。",
+        "description": "headline on home"
+    },
+    "Participate in community testing sessions": {
+        "message": "參與社群的測試聚會",
+        "description": "Headline for community testing session on Feedback"
+    },
+    "You might also like": {
+        "message": "您或許也會想看看",
+        "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
+    },
+    "By": {
+        "message": "作者：",
+        "description": "The byline for featured kits"
+    },
+    "Get training": {
+        "message": "接受訓練",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Mozilla Webmaker creates software, projects and events": {
+        "message": "Mozilla Webmaker 透過製作與分享軟體、專案與活動來推廣網路素養。我們是一個經由自造者、指導者與社群領導者自主驅動的開放源碼專案。我們希望您可以參與。",
+        "description": "copy for ‘9 ways to get involved’"
+    },
+    "Teach the web": {
+        "message": "Teach the web",
+        "description": "line item on /getinvolved"
+    },
+    "Join our community call": {
+        "message": "歡迎參加每星期二的社群會議，問問題，與社群及我們的成員聊聊，或尋找您所需的資源。",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "next": {
+        "message": "下一頁",
+        "description": "next button"
+    },
+    "Code desc": {
+        "message": "來幫我們 MakeAPI 抓錯、送交補綴、加強改造！",
+        "description": "Copy for fifth square in contribute grid on explore"
+    },
+    "Build and share the web with Mozilla.": {
+        "message": "在 Mozilla 建立和分享 web",
+        "description": "footer text on home"
+    },
+    "Submit a bug for Popcorn Maker": {
+        "message": "回報 Popcorn Maker 的程式錯誤",
+        "description": "quick links list item on Feedback"
+    },
+    "Say hello on a Webmaker community call": {
+        "message": "Say hello on a <a href=\"https://wiki.mozilla.org/Webmakers/Community_Calls\">Webmaker Community call</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Join the Webmaker newsgroup": {
+        "message": "加入 <a href='https://lists.mozilla.org/listinfo/webmaker'>Webmaker 新聞群組。</a>",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Now, learn to make and share more of your favorite things on the web.": {
+        "message": "Now, learn to make and share more of your favorite things on the web.",
+        "description": "Now, learn to make and share more of your favorite things on the web."
+    },
+    "Contribute to Webmaker": {
+        "message": "貢獻 Webmaker",
+        "description": "Contribute to Webmaker"
+    },
+    "Make your own apps and websites": {
+        "message": "打造你自己的 App 和網站",
+        "description": "headline on homepage"
+    },
+    "Submit a bug for Webmaker.org": {
+        "message": "回報 Webmaker.org 的程式錯誤",
+        "description": "quick links list item on Feedback"
+    },
+    "Explore now": {
+        "message": "立即探索",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Discover how you can build and share the web.": {
+        "message": "探索您如何建造以及分享全球資訊網",
+        "description": "sub-head on third section of home page"
+    },
+    "Contribute code": {
+        "message": "貢獻程式碼",
+        "description": "line item on /getinvolved"
+    },
+    "More than code": {
+        "message": "More than code",
+        "description": "third value on home page"
+    },
+    "Design desc": {
+        "message": "參與共同設計，或升級您的設計審閱技能。",
+        "description": "Copy for fourth square in contribute grid on explore"
+    },
+    "make-learn-teach-section-info": {
+        "message": "Webmaker 社群會在全世界各地舉辦活動 &mdash; 圖書館、社區活動中心、網咖、或甚至您的客廳中。在這裡尋找在您附近的活動，學著怎麼舉辦活動，或是參與我們全球的 Maker Party（2014 年七到九月）。",
+        "description": "Make Learn Teach information section"
+    },
+    "Link:": {
+        "message": "鏈結：",
+        "description": "Label form for Link submission"
+    },
+    "connect in many ways.": {
+        "message": "我們是龐大的社群，以各種不同的方式彼此連結。",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Participate in user testing": {
+        "message": "參與使用性測試、給予建議回饋、或幫忙維護品質。有您協助測試、提供想法，將讓 Mozilla Webmaker 的產品變得更好、塑造更好的未來。",
+        "description": "copy for QA on /getinvolved, line 2"
+    },
+    "Status Whiteboard:": {
+        "message": "狀態白板:",
+        "description": "label for faux bugzilla field on Feedback"
+    },
+    "Web Literacy": {
+        "message": "網路素養",
+        "description": "Web Literacy"
+    },
+    "Share community experiences": {
+        "message": "分享社群經驗",
+        "description": ""
+    },
+    "Wait, there’s more!": {
+        "message": "等等，還有更多！",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "new Webmaker tools and projects": {
+        "message": "現在就來試試新的<a href=\"/{{ lang }}/tools\">Webmaker工具</a>及項目。",
+        "description": "copy for QA on /getinvolved, line 1"
+    },
+    "Code": {
+        "message": "寫程式",
+        "description": "Fifth square in contribute grid on explore"
+    },
+    "Login to submit a resource": {
+        "message": "登入以送交資源",
+        "description": "A button Login to submit a resource."
+    },
+    "Contribute subsection copy": {
+        "message": "Webmaker 是基於 Mozilla 的非營利<a href=\"https://mozilla.org/{{ lang }}/mission/\">宣言</a>，為了打造、保護開放網路而成立的專案。Webmaker 開放原始碼、由社群鼎力支持，希望您可以<a href=\"/{{ lang }}/getinvolved\">一起加入</a>。",
+        "description": "Copy for the contribute subsection of explore"
+    },
+    "Investigate the tools, learning resources": {
+        "message": "Investigate the tools, learning resources and community that Webmaker offers.",
+        "description": "copy for first topic of 'jump right in' on home page"
+    },
+    "Webmaker helps people across the world": {
+        "message": "Webmaker helps people across the world become informed creators of a free and open web.",
+        "description": "Subehad on our values"
+    },
+    "Free tools that make it easy to create and learn": {
+        "message": "讓創作與學習都更加容易的免費工具",
+        "description": "Header for section that includes description of webmaker tools"
+    },
+    "or remix someone elses": {
+        "message": "...或混搭別人的",
+        "description": "headline for gallery section of Make Your Own"
+    },
+    "Good start!": {
+        "message": "好的開始！",
+        "description": "Good start!"
+    },
+    "user_deleted": {
+        "message": "您的帳號已經刪除。",
+        "description": "Your account has been deleted."
+    },
+    "English only": {
+        "message": "只限英文",
+        "description": ""
+    },
+    "Local": {
+        "message": "Local",
+        "description": "second value on home page"
+    },
+    "Submit": {
+        "message": "送出",
+        "description": "Submit button"
+    },
+    "You don’t need to be a wizard to teach the web.": {
+        "message": "You don’t need to be a wizard to teach the web. We’ve created <a href=\"/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">hackable guides</a> for teaching web literacy, webmaking, online storytelling and more. Want to create your own lesson plan? We have <a href=\"/{{ lang }}/make-your-own\">great templates</a> for that.",
+        "description": "Teach the Web copy"
+    },
+    "Join Mozillas community of educators": {
+        "message": "Join Mozilla's community of educators who teach digital skills and web literacy.",
+        "description": "Teach site referral description on Home page"
+    },
+    "and more!": {
+        "message": "還有更多！",
+        "description": ""
+    },
+    "Our values": {
+        "message": "我們看重的",
+        "description": "Headline on second section of home"
+    },
+    "From hack jams to pop ups to the global Maker Party": {
+        "message": "From hack jams to pop ups to the global <a href=\"https://party.webmaker.org\">Maker Party</a>, there’s an event to suit every interest. Search for one near you or host your own — we have <a href=\"/{{ lang }}/event-guides\">guides</a> to show you how.",
+        "description": "Find or host an event copy"
+    },
+    "Translate desc": {
+        "message": "協助我們翻譯並打造更為在地話的 Webmaker。",
+        "description": "Copy for third square in contribute grid on explore"
+    },
+    "What do you love on the web?": {
+        "message": "您愛網路的哪裏？",
+        "description": "What do you love on the web?"
+    },
+    "Make. Learn. Get together.": {
+        "message": "創作、學習、聚會",
+        "description": "Make. Learn. Get together. Header section"
+    },
+    "Get Together": {
+        "message": "參與聚會",
+        "description": "headline on third topic of 'jump right in' on home page"
+    },
+    "Submit a bug for Thimble": {
+        "message": "回報 Thimble 的程式錯誤",
+        "description": "quick links list item on Feedback"
+    },
+    "Events desc": {
+        "message": "在你的家鄉舉辦 Webmaker 活動。",
+        "description": "Copy for second square in contribute grid on explore"
+    },
+    "Mentoring is a chance to share your knowledge": {
+        "message": "透過輔導他人，您便有機會和全世界、不分年齡的渴求數位技能的學習者分享知識、提供即時回應。",
+        "description": "Become a mentor copy on /getinvolved"
+    },
+    "Opportunities to get involved": {
+        "message": "Webmaker 團隊會定期發出通知讓大家來測試我們的站台、工具與訓練資源。要參與我們社群的測試，請<a href=\"https://wiki.mozilla.org/Webmaker/TeachTheWeb/Testing\">參考我們的 wiki 頁面</a>。",
+        "description": "copy to encourage people to get involved in testing"
+    },
+    "Discover creative ways to teach and learn digital superpowers": {
+        "message": "找出有創意的方式來教導與學習數位超能力",
+        "description": "Heading for first explore subsection with map"
+    },
+    "Suggest a resource for": {
+        "message": "建議一份與 {{ skill.term }} 相關的資源",
+        "description": "Title for suggesting resource form"
+    },
+    "Thimble Desc": {
+        "message": "打造自己的網頁並發佈。",
+        "description": "Make and publish your own web page."
+    },
+    "We all use the web in different ways.": {
+        "message": "We all use the web in different ways. Mozilla is dedicated to helping you build a web that’s relevant to your friends, family, business or community—no matter where you live.",
+        "description": "Value description for local on home page"
+    },
+    "The web is yours": {
+        "message": "Web 是屬於您的",
+        "description": "headline on home"
+    },
+    "We’re always eager to learn how Webmaker is used": {
+        "message": "我們希望知道 Webmaker 是怎麼被用於教導各式各樣的人們網路世界的素養。如果您有使用 Webmaker 的案例可以分享，請加入 <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker 新聞群組</a>並透過電子郵件分享您的案例與回饋。您也可以在 Twitter 上，透過回覆  <a href=\"https://twitter.com/webmaker\">@webmaker</a> 或是使用 <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> 標籤來參與對話。",
+        "description": "copy encouraging people to get involved on Feedback"
+    },
+    "Popcorn Maker Desc": {
+        "message": "打造互動影片。",
+        "description": "Create interactive videos."
+    },
+    "active daily discussion paragraph": {
+        "message": "這是更為活躍、天天有討論的地方，您可在此協助形塑 Webmaker 專案的未來方向。",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Do you have a web literacy project?": {
+        "message": "Do you have a web literacy project? We’d love to hear about it and potentially share it on Webmaker.org.",
+        "description": "Contribute a guide copy"
+    }
+}

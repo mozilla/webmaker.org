@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Ustvarjamo splet",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Predelava video posnetkov in odprta koda za mlade",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Vaš mentor",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Ema se je udeležila <a href=\"/makerparty\">Maker Zabave</a> za 10-12 letnike na lokalni univerzi v Viktoriji, Kanadi. Sedaj skupaj z drugimi mentorji vodi Webmaker klub in nadaljuje s poučevanjem vrednot odprtih praks.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati se je udeležila naše <a href=\"/makerparty\">Maker Zabave</a> leta 2012, kjer se je naučila predelovati spletne strani z uporabo programov Thimble in Popcorn. Sedaj svoje znanje deli dalje in svoje prijatelje, družinske člane in sošolce uči osnov HTML-ja in kako sodelovati na spletu.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon je organiziral 48-urno <a href=\"/makerparty\">Maker Zabavo</a> v Dundee-ju na Škotskem, kamor je povabil svoje študente, da bi raziskali vse od papirnate ikone Twitterja v obliki ptice in omrežili Googlove zemljevide na krmilno palico. ",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, sodelavka na Webmaker projektu, predavateljica in umetnica predelav",
+        "description": ""
+    }
+}

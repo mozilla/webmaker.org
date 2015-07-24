@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "De educatieve middelen van Webmaker worden gesteund door de <a href=\"/{{ lang }}/literacy\">webgeletterdheid-kaart van Mozilla</a> en omvatten de volledige set van vaardigheden die mensen nodig hebben om in de digitale wereld van vandaag te floreren.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Maken voor het web",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Leer meer over Hive Learning Networks en hoe steden over de hele wereld digitale vaardigheden en webgeletterdheid stimuleren door samen te leren.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Navigeren over het web",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Meld u aan voor ons <a href=\"http://discourse.webmaker.org/category/meet\">online forum</a> om andere mentors zoals u te ontmoeten. Deel uw evenementen, activiteiten en onderwijsbronnen met de hashtag <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Onze wereldwijde gemeenschap staat klaar om te helpen",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Introduceer uzelf",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Webeducatiekaart",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Meer informatie",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Word een katalysator voor de lokale gemeenschap",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Laat anderen zien hoe het web gemaakt wordt en verzamel de <a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker Skill Sharer-badge</a>. Als u klaar bent, dien dan een aanvraag in voor de <a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker Mentor-badge</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Ga van start.</strong> Maak snel kennis met nieuwe digitale vaardigheden met leuke dingen om te lezen, te bekijken, te beluisteren of te delen.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Deelnemen op het web",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Bronnen voor onderwijzen en leren",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Ontdekken",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Meer informatie",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>We zijn veranderd!</strong> Zoekt u naar gemakkelijke manieren om te beginnen? Probeer onze <a href=\"/{{ lang}}/tools\">Hulpmiddelen</a>. Of remix iets in de <a href=\"/{{ lang }}/gallery\">Galerij</a>.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Ontdekken",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Ontdek nieuwe vaardigheden. Deel ze daarna met anderen.",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Verbinden",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "Wat is webgeletterdheid?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Deel wat u weet.</strong> Iedereen kan onderwijzen met Webmaker. Of u nu een leraar in de klas bent of een enthousiaste mentor, ouder of vriend, wij hebben activiteiten en leermiddelen die kunnen helpen.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Bekijk de gemeenschapsgalerij en bekijk wat andere webmakers maken.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Maken",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Maak uw handen vuil.</strong> De beste manier om te leren is door concreet maken en bouwen! Maak webpagina’s, multimedia-video’s of remixes die praktische vaardigheden bijbrengen terwijl u ermee bezig bent.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Maak contact met de wereldwijde gemeenschap",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Leer door concreet maken en doen. Deel daarna wat u hebt geleerd met anderen. Webmaker-bronnen zijn ontworpen om onderwijzen eenvoudig en leuk te maken, van zoeken en navigeren tot code en scripts schrijven, digitaal burgerschap en bescherming van online privacy. Probeer <a href=\"/make-your-own\">maak uw eigen</a>-onderwijskits om te delen met andere onderwijzers en mentors over de hele wereld.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Werk aan uw vaardigheden als mentor",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker is anders.</strong> Wij zijn een open-sourceproject dat is gebouwd door en voor een wereldwijde gemeenschap van onderwijzers, techneuten en mensen zoals u. Wij houden van het web en willen dat u het creatieve potentieel ervan verspreidt naar iedereen. We werken graag met u samen of zien graag dat u <a href=\"/{{ lang }}/getinvolved\">mee komt helpen</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "De Webgeletterdheid-kaart helpt bij het bouwen van alfabetisme in het verkennen, bouwen en delen van het web.",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Maak een wereld met meer webgeletterdheid",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Onderwijzen",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla definieert webgeletterdheid als de vaardigheden en competenties die nodig zijn voor het lezen, schrijven en deelnemen op internet. Lees meer over waarom Mozilla geeft om webgeletterdheid in dit Webmaker-whitepaper.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Bezoek of organiseer <a href=\"https://events.webmaker.org\">lokale evenementen</a> om samen te werken met organisators en onderwijzers.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Browse door <a href=\"https://webmaker.org/resources\">onderwijsbronnen</a> of werk mee aan <a href=\"https://training.webmakerprototypes.org\">professioneel development</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Doe mee",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Creëren",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Deel uw eigen onderwijsbronnen, help met vertalen, lever code of meer.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "We zijn techneuten, makers, onderwijzers, ouders en anderen die digitale vaardigheden en webgeletterdheid willen onderwijzen door te maken.",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Doe mee met onze open online cursus over hoe het web te onderwijzen.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Aan de slag.",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>Onderwijs en leer digitale vaardigheden en webgeletterdheid</strong>.↵\nDe pagina’s in deze sectie zitten vol leuke dingen om te ontdekken, maken en onderwijzen. Onze wereldwijde gemeenschap voegt voortdurend nieuwe activiteiten, lesplannen en gidsen van het hele internet toe, die het eenvoudig maken om te leren door te doen. Iedereen kan deze educatieve middelen gebruiken &ndash; ze zijn gratis, open en worden ondersteund door de <a href=\"https://mozilla.org/{{ lang }}/mission/\">non-profitmissie van Mozilla</a>",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Webmaker 도구를 사용하여 저장하고 배포하려면 <span class=\"green-text\">Webmaker 계정이 필요합니다</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "여러분만의 콘텐츠를 만들기 위해 Webmaker의 온라인 <a href=\"/{{lang}}/tools\">도구</a>를 ㅏㅅ용하세요",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker는 영원히 무료입니다.</span> 여러분이 어디에 있든, 어느 수준이든 도구, 행사, 교육 자제 모두를 무료로 사용할 수 있습니다. 계정을 가입만 하면 여러분이 만든 것들을 저장하고 배포할 수 있습니다.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "가까운 <a href=\"/{{lang}}/events\">이벤트</a> 찾아 참석하기",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "웹 리터시 기술에 대한 <a href=\"/{{lang}}/badges/webmaker-super-mentor\">배지</a>를 획득하려면 <span class=\"green-text\">Webmaker 계정이 필요합니다</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Webmaker가 무엇을 제공해주나요?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "검증된 Webmaker 교육 <a href=\"/{{lang}}/resources\">자료</a>와 템플릿 사용하기",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "프로필과 커스텀 URL을 만들려면 <span class=\"green-text\">Webmaker 계정이 필요합니다</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "웹메이커 함께하기",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "로그인",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Webmaker 가입하기",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "행사를 만들고 알리려면 <span class=\"green-text\"> Webmaker 계정이 필요합니다</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

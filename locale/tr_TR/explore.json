@@ -1,0 +1,562 @@
+{
+    "Popcorn Maker": {
+        "message": "Popcorn Maker",
+        "description": "Popcorn Maker"
+    },
+    "Tools description": {
+        "message": "<a href=\"/{{ lang }}/tools\">Webmaker araçları</a> web üzerine kolayca yeni şeyler üretmeni sağlar. Kendi web sayfalarını, etkileşimli görüntüleri, karmaları, mobil uygulamaları ve diğer işlemleri yapabilir; istersen web mekanizmasını, kodlamayı ve diğer değerli becerileri öğrenebilirsin.",
+        "description": "a description of the webmaker tools"
+    },
+    "Please support our work": {
+        "message": "Lütfen <a href=\"https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link\">çalışmalarımı destekle</a>.",
+        "description": "donate link"
+    },
+    "Contribute a guide or resource": {
+        "message": "Bir rehber ya da kaynağa katkıda bulun",
+        "description": "line item on /getinvolved"
+    },
+    "Submit a resource": {
+        "message": "Kaynak gönder",
+        "description": "Submit a teaching resource"
+    },
+    "Sign up for Webmaker announcement list": {
+        "message": "<a href=\"https://sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup\">Webmaker duyuru listesine</a></strong> kayıt ol.",
+        "description": "Communicate line item on /getinvolved"
+    },
+    "Web Literacy Map": {
+        "message": "Web Okuryazarlığı Haritası",
+        "description": "The title of the explore section"
+    },
+    "Resources for teaching the web": {
+        "message": "Web eğitim kaynakları",
+        "description": "Heading for the second explore subsection with document stacks"
+    },
+    "Suggest your own links and resources": {
+        "message": "Bu sayfa gelişiyor! Eklenmesini istediğin bağlantı ve kaynakları öner. <a href='/{{lang}}/get-involved'>Ya da işin içine daha fazla gir</a>.</a>",
+        "description": "Submit a teaching resource"
+    },
+    "Visit our communications wiki": {
+        "message": "Bize ulaşabileceğin daha fazla yer bulmak için<a href=\"https://wiki.mozilla.org/Webmakers/Communications\">bağlantılar wiki sayfamıza</a> bak,",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "success resource banner": {
+        "message": "<strong>Teşekkürler!</strong> Önerdiğin kaynak bize ulaştı.",
+        "description": "Banner for form success submission."
+    },
+    "Webmaker - Sign Up": {
+        "message": "Webmaker Hesabı Aç",
+        "description": "Webmaker - Sign Up"
+    },
+    "Jump right in": {
+        "message": "Hemen işe koyul",
+        "description": "headline for third section on home page"
+    },
+    "Find or host an event": {
+        "message": "Bir etkinlik bul ya da düzenle",
+        "description": "line item on /getinvolved"
+    },
+    "How are we doing?": {
+        "message": "Nasıl yapıyoruz?",
+        "description": "headline on Feedback"
+    },
+    "Explore Webmaker": {
+        "message": "Webmaker Uygulamasını Keşfet",
+        "description": "headline on first topic of 'jump right in' on home page"
+    },
+    "More Resources": {
+        "message": "Diğer kaynaklar",
+        "description": "See more kits in a search"
+    },
+    "Start Teaching": {
+        "message": "Öğretmeye Başla",
+        "description": "Teach site referral button text on Home page"
+    },
+    "Connect through social media": {
+        "message": "<strong>Sosyal medya ile bağlan</strong> ve insanların neler yaptığına bak, dünyadaki etkinlikleri izle ve yeni Webmaker projelerimizi öğren: \n <a href=\"https://mozillawebmaker.tumblr.com/\">Tumblr</a>, <a href=\"https://twitter.com/webmaker\">Twitter</a>, <a href=\"https://www.facebook.com/mozilla\">Facebook</a>, <a href=\"https://www.flickr.com/photos/mozilladrumbeat/favorites/\">Flickr</a>, <a href=\"https://www.youtube.com/mozillawebmakers\">YouTube</a>  ve <a href=\"https://blog.webmaker.org/\"> blogumuz</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Communicate": {
+        "message": "İletişim Kur",
+        "description": ""
+    },
+    "Teaching kits": {
+        "message": "Eğitim setleri",
+        "description": "First square in contribute grid on explore"
+    },
+    "Teaching kits desc": {
+        "message": "Sayısal becerileri öğreten bir kaynak oluştur ya da paylaş.",
+        "description": "Copy for first square in contribute grid on explore"
+    },
+    "Receive occasional email updates": {
+        "message": "Ayda bir, en önemli konuları içeren e-posta bildirimleri alabilirsin.",
+        "description": "communicate line item description"
+    },
+    "Help with beta-testing & quality assurance": {
+        "message": "Beta sınaması ve kalite denetimi için yardımcı ol",
+        "description": "line item on /getinvolved"
+    },
+    "Build the web with others": {
+        "message": "Başkalarıyla web üretmek için yerel bir etkinliğe katıl ya da kendi kaynaklarını bularak etkinliğini düzenle.",
+        "description": "copy for third topic of 'jump right in' on home page"
+    },
+    "Making is the basis of everything we do.": {
+        "message": "Yapmak yaptıklarımızın temeli. <a href=\"/{{ lang }}/resources\">Başlangıç kaynaklarını</a> kullanarak bir şeyleri karmayı dene ya da <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Işını Gözlüğü</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a> kullanarak sıfırdan bir şeyler oluştur. Yapımlarını <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a> etiketini kullanarak dünyayla paylaş.",
+        "description": "Make something copy"
+    },
+    "Email address": {
+        "message": "E-posta adresi",
+        "description": "placeholder on home input field"
+    },
+    "Learn to build it with Mozilla.": {
+        "message": "Mozilla ile neler yapabileceğini öğren.",
+        "description": "subhead on home"
+    },
+    "Receiving your opinions on the Webmaker experience": {
+        "message": "Webmaker deneyiminle ilgili düşüncelerini öğrenmek bizim için önemli. Aslında sitede yapacağımız geliştirmeleri planlarken, öncelikle geri bildirimleri dikkate alıyoruz. Lütfen sitede neyin hoşuna gittiğini, neyin beklediğin gibi olmadığını ve neyin daha iyi olabileceğini bize bildirmek için bir dakikanı ayır. ",
+        "description": "copy on Feedback"
+    },
+    "Mozilla is a nonprofit organization": {
+        "message": "Mozilla kar amacı gütmeyen bir kuruluştur ve bu açık kaynak kodlu araçlar küresel bir topluluk tarafından oluşturulmuştur. Bu araçlar her zaman şimdi ve sonsuza kadar %100 ücretsiz kalacaktır!",
+        "description": "Value description for free on home page"
+    },
+    "Privacy matters": {
+        "message": "Kişisel gizlilik önemlidir",
+        "description": "Text on back side of privacy day eyeball on home"
+    },
+    "Mozilla’s free tools": {
+        "message": "Ücretsiz Mozilla araçları, yeni beceriler öğrenerek web siteleri yapmanı sağlar.",
+        "description": "subhead on home"
+    },
+    "I ": {
+        "message": "Ben",
+        "description": "I heart"
+    },
+    "We believe that digital literacy is more than just learning to code.": {
+        "message": "Sayısal okuryazarlığın kod öğrenmekten daha fazlası olduğuna inanıyoruz. Araçlarımız, eğitim kaynaklarımız ve topluluk ağlarımız herkesin web yurttaşı olmasına yardımcı oluyor.",
+        "description": "Value description for more than code on home page"
+    },
+    "Learn to Teach": {
+        "message": "Öğretmeyi Öğren",
+        "description": "headline on second topic of 'jump right in' on home page"
+    },
+    "Free": {
+        "message": "Özgür",
+        "description": "first value on home page"
+    },
+    "Add an event": {
+        "message": "Bir Etkinlik Ekle",
+        "description": "Add an event button"
+    },
+    "What language is your resource link?": {
+        "message": "Kaynak bağlantısının dili",
+        "description": "Label for language name for resource link"
+    },
+    "Partner desc": {
+        "message": "Web eğitimi için Mozilla ile iş ortaklığı kur.",
+        "description": "Copy for sixth square in contribute grid on explore"
+    },
+    "Discover": {
+        "message": "Keşfet",
+        "description": "Section in competency pages"
+    },
+    "Resources section description": {
+        "message": "Webmaker <a href=\"/{{ lang }}/resources\">kaynaklar</a> bölümü Web Okuryazarlığı rehberindir. Kodlama, öykü anlatımı, çevrimiçi gizliliğini koruma gibi konularda yeni güçler keşfet. Her bölümde keşfedilecek bağlantılar, yapım projeleri ve eğitim etkinlikleri bulunur.",
+        "description": "Copy for the second explore subsection with document stacks"
+    },
+    "Translate": {
+        "message": "Çevir",
+        "description": "Third square in contribute grid on explore"
+    },
+    "Get involved with webmaker": {
+        "message": "Webmaker, Mozilla'nın daha açık ve web okuryazarlığı artmış bir dünya hedefleyen<a href=\"//www.mozilla.org/en-US/mission/\">kar amacı gütmeyen misyonunun</a> bir parçasıdır.",
+        "description": "Copy for first explore subsection with map"
+    },
+    "Skills": {
+        "message": "Beceriler",
+        "description": "Title for list of web literacy skills"
+    },
+    "Thimble": {
+        "message": "Thimble",
+        "description": "Thimble"
+    },
+    "Design": {
+        "message": "Tasarla",
+        "description": "Fourth square in contribute grid on explore"
+    },
+    "Start Creating": {
+        "message": "Üretmeye Başla",
+        "description": "button text on footer on home"
+    },
+    "As a non-profit organization, we depend on": {
+        "message": "Kar amacı gütmeyen bir organizasyon olarak, dünyadaki milyonlarca insanı web kullanmaya ve üretmeye yönlendirmek amacımızı gerçekleştirmek için senin gibi cömert insanlardan alacağımız bağışlara güveniyoruz.",
+        "description": "copy for Donate to Webmaker"
+    },
+    "All Webmaker tools are open source.": {
+        "message": "Tüm Webmaker araçları açık kaynaklıdır. Fikirlere, yamalara, hatalara ya da kendi tanıtım ve ön ürünlerine katkıda bulun. Belgelere, sorun izlemeye ve diğer araçlara eriş.",
+        "description": "copy for contribute code on /getinvolved"
+    },
+    "Want to teach the web to others?": {
+        "message": "Başkalarına web öğretmek ister misin?",
+        "description": "Teach site referral heading on Home page"
+    },
+    "Study at your own pace": {
+        "message": "Web okuryazarlığını öğretmek, sayısal beceriler edinmek ve açık kaynak uygulamaları yapmak için kendi hızında çalış.",
+        "description": "copy for second topic of 'jump right in' on home page"
+    },
+    "Tools": {
+        "message": "Araçlar",
+        "description": "headline for section on /about"
+    },
+    "View events": {
+        "message": "Etkinliklere bak",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Become a mentor": {
+        "message": "Danışman ol",
+        "description": "Button in mentors section on literacy pages, line item on /getinvolved"
+    },
+    "sharing": {
+        "message": "paylaşım",
+        "description": "onboarding interactive text input"
+    },
+    "When you file your bug, be sure to use feedback": {
+        "message": "Bir hata bildirirken bulabilmemiz için Beyaz Tahta Durum alanına  \"Geri Bildirim\" koyduğuna emin ol. ",
+        "description": "explainer text for status whiteboard on Feedback"
+    },
+    "Make something": {
+        "message": "Bir Şeyler Yap",
+        "description": "line item on /getinvolved"
+    },
+    "Footer header": {
+        "message": "Nereden başlayacağını bilmiyor musun?",
+        "description": "Header for bottom section of explore"
+    },
+    "Our team uses an issue tracker called Bugzilla": {
+        "message": "Takımımız hataları bildirmek ve düzeltmeleri izlemek için <a href=\"https://bugzilla.mozilla.org/\">Bugzilla</a> sorun izleyicisini kullanıyor. İsteyen herkes hata bildiriminde bulunabilir. Ve \"hata\" denildiğinde yalnızca birşeylerin yanlış olması gerekmez; bir özellik ile ilgili bir fikrin, birşeyleri ne kadar beğendiğinle ilgili bir not ya da teknik olmayan bir iyileştirme önerisi de olabilir.",
+        "description": "description for bugzilla"
+    },
+    "noStaffPick": {
+        "message": "Henüz öne çıkarılmış bir eğitim kaynağı yok. <a href=\"#\"> Bir Kaynak Öner</a>",
+        "description": "No item in the list picked by staff and there is a submit link."
+    },
+    "Partner": {
+        "message": "İş Ortağı",
+        "description": "Sixth square in contribute grid on explore"
+    },
+    "Submit a bug now": {
+        "message": "Hata bildir",
+        "description": "button text on Feedback"
+    },
+    "Find an event": {
+        "message": "Bir Etkinlik Bul",
+        "description": "Find an event button"
+    },
+    "Learn more": {
+        "message": "Bilgi al",
+        "description": "Button text on home page"
+    },
+    "Submit a bug on Bugzilla": {
+        "message": "Bugzilla üzerinde hata bildir",
+        "description": ""
+    },
+    "The global Mozilla community wants everyone to be a citizen of the web": {
+        "message": "Küresel Mozilla topluluğu herkesin İnternet yurttaşı olmasını istiyor—senin de!",
+        "description": "subhead on home"
+    },
+    "Start creating": {
+        "message": "Üretmeye Başla",
+        "description": "button text on home"
+    },
+    "Featured Teaching Resources": {
+        "message": "Öne Çıkarılmış Eğitim Kaynakları",
+        "description": "Title for teaching resources in competency page"
+    },
+    "9 Ways to Get Involved with Webmaker": {
+        "message": "Webmaker ile İlgilenmenin 9 Yolu",
+        "description": "headline on /getinvolved"
+    },
+    "Footer copy": {
+        "message": "<a href=\"/{{lang}}/resources\">Uzmanlıklara gözat</a> ve Webmaker topluluğu tarafından sunulması gereken eğitim kaynaklarının neler olduğuna bak.",
+        "description": "Copy for bottom section of explore"
+    },
+    "Mozilla privacy policy agreement": {
+        "message": "Mozilla Webmaker <a href=\"https://webmaker.org/terms\">Koşullarını</a> ve <a href=\"https://webmaker.org/privacy\">Gizlilik  İlkesini</a> kabul ediyorum.",
+        "description": "Mozilla privacy policy agreement"
+    },
+    "explore_frontpage_title": {
+        "message": "Webmaker Uygulamasına Hoşgeldin!",
+        "description": "Heading for Explore page"
+    },
+    "Donate to Webmaker": {
+        "message": "Webmaker projesine bağış yapın",
+        "description": "line item on /getinvolved"
+    },
+    "Get inspired by examples like these": {
+        "message": "Bunun gibi örneklerden (<a href=\"https://webmaker.org/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">daha çok</a>) ilham al",
+        "description": "Paragraph copy for gallery section of Make Your Own"
+    },
+    "Help us build the future of the web": {
+        "message": "Web geleceğini kurmamıza yardımcı ol.",
+        "description": "headline on home"
+    },
+    "Participate in community testing sessions": {
+        "message": "Topluluk sınama oturumlarına katıl",
+        "description": "Headline for community testing session on Feedback"
+    },
+    "You might also like": {
+        "message": "Ayrıca şunlar hoşuna gidebilir",
+        "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
+    },
+    "By": {
+        "message": "Öne çıkaran",
+        "description": "The byline for featured kits"
+    },
+    "Get training": {
+        "message": "Eğitim al",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Mozilla Webmaker creates software, projects and events": {
+        "message": "Mozilla Webmaker, yazılım, proje ve etkinlikler üreterek; üretme ve paylaşma yoluyla web okuryazarlığının arttırılmasını destekler. Biz yapımcılar, danışmanlar ve topluluk liderleri tarafından desteklenen açık kaynaklı bir projeyiz. Seni de aramızda görmek isteriz.",
+        "description": "copy for ‘9 ways to get involved’"
+    },
+    "Teach the web": {
+        "message": "Web öğret",
+        "description": "line item on /getinvolved"
+    },
+    "Join our community call": {
+        "message": "Her Salı yapılan topluluk çağrımıza katıl. Herkesi bekliyoruz! Soru sor, topluluğumuzla ve ekibimizle tanışarak gerek duyduğun kaynaklara ulaş.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "next": {
+        "message": "sonraki",
+        "description": "next button"
+    },
+    "Code desc": {
+        "message": "Hataları bildir, yamalar yayınla ya da MakeAPI ile hackle.",
+        "description": "Copy for fifth square in contribute grid on explore"
+    },
+    "Build and share the web with Mozilla.": {
+        "message": "Mozilla ile web üret ve paylaş.",
+        "description": "footer text on home"
+    },
+    "Submit a bug for Popcorn Maker": {
+        "message": "Popcorn Maker hatası bildir",
+        "description": "quick links list item on Feedback"
+    },
+    "Say hello on a Webmaker community call": {
+        "message": "<a href=\"https://wiki.mozilla.org/Webmakers/Community_Calls\"> Webmaker Topluluk çağrısına </a> merhaba de.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Join the Webmaker newsgroup": {
+        "message": "<a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker haber grubuna</a> katıl.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Now, learn to make and share more of your favorite things on the web.": {
+        "message": "Şimdi sevdiğin şeyleri web üzerinde yapmayı ve paylaşmayı öğren.",
+        "description": "Now, learn to make and share more of your favorite things on the web."
+    },
+    "Contribute to Webmaker": {
+        "message": "Webmaker Uygulamasına Katkıda Bulun",
+        "description": "Contribute to Webmaker"
+    },
+    "Make your own apps and websites": {
+        "message": "Kendi web sitelerini ve uygulamalarını yap",
+        "description": "headline on homepage"
+    },
+    "Submit a bug for Webmaker.org": {
+        "message": "Webmaker.org hatası bildir",
+        "description": "quick links list item on Feedback"
+    },
+    "Explore now": {
+        "message": "Şimdi keşfet",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Discover how you can build and share the web.": {
+        "message": "Nasıl web yapıp paylaşacağını keşfet",
+        "description": "sub-head on third section of home page"
+    },
+    "Contribute code": {
+        "message": "Koda katkıda bulun",
+        "description": "line item on /getinvolved"
+    },
+    "More than code": {
+        "message": "Kodlamadan fazlası",
+        "description": "third value on home page"
+    },
+    "Design desc": {
+        "message": "Tasarıma katkıda bulun ya da tasarım değerlendirme becerilerini geliştir.",
+        "description": "Copy for fourth square in contribute grid on explore"
+    },
+    "make-learn-teach-section-info": {
+        "message": "Webmaker topluluğu dünyada kitaplıklar, topluluk merkezleri, İnternet kafeler ya da oturma odan gibi çeşitli ortam ve etkinliklerde bir araya gelir. Sana yakın etkinliklere bak, kendi etkinliğini nasıl düzenleyeceğini öğren ya da küresel Yapımcı Partisine (Tem - Eyl 2014) katıl.",
+        "description": "Make Learn Teach information section"
+    },
+    "Link:": {
+        "message": "Bağlantı:",
+        "description": "Label form for Link submission"
+    },
+    "connect in many ways.": {
+        "message": "Biz büyük bir topluluğuz ve pek çok şekilde iletişim kuruyoruz.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Participate in user testing": {
+        "message": "Kullanıcı sınamalarına katıl, geribildirim gönder ya da kalite denetimine yardımcı ol. Sınama ve fikirlerin Mozilla Webmaker ürünlerini daha iyiye götürerek geleceklerini şekillendiriyor.",
+        "description": "copy for QA on /getinvolved, line 2"
+    },
+    "Status Whiteboard:": {
+        "message": "Beyaz Tahta Durumu:",
+        "description": "label for faux bugzilla field on Feedback"
+    },
+    "Web Literacy": {
+        "message": "Web Okuryazarlığı",
+        "description": "Web Literacy"
+    },
+    "Share community experiences": {
+        "message": "Topluluk deneyimlerini paylaş",
+        "description": ""
+    },
+    "Wait, there’s more!": {
+        "message": "Bekle, daha fazlası var!",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "new Webmaker tools and projects": {
+        "message": "Yeni<a href=\"/{{ lang }}/tools\">Webmaker araç</a> ve projelerini ilk sen dene.",
+        "description": "copy for QA on /getinvolved, line 1"
+    },
+    "Code": {
+        "message": "Kodla",
+        "description": "Fifth square in contribute grid on explore"
+    },
+    "Login to submit a resource": {
+        "message": "Bir kaynak göndermek için oturum aç",
+        "description": "A button Login to submit a resource."
+    },
+    "Contribute subsection copy": {
+        "message": "Webmaker açık kaynaklıdır, topluluktan güç alır ve Mozilla'nın kar amacı gütmeyen <a href=\"https://mozilla.org/{{ lang }}/mission/\">misyonuyla</a> web ortamını geliştirme ve koruma amacındadır. <a href=\"/{{ lang }}/getinvolved\">Daha fazla katılmanı</a> isteriz.",
+        "description": "Copy for the contribute subsection of explore"
+    },
+    "Investigate the tools, learning resources": {
+        "message": "Webmaker tarafından önerilen araçları, eğitim kaynaklarını ve topluluğu keşfet.",
+        "description": "copy for first topic of 'jump right in' on home page"
+    },
+    "Webmaker helps people across the world": {
+        "message": "Webmaker, dünyadaki tüm insanların özgür ve açık bir web için bilgi sahibi üreticiler olmasına yardımcı olur.",
+        "description": "Subehad on our values"
+    },
+    "Free tools that make it easy to create and learn": {
+        "message": "Üretmeyi ve öğrenmeyi kolaylaştıran ücretsiz araçlar",
+        "description": "Header for section that includes description of webmaker tools"
+    },
+    "or remix someone elses": {
+        "message": "...ya da başka kişilerinkini kar",
+        "description": "headline for gallery section of Make Your Own"
+    },
+    "Good start!": {
+        "message": "İyi bir başlangıç!",
+        "description": "Good start!"
+    },
+    "user_deleted": {
+        "message": "Hesabın silindi.",
+        "description": "Your account has been deleted."
+    },
+    "English only": {
+        "message": "Yalnız İngilizce",
+        "description": ""
+    },
+    "Local": {
+        "message": "Yerel",
+        "description": "second value on home page"
+    },
+    "Submit": {
+        "message": "Gönder",
+        "description": "Submit button"
+    },
+    "You don’t need to be a wizard to teach the web.": {
+        "message": "Web öğretmek için bir büyücü olman gerekmiyor. Web okuryazarlığı, web yapımı, çevrimiçi öykü anlatımı ve başka çeşitli konuları öğretmek için <a href=\"/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">değiştirilebilir rehberlerimiz</a> var. Kendi ders planını hazırlamak ister misin? Bunu yapabileceğin <a href=\"/{{ lang }}/make-your-own\">harika kalıplarımız</a> var.",
+        "description": "Teach the Web copy"
+    },
+    "Join Mozillas community of educators": {
+        "message": "Sayısal becerileri ve web okuryazarlığını öğreten Mozilla eğitimci topluluğuna katıl.",
+        "description": "Teach site referral description on Home page"
+    },
+    "and more!": {
+        "message": "ve daha fazlası!",
+        "description": ""
+    },
+    "Our values": {
+        "message": "Değerlerimiz",
+        "description": "Headline on second section of home"
+    },
+    "From hack jams to pop ups to the global Maker Party": {
+        "message": "Küçük toplantılardan küresel <a href=\"https://party.webmaker.org\">Maker Partisine</a> kadar herkese uygun bir etkinlik var. Size yakın bir etkinlik bul ya da kendi etkinliğini düzenle. Nasıl yapacağını gösteren <a href=\"/{{ lang }}/event-guides\">rehberlerimiz</a> var.",
+        "description": "Find or host an event copy"
+    },
+    "Translate desc": {
+        "message": "Webmaker yerelleştirilmesi ve çevirisine katkıda bulun.",
+        "description": "Copy for third square in contribute grid on explore"
+    },
+    "What do you love on the web?": {
+        "message": "Nasıl bir Web seversin?",
+        "description": "What do you love on the web?"
+    },
+    "Make. Learn. Get together.": {
+        "message": "Yap. Öğren. Bir araya gel.",
+        "description": "Make. Learn. Get together. Header section"
+    },
+    "Get Together": {
+        "message": "Bir araya gel",
+        "description": "headline on third topic of 'jump right in' on home page"
+    },
+    "Submit a bug for Thimble": {
+        "message": "Thimble hatası bildir",
+        "description": "quick links list item on Feedback"
+    },
+    "Events desc": {
+        "message": "Yaşadığın yerde bir Webmaker etkinliği düzenle.",
+        "description": "Copy for second square in contribute grid on explore"
+    },
+    "Mentoring is a chance to share your knowledge": {
+        "message": "Danışmanlık, bilginizi paylaşma şansı sunar ve dünyanın her yanından her yaşta sayısal becerilerini geliştirmek isteyen kişilere doğrudan geribildirim sağlar.",
+        "description": "Become a mentor copy on /getinvolved"
+    },
+    "Opportunities to get involved": {
+        "message": "WebMaker ekibi belirli aralıklarla insanlara sitemizi, araçlarımızı ve eğitim kaynaklarımızı sınama fırsatı sunar. İstersen sınama oturumlarından birine katılabilirsin, ayrıntılı bilgi almak için <a href=\"https://wiki.mozilla.org/Webmaker/TeachTheWeb/Testing\">wiki sayfasını ziyaret edebilirsin</a>.",
+        "description": "copy to encourage people to get involved in testing"
+    },
+    "Discover creative ways to teach and learn digital superpowers": {
+        "message": "Sayısal süpergüçleri öğretmek ve öğrenmenin yaratıcı yollarını keşfet",
+        "description": "Heading for first explore subsection with map"
+    },
+    "Suggest a resource for": {
+        "message": " {{ skill.term }} için bir kaynak öner",
+        "description": "Title for suggesting resource form"
+    },
+    "Thimble Desc": {
+        "message": "Web sayfanı yap ve yayınla.",
+        "description": "Make and publish your own web page."
+    },
+    "We all use the web in different ways.": {
+        "message": "Hepimiz farklı amaçlarla web kullanıyoruz. Moziila, nerde yaşadığından bağımsız olarak, arkadaşların, ailen, işin ya da topluluğun ile ilgili bir web yapmana yardımcı olmayı amaçlıyor.",
+        "description": "Value description for local on home page"
+    },
+    "The web is yours": {
+        "message": "Web senindir.",
+        "description": "headline on home"
+    },
+    "We’re always eager to learn how Webmaker is used": {
+        "message": "Farklı türdeki topluluklara web eğitimi vermek için Webmaker uygulamasının nasıl kullanıldığını öğrenmeyi çok istiyoruz. Sen de topluluğunun Webmaker kullanma öyküsünü paylaşmak istiyorsan, lütfen <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker haber grubuna</a> katıl ve geribildirimlerini e-posta yoluyla paylaş. Dilersen, Twitter üzerinden <a href=\"https://twitter.com/webmaker\">@webmaker</a> için yanıt yazabilir ya da <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> etiketini kullanabilirsin.",
+        "description": "copy encouraging people to get involved on Feedback"
+    },
+    "Popcorn Maker Desc": {
+        "message": "Etkileşimli görüntüler oluştur.",
+        "description": "Create interactive videos."
+    },
+    "active daily discussion paragraph": {
+        "message": "Daha etkin olan günlük tartışma grubunda Webmaker projesinin yönünü belirlemeye yardımcı olabilirsin.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Do you have a web literacy project?": {
+        "message": "Web okuryazarlığıyla ilgili bir projen mi var? Ne olduğunu öğrenmek ve Webmaker.org üzerinde paylaşmak isteriz.",
+        "description": "Contribute a guide copy"
+    }
+}

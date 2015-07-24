@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "Simpan dan publikasikan dengan tool Webmaker <span class=\"green-text\">Butuh seorang Webmaker account</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Gunakan <a href=\"/{{lang}}/tools\">perangkat</a> online Webmaker untuk membuat konten anda sendiri",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker itu gratis selamanya,</span> sehingga kamu dapat menggunakan perkakas, acara dan sumber daya pengajaran tanpa biaya, di manapun Anda, apapun tingkatan ketrampilan Anda. Hanya daftarkan sebuah akun untuk simpan dan terbitkan karya yang Anda buat.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "Temukan dan hadiri <a href=\"/{{lang}}/events\">acara-acara</a> disekitar anda",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Untuk mendapatkan <a href=\"/{{lang}}/badges/webmaker-super-mentor\">lencana</a> dalam keterampilan melek web, anda <span class=\"green-text\">Memerlukan akun Webmaker</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Apa yang Webmaker tawarkan?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Gunakan <a href=\"/{{lang}}/resources\">sumber daya</a> dan contoh pengajaran yang telah diperiksa oleh Webmaker.",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "Buat profilmu dan dapatkan URL kreasimu sendiri <span class=\"green-text\">Butuh seorang Webmaker account</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Bergabung dengan Webmaker",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "Masuk",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Mendaftar untuk Webmaker",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "Buat dan publikasikan sebuah acara <span class=\"green-text\">Butuh akun Webmaker</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "ប្រវត្តិរូប​ខ្ញុំ",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "អភិបាល",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "ការ​កំណត់​របស់​ខ្ញុំ",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "ព្រឹត្តិការណ៍​របស់​ខ្ញុំ",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "​ចេញ",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "ការ​បង្កើត​របស់​ខ្ញុំ",
+        "description": "My makes"
+    }
+}

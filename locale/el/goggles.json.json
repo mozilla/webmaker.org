@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "Στην HTML γλώσσα, η ετικέτα <img> προσδιορίζει μία εικόνα με scr=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "και αποκτήστε τη δυνατότητα να προβάλλετε και να επεξεργαστείτε τον κώδικα πίσω απο κάθε πληροφορία",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "Γυαλιά με ακτίνες Χ",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "πηγή",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Εγκατέστησέ το",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "Γυαλιά με ακτίνες Χ",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Σύρετε προς τη μπάρα σελιδοδεικτών",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "βοήθεια",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "από  shapes.jpg  σε   blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Ανάμιξε την ιστοσελίδα",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Ενεργοποίηση γυαλιών με ακτίνες Χ",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Άλλαξε την  ετικέτα <img src=\"/shapes.jpg\">  σε   <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Αλλαγή της εικόνας",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Κανε κλίκ στην εικόνα του φόντου",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Set up X-ray Goggles",
+        "description": "Install page title"
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "আরো দেখুন",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "ব্যবসা",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "Appmaker খুঁজে বের করুন",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "কল্পনা",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "আতসবাজী App",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "Appmaker ব্যক্তিগত মোবাইল অ্যাপস তৈরি করার জন্য একটি বিনামূল্যের টুল এমনকি আপনি যদি কোড না জানেন তাহলেও বিভিন্ন জিনিস সংগ্রহ করেও আপনি মোবাইল অ্যাপস তৈরি করতে পারেন এবং তা শেয়ার করতে পারেন আপনার ব্রাউজার এ।",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "আপনার ফোন এর জন্য অ্যাপ্লিকেশন তৈরি করুন।",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "মোবাইল অ্যাপ্লিকেশন তৈরি করা সহজ",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "একটি সঙ্গীত তৈরির আ্যপ",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "চ্যাট App",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "বন্ধুদের সাথে চ্যাট করার একটি আ্যপ",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "শুরু করার জন্য একটি সহজ উপায় খুঁজছেন? এই টেমপ্লেট এর রিমিক্স করে আপনার নিজস্ব এক অ্যাপ্লিকেশন তৈরি করুন।",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "গুগল+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "অ্যাপ প্রস্তুতকারক",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "একটি অ্যাপ তৈরি করতে যন্ত্রপাতি ও অনুক্রমিক ব্যাবহার করুন যা শব্দ করে।",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "অবদান",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "আরো শিখুন",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "আপনার জন্য একটা অ্যাপ তৈরি করুন<span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span>",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "স্থানীয়ভাবে প্রাসঙ্গিক মোবাইল বিষয়বস্তু তৈরি ও বিতরণের জন্য নতুন স্মার্টফোন ব্যবহারকারীদের একটি প্রজন্মের ক্ষমতায়নে আমাদের সাথে যোগ দিন।",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "কিভাবে মোবাইল অ্যাপস তৈরি হয় সেটা অন্যদের দেখাতে চান?মোবাইল নকশা সম্পর্কে মানুষের চিন্তা পেতে চান?আমাদের শিক্ষণ উপাদান পরীক্ষা করে দেখুন!",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "ছাত্ররা",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "দেখুন কিভাবে",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "একটি লক্ষ্য উদযাপন করুন অথবা শুধু বাজি ফাটানো দ্বারা কিছু শব্দ করুন!",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "একটি টেমপ্লেট বাছাই করুন",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "শেখান",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "DIY চ্যাটরুম ব্যাবহার করে বন্ধুদের সাথে মেসেজ আদান প্রদান করুন।",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "আ্যপমেকার ভালো লাগে? প্রশ্ন আছে? জড়িত হতে চান? আরো জানতে চান?",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "শুরু করুন ",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "আপনার সময় ও দক্ষতা দানের দ্বারা আমাদের সাহায্য করুন অ্যাপমেকারকে সত্যিকারের কিছু অসাধারন এ পরিনত করতে।",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "সঙ্গীত App",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "একটি ব্যক্তিগত লক্ষ্য অনুসারক",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "বন্ধুগন",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

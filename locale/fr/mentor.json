@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "Mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Rendre le web réel",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Remixage vidéo et licences libres pour les jeunes",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Mentor",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mentor pour la jeunesse",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma a organisé une <a href=\"/makerparty\">Maker Party</a> pour des enfants de 10-12 ans dans le laboratoire informatique de son université à Victoria, au Canada. Elle travaille maintenant avec d'autres formateurs au lancement d'un club Webmaker afin de continuer à enseigner aux jeunes la valeur des pratiques ouvertes.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati a participé à notre <a href=\"/makerparty\">Maker Party</a> en 2012 où elle a appris à améliorer ses propres pages web avec Thimble et Popcorn. À présent, elle partage ses connaissances avec ses amis, sa famille et ses camarades de classe en leur apprenant les bases du HTML et comment participer en ligne.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon a organisé une <a href=\"/makerparty\">Maker Party</a> de 48 heures à Dunden en Ecosse, qui a permis à ses étudiants de tout essayer, d'un « oiseau Twitter » fait en papier et en fil, à la prise en main de Google Maps grâce à une manette de jeu.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, qui accompagne le projet  Webmaker, est enseignante et artiste du remix",
+        "description": ""
+    }
+}

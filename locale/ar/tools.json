@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "بطاقة تهنئة شخصية",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "نسخة بديلة من صفحة ويب مثيرة للجدل",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "صورة gif متحركة مع الصوت",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble يجعل عملية انشاء و مشاركة صفحات الويب الخاصة بك بسيطة جدا , اكتب و عدل على HTML and CSS مباشرة في متصفحك , و من ثم اعرض عملك فورا , استضف و شارك مشاريعك الجاهزة في ضغطة واحدة , مثالي للمبتدئين و الخبراء أيضا .",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "انظر كيف يعمل الويب",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "فيديو المسؤول على الويب",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "تعديل مضحك على موقع صديقك المفضل ",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "إنشاء وتعديل على شبكة الإنترنت مع أدوات Webmaker الحرة.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "يمكنك صنع:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "يُتيح لك Popcorn Maker  مزح  فيديوهات، ملفات صوتية وصور بشكل ذكي وتضمينها على مواقع مُختلفة. كل ما عليك القيام به هو سحب وإفلات المُحتويات التي تود مزجها مع بعضها البعض من الويب ومن ثم إضافة تعليقاتك وروابطك، كل هذا دون أن تًغادر مُتصفحك. تُعتبر فيديوهات Popcorn Maker ديناميكية وغنية بالروابط، كما أنها فريدة من نوعها مع كل مُشاهدة.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "ملصق لفيلمك المفضل على الويب",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "ميم فَرِح",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "صنع الويب أصبح سهل ",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "ابدأ من نقطة الصفر",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "جرب Goggles الآن",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "نظارات إكس راي",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "وثائقي مع روابط ديناميكيّة",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "تسمح لك نظارات الإكس راي برؤية أحجار الأساس التي تقوم عليها مواقع الانترنت. فعّل النظّارات لترى الكود البرمجي وراء أي صفحة انترنت، ثم عدّل العناصر بنقرة واحدة، لتغيّر في النّص والصور وأكثر من ذلك.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "والمزيد!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "عدل على مشروع",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "ملف فيديو شخصي لتقديم نفسك للعالم",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "صفحة معدلة ل New York Times",
+        "description": ""
+    }
+}

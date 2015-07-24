@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "En HTML, la tag <img> identifica una imágen con src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "y obtenga el poder de ver y editar el código detras de cualquier sitio web.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "Lentes de rayos X",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "de origen",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Instale los",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "lentes de rayos X",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Arrastre a la barra de Marcadores",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "ayuda",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "shapes.jpg por blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Mezcle esta página",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Active los lentes de rayos X",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Cambie <img src=\"/shapes.jpg\"> por <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Cambie la imágen",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Haga click en la imagen de fondo",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Instale los lentes de rayos X",
+        "description": "Install page title"
+    }
+}

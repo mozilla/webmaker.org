@@ -1,0 +1,162 @@
+{
+    "Webmaker is available in over 20 languages": {
+        "message": "Webmaker 有超过20种语言可用，并有成长中的数字技能导师志愿者社区。将在今年晚些时候可用于 Android、Firefox OS 和现代移动浏览器。",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Quote 3 Quote": {
+        "message": "Mozilla 不单只是简单地关注发展中国家的人们在移动设备上没有良好的本地内容。它是真的在做。",
+        "description": "Quote #3"
+    },
+    "Mozilla Rwanda": {
+        "message": "Mozilla 卢旺达",
+        "description": "Mozilla Rwanda"
+    },
+    "Enabling Digital Creativity": {
+        "message": "激活数字创作",
+        "description": "Headline of Enabling Digital Creativity section on /localweb"
+    },
+    "MOI splash page metadata title": {
+        "message": "Webmaker：建立一个本地相关的网络",
+        "description": "MOI splash page metadata title"
+    },
+    "Mozilla Indonesia": {
+        "message": "Mozilla 印度尼西亚",
+        "description": "Mozilla Indonesia"
+    },
+    "Quote 3 Author": {
+        "message": "Mark Sullivan",
+        "description": "Quote #3 Author"
+    },
+    "Quote 2 Author": {
+        "message": "David Meyer",
+        "description": "Quote #2 Author"
+    },
+    "The Opportunity: A Locally Relevant Web": {
+        "message": "机遇：与本地相关的网络",
+        "description": "Headline of The Opportunity: A Locally Relevant Web on /localweb"
+    },
+    "Let’s ensure the next generation of web users": {
+        "message": "让我们共同确保下一代的互联网用户有能力创建一个与本地相关的网络。<b>我们是跨越全球超过30个国家的志愿者团队。<b>如果您是移动运营商或者非政府组织，  <a href=\"https://stuff.webmaker.org/mobile_webmaker_partners.pdf\" id=\"mobile-webmaker-partners-link\">与我们合作</a>为您的客户提供数字技能培训吧。",
+        "description": "Subhead of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Colombia": {
+        "message": "Mozilla 哥伦比亚",
+        "description": "Mozilla Colombia"
+    },
+    "Mozilla is building Webmaker": {
+        "message": "Mozilla 正在建设 Webmaker，一个自由、开源的移动内容创作应用。",
+        "description": "Subhead of Enabling Digital Creativity section on /localweb"
+    },
+    "Webmaker Kenya research report": {
+        "message": "Webmaker 肯尼亚调研报告",
+        "description": "Link text to Webmaker Kenya research report"
+    },
+    "Mozilla Nigeria": {
+        "message": "Mozilla 尼日利亚",
+        "description": "Mozilla Nigeria"
+    },
+    "Mozilla Kenya": {
+        "message": "Mozilla 肯尼亚",
+        "description": "Mozilla Kenya"
+    },
+    "Mozilla Philippines": {
+        "message": "Mozilla 菲律宾",
+        "description": "Mozilla Philippines"
+    },
+    "Partner with us": {
+        "message": "与我们合作",
+        "description": "Partner with us button text"
+    },
+    "Quote 1 Author": {
+        "message": "Abhimanyu Ghoshal",
+        "description": "Quote #1 Author"
+    },
+    "Webmaker India research report": {
+        "message": "Webmaker 印度调研报告",
+        "description": "Link text to Webmaker India research report"
+    },
+    "Understanding Users": {
+        "message": "了解用户",
+        "description": "Headline of Understanding Users section on /localweb"
+    },
+    "Quote 2 Quote": {
+        "message": "Mozilla 与移动运营商想让互联网更加全球化、多样化",
+        "description": "Quote #2"
+    },
+    "Mozilla is leading a research program": {
+        "message": "Mozilla 正在引领一个旨在研究技术和设计方式的研究项目，该技术或设计方式能够扩大移动数字生活的参与度并且增加本地内容的创新。",
+        "description": "Subhead of Understanding Users section on /localweb"
+    },
+    "Partners": {
+        "message": "Partners",
+        "description": "Headline of Partners section on /localweb"
+    },
+    "Empowering the next billion citizens of the web": {
+        "message": "赋予下一批十亿网民",
+        "description": "Big headline on /localweb"
+    },
+    "Mozilla is working to ensure": {
+        "message": "Mozilla 正在努力确保下一批十亿网民第一次接触智能手机时会发现一个开放、人人参与、共同创造的互联网。",
+        "description": "This is a description to the value string"
+    },
+    "In 2014 and 2015, we conducted on-the-ground studies in Bangladesh, India and Kenya.": {
+        "message": "在2014至2015年，我们在孟加拉、印度和肯尼亚进行了实地研究。",
+        "description": "Subhead of the research report subsection on /localweb"
+    },
+    "MOI splash page metadata description": {
+        "message": "Webmaker 帮助用户剥离传统的内容创作与技能的复杂性，使他们有能力创建一个本地相关的网络，完全发挥出网络的潜力。",
+        "description": "MOI splash page metadata description"
+    },
+    "A Locally Relevant Web: Early Research & Recommendations": {
+        "message": "一个本地相关的网络：早期研究与建议",
+        "description": "Headline of the research report subsection on /localweb"
+    },
+    "Get in touch": {
+        "message": "取得联系",
+        "description": "Get in touch button text"
+    },
+    "Mozilla India": {
+        "message": "Mozilla 印度",
+        "description": "Mozilla India"
+    },
+    "Try the open beta": {
+        "message": "尝试公测",
+        "description": "Try the open beta button text"
+    },
+    "Mozilla Bangladesh": {
+        "message": "Mozilla 孟加拉",
+        "description": "Mozilla Bangladesh"
+    },
+    "Quote 1 Quote": {
+        "message": "Mozilla 与 GSMA 合作伙伴为接下来的 40 亿网民带来移动互联网和内容创作工具",
+        "description": "Quote #1"
+    },
+    "Mozilla is proud to partner": {
+        "message": "Mozilla 很荣幸与有兴趣塑造移动互联网的未来的移动运营商、教育机构、国际开发机构和非政府组织成为合作伙伴。",
+        "description": "Subhead of Partners section on /localweb"
+    },
+    "Webmaker mobile for development blog": {
+        "message": "Webmaker 移动发展博客",
+        "description": "Link text to Webmaker mobile for development blog"
+    },
+    "Webmaker Bangladesh research report": {
+        "message": "Webmaker 孟加拉调研报告",
+        "description": "Link text to Webmaker Bangladesh research report"
+    },
+    "Webmaker helps smartphone users": {
+        "message": "Webmaker 帮助智能手机用户成为改善他们生活和社区环境的网络创造者，促进小企业、分享社区新闻、构建学生课程计划等简单应用的发展。",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Mozilla Brazil": {
+        "message": "Mozilla 巴西",
+        "description": "Mozilla Brazil"
+    },
+    "Partner with Mozilla": {
+        "message": "Mozilla 的合作伙伴",
+        "description": "Headline of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Cambodia": {
+        "message": "Mozilla 柬埔寨",
+        "description": "Mozilla Cambodia"
+    }
+}

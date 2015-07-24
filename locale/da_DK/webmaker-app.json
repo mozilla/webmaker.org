@@ -1,0 +1,542 @@
+{
+    "Show this app in the Discover Gallery": {
+        "message": "Vis denne app i Udforsk-galleriet",
+        "description": "Option on detail view to share app to Discover gallery"
+    },
+    "Single Line Text": {
+        "message": "Enkel-linje tekst",
+        "description": "Item in the select box"
+    },
+    "Newest": {
+        "message": "Nyeste",
+        "description": "Newest app tab"
+    },
+    "No data has been stored yet!": {
+        "message": "Der er endnu ikke gemt nogen data!",
+        "description": "No data has been stored yet!"
+    },
+    "Add a Brick": {
+        "message": "Tilføj en klods",
+        "description": "Title for the add a brick page"
+    },
+    "Featured": {
+        "message": "Udvalgte",
+        "description": "Featured apps tab"
+    },
+    "My App": {
+        "message": "Min app",
+        "description": "The Mobile app I am viewing"
+    },
+    "Separator": {
+        "message": "Separator",
+        "description": "Separator label"
+    },
+    "You haven't created any apps yet.": {
+        "message": "Du har ikke lavet nogen apps... endnu.",
+        "description": "Message on profile view if no apps have been created yet"
+    },
+    "Guest Explanation": {
+        "message": "Gæster kan bygge, men ikke udgive apps.",
+        "description": "Explains the effect of using the app as a not signed in guest."
+    },
+    "Send SMS": {
+        "message": "Send SMS",
+        "description": "Send SMS text"
+    },
+    "Publishing...": {
+        "message": "Udgiver...",
+        "description": "Shows up below header when the app is being published or a publish is in progress"
+    },
+    "Open": {
+        "message": "Åbn",
+        "description": "Open an app"
+    },
+    "Create": {
+        "message": "Lav",
+        "description": "Create an app"
+    },
+    "My Profile": {
+        "message": "Min profil",
+        "description": "Title for profile page"
+    },
+    "An active connection is needed to display the Discover Gallery": {
+        "message": "Det kræver en aktiv forbindelse at vise Udforsk-galleriet",
+        "description": "Explains the message communicating a lack of connection"
+    },
+    "Start Building": {
+        "message": "Kom i gang",
+        "description": "Start Building button for creating an app"
+    },
+    "No Data available": {
+        "message": "Ingen tilgængelige data",
+        "description": "No Data available"
+    },
+    "Business": {
+        "message": "Forretning",
+        "description": "Title for an app for business owners"
+    },
+    "Get Started": {
+        "message": "Kom i gang",
+        "description": "Button meaning: Get started making apps"
+    },
+    "Delete App": {
+        "message": "Slet app",
+        "description": "Button to delete entire app"
+    },
+    "Share Community News": {
+        "message": "Del fællesskabsnyheder",
+        "description": "title for template"
+    },
+    "Choose Contacts": {
+        "message": "Vælg kontakter",
+        "description": "Prompt to select contacts from mobile phone contact list"
+    },
+    "Back to My Apps": {
+        "message": "Tilbage til Mine apps",
+        "description": "Option on slide-out menu"
+    },
+    "Join Webmaker": {
+        "message": "Meld dig til Webmaker",
+        "description": "Button label for creating an account"
+    },
+    "Preview": {
+        "message": "Forhåndsvisning",
+        "description": "Button that, if clicked, shows the end product of the app"
+    },
+    "URL": {
+        "message": "URL",
+        "description": "Label for URL input"
+    },
+    "Text Color": {
+        "message": "Tekstfarve",
+        "description": "Label for attribute of text block: the colour of the text"
+    },
+    "Minimum Number": {
+        "message": "Mindste tal",
+        "description": "Minimum Number label"
+    },
+    "Increment by": {
+        "message": "Forøg med",
+        "description": "Increment by label"
+    },
+    "Head over to Make to start creating your very own app.": {
+        "message": "Gå over til <strong>Skab</strong> for at lave på din egen app.",
+        "description": "Message encouraging 'make'ing an app when device is offline"
+    },
+    "Maximum Number": {
+        "message": "Højeste tal",
+        "description": "Maximum Number label"
+    },
+    "Image": {
+        "message": "Billede",
+        "description": "Type of block that can be added to the app"
+    },
+    "Sign In": {
+        "message": "Log ind",
+        "description": "Sign In button label (logs user into Webmaker Mobile)"
+    },
+    "Safety": {
+        "message": "Sikkerhed",
+        "description": "Title for a safety app"
+    },
+    "Discover": {
+        "message": "Udforsk",
+        "description": "Title for the Discover page (a listing of apps users can choose from)"
+    },
+    "errorAppNotFound": {
+        "message": "Appen blev desværre ikke fundet. Vil du gå tilbage til din <a href='/profile'>profil</a>?",
+        "description": "Error message for app details/editing/play view when the app is not found"
+    },
+    "Name": {
+        "message": "Navn",
+        "description": "Label on the profile page, e.g. Name: Kate, Location: Canada"
+    },
+    "Are you sure you want to delete this magnificent creation": {
+        "message": "Er du sikker på at du vil slette dette pragtfulde værk?",
+        "description": "Warning on modal to delete app"
+    },
+    "The Internet fell asleep!": {
+        "message": "Internettet gik i dvale!",
+        "description": "Message on Discover view when device is online"
+    },
+    "noDataInfoSub": {
+        "message": "Hvis du vil give brugerne mulighed for at dele data med dig, så prøv at tilføj en Tæller og en Send-knap til din app.",
+        "description": "If you'd like to let users share data with you, try adding a Counter and a Submit button to your app."
+    },
+    "Title": {
+        "message": "Titel",
+        "description": "Title label"
+    },
+    "Choosing this option will allow you to create your own app without a preset template.": {
+        "message": "Ved at vælge denne mulighed kan du lave dine egne apps uden at tage udgangspunkt i en skabelon.",
+        "description": "description for template"
+    },
+    "Share App": {
+        "message": "Del app",
+        "description": "Text on publish footer"
+    },
+    "Done": {
+        "message": "Færdig",
+        "description": "Done button"
+    },
+    "You need to connect to the Internet.": {
+        "message": "Der skal være forbindelse til internettet.",
+        "description": "Shows up below header when the app can't be published due to connection issues"
+    },
+    "This action cannot be undone": {
+        "message": "Denne handling kan ikke fortrydes.",
+        "description": "Footer in warning if user wants to delete their app"
+    },
+    "Delete": {
+        "message": "Slet",
+        "description": "Button for removing (deleting) a block or an app"
+    },
+    "Phone": {
+        "message": "Opkald",
+        "description": "Type of block - creates a button that calls a number"
+    },
+    "Initial Number": {
+        "message": "Start-tal",
+        "description": "Initial Number label"
+    },
+    "Share Via": {
+        "message": "Del via",
+        "description": "Title for share view"
+    },
+    "SMS": {
+        "message": "SMS",
+        "description": "Acronym for text messaging"
+    },
+    "Gather information from your users by creating a survey.": {
+        "message": "Indsaml information fra dine brugere ved at oprette en brugerundersøgelse.",
+        "description": "description for template"
+    },
+    "Create a Blog": {
+        "message": "Lav en blog",
+        "description": "title for template"
+    },
+    "App Data": {
+        "message": "App-data",
+        "description": "Form data submitted for my app"
+    },
+    "Source": {
+        "message": "Kilde",
+        "description": "Source of the image"
+    },
+    "Long Text": {
+        "message": "Lang tekst",
+        "description": "Item in the select box"
+    },
+    "I am some text": {
+        "message": "Jeg er en tekst",
+        "description": "Value in the text area"
+    },
+    "share_message": {
+        "message": "Se denne app, jeg har lavet med Mozilla Webmaker",
+        "description": "Message that gets sent when a published app is shared to friends"
+    },
+    "Make and share the web": {
+        "message": "Skab og del webbet",
+        "description": "sign-in view headline"
+    },
+    "Blogger": {
+        "message": "Blogger",
+        "description": "Title for an app for bloggers"
+    },
+    "My {{template}} App": {
+        "message": "Min {{template}}-app",
+        "description": "Title for a newly created app from a template"
+    },
+    "Counter": {
+        "message": "Tæller",
+        "description": "Button for create new block"
+    },
+    "Create a Survey": {
+        "message": "Lav en brugerundersøgelse",
+        "description": "title for template"
+    },
+    "Add to Homescreen": {
+        "message": "Føj til startskærmen",
+        "description": "Install message on publish footer"
+    },
+    "Button Color": {
+        "message": "Knapfarve",
+        "description": "Button Color label"
+    },
+    "name from location": {
+        "message": " <strong>{{name}}</strong><span v-if=\"location\"><br/> fra <br/></span><strong>{{location}}</strong>",
+        "description": "E.g. Kate from Canada, sorry for all the html"
+    },
+    "Select all": {
+        "message": "Vælg alle",
+        "description": "Select all"
+    },
+    "Tap the plus sign to begin adding content.": {
+        "message": "Tryk på plus-tegnet for at tilføje indhold.",
+        "description": "Tap the plus sign to begin adding content."
+    },
+    "Add contacts": {
+        "message": "Tilføj kontakter",
+        "description": "Title on share view to add contacts from device"
+    },
+    "Teacher": {
+        "message": "Lærer",
+        "description": "Title for an app for teachers"
+    },
+    "Start from Scratch": {
+        "message": "Start fra bunden",
+        "description": "title for template"
+    },
+    "Remix App": {
+        "message": "Remix app",
+        "description": "Option on detail view to remix an app"
+    },
+    "Offline Mode Explanation": {
+        "message": "Denne enhed er ikke forbundet til internettet, så du vil ikke være i stand til at udgive apps.",
+        "description": "Explains effect of using the app without an internet connection"
+    },
+    "Message": {
+        "message": "Meddelelse",
+        "description": "Message you want to send"
+    },
+    "Share photos and write articles and about your local community": {
+        "message": "Del billeder og skriv artikler om dit lokale fællesskab",
+        "description": "description for template"
+    },
+    "noContactsError": {
+        "message": "Vælg en eller flere kontakter for at sende en SMS.",
+        "description": "Error if user tries to send an SMS without choosing any contacts"
+    },
+    "Open App": {
+        "message": "Åbn app",
+        "description": "Option to open/play an app you don't own"
+    },
+    "by _": {
+        "message": "lavet af {{name}}",
+        "description": "For apps, e.g. My Cool App, by {{name}}"
+    },
+    "Make an App": {
+        "message": "Lav en app",
+        "description": "Button label for action to make a new app"
+    },
+    "Sign Out": {
+        "message": "Log ud",
+        "description": "Button label for button that logs user out of Webmaker Mobile"
+    },
+    "Delete my Apps": {
+        "message": "Slet mine apps",
+        "description": "Button to delete all of a user's apps"
+    },
+    "App Name": {
+        "message": "App-navn",
+        "description": "Label for app name field"
+    },
+    "Journalist": {
+        "message": "Journalist",
+        "description": "Title for an app for journalists"
+    },
+    "Show in Discover Gallery": {
+        "message": "Vis i Udforsk-galleriet",
+        "description": "Option to show app within the discover gallery"
+    },
+    "Text Value": {
+        "message": "Tekst-værdi",
+        "description": "Label for attribute of text block: the text value"
+    },
+    "My Apps": {
+        "message": "Mine apps",
+        "description": "Mobile apps I have created"
+    },
+    "Tap the plus sign to add more content.": {
+        "message": "Tryk på plus-tegnet for at tilføje mere indhold.",
+        "description": "Tap the plus sign to add more content."
+    },
+    "Cancel": {
+        "message": "Annuller",
+        "description": "Cancel button"
+    },
+    "Try in Offline Mode": {
+        "message": "Prøv i offline-tilstand",
+        "description": "Label for action that allows a user to use the app without signing in when the device is not connected to the internet."
+    },
+    "Guest": {
+        "message": "Gæst",
+        "description": "Label for author when the user is in trial mode"
+    },
+    "Try as Guest": {
+        "message": "Prøv som gæst",
+        "description": "Label for action that allows a user to use the app without signing in."
+    },
+    "Text Box Type": {
+        "message": "Type af tekstboks",
+        "description": "Text Box Type label"
+    },
+    "No Apps Message": {
+        "message": "Du har ingen apps endnu.",
+        "description": "Message that is displayed in the profile when current user has no apps"
+    },
+    "Data": {
+        "message": "Data",
+        "description": "Look at the data collected by an app"
+    },
+    "errorNoText": {
+        "message": "Du skal skrive en tekstværdi",
+        "description": "No text in the textarea"
+    },
+    "Select Color": {
+        "message": "Vælg farve",
+        "description": "Title for the color picker"
+    },
+    "Edit": {
+        "message": "Rediger",
+        "description": "Button for allowing user to edit the app"
+    },
+    "Phone #": {
+        "message": "Telefonnummer",
+        "description": "Label for Phone # attribute on call/sms block"
+    },
+    "Link Text": {
+        "message": "Linktekst",
+        "description": "Label for Link Text input"
+    },
+    "Save": {
+        "message": "Gem",
+        "description": "Button label (save changes)"
+    },
+    "Create a Safety App": {
+        "message": "Lav en sikkerheds-app",
+        "description": "title for template"
+    },
+    "Publish": {
+        "message": "Udgiv",
+        "description": "Button label for publishing the current app"
+    },
+    "errorDefault": {
+        "message": "Hovsa! Der opstod en fejl. Vil du gå tilbage til din <a href='/profile'>profil</a>?",
+        "description": "Default error message for alert component"
+    },
+    "Button Text": {
+        "message": "Tekst på knap",
+        "description": "Button Text label"
+    },
+    "Label": {
+        "message": "Etiket",
+        "description": "The label on a button (for sms/calling)"
+    },
+    "Create a How To Guide": {
+        "message": "Lav en vejledning",
+        "description": "title for template"
+    },
+    "Submit": {
+        "message": "Send",
+        "description": "Button for create new block"
+    },
+    "Have something to share with the world? Start a blog, customize to make it yours and start writing!": {
+        "message": "Er der noget, du gerne vil dele med resten af verden? Start en blog, tilpas den for at gøre den personlig og begynd at skriv!",
+        "description": "description for template"
+    },
+    "Edit my Profile": {
+        "message": "Rediger min profil",
+        "description": "Button label for action to edit users profile"
+    },
+    "Font Size": {
+        "message": "Skriftstørrelse",
+        "description": "Font Size label"
+    },
+    "Make": {
+        "message": "Skab",
+        "description": "Label for all available make templates"
+    },
+    "Open my app": {
+        "message": "Åbn min app",
+        "description": "Option on detail (as admin) view to open app"
+    },
+    "Place call": {
+        "message": "Ring op",
+        "description": "Button for placing a call"
+    },
+    "If you've got unique skills you'd like to share with others, try making a How To guide.": {
+        "message": "Hvis du har særlige evner du vil dele med andre, så prøv at lav en vejledning.",
+        "description": "description for template"
+    },
+    "Add a map, a emergency call button, and other tips to keep safe in your community": {
+        "message": "Tilføj et kort, en knap til nødopkald, og andre tips til at holde sig sikker",
+        "description": "description for template"
+    },
+    "App": {
+        "message": "App",
+        "description": "Title for app detail page"
+    },
+    "Make Your Own App": {
+        "message": "Lav din egen app",
+        "description": "Title for app templates, starter projects/styles to create new apps"
+    },
+    "Text Box": {
+        "message": "Tekstboks",
+        "description": "Type of block"
+    },
+    "App Name & Icon": {
+        "message": "App-navn og -ikon",
+        "description": "Title within app editor for page where user can change the app name and icon"
+    },
+    "Make your own app at": {
+        "message": "Lav din egen app hos",
+        "description": "Text on footer of publish view"
+    },
+    "Share": {
+        "message": "Del",
+        "description": "Share an app"
+    },
+    "Promote your Business": {
+        "message": "Promover din forretning",
+        "description": "title for template"
+    },
+    "Show off your products and give customers an easy way to reach you.": {
+        "message": "Fremvis dine produkter og gør det nemt for kunderne at komme i kontakt med dig.",
+        "description": "description for template"
+    },
+    "same as minimum number": {
+        "message": "samme som mindste tal",
+        "description": "place holder for Initial number field"
+    },
+    "Text": {
+        "message": "Tekst",
+        "description": "Type of block that can be added to the app"
+    },
+    "Link": {
+        "message": "Link",
+        "description": "Link label"
+    },
+    "From Scratch": {
+        "message": "Fra bunden",
+        "description": "Title for a blank app template. 'From Scratch' is an idiom that describes making something from the beginning with basic ingredients."
+    },
+    "error404": {
+        "message": "Vi fandt desværre ikke siden. Vil du <a href='/sign-in'>gå tilbage til begyndelsen</a>?",
+        "description": "Error message for 404"
+    },
+    "toucanspeak": {
+        "message": "Lad os starte med at tilføje noget tekst.",
+        "description": "Let's start by adding some text."
+    },
+    "Made with Mozilla Webmaker": {
+        "message": "Lavet med Mozilla Webmaker",
+        "description": "Text to toggle footer on publish view"
+    },
+    "Menu": {
+        "message": "Menu",
+        "description": "Title on slide-out menu"
+    },
+    "Color": {
+        "message": "Farve",
+        "description": "Color label"
+    },
+    "How To": {
+        "message": "Sådan gør du",
+        "description": "Title for a how-to app"
+    },
+    "Title Text Color": {
+        "message": "Tekstfarve på titel",
+        "description": "Title Text Color label"
+    }
+}

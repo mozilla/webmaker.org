@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "یک کارت تبریک با سلیقه شخصی",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "یک نسخه‌ی متناوب از سایتی بحث برانگیز",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "یک تصویر متحرک gif با صدا",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "ثیمبل ساختن و به اشتراک گذاشتن صفحات وب شما رو فوق‌العاده آسون میکنه. سی‌اس‌اس و اچ‌تی‌ام‌ال رو در مرورگر خودتون بنویسید و همون لحظه پیشنمایش کارتون رو ببینید. پروژه‌ی کامل شدتون رو با یک دکمه میزبانی کنید و به اشتراک بگذارید. هم برای مبتدی‌ها و هم برای حرفه‌ای ها عالیه.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "ببینید وب چطور کار میکند",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "کامل شدن ویدئوی تحت وب",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "مخلوطی جالب از سایت مورد علاقه‌ی بهترین دوستتون",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "با ابزارهای رایگان وب‌میکر، وب را بسازید و مخلوط کنید.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "شما میتوانید بسازید:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "پاپکورن میکر به شما کمک میکنه به راحتی ویدیو، صوت و تصاویر وب رو به مجموعه‌های باحال ریمیکس کنید و اونارو در سایت‌های دیگر قرار بدید. محتوای مورد نظرو از وب درگ و دراپ کنید، سپس نظرات و لینک‌های خودتون رو بهش اضافه کنید — همه‌ی اینها در مرورگر شما. ویدیو‌های پاپکورن پویا هستند،‌ پُر از لینک‌ و از هر نظر بی همتا.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "یک پوستر آنلاین برای فیلم مورد علاقه ی شما",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "یک میم بامزه",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "ساخت وب ساده شده",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "شروع از صفر",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "الآن عینک‌ها را امتحان کنید",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "عینک‌های اشعه‌ی‌اکس",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "مستندی با لینک‌های پویا",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "عینک های اشعه‌ی‌اکس به شما امکان دیدن آجر‌های ساختمانی را که وبسایت‌های اینترنت را می سازند می دهد. عینک ها را فعال کنید تا کد هر صفحه ای را بررسی کنید، سپس با یک کلیک ساده عناصر صفحه را تدوین کنید و آن را به متن، تصویر و ودیگر چیز‌های خودتان تغییر دهید.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "و بیشتر!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "ساخته‌ای را تدوین کنید",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "نمایه‌ای ویدیویی تا خودتان را به دنیا معرفی کنید",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "یک صفحه‌ی اصلی شخصی‌سازی شده برای نیویورک تایمز",
+        "description": ""
+    }
+}

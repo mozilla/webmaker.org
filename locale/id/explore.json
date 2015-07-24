@@ -1,0 +1,562 @@
+{
+    "Popcorn Maker": {
+        "message": "Popcorn Maker",
+        "description": "Popcorn Maker"
+    },
+    "Tools description": {
+        "message": "<a href=\"/{{ lang }}/tools\">Perkakas Webmaker</a> mempermudah pengaryaan di web. Buat situs web sendiri, video interaktif, olah-kembali, aplikasi seluler dan lebih banyak lagi—sementara belajar tentang seluk-beluk web, pengodean and keterampilan berharga lainnya.",
+        "description": "a description of the webmaker tools"
+    },
+    "Please support our work": {
+        "message": "Tolong <a href=\"https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link\">dukunglah pekerjaan kami</a>.",
+        "description": "donate link"
+    },
+    "Contribute a guide or resource": {
+        "message": "Sumbangsihkan panduan atau sumber daya",
+        "description": "line item on /getinvolved"
+    },
+    "Submit a resource": {
+        "message": "Kirimkan sumber daya",
+        "description": "Submit a teaching resource"
+    },
+    "Sign up for Webmaker announcement list": {
+        "message": "Daftar untuk melihat <a href=\"https://sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup\">daftar pengumuman Webmaker</a></strong>.",
+        "description": "Communicate line item on /getinvolved"
+    },
+    "Web Literacy Map": {
+        "message": "Peta Literasi Web",
+        "description": "The title of the explore section"
+    },
+    "Resources for teaching the web": {
+        "message": "Sumber daya guna pengajaran web",
+        "description": "Heading for the second explore subsection with document stacks"
+    },
+    "Suggest your own links and resources": {
+        "message": "Laman ini terus berkembang! Usulkan tautan dan sumber daya untuk ditambahkan. <a href='/{{lang}}/get-involved'>↵Atau berperan lebih lagi</a>.</a>",
+        "description": "Submit a teaching resource"
+    },
+    "Visit our communications wiki": {
+        "message": "Kunjungi <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">sistem perhubungan wiki</a> untuk menemukan lebih banyak tempat dimana anda dapat menjangkau kami.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "success resource banner": {
+        "message": "<strong>Terima kasih!</strong> Kami sudah menerima sumber daya yang Anda sarankan.",
+        "description": "Banner for form success submission."
+    },
+    "Webmaker - Sign Up": {
+        "message": "Webmaker - Mendaftar",
+        "description": "Webmaker - Sign Up"
+    },
+    "Jump right in": {
+        "message": "Terjun langsung",
+        "description": "headline for third section on home page"
+    },
+    "Find or host an event": {
+        "message": "Cari atau selenggarakan acara",
+        "description": "line item on /getinvolved"
+    },
+    "How are we doing?": {
+        "message": "Bagaimana keadaannya?",
+        "description": "headline on Feedback"
+    },
+    "Explore Webmaker": {
+        "message": "Jelajahi Webmaker",
+        "description": "headline on first topic of 'jump right in' on home page"
+    },
+    "More Resources": {
+        "message": "Lebih banyak sumber daya",
+        "description": "See more kits in a search"
+    },
+    "Start Teaching": {
+        "message": "Mulai Mengajar",
+        "description": "Teach site referral button text on Home page"
+    },
+    "Connect through social media": {
+        "message": "<strong>Terhubunglah melalui media sosial</strong> dan lihat apa yang orang-orang kerjakan, ikuti acara-acara di seluruh dunia dan periksa proyek-proyek baru Webmaker dengan mengunjungi <a href=\"https://mozillawebmaker.tumblr.com/\">Tumblr</a>, <a href=\"https://twitter.com/webmaker\">Twitter</a>, <a href=\"https://www.facebook.com/mozilla\">Facebook</a>, <a href=\"https://www.flickr.com/photos/mozilladrumbeat/favorites/\">Flickr</a>, <a href=\"https://www.youtube.com/mozillawebmakers\">YouTube</a> dan <a href=\"https://blog.webmaker.org/\">blog kami</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Communicate": {
+        "message": "Berkomunikasi",
+        "description": ""
+    },
+    "Teaching kits": {
+        "message": "Perlengkapan pengajaran",
+        "description": "First square in contribute grid on explore"
+    },
+    "Teaching kits desc": {
+        "message": "Buat atau bagikan sumber daya untuk pengajaran keterampilan digital.",
+        "description": "Copy for first square in contribute grid on explore"
+    },
+    "Receive occasional email updates": {
+        "message": "Sesekali menerima pembaharuan email tentang hal-hal yang paling penting&mdash;sekitar sebulan sekali.",
+        "description": "communicate line item description"
+    },
+    "Help with beta-testing & quality assurance": {
+        "message": "Bantu pengujian beta & jaminan mutu",
+        "description": "line item on /getinvolved"
+    },
+    "Build the web with others": {
+        "message": "Bangun situs dengan orang lain dalam acara lokal, atau temukan sumber pustaka untuk membuat acara sendiri",
+        "description": "copy for third topic of 'jump right in' on home page"
+    },
+    "Making is the basis of everything we do.": {
+        "message": "Pengerjaan adalah dasar dari segala yang kami lakukan. Cobalah padukan salah satu <a href=\"/{{ lang }}/resources\">starter resources</a> kami, atau buatlah sesuatu dari awal menggunakan <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, atau <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Kemudian bagikan kepada dunia melalui hashtag <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+        "description": "Make something copy"
+    },
+    "Email address": {
+        "message": "Alamat surel",
+        "description": "placeholder on home input field"
+    },
+    "Learn to build it with Mozilla.": {
+        "message": "Belajar membangunnya bersama Mozilla.",
+        "description": "subhead on home"
+    },
+    "Receiving your opinions on the Webmaker experience": {
+        "message": "Pendapat anda saat mendapat pengalaman menjadi Webmaker sangat penting bagi kami. faktanya, feedback anda adalah hal pertama yang menjadi pertimbangan kami untuk melakukan peningkatan pada situs kedepannya. silahkan beri tahu kami apa saja yang anda sukai tentang situs, apa yang menurut anda kurang dan di bagian mana kami seharusnya melakukan peningkatan.",
+        "description": "copy on Feedback"
+    },
+    "Mozilla is a nonprofit organization": {
+        "message": "Mozilla adalah lembaga nirlaba dan berbagai perangkat open-source ini diciptakan oleh komunitas global. Kesemuanya akan selalu 100% gratis --kini dan selamanya!",
+        "description": "Value description for free on home page"
+    },
+    "Privacy matters": {
+        "message": "Privasi itu penting",
+        "description": "Text on back side of privacy day eyeball on home"
+    },
+    "Mozilla’s free tools": {
+        "message": "Perangkat gratis Mozilla membantu anda membangun web sambil mempelajari kemampuan baru",
+        "description": "subhead on home"
+    },
+    "I ": {
+        "message": "Saya",
+        "description": "I heart"
+    },
+    "We believe that digital literacy is more than just learning to code.": {
+        "message": "Kami percaya bahwa literasi digital lebih dari sekedar belajar menulis kode. Perangkat kami, materi pembelajaran dan jejaring komunitas memberdayakan semua orang untuk menjadi warga web.  ",
+        "description": "Value description for more than code on home page"
+    },
+    "Learn to Teach": {
+        "message": "Belajar Mengajar",
+        "description": "headline on second topic of 'jump right in' on home page"
+    },
+    "Free": {
+        "message": "Gratis",
+        "description": "first value on home page"
+    },
+    "Add an event": {
+        "message": "Tambahkan acara",
+        "description": "Add an event button"
+    },
+    "What language is your resource link?": {
+        "message": "Bahasa apakah tautan sumber daya Anda?",
+        "description": "Label for language name for resource link"
+    },
+    "Partner desc": {
+        "message": "Bermitra dengan Mozilla untuk mengajarkan web.",
+        "description": "Copy for sixth square in contribute grid on explore"
+    },
+    "Discover": {
+        "message": "Jajaki",
+        "description": "Section in competency pages"
+    },
+    "Resources section description": {
+        "message": "Bagian <a href=\"/{{ lang }}/resources\">sumber daya</a> dalam Webmaker adalah panduan Anda untuk Literasi Web. Temukan kekuatan baru seperti menulis kode, bercerita, melindungi keamanan daring Anda dan hal lainnya. Tiap bagian memiliki tautan untuk ditemukan, proyek untuk dicoba, dan aktivitas untuk pengajaran.",
+        "description": "Copy for the second explore subsection with document stacks"
+    },
+    "Translate": {
+        "message": "Terjemahkan",
+        "description": "Third square in contribute grid on explore"
+    },
+    "Get involved with webmaker": {
+        "message": "Webmaker adalah bagian dari  <a href=\"//www.mozilla.org/en-US/mission/\">misi nirlaba</a> Mozilla untuk menciptakan dunia yang lebih terbuka dan melek web.",
+        "description": "Copy for first explore subsection with map"
+    },
+    "Skills": {
+        "message": "Keterampilan",
+        "description": "Title for list of web literacy skills"
+    },
+    "Thimble": {
+        "message": "Thimble",
+        "description": "Thimble"
+    },
+    "Design": {
+        "message": "Desain",
+        "description": "Fourth square in contribute grid on explore"
+    },
+    "Start Creating": {
+        "message": "Mulai Mencipta",
+        "description": "button text on footer on home"
+    },
+    "As a non-profit organization, we depend on": {
+        "message": "Sebagai organisasi nirlaba, kami bergantung pada kemurahan hati orang seperti Anda untuk mendanai tujuan kami; yakni, menganjurkan jutaan orang di seluruh dunia untuk bergerak maju untuk menjadi pengarya web, alih-alih sekadar pengguna web.",
+        "description": "copy for Donate to Webmaker"
+    },
+    "All Webmaker tools are open source.": {
+        "message": "Semua perkakas Webmaker bersumber terbuka. Sumbangsihkan gagasan, penyempurnaan, galatan atau pemertunjukan dan purwarupa Anda. Akses dokumentasi, pelacak masalah, dan lainnya.",
+        "description": "copy for contribute code on /getinvolved"
+    },
+    "Want to teach the web to others?": {
+        "message": "Ingin mengajarkan web kepada yang lain?",
+        "description": "Teach site referral heading on Home page"
+    },
+    "Study at your own pace": {
+        "message": "Pelajari dengan kecepatan anda sendiri untuk dapat mengajarkan literasi web, kemampuan digital dan praktek secara terbuka.",
+        "description": "copy for second topic of 'jump right in' on home page"
+    },
+    "Tools": {
+        "message": "Perkakas",
+        "description": "headline for section on /about"
+    },
+    "View events": {
+        "message": "Lihat acara",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Become a mentor": {
+        "message": "Menjadi seorang mentor",
+        "description": "Button in mentors section on literacy pages, line item on /getinvolved"
+    },
+    "sharing": {
+        "message": "berbagi",
+        "description": "onboarding interactive text input"
+    },
+    "When you file your bug, be sure to use feedback": {
+        "message": "Ketika anda melaporkan suatu bug, pastikan untuk menulis \"Feedback\" pada kolom Status Whiteboard supaya kami dapat menemukannya.",
+        "description": "explainer text for status whiteboard on Feedback"
+    },
+    "Make something": {
+        "message": "Ciptakan Sesuatu",
+        "description": "line item on /getinvolved"
+    },
+    "Footer header": {
+        "message": "Ragu mulai dari mana?",
+        "description": "Header for bottom section of explore"
+    },
+    "Our team uses an issue tracker called Bugzilla": {
+        "message": "Tim kami menggunakan sebuah penelusuran masalah yang dinamakan <a href=\"https://bugzilla.mozilla.org/\">Bugzilla</a> untuk melaporkan bugs dan memonitor perbaikan. Setiap orang dapat melaporkan suatu bug. Dan hanya karna sesuatu disebut \"bug\" bukan berarti hanya sesuatu yang salah; sesuatu itu dapat juga berupa ide anda mengenai fitur, cacatan tentang seberapa banyak yang anda suka dari sesuatu atau berupa saran non teknis untuk perbaikan ke depannya.",
+        "description": "description for bugzilla"
+    },
+    "noStaffPick": {
+        "message": "Belum ada sumber pengajaran terunggulkan. <a href=\"#\">Perkirimkan satu.</a>",
+        "description": "No item in the list picked by staff and there is a submit link."
+    },
+    "Partner": {
+        "message": "Mitra",
+        "description": "Sixth square in contribute grid on explore"
+    },
+    "Submit a bug now": {
+        "message": "Kirim bug sekarang",
+        "description": "button text on Feedback"
+    },
+    "Find an event": {
+        "message": "Temukan acara",
+        "description": "Find an event button"
+    },
+    "Learn more": {
+        "message": "Pelajari lebih lanjut",
+        "description": "Button text on home page"
+    },
+    "Submit a bug on Bugzilla": {
+        "message": "Laporkan \"bug\" di Bugzilla",
+        "description": ""
+    },
+    "The global Mozilla community wants everyone to be a citizen of the web": {
+        "message": "Komunitas Mozilla global ingin semua orang menjadi warga web—termasuk Anda!",
+        "description": "subhead on home"
+    },
+    "Start creating": {
+        "message": "Mulai mencipta",
+        "description": "button text on home"
+    },
+    "Featured Teaching Resources": {
+        "message": "Sumber Pengajaran Terunggulkan",
+        "description": "Title for teaching resources in competency page"
+    },
+    "9 Ways to Get Involved with Webmaker": {
+        "message": "9 Cara untuk Ikut Berperan bersama Webmaker",
+        "description": "headline on /getinvolved"
+    },
+    "Footer copy": {
+        "message": "<a href=\"/{{lang}}/resources\">Jelajahi kepiawaian</a> dan simak sumber pengajaran yang ditawarkan komunitas Webmaker.",
+        "description": "Copy for bottom section of explore"
+    },
+    "Mozilla privacy policy agreement": {
+        "message": "Saya menyetujui <a href='https://webmaker.org/terms'>Terms</a> and <a href='https://webmaker.org/privacy'>Kebijakan Keamanan</a> Mozilla Webmaker",
+        "description": "Mozilla privacy policy agreement"
+    },
+    "explore_frontpage_title": {
+        "message": "Selamat datang di Webmaker!",
+        "description": "Heading for Explore page"
+    },
+    "Donate to Webmaker": {
+        "message": "Menyumbang untuk Webmaker",
+        "description": "line item on /getinvolved"
+    },
+    "Get inspired by examples like these": {
+        "message": "Terinspirasilah oleh contoh-contoh seperti berikut (<a href=\"https://webmaker.org/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">selengkapnya</a>)",
+        "description": "Paragraph copy for gallery section of Make Your Own"
+    },
+    "Help us build the future of the web": {
+        "message": "Bantu kami membangun masa depan web.",
+        "description": "headline on home"
+    },
+    "Participate in community testing sessions": {
+        "message": "Berpartisipasi dalam komunitas sesi ujicoba.",
+        "description": "Headline for community testing session on Feedback"
+    },
+    "You might also like": {
+        "message": "Anda mungkin juga menyukai",
+        "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
+    },
+    "By": {
+        "message": "Oleh",
+        "description": "The byline for featured kits"
+    },
+    "Get training": {
+        "message": "Dapatkan pelatihan",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Mozilla Webmaker creates software, projects and events": {
+        "message": "Mozilla Webmaker menciptakan perangkat lunak, proyek-proyek dan acara-acara yang mempromosikan kepustakaan web melalui pengerjaan dan berbagi. Kami adalah suatu proyek open cource yang didukung oleh para pembuat, mentor-mentor dan tokoh-tokoh masyarakat. Kami senang jika anda ikut terlibat.",
+        "description": "copy for ‘9 ways to get involved’"
+    },
+    "Teach the web": {
+        "message": "Ajarkan web",
+        "description": "line item on /getinvolved"
+    },
+    "Join our community call": {
+        "message": "Mari bergabung dengan konferensi komunitas setiap Selasa. Semua boleh ikut! Ajukan pertanyaan, bertemu dengan anggota komunitas dan staf kami, serta temukan sumber daya yang Anda butuhkan.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "next": {
+        "message": "selanjutnya",
+        "description": "next button"
+    },
+    "Code desc": {
+        "message": "Arsipkan galatan, kirimkan penyempurnaan, atau utak-atik dengan MakeAPI kami.",
+        "description": "Copy for fifth square in contribute grid on explore"
+    },
+    "Build and share the web with Mozilla.": {
+        "message": "Bangun dan bagikan web bersama Mozilla.",
+        "description": "footer text on home"
+    },
+    "Submit a bug for Popcorn Maker": {
+        "message": "Laporkan galatan untuk Popcorn Maker",
+        "description": "quick links list item on Feedback"
+    },
+    "Say hello on a Webmaker community call": {
+        "message": "Ucapkan salam pada <a href=\"https://wiki.mozilla.org/Webmakers/Community_Calls\">panggilan Komunitas Webmaker</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Join the Webmaker newsgroup": {
+        "message": "Bergabunglah dengan <a href=\"https://lists.mozilla.org/listinfo/webmaker\">kelompok berita Webmaker.</a>",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Now, learn to make and share more of your favorite things on the web.": {
+        "message": "Kini, belajarlah menciptakan dan membagikan lebih banyak hal yang anda sukai di web.",
+        "description": "Now, learn to make and share more of your favorite things on the web."
+    },
+    "Contribute to Webmaker": {
+        "message": "Berkontribusi untuk Webmaker",
+        "description": "Contribute to Webmaker"
+    },
+    "Make your own apps and websites": {
+        "message": "Buat sendiri aplikasi dan situsmu",
+        "description": "headline on homepage"
+    },
+    "Submit a bug for Webmaker.org": {
+        "message": "Laporkan galatan untuk Webmaker.org",
+        "description": "quick links list item on Feedback"
+    },
+    "Explore now": {
+        "message": "Jelajahi sekarang",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Discover how you can build and share the web.": {
+        "message": "Temukan bagaimana anda dapat membangun dan berbagi di web",
+        "description": "sub-head on third section of home page"
+    },
+    "Contribute code": {
+        "message": "Kontribusi di bidang pemrograman",
+        "description": "line item on /getinvolved"
+    },
+    "More than code": {
+        "message": "Lebih dari kode",
+        "description": "third value on home page"
+    },
+    "Design desc": {
+        "message": "Peran serta dalam desain berekanan atau kembangkan keterampilan tinjau desain Anda.",
+        "description": "Copy for fourth square in contribute grid on explore"
+    },
+    "make-learn-teach-section-info": {
+        "message": "Komunitas Webmaker berkumpul bersama di acara-acara di seluruh dunia&mdash;di perpustakaan, pusat-pusat komunitas, warung internet, atau di ruang tamu Anda sendiri. Cari acara di dekat Anda, belajar bagaimana cara mengadakannya, atau terlibat dengan Maker Party global kami (Juli hingga Sep 2014).",
+        "description": "Make Learn Teach information section"
+    },
+    "Link:": {
+        "message": "Tautan:",
+        "description": "Label form for Link submission"
+    },
+    "connect in many ways.": {
+        "message": "Kami adalah sebuah komunitas yang besar dan terhubung melalui berbagai macam cara.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Participate in user testing": {
+        "message": "Mari berperan serta dalam uji coba pengguna, mengirim umpan balik, atau membantu dalam bidang kendali mutu. Pengujian dan gagasan Anda akan memperbaiki produk Mozilla Webmaker serta membantu menentukan kelanjutannya.",
+        "description": "copy for QA on /getinvolved, line 2"
+    },
+    "Status Whiteboard:": {
+        "message": "Status Whiteboard:",
+        "description": "label for faux bugzilla field on Feedback"
+    },
+    "Web Literacy": {
+        "message": "Literasi Web",
+        "description": "Web Literacy"
+    },
+    "Share community experiences": {
+        "message": "Bagikan pengalaman komunitas",
+        "description": ""
+    },
+    "Wait, there’s more!": {
+        "message": "Tunggu, masih ada banyak lagi!",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "new Webmaker tools and projects": {
+        "message": "Jadilah yang pertama untuk mencoba <a href=\"/{{ lang }}/tools\">Webmaker tools</a> dan proyek-proyek baru kami.",
+        "description": "copy for QA on /getinvolved, line 1"
+    },
+    "Code": {
+        "message": "Kode",
+        "description": "Fifth square in contribute grid on explore"
+    },
+    "Login to submit a resource": {
+        "message": "Masuk untuk memperkirim sumber daya",
+        "description": "A button Login to submit a resource."
+    },
+    "Contribute subsection copy": {
+        "message": "Webmaker berasas sumber terbuka, berdayakan komunitas, dan ditunjang oleh <a href=\"https://mozilla.org/{{ lang }}/mission/\">misi</a> nirlaba Mozilla; yakni, pembinaan dan perlindungan akan web yang terbuka. Kami sangat senang apabila Anda <a href=\"/{{ lang }}/getinvolved\">lebih berperan lagi</a>.",
+        "description": "Copy for the contribute subsection of explore"
+    },
+    "Investigate the tools, learning resources": {
+        "message": "Selidiki perangkat, materi pembelajaran dan komunitas yang ditawarkan Webmaker.",
+        "description": "copy for first topic of 'jump right in' on home page"
+    },
+    "Webmaker helps people across the world": {
+        "message": "Webmaker membantu orang di seluruh dunia menjadi pencipta yang sadar informasi akan web yang bebas dan terbuka.",
+        "description": "Subehad on our values"
+    },
+    "Free tools that make it easy to create and learn": {
+        "message": "Perkakas gratis yang mempermudah pengaryaan dan pembelajaran",
+        "description": "Header for section that includes description of webmaker tools"
+    },
+    "or remix someone elses": {
+        "message": "...atau olah kembali karya seseorang lainnya",
+        "description": "headline for gallery section of Make Your Own"
+    },
+    "Good start!": {
+        "message": "Awal yang bagus!",
+        "description": "Good start!"
+    },
+    "user_deleted": {
+        "message": "Akun Anda telah dihapus.",
+        "description": "Your account has been deleted."
+    },
+    "English only": {
+        "message": "Bahasa Inggris saja",
+        "description": ""
+    },
+    "Local": {
+        "message": "Lokal",
+        "description": "second value on home page"
+    },
+    "Submit": {
+        "message": "Kirim",
+        "description": "Submit button"
+    },
+    "You don’t need to be a wizard to teach the web.": {
+        "message": "Anda tak perlu jadi penyihir untuk mengajarkan web. Kami telah menciptakan <a href=\"/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">panduan yang bisa diutak-atik</a> untuk mengajarkan literasi web, pembuatan web, berbagi cerita secara online dan lain sebagainya. Ingin membuat rencana pelajaran Anda sendiri? Kami punya <a href=\"/{{ lang }}/make-your-own\">contoh-contoh keren</a> untuk itu.",
+        "description": "Teach the Web copy"
+    },
+    "Join Mozillas community of educators": {
+        "message": "Bergabunglah dengan komunitas pengajar Mozilla yang mengajarkan keterampilan digital dan literasi web.",
+        "description": "Teach site referral description on Home page"
+    },
+    "and more!": {
+        "message": "dan lainnya!",
+        "description": ""
+    },
+    "Our values": {
+        "message": "Nilai-nilai kami",
+        "description": "Headline on second section of home"
+    },
+    "From hack jams to pop ups to the global Maker Party": {
+        "message": "Dari hack jam hingga pop up hingga <a href=\"https://party.webmaker.org\">Maker Party</a> global, selalu ada acara yang sesuai dengan setiap minat. Cari salah satu di dekat Anda atau selenggarakan sendiri acara Anda — kami memiliki <a href=\"/{{ lang }}/event-guides\">panduan</a> untuk menunjukkan kepada Anda caranya.",
+        "description": "Find or host an event copy"
+    },
+    "Translate desc": {
+        "message": "Bantu pelokalan dan penerjemahan Webmaker.",
+        "description": "Copy for third square in contribute grid on explore"
+    },
+    "What do you love on the web?": {
+        "message": "Apa yang anda suka tentang web?",
+        "description": "What do you love on the web?"
+    },
+    "Make. Learn. Get together.": {
+        "message": "Berkarya. Belajar. Berkumpul.",
+        "description": "Make. Learn. Get together. Header section"
+    },
+    "Get Together": {
+        "message": "Ayo Bersama",
+        "description": "headline on third topic of 'jump right in' on home page"
+    },
+    "Submit a bug for Thimble": {
+        "message": "Laporkan galatan untuk Thimble",
+        "description": "quick links list item on Feedback"
+    },
+    "Events desc": {
+        "message": "Jadilah penyelenggara acara Webmaker di kota Anda.",
+        "description": "Copy for second square in contribute grid on explore"
+    },
+    "Mentoring is a chance to share your knowledge": {
+        "message": "Pembimbingan adalah kesempatan untuk berbagi pengetahuan dan memberikan umpan balik secara langsung kepada peserta didik dari segala usia di seluruh dunia yang haus akan keterampilan digital.",
+        "description": "Become a mentor copy on /getinvolved"
+    },
+    "Opportunities to get involved": {
+        "message": "Tim Webmaker secara berkala memberikan kesempatan kepada orang-orang untuk menguji situs, perkakas dan sumber daya pelatihan kita. Untuk ikut serta dalam salah satu dari banyak sesi komunitas pengujian kita, <a href=\"https://wiki.mozilla.org/Webmaker/TeachTheWeb/Testing\">Kunjungi halaman wiki</a> untuk informasi lebih lanjut.",
+        "description": "copy to encourage people to get involved in testing"
+    },
+    "Discover creative ways to teach and learn digital superpowers": {
+        "message": "Temukan cara kreatif untuk mengajarkan dan mempelajari adidaya digital",
+        "description": "Heading for first explore subsection with map"
+    },
+    "Suggest a resource for": {
+        "message": "Sarankan sumber daya untuk {{ skill.term }}",
+        "description": "Title for suggesting resource form"
+    },
+    "Thimble Desc": {
+        "message": "Buat dan terbitkan laman web pribadi Anda.",
+        "description": "Make and publish your own web page."
+    },
+    "We all use the web in different ways.": {
+        "message": "Kita menggunakan web secara berbeda. Mozilla didedikasikan untuk membantu anda membangun web yang relevan untuk teman, keluarga, bisnis atau komunitas anda--di manapun anda tinggal",
+        "description": "Value description for local on home page"
+    },
+    "The web is yours": {
+        "message": "Web adalah milik Anda.",
+        "description": "headline on home"
+    },
+    "We’re always eager to learn how Webmaker is used": {
+        "message": "Kami selalu berhasrat untuk mempelajari bagaimana Webmaker digunakan untuk mengajari web untuk khalayak ramai. Jika anda mempunyai cerita tentang penggunaan Webmaker dalam komunitas anda, bergabunglah di <a href=\"https://lists.mozilla.org/listinfo/webmaker\">Webmaker newsgroup</a> dan bagikan tanggapan anda melalui email. anda juga dapat berpartisipasi dalam percakapan di Twitter dengan mengirimkan tanggapan ke <a href=\"https://twitter.com/webmaker\">@webmaker</a> atau menggunakan hashtag <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "copy encouraging people to get involved on Feedback"
+    },
+    "Popcorn Maker Desc": {
+        "message": "Buat video-video interaktif.",
+        "description": "Create interactive videos."
+    },
+    "active daily discussion paragraph": {
+        "message": "Ini adalah sebuah diskusi harian yang lebih aktif dimana anda dapat membantu menentukan arah dari proyek Webmaker.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Do you have a web literacy project?": {
+        "message": "Apakah anda mempunyai proyek kepustakaan web? Kami senang untuk mendengarnya dan kemungkinan besar akan membagikannya di Webmaker.org.",
+        "description": "Contribute a guide copy"
+    }
+}

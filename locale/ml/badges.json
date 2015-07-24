@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "തീയതി",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "അഭിപ്രായം",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "ഇഷ്യൂ ചെയ്യേണ്ട ബാഡ്ജ് തിരഞ്ഞെടുക്കുക ഒപ്പം അത് ലഭിച്ച ഉപയോക്താക്കളെ കാണുക ",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "അപ്ലിക്കേഷൻ ",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "ഒരു ബാഡ്ജ് നവീകരിക്കുക",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "ബാഡ്ജ് കാര്യനിര്‍വാഹകന്‍",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "ഇ-മെയില്‍",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "ഒരു ബാഡ്ജ് നിർമിക്കുക ",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "അഭിപ്രായം രേഖപെടുത്തുക ",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "പുതിയ ബാഡ്ജ് (കൾ ) ഇഷ്യൂ ചെയ്യുക ",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "പിന്‍വലിക്കുക",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "ഇ-മെയിൽ (ഒരു ലൈനിൽ ഒന്ന് എന്ന രീതിയിലോ, അല്ലെങ്കിൽ കോമ കൊണ്ട് വിഭജിച്ചോ)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

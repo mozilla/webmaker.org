@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "именную открытку",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "вариант спорной интернет-страницы",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "анимированный GIF со звуком",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Благодаря Напёрстку создавать и делиться Вашими собственными веб-страницами становится смехотворно просто. Пишите и редактируйте HTML и CSS прямо в Вашем браузере, а затем сразу же делайте предварительный просмотр своей работы. Размещайте и делитесь своими законченными проектами единственным щелчком. Идеально подходит как для новичков, так и для экспертов.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "Смотрите как работает веб",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Обогатите веб-видео",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "забавный ремикс любимого сайта вашего лучшего друга",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Создайте приложения и измените интернет при помощи бесплатных инструментов Webmaker.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "Вы можете построить:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Попкорн-машина  помогает Вам легко ремиксовать веб-видео, аудио и изображения в классные мэшапы, которые Вы можете внедрить в другие веб-сайты.  Перетащите и опустите содержание из сети, а затем добавьте свои собственные комментарии и ссылки — всё в пределах Вашего браузера. Видео, сделанные на Попкорн-машине, отличаются динамичностью, они наполнены ссылками и уникальны с каждым просмотром.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "онлайн постер для вашего любимого фильма",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "уморительный мем",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Делать веб стало легче",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "Начать с нуля",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "Попробовать Рентген-очки сейчас",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "Рентген-очки",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "документальный фильм с динамическими ссылками",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "Рентген-очки позволяют Вам увидеть стандартные блоки, из которых составлены веб-сайты в Интернете. Активируйте рентген-очки, и Вы сможете рассмотреть код, скрывающийся за любой веб-страницей, а затем сделать ремикс элементов единственным щелчком, заменяя исходный код Вашим собственным текстом, изображениями и не только.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "и не только!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "Сделать ремикс мейка",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "видео профиль, чтобы представить себя миру",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "пользовательскую домашнюю страницу для Нью-Йорк Таймс",
+        "description": ""
+    }
+}

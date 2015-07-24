@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "గురువు",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "జాన్",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "వెబ్ భౌతిక చేయడం",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "వీడియో రీమిక్సింగ్ మరియు యువత కోసం ఓపెన్ సోర్స్",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "గురువు",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "యువక గురువు",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma ran a <a href=\"/makerparty\">Maker Party</a> for 10-12 year-olds at her local university computer lab in Victoria, Canada. Now she’s working with other mentors to run a Webmaker Club to continue teaching youth about the value of open practices.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati participated in our <a href=\"/makerparty\">Maker Party</a> in 2012 where she learned to remix her own web pages using Thimble and Popcorn. She now shares her knowledge by teaching her friends, family and classmates basic HTML and how to participate online.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon organized a 48-hour <a href=\"/makerparty\">Maker Party</a> in Dundee, Scotland, inviting his students to explore everything from a “Twitter bird” made out of paper and wire to hooking Google Maps up to an arcade joystick.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "ఎమ్మా",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "ఉన్నతి",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall,వెబ్ మేకర్ ఫెలో, ఉపాధ్యాయుడు మరియు రీమిక్స్ కళాకారుడు",
+        "description": ""
+    }
+}

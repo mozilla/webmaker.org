@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "Në HTML, blloku ndërtues <img> identifikon një imazh me src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "dhe përfitoni mundësinë që të shihni e redaktoni kodin që ndodhet pas çdo webfaqe.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-ray Goggles",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "burimin",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Instaloni",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-ray Goggles",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Tërhiqeni tek shiriti i Faqeruajtësve",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "ndihmë",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "nga shapes.jpg tek blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Ripërziejeni këtë faqe",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Aktivizoni X-ray Goggles",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Ndryshoni <img src=\"/shapes.jpg\"> në <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Ndryshojani imazhit",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Klikoni imazhin e sfondit",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Instaloni X-ray Goggles",
+        "description": "Install page title"
+    }
+}

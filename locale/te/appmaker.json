@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "మరిన్ని చూడండి",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "వ్యాపారం",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "కనుగొనండి ",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "ఆలోచించు",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "ఫైర్వర్క్స్ అనువర్తనం",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "ఆప్మేకర్  మీరు కోడ్ తెలియదు కూడా, వ్యక్తిగత మొబైల్ అనువర్తనాలు సృష్టించడానికి ఒక ఉచిత సాధనం! సృష్టించడానికి మరియు కుడి మీ వెబ్ బ్రౌజర్ లో కస్టమ్ మొబైల్ అనువర్తనాలు భాగస్వామ్యం వ్యక్తిగత ఇటుకలు చేర్చండి. ",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "మీ ఫోన్ కు అప్లికేషన్స్ ను తయారు చేయండి.",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "మొబైల్ అనువర్తనాలు సులభమయింది ",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "ఒక సంగీత-మేకింగ్ అనువర్తనం",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "చాట్ అనువర్తనం",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "ఒక అనువర్తనం మీ స్నేహితులతో చాట్ కొరకు",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "ఒక సులభమైన మార్గం కోసం చూస్తున్న ప్రారంభించడానికి ఎలా? ఈ టెంప్లేట్ రీమిక్స్ ఒక మీ స్వంత అనువర్తనం చేయడానికి. ",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "గూగుల్+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "ఆప్మేకర్ ",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "శబ్దం చేస్తుంది ఒక అనువర్తనం నిర్మించడానికి సాధన మరియు ఒక సీక్వెన్సర్ ఉపయోగించండి. ",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "సహకరించండి",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "మరింత తెలుసుకోండి",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "Make an app for your <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span>",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "స్థానికంగా సంబంధిత మొబైల్ కంటెంట్ సృష్టించడానికి మరియు పంపిణీ కొత్త స్మార్ట్ఫోన్ వినియోగదారులు ఒక తరం సాధికారిక మాకు చేరండి. ",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "ఎలా మొబైల్ అనువర్తనాలు చేయడానికి ఇతరులను చూపాలనుకుంటున్న? ప్రజలు మొబైల్ డిజైన్ గురించి ఆలోచిస్తూ తెలుసుకోవాలనుకుంటున్నారా? మా బోధనా సామగ్రి తనిఖీ! ",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "విద్యార్థులు",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "ఎలాగో చూడండి",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "ఒక గోల్ సెలబ్రేట్ లేదా కేవలం బాణాసంచా కాల్చడం ద్వారా కొన్ని శబ్దం! ",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "ఒక టెంప్లేట్ ఎంచుకోండి",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "బోధించు",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "Share messages with friends using this DIY chatroom.",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "అప్మేకర్న నచ్చిందా? ప్రశ్నలు? పాల్గొనడానికి చేయాలనుకుంటున్నారా? మరింత తెలుసుకోవాలంటే? ",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "మొదలుపెట్టండి",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "మాకు ప్రాజెక్టు మీ సమయం మరియు నైపుణ్యం తోడ్పడింది ద్వారా నిజంగా అద్భుతమైన ఏదో లోకి అప్మేకర్న మలుపు సహాయం. ",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "సంగీత అనువర్తనం",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "ఒక వ్యక్తిగత లక్ష్యం ట్రాకర్",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "స్నేహితులు",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "빠른 링크:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Bugzilla 시작하기",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "화이트보드 상태",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "만일 하얀 보드 화면이 보이지 않는다면, 고급 옵션/ advanced options/들 보기를 확실히 하세요.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "피드백",
+        "description": "Feedback"
+    }
+}

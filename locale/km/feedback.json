@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "តំណ​រហ័ស៖",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "ចាប់ផ្ដើម​ជាមួយ​ Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Status Whiteboard:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "ប្រសិនបើ​អ្នក​មិន​ឃើញ​វាល​ក្ដារខៀន, សូម​ប្រាកដ​ថា​ជម្រើស​កម្រិត​ខ្ពស់​កំពុង​បង្ហាញ។",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "មតិ​ត្រឡប់",
+        "description": "Feedback"
+    }
+}

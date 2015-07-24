@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "บัตรเชิญส่วนบุคคล",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "รุ่นของหน้าเว็บที่ขัดแย้งกัน",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "รูปภาพมีชีวิตแบบ GIF พร้อมเสียง",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble ทำให้การสร้างและแบ่งปันเว็บเพจของคุณเป็นเรื่องง่ายอย่างน่าตลก เขียนและแก้ไข HTML และ CSS ในบราวเซอร์ของคุณเองและแสดงตัวอย่างงานของคุณทันที สร้างและแบ่งปันโครงการที่คุณทำเสร็จแล้วภายในคลิกเดียว สมบูรณ์แบบสำหรับมือใหม่และสำหรับผู้เชี่ยวชาญเช่นกัน",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "ดูว่าเว็บทำงานอย่างไร",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "สุดยอดวีดีโอ",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "รวมความตลกกับพื้นที่เว็บโปรดของเพื่อนสนิทคุณ",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "สร้างและเรียบเรียงเว็บได้ฟรีด้วยเครื่องมือ Webmaker",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "คุณสามารถสร้าง:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker ช่วยให้คุณเรียบเรียง วีดีโอ เสียง และรูปภาพ  ให้ผสมผสานเข้ากันได้อย่างเจ๋ง เพื่อที่สามารถเอาไปฝังในเว็บไซต์อื่นๆ ลากและวางเนื้อหาจากเว็บ แล้วเพิ่มความเห็นและลิ้งก์ของคุณเอง  — ทั้งหมดที่อยู่ใน เบราว์เซอร์ของคุณ วีดีโอ Popcorn Maker เปลี่ยนแปลงเสมอมีการการเชื่อมโยงอย่างเต็มรูปแบบและไม่ซ้ำกันทุกมุมมอง",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "โปสเตอร์ออนไลน์สำหรับหนังเรื่องโปรดของคุณ",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "มีมส์เฮฮา",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "การสร้างเว็บทำให้ง่ายดายยิ่งขึ้น",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "เริ่มต้นจากจุดเริ่มต้น",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "ลอง Goggles ตอนนี้",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "เอกสารมีการเชื่อมโยงแบบไดนามิกลิงค์",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles ช่วยให้คุณดูโครงสร้างของเว็บไซต์บนอินเตอร์เน็ต เปิดใช้งาน goggles ตรวจดูโค๊ดเบื้องหลังของหลายๆ เว็บ จากนั้นจะสามารถเรียบเรียงส่วนประกอบต่างๆ ของเว็บได้เพียงคลิกเดียว เปลี่ยนข้อความ รูปภาพและสิ่งต่างให้เป็นในแบบคุณ ",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "และอีกมากมาย!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "เรียบเรียง Make",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "รายละเอียดวิดีโอที่จะแนะนำตัวเองไปทั่วโลก",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "หน้าปรับแต่งหน้าแรกของเว็บ New York Times",
+        "description": ""
+    }
+}

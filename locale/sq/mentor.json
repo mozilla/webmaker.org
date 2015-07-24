@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "kujdestar",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Xhon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Ta bëjmë web-in fizik",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Video përzierje dhe burim i hapur për të rinjtë",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Kujdestar",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Kujdestare të rinjsh",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Ema drejton një <a href=\"/makerparty\">\"Maker Party\"</a> për 10-12-vjeçarë në laboratorin e saj universitar të informatikës në Viktoria, Kanada. Sot ajo po punon së bashku me kujdestarë të tjerë për të drejtuar një \"Webmaker Club\", që të vijojë t'u mësojë të rinjve rreth vlerës së praktikave të hapura.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Anati mori pjesë në <a href=\"/makerparty\">Maker Party-n</a> tonë më 2012-ën, ku ajo mësoi t'i përziente webfaqet e veta duke përdorur Thimble dhe Popcorn. Njohuritë e saja ajo i bashkëndan tani me të tjerët, duke u mësuar miqve të saj, familjes dhe shokëve të klasës bazat e kodeve HTML dhe sesi të jenë pjesëmarrës në linjë.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Xhon organizoi një <a href=\"/makerparty\">Maker Party</a> 48-orësh në Dandi, Skoci, ku ftoi studentët e tij për të eksploruar gjithçka, që nga një “zog i Twitter-it”, i bërë me letër, një fill për të varur Hartat e Google e deri tek një levë për lojëra.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Ema",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Anati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Emy Burvall, Kolege tek Webmaker, mësuese dhe artiste e përzierjes",
+        "description": ""
+    }
+}

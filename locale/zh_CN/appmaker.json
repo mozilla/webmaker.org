@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "更多内容",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "商务",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "了解 Appmaker",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "愿景",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "烟花应用",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "Appmaker 是一个免费工具，您可以用它来创造个人的移动应用程序，即便您不懂编写代码！用组合砖块的方法创造和分享您定制的移动应用，一切就在你的网页浏览器。",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "为你的手机制作应用。",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "轻松创建移动应用",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "一款制作音乐的应用",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "聊天应用",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "一款用来和朋友聊天的的应用",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "想要以简单的方式开始？重新组合这些模板来制作你的个人应用！",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "Google+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "Appmaker",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "使用乐器和定序器制作一个能发出声音的应用。",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "贡献",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "学习更多",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "为您的 <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span> 做一个应用",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "加入我们来帮助新智能手机用户这一代来创造并传播关于当地的移动端内容。",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "想要向别人展示制作移动应用的方法么？想要召集大家思考移动应用设计么？查看一下我们的教学资源！",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "学生",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "详细说明",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "拍摄烟花来庆祝目标的达成（或仅仅是想制造些噪音）！",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "选择模板",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "传授",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "用这个DIY聊天室与朋友分享信息",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "喜欢 Appmaker？存在疑问？想参与进来？想知道更多？",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "现在开始",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "通过你对项目贡献时间和技术来帮助我们把 Appmaker 变成一个令人惊叹的东西吧。",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "音乐应用",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "一个个人目标追踪器",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "朋友",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

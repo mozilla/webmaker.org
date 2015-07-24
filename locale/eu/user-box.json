@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Nire profila",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Nire ezarpenak",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "My Events",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Amaitu saioa",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Nire proiektuak",
+        "description": "My makes"
+    }
+}

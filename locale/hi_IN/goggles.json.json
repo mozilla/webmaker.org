@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "HTML में, <img> टैग चित्र पहचानता है src=\"file_name\" के साथ ",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "और पाएँ किसी भी वेबसाइट के पीछे के कोड को देखने और संपादित करने की सामर्थ्यता ",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-ray Googles",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "स्रोत",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "स्थापित करे",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-ray Goggles ",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "पृष्ठ-स्मृति पट्टी में खीचें",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "मदद",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "shapes.jpg से blur.jpg   ",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "पन्ने को रीमिक्स करें",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "X-ray Goggles को सक्रिय करें",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "<img src=\"/shapes.jpg\"> से <img src=\"/blur.jpg\"> बदलें",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "चित्र का बदलें",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "पृष्ठभूमि चित्र को दबाएँ",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "X-ray Goggles संरचना",
+        "description": "Install page title"
+    }
+}

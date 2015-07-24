@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "Hol dir Webmaker Beta",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "Top! Eine Kurznachricht wurde an Dein Telefon gesendet.",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "Webmaker nimmt das Beste am Web — das Erzeugen von Inhalten — und entfernt die Komplexität.",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "Gib deine Telefonnummer ein um einen Download-Link zu erhalten:",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "Stelle sicher, dass du eine gültige Telefonnummer eingegeben hast.",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "Textnachrichten werden dir über ein Unternehmen namens Twilio zugesandt. Informationen werden für maximal 30 Tage gespeichert und werden nicht zu anderen Zwecken verwendet. Für weitere Details, siehe <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\">Twilios Datenschutzerklärung</a>.",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "Werde ein Maker",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "Ups! Ein Problem ist aufgetreten bei dem Versand des Links. Bitte lade die Seite neu und trage Deine Telefonnummer erneut ein.",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "Erstelle die perfekte App",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "Senden",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "Verf&uuml;gbar f&uuml;r FirefoxOS 2.1+ und Android 4.4+",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "Erstelle genau das, was du brauchst: Eine Webseite für dein Unternehmen, eine Chat-Applikation für deine Freunde oder ein Stundenplan für deine Schüler.",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "Installiere die Mozilla Webmaker App unter folgendem Link: http://mzl.la/installwm",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "Lade Webmaker Beta herunter",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "Was du mit Webmakers machst, ist dafür gedacht, dass es gesehen, gehört und genutzt wird. Teile dein Projekt mit Freunden und Kollegen.",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "Teile es mit der Welt",
+        "description": "Header describing how apps can be shared"
+    }
+}

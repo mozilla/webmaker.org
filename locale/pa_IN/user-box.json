@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "ਮੇਰਾ ਪ੍ਰੋਫਾਇਲ",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "ਐਡਮਨ",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "ਮੇਰੀ ਸੈਟਿੰਗਸ",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "ਮੇਰਾ ਈਵੈਂਟ",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "ਸਾਈਨ ਆਉਟ",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "ਮੇਰੇ ਵਲੋ ਬਣਾਈਆਂ ਗਈਆਂ",
+        "description": "My makes"
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "Webmaker Beta Sürümünü Al",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "Harika! Telefonuna bir SMS gönderildi.",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "Webmaker web işlerinin en iyisini yapar — oluşturma — ve karmaşıklığı sadeleştirir.",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "İndirme bağlantısını almak için telefon numaranı yaz:",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "Geçerli bir numara yazdığına emin ol.",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "SMS Twilio firması tarafından gönderilir. Bu bilgiler 30 gün boyunca saklanır ve başka amaçlarla kullanılmaz. Ayrıntılı bilgi için <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\">Twilio gizlilik ilkesine</a> bakabilirsin.",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "Bir Yapıcı Ol",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "Malesef yükleme bağlantısını göndermekte sorun yaşıyoruz, sayfayı yeniden yüklemeyi ve numaranı yeniden yazmayı deneyebilirsin.",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "Kusursuz Uygulamalar Oluştur",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "Gönder",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "FirefoxOS 2.1+ ve Android 4.4+ ile kullanılabilir",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "Tam gerek duyduğun işlemi yap, işin için bir web sitesi, arkadaşlarınla sohbet uygulaması ya da öğrencilerin için bir ders planı.",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "Mozilla Webmaker uygulamasını şuradan alabilirsin: http://mzl.la/installwm",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "Webmaker Beta Sürümünü indir",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "Webmaker uygulamaları, görülmek, duyulmak ve kullanılmak için yapılır. Projelerini kişisel ve iş arkadaşların ile paylaş.",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "Dünya ile Paylaş",
+        "description": "Header describing how apps can be shared"
+    }
+}

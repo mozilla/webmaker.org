@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "kartu selamat personal",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "versi alternatif untuk laman web yang kontroversial",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "sebuah gif animasi dengan suara",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble memungkinkan Anda membuat dan membagikan laman web dengan sangat mudah. Tulis dan sunting HTML dan CSS langsung di peramban web Anda, kemudian pratinjau langsung hasil kerja Anda. Taruh dan bagikan proyek Anda dengan satu kali klik. Cocok bagi para pemula maupun para ahli.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "Lihat bagaimana web bekerja",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Video web super berat",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "sebuah pengolahan kembali yang lucu dari situs favorit teman Anda",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Buat dan olah kembali web dengan perkakas gratis Webmaker.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "Anda dapat membuat:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker membantu Anda secara mudah mengolah kembali video, audio, dan gambar di web menjadi karya keren yang dapat disematkan di situs web lainnya. Seret dan lepaskan konten dari web, tambahkan komentar dan tautan Anda sendiri — cukup dari peramban Anda. Video Popcorn Maker bersifat dinamis, penuh tautan, dan berbeda-beda di setiap tampilan.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "poster daring untuk film favorit Anda",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "sebuah mim yang sangat lucu",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Pengaryaan web yang dipermudah",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "Mulai dari awal",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "Coba Goggles sekarang",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "dokumentasi dengan tautan dinamis",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles memungkinkan Anda melihat susunan blok yang membangun situs web di internet. Aktifkan kacamatanya untuk memeriksa kode di balik halaman web apapun, kemudian olah ulang elemen-elemen dengan sebuah klik, gantikan dengan teks dan gambar Anda sendiri atau lainnya.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "dan lainnya!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "Olah kembali suatu karya",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "profil video berisi perkenalan diri Anda kepada yang lain",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "sebuah laman depan ubahsuai untuk New York Times",
+        "description": ""
+    }
+}

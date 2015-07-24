@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "persoonallisen onnittelukortin",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "vaihtoehtoisen version kiistanalaisesta verkkosivusta",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "animoidun gif-kuvan äänellä",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble tekee omien verkkosivujen luomisesta ja jakamisesta naurettavan helppoa. Voit kirjoittaa ja muokata HTML- ja CSS-koodia suoraan selaimessasi ja esikatsella työn tulostasi välittömästi. Voit hostata ja jakaa valmiit projektisi yhdellä napsautuksella. Täydellinen sekä aloittelijoille että ammattilaisille.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "Katso, kuinka verkko toimii",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Turboahda verkon videoita",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "hauskan remiksauksen parhaan ystäväsi suosikkinettisivusta",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Luo ja remiksaa verkkoa ilmaisilla Webmaker-työkaluilla.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "Voit luoda:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Makerin avulla voit remiksata videoita, ääntä ja kuvia helposti hienoiksi mashupeiksi, joita voit liittää muille nettisivuille. Raahaa sisältöä verkosta ja lisää sitten omat kommenttisi ja linkkisi — kaikki tämä vain selaintasi käyttäen. Popcorn Maker -videot ovat dynaamisia, täynnä linkkejä ja aina erilaisia.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "verkkojulisteen suosikkielokuvallesi",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "hulvattoman meemin",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Helppoa verkkosivujen luomista",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "Aloita tyhjästä",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "Kokeile Gogglesia nyt",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "X-Ray Goggles",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "dokumenttiohjelman, joka sisältää dynaamisia linkkejä",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles -työkalun avulla näet rakennuspalikat, joista internetin verkkosivut koostuvat. Aktivoi lasit tutkiaksesi minkä tahansa verkkosivun taustalla olevaa koodia. Voit tämän jälkeen muokata elementtejä yhdellä napsautuksella ja lisätä oman tekstisi, kuvasi tai muuta.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "ja paljon muuta!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "Remiksaa luomus",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "videoprofiilin, jossa voit esitellä itsesi maailmalle",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "muokatun aloitussivun Helsingin Sanomille",
+        "description": ""
+    }
+}

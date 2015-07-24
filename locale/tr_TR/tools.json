@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "Sana özel bir tebrik kartı",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "Konuşulan bir web sayfasının alternatif bir sürümü",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "hareketli bir gif ile ses",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble web sayfaları oluşturup paylaşmayı saçma denebilecek düzeyde kolaylaştırır. HTML ve CSS kodlarını doğrudan web tarayıcın üzerinden yazıp önizlemesini anında görebilirsin. Bitmiş projelerini tek tıkla sunup paylaşabilirsin. Yeni başlayanlar mükemmel deneyimli kullanıcılar için beğenilen bir uygulamadır.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "Web nasıl işliyor gör",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Görünümü güzelleştir",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "En iyi arkadaşının favori sitesinin komik bir karması",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Ücretsiz Webmaker araçları ile web oluştur ve kar",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "Şunları yapabilirsin:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker web görüntü, ses ve görsellerini kolayca güzel kalıplar içinde kararak diğer web sitelerine gömebilmeni sağlar. Tamamen web tarayıcın üzerinde içeriği sürükleyip bıraktıktan sonra açıklama ve bağlantılar ekleyebilirsin. Popcorn Maker görüntüleri devingen, tam bağlantılı ve her bakımdan eşsizdir.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "Beğendiğin film için çevrimiçi bir poster",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "Komik bir İnternet fenomeni",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Kolayca web yap",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "Sıfırdan başla",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "Gözlükleri dene",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "X-Işını Gözlüğü",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "dinamik bağlantıları bulunan bir belgesel",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Işını Gözlüğü, İnternet üzerinde web sitelerini oluşturan yapı taşlarını görebilmeni sağlar. Herhangi bir web sayfasının arkasındaki kodu incelemek için gözlüğü etkinleştir, sonra tek bir tıklama ile bileşenleri kendi seçtiğin metin, görsel ve katacağın diğer ögeler ile birlikte kar.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "ve başka pek çok şey!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "Yapımlardan birini kar",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "sizi dünyaya tanıtacak bir video profil",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "New York Times için kişiselleştirilmiş bir anasayfa",
+        "description": ""
+    }
+}

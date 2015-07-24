@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "In HTML identifiziert das Tag <img> ein Bild durch src=\"dateiname\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "und erhalte die Möglichkeit den Quelltext, der hinter einer beliebigen Webseite steckt, einzusehen und zu verändern.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "Röntgenblick",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "Quelle",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Installiere",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "Röntgenblick",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Zur Lesezeichenleiste ziehen",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "Hilfe",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "von shapes.jpg zu blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "Remixe diese Seite",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "Aktiviere Röntgenblick",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Ändere <img src=\"/shapes.jpg\"> zu <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "Verändere die Bilder",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "Klicke auf das Hintergrundbild",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "Röntgenblick einrichten",
+        "description": "Install page title"
+    }
+}

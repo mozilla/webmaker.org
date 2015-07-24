@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "เชื่อมลิงค์:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "เริ่มต้นกับ Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "สถานะกระดาน:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "หากคุณไม่เห็นช่อง Whiteboard, ดูให้แน่ใจว่าช่องตัวเลือก Advanced ถูกเปิดไว้อยู่.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "ผลตอบรับ",
+        "description": "Feedback"
+    }
+}

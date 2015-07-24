@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Webmaker eğitim kaynakları, bugünün sayısal dünyasında kişilerin sahip olması gereken becerilerin tümünü içeren <a href=\"/{{ lang }}/literacy\">Mozilla Web Okuryazarlığı Haritası</a> tarafından destekleniyor.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Web için üretme",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Kovan (Hive) Öğrenme Ağları modeli ve bağlantılı öğrenmeyi kullanarak dünyadaki şehirlerin sayısal beceriler ve web okuryazarlığı üzerine nasıl öncülük ettiği hakkında bilgi al.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Webe yön verme",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Senin gibi diğer danışmanlarla tanışmak için <a href=\"http://discourse.webmaker.org/category/meet\">çevrimiçi foruma</a> katıl. <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> hashtagı ile etkinliklerini ve eğitim kaynaklarını paylaş.",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Küresel topluluğumuz yardımcı olmaya hazır",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Kendini tanıt",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Web Okuryazarlığı Haritası",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Ayrıntılı bilgi al",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Yerel topluluk dağıtıcısı ol",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Başkalarına nasıl web yapılacağını göster ve <a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker Beceri Paylaşanı</a> ünvanını kazan. Kendini hazır hissettiğinde <a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker Danışmanı</a> ünvanını almak için başvur.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Bırak ayakların ıslansın.</strong> Eğlenceli şeyler okuyarak, izleyerek, dinleyerek ve paylaşarak kendine yeni sayısal beceriler kat.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Web üzerinden katılma",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Öğretme ve öğrenme kaynakları",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Keşfet",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Ayrıntılı bilgi al",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>Değiştik.</strong> Başlamak için daha kolay yollar mı arıyorsun? <a href=\"/{{ lang}}/tools\">Araçlarımızı</a> dene. Ya da <a href=\"/{{ lang }}/gallery\">Galerideki</a> şeyleri yeniden kararak sana özgü bir şeyler yap.",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Keşfetme",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Yeni beceriler keşfet. Sonra bunları diğerleriyle paylaş.",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Bağlanma",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "Web okuryazarlığı nedir?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Ne biliyorsan paylaş.</strong> Webmaker ile herkes öğretebilir. Sınıftaki bir öğretmen, hevesli bir danışman, ebeveyn ya da arkadaş; Hepsine yardım edebilecek etkinlik ve eğitim rehberlerimiz var.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Topluluk galerisini incele ve diğer web geliştiricilerinin neler yaptığına bak.",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Yapı Kurma",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Bırak ellerin kirlensin.</strong> En iyi öğrenme yöntemi yapıp ederek olur. Yaptıkça becerilerini geliştiren İnternet sayfaları, çokluortam görüntüleri ya da karmalar üret.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Küresel topluluk ile bağlan",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Yaparak öğren. Ardından öğrendiklerini başkalarıyla paylaş. Webmaker kaynakları arama ve gezinmeden kodlama ve betikler oluşturmayla  kadar sayısal yurttaşlık ve çevrimiçi gizliliği koruma gibi her konuda öğrenmeyi kolay ve eğlenceli kılar. <a href=\"/make-your-own\">Kendi eğitim setlerini oluşturmayı</a> ve dünyadaki diğer eğitimci ve danışmanlar ile paylaşmayı dene. ",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Danışmanlık becerilerini geliştir",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker farklıdır.</strong> Eğitmenler, teknikerler ve senin gibi insanların katılımıyla oluşmuş küresel ve açık kaynaklı bir projeyiz. Webi seviyoruz ve yaratıcı potansiyelini herkese yaymak istiyoruz. Seninle birlikte çalışabiliriz, istersen <a href=\"/{{ lang }}/getinvolved\">daha fazla katkıda da bulunabilirsin</a>.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Web Okuryazarlığı Haritası web hakkında keşfetme, yapma ve paylaşma okuryazarlığını geliştirmenize yardımcı olur.",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Dünyada web okuryazarlığını arttır",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Öğret",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla, web okuryazarlığını, webi okumak, yazmak ve katkıda bulunmak için gereken beceri ve yeterlilikler olarak tanımlıyor. Web okuryazarlığına neden önem verdiğimizi öğrenmek için bu Webmaker Belgemizi oku.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Paydaşlar ve eğitimi öğrenenler ile birlikte çalışmak için <a href=\"https://events.webmaker.org\">yerel etkinliklere</a> katıl ya da kendi etkinliğini düzenle.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "<a href=\"https://webmaker.org/resources\">Eğitim kaynaklarımıza</a> bak ya da <a href=\"https://training.webmakerprototypes.org\">profesyonel geliştirme</a> çalışmalarına katıl.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Katıl",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Yap",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Eğitim kaynaklarını paylaş, çeviri yap, kod geliştir ya da başka şekilde katkıda bulun.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "Biz sayısal beceriler ile web okuryazarlığını yaparak öğretmek isteyen teknoloji meraklıları, yapımcılar, eğitimciler, ebeveynler gibi kişilerden oluşan bir topluluğuz.",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Web nasıl öğretilir konusu üzerine ücretsiz açık eğitimimize katıl.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Eğitim Al",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>Sayısal beceriler ve İnternet okuryazarlığını öğren ve öğret.</strong>\nBu sayfalarda keşfetmeni ve yaparak öğrenmeni bekleyen eğlenceli şeyler var. Küresel topluluğumuz sürekli olarak web üzerine yaparak öğrenmeyi kolaylaştıran yeni etkinlikler, ders planları ve eğitimler ekliyor. Herkes <a href=\"https://mozilla.org/{{ lang }}/mission/\">Mozillanın kar amacı gütmeyen misyonu</a> tarafından desteklenen bu eğitici kaynakları tamamıyla açık ve ücretsiz olarak kullanabilir.",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

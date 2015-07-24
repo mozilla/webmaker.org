@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Webmaker の教育リソースは、<a href=\"/{{ lang }}/literacy\">Mozilla の Web リテラシーマップ</a> を背景にし、今日のデジタルの世界で成功するために必要なスキルセットをカバーしています。",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Web を作る",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Hive Learning Networks のモデルと世界中の都市における\"connected learning\" を使ったデジタルスキルと web リテラシー教育について学びましょう。",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Web をナビゲートする",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "<a href=\"http://discourse.webmaker.org/category/meet\">オンラインフォーラム</a>に参加して、他のメンターと交流しましょう。あなたのイベントや、活動、ティーチングリソースを <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> ハッシュタグを使って共有しましょう。",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "私たちのグローバルなコミュニティがあなたを助けます",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "自己紹介する",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Web リテラシーマップ",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "詳細",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "あなたの地域のコミュニティにおける先導者になりましょう",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "他の人に Web の作り方を教えて<a href=\"https://webmaker.org/badges/skill-sharer\">Webmaker スキルシェアバッジ</a>を手に入れましょう。<a href=\"https://webmaker.org/badges/webmaker-mentor\">Webmaker メンターバッジ</a>のレベルに達したらメンターバッジを申請しましょう。",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>さあはじめましょう！</strong>楽しく読んだり、見たり、聞いたり、共有したりすることを通して新しいデジタルスキルを学びましょう。",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Web に参加する",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "教えるため、学ぶためのリソース",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "見つける",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "詳細",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>リニューアルしました！</strong>簡単な開始方法をお探しなら、<a href=\"/{{ lang}}/tools\">ツール</a>をお試し下さい。または、 <a href=\"/{{ lang }}/gallery\">ギャラリー</a>の作品をリミックスしてみて下さい。",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "探索",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "新しい技術を見つける。そして、共有する。",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "接続",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "web リテラシーとは？",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>意見を共有しましょう。</strong>Webmaker はだれもが教えることができます。 あなたが教室にいる教育者であっても、熱烈なメンターであっても、両親や友達でもあっても、私たちは&rsquo;ve あなたの役に立つアクティビティやティーチングガイドを提供できます。",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "コミュニティギャラリーで探し、他の Web 製作者が作っているものを見る。",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "構築",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>実践しましょう。</strong>ハンズオンで実際に作ってみる事は最善の方法です。web ページ、マルチメディアビデオを作ったり、リミックスしてスキルを学びましょう。",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "グローバルなコミュニティとつながる",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "ハンズオンでの創作や試行を通して学び、学んだことを他の人に共有する。Webmaker のリソースはナビゲーション、コーディングやスクリプティング、デジタル市民権からオンラインでのプライバシー保護まで簡単にまた楽しくこれを実現します。 <a href=\"/make-your-own\">あなた自身の</a>ティーチングきっとを作り、世界中にいる他の教育者やメンター と共有してみましょう。",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "メンタースキルを育てる",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla の Webmaker は違います。</strong>私たちはあなたのような教育者や教員によるグローバルなコミュニティです。私たちは web を愛し、そのクリエイティブな可能性を広めたいと思っています。私たちは、あなたとのコラボレーションや<a href=\"/{{ lang }}/getinvolved\">参加</a>をお待ちしています。",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Web リテラシーマップは、Web を探したり、ビルドしたり、共有したりすることでリテラシーを作り上げる手助けになります。",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "より Web リテラシーの備わった世界",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "教える",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Mozilla は web リテラシーを web の読み書きや参加に必要なスキルと能力と定義しています。Mozilla がなぜ web リテラシーを重視するか Webmaker Whitepaper をご覧下さい。",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "<a href=\"https://events.webmaker.org\">あなたの地域でのイベント</a>に参加したり、イベントをホストしてコラボレーションしたり学習者に教えたりしましょう。",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "<a href=\"https://webmaker.org/resources\">ティーチングリソース</a> をブラウズしたり<a href=\"https://training.webmakerprototypes.org\">プロフェッショナルトレーニングに参加しましょう</a>。",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "参加する",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "作る",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "教育リソースを共有して、翻訳、コーディングなどの手助けをする。",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "私たちは、デジタルスキルや Web リテラシーを創作を通して教えたいと思っている、教員やメーカーや教育者や保護者等です。",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Web の教え方についての無料のオープンオンラインコースに参加する。",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "トレーニングを受ける",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>web リテラシーとデジタルスキルを教え学びましょう</strong>。このセクションにはとっても楽しい発見や Make そして教えるためのたくさんのページがあります。私たちのグローバルなコミュニティは、作りながら学ぶことを簡単に実現する新しいアクティビティや、レッスンプラン、チュートリアルを Web 上に追加し続けています。これらの教育リソース&mdash;they&rsquo;re はフリーでオープンな <a href=\"https://mozilla.org/{{ lang }}/mission/\">Mozilla&rsquo;s non-profit mission</a>により運営されています。",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "Webmaker బీటా పొందండి",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "స్వీట్! ఒక సందేశం మీ ఫోన్ కు పంపబడింది.",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "Webmaker వెబ్ యొక్క ఉత్తమమైనది - సృష్టించడం - మరియు సంక్లిష్టత దూరం చేయబడును",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "ఒక డౌన్ లోడ్ లింక్ పొందడానికి మీ ఫోన్ నంబర్ నమోదు చేయండి:",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "మీరు చెల్లుబాటు అయ్యే ఫోన్ నంబర్ ఎంటర్ చేసిన నిర్ధారించుకోండి.",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "టెక్స్ట్ సందేశాలను Twilio అనే సంస్థ ద్వారా మీ ఫోన్ వెళ్తాయి. ఈ సమాచారం కంటే ఎక్కువ 30 రోజులు నిల్వ చేయబడుతుంది, మరియు ఏ ఇతర ప్రయోజనాల కోసం ఉపయోగించరు. మరింత సమాచారం కోసం, <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\"> Twilio గోప్యతా విధానం </a> చూడండి.",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "ఒక Maker అవ్వండి",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "అయ్యో! మేము మీకు  ఇన్స్టాల్ లింక్ పంపడం ఇబ్బంది, పేజీ రీలోడ్ మరియు మళ్ళీ మీ సంఖ్య సమర్పించండి",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "పరిపూర్ణ App బిల్డ్ చేయండి",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "పంపడానికి",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "FirefoxOS 2.1 + మరియు Android 4.4+ అందుబాటులోఉన్నది",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "మీ వ్యాపారం కోసం ఒక వెబ్ సైట్, మీ స్నేహితులు ఒక చాట్ అనువర్తనం, లేదా మీ విద్యార్థులకు ఒక పాఠం ప్రణాళిక: మీకు అవసరమైనది సృష్టించండి",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "ఈ లింకును  ద్వారా మొజిల్లా webmaker App ఇన్స్టాల్ చేయండి   'http://mzl.la/installwm'.",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "Webmaker బీటా డౌన్లోడ్",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "Webmaker క్రియేషన్స్, చూసిన విన్న మరియు ఉపయోగించడానికి ఉద్దేశించబడింది ఉంటాయి. స్నేహితులు మరియు సహచరులు మీ ప్రాజెక్ట్ షేర్ చేయండి.",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "ప్రపంచంతో షేర్ చేయండి  ",
+        "description": "Header describing how apps can be shared"
+    }
+}

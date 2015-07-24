@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "Il mio Profilo",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "Amministratore",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "Le mie Impostazioni",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "I miei eventi",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentore",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Esci",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "Le mie creazioni ",
+        "description": "My makes"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": " সংরক্ষণ করুন এবং Webmaker সরঞ্জামের সাহাজ্যে প্রকাশ করুন <span class=\"green-text\">একটি Webmaker অ্যাকাউন্টের প্রয়োজন</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "আপনার নিজস্ব বিষয়বস্তু তৈরি করতে ওয়েবমেকার অনলাইন <a href=\"/{{lang}}/tools\">টুলস</a> ব্যাবহার করুন",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">চিরকালের জন্য ওয়েবমেকার বিনামূল্য,</span> সুতরাং আপনি, আপনার দক্ষতা-স্তর যাই হোক না কেন, আপনি কোন খরচ ছাড়া, ইভেন্টস এবং শিক্ষণ সম্পদ ব্যবহার করতে পারেন।",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "আপনার কাছাকাছি <a href=\"/{{lang}}/events\">ইভেন্টস</a> খুঁজুন ও উপস্থিত হন",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "আপনার ওয়েব সাক্ষরতার দক্ষতার জন্য<a href=\"/{{lang}}/badges/webmaker-super-mentor\">তকমাগুলি</a> উপার্জন করতে <span class=\"green-text\">একটি ওয়েবমেকার অ্যাকাউন্ট প্রয়োজন</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Webmaker আপনাকে কি প্রদান করতে পারে?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "ওয়েবমেকার - পরীক্ষা শিক্ষণ <a href=\"/{{lang}}/resources\">সম্পদ</a> এবং টেমপ্লেট ব্যবহার করুন",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "আপনার প্রোফাইল তৈরি করুন এবং আপনার নিজস্ব কাস্টম URL পান <span class=\"green-text\">একটি Webmaker অ্যাকাউন্টের প্রয়োজন</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "Webmaker-এ যোগ দিন",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "লগ-ইন করুন",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Webmaker-এর জন্য সাইন আপ করুন",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "একটি ইভেন্ট তৈরি এবং প্রকাশ করুন  <span class=\"green-text\">একটি Webmaker অ্যাকাউন্টের প্রয়োজন</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

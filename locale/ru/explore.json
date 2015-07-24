@@ -1,0 +1,562 @@
+{
+    "Popcorn Maker": {
+        "message": "Попкорн-машина",
+        "description": "Popcorn Maker"
+    },
+    "Tools description": {
+        "message": "<a href=\"/{{ lang }}/tools\">Средства Webmaker</a> облегчат вам создание разных задач на веб. Создать свои собственные страницы, интерактивные видео-фильмы, ремиксы, мобильные приложения, другие учебные веб средства, коды и другие ценные навыки в этом направлении.",
+        "description": "a description of the webmaker tools"
+    },
+    "Please support our work": {
+        "message": "Пожалуйста<a href=\"https://sendto.mozilla.org/page/contribute/join-mozilla?source=join_link\">поддержите нашу работу</a>.",
+        "description": "donate link"
+    },
+    "Contribute a guide or resource": {
+        "message": "Предложите своё руководство или ресурс",
+        "description": "line item on /getinvolved"
+    },
+    "Submit a resource": {
+        "message": "Представьте ресурс",
+        "description": "Submit a teaching resource"
+    },
+    "Sign up for Webmaker announcement list": {
+        "message": "Подпишитесь на <a href=\"https://sendto.mozilla.org/page/s/sign-up-for-mozilla?source=default_signup\"> список уведомлений Веб-разработчика</a></strong>.",
+        "description": "Communicate line item on /getinvolved"
+    },
+    "Web Literacy Map": {
+        "message": "Стандарт веб-грамотности",
+        "description": "The title of the explore section"
+    },
+    "Resources for teaching the web": {
+        "message": "Ресурсы для изучения Web",
+        "description": "Heading for the second explore subsection with document stacks"
+    },
+    "Suggest your own links and resources": {
+        "message": "Эта страница развивается! Предложите что-нибудь, чтобы Ваши собственные ссылки и ресурсы добавили. <a href='/{{lang}}/get-involved'>↵Or get more involved</a>.</a>",
+        "description": "Submit a teaching resource"
+    },
+    "Visit our communications wiki": {
+        "message": "Посетите наш <a href=\"https://wiki.mozilla.org/Webmakers/Communications\">вики-сервис общения</a> для большего пространства связи с нами.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "success resource banner": {
+        "message": "<strong>Спасибо!</strong> Мы получили предлагаемый вами ресурс.",
+        "description": "Banner for form success submission."
+    },
+    "Webmaker - Sign Up": {
+        "message": "Войти в Вебмейкер ",
+        "description": "Webmaker - Sign Up"
+    },
+    "Jump right in": {
+        "message": "Погрузитесь",
+        "description": "headline for third section on home page"
+    },
+    "Find or host an event": {
+        "message": "Найдите или проведите мероприятие",
+        "description": "line item on /getinvolved"
+    },
+    "How are we doing?": {
+        "message": "Как у нас дела?",
+        "description": "headline on Feedback"
+    },
+    "Explore Webmaker": {
+        "message": "Исследуйте Вебмейкер",
+        "description": "headline on first topic of 'jump right in' on home page"
+    },
+    "More Resources": {
+        "message": "Другие ресурсы",
+        "description": "See more kits in a search"
+    },
+    "Start Teaching": {
+        "message": "Начните преподавать",
+        "description": "Teach site referral button text on Home page"
+    },
+    "Connect through social media": {
+        "message": "Присоединяйтесь в социальных сетях</strong> и наблюдайте, чем занимаются люди, следите за событиями по всему миру и знакомьтесь с новыми проектами Вебмейкера через href=\"https://mozillawebmaker.tumblr.com/\">Tumblr</a>, <a href=\"https://twitter.com/webmaker\">Twitter</a>, <a href=\"https://www.facebook.com/mozilla\">Facebook</a>, <a href=\"https://www.flickr.com/photos/mozilladrumbeat/favorites/\">Flickr</a>, <a href=\"https://www.youtube.com/mozillawebmakers\">YouTube</a> and <a href=\"https://blog.webmaker.org/\">наш блог</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Communicate": {
+        "message": "Общайтесь",
+        "description": ""
+    },
+    "Teaching kits": {
+        "message": "Комплект обучающих материалов",
+        "description": "First square in contribute grid on explore"
+    },
+    "Teaching kits desc": {
+        "message": "Создать и предоставить ресурс для обучения навыкам работы с цифровыми данными",
+        "description": "Copy for first square in contribute grid on explore"
+    },
+    "Receive occasional email updates": {
+        "message": "Получайте рассылку случайных новостей на электронную почту только о самом важном&mdash;примерно 1 раз в месяц.",
+        "description": "communicate line item description"
+    },
+    "Help with beta-testing & quality assurance": {
+        "message": "Помогите с проведением бета-тестирований и контроля качества",
+        "description": "line item on /getinvolved"
+    },
+    "Build the web with others": {
+        "message": "Создавайте веб вместе с другими на местных мероприятиях и находите материалы, которые можно изложить у себя.",
+        "description": "copy for third topic of 'jump right in' on home page"
+    },
+    "Making is the basis of everything we do.": {
+        "message": "Создание - это основа всего, что мы делаем. Попробуйте переделать один из наших <a href=\"/{{ lang }}/resources\">начальных ресурсов</a> или сделайте что-либо с нуля, используя <a href=\"https://goggles.webmaker.org/{{ lang }}\">Рентген-очки</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Наперсток</a> или <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Попкорн машину</a>. Затем поделитесь своим творением со всем миром, используя хештег <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+        "description": "Make something copy"
+    },
+    "Email address": {
+        "message": "Адрес электронной почты",
+        "description": "placeholder on home input field"
+    },
+    "Learn to build it with Mozilla.": {
+        "message": "Учитесь строить её с Mozilla.",
+        "description": "subhead on home"
+    },
+    "Receiving your opinions on the Webmaker experience": {
+        "message": "Нам важно узнать ваше мнение об опыте на Вебмейкере. В дейстивтельности, ваши отзывы &mdash; это первое, что мы берём в расчёт, когда планируем дальнейшее усовершенствование сайта. Пожалуйста, уделите минуту, чтобы рассказать нам, что вам нравится на сайте, что не работает так, как вы это ожидали, и что можно сделать лучше. ",
+        "description": "copy on Feedback"
+    },
+    "Mozilla is a nonprofit organization": {
+        "message": "Mozilla является некоммерческой организацией, и эти инструменты с открытым кодом созданы мировым сообществом. Они вечно будут бесплатны, сейчас и всегда!",
+        "description": "Value description for free on home page"
+    },
+    "Privacy matters": {
+        "message": "Вопросы конфиденциальности",
+        "description": "Text on back side of privacy day eyeball on home"
+    },
+    "Mozilla’s free tools": {
+        "message": "Бесплатные инструменты Mozilla помогут вам создавать веб и одновременно приобретать новые навыки. ",
+        "description": "subhead on home"
+    },
+    "I ": {
+        "message": "я",
+        "description": "I heart"
+    },
+    "We believe that digital literacy is more than just learning to code.": {
+        "message": "Мы считаем, что цифровая грамотность - это больше, чем просто обучение программированию. Наши инструменты, обучающие ресурсы и сетевые сообщества позволяют каждому стать гражданином сети.",
+        "description": "Value description for more than code on home page"
+    },
+    "Learn to Teach": {
+        "message": "Учитесь преподавать",
+        "description": "headline on second topic of 'jump right in' on home page"
+    },
+    "Free": {
+        "message": "Бесплатно",
+        "description": "first value on home page"
+    },
+    "Add an event": {
+        "message": "Добавить мероприятие",
+        "description": "Add an event button"
+    },
+    "What language is your resource link?": {
+        "message": "На какой язык указывает ваша ссылка",
+        "description": "Label for language name for resource link"
+    },
+    "Partner desc": {
+        "message": "Сотрудничайте с Mozilla, чтоб улучшать обучение в вебе. ",
+        "description": "Copy for sixth square in contribute grid on explore"
+    },
+    "Discover": {
+        "message": "Обнаружить",
+        "description": "Section in competency pages"
+    },
+    "Resources section description": {
+        "message": "Раздел <a href=\"/{{ lang }}/resources\">Материалы</a> на Вебмейкере представляет собой руководство по веб-грамотности. Исследуйте новые веяния, такие, как программирование, мастерство рассказчика и защита онлайн-конфиденциальности, а также многие другие. В каждом разделе есть ссылки для изучения и реальные проекты, которые надо сделать, и образовательная деятельность. ",
+        "description": "Copy for the second explore subsection with document stacks"
+    },
+    "Translate": {
+        "message": "Перевести",
+        "description": "Third square in contribute grid on explore"
+    },
+    "Get involved with webmaker": {
+        "message": "Webmaker является частью <a href=\"//www.mozilla.org/en-US/mission/\">некоммерческой миссии</a> Mozilla по созданию более открытого веб-грамотного мира.",
+        "description": "Copy for first explore subsection with map"
+    },
+    "Skills": {
+        "message": "Навыки",
+        "description": "Title for list of web literacy skills"
+    },
+    "Thimble": {
+        "message": "Наперсток",
+        "description": "Thimble"
+    },
+    "Design": {
+        "message": "Дизайн",
+        "description": "Fourth square in contribute grid on explore"
+    },
+    "Start Creating": {
+        "message": "Начать Создание",
+        "description": "button text on footer on home"
+    },
+    "As a non-profit organization, we depend on": {
+        "message": "Будучи некоммерческой организацией, мы полагаемся на щедрость таких людей, как Вы, в финансировании нашей цели - воодушевлять миллионы людей по всему миру переходить от пользования веба к его созданию.",
+        "description": "copy for Donate to Webmaker"
+    },
+    "All Webmaker tools are open source.": {
+        "message": "Все инструменты Вебмейкера - c открытым исходным кодом. Предложите идеи, патчи, ошибки или свои собственные демонстрации и опытные образцы. Получите доступ к документации, системам отслеживания ошибок и не только.",
+        "description": "copy for contribute code on /getinvolved"
+    },
+    "Want to teach the web to others?": {
+        "message": "Желаете обучать других вебу?",
+        "description": "Teach site referral heading on Home page"
+    },
+    "Study at your own pace": {
+        "message": "Пробуйте в своём ритме изучать и учить веб-нрамотности, навыкам цифровой эпохи и открытым практикам",
+        "description": "copy for second topic of 'jump right in' on home page"
+    },
+    "Tools": {
+        "message": "Инструменты",
+        "description": "headline for section on /about"
+    },
+    "View events": {
+        "message": "Смотреть события",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Become a mentor": {
+        "message": "Стать наставником",
+        "description": "Button in mentors section on literacy pages, line item on /getinvolved"
+    },
+    "sharing": {
+        "message": "поделиться",
+        "description": "onboarding interactive text input"
+    },
+    "When you file your bug, be sure to use feedback": {
+        "message": "Когда вы отправляете отчёт об ошибке, не забывайте добавить слово “Feedback” в поле Status Whiteboard, чтобы мы могли найти его. ",
+        "description": "explainer text for status whiteboard on Feedback"
+    },
+    "Make something": {
+        "message": "Создайте что-нибудь",
+        "description": "line item on /getinvolved"
+    },
+    "Footer header": {
+        "message": "Не знаете с чего начать ?",
+        "description": "Header for bottom section of explore"
+    },
+    "Our team uses an issue tracker called Bugzilla": {
+        "message": "Наша команда использует баг-трекер <a href=\"https://bugzilla.mozilla.org/\">Bugzilla</a> для отправления ошибок и отслеживания исправлений. Каждый может отправить отчёт о найденной ошибке. И только то, что это называется “ошибкой”, вовсе не обязательно должно значить, что вы должны отправить отчёт о том, что нечто идёт не так; это может быть просто ваша идея на будущее, заметка о том, как вам понравилось что-то или нетехническое предложение для дальнейшего развития. ",
+        "description": "description for bugzilla"
+    },
+    "noStaffPick": {
+        "message": "Пока не существует подходящих обучающих ресурсов <a href=\"#\">Загрузите свой.</a>",
+        "description": "No item in the list picked by staff and there is a submit link."
+    },
+    "Partner": {
+        "message": "Партнер",
+        "description": "Sixth square in contribute grid on explore"
+    },
+    "Submit a bug now": {
+        "message": "Сообщить об ошибке сейчас",
+        "description": "button text on Feedback"
+    },
+    "Find an event": {
+        "message": "Найти мероприятие",
+        "description": "Find an event button"
+    },
+    "Learn more": {
+        "message": "Побробнее",
+        "description": "Button text on home page"
+    },
+    "Submit a bug on Bugzilla": {
+        "message": "Отсылайте найденные ошибки и баги через Bugzilla",
+        "description": ""
+    },
+    "The global Mozilla community wants everyone to be a citizen of the web": {
+        "message": "Глобальное сообщество Мозиллы желает, чтоб каждый стал сознательным гражданином веба, включая вас!",
+        "description": "subhead on home"
+    },
+    "Start creating": {
+        "message": "Начните создавать",
+        "description": "button text on home"
+    },
+    "Featured Teaching Resources": {
+        "message": "Рекомендуемые учебные ресурсы",
+        "description": "Title for teaching resources in competency page"
+    },
+    "9 Ways to Get Involved with Webmaker": {
+        "message": "9 способов подключиться к работе на Вебмейкере",
+        "description": "headline on /getinvolved"
+    },
+    "Footer copy": {
+        "message": "<a href=\"/{{lang}}/resources\">Обследуйте навыки</a> и посмотрите, как образовательные материалы предлагает Вебмейкер.",
+        "description": "Copy for bottom section of explore"
+    },
+    "Mozilla privacy policy agreement": {
+        "message": "Я согласен (-сна) с <a href=\"https://webmaker.org/terms\">Условиями использования</a> и <a href=\"https://webmaker.org/privacy\">Политикой конфиденциальности</a> проекта Вебмейкер от Mozilla.",
+        "description": "Mozilla privacy policy agreement"
+    },
+    "explore_frontpage_title": {
+        "message": "Добро пожаловать на Webmaker!",
+        "description": "Heading for Explore page"
+    },
+    "Donate to Webmaker": {
+        "message": "Сделайте пожертвование для Вебмейкера",
+        "description": "line item on /getinvolved"
+    },
+    "Get inspired by examples like these": {
+        "message": "Вдохновитесь такими (<a href=\"https://webmaker.org/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\">образцами</a>)",
+        "description": "Paragraph copy for gallery section of Make Your Own"
+    },
+    "Help us build the future of the web": {
+        "message": "Помогайте нам строить будущее веба.",
+        "description": "headline on home"
+    },
+    "Participate in community testing sessions": {
+        "message": "Принимайте участвие в тестовых занятиях сообщества",
+        "description": "Headline for community testing session on Feedback"
+    },
+    "You might also like": {
+        "message": "Вам также понравится",
+        "description": "Heading for related competencies section, You might also like... Security, Coding, etc."
+    },
+    "By": {
+        "message": "к",
+        "description": "The byline for featured kits"
+    },
+    "Get training": {
+        "message": "Поупражняться",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Mozilla Webmaker creates software, projects and events": {
+        "message": "Вебмейкер от Mozilla создаёт программное обеспечение, проекты и мероприятия, которые распространяют веб-грамотность путём созидания и распространения. Мы представляем проект с открытым кодом , возглавленный создателями, учителями и лидерами сообщества. Мы желаем, чтобы и вы поучавствовали в нашей деятельности. ",
+        "description": "copy for ‘9 ways to get involved’"
+    },
+    "Teach the web": {
+        "message": "Преподавай веб",
+        "description": "line item on /getinvolved"
+    },
+    "Join our community call": {
+        "message": "Присоединяйтесь к нашим телефонным конференциям каждый вторник. Мы рады всем! Задавайте вопросы, знакомьтесь с нашим сообществом и штатом, и находите необходимые Вам ресурсы.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "next": {
+        "message": "следующий",
+        "description": "next button"
+    },
+    "Code desc": {
+        "message": "Найди ошибки, исправь или запрограммируй используя наш MakeAPI.",
+        "description": "Copy for fifth square in contribute grid on explore"
+    },
+    "Build and share the web with Mozilla.": {
+        "message": "Стройте и распространяйте веб вместе с Мозиллой.",
+        "description": "footer text on home"
+    },
+    "Submit a bug for Popcorn Maker": {
+        "message": "Сообщить об ошибке для Попкорн-машины",
+        "description": "quick links list item on Feedback"
+    },
+    "Say hello on a Webmaker community call": {
+        "message": "Передайте привет на <a href=\"https://wiki.mozilla.org/Webmakers/Community_Calls\">телеконференции Вебмейкера</a>.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Join the Webmaker newsgroup": {
+        "message": "Присоединяйтесь к <a href=\"https://lists.mozilla.org/listinfo/webmaker\">новостной группе Веб-разработчиков..</a>",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Now, learn to make and share more of your favorite things on the web.": {
+        "message": "Теперь учитесь делать и распространять больше своих любимых дел в вебе. ",
+        "description": "Now, learn to make and share more of your favorite things on the web."
+    },
+    "Contribute to Webmaker": {
+        "message": "Сделайте вклад в Вебмейкер",
+        "description": "Contribute to Webmaker"
+    },
+    "Make your own apps and websites": {
+        "message": "Создавайте свои собственные приложения и веб-сайты. ",
+        "description": "headline on homepage"
+    },
+    "Submit a bug for Webmaker.org": {
+        "message": "Сообщить об ошибке для Webmaker.org",
+        "description": "quick links list item on Feedback"
+    },
+    "Explore now": {
+        "message": "Исследуйте прямо сейчас",
+        "description": "link copy on home 'jump right in' section"
+    },
+    "Discover how you can build and share the web.": {
+        "message": "Посмотрите, как вы можете создавать и распространять веб",
+        "description": "sub-head on third section of home page"
+    },
+    "Contribute code": {
+        "message": "Предоставить код",
+        "description": "line item on /getinvolved"
+    },
+    "More than code": {
+        "message": "Больше, чем код",
+        "description": "third value on home page"
+    },
+    "Design desc": {
+        "message": "Стать соучастником проекта или повысить уровень ваших навыков в проектировании",
+        "description": "Copy for fourth square in contribute grid on explore"
+    },
+    "make-learn-teach-section-info": {
+        "message": "Сообщество Вебмейкера собирается вместе на мероприятия по всему миру &mdash; в библиотеках, центрах сообществ, интернет-кафешках или же у вас в комнате. Найдите ближайшее к себе мероприятие, изучите, как провести своё или просто поучаствуйте активно в нашем глобальном мероприятии Maker Party (с июля по сентябрь 2014-ого г.).",
+        "description": "Make Learn Teach information section"
+    },
+    "Link:": {
+        "message": "Ссылка",
+        "description": "Label form for Link submission"
+    },
+    "connect in many ways.": {
+        "message": "Мы - огромное сообщество, и мы контактируем друг с другом различными способами.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Participate in user testing": {
+        "message": "Участвуйте в пользовательских испытаниях, давайте обратную связь или помогайте с гарантией качества. Ваши тестирование и идеи сделают продукты Вебмейкера Мозиллы лучше, и помогут сформировать их будущее.",
+        "description": "copy for QA on /getinvolved, line 2"
+    },
+    "Status Whiteboard:": {
+        "message": "Статус белой доски:",
+        "description": "label for faux bugzilla field on Feedback"
+    },
+    "Web Literacy": {
+        "message": "Сетевая грамотность",
+        "description": "Web Literacy"
+    },
+    "Share community experiences": {
+        "message": "Делитесь опытом сообщества",
+        "description": ""
+    },
+    "Wait, there’s more!": {
+        "message": "Подождите, это ещё не всё!",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "new Webmaker tools and projects": {
+        "message": "Станьте первым, кто испытал новые <a href='/{{lang}}/tools'>инструменты </a> и проекты Веб-разработчика.",
+        "description": "copy for QA on /getinvolved, line 1"
+    },
+    "Code": {
+        "message": "Код",
+        "description": "Fifth square in contribute grid on explore"
+    },
+    "Login to submit a resource": {
+        "message": "Войти для подтверждения/передачи ресурса",
+        "description": "A button Login to submit a resource."
+    },
+    "Contribute subsection copy": {
+        "message": "Webmaker это система с открытым исходным кодом, мощным сообществом, и при поддержке  Mozilla&rsquo;s некоммерческого  <a href=\"https://mozilla.org/{{ lang }}/mission/\">направления</a> для построения и защиты открытого веб. Мы&rsquo;хотели бы чтобы вы<a href=\"/{{ lang }}/getinvolved\">приняли более активное участие</a>.",
+        "description": "Copy for the contribute subsection of explore"
+    },
+    "Investigate the tools, learning resources": {
+        "message": "Осмотрите инструменты, обучающие материалы и сообщество, которое предлагает Вебмейкер",
+        "description": "copy for first topic of 'jump right in' on home page"
+    },
+    "Webmaker helps people across the world": {
+        "message": "Вебмейкер помогает людям по всему миру становится информированными создателями свободного и открытого веба.",
+        "description": "Subehad on our values"
+    },
+    "Free tools that make it easy to create and learn": {
+        "message": "Бесплатные инструментальные средства, облегчающие работу по созданию и обучению",
+        "description": "Header for section that includes description of webmaker tools"
+    },
+    "or remix someone elses": {
+        "message": "...или переделайте чьи-то",
+        "description": "headline for gallery section of Make Your Own"
+    },
+    "Good start!": {
+        "message": "Хорошее начало!",
+        "description": "Good start!"
+    },
+    "user_deleted": {
+        "message": "Ваша учетная запись была удалена.",
+        "description": "Your account has been deleted."
+    },
+    "English only": {
+        "message": "Только английский",
+        "description": ""
+    },
+    "Local": {
+        "message": "Местные",
+        "description": "second value on home page"
+    },
+    "Submit": {
+        "message": "Отправить",
+        "description": "Submit button"
+    },
+    "You don’t need to be a wizard to teach the web.": {
+        "message": "Не нужно быть волшебником, чтобы обучить вебу. Мы создали <a href=\"/{{ lang }}/search/?type=tags&q=teach-kit,teach-activity&sortByField=likes\"> руководство по взлому </a> для обучения веб грамотности, созданию сетей, проведению онлайн-бесед и не только. Хотите создать свой план урока? У нас есть <a href=\"/{{ lang }}/make-your-own\"> отличные примеры</a> этого.",
+        "description": "Teach the Web copy"
+    },
+    "Join Mozillas community of educators": {
+        "message": "Вступайте в сообщество преподавателей Мозиллы, которые обучают цифровым навыкам и веб-грамотности. ",
+        "description": "Teach site referral description on Home page"
+    },
+    "and more!": {
+        "message": "и не только!",
+        "description": ""
+    },
+    "Our values": {
+        "message": "Наши ценности",
+        "description": "Headline on second section of home"
+    },
+    "From hack jams to pop ups to the global Maker Party": {
+        "message": "От hack jam к pop up и к глобальному <a href=\"https://party.webmaker.org\">Maker Party</a>, имеется множество мероприятий, в соответствии с любыми интересами. Найдите мероприятие, которое заинтересует вас или проведите ваше собственное мероприятие — у нас есть <a href=\"/{{ lang }}/event-guides\">рекомендации</a> относительно того, как вам это сделать.",
+        "description": "Find or host an event copy"
+    },
+    "Translate desc": {
+        "message": "Помочь локализовать и перевести Webmake",
+        "description": "Copy for third square in contribute grid on explore"
+    },
+    "What do you love on the web?": {
+        "message": "Что Вам нравится в сети?",
+        "description": "What do you love on the web?"
+    },
+    "Make. Learn. Get together.": {
+        "message": "Создать. Изучить. Объединить.",
+        "description": "Make. Learn. Get together. Header section"
+    },
+    "Get Together": {
+        "message": "Собирайтесь вместе",
+        "description": "headline on third topic of 'jump right in' on home page"
+    },
+    "Submit a bug for Thimble": {
+        "message": "Сообщить об ошибке для Напёрстка",
+        "description": "quick links list item on Feedback"
+    },
+    "Events desc": {
+        "message": "Разместить информацию о событии в Webmake в вашем городе",
+        "description": "Copy for second square in contribute grid on explore"
+    },
+    "Mentoring is a chance to share your knowledge": {
+        "message": "Быть наставником - это возможность делиться своими знаниями и давать обратную связь напрямую по всему миру учащимся всех возрастов, жаждущим цифровых навыков.",
+        "description": "Become a mentor copy on /getinvolved"
+    },
+    "Opportunities to get involved": {
+        "message": "Команда Вебмейкера периодически даёт людям возможность протестировать наш сайт, инструменты и тренинговые материалы. Чтобы поучаствовать в одном из многих тестовых мероприятий нашего сообщества, <a href=\"https://wiki.mozilla.org/Webmaker/TeachTheWeb/Testing\">посетите Вики-страницу</a>. ",
+        "description": "copy to encourage people to get involved in testing"
+    },
+    "Discover creative ways to teach and learn digital superpowers": {
+        "message": "Узнайте творческие способы преподавать и изучать цифровые сверхдержавы",
+        "description": "Heading for first explore subsection with map"
+    },
+    "Suggest a resource for": {
+        "message": "Предложить ресурс для {{ skill.term }}",
+        "description": "Title for suggesting resource form"
+    },
+    "Thimble Desc": {
+        "message": "Создать и поместить свою собственную страницу",
+        "description": "Make and publish your own web page."
+    },
+    "We all use the web in different ways.": {
+        "message": "Все мы используем сеть разными способами. Mozilla призван помочь Вам построить сеть, подходящую для Ваших друзей, семьи, бизнеса или сообщества - и не имеет значения, где Вы живете.",
+        "description": "Value description for local on home page"
+    },
+    "The web is yours": {
+        "message": "Сеть - ваша.",
+        "description": "headline on home"
+    },
+    "We’re always eager to learn how Webmaker is used": {
+        "message": "Мы всегда стремимся изучить, как Вебмейкер используется в обучении разных слушателей. Если у вас есть свои истории об использовании Вебмейкера в вашем сообществе, пожалуйста, вступайте в <a href=\"https://lists.mozilla.org/listinfo/webmaker\">нвостную группу Вебмейкера</a>или делитесь своим примером по электронной почте. Вы также можете учавствовать в обсуждениях на Твиттере, отвечая на <a href=\"https://twitter.com/webmaker\">@webmaker</a> или используя хеш-тег <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a>.",
+        "description": "copy encouraging people to get involved on Feedback"
+    },
+    "Popcorn Maker Desc": {
+        "message": "Создать интерактивные видео",
+        "description": "Create interactive videos."
+    },
+    "active daily discussion paragraph": {
+        "message": "Это более активное ежедневное обсуждение, где Вы можете помочь сформировать курс проекта Вебмейкер.",
+        "description": "copy on bullet point on /getinvolved"
+    },
+    "Do you have a web literacy project?": {
+        "message": "У Вас есть проект на тему веб-грамотности? Мы хотели бы услышать об этом и, возможно, поделиться им на Webmaker.org.",
+        "description": "Contribute a guide copy"
+    }
+}

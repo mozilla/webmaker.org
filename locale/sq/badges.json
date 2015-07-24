@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "Datë",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Koment",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Përzgjidhni një stemë që ta publikoni dhe shihni përdoruesit që e kanë marrë atë",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "Aplikacion",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Përditësoni një Stemë",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Administratori i Stemave",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "E-postë",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Krijoni një Stemë",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Shtoni një koment",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Lëshoni stemë(a) të reja",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Anulojeni",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "E-postat (një në çdo resht, ose të ndahen me presje)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

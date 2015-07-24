@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Snabblänkar ",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Börja med Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Status Anslagstavla:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Om du inte ser Whiteboardfältet, kontrollera ifall dem avancerade valmöjligheterna syns.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Feedback",
+        "description": "Feedback"
+    }
+}

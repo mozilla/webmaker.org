@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "My Profile",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "admin",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "My Settings",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "My Events",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "supermentor",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "Αποσύνδεση",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "My makes",
+        "description": "My makes"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "儲存、發佈以 Webmaker 工具打造的成果 <span class=\"green-text\">需要有 Webmaker 帳號</span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "使用 Webmaker 的線上<a href=\"/{{lang}}/tools\">工具</a>，打造您自己的內容。",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker 永遠都是免費的</span>，您可以使用這些工具、活動與教學資源，不收分毫、不論何處、不看您的技術能力。註冊帳號就可以儲存、發表您的作品。",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "尋找並參與附近的<a href=\"/{{lang}}/events\">活動</a>",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "以 Web 素養技巧為自己獲得<a href=\"/{{lang}}/badges/webmaker-super-mentor\">徽章</a> <span class=\"green-text\">需要有 Webmaker 帳號</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Webmaker 可以帶給您什麼？",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "使用 Webmaker 審核過的<a href=\"/{{lang}}/resources\">教學素材</a>與範本",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "建立個人檔案，取得專屬的網址 <span class=\"green-text\">需要有 Webmaker 帳號</span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "參與 Webmaker",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "登入",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "註冊 Webmaker",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": "建立、發表活動 <span class=\"green-text\">需要有 Webmaker 帳號</span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

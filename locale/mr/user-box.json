@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "माझी प्रोफाईल",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "एडमिन",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "माझ्या सेटिंग्ज",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "माझे कार्यक्रम",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "महागुरू ",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "साईन आऊट करा",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "माझे मेक",
+        "description": "My makes"
+    }
+}

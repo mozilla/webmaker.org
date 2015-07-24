@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "mentor",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "Jon",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "Fizyczna forma sieci",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "Remiksowanie wideo i open source dla młodzieży",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "Opiekun",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "Mentor młodzieży",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "Emma zorganizowała <a href=\"/makerparty\">Maker Party</a> dla dzieci w wieku 10-12 lat w pracowni komputerowej uniwersytetu w Kanadzie (prowincja Wiktoria). Aktualnie pracuje z innymi mentorami nad prowadzeniem klubu Webmakera, gdzie kontynuują nauczanie młodzież o znaczeniu otwartego modelu tworzenia.",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "Unnati wzięła udział w naszym <a href=\"/makerparty\">Maker Party</a> w 2012 roku, podczas którego nauczyła się remiksować własne strony przy użyciu Naparstka i Popcornomatu. Teraz dzieli się swoją wiedzą, nauczając znajomych i członków rodziny używania podstawowego kodu HTML i współpracy w sieci.",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "Jon zorganizował 48-godzinne <a href=\"/makerparty\">Maker Party</a> w Dundee (Szkocja), na które zaprosił swoich uczniów, którzy w ramach tego wydarzenia pracowali nad wieloma projektami - od \"ptaszka z Twittera\" zrobionego z papieru i drutu, po podłączenie dżojstika do gier do usługi Mapy Google.",
+        "description": ""
+    },
+    "Emma": {
+        "message": "Emma",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "Unnati",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "Amy Burvall, Partner Webmakera, nauczycielka i remikserka",
+        "description": ""
+    }
+}

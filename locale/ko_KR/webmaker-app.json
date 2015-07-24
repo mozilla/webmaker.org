@@ -1,0 +1,542 @@
+{
+    "Show this app in the Discover Gallery": {
+        "message": "이 어플을 디스커버 갤러리에 전시하기",
+        "description": "Option on detail view to share app to Discover gallery"
+    },
+    "Single Line Text": {
+        "message": "한 줄 텍스트",
+        "description": "Item in the select box"
+    },
+    "Newest": {
+        "message": "최신",
+        "description": "Newest app tab"
+    },
+    "No data has been stored yet!": {
+        "message": "아직 아무런 데이터도 모이지 않았습니다",
+        "description": "No data has been stored yet!"
+    },
+    "Add a Brick": {
+        "message": "브릭 추가하기",
+        "description": "Title for the add a brick page"
+    },
+    "Featured": {
+        "message": "인기 항목",
+        "description": "Featured apps tab"
+    },
+    "My App": {
+        "message": "나의 앱",
+        "description": "The Mobile app I am viewing"
+    },
+    "Separator": {
+        "message": "Separator",
+        "description": "Separator label"
+    },
+    "You haven't created any apps yet.": {
+        "message": "아직 아무런 앱도 만들지 않았네요...",
+        "description": "Message on profile view if no apps have been created yet"
+    },
+    "Guest Explanation": {
+        "message": "손님들은 어플을 만들 수 있지만 출판할 수 없습니다",
+        "description": "Explains the effect of using the app as a not signed in guest."
+    },
+    "Send SMS": {
+        "message": "SMS 보내기",
+        "description": "Send SMS text"
+    },
+    "Publishing...": {
+        "message": "출판중...",
+        "description": "Shows up below header when the app is being published or a publish is in progress"
+    },
+    "Open": {
+        "message": "열기",
+        "description": "Open an app"
+    },
+    "Create": {
+        "message": "만들기",
+        "description": "Create an app"
+    },
+    "My Profile": {
+        "message": "내 프로필",
+        "description": "Title for profile page"
+    },
+    "An active connection is needed to display the Discover Gallery": {
+        "message": "디스커버 갤러리를 보시려면 인터넷에 연결되어 있어야 합니다",
+        "description": "Explains the message communicating a lack of connection"
+    },
+    "Start Building": {
+        "message": "만들기 시작하기",
+        "description": "Start Building button for creating an app"
+    },
+    "No Data available": {
+        "message": "데이터가 없습니다",
+        "description": "No Data available"
+    },
+    "Business": {
+        "message": "비즈니스",
+        "description": "Title for an app for business owners"
+    },
+    "Get Started": {
+        "message": "시작하기",
+        "description": "Button meaning: Get started making apps"
+    },
+    "Delete App": {
+        "message": "앱 지우기",
+        "description": "Button to delete entire app"
+    },
+    "Share Community News": {
+        "message": "커뮤니티 뉴스 공유하기",
+        "description": "title for template"
+    },
+    "Choose Contacts": {
+        "message": "연락처 고르기",
+        "description": "Prompt to select contacts from mobile phone contact list"
+    },
+    "Back to My Apps": {
+        "message": "내 어플로 돌아가기",
+        "description": "Option on slide-out menu"
+    },
+    "Join Webmaker": {
+        "message": "웹메이커 함께하기",
+        "description": "Button label for creating an account"
+    },
+    "Preview": {
+        "message": "미리보기",
+        "description": "Button that, if clicked, shows the end product of the app"
+    },
+    "URL": {
+        "message": "URL",
+        "description": "Label for URL input"
+    },
+    "Text Color": {
+        "message": "텍스트 색상",
+        "description": "Label for attribute of text block: the colour of the text"
+    },
+    "Minimum Number": {
+        "message": "최소수",
+        "description": "Minimum Number label"
+    },
+    "Increment by": {
+        "message": "Increment by",
+        "description": "Increment by label"
+    },
+    "Head over to Make to start creating your very own app.": {
+        "message": "<strong>만들기</strong> 로가서 앱을 만들기 시작해 보세요.",
+        "description": "Message encouraging 'make'ing an app when device is offline"
+    },
+    "Maximum Number": {
+        "message": "최고수",
+        "description": "Maximum Number label"
+    },
+    "Image": {
+        "message": "이미지",
+        "description": "Type of block that can be added to the app"
+    },
+    "Sign In": {
+        "message": "로그인",
+        "description": "Sign In button label (logs user into Webmaker Mobile)"
+    },
+    "Safety": {
+        "message": "안전",
+        "description": "Title for a safety app"
+    },
+    "Discover": {
+        "message": "발견",
+        "description": "Title for the Discover page (a listing of apps users can choose from)"
+    },
+    "errorAppNotFound": {
+        "message": "죄송합니다, 이 앱이 없습니다. <a href='/profile>프로필</a>로 돌아가시겠습니까?",
+        "description": "Error message for app details/editing/play view when the app is not found"
+    },
+    "Name": {
+        "message": "이름",
+        "description": "Label on the profile page, e.g. Name: Kate, Location: Canada"
+    },
+    "Are you sure you want to delete this magnificent creation": {
+        "message": "이 휼륭한 창조물을 삭제하시겠습니까? :(",
+        "description": "Warning on modal to delete app"
+    },
+    "The Internet fell asleep!": {
+        "message": "인터넷이 잠들어 버렸어요 (끊어졌어요)!",
+        "description": "Message on Discover view when device is online"
+    },
+    "noDataInfoSub": {
+        "message": "If you'd like to let users share data with you, try adding a Counter and a Submit button to your app.",
+        "description": "If you'd like to let users share data with you, try adding a Counter and a Submit button to your app."
+    },
+    "Title": {
+        "message": "제목",
+        "description": "Title label"
+    },
+    "Choosing this option will allow you to create your own app without a preset template.": {
+        "message": "이 옵션을 선택하면 미리 정해진 템플릿 없이 앱을 만들 수 있습니다",
+        "description": "description for template"
+    },
+    "Share App": {
+        "message": "어플 공유",
+        "description": "Text on publish footer"
+    },
+    "Done": {
+        "message": "완료",
+        "description": "Done button"
+    },
+    "You need to connect to the Internet.": {
+        "message": "인터넷에 접속해야 합니다",
+        "description": "Shows up below header when the app can't be published due to connection issues"
+    },
+    "This action cannot be undone": {
+        "message": "이 행동을 돌이킬 수 없습니다",
+        "description": "Footer in warning if user wants to delete their app"
+    },
+    "Delete": {
+        "message": "삭제",
+        "description": "Button for removing (deleting) a block or an app"
+    },
+    "Phone": {
+        "message": "전화",
+        "description": "Type of block - creates a button that calls a number"
+    },
+    "Initial Number": {
+        "message": "Initial Number",
+        "description": "Initial Number label"
+    },
+    "Share Via": {
+        "message": "공유",
+        "description": "Title for share view"
+    },
+    "SMS": {
+        "message": "SMS",
+        "description": "Acronym for text messaging"
+    },
+    "Gather information from your users by creating a survey.": {
+        "message": "설문지를 만들어서 당신의 고객들에게서 정보를 수집하세요.",
+        "description": "description for template"
+    },
+    "Create a Blog": {
+        "message": "블로그 만들기",
+        "description": "title for template"
+    },
+    "App Data": {
+        "message": "앱 데이터",
+        "description": "Form data submitted for my app"
+    },
+    "Source": {
+        "message": "소스",
+        "description": "Source of the image"
+    },
+    "Long Text": {
+        "message": "긴 텍스트",
+        "description": "Item in the select box"
+    },
+    "I am some text": {
+        "message": "저는 어떤 텍스트 입니다",
+        "description": "Value in the text area"
+    },
+    "share_message": {
+        "message": "모질라 웹메이커로 만든 저의 어플을 확인해 보세요",
+        "description": "Message that gets sent when a published app is shared to friends"
+    },
+    "Make and share the web": {
+        "message": "Make &amp; share the web",
+        "description": "sign-in view headline"
+    },
+    "Blogger": {
+        "message": "블로거",
+        "description": "Title for an app for bloggers"
+    },
+    "My {{template}} App": {
+        "message": "My {{template}} App",
+        "description": "Title for a newly created app from a template"
+    },
+    "Counter": {
+        "message": "Counter",
+        "description": "Button for create new block"
+    },
+    "Create a Survey": {
+        "message": "설문지 만들기",
+        "description": "title for template"
+    },
+    "Add to Homescreen": {
+        "message": "홈스크린에 추가하기",
+        "description": "Install message on publish footer"
+    },
+    "Button Color": {
+        "message": "버튼 색상",
+        "description": "Button Color label"
+    },
+    "name from location": {
+        "message": " <strong>{{name}}</strong><span v-if=\"location\"><br/> from <br/></span><strong>{{location}}</strong>",
+        "description": "E.g. Kate from Canada, sorry for all the html"
+    },
+    "Select all": {
+        "message": "모두 선택",
+        "description": "Select all"
+    },
+    "Tap the plus sign to begin adding content.": {
+        "message": "+ 를 눌러서 컨텐츠를 넣기 시작하세요",
+        "description": "Tap the plus sign to begin adding content."
+    },
+    "Add contacts": {
+        "message": "연락처 추가",
+        "description": "Title on share view to add contacts from device"
+    },
+    "Teacher": {
+        "message": "선생님",
+        "description": "Title for an app for teachers"
+    },
+    "Start from Scratch": {
+        "message": "처음부터 시작하기",
+        "description": "title for template"
+    },
+    "Remix App": {
+        "message": "리믹스 앱",
+        "description": "Option on detail view to remix an app"
+    },
+    "Offline Mode Explanation": {
+        "message": "This device isn't connected to the internet, so you won't be able to publish any apps.",
+        "description": "Explains effect of using the app without an internet connection"
+    },
+    "Message": {
+        "message": "메시지",
+        "description": "Message you want to send"
+    },
+    "Share photos and write articles and about your local community": {
+        "message": "당신의 지역 사회에 관한 사진들과 글을 공유하세요",
+        "description": "description for template"
+    },
+    "noContactsError": {
+        "message": "문자를 보낼 하나 이상의 연락처를 선택하세요.",
+        "description": "Error if user tries to send an SMS without choosing any contacts"
+    },
+    "Open App": {
+        "message": "오픈 앱",
+        "description": "Option to open/play an app you don't own"
+    },
+    "by _": {
+        "message": "{{name}} 만듬",
+        "description": "For apps, e.g. My Cool App, by {{name}}"
+    },
+    "Make an App": {
+        "message": "어플 만들기",
+        "description": "Button label for action to make a new app"
+    },
+    "Sign Out": {
+        "message": "로그아웃",
+        "description": "Button label for button that logs user out of Webmaker Mobile"
+    },
+    "Delete my Apps": {
+        "message": "내 어플들 삭제",
+        "description": "Button to delete all of a user's apps"
+    },
+    "App Name": {
+        "message": "앱 이름",
+        "description": "Label for app name field"
+    },
+    "Journalist": {
+        "message": "저널리스트",
+        "description": "Title for an app for journalists"
+    },
+    "Show in Discover Gallery": {
+        "message": "디스커버 갤러리에 전시하기",
+        "description": "Option to show app within the discover gallery"
+    },
+    "Text Value": {
+        "message": "Text Value",
+        "description": "Label for attribute of text block: the text value"
+    },
+    "My Apps": {
+        "message": "나의 앱들",
+        "description": "Mobile apps I have created"
+    },
+    "Tap the plus sign to add more content.": {
+        "message": "+ 를 계속 누르면 더 많은 컨텐츠를 넣을 수 있습니다",
+        "description": "Tap the plus sign to add more content."
+    },
+    "Cancel": {
+        "message": "취소",
+        "description": "Cancel button"
+    },
+    "Try in Offline Mode": {
+        "message": "오프라인 모드로 시도하기",
+        "description": "Label for action that allows a user to use the app without signing in when the device is not connected to the internet."
+    },
+    "Guest": {
+        "message": "손님",
+        "description": "Label for author when the user is in trial mode"
+    },
+    "Try as Guest": {
+        "message": "Try as Guest",
+        "description": "Label for action that allows a user to use the app without signing in."
+    },
+    "Text Box Type": {
+        "message": "텍스트 박스 종류",
+        "description": "Text Box Type label"
+    },
+    "No Apps Message": {
+        "message": "아직 앱이 없습니다",
+        "description": "Message that is displayed in the profile when current user has no apps"
+    },
+    "Data": {
+        "message": "데이터",
+        "description": "Look at the data collected by an app"
+    },
+    "errorNoText": {
+        "message": "텍스트 박스 안에 입력값을 넣어주세요",
+        "description": "No text in the textarea"
+    },
+    "Select Color": {
+        "message": "색상 선택",
+        "description": "Title for the color picker"
+    },
+    "Edit": {
+        "message": "편집",
+        "description": "Button for allowing user to edit the app"
+    },
+    "Phone #": {
+        "message": "전화번호",
+        "description": "Label for Phone # attribute on call/sms block"
+    },
+    "Link Text": {
+        "message": "Link Text",
+        "description": "Label for Link Text input"
+    },
+    "Save": {
+        "message": "저장",
+        "description": "Button label (save changes)"
+    },
+    "Create a Safety App": {
+        "message": "Create a Safety App",
+        "description": "title for template"
+    },
+    "Publish": {
+        "message": "출판",
+        "description": "Button label for publishing the current app"
+    },
+    "errorDefault": {
+        "message": "엇! 에러가 발생했습니다. <a href='/profile'>프로필</a>로 돌아가시겠습니까?",
+        "description": "Default error message for alert component"
+    },
+    "Button Text": {
+        "message": "버튼 텍스트",
+        "description": "Button Text label"
+    },
+    "Label": {
+        "message": "라벨",
+        "description": "The label on a button (for sms/calling)"
+    },
+    "Create a How To Guide": {
+        "message": "설명서 만들기",
+        "description": "title for template"
+    },
+    "Submit": {
+        "message": "확인",
+        "description": "Button for create new block"
+    },
+    "Have something to share with the world? Start a blog, customize to make it yours and start writing!": {
+        "message": "세계와 공유할 것이 있으세요? 블로그를 시작하고, 개성있게 꾸미고 쓰기 시작하세요!",
+        "description": "description for template"
+    },
+    "Edit my Profile": {
+        "message": "내 프로필 편집하기",
+        "description": "Button label for action to edit users profile"
+    },
+    "Font Size": {
+        "message": "서체 크기",
+        "description": "Font Size label"
+    },
+    "Make": {
+        "message": "만들기",
+        "description": "Label for all available make templates"
+    },
+    "Open my app": {
+        "message": "내 어플 열기",
+        "description": "Option on detail (as admin) view to open app"
+    },
+    "Place call": {
+        "message": "전화 걸기",
+        "description": "Button for placing a call"
+    },
+    "If you've got unique skills you'd like to share with others, try making a How To guide.": {
+        "message": "사람들과 당신의 특별한 스킬들을 나누고 싶다면 설명서를 한번 만들어 보세요",
+        "description": "description for template"
+    },
+    "Add a map, a emergency call button, and other tips to keep safe in your community": {
+        "message": "Add a map, a emergency call button, and other tips to keep safe in your community",
+        "description": "description for template"
+    },
+    "App": {
+        "message": "앱",
+        "description": "Title for app detail page"
+    },
+    "Make Your Own App": {
+        "message": "당신의 어플 만들기",
+        "description": "Title for app templates, starter projects/styles to create new apps"
+    },
+    "Text Box": {
+        "message": "텍스트 박스",
+        "description": "Type of block"
+    },
+    "App Name & Icon": {
+        "message": "어플 이름 & 아이콘",
+        "description": "Title within app editor for page where user can change the app name and icon"
+    },
+    "Make your own app at": {
+        "message": "Make your own app at",
+        "description": "Text on footer of publish view"
+    },
+    "Share": {
+        "message": "굥유",
+        "description": "Share an app"
+    },
+    "Promote your Business": {
+        "message": "Promote your Business",
+        "description": "title for template"
+    },
+    "Show off your products and give customers an easy way to reach you.": {
+        "message": "Show off your products and give customers an easy way to reach you.",
+        "description": "description for template"
+    },
+    "same as minimum number": {
+        "message": "same as minimum number",
+        "description": "place holder for Initial number field"
+    },
+    "Text": {
+        "message": "텍스트",
+        "description": "Type of block that can be added to the app"
+    },
+    "Link": {
+        "message": "링크",
+        "description": "Link label"
+    },
+    "From Scratch": {
+        "message": "처음부터",
+        "description": "Title for a blank app template. 'From Scratch' is an idiom that describes making something from the beginning with basic ingredients."
+    },
+    "error404": {
+        "message": "죄송합니다, 이 페이지를 찾지 못했습니다. <a href='/sign-in'>로그인</a> 페이지로 돌아가시겠습니까?",
+        "description": "Error message for 404"
+    },
+    "toucanspeak": {
+        "message": "우선 텍스트를 넣어서 시작해 봅시다",
+        "description": "Let's start by adding some text."
+    },
+    "Made with Mozilla Webmaker": {
+        "message": "모질라 웹메이커로 만듬",
+        "description": "Text to toggle footer on publish view"
+    },
+    "Menu": {
+        "message": "메뉴",
+        "description": "Title on slide-out menu"
+    },
+    "Color": {
+        "message": "색상",
+        "description": "Color label"
+    },
+    "How To": {
+        "message": "How To",
+        "description": "Title for a how-to app"
+    },
+    "Title Text Color": {
+        "message": "제목 텍스트 색상",
+        "description": "Title Text Color label"
+    }
+}

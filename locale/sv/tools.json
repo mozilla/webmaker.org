@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "ett personligt hälsningskort",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "en alternativ version av en kontroversiell hemsida ",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "en animerad gif med ljud ",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "Thimble gör det väldigt enkelt att skapa och dela dina egna webbsidor. Du kan skriva och redigera HTML och CSS rätt i din webbläsare, och sen direkt förhandsvisa det du skapat. Du kan sen dela ditt färdiga projekt med bara ett klick. Perfekt för både nybörjare och experter.",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "Se hur webben fungerar",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "Turboladda webbvideo",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "en rolig remix av din bästa väns favorit webbplats",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "Skapa och remixa på webben med gratis WebMaker verktyg.",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "Du kan bygga:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker hjälper dig att enkelt remix webb-video, ljud och bilder i coola mashups som du kan bädda in på andra webbplatser. Dra och släpp innehåll från webben, sedan lägga till egna kommentarer och länkar -allt i din webbläsare. Popcorn Maker videor är dynamiska, fulla av länkar och unika med varje vy.",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "en online affisch för din favoritfilm",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "ett jätteroligt meme",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "Webbskapande gjort enkelt",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "Börja från grunden",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "Prova Röntgen-Glasögonen nu",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "Röntgen-glasögon",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "en dokumentär med dynamiska länkar",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "Röntgen-glasögon gör så att du kan se de byggnadsstenar som webbplatser på internet består av. Aktivera glasögonen för att inspektera koden bakom en webbsida, och remixa sedan de olika delarna med ett enkelt klick, byt in din egen text, bilder och så vidare.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "och mer!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "Remixa ett projekt",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "ett videoklipp för att introducera dig själv till världen",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "en speciell hemsida för the New York Times",
+        "description": ""
+    }
+}

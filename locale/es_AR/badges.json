@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "Fecha",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Comentario",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Elige una insignia para emitirla y ver usuarios que la hayan recibido",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "Aplicación",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Update a Badge",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Insignia de administracion",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "Correo electrónico",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Create a Badge",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Agregá un comentario",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Emitir nueva insignia(s)",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Revocar",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Correos (uno por línea, o separado por coma)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "Дата",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "Комментарий",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": "Выберите бейдж для публикации. Вы будете видеть пользователей, которые его приняли.",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "Приложение",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": "Обновить бейдж",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "Администратор бэйджей",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "Эл. почта",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": "Создать бейдж",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "Добавить комментарий",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "Опубликовать новые бейджи",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "Отменить",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "Адреса электронной почты (каждый на отдельной строке или разделённые запятыми)",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

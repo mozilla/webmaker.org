@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Link rapidi:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Primi passi con Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Stato Lavagna:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Se non vedi il campo Whiteboard, assicurati che le opzioni avanzate siano visibili.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Invia Feedback",
+        "description": "Feedback"
+    }
+}

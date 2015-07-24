@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "Vielekezi vya haraka:",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Kuianza Bugzilla",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "Ubao-mweupe wa hali:",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "Ukikosa kuiona sehemu ya ubao-mweupe, hakikisha chaguzi zako za kiwango cha juu zinaonekana.",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "Maoni",
+        "description": "Feedback"
+    }
+}

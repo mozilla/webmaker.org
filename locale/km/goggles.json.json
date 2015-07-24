@@ -1,0 +1,62 @@
+{
+    "gogglesHelp1": {
+        "message": "In HTML, the <img> tag identifies an image with src=\"file_name\".",
+        "description": "Goggles help text, first part"
+    },
+    "gogglesSetup3": {
+        "message": "and get the power to view and edit the code behind any website.",
+        "description": "Goggles setup text, last part"
+    },
+    "X-ray Goggles": {
+        "message": "X-Ray ហ្គោហ្គល",
+        "description": "Goggles button text on install page"
+    },
+    "source": {
+        "message": "ធនធាន",
+        "description": "Second goggles instruction, term"
+    },
+    "gogglesSetup1": {
+        "message": "Install the",
+        "description": "Goggles setup text, first part"
+    },
+    "gogglesSetup2": {
+        "message": "X-Ray ហ្គោហ្គល",
+        "description": "Goggles help text, install link"
+    },
+    "Drag to Bookmarks bar": {
+        "message": "Drag to Bookmarks bar",
+        "description": "Help text for goggles button on install page"
+    },
+    "help": {
+        "message": "ជំនួយ",
+        "description": "Help link"
+    },
+    "from shapes.jpg to blur.jpg": {
+        "message": "from shapes.jpg to blur.jpg",
+        "description": "Second goggles instruction, last part"
+    },
+    "Remix this page": {
+        "message": "បញ្ចូលទំព័រនេះ",
+        "description": "CTA header"
+    },
+    "Activate X-ray Goggles": {
+        "message": "ដំណើរការ X-Ray ហ្គោហ្គល",
+        "description": "Goggles activation button"
+    },
+    "gogglesHelp2": {
+        "message": "Change <img src=\"/shapes.jpg\"> to <img src=\"/blur.jpg\">",
+        "description": "Goggles help text, second part"
+    },
+    "Change the image’s": {
+        "message": "ផ្លាស់ប្ដូររូបភាពរបស់អ្នក",
+        "description": "Second goggles instruction, first part"
+    },
+    "Click the background image": {
+        "message": "ចុចទៅលើផ្ទៃខាងក្រោយ​រូបភាព",
+        "description": "First goggles instruction"
+    },
+    "Set up X-ray Goggles": {
+        "message": "តំឡើង X-Ray ហ្គោហ្គល",
+        "description": "Install page title"
+    }
+}

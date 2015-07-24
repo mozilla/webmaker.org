@@ -1,0 +1,22 @@
+{
+    "Quick links:": {
+        "message": "快捷链接：",
+        "description": "Quick links:"
+    },
+    "Getting Started with Bugzilla": {
+        "message": "Bugzilla 入门指南",
+        "description": "Getting Started with Bugzilla"
+    },
+    "Status Whiteboard:": {
+        "message": "白皮书状态：",
+        "description": "Status Whiteboard:"
+    },
+    "If you don’t see the Whiteboard field": {
+        "message": "如果您看不到白板区，请确认高级选项已显示。",
+        "description": "If you don’t see the Whiteboard field, make sure the advanced options are showing."
+    },
+    "Feedback": {
+        "message": "反馈",
+        "description": "Feedback"
+    }
+}

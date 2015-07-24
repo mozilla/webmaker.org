@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "Отримати WebMaker Beta",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "Sweet! A text message has been sent to your phone.",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "Webmaker takes the best part of the web — creating — and strips away the complexity.",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "\nВведіть свій номер телефону, щоб отримати посилання для скачування:",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "Make sure you've entered a valid phone number.",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "Text messages are sent to your phone via a company called Twilio. This information will be stored for no more than 30 days, and will not be used for any other purposes. For more information, see <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\">Twilio's privacy policy</a>.",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "Become a Maker",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "Uh oh! We're having trouble sending you the install link, try reloading the page and submitting your number again.",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "Збудуйте ідеальний додаток",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "Надіслати",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "Доступно для FirefoxOS 2.1+ та Android 4.4+",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "Create exactly what you need: a website for your business, a chat app for your friends, or a lesson plan for your students.",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "\nВстановити додаток Mozilla WebMaker за цим посиланням: http://mzl.la/installwm",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "Завантажити WebMaker Beta",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "Webmaker creations are meant to be seen, heard and used. Share your project with friends and colleagues.",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "Поділитеся цим з світом",
+        "description": "Header describing how apps can be shared"
+    }
+}

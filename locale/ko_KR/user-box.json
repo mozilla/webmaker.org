@@ -1,0 +1,30 @@
+{
+    "My Profile": {
+        "message": "내 프로필",
+        "description": "My Profile"
+    },
+    "admin": {
+        "message": "관리자",
+        "description": "admin"
+    },
+    "My Settings": {
+        "message": "내 설정",
+        "description": "My Settings"
+    },
+    "My Events": {
+        "message": "나의 이벤트",
+        "description": "My Events"
+    },
+    "supermentor": {
+        "message": "뛰어난 멘토",
+        "description": "supermentor"
+    },
+    "Sign out": {
+        "message": "로그아웃",
+        "description": "Sign out"
+    },
+    "My makes": {
+        "message": "내 작품",
+        "description": "My makes"
+    }
+}

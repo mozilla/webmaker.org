@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "取得 Webmaker 試用版",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "太棒了！已將簡訊傳送給您。",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "Webmaker 讓您輕鬆享受整個網路世界最棒的部份 -- 創造。",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "輸入你的電話號碼以取得下載連結:",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "請確定您輸入了有效的手機號碼。",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "短訊將透過Twilio公司發送到你的手機。這則訊息只會存在30天，並且不會用在其他用途。如需更多資訊請見 <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\">Twilio的隱私政策</a>。",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "成為自造者",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "呃，傳送安裝連結給您時發生問題，請試著重新載入頁面並再次輸入您的號碼。",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "建立完美的 App",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "傳送",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "可用於 Firefox OS 2.1+ 與 Android 4.4+ 版本",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "建立完全符合您所需的東西: 您的商務網站、讓您跟朋友聊天的應用程式，或是給學生的課程大綱。",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "到此連結安裝 Mozilla Webmaker App：http://mzl.la/installwm",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "下載 Webmaker 試用版",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "Webmaker 就是要讓其他人都能看到、聽到、用到的。請與朋友和同事分享您的專案。",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "與全世界分享",
+        "description": "Header describing how apps can be shared"
+    }
+}

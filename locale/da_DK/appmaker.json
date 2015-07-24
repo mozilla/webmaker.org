@@ -1,0 +1,130 @@
+{
+    "See more": {
+        "message": "Vis flere",
+        "description": "Button on Appmaker landing page to reveal more starter apps"
+    },
+    "business": {
+        "message": "forretning",
+        "description": "'business' to complete the carousel sentence on Appmaker landing page"
+    },
+    "Discover Appmaker": {
+        "message": "Opdag Appmaker",
+        "description": "Title for Appmaker landing page"
+    },
+    "Imagine": {
+        "message": "Forestil dig",
+        "description": "'Imagine' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App": {
+        "message": "Fyrværkeri-app",
+        "description": "Appmaker Fireworks app title"
+    },
+    "Appmaker Description": {
+        "message": "Appmaker er et gratis værktøj, du kan bruge til at lave personlige mobil-apps - selv hvis du ikke kan finde ud af at skrive kode! Lav din helt egen app og del den med andre, direkte i din browser.",
+        "description": "A short explanation for what Appmaker is"
+    },
+    "Appmaker Desc": {
+        "message": "Lav apps til din telefon.",
+        "description": "A very short explanation for what Appmaker is"
+    },
+    "Mobile apps made easy": {
+        "message": "Mobil-apps på den lette måde",
+        "description": "A pithy phrase about Appmaker"
+    },
+    "a music-making app": {
+        "message": "en app til at lave musik",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Chat App": {
+        "message": "Chat-app",
+        "description": "Appmaker Chat app title"
+    },
+    "an app to chat with your friends": {
+        "message": "en app, til at chatte med dine venner",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "Dont know where to start?": {
+        "message": "Er du på udkig efter en nem måde at komme i gang? Remix en af disse skabeloner og lav din helt egen app.",
+        "description": "Catch the imagination of users at the top of the page."
+    },
+    "google+": {
+        "message": "google+",
+        "description": "google+ text"
+    },
+    "Appmaker": {
+        "message": "Appmaker",
+        "description": "Appmaker title!"
+    },
+    "Music App Description": {
+        "message": "Brug instrumenter og en sequencer til at bygge en app, der laver støj.",
+        "description": "Appmaker Music app description"
+    },
+    "Contribute": {
+        "message": "Vær med til at bidrage",
+        "description": "'Contribute' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Learn more": {
+        "message": "Lær mere",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Make an app for your...": {
+        "message": "Lav en app til din <span id=\"app-audience\" data-show=\"{{showAudienceTitle}}\">{{ audiences[currentSlideIndex].title | i18n }}</span>",
+        "description": "The beginning part of the carousel phrase on the Appmaker landing page"
+    },
+    "Imagine Description": {
+        "message": "Vær med til at styrke en generation af nye smartphone-brugere og hjælp dem til at skabe og distribuere mobil-indhold med lokal relevans.",
+        "description": "'Imagine' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Teach Description": {
+        "message": "Vil du vise andre, hvordan man laver mobil-apps? Vil du have folk til at tænke på mobilt design? Se vores undervisningsmateriale!",
+        "description": "'Teach' blurb content at the bottom of the Appmaker landing page"
+    },
+    "students": {
+        "message": "elever",
+        "description": "'student' to complete the carousel sentence on Appmaker landing page"
+    },
+    "See how": {
+        "message": "Se hvordan",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Fireworks App Description": {
+        "message": "Fejr at du har opnået noget eller lav lidt larm ved at fyre fyrværkeri af!",
+        "description": "Appmaker Fireworks app description"
+    },
+    "Pick a template": {
+        "message": "Vælg en skabelon",
+        "description": "CTA for users to pick a template Appmaker app"
+    },
+    "Teach": {
+        "message": "Undervis",
+        "description": "'Teach' blurb title at the bottom of the Appmaker landing page"
+    },
+    "Chat App Description": {
+        "message": "Del beskeder med dine venner i dette gør-det-selv chatrum.",
+        "description": "Appmaker Chat app description"
+    },
+    "Let us know what you think": {
+        "message": "Kan du lide Appmaker? Har du spørgsmål? Vil du være med? Vil du vide mere?",
+        "description": "Footer message on Appmaker landing page"
+    },
+    "Get started": {
+        "message": "Kom i gang",
+        "description": "CTA button at the bottom of the Appmaker landing page"
+    },
+    "Contribute Description": {
+        "message": "Hjælp os med at gøre Appmaker til noget stort ved at bidrage til projektet med din tid og ekspertise.",
+        "description": "'Contribute' blurb content at the bottom of the Appmaker landing page"
+    },
+    "Music App": {
+        "message": "Musik-app",
+        "description": "Appmaker Music app title"
+    },
+    "a personal goal tracker": {
+        "message": "en app til at holde styr på dine personlige mål",
+        "description": "Appmaker app suggestions on tools page"
+    },
+    "friends": {
+        "message": "venner",
+        "description": "'friends' to complete the carousel sentence on Appmaker landing page"
+    }
+}

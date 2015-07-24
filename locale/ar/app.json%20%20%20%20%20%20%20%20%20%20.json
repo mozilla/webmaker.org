@@ -1,0 +1,66 @@
+{
+    "Get App": {
+        "message": "احصل على Webmaker Beta",
+        "description": "Action text for triggering the SMS backed get download link tool"
+    },
+    "message sent": {
+        "message": "جميل! تم إرسال رسالة نصية إلى هاتفك.",
+        "description": "Success text displayed after submitting a phone number"
+    },
+    "Strips away complexity": {
+        "message": "مصنع الويب يأخذ أفضل جزء من شبكة الإنترنت - الأنشاء - بعيدا عن التعقيد.",
+        "description": "Explanation about how Webmaker makes creating on the we less complex for Makers"
+    },
+    "Enter your phone number": {
+        "message": "أدخل رقم الهاتف الخاص بك للحصول على رابط التحميل",
+        "description": "Label text for the phone number input"
+    },
+    "phone format error": {
+        "message": "تأكد من أنك قد أدخلت رقم هاتف صحيح.",
+        "description": "Error text displayed if phone number is invalid"
+    },
+    "sms privacy message": {
+        "message": "تم إرسال رسائل نصية إلى هاتفك عن طريق شركة تدعى Twilio. وسيتم تخزين هذه المعلومات لمدة لا تتجاوز 30 يوما، ولن يتم استخدامها لأي أغراض أخرى. لمزيد من المعلومات، انظر سياسة الخصوصية </a> <a href=\"https://www.twilio.com/legal/privacy\" target=\"_blank\"> لTwilio ل.",
+        "description": "Warning message about Mozilla and Twilio's privacy policies"
+    },
+    "Become a Maker": {
+        "message": "أصبح مصنع للويب",
+        "description": "Call to action to become a Maker using Webmaker's app"
+    },
+    "message sent error": {
+        "message": "للأسف! نحن نواجه مشكلة في أرسل رابط التثبيت أليك، حاول إعادة تحميل الصفحة و أضافةرقم الهاتف من جديد.",
+        "description": "Error text displayed if submitting a phone number fails"
+    },
+    "Build the Perfect App": {
+        "message": "بناء التطبيق المثالي",
+        "description": "Header describing what Webmaker's app can be used for - building your own apps"
+    },
+    "Send Text": {
+        "message": "إرسال",
+        "description": "Label text for the phone number input"
+    },
+    "Available for": {
+        "message": "متاح لـ FirefoxOS 2.1+ و  Android 4.4+",
+        "description": "The platforms and versions that Webmaker can be installed on"
+    },
+    "Exactly what you need": {
+        "message": "أوجد ما تريد تماماً: موقع الكتروني لعملك، تطبيق دردشة لأصدقائك، او خطة دراسة لطلابك.",
+        "description": "A description about what kind of apps you can make"
+    },
+    "install webmaker sms text": {
+        "message": "لتثبيت تطبيق صانع الويب الخاص بموزيلا اتباع الرابط التالي: http://mzl.la/installwm",
+        "description": "Text message text used when requesting a Mozilla Webmaker app installation link"
+    },
+    "Download Webmaker": {
+        "message": "تنزيل صانع الويب بيتا",
+        "description": "Action text for Downloading the Webmaker app"
+    },
+    "Meant to be seen": {
+        "message": "ابداعات ال Webmaker وًجدت لتكون مرئية، مسموعة ومًستعلمة. شارك مشروعك مع الاصدقاء والزملاء.",
+        "description": "A description about the sharing capabilities of Webmaker"
+    },
+    "Share It with the World": {
+        "message": "شاركة مع العالم",
+        "description": "Header describing how apps can be shared"
+    }
+}

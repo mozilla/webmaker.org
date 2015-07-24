@@ -1,0 +1,162 @@
+{
+    "Webmaker is available in over 20 languages": {
+        "message": "Webmaker inapatikana kwa lugha zaidi ya 20 na inaungwa mkono na jamii ya waelekezi wanaojitolea na walio na uhodari wa mambo ya kidigitali. Itapatikana kwa android, Firefox OS, na vivinjari vya kisasa baadaye mwaka huu.",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Quote 3 Quote": {
+        "message": "Mozilla haijishughulishi tu na watu walio katika nchi zilizo chini kimaendeleo kukosa mambo yaliyo ya kinyumbani pekee. Inafanya kitu kuihusu shida hii.",
+        "description": "Quote #3"
+    },
+    "Mozilla Rwanda": {
+        "message": "Mozilla Rwanda",
+        "description": "Mozilla Rwanda"
+    },
+    "Enabling Digital Creativity": {
+        "message": "Inawezesha Ubunifu wa Kidijitali",
+        "description": "Headline of Enabling Digital Creativity section on /localweb"
+    },
+    "MOI splash page metadata title": {
+        "message": "Webmaker: Inaunda mtandao wenye maana kwa wenyeji.",
+        "description": "MOI splash page metadata title"
+    },
+    "Mozilla Indonesia": {
+        "message": "Mozilla Indonesia",
+        "description": "Mozilla Indonesia"
+    },
+    "Quote 3 Author": {
+        "message": "Mark Sullivan",
+        "description": "Quote #3 Author"
+    },
+    "Quote 2 Author": {
+        "message": "David Meyer",
+        "description": "Quote #2 Author"
+    },
+    "The Opportunity: A Locally Relevant Web": {
+        "message": "Fursa: Mtandao Muhimu kwa Wenyeji",
+        "description": "Headline of The Opportunity: A Locally Relevant Web on /localweb"
+    },
+    "Let’s ensure the next generation of web users": {
+        "message": "Hebu tuhakikishe kizazi kijacho cha watumiaji wa mtandao kina ujuzi wa kujenga mtandao.<b>Sisi ni harakati ya kimataifa na tuna wahanga wanaojitolea katika nchi zaidi ya 30</ b>. Kama wewe ni opereta wa simu au Shirika Lisilo La Kiserikali,<a href=\"https://stuff.webmaker.org/mobile_webmaker_partners.pdf\" id=\"mobile-webmaker-partners-link\">shirikiana nasi</a>kutoa mafunzo na ujuzi wa kijidigitali kwa watumiaji wako wengi.",
+        "description": "Subhead of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Colombia": {
+        "message": "Mozilla Colombia",
+        "description": "Mozilla Colombia"
+    },
+    "Mozilla is building Webmaker": {
+        "message": "Mozilla inajenga Webmaker, programu ya bure na wazi ya kutengeneza maudhui ya simu.",
+        "description": "Subhead of Enabling Digital Creativity section on /localweb"
+    },
+    "Webmaker Kenya research report": {
+        "message": "Ripoti ya awali ya utafiti wa Webmaker ya Kenya",
+        "description": "Link text to Webmaker Kenya research report"
+    },
+    "Mozilla Nigeria": {
+        "message": "Mozilla Nigeria",
+        "description": "Mozilla Nigeria"
+    },
+    "Mozilla Kenya": {
+        "message": "Mozilla Kenya",
+        "description": "Mozilla Kenya"
+    },
+    "Mozilla Philippines": {
+        "message": "Mozilla Ufilipino",
+        "description": "Mozilla Philippines"
+    },
+    "Partner with us": {
+        "message": "Shirikiana nasi",
+        "description": "Partner with us button text"
+    },
+    "Quote 1 Author": {
+        "message": "Abhimanyu Ghoshal",
+        "description": "Quote #1 Author"
+    },
+    "Webmaker India research report": {
+        "message": "Ripoti ya awali ya utafiti wa Webmaker ya India",
+        "description": "Link text to Webmaker India research report"
+    },
+    "Understanding Users": {
+        "message": "Kuelewa watumiaji",
+        "description": "Headline of Understanding Users section on /localweb"
+    },
+    "Quote 2 Quote": {
+        "message": "Mozilla na watoaji huduma za simu wanataka kuufanya mtandao uwe wa kimataifa zaidi na wenye tofauti nyingi",
+        "description": "Quote #2"
+    },
+    "Mozilla is leading a research program": {
+        "message": "Mozilla inaongoza mpango wa utafiti ambao unalenga kujua kuhusu teknolojia na kubuni mbinu ili kuwezesha ushiriki mkubwa katika maisha ya kidijitali katika simu na kuendesha ubunifu mitaani.",
+        "description": "Subhead of Understanding Users section on /localweb"
+    },
+    "Partners": {
+        "message": "Washirika",
+        "description": "Headline of Partners section on /localweb"
+    },
+    "Empowering the next billion citizens of the web": {
+        "message": "Inawapa uwezo watu bilioni moja wanaotumia mtandao",
+        "description": "Big headline on /localweb"
+    },
+    "Mozilla is working to ensure": {
+        "message": "Mozilla inafanya kazi ili kuhakikisha kwamba watu bilioni wafuatao kuingia mtandaoni kwa mara ya kwanza kupitia simu nyerevu zao watagundua Mtandao ambao ni wazi, unaopatikana kwa urahisi na unaokaribisha ubunifu.",
+        "description": "This is a description to the value string"
+    },
+    "In 2014 and 2015, we conducted on-the-ground studies in Bangladesh, India and Kenya.": {
+        "message": "Katika mwaka wa 2014 na 2015, tulifanya utafiti kwa mahojiano huko Bangladesh, India na Kenya.",
+        "description": "Subhead of the research report subsection on /localweb"
+    },
+    "MOI splash page metadata description": {
+        "message": "Webmaker inasaidia watumiaji kutambua uwezo kamili wa mtandao kwa kutoa utata wa jadi wa kuunda maudhui na inawapa uwezo na ujuzi wa kujenga mtandao wenye maana kwa wenyeji.",
+        "description": "MOI splash page metadata description"
+    },
+    "A Locally Relevant Web: Early Research & Recommendations": {
+        "message": "Mtandao wenye maana kwa wenyeji: Utafiti wa Awali & Mapendekezo",
+        "description": "Headline of the research report subsection on /localweb"
+    },
+    "Get in touch": {
+        "message": "Wasiliana nasi",
+        "description": "Get in touch button text"
+    },
+    "Mozilla India": {
+        "message": "Mozilla India",
+        "description": "Mozilla India"
+    },
+    "Try the open beta": {
+        "message": "Jaribu beta",
+        "description": "Try the open beta button text"
+    },
+    "Mozilla Bangladesh": {
+        "message": "Mozilla Bangladesh",
+        "description": "Mozilla Bangladesh"
+    },
+    "Quote 1 Quote": {
+        "message": "Mozilla na GSMA zinaungana kuuleta mtandao wa kuvinjari wa simu na vyombo vya uumbaji kwa watu billioni 4 watakaofuata.",
+        "description": "Quote #1"
+    },
+    "Mozilla is proud to partner": {
+        "message": "Mozilla inajivunia kuhusika na watoaji huduma za simu hawa, waalimu, mashirika ya undelezaji ya kitaifa, na mashirika yasiyo ya kiserikali yanayovutiwa na kuziumba vizuri siku zijazo za mtandao.",
+        "description": "Subhead of Partners section on /localweb"
+    },
+    "Webmaker mobile for development blog": {
+        "message": "Webmaker ya rununu ya blogu ya waendelezaji",
+        "description": "Link text to Webmaker mobile for development blog"
+    },
+    "Webmaker Bangladesh research report": {
+        "message": "Ripoti ya awali ya utafiti wa Webmaker ya Bangladesh",
+        "description": "Link text to Webmaker Bangladesh research report"
+    },
+    "Webmaker helps smartphone users": {
+        "message": "Webmaker inawasaidia watumiaji wa simu nyerevu kukua waumbaji wanaoboresha maisha na jamii zao kwa kuzitengeneza programu tumizi nyepesi kwa mambo kama kupandisha biashara ndogo cheo, kusambaza habari za jamii, au kutengeneza mipangilo ya madarasa ya wanafunzi.",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Mozilla Brazil": {
+        "message": "Mozilla Brazil",
+        "description": "Mozilla Brazil"
+    },
+    "Partner with Mozilla": {
+        "message": "Shirikiana na Mozilla",
+        "description": "Headline of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Cambodia": {
+        "message": "Mozilla Cambodia",
+        "description": "Mozilla Cambodia"
+    }
+}

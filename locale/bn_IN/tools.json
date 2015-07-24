@@ -1,0 +1,90 @@
+{
+    "a personalized greeting card": {
+        "message": "একটি ব্যক্তিগত অভিবাদন কার্ড",
+        "description": "a personalized greeting card"
+    },
+    "an alternate version of a controversial webpage": {
+        "message": "একটি বিতর্কিত ওয়েবপেজের একটি বিকল্প সংস্করণ",
+        "description": "an alternate version of a controversial webpage"
+    },
+    "an animated gif with sound": {
+        "message": "একটি শব্দ সহ gif এনিমেশন",
+        "description": "an animated gif with sound"
+    },
+    "toolsThimbleDesc": {
+        "message": "থিম্বল আপনার ওয়েবসাইট তৈরী ও বিতরণ আশ্চর্যরকম সহজ করেছে। আপনার ব্রাউজার এ HTML ও CSS কোড লিখুন ও সম্পাদনা করুন, তারপর পরক্ষনেই আপনার কাজ প্রাকদর্শন করুন।  আপনার সম্পুর্ন প্রকল্পগুলো একটি ক্লিকের মাধ্যমেই হোস্ট এবং বিতরণ করুন। অনভিজ্ঞ এবং অভিজ্ঞদের জন্য অত্যন্ত উপকারী।",
+        "description": "Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike."
+    },
+    "X-Ray Desc": {
+        "message": "ওয়েব কিভাবে কাজ করে দেখুন",
+        "description": "See how the web works"
+    },
+    "Supercharge web video": {
+        "message": "ওয়েব ভিডিও সুপারচার্জ করুন",
+        "description": "Supercharge web video"
+    },
+    "_a funny remix of your best_": {
+        "message": "আপনার সেরা বন্ধুর প্রিয় সাইটের একটি মজার রিমিক্স",
+        "description": ""
+    },
+    "toolsHeader": {
+        "message": "বিনামূল্যের Webmaker সরঞ্জামসমূহের সাহায্যে ওয়েবকে নিজের মতো তৈরি করুন এবং রিমিক্স করুন।",
+        "description": "Create and remix the web with free Webmaker tools."
+    },
+    "You can build:": {
+        "message": "আপনি তৈরী করত পারবেন:",
+        "description": "You can build:"
+    },
+    "toolsPMDesc": {
+        "message": "Popcorn Maker আপনাকে সহজেই ওয়েব ভিডিও, অডিও এবং ছবি সমুহকে একসাথে আকর্ষণীয়ভাবে ম্যাসআপ করতে সাহাজ্তেয্য করবে যাতে তা আপনি আপনার ওয়েবসাইটে ব্যাবহার করতে পারেন।ওয়েব থেকে যেকোনো জিনিষ টেনে এনে ফেলতে পারবেন, তারপর নিজের মতামত বা লিঙ্ক গুলো যোগ করতে পারবেন-আর এসবই করতে পারবেন আপনার ব্রাউজারে। Popcorn Maker এর ভিডিও গুলো পরিবর্তনশীল, লিঙ্ক পূর্ণ এবং প্রত্যেক ভিউ অনন্য।",
+        "description": "Popcorn Maker helps you easily remix web video, audio and images into cool mashups that you can embed on other websites. Drag and drop content from the web, then add your own comments and links —all within your browser. Popcorn Maker videos are dynamic, full of links and unique with every view."
+    },
+    "an online poster for your favorite movie": {
+        "message": "করা আপনার প্রিয় চলচ্চিত্রের জন্য একটি অনলাইন পোস্টার",
+        "description": "an online poster for your favorite movie"
+    },
+    "a hilarious meme": {
+        "message": "একটি হাস্যোদ্দীপক মীম ",
+        "description": "a hilarious meme"
+    },
+    "Webmaking made easy": {
+        "message": "ওয়েবমেকার সহজ করেছে",
+        "description": "Webmaking made easy"
+    },
+    "Start from scratch": {
+        "message": "প্রথম ধাপ থেকে শুরু করুন",
+        "description": "Start from scratch"
+    },
+    "Try the Goggles": {
+        "message": "এখনই গগল্স্ ব্যবহার করে দেখুন",
+        "description": "Try the Goggles now"
+    },
+    "X-Ray Goggles": {
+        "message": "এক্স-রে গগলস",
+        "description": "X-Ray Goggles"
+    },
+    "a documentary with dynamic links": {
+        "message": "ডায়নামিক লিংকের মাধ্যমে একটি প্রামাণ্যচিত্র",
+        "description": ""
+    },
+    "toolsXrayDesc": {
+        "message": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more.",
+        "description": "X-Ray Goggles allow you to see the building blocks that make up websites on the internet. Activate the goggles to inspect the code behind any webpage, then remix elements with a single click, swapping in your own text, images and more."
+    },
+    "and more!": {
+        "message": "এবং আরও অনেক!",
+        "description": "and more!"
+    },
+    "Remix a make": {
+        "message": "একটি তৈরী রিমিক্স করুন",
+        "description": "Remix a make"
+    },
+    "vdo-profile": {
+        "message": "বিশ্বের দরবারে  নিজেকে পরিচয় করিয়ে দিতে একটি ভিডিও প্রফাইল",
+        "description": "a video profile to introduce yourself to the world"
+    },
+    "a custom homepage for the New York Times": {
+        "message": "নিউ ইয়র্ক টাইমস জন্য একটি স্বনির্ধারিত হোমপেজ",
+        "description": ""
+    }
+}

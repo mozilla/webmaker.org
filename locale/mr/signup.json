@@ -1,0 +1,50 @@
+{
+    "signup-list-5": {
+        "message": "जतन करा आणि Webmaker tools सह प्रकाशित करा  <<span class=\"green-text\" > एक Webmaker खाते आवश्यक</ span>",
+        "description": "Save and publish with Webmaker tools <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-1": {
+        "message": "Webmaker ऑनलाइन <a href=\"/{{lang}}/tools\"> साधने आपल्या स्वत: च्या सामग्री तयार करण्यासाठी </a> वापरा",
+        "description": "Use Webmaker's online <a href=\"/{{lang}}/tools\">tools</a> to create your own content"
+    },
+    "signup_intro": {
+        "message": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make.",
+        "description": "<span class=\"highlight-text\">Webmaker is free forever,</span> so you can use the tools, events and teaching resources at no cost, wherever you are, whatever your skill-level. Just sign up for an account to save and publish the things you make."
+    },
+    "signup-list-2": {
+        "message": "शोधा आणि उपस्थित राहा<a href=\"/{{lang}}/events\">कार्यक्रमांना</a>आप  आपल्य़ा जवळील",
+        "description": "Find and attend <a href=\"/{{lang}}/events\">events</a> near you"
+    },
+    "signup-list-4": {
+        "message": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>",
+        "description": "Earn <a href=\"/{{lang}}/badges/webmaker-super-mentor\">badges</a> for your web literacy skills <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "signup-list-intro": {
+        "message": "Webmaker तुम्हाला काय ऑफर करीत आहे ?",
+        "description": "What does Webmaker offer you?"
+    },
+    "signup-list-3": {
+        "message": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates",
+        "description": "Use Webmaker-vetted teaching <a href=\"/{{lang}}/resources\">resources</a> and templates"
+    },
+    "signup-list-7": {
+        "message": "आपले प्रोफाइल तयार करा आणि आपल्या स्वत: च्या सानुकूल URL करा <span class = \"green-text\" > एक Webmaker खाते आवश्यक </ span>",
+        "description": "Create your profile and get your own custom URL <span class=\"green-text\">Needs a Webmaker account</span>"
+    },
+    "Create an account": {
+        "message": "webmaker मधे सामिल व्हा.",
+        "description": "Join Webmaker"
+    },
+    "Log in": {
+        "message": "लॉग-इन",
+        "description": "Log in"
+    },
+    "Sign up for Webmaker": {
+        "message": "Webmaker साठी साइन अप करा",
+        "description": "Sign up for Webmaker"
+    },
+    "signup-list-6": {
+        "message": " एक कार्यक्रम तयार करा आणि प्रकाशित करा  <span class = \"green-text \"> एक Webmaker खाते आवश्यक</ span>",
+        "description": "Create and publish an event <span class=\"green-text\">Needs a Webmaker account</span>"
+    }
+}

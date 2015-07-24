@@ -1,0 +1,50 @@
+{
+    "Date": {
+        "message": "तारीख",
+        "description": "Date"
+    },
+    "Comment": {
+        "message": "टिप्पणी",
+        "description": "Comment"
+    },
+    "ChooseABadge": {
+        "message": " बॅज प्रप्तआणि ते प्राप्त वापरकर्ते पाहण्यासाठी एक बॅज निवडा .",
+        "description": "Choose a badge to issue it and see users who have received it."
+    },
+    "Application": {
+        "message": "अनुप्रयोग",
+        "description": "Application"
+    },
+    "Update a Badge": {
+        "message": " बॅज अद्यतनित करा.",
+        "description": "Update a Badge"
+    },
+    "Badges Admin": {
+        "message": "बॅज प्रशासक",
+        "description": "Badges Admin"
+    },
+    "Email": {
+        "message": "इमेल",
+        "description": "Email"
+    },
+    "Create a Badge": {
+        "message": " बॅज तयार करा",
+        "description": "Create a Badge"
+    },
+    "Add a comment": {
+        "message": "एक टिप्पणी जोडा",
+        "description": "Add a comment"
+    },
+    "Issue new badge(s)": {
+        "message": "नवीन बॅज मिळवा.",
+        "description": "Issue new badge(s)"
+    },
+    "Revoke": {
+        "message": "पुन्हा मिळवा.",
+        "description": "Revoke"
+    },
+    "Emails": {
+        "message": "ईमेल ( प्रति ओळ एक, किंवा स्वल्पविराम-विभाजीत )",
+        "description": "Emails (one per line, or comma-separated)"
+    }
+}

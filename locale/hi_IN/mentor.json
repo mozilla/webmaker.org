@@ -1,0 +1,50 @@
+{
+    "mentor": {
+        "message": "संरक्षक",
+        "description": "mentor"
+    },
+    "Jon": {
+        "message": "जॉन",
+        "description": "Jon"
+    },
+    "Making the web physical": {
+        "message": "वेब शारीरिक बनाना",
+        "description": "Making the web physical"
+    },
+    "Video remixing and open source for youth": {
+        "message": "वीडियो रीमिक्स और यूवाओ के लिए  खुला स्त्रोत ",
+        "description": "Video remixing and open source for youth"
+    },
+    "Mentor": {
+        "message": "संरक्षक",
+        "description": "Mentor"
+    },
+    "Youth mentor": {
+        "message": "यूथ का विश्वसनीय सलाहकार",
+        "description": "Youth mentor"
+    },
+    "About Emma": {
+        "message": "एम्मा ने विक्टोरिया, कनाडा में अपने स्थानीय विश्वविद्यालय की कंप्यूटर लैब में 10-12 साल के बच्चो के लिए <a href=\"/makerparty\">Maker Party</a> आयोजित की थी | अब वह  युवाओं को खुले अभ्यास की आवशयकता के बारे में पढ़ाने के लिए एक वेबमेकर क्लब को चलाने में अन्य परामर्शदाताओ के साथ काम कर रही है | ",
+        "description": ""
+    },
+    "About Unnati": {
+        "message": "उन्नाति ने हमारी <a href=\"/makerparty\">मेकर पार्टी</a> में 2012 में भाग लिया था जहाँ उन्होंने थिंबल और पॉपकॉर्न की मदद से अपने खुद के वेब पेजेस रीमिक्स करना सीखा l अब वह अपने मित्रों, परिवार और सहपाठियों को बुनियादी HTML और ऑनलाइन कैसे भाग ले सीखा कर अपनी जानकारी बाँट रही हैं l ",
+        "description": ""
+    },
+    "About Jon": {
+        "message": "जॉन ने 48 घण्टो की <a href=\"/makerparty\">Maker Party</a> डंडी, स्कॉटलैंड में आयोजित करवाई, प्रत्येक चीज़ को तलाश करने के लिए कागज और तार से बनाई हुई \"ट्वीटर बर्ड\" से गूगल मैप को झुकाने के लिए आच्छादित मार्ग के नियंत्रक लीवर तक |",
+        "description": ""
+    },
+    "Emma": {
+        "message": "एमा",
+        "description": "Emma"
+    },
+    "Unnati": {
+        "message": "उन्नति ",
+        "description": "Unnati"
+    },
+    "Amy Burvall": {
+        "message": "एमी बुरवाल, Webmaker का साथी, शिक्षक और रीमिक्स कलाकार",
+        "description": ""
+    }
+}

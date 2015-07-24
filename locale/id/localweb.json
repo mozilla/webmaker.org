@@ -1,0 +1,162 @@
+{
+    "Webmaker is available in over 20 languages": {
+        "message": "Webmaker tersedia dalam lebih dari 20 bahasa dan didukung oleh komunitas sukarelawan yang memiliki keterampilan di dunia digital. Webmaker akan tersedia untuk Android, Firefox OS, dan peramban-peramban seluler modern pada akhir tahun ini.",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Quote 3 Quote": {
+        "message": "Mozilla tidak sekadar peduli pada penduduk negara-negara berkembang yang tidak memiliki konten lokal yang baik pada perangkat bergerak mereka. Mozilla berbuat sesuatu untuk hal itu.",
+        "description": "Quote #3"
+    },
+    "Mozilla Rwanda": {
+        "message": "Mozilla Rwanda",
+        "description": "Mozilla Rwanda"
+    },
+    "Enabling Digital Creativity": {
+        "message": "Memberdayakan Kreatifitas Digital",
+        "description": "Headline of Enabling Digital Creativity section on /localweb"
+    },
+    "MOI splash page metadata title": {
+        "message": "Webmaker: Membangun web lokal yang relevan",
+        "description": "MOI splash page metadata title"
+    },
+    "Mozilla Indonesia": {
+        "message": "Mozilla Indonesia",
+        "description": "Mozilla Indonesia"
+    },
+    "Quote 3 Author": {
+        "message": "Mark Sullivan",
+        "description": "Quote #3 Author"
+    },
+    "Quote 2 Author": {
+        "message": "David Meyer",
+        "description": "Quote #2 Author"
+    },
+    "The Opportunity: A Locally Relevant Web": {
+        "message": "Peluang: Web Lokal Yang Relevan",
+        "description": "Headline of The Opportunity: A Locally Relevant Web on /localweb"
+    },
+    "Let’s ensure the next generation of web users": {
+        "message": "Mari memastikan generasi pengguna web berikutnya memiliki kemampuan untuk menciptakan web yang relevan secara lokal. <b>Kami adalah gerakan global dengan relawan di lebih dari 30 negara</b>. Jika anda adalah operator ponsel atau LSM, <a href=\"https://stuff.webmaker.org/mobile_webmaker_partners.pdf\" id=\"mobile-webmaker-partners-link\">bermitralah dengan kami</a> untuk menawarkan pelatihan kemampuan digital bagi para pengguna anda yang paling setia.",
+        "description": "Subhead of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Colombia": {
+        "message": "Mozilla Kolombia",
+        "description": "Mozilla Colombia"
+    },
+    "Mozilla is building Webmaker": {
+        "message": "Mozilla tengah membangun Webmaker, yakni aplikasi pembuat konten bagi perangkat bergerak yang berbasis kode sumber terbuka.",
+        "description": "Subhead of Enabling Digital Creativity section on /localweb"
+    },
+    "Webmaker Kenya research report": {
+        "message": "Laporan penelitian Webmaker Kenya",
+        "description": "Link text to Webmaker Kenya research report"
+    },
+    "Mozilla Nigeria": {
+        "message": "Mozilla Nigeria",
+        "description": "Mozilla Nigeria"
+    },
+    "Mozilla Kenya": {
+        "message": "Mozilla Kenya",
+        "description": "Mozilla Kenya"
+    },
+    "Mozilla Philippines": {
+        "message": "Mozilla Filipina",
+        "description": "Mozilla Philippines"
+    },
+    "Partner with us": {
+        "message": "Bermitralah dengan kami",
+        "description": "Partner with us button text"
+    },
+    "Quote 1 Author": {
+        "message": "Abhimanyu Ghoshal",
+        "description": "Quote #1 Author"
+    },
+    "Webmaker India research report": {
+        "message": "Laporan penelitian Webmaker India",
+        "description": "Link text to Webmaker India research report"
+    },
+    "Understanding Users": {
+        "message": "Memahami para pengguna",
+        "description": "Headline of Understanding Users section on /localweb"
+    },
+    "Quote 2 Quote": {
+        "message": "Mozilla dan operator seluler ingin membuat web lebih global dan bervariasi",
+        "description": "Quote #2"
+    },
+    "Mozilla is leading a research program": {
+        "message": "Mozilla memimpin sebuah program riset yang akan bertujuan untuk mempelajari teknologi dan pendekatan desain yang memungkinkan partisipasi yang lebih besar dalam kehidupan digital yang bergerak dan menumbuhkan pembuatan konten lokal. ",
+        "description": "Subhead of Understanding Users section on /localweb"
+    },
+    "Partners": {
+        "message": "Mitra",
+        "description": "Headline of Partners section on /localweb"
+    },
+    "Empowering the next billion citizens of the web": {
+        "message": "Memberdayakan milyaran pengguna web berikutnya.",
+        "description": "Big headline on /localweb"
+    },
+    "Mozilla is working to ensure": {
+        "message": "Mozilla bekerja untuk memastikan bahwa milyaran manusia berikutnya yang akan masuk daring untuk pertama kalinya melalui ponsel pintar mereka akan menemukan Web yang terbuka, partisipatif dan menggugah kreativitas. ",
+        "description": "This is a description to the value string"
+    },
+    "In 2014 and 2015, we conducted on-the-ground studies in Bangladesh, India and Kenya.": {
+        "message": "Pada tahun 2014 dan 2015, kami melakukan studi lapangan di Bangladesh, India, dan Kenya",
+        "description": "Subhead of the research report subsection on /localweb"
+    },
+    "MOI splash page metadata description": {
+        "message": "Webmaker membantu para penggunanya menyadari potensi penuh penggunakaan web dengan mengilangkan kompleksitas konten tradisional dan memberdayakan mereka dengan kemampuan untuk membuat web lokal yang relevan.",
+        "description": "MOI splash page metadata description"
+    },
+    "A Locally Relevant Web: Early Research & Recommendations": {
+        "message": "Sebuah Web Yang Relevan: Penilitian Awal & Rekomendasi",
+        "description": "Headline of the research report subsection on /localweb"
+    },
+    "Get in touch": {
+        "message": "Berhubungan",
+        "description": "Get in touch button text"
+    },
+    "Mozilla India": {
+        "message": "Mozilla India",
+        "description": "Mozilla India"
+    },
+    "Try the open beta": {
+        "message": "Coba versi beta",
+        "description": "Try the open beta button text"
+    },
+    "Mozilla Bangladesh": {
+        "message": "Mozilla Bangladesh",
+        "description": "Mozilla Bangladesh"
+    },
+    "Quote 1 Quote": {
+        "message": "Mozilla bermitra dengan GSMA untuk membawa web seluler dan perangkat pembuatan konten ke 4 milyar penduduk dunia",
+        "description": "Quote #1"
+    },
+    "Mozilla is proud to partner": {
+        "message": "Mozilla dengan bangga bermitra dengan operator seluler berikut ini, para pelaku pendidikan, institusi pengembangan internasional, LSM yang tertarik untuk membentuk masa depan web seluler ke arah yang positif.",
+        "description": "Subhead of Partners section on /localweb"
+    },
+    "Webmaker mobile for development blog": {
+        "message": "Webmaker perangkat bergerak untuk pengembangan blog",
+        "description": "Link text to Webmaker mobile for development blog"
+    },
+    "Webmaker Bangladesh research report": {
+        "message": "Laporan penelitian Webmaker Bangladesh",
+        "description": "Link text to Webmaker Bangladesh research report"
+    },
+    "Webmaker helps smartphone users": {
+        "message": "Mozilla membantu para pengguna ponsel pintar untuk berpartisipasi meningkatkan kualitas hidup mereka dan komunitasnya dengan membuat aplikasi sederhana seperti mempromosikan UKM, berbagi berita tentang komunitas, atau membuat rencana pendidikan untuk para siswa. ",
+        "description": "Paragraph text of Enabling Digital Creativity section on /localweb"
+    },
+    "Mozilla Brazil": {
+        "message": "Mozilla Brazil",
+        "description": "Mozilla Brazil"
+    },
+    "Partner with Mozilla": {
+        "message": "Bermitra dengan Mozilla",
+        "description": "Headline of Partner with Mozilla section on /localweb"
+    },
+    "Mozilla Cambodia": {
+        "message": "Mozilla Kamboja",
+        "description": "Mozilla Cambodia"
+    }
+}

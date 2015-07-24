@@ -1,0 +1,170 @@
+{
+    "Webmaker educational resources backed by Web Literacy Map": {
+        "message": "Zasoby edukacyjne Webmakera są oparte o <a href=\"/{{ lang }}/literacy\">Mapę Umiejętności Sieciowych Mozilli</a>, obejmującą kompletny zestaw umiejętności potrzebnych każdej osobie pragnącej być częścią nowoczesnego, cyfrowego świata.",
+        "description": "Caption for below the map graphic on resources home header section"
+    },
+    "Creating for the Web": {
+        "message": "Tworzenie dla Sieci",
+        "description": "Subtitle of the second section of competencies"
+    },
+    "Become a catalyst paragraph": {
+        "message": "Dowiedz się więcej o modelu Hive Learning Networks i o tym jak miasta na całym świecie promują internetowe umiejętności i cyfrowe zdolności poprzez połączone nauczanie.",
+        "description": "Paragraph about hive on mentor."
+    },
+    "Navigating the Web": {
+        "message": "Przemieszczanie się po Sieci",
+        "description": "Subtitle of the first section of competencies"
+    },
+    "Join our online forum": {
+        "message": "Dołącz do naszego <a href=\"http://discourse.webmaker.org/category/meet\">forum online</a>, aby spotkać innych mentorów. Dziel się swoimi wydarzeniami, aktywnością i zasobami do nauczania, korzystając z hashtaga <a href=\"https://twitter.com/search?q=%23teachtheweb\">#teachtheweb</a> .",
+        "description": "Copy, third section on mentor."
+    },
+    "Our global community is here to help": {
+        "message": "Nasza globalna społeczność jest tutaj by ci pomóc",
+        "description": "Headline for the people section"
+    },
+    "Introduce yourself": {
+        "message": "Przedstaw się",
+        "description": ""
+    },
+    "Web Literacy Map": {
+        "message": "Mapa Umiejętności Sieciowych",
+        "description": "The title of the competencies list"
+    },
+    "What is web literacy button": {
+        "message": "Dowiedz się więcej",
+        "description": "Button for web literacy on mentor"
+    },
+    "Become a catalyst": {
+        "message": "Stań się inspiracją dla twojej społeczności",
+        "description": "Headline for hive on mentor."
+    },
+    "Show others how to make the web": {
+        "message": "Pokaż innym, jak tworzyć internet i gromadzić <a href=\"https://webmaker.org/badges/skill-sharer\">odznakę Webmaker Skill Sharer</a>. Gdy będziesz gotowy, zgłoś się po <a href=\"https://webmaker.org/badges/webmaker-mentor\">odznakę Mentora Webmaker</a>.",
+        "description": "third bullet point, mentor."
+    },
+    "Get your feet wet": {
+        "message": "<strong>Czas zamoczyć stopy.</strong> Poznaj szybko nowe cyfrowe umiejętności poprzez czytanie, oglądanie, słuchanie i dzielenie się materiałami.",
+        "description": "Copy for first column in Discover new skills"
+    },
+    "Participating on the Web": {
+        "message": "Współuczestnictwo w Sieci",
+        "description": "Subtitle of the third section of competencies"
+    },
+    "Resources for teaching and learning": {
+        "message": "Zasoby do nauczania i uczenia się",
+        "description": "Headline for the Competencies/Resources home page"
+    },
+    "Discover": {
+        "message": "Odkryj",
+        "description": "Headline for first column in Discover new skills"
+    },
+    "Become a catalyst button": {
+        "message": "Dowiedz się więcej",
+        "description": "Button for hive on mentor"
+    },
+    "We have re-organized Webmaker Resources": {
+        "message": "<strong>Wszędzie zmiany!</strong> Szukasz prostych sposobów na rozpoczęcie przygody z Webmakerem? Zajrzyj do działu <a href=\"/{{ lang}}/tools\">Narzędzia</a>. A może chcesz zremiksować coś w <a href=\"/{{ lang }}/gallery\">Galerii</a>?",
+        "description": "Copy for the banner alerting users to the IA changes"
+    },
+    "Exploring": {
+        "message": "Przeglądanie",
+        "description": "Title of the first section of competencies"
+    },
+    "Discover new skills": {
+        "message": "Odkryj nowe umiejętności. Później dziel się nimi z innymi.",
+        "description": "Headline for section below competencies"
+    },
+    "Connecting": {
+        "message": "Łączenie",
+        "description": "Title of the third section of competencies"
+    },
+    "What is web literacy": {
+        "message": "Co to jest umiejętność korzystania z internetu?",
+        "description": "Headline for web literacy on mentor."
+    },
+    "Share what you know": {
+        "message": "<strong>Podziel się swoją wiedzą.</strong> Każdy może nauczać przy pomocy Webmakera. Niezależnie od tego, czy nauczasz w klasie, wśród współpracowników, znajomych lub członków rodziny, mamy dla ciebie przydatne pomoce naukowe.",
+        "description": "Copy for third column in Discover new skills"
+    },
+    "Explore the community gallery": {
+        "message": "Przeglądaj galerię społeczności i zobacz, co robią inni webmakerzy",
+        "description": "Copy for the Explore column"
+    },
+    "Building": {
+        "message": "Budowanie",
+        "description": "Title of the second section of competencies"
+    },
+    "Get your hands dirty": {
+        "message": "<strong>Czas zakasać rękawy.</strong> Najlepszym sposobem na naukę jest własnoręczne tworzenie i eksperymentowanie! Twórz strony internetowe, multimedialne filmy lub remiksy które ułatwią ci zdobywanie praktycznych umiejętności.",
+        "description": "Copy for second column in Discover new skills"
+    },
+    "Connect with the Community": {
+        "message": "Połącz się ze społecznością na całym świecie",
+        "description": "Headline, third section on mentor."
+    },
+    "Learn through hands-on making": {
+        "message": "Ucz się przez aktywne tworzenie i eksperymentowanie. Podziel się swoimi dziełami z innymi. Zasoby Webmakera są tworzone z myślą o łatwym i zabawnym nauczaniu wielu umiejętności - od nawigacji, poprzez programowanie i tworzenie skryptów, po zrozumienie idei sieciowej tożsamości i ochronę sieciowej prywatności. <a href=\"/make-your-own\">Stwórz</a> własne zestawy edukacyjne, z których skorzystać będą mogli edukatorzy i mentorzy z całego świata.",
+        "description": "Main copy for section below competencies"
+    },
+    "Build your mentorship skills": {
+        "message": "Buduj swoje umiejętności mentorskie",
+        "description": "Headline, second section on mentor."
+    },
+    "Mozilla Webmaker is different": {
+        "message": "<strong>Mozilla Webmaker to nietypowy projekt.</strong> Otwarte źródło wiedzy, stworzone przez i dla globalnej społeczności edukatorów, znawców technologii i osób takich jak ty. Kochamy sieć i chcemy by jej kreatywny potencjał był dostępny dla wszystkich. Jesteśmy chętni do współpracy lub <a href=\"/{{ lang }}/getinvolved\">umożliwienia ci większego zaangażowania</a> w projekcie.",
+        "description": "Copy for the people section"
+    },
+    "Weblit map alt text": {
+        "message": "Mapa Umiejętności Sieciowych pomaga zdobywać umiejętności odkrywania, tworzenia i dzielenia się siecią z innymi.",
+        "description": "Alt text for the graphic of the web literacy map on /resources"
+    },
+    "Create a more web literate world": {
+        "message": "Utwórz świat bardziej przyjazny dla korzystania z internetu",
+        "description": "Headline on mentor."
+    },
+    "Teach": {
+        "message": "Nauczaj",
+        "description": "Headline for third column in Discover new skills"
+    },
+    "What is web literacy paragraph": {
+        "message": "Przez umiejętność korzystania z internetu Mozilla rozumie posiadanie umiejętności i wiedzy koniecznej do czytania, pisania i uczestniczenia w świecie WWW. Z dokumentu Webmaker Whitepaper dowiesz się, dlaczego Mozilla dba o umiejętność korzystania z internetu.",
+        "description": "Paragraph about web literacy on mentor."
+    },
+    "Join or host local events": {
+        "message": "Zorganizuj lub dołącz do <a href=\"https://events.webmaker.org\">okolicznych wydarzeń</a> gdzie możesz współpracować z innymi i nauczać osoby żądne wiedzy.",
+        "description": "second bullet point, mentor."
+    },
+    "Browse our teaching resources": {
+        "message": "Przejrzyj nasze <a href=\"https://webmaker.org/resources\">pomoce naukowe</a> lub weź udział w <a href=\"https://training.webmakerprototypes.org\">rozwoju zawodowym</a>.",
+        "description": "first bullet point, mentor."
+    },
+    "Get Involved": {
+        "message": "Zaangażuj się",
+        "description": "Headline for the Get Involved column"
+    },
+    "Make": {
+        "message": "Stwórz",
+        "description": "Headline for second column in Discover new skills"
+    },
+    "Get more involved": {
+        "message": "Podziel się swoimi pomocami naukowymi, pomóż tłumaczyć, dodaj kod albo i więcej.",
+        "description": "Copy for the Get Involved column"
+    },
+    "Create a more web literate world paragraph": {
+        "message": "Jesteśmy technikami, twórcami, pedagogami, rodzicami i tymi, którzy chcą nauczać cyfrowych umiejętności oraz korzystania z internetu poprzez tworzenie.",
+        "description": "first paragraph on mentor."
+    },
+    "Join our free open online course": {
+        "message": "Dołącz do naszego bezpłatnego otwartego kursu online na temat nauczania w sieci.",
+        "description": "Copy for the Get Training column"
+    },
+    "Get Training": {
+        "message": "Zdobądź wiedzę",
+        "description": "Headline for the Get Training column"
+    },
+    "Teach and learn digital skills, web literacy, and making": {
+        "message": "<strong>Nauczaj innych i poznawaj nowe umiejętności sieciowe i cyfrowe zdolności.</strong>. Ten dział pełen jest interesujących rzeczy które możesz odkryć, stworzyć i przekazać innym. Nasza globalna społeczność wciąż dodaje nowe zadania, plany lekcji i samouczki o sieci, pomagające w nauce poprzez robienie. Każdy użytkownik sieci może z z nich skorzystać - są darmowe, otwarte i wspierane przez <a href=\"https://mozilla.org/{{ lang }}/mission/\">charytatywną misję Mozilli</a>.",
+        "description": "Copy for header section of Competencies/Resources home page"
+    }
+}

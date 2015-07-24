@@ -50,3 +50,12 @@ You should also have these Webmaker stack applications running:
 - `grunt dev` - Run the server and build js files as they are changed
 - `grunt verify` - Verify LESS and JS are formatted and lint free. Read only. Used by Travis.
 
+#### Localization
+
+To add a new language simply add a directory with a locale code under the `locale` directory with a JSON file(s) for your strings for example: 
+locale/**id_ID**/strings.json
+
+You also need to make sure you enable the language in your config by changing the value of `SUPPORTED_LANGS`
+``` json
+  export SUPPORTED_LANGS='[ "en", "id-ID" ]'
+```

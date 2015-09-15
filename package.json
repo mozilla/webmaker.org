@@ -68,7 +68,7 @@
     "grunt-jsbeautifier": "0.2.2",
     "grunt-jscs": "1.5.0",
     "grunt-jsonlint": "^1.0.4",
-    "grunt-shell": "0.6.1",
+    "grunt-shell": "0.6.1"
   },
   "engines": {
     "node": "0.10.x"

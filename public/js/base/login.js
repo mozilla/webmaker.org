@@ -12,7 +12,6 @@ define(['jquery', 'url-template', 'selectize'], function ($, urlTemplate) {
   var adminEl = userInfoDropdown.find('span[data-admin]');
   var supermentorEl = userInfoDropdown.find('span[data-supermentor]');
   var mentorEl = userInfoDropdown.find('span[data-mentor]');
-  var profileEl = userInfoDropdown.find('a[data-profile]');
 
   function enable(user) {
     joinEl.addClass('hidden');
@@ -31,8 +30,6 @@ define(['jquery', 'url-template', 'selectize'], function ($, urlTemplate) {
     } else if (user.isMentor) {
       mentorEl.removeClass('hidden');
     }
-
-    profileEl.attr('href', urlTemplate.parse(profileEl.attr('data-href-template')).expand(user));
 
     userInfoDropdown.removeClass('hidden');
   }

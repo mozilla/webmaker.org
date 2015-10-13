@@ -46,5 +46,19 @@
   "Update a Badge": {
     "message": "Update a Badge",
     "description": "Update a Badge"
+  },
+
+  "Deprecation Marker": {
+    "message": "Please Note:",
+    "description": "Deprecation marker"
+  },
+  "Deprecation Notification": {
+    "message": "As part of our work moving webmaker forward, we no longer offer this badge. Please see the following link for more information:",
+    "description": "Deprecation notification for old badges"
+  },
+  "Deprecation Details": {
+    "url": "https://blog.webmaker.org/whats-next-for-webmaker-tools",
+    "message": "\"What's next for Webmaker tools?\"",
+    "description": "Details URL explaining our badge deprecation"
   }
 }

@@ -24,163 +24,18 @@
             <p>{{ gettext("BadgesIssuedBy") }} <a href="{{ badge.issuerUrl }}">{{ badge.issuerUrl }}</a></p>
             {% endif %}
             <p>{{ badge.earnerDescription | markdown | safe }}</p>
-            {% if not assertionUrl %}
-              <button class="claim-code-button-login button-link hidden">{{ gettext("HaveClaimCode") }}</button>
-              <button class="claim-code-button-logout button-link hidden">{{ gettext("Login to claim") }}</button>
-            {% endif %}
-
-            {% if assertionUrl %}
-              <h3>Congratulations <span class="username">{{ username }}</span>, you've earned this badge!</h3>
-              <a href="/user/{{username}}/badges" class="btn btn-lg btn-success pull-left">{{ gettext("ViewOnProfile") }}</a>
-              <form class="backpack" method="post" action="{{backpackUrl}}" target="_blank">
-                <input type="hidden" name="assertions" value="{{assertionUrl}}">
-                <input type="submit" class="btn btn-lg btn-success pull-left" value="{{ gettext('SendToBackpack') }}">
-              </form>
-            {% endif %}
-          </div>
-        </div>
-        <div class="container claim-code-container hidden">
-          <div class="login-only">
-
-            <div id="claim-badge-success" class="panel panel-info panel-badges hidden">
-              <div class="panel-body">
-                <h2>{{ gettext("ClaimSuccess") }}</h2>
-                <p>{{ gettext("ClaimSuccessDetails") | safe }}</p>
-              </div>
-            </div>
-            <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}" data-application-slug="{{ application.slug if application else null }}">
-              <div class="panel-body">
-                <button id="" class="js-close-panel close-panel btn"><span class="fa fa-times"></span></button>
-                <h2>{{ gettext("Claim this badge") }}
-                  <span id="claim-code-explainer" class="fa fa-question-circle" title="For example, if you are awarded a badge for attending an event, the organizer of the event may provide you with a claim code."></span>
-                </h2>
-                <div class="submit-badge-error alert alert-danger hidden">
-                  <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
-                </div>
-                <form id="submit-badge-application">
-                  <div class="form-inline">
-                    <input class="form-control" name="claimcode" placeholder="Enter claim code">
-                    <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <p class="deprecation-notification">
+              <span class="deprecation-marker">{{ gettext("Deprecation Marker") }}</span>
+              {{ gettext("Deprecation Notification") }}
+              <a href="https://blog.webmaker.org/whats-next-for-webmaker-tools">
+                {{ gettext("Deprecation Details")}}
+              </a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-<section id="requirements">
-
-  <div class="container application-on hidden">
-    <div class="login-only">
-
-      <div id="submit-badge-success" class="panel panel-info panel-badges hidden">
-        <div class="panel-body">
-          <h2>{{ gettext("GotApplication") }}</h2>
-          <p>{{ gettext("ReplyToEmail") | safe }}</p>
-        </div>
-      </div>
-
-      <div id="application" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}" data-application-slug="{{ application.slug if application else null }}">
-        <div class="panel-body">
-          <button id="" class="js-close-panel close-panel btn"><span class="fa fa-times"></span></button>
-          <h2>{{ gettext("Apply for this badge") }}</h2>
-          <div class="submit-badge-error alert alert-danger hidden">
-            <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
-          </div>
-          <form id="submit-badge-application">
-            <div class="form-group">
-              <label for="evidence">{{ gettext("BadgesEvidenceLabel") }}</label>
-              <textarea class="form-control" name="evidence" placeholder="{{ gettext("BadgesIncludeLinks") }}" required>
-                {%- if application.evidence.length >= 1 -%}
-                  {{ application.evidence[0].reflection }}
-                {%- endif -%}
-              </textarea>
-            </div>
-            {% if requestCity %}
-            <div class="form-group">
-              <label for="city">{{ gettext("BadgesCityLabel") }}</label>
-              <textarea class="form-control" name="city" placeholder="{{ gettext("BadgesExampleCity") }}" required>
-                {%- if application.evidence.length >= 2 -%}
-                  {{ application.evidence[1].reflection | replace("Hive City: ", "")}}
-                {%- endif -%}
-              </textarea>
-            </div>
-            {% endif %}
-            <div class="form-inline">
-              <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container js-issue-badge-on hidden">
-    <div class="login-only">
-
-      <div id="issue-badge-success" class="panel panel-info panel-badges hidden">
-        <div class="panel-body">
-          <h2>{{ gettext("Thanks") }}</h2>
-          <p>{{ gettext("IssuedBadgeSuccess") }}</p>
-        </div>
-      </div>
-
-      <div id="issue" class="panel panel-navy panel-badges" data-badge-slug="{{ badge.slug }}">
-        <div class="panel-body">
-          <button id="" class="js-close-panel close-panel btn"><span class="fa fa-times"></span></button>
-          <h2>Issue this badge</h2>
-          <div class="submit-badge-error alert alert-danger hidden">
-            <p>{{ gettext("BadgesError") }} <span class="error-message"></span></p>
-          </div>
-          <form id="issue-form">
-            <div class="form-group">
-              <label for="email">Who are you issuing this badge to?</label>
-              <input class="form-control" name="email" placeholder="Email Address" required></input>
-            </div>
-            <div class="form-group">
-              <label for="comment">Add a comment</label>
-              <textarea class="form-control" name="comment" placeholder="Add a comment..." required></textarea>
-            </div>
-            <div class="form-inline">
-              <button name="submit" class="btn btn-primary btn-lg pull-right">{{ gettext("Submit") }}</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <h2 class="clearfix">{{ gettext("Badge Requirements") }}
-      <span class="application-off pull-right">
-        {% if not assertionUrl and canApply %}
-          <button id="apply-now" class="btn btn-lg btn-success pull-right login-only hidden">
-            {%- if not application -%}
-              {{ gettext("Apply") }}
-            {% else %}
-              {{ gettext("Edit Application") }}
-            {%- endif -%}
-          </button>
-        {% endif %}
-        {% if canIssue %}
-          <button id="js-badge-issuing" class="btn btn-lg btn-success pull-right">Issue this badge</button>
-        {% endif %}
-        {% if canApply %}
-        <button class="btn btn-lg btn-success pull-right logout-only hidden webmaker-login">{{ gettext("Login to apply") }}</button>
-        {% endif %}
-      </span>
-    </h2>
-    <ol class="list-badges-requirements list-unstyled">
-      {% for criteria in badge.criteria %}
-      <li>{{criteria.description | markdown | safe }}</li>
-      {% endfor %}
-    </ol>
-  </div>
-
 </section>
 
 {% endblock %}

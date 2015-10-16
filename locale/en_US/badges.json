@@ -52,13 +52,17 @@
     "message": "Please Note:",
     "description": "Deprecation marker"
   },
-  "Deprecation Notification": {
-    "message": "As part of our work moving webmaker forward, we no longer offer this badge. Please see the following link for more information:",
-    "description": "Deprecation notification for old badges"
+  "Deprecation Notification 1": {
+    "message": "Approving new badge requests has been disabled while we migrate to a new badges platform. Please follow the",
+    "description": "Deprecation notification for old badges (1/2)"
   },
-  "Deprecation Details": {
-    "url": "https://blog.webmaker.org/whats-next-for-webmaker-tools",
-    "message": "\"What's next for Webmaker tools?\"",
+  "Deprecation URL title": {
+    "url": "https://blog.webmaker.org",
+    "message": "Mozilla Learning Blog",
     "description": "Details URL explaining our badge deprecation"
+  },
+  "Deprecation Notification 2": {
+    "message": "for the latest updates on badges.",
+    "description": "Deprecation notification for old badges (2/2)"
   }
 }

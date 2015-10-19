@@ -46,5 +46,23 @@
   "Update a Badge": {
     "message": "Update a Badge",
     "description": "Update a Badge"
+  },
+
+  "Deprecation Marker": {
+    "message": "Please Note:",
+    "description": "Deprecation marker"
+  },
+  "Deprecation Notification 1": {
+    "message": "Approving new badge requests has been disabled while we migrate to a new badges platform. Please follow the",
+    "description": "Deprecation notification for old badges (1/2)"
+  },
+  "Deprecation URL title": {
+    "url": "https://blog.webmaker.org",
+    "message": "Mozilla Learning Blog",
+    "description": "Details URL explaining our badge deprecation"
+  },
+  "Deprecation Notification 2": {
+    "message": "for the latest updates on badges.",
+    "description": "Deprecation notification for old badges (2/2)"
   }
 }

@@ -23,6 +23,10 @@
     "message": "Webmaker creations are meant to be seen, heard and used. Share your project with friends and colleagues.",
     "description": "A description about the sharing capabilities of Webmaker"
   },
+  "mentor": {
+    "message": "mentor",
+    "description": "mentor"
+  },
   "Available for": {
     "message": "Available for FirefoxOS 2.1+ and Android 4.4+",
     "description": "The platforms and versions that Webmaker can be installed on"

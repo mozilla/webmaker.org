@@ -96,7 +96,7 @@
         "description": "copy for third topic of 'jump right in' on home page"
     },
     "Making is the basis of everything we do.": {
-        "message": "Making is the basis of everything we do. Try remixing one of our <a href=\"/{{ lang }}/resources\">starter resources</a>, or make something from scratch using <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, or <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Then share it with the world using hashtag <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+        "message": "Making is the basis of everything we do. Try remixing one of our <a href=\"/{{ lang }}/resources\">starter resources</a>, or make something from scratch using <a href=\"https://goggles.mozilla.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, or <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Then share it with the world using hashtag <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
         "description": "Make something copy"
     },
     "Email address": {

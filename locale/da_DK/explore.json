@@ -100,7 +100,7 @@
         "description": "copy for third topic of 'jump right in' on home page"
     },
     "Making is the basis of everything we do.": {
-        "message": "At skabe er det grundlæggende i alt hvad vi gør. Prøv at remixe en af vores <a href=\"/{{ lang }}/resources\">begynder-ressourcer</a>, eller lav noget fra bunden med <a href=\"https://goggles.webmaker.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, eller <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Del det så med resten af verdenen med hashtag'et <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
+        "message": "At skabe er det grundlæggende i alt hvad vi gør. Prøv at remixe en af vores <a href=\"/{{ lang }}/resources\">begynder-ressourcer</a>, eller lav noget fra bunden med <a href=\"https://goggles.mozilla.org/{{ lang }}\">X-Ray Goggles</a>, <a href=\"https://thimble.webmaker.org/{{ lang }}\">Thimble</a>, eller <a href=\"https://popcorn.webmaker.org/{{ lang }}\">Popcorn Maker</a>. Del det så med resten af verdenen med hashtag'et <a href=\"/{{ lang }}/search?type=tags&q=webmaker\">#webmaker</a>.",
         "description": "Make something copy"
     },
     "Email address": {

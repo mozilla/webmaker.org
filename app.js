@@ -22,7 +22,6 @@ var express = require('express'),
   i18n = require('webmaker-i18n'),
   WebmakerAuth = require('webmaker-auth'),
   navigation = require('./navigation'),
-  rtltrForLess = require('rtltr-for-less'),
   markdown = require('markdown').markdown,
   proxy = require('proxy-middleware'),
   url = require('url');
@@ -207,7 +206,29 @@ app.use(function (req, res, next) {
 
 var optimize = NODE_ENV !== 'development';
 
-app.use(lessMiddleWare(rtltrForLess({
+// goggles pages are straight up redirect to goggles.mozilla.org now
+app.use(function gogglesRedirect(req, res, next) {
+  var path = req.path;
+  if (path.match(/\/goggles(\/.*)*$/)) {
+    res.redirect('https://goggles.mozilla.org');
+  } else {
+    next();
+  }
+});
+
+// convert requests for ltr- or rtl-specific CSS back to the real filename,
+// as the rtltr-for-less package was a hack that was never meant to hit production.
+app.use(function rtltrRedirect(req, res, next) {
+  var path = req.path;
+  if (path.match(/\w+\.(ltr|rtl)\.css/)) {
+    console.log("stripping ltr/rtl from css");
+    res.redirect(path.replace(/\.(ltr|rtl)/, ""));
+  } else {
+    next();
+  }
+});
+
+app.use(lessMiddleWare({
   once: optimize,
   debug: !optimize,
   dest: '/css',
@@ -217,7 +238,8 @@ app.use(lessMiddleWare(rtltrForLess({
   yuicompress: optimize,
   optimization: optimize ? 0 : 2,
   sourceMap: !optimize
-})));
+}));
+
 
 app.use(express.compress());
 app.use(express.static(WWW_ROOT));
@@ -458,16 +480,6 @@ app.get('/languages', routes.page('languages'));
 
 app.get('/app', routes.app);
 app.post('/app/send-download-link', routes.api.sendSMS);
-
-// goggles onboard, with special image routing for lowest-threshold onboarding
-app.get('/goggles', routes.angular);
-app.get('/goggles/install', routes.angular);
-['Shapes', 'Shapes2', 'Blur', 'Blur2'].forEach(function (img) {
-  img = img + '.jpg';
-  app.get('/' + img, function (req, res) {
-    res.redirect('/img/goggles/' + img);
-  });
-});
 
 app.get('/sitemap.xml', function (req, res) {
   res.type('xml');

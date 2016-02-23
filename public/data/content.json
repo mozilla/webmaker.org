@@ -882,7 +882,7 @@
     "make": [
       {
         "title": "Remix a web page",
-        "description": "Use the <a href=\"https://goggles.webmaker.org/\">X-Ray Goggles</a> to remix any web page&mdash;your Facebook profile, the Google start page, NBA.com, or anything."
+        "description": "Use the <a href=\"https://goggles.mozilla.org/\">X-Ray Goggles</a> to remix any web page&mdash;your Facebook profile, the Google start page, NBA.com, or anything."
       },
       {
         "title": "Create your own animated music video",
@@ -1117,7 +1117,7 @@
       },
       {
         "title": "Hack your favorite webpage",
-        "description": "<a href=\"https://goggles.webmaker.org/\">Use the X-Ray Goggles to &ldquo;view source&rdquo;</a> on a website and change its properties."
+        "description": "<a href=\"https://goggles.mozilla.org/\">Use the X-Ray Goggles to &ldquo;view source&rdquo;</a> on a website and change its properties."
       },
       {
         "title": "Skeleton",

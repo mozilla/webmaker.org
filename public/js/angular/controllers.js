@@ -640,37 +640,6 @@ angular
       };
     }
   ])
-  .controller('gogglesController', ['$scope', 'CONFIG', 'wmAnalytics',
-    function ($scope, config, analytics) {
-      $scope.gogglesUrl = config.gogglesUrl;
-      // activate the x-ray goggles on this page
-      $('.goggles-activate-button').click(function () {
-        document.head.appendChild(
-          $('<script>')
-          .addClass('webxray')
-          .attr('src', config.gogglesUrl + '/en-US/webxray.js')
-          .attr('data-baseuri', config.gogglesUrl + '/en-US')[0]
-        );
-        analytics.event('Goggles activated');
-      });
-
-      // toggle additional help text
-      $('.goggles-help-button').click(function () {
-        analytics.event('Goggles help button clicked');
-        this.remove();
-        $('.goggles-help-toggled').toggleClass('hidden');
-      });
-
-      $('.goggles-install-link').click(function () {
-        analytics.event('Goggles install link clicked');
-      });
-
-      // On goggles install page
-      $('.goggles-bookmark-link').on('dragstart', function () {
-        analytics.event('Goggles bookmark dragged');
-      });
-    }
-  ])
   .controller('feedbackController', ['$scope', 'wmNav',
     function ($scope, wmNav) {
       wmNav.section('info');

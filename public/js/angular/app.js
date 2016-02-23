@@ -85,16 +85,6 @@ angular.module('webmakerApp', ['ngRoute', 'ui.bootstrap', 'webmakerApp.services'
           controller: 'appmakerController',
           title: 'Discover Appmaker'
         })
-        .when('/:locale/goggles', {
-          templateUrl: '/views/goggles.html',
-          controller: 'gogglesController',
-          title: 'The X-Ray Goggles'
-        })
-        .when('/:locale/goggles/install', {
-          templateUrl: '/views/install-goggles.html',
-          controller: 'gogglesController',
-          title: 'Install the X-Ray Goggles'
-        })
         .when('/:locale/make-your-own', {
           templateUrl: '/views/make-your-own.html',
           controller: 'makeYourOwnController',

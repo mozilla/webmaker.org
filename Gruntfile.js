@@ -6,18 +6,6 @@ module.exports = function (grunt) {
     gettext_finder: 'grunt-gettext-finder'
   });
 
-  // Node and client side JS have slightly different JSHint directives
-  // We'll create 2 versions with .jshintrc as a baseline
-  var JSHint = grunt.file.readJSON('node_modules/mofo-style/linters/.jshintrc');
-
-  // Don't throw errors for expected browser globals
-  JSHint.globals = {
-    angular: false,
-    $: false,
-    define: false,
-    requirejs: false
-  };
-
   var dependencies = [
     'bower_components/jquery/jquery.js',
     'bower_components/web-literacy-client/dist/web-literacy-client.with-langs.js',
@@ -61,30 +49,6 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    jsbeautifier: {
-      modify: {
-        src: allJS,
-        options: {
-          config: 'node_modules/mofo-style/linters/.jsbeautifyrc'
-        }
-      },
-      verify: {
-        src: allJS,
-        options: {
-          mode: 'VERIFY_ONLY',
-          config: 'node_modules/mofo-style/linters/.jsbeautifyrc'
-        }
-      }
-    },
-    jsonlint: {
-      json: {
-        src: ['bower.json', 'package.json', 'public/data/*.json']
-      }
-    },
-    jshint: {
-      src: allJS,
-      options: JSHint
-    },
     gettext_finder: {
       files: ['views/*.html', 'views/**/*.html'],
       options: {
@@ -215,20 +179,14 @@ module.exports = function (grunt) {
   // For building angular js
   grunt.registerTask('build', ['uglify:prod']);
 
-  grunt.registerTask('clean', ['jsbeautifier:modify']);
-
   grunt.registerTask('dev', ['uglify:app', 'express', 'watch']);
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['clean', 'jshint', 'jscs', 'jsonlint', 'imagemin']);
+  grunt.registerTask('default', ['clean', 'imagemin']);
 
   // Verify code (Read only)
   grunt.registerTask('validate', [
-    'jsbeautifier:verify',
-    'jshint',
-    'jscs',
     'gettext_finder',
-    'jsonlint',
     'angular_i18n_finder'
   ]);
 

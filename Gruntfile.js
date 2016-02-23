@@ -61,30 +61,6 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    jsbeautifier: {
-      modify: {
-        src: allJS,
-        options: {
-          config: 'node_modules/mofo-style/linters/.jsbeautifyrc'
-        }
-      },
-      verify: {
-        src: allJS,
-        options: {
-          mode: 'VERIFY_ONLY',
-          config: 'node_modules/mofo-style/linters/.jsbeautifyrc'
-        }
-      }
-    },
-    jsonlint: {
-      json: {
-        src: ['bower.json', 'package.json', 'public/data/*.json']
-      }
-    },
-    jshint: {
-      src: allJS,
-      options: JSHint
-    },
     gettext_finder: {
       files: ['views/*.html', 'views/**/*.html'],
       options: {
@@ -215,20 +191,14 @@ module.exports = function (grunt) {
   // For building angular js
   grunt.registerTask('build', ['uglify:prod']);
 
-  grunt.registerTask('clean', ['jsbeautifier:modify']);
-
   grunt.registerTask('dev', ['uglify:app', 'express', 'watch']);
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['clean', 'jshint', 'jscs', 'jsonlint', 'imagemin']);
+  grunt.registerTask('default', ['clean', 'imagemin']);
 
   // Verify code (Read only)
   grunt.registerTask('validate', [
-    'jsbeautifier:verify',
-    'jshint',
-    'jscs',
     'gettext_finder',
-    'jsonlint',
     'angular_i18n_finder'
   ]);
 

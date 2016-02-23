@@ -221,7 +221,6 @@ app.use(function gogglesRedirect(req, res, next) {
 app.use(function rtltrRedirect(req, res, next) {
   var path = req.path;
   if (path.match(/\w+\.(ltr|rtl)\.css/)) {
-    console.log("stripping ltr/rtl from css");
     res.redirect(path.replace(/\.(ltr|rtl)/, ""));
   } else {
     next();

@@ -6,18 +6,6 @@ module.exports = function (grunt) {
     gettext_finder: 'grunt-gettext-finder'
   });
 
-  // Node and client side JS have slightly different JSHint directives
-  // We'll create 2 versions with .jshintrc as a baseline
-  var JSHint = grunt.file.readJSON('node_modules/mofo-style/linters/.jshintrc');
-
-  // Don't throw errors for expected browser globals
-  JSHint.globals = {
-    angular: false,
-    $: false,
-    define: false,
-    requirejs: false
-  };
-
   var dependencies = [
     'bower_components/jquery/jquery.js',
     'bower_components/web-literacy-client/dist/web-literacy-client.with-langs.js',

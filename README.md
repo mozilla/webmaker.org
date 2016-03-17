@@ -1,3 +1,7 @@
+# This project is no longer under active development.
+
+Read about why, here: https://blog.webmaker.org/whats-next-for-webmaker-tools
+
 [![Build Status](https://travis-ci.org/mozilla/webmaker.org.png)](https://travis-ci.org/mozilla/webmaker.org)
 [![Dependency Status](https://gemnasium.com/mozilla/webmaker.org.png)](https://gemnasium.com/mozilla/webmaker.org)
 [![Code Climate](https://codeclimate.com/github/mozilla/webmaker.org.png)](https://codeclimate.com/github/mozilla/webmaker.org)
